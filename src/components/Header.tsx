@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { Menu, X, Code, Smartphone, Check } from 'lucide-react';
 import type { Locale } from '../i18n/translations';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
@@ -26,8 +26,8 @@ const Header = () => {
   };
 
   const languageOptions: { code: Locale; flag: string; label: string }[] = [
-    { code: 'en', flag: '🇺🇸', label: 'English' },
-    { code: 'pt', flag: '🇧🇷', label: 'Português' }
+    { code: 'en', flag: 'EN', label: 'English' },
+    { code: 'pt', flag: 'PT', label: 'Português' }
   ];
 
   const renderLanguageSwitcher = (variant: 'desktop' | 'mobile') => (
@@ -54,7 +54,7 @@ const Header = () => {
           }`}
           aria-label={option.label}
         >
-          <span>{option.flag}</span>
+          <span className="text-xs font-bold">{option.flag}</span>
           {language === option.code && (
             <span className="absolute -bottom-1 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-blue-600 text-white">
               <Check className="h-3 w-3" />
