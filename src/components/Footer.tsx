@@ -1,5 +1,6 @@
 import React from 'react';
 import { Code, Smartphone, Mail, Phone, MapPin, Github, Linkedin, Instagram, ArrowUp } from 'lucide-react';
+import { useTranslations } from '../context/LanguageContext';
 
 const Footer = () => {
   const scrollToTop = () => {
@@ -14,6 +15,8 @@ const Footer = () => {
   };
 
   const currentYear = new Date().getFullYear();
+  const t = useTranslations();
+  const copyright = t.footer.bottom.copyright.replace('{year}', currentYear.toString());
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -34,7 +37,7 @@ const Footer = () => {
               <span className="text-xl font-bold">TG Apps</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">
-              Transformamos ideias em soluções digitais excepcionais. Especializados em desenvolvimento web e mobile com foco na experiência do usuário.
+              {t.footer.description}
             </p>
             <div className="flex space-x-4">
               <a
@@ -60,15 +63,9 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Navegação</h3>
+            <h3 className="text-lg font-semibold mb-6">{t.footer.navigationHeading}</h3>
             <ul className="space-y-3">
-              {[
-                { label: 'Início', id: 'inicio' },
-                { label: 'Serviços', id: 'servicos' },
-                { label: 'Portfólio', id: 'portfolio' },
-                { label: 'Sobre Nós', id: 'sobre' },
-                { label: 'Contato', id: 'contato' }
-              ].map((link) => (
+              {t.footer.navigation.map((link) => (
                 <li key={link.id}>
                   <button
                     onClick={() => scrollToSection(link.id)}
@@ -83,16 +80,9 @@ const Footer = () => {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Serviços</h3>
+            <h3 className="text-lg font-semibold mb-6">{t.footer.servicesHeading}</h3>
             <ul className="space-y-3">
-              {[
-                'Desenvolvimento Web',
-                'Apps Mobile',
-                'UI/UX Design',
-                'E-commerce',
-                'Sistemas Personalizados',
-                'Consultoria Técnica'
-              ].map((service) => (
+              {t.footer.services.map((service) => (
                 <li key={service}>
                   <span className="text-gray-400 hover:text-white transition-colors cursor-pointer">
                     {service}
@@ -104,7 +94,7 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-6">Contato</h3>
+            <h3 className="text-lg font-semibold mb-6">{t.footer.contactHeading}</h3>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
@@ -112,7 +102,7 @@ const Footer = () => {
                   href="mailto:support@tgapps.dev"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  support@tgapps.dev
+                  {t.footer.contact.emailLabel}
                 </a>
               </div>
               <div className="flex items-center space-x-3">
@@ -121,12 +111,12 @@ const Footer = () => {
                   href="tel:+5511999999999"
                   className="text-gray-400 hover:text-white transition-colors"
                 >
-                  +55 (11) 99999-9999
+                  {t.footer.contact.phoneLabel}
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-purple-400 flex-shrink-0" />
-                <span className="text-gray-400">São Paulo, SP</span>
+                <span className="text-gray-400">{t.footer.contact.location}</span>
               </div>
             </div>
 
@@ -136,7 +126,7 @@ const Footer = () => {
                 onClick={() => scrollToSection('contato')}
                 className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
-                Solicitar Orçamento
+                {t.footer.cta}
               </button>
             </div>
           </div>
@@ -147,16 +137,14 @@ const Footer = () => {
       <div className="border-t border-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 text-sm mb-4 md:mb-0">
-              © {currentYear} TG Apps. Todos os direitos reservados.
-            </div>
-            
+            <div className="text-gray-400 text-sm mb-4 md:mb-0">{copyright}</div>
+
             <div className="flex items-center space-x-6">
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Política de Privacidade
+                {t.footer.bottom.privacy}
               </a>
               <a href="#" className="text-gray-400 hover:text-white text-sm transition-colors">
-                Termos de Uso
+                {t.footer.bottom.terms}
               </a>
               <button
                 onClick={scrollToTop}

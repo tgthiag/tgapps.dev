@@ -1,80 +1,80 @@
 import React, { useState } from 'react';
 import { ExternalLink, Github, Smartphone, Globe, ArrowRight, Filter } from 'lucide-react';
+import { useTranslations } from '../context/LanguageContext';
 
 const Portfolio = () => {
   const [activeFilter, setActiveFilter] = useState('all');
+  const t = useTranslations();
 
-  const projects = [
+  const baseProjects = [
     {
       id: 1,
-      title: 'E-commerce Fashion',
       category: 'web',
-      description: 'Plataforma completa de e-commerce com sistema de pagamento integrado e painel administrativo.',
       image: 'https://images.pexels.com/photos/230544/pexels-photo-230544.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-      type: 'Website',
-      status: 'Concluído'
+      translationIndex: 0
     },
     {
       id: 2,
-      title: 'App Delivery Food',
       category: 'mobile',
-      description: 'Aplicativo de delivery com geolocalização, pagamento online e sistema de avaliações.',
       image: 'https://images.pexels.com/photos/1640777/pexels-photo-1640777.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React Native', 'Firebase', 'Maps API', 'PayPal'],
-      type: 'Mobile App',
-      status: 'Concluído'
+      translationIndex: 1
     },
     {
       id: 3,
-      title: 'Dashboard Analytics',
       category: 'web',
-      description: 'Painel de controle com visualização de dados em tempo real e relatórios personalizados.',
       image: 'https://images.pexels.com/photos/590022/pexels-photo-590022.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Vue.js', 'D3.js', 'Python', 'PostgreSQL'],
-      type: 'Web App',
-      status: 'Concluído'
+      translationIndex: 2
     },
     {
       id: 4,
-      title: 'App Fitness Tracker',
       category: 'mobile',
-      description: 'Aplicativo de acompanhamento fitness com integração de wearables e planos personalizados.',
       image: 'https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Flutter', 'HealthKit', 'Firebase', 'ML Kit'],
-      type: 'Mobile App',
-      status: 'Em desenvolvimento'
+      translationIndex: 3
     },
     {
       id: 5,
-      title: 'Portal Educacional',
       category: 'web',
-      description: 'Plataforma de ensino online com videoaulas, exercícios interativos e sistema de certificação.',
       image: 'https://images.pexels.com/photos/159711/books-bookstore-book-reading-159711.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['Next.js', 'Prisma', 'AWS', 'WebRTC'],
-      type: 'Website',
-      status: 'Concluído'
+      translationIndex: 4
     },
     {
       id: 6,
-      title: 'App Banking',
       category: 'mobile',
-      description: 'Aplicativo bancário com autenticação biométrica, transferências e investimentos.',
       image: 'https://images.pexels.com/photos/259200/pexels-photo-259200.jpeg?auto=compress&cs=tinysrgb&w=800',
       technologies: ['React Native', 'Biometrics', 'Encryption', 'APIs'],
-      type: 'Mobile App',
-      status: 'Em desenvolvimento'
+      translationIndex: 5
     }
   ];
 
-  const filters = [
-    { id: 'all', label: 'Todos os Projetos', count: projects.length },
-    { id: 'web', label: 'Websites', count: projects.filter(p => p.category === 'web').length },
-    { id: 'mobile', label: 'Apps Mobile', count: projects.filter(p => p.category === 'mobile').length }
-  ];
+  const projects = baseProjects.map((project) => {
+    const translation = t.portfolio.projects[project.translationIndex];
+    const statusKey = translation?.status ?? 'done';
+    return {
+      ...project,
+      title: translation?.title ?? '',
+      description: translation?.description ?? '',
+      type: translation?.type ?? '',
+      statusKey,
+      statusLabel:
+        statusKey === 'inProgress' ? t.portfolio.statusLabel.inProgress : t.portfolio.statusLabel.done
+    };
+  });
 
-  const filteredProjects = activeFilter === 'all' 
-    ? projects 
+  const filters = t.portfolio.filters.map((filter) => ({
+    ...filter,
+    count:
+      filter.id === 'all'
+        ? projects.length
+        : projects.filter((project) => project.category === filter.id).length
+  }));
+
+  const filteredProjects = activeFilter === 'all'
+    ? projects
     : projects.filter(project => project.category === activeFilter);
 
   return (
@@ -84,17 +84,15 @@ const Portfolio = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-purple-100 text-purple-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Filter className="w-4 h-4" />
-            <span>Nosso Portfólio</span>
+            <span>{t.portfolio.badge}</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Projetos que
+            {t.portfolio.headingLine1}
             <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              Fazem a Diferença
+              {t.portfolio.headingHighlight}
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Cada projeto é uma oportunidade de criar algo extraordinário. Veja alguns dos nossos trabalhos mais recentes
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.portfolio.description}</p>
         </div>
 
         {/* Filters */}
@@ -131,13 +129,13 @@ const Portfolio = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                 
                 {/* Status Badge */}
-                <div className="absolute top-4 left-4">
+            <div className="absolute top-4 left-4">
                   <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    project.status === 'Concluído' 
-                      ? 'bg-green-100 text-green-600' 
+                    project.statusKey === 'done'
+                      ? 'bg-green-100 text-green-600'
                       : 'bg-yellow-100 text-yellow-600'
                   }`}>
-                    {project.status}
+                    {project.statusLabel}
                   </span>
                 </div>
 
@@ -188,7 +186,7 @@ const Portfolio = () => {
 
                 {/* CTA */}
                 <button className="group/btn flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors">
-                  <span>Ver detalhes</span>
+                  <span>{t.portfolio.projectCta}</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -199,10 +197,8 @@ const Portfolio = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Gostou do que viu?</h3>
-            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">
-              Estes são apenas alguns exemplos do nosso trabalho. Temos muito mais para mostrar e estamos prontos para criar algo incrível para você também.
-            </p>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">{t.portfolio.bottomCta.title}</h3>
+            <p className="text-gray-600 mb-6 max-w-2xl mx-auto">{t.portfolio.bottomCta.description}</p>
             <button
               onClick={() => {
                 const element = document.getElementById('contato');
@@ -210,7 +206,7 @@ const Portfolio = () => {
               }}
               className="bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              Vamos Conversar
+              {t.portfolio.bottomCta.button}
             </button>
           </div>
         </div>

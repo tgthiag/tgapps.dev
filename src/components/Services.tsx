@@ -1,63 +1,52 @@
 import React from 'react';
 import { Globe, Smartphone, Palette, Code, Zap, Shield, ArrowRight } from 'lucide-react';
+import { useTranslations } from '../context/LanguageContext';
 
 const Services = () => {
-  const services = [
+  const t = useTranslations();
+  const serviceConfigs = [
     {
       icon: Globe,
-      title: 'Desenvolvimento Web',
-      description: 'Sites modernos, responsivos e otimizados para conversão. Utilizamos as mais recentes tecnologias para criar experiências web excepcionais.',
-      features: ['React & Next.js', 'Design Responsivo', 'SEO Otimizado', 'Performance Máxima'],
       color: 'from-blue-500 to-cyan-500',
       bgColor: 'bg-blue-50',
       iconColor: 'text-blue-600'
     },
     {
       icon: Smartphone,
-      title: 'Apps Mobile',
-      description: 'Aplicativos nativos e híbridos para iOS e Android. Desenvolvemos soluções mobile que conectam sua marca aos usuários.',
-      features: ['React Native', 'iOS & Android', 'UI/UX Nativo', 'Integração APIs'],
       color: 'from-purple-500 to-pink-500',
       bgColor: 'bg-purple-50',
       iconColor: 'text-purple-600'
     },
     {
       icon: Palette,
-      title: 'UI/UX Design',
-      description: 'Interfaces intuitivas e experiências memoráveis. Criamos designs que encantam usuários e geram resultados.',
-      features: ['Design System', 'Prototipagem', 'Testes Usabilidade', 'Branding Digital'],
       color: 'from-pink-500 to-rose-500',
       bgColor: 'bg-pink-50',
       iconColor: 'text-pink-600'
     },
     {
       icon: Code,
-      title: 'Desenvolvimento Backend',
-      description: 'APIs robustas e escaláveis. Construímos a infraestrutura que sustenta suas aplicações com segurança e performance.',
-      features: ['Node.js & Python', 'APIs RESTful', 'Banco de Dados', 'Cloud Deploy'],
       color: 'from-green-500 to-emerald-500',
       bgColor: 'bg-green-50',
       iconColor: 'text-green-600'
     },
     {
       icon: Zap,
-      title: 'Otimização & Performance',
-      description: 'Maximizamos a velocidade e eficiência das suas aplicações. Cada milissegundo importa para a experiência do usuário.',
-      features: ['Core Web Vitals', 'Lazy Loading', 'Cache Strategy', 'CDN Setup'],
       color: 'from-yellow-500 to-orange-500',
       bgColor: 'bg-yellow-50',
       iconColor: 'text-yellow-600'
     },
     {
       icon: Shield,
-      title: 'Segurança & Manutenção',
-      description: 'Protegemos suas aplicações e mantemos tudo funcionando perfeitamente. Suporte contínuo e atualizações regulares.',
-      features: ['SSL & HTTPS', 'Backup Automático', 'Monitoramento 24/7', 'Suporte Técnico'],
       color: 'from-indigo-500 to-blue-500',
       bgColor: 'bg-indigo-50',
       iconColor: 'text-indigo-600'
     }
   ];
+
+  const services = serviceConfigs.map((config, index) => ({
+    ...config,
+    ...t.services.items[index]
+  }));
 
   return (
     <section id="servicos" className="py-24 bg-gray-50">
@@ -66,17 +55,15 @@ const Services = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-blue-100 text-blue-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Zap className="w-4 h-4" />
-            <span>Nossos Serviços</span>
+            <span>{t.services.badge}</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Soluções Completas para
+            {t.services.headingLine1}
             <span className="block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-              Seu Sucesso Digital
+              {t.services.headingHighlight}
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Oferecemos um ecossistema completo de serviços digitais, desde o conceito inicial até o lançamento e manutenção contínua
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.services.description}</p>
         </div>
 
         {/* Services Grid */}
@@ -113,7 +100,7 @@ const Services = () => {
 
                 {/* CTA */}
                 <button className="group/btn flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
-                  <span>Saiba mais</span>
+                  <span>{service.cta}</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
               </div>
@@ -124,10 +111,8 @@ const Services = () => {
         {/* Bottom CTA */}
         <div className="text-center mt-16">
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">Pronto para começar seu projeto?</h3>
-            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">
-              Entre em contato conosco e descubra como podemos transformar sua ideia em uma solução digital de sucesso
-            </p>
+            <h3 className="text-2xl font-bold mb-4">{t.services.bottomCta.title}</h3>
+            <p className="text-blue-100 mb-6 max-w-2xl mx-auto">{t.services.bottomCta.description}</p>
             <button
               onClick={() => {
                 const element = document.getElementById('contato');
@@ -135,7 +120,7 @@ const Services = () => {
               }}
               className="bg-white text-blue-600 px-8 py-3 rounded-full font-semibold hover:shadow-lg transition-all duration-300 hover:scale-105"
             >
-              Solicitar Orçamento
+              {t.services.bottomCta.button}
             </button>
           </div>
         </div>
