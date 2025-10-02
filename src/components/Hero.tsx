@@ -1,13 +1,21 @@
 import React from 'react';
 import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
+import { useTranslations } from '../context/LanguageContext';
 
 const Hero = () => {
+  const t = useTranslations();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+  const statsIcons = [Users, Award, Zap];
+  const stats = statsIcons.map((IconComponent, index) => ({
+    IconComponent,
+    label: t.hero.stats[index]?.label ?? ''
+  }));
 
   return (
     <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -28,37 +36,33 @@ const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md rounded-full px-4 py-2 mb-8 border border-white/20">
             <Star className="w-4 h-4 text-yellow-400" />
-            <span className="text-white/90 text-sm font-medium">Especialistas em Desenvolvimento Digital</span>
+            <span className="text-white/90 text-sm font-medium">{t.hero.badge}</span>
           </div>
 
           {/* Main heading */}
           <h1 className="text-4xl sm:text-5xl lg:text-7xl font-bold text-white mb-6 leading-tight">
-            Transformamos
+            {t.hero.titleLine1}
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              Ideias em Realidade
+              {t.hero.titleHighlight}
             </span>
-            Digital
+            {t.hero.titleLine2}
           </h1>
 
           {/* Subtitle */}
-          <p className="text-xl sm:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">
-            Criamos <strong>sites modernos</strong> e <strong>aplicativos mobile</strong> que impulsionam seu negócio para o próximo nível
-          </p>
+          <p className="text-xl sm:text-2xl text-white/80 mb-8 max-w-3xl mx-auto leading-relaxed">{t.hero.subtitle}</p>
 
           {/* Stats */}
           <div className="flex flex-wrap justify-center items-center gap-8 mb-12">
-            <div className="flex items-center space-x-2 text-white/90">
-              <Users className="w-5 h-5 text-blue-400" />
-              <span className="font-semibold">100+ Clientes</span>
-            </div>
-            <div className="flex items-center space-x-2 text-white/90">
-              <Award className="w-5 h-5 text-purple-400" />
-              <span className="font-semibold">200+ Projetos</span>
-            </div>
-            <div className="flex items-center space-x-2 text-white/90">
-              <Zap className="w-5 h-5 text-pink-400" />
-              <span className="font-semibold">5 Anos de Experiência</span>
-            </div>
+            {stats.map(({ IconComponent, label }, index) => (
+              <div key={index} className="flex items-center space-x-2 text-white/90">
+                <IconComponent
+                  className={`w-5 h-5 ${
+                    index === 0 ? 'text-blue-400' : index === 1 ? 'text-purple-400' : 'text-pink-400'
+                  }`}
+                />
+                <span className="font-semibold">{label}</span>
+              </div>
+            ))}
           </div>
 
           {/* CTA Buttons */}
@@ -67,16 +71,16 @@ const Hero = () => {
               onClick={() => scrollToSection('contato')}
               className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center space-x-2"
             >
-              <span>Começar Projeto</span>
+              <span>{t.hero.primaryCta}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </button>
-            
+
             <button
               onClick={() => scrollToSection('portfolio')}
               className="group bg-white/10 backdrop-blur-md text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center space-x-2"
             >
               <Play className="w-5 h-5" />
-              <span>Ver Portfólio</span>
+              <span>{t.hero.secondaryCta}</span>
             </button>
           </div>
 

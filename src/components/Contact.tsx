@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageSquare } from 'lucide-react';
+import { useTranslations } from '../context/LanguageContext';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -12,6 +13,7 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const t = useTranslations();
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -44,48 +46,19 @@ const Contact = () => {
     }, 3000);
   };
 
-  const contactInfo = [
-    {
-      icon: Mail,
-      title: 'Email',
-      value: 'support@tgapps.dev',
-      description: 'Resposta em até 2 horas',
-      color: 'from-blue-500 to-cyan-500'
-    },
-    {
-      icon: Phone,
-      title: 'Telefone',
-      value: '+55 (11) 99999-9999',
-      description: 'Seg-Sex, 9h às 18h',
-      color: 'from-green-500 to-emerald-500'
-    },
-    {
-      icon: MapPin,
-      title: 'Localização',
-      value: 'São Paulo, SP',
-      description: 'Atendimento remoto',
-      color: 'from-purple-500 to-pink-500'
-    }
+  const contactInfoConfig = [
+    { icon: Mail, color: 'from-blue-500 to-cyan-500' },
+    { icon: Phone, color: 'from-green-500 to-emerald-500' },
+    { icon: MapPin, color: 'from-purple-500 to-pink-500' }
   ];
 
-  const services = [
-    'Desenvolvimento Web',
-    'Aplicativo Mobile',
-    'UI/UX Design',
-    'E-commerce',
-    'Sistema Personalizado',
-    'Consultoria Técnica',
-    'Outro'
-  ];
+  const contactInfo = contactInfoConfig.map((config, index) => ({
+    ...config,
+    ...t.contact.info[index]
+  }));
 
-  const budgetRanges = [
-    'R$ 5.000 - R$ 15.000',
-    'R$ 15.000 - R$ 30.000',
-    'R$ 30.000 - R$ 50.000',
-    'R$ 50.000 - R$ 100.000',
-    'Acima de R$ 100.000',
-    'Prefiro não informar'
-  ];
+  const services = t.contact.services;
+  const budgetRanges = t.contact.budgets;
 
   return (
     <section id="contato" className="py-24 bg-white">
@@ -94,23 +67,21 @@ const Contact = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <MessageSquare className="w-4 h-4" />
-            <span>Fale Conosco</span>
+            <span>{t.contact.badge}</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Vamos Transformar
+            {t.contact.headingLine1}
             <span className="block bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
-              Sua Ideia em Realidade
+              {t.contact.headingHighlight}
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Estamos prontos para ouvir sua ideia e criar a solução digital perfeita para o seu negócio. Entre em contato conosco!
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.contact.description}</p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Info */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">Como nos encontrar</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-8">{t.contact.infoHeading}</h3>
             <div className="space-y-6">
               {contactInfo.map((info, index) => {
                 const IconComponent = info.icon;
@@ -131,24 +102,14 @@ const Contact = () => {
 
             {/* Quick Stats */}
             <div className="mt-12 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border border-blue-100">
-              <h4 className="font-bold text-gray-900 mb-4">Por que escolher a TG Apps?</h4>
+              <h4 className="font-bold text-gray-900 mb-4">{t.contact.whyUsHeading}</h4>
               <div className="space-y-3">
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700 text-sm">Resposta rápida em até 2 horas</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700 text-sm">Orçamento gratuito e sem compromisso</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700 text-sm">Consultoria técnica especializada</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <CheckCircle className="w-5 h-5 text-green-500" />
-                  <span className="text-gray-700 text-sm">Suporte contínuo pós-entrega</span>
-                </div>
+                {t.contact.whyUs.map((item, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-green-500" />
+                    <span className="text-gray-700 text-sm">{item}</span>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -156,23 +117,23 @@ const Contact = () => {
           {/* Contact Form */}
           <div className="lg:col-span-2">
             <div className="bg-gray-50 rounded-2xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Solicite seu orçamento</h3>
-              <p className="text-gray-600 mb-8">Preencha o formulário abaixo e entraremos em contato em breve</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.contact.formHeading}</h3>
+              <p className="text-gray-600 mb-8">{t.contact.formDescription}</p>
 
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                     <CheckCircle className="w-8 h-8 text-green-600" />
                   </div>
-                  <h4 className="text-xl font-bold text-gray-900 mb-2">Mensagem enviada com sucesso!</h4>
-                  <p className="text-gray-600">Entraremos em contato em breve. Obrigado!</p>
+                  <h4 className="text-xl font-bold text-gray-900 mb-2">{t.contact.successTitle}</h4>
+                  <p className="text-gray-600">{t.contact.successMessage}</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                        Nome completo *
+                        {t.contact.form.nameLabel}
                       </label>
                       <input
                         type="text"
@@ -182,12 +143,12 @@ const Contact = () => {
                         value={formData.name}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="Seu nome completo"
+                        placeholder={t.contact.form.namePlaceholder}
                       />
                     </div>
                     <div>
                       <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                        Email *
+                        {t.contact.form.emailLabel}
                       </label>
                       <input
                         type="email"
@@ -197,7 +158,7 @@ const Contact = () => {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="seu@email.com"
+                        placeholder={t.contact.form.emailPlaceholder}
                       />
                     </div>
                   </div>
@@ -205,7 +166,7 @@ const Contact = () => {
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
                       <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                        Telefone
+                        {t.contact.form.phoneLabel}
                       </label>
                       <input
                         type="tel"
@@ -214,12 +175,12 @@ const Contact = () => {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                        placeholder="(11) 99999-9999"
+                        placeholder={t.contact.form.phonePlaceholder}
                       />
                     </div>
                     <div>
                       <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-2">
-                        Tipo de serviço *
+                        {t.contact.form.serviceLabel}
                       </label>
                       <select
                         id="service"
@@ -229,7 +190,7 @@ const Contact = () => {
                         onChange={handleChange}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                       >
-                        <option value="">Selecione um serviço</option>
+                        <option value="">{t.contact.form.servicePlaceholder}</option>
                         {services.map((service, index) => (
                           <option key={index} value={service}>{service}</option>
                         ))}
@@ -239,7 +200,7 @@ const Contact = () => {
 
                   <div>
                     <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                      Orçamento estimado
+                      {t.contact.form.budgetLabel}
                     </label>
                     <select
                       id="budget"
@@ -248,7 +209,7 @@ const Contact = () => {
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
                     >
-                      <option value="">Selecione uma faixa</option>
+                      <option value="">{t.contact.form.budgetPlaceholder}</option>
                       {budgetRanges.map((range, index) => (
                         <option key={index} value={range}>{range}</option>
                       ))}
@@ -257,7 +218,7 @@ const Contact = () => {
 
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                      Descreva seu projeto *
+                      {t.contact.form.messageLabel}
                     </label>
                     <textarea
                       id="message"
@@ -267,7 +228,7 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none"
-                      placeholder="Conte-nos mais sobre seu projeto, objetivos e expectativas..."
+                      placeholder={t.contact.form.messagePlaceholder}
                     ></textarea>
                   </div>
 
@@ -279,19 +240,17 @@ const Contact = () => {
                     {isSubmitting ? (
                       <>
                         <Clock className="w-5 h-5 animate-spin" />
-                        <span>Enviando...</span>
+                        <span>{t.contact.form.submitting}</span>
                       </>
                     ) : (
                       <>
                         <Send className="w-5 h-5" />
-                        <span>Enviar Mensagem</span>
+                        <span>{t.contact.form.submit}</span>
                       </>
                     )}
                   </button>
 
-                  <p className="text-xs text-gray-500 text-center">
-                    Ao enviar este formulário, você concorda com nossa política de privacidade e termos de uso.
-                  </p>
+                  <p className="text-xs text-gray-500 text-center">{t.contact.form.policy}</p>
                 </form>
               )}
             </div>

@@ -1,36 +1,22 @@
 import React from 'react';
 import { Users, Target, Lightbulb, Award, TrendingUp, Heart } from 'lucide-react';
+import { useTranslations } from '../context/LanguageContext';
 
 const About = () => {
-  const values = [
-    {
-      icon: Target,
-      title: 'Foco no Cliente',
-      description: 'Cada projeto é desenvolvido pensando nas necessidades específicas do cliente e seus objetivos de negócio.'
-    },
-    {
-      icon: Lightbulb,
-      title: 'Inovação Constante',
-      description: 'Sempre buscamos as tecnologias mais recentes e melhores práticas para entregar soluções de ponta.'
-    },
-    {
-      icon: Award,
-      title: 'Qualidade Premium',
-      description: 'Não fazemos concessões quando se trata de qualidade. Cada linha de código é cuidadosamente crafted.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Resultados Mensuráveis',
-      description: 'Desenvolvemos soluções que geram impacto real e resultados tangíveis para o seu negócio.'
-    }
-  ];
+  const t = useTranslations();
+  const valuesConfig = [Target, Lightbulb, Award, TrendingUp];
+  const values = valuesConfig.map((IconComponent, index) => ({
+    icon: IconComponent,
+    title: t.about.values[index]?.title ?? '',
+    description: t.about.values[index]?.description ?? ''
+  }));
 
-  const stats = [
-    { number: '100+', label: 'Projetos Entregues', icon: Award },
-    { number: '50+', label: 'Clientes Satisfeitos', icon: Users },
-    { number: '5+', label: 'Anos de Experiência', icon: TrendingUp },
-    { number: '99%', label: 'Taxa de Satisfação', icon: Heart }
-  ];
+  const statsIcons = [Award, Users, TrendingUp, Heart];
+  const stats = statsIcons.map((IconComponent, index) => ({
+    icon: IconComponent,
+    number: t.about.stats[index]?.number ?? '',
+    label: t.about.stats[index]?.label ?? ''
+  }));
 
   return (
     <section id="sobre" className="py-24 bg-gray-50">
@@ -39,17 +25,15 @@ const About = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center space-x-2 bg-green-100 text-green-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <Users className="w-4 h-4" />
-            <span>Sobre Nós</span>
+            <span>{t.about.badge}</span>
           </div>
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            Quem Somos e
+            {t.about.headingLine1}
             <span className="block bg-gradient-to-r from-green-600 to-blue-600 bg-clip-text text-transparent">
-              Nossa Missão
+              {t.about.headingHighlight}
             </span>
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Somos uma equipe apaixonada por tecnologia, dedicada a transformar ideias em soluções digitais que fazem a diferença
-          </p>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.about.description}</p>
         </div>
 
         {/* Main Content */}
@@ -57,31 +41,18 @@ const About = () => {
           {/* Text Content */}
           <div>
             <h3 className="text-3xl font-bold text-gray-900 mb-6">
-              Transformando o Digital desde 2019
+              {t.about.timelineHeading}
             </h3>
             <div className="space-y-4 text-gray-600 leading-relaxed">
-              <p>
-                A <strong className="text-gray-900">TG Apps</strong> nasceu da paixão por criar soluções digitais que realmente importam. 
-                Começamos como uma pequena equipe de desenvolvedores e designers, e hoje somos uma empresa consolidada 
-                no mercado de desenvolvimento web e mobile.
-              </p>
-              <p>
-                Nossa jornada é marcada pela busca constante da excelência técnica e pela satisfação dos nossos clientes. 
-                Acreditamos que a tecnologia deve ser uma ferramenta para simplificar a vida das pessoas e impulsionar negócios.
-              </p>
-              <p>
-                Cada projeto é uma oportunidade de aprender, inovar e superar expectativas. Trabalhamos com metodologias 
-                ágeis, sempre mantendo a comunicação transparente e o foco nos resultados.
-              </p>
+              {t.about.paragraphs.map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
             </div>
 
             {/* Mission Statement */}
             <div className="mt-8 p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl border border-blue-100">
-              <h4 className="text-xl font-bold text-gray-900 mb-3">Nossa Missão</h4>
-              <p className="text-gray-700 italic">
-                "Democratizar o acesso à tecnologia de qualidade, criando soluções digitais que conectam pessoas, 
-                impulsionam negócios e transformam ideias em realidade."
-              </p>
+              <h4 className="text-xl font-bold text-gray-900 mb-3">{t.about.missionHeading}</h4>
+              <p className="text-gray-700 italic">{t.about.missionDescription}</p>
             </div>
           </div>
 
@@ -90,11 +61,11 @@ const About = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800"
-                alt="Equipe TG Apps trabalhando"
+                alt="TG Apps team collaborating"
                 className="w-full h-96 object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-blue-900/50 to-transparent"></div>
-              
+
               {/* Floating Card */}
               <div className="absolute bottom-6 left-6 right-6 bg-white/95 backdrop-blur-sm rounded-xl p-4">
                 <div className="flex items-center space-x-4">
@@ -102,8 +73,8 @@ const About = () => {
                     <Heart className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h5 className="font-bold text-gray-900">Paixão pelo que fazemos</h5>
-                    <p className="text-sm text-gray-600">Cada projeto é desenvolvido com dedicação e carinho</p>
+                    <h5 className="font-bold text-gray-900">{t.about.passionTitle}</h5>
+                    <p className="text-sm text-gray-600">{t.about.passionDescription}</p>
                   </div>
                 </div>
               </div>
@@ -117,7 +88,7 @@ const About = () => {
 
         {/* Values */}
         <div className="mb-20">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">Nossos Valores</h3>
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">{t.about.valuesHeading}</h3>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {values.map((value, index) => {
               const IconComponent = value.icon;
@@ -139,7 +110,7 @@ const About = () => {
 
         {/* Stats */}
         <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">Números que Falam por Si</h3>
+          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">{t.about.statsHeading}</h3>
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => {
               const IconComponent = stat.icon;
