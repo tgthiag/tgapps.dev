@@ -370,6 +370,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'North America-friendly overlap plus English-first, global delivery',
         'Flexible billing: monthly retainers or per-task scopes',
         'Transparent budgets built for startups and SMBs',
+        'No surprise fees—what we agree on is the only cost, and you direct us as needs evolve',
         'Post-launch support handled by the same builders',
         'Fast kickoff calls—if you thought about it, we are already building'
       ],
@@ -678,7 +679,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Fundadores envolvidos do briefing ao deploy',
         'Processo pensado para colaboração com EUA/Canadá e clientes globais',
         'Pagamentos flexíveis: mensalidade ou tarefas conforme a necessidade',
-        'Orçamentos transparentes e alinhados ao seu estágio',
+        'Orçamentos transparentes: o que combinarmos será o único custo e você nos direciona conforme a demanda',
         'Suporte pós-lançamento com o mesmo time que construiu',
         'Call rápida e sem burocracia — pensou em algo, já estamos construindo'
       ],
