@@ -18,6 +18,13 @@ const About = () => {
     label: t.about.stats[index]?.label ?? ''
   }));
 
+  const clientIcons = [Lightbulb, TrendingUp];
+  const clientTypes = clientIcons.map((IconComponent, index) => ({
+    icon: IconComponent,
+    title: t.about.clientTypes[index]?.title ?? '',
+    description: t.about.clientTypes[index]?.description ?? ''
+  }));
+
   return (
     <section id="sobre" className="py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -54,6 +61,28 @@ const About = () => {
               <h4 className="text-xl font-bold text-gray-900 mb-3">{t.about.missionHeading}</h4>
               <p className="text-gray-700 italic">{t.about.missionDescription}</p>
             </div>
+
+            {clientTypes.some((client) => client.title) && (
+              <div className="mt-8">
+                <h4 className="text-xl font-bold text-gray-900 mb-4">{t.about.clientHeading}</h4>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                  {clientTypes.map((client, index) => {
+                    const IconComponent = client.icon;
+                    return (
+                      <div key={index} className="p-4 bg-white rounded-xl border border-gray-100 shadow-sm">
+                        <div className="flex items-center space-x-3 mb-3">
+                          <div className="w-10 h-10 rounded-full bg-gradient-to-br from-green-500 to-blue-500 flex items-center justify-center">
+                            <IconComponent className="w-5 h-5 text-white" />
+                          </div>
+                          <h5 className="text-lg font-semibold text-gray-900">{client.title}</h5>
+                        </div>
+                        <p className="text-gray-600 text-sm leading-relaxed">{client.description}</p>
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+            )}
           </div>
 
           {/* Image/Visual */}

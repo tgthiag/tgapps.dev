@@ -120,6 +120,21 @@ const Contact = () => {
               <h3 className="text-2xl font-bold text-gray-900 mb-2">{t.contact.formHeading}</h3>
               <p className="text-gray-600 mb-8">{t.contact.formDescription}</p>
 
+              {t.contact.callout?.title && (
+                <div className="mb-10 p-5 bg-white border border-gray-200 rounded-xl">
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">{t.contact.callout.title}</h4>
+                  <p className="text-gray-600 text-sm mb-4">{t.contact.callout.description}</p>
+                  <ul className="space-y-2">
+                    {t.contact.callout.bullets.map((bullet, index) => (
+                      <li key={index} className="flex items-start space-x-3 text-sm text-gray-700">
+                        <Clock className="w-4 h-4 text-orange-500 mt-0.5" />
+                        <span>{bullet}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+
               {isSubmitted ? (
                 <div className="text-center py-12">
                   <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">

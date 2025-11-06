@@ -71,6 +71,11 @@ export interface TranslationSchema {
     paragraphs: string[];
     missionHeading: string;
     missionDescription: string;
+    clientHeading: string;
+    clientTypes: {
+      title: string;
+      description: string;
+    }[];
     valuesHeading: string;
     values: {
       title: string;
@@ -99,6 +104,11 @@ export interface TranslationSchema {
     whyUs: string[];
     formHeading: string;
     formDescription: string;
+    callout: {
+      title: string;
+      description: string;
+      bullets: string[];
+    };
     successTitle: string;
     successMessage: string;
     form: {
@@ -229,53 +239,16 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     portfolio: {
       badge: 'Selected engagements',
-      headingLine1: 'Representative work',
-      headingHighlight: 'from our studio',
+      headingLine1: '',
+      headingHighlight: '',
       description:
-        'We operate under NDAs on most builds, so the cases below are anonymized snapshots that reflect the type of outcomes we deliver.',
+        'Most of our work runs under NDAs—schedule a quick, free call and we will walk you through sanitized examples, security practices, and how we approach delivery.',
       filters: [
         { id: 'all', label: 'All Projects' },
         { id: 'web', label: 'Websites' },
         { id: 'mobile', label: 'Mobile Apps' }
       ],
-      projects: [
-        {
-          title: 'Usage-based billing cockpit',
-          description: 'Extended a North American fintech dashboard with revenue reporting, Stripe usage webhooks, and SOC2-ready auditing.',
-          type: 'Web App',
-          status: 'done'
-        },
-        {
-          title: 'B2B marketplace storefront',
-          description: 'Rebuilt the marketing and vendor onboarding site for an industrial marketplace using Next.js, Sanity, and edge hosting.',
-          type: 'Website',
-          status: 'done'
-        },
-        {
-          title: 'Care workforce app',
-          description: 'React Native field app for care teams with HIPAA-friendly authentication, offline notes, and shift scheduling.',
-          type: 'Mobile App',
-          status: 'inProgress'
-        },
-        {
-          title: 'Learning ops portal',
-          description: 'Internal tool that unifies cohort tracking, assignments, and Slack automation for a distributed academy.',
-          type: 'Web App',
-          status: 'done'
-        },
-        {
-          title: 'Wellness companion MVP',
-          description: 'Six-week design-and-build sprint delivering a mobile MVP with personalized routines, reminders, and analytics.',
-          type: 'Mobile App',
-          status: 'done'
-        },
-        {
-          title: 'Embedded lending toolkit',
-          description: 'API + admin console that lets partner agencies originate loans, monitor risk, and export compliance-ready data.',
-          type: 'Web App',
-          status: 'inProgress'
-        }
-      ],
+      projects: [],
       statusLabel: {
         done: 'Completed',
         inProgress: 'In progress'
@@ -284,7 +257,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       bottomCta: {
         title: 'Curious about fit?',
         description:
-          'Share a short brief and we will provide redacted Looms, repositories, or references that align with your needs.',
+          'Send a short brief and we will hop on a zero-bureaucracy call to align scope, timelines, and share proof of past work.',
         button: 'Schedule intro call'
       }
     },
@@ -298,11 +271,25 @@ export const translations: Record<Locale, TranslationSchema> = {
       paragraphs: [
         'We stay intentionally small so decision-makers talk directly to the people writing the code and leading the design.',
         'By limiting ourselves to two parallel builds, we keep our attention on outcomes, not headcount charts.',
-        'Weekly demos, written updates, and transparent backlog tools keep budgets under control and stakeholders aligned.'
+        'Weekly demos, written updates, and transparent backlog tools keep budgets under control and stakeholders aligned.',
+        'We cap our workload at 2-3 products at a time with weekly or biweekly planning and deploy sessions so every release stays predictable.'
       ],
       missionHeading: 'Why we exist',
       missionDescription:
         'To help lean teams ship reliable software fast through honest scoping, respectful collaboration, and accountable delivery.',
+      clientHeading: 'The partners who benefit the most',
+      clientTypes: [
+        {
+          title: 'Startups shipping MVPs end-to-end',
+          description:
+            'We handle databases, authentication, marketing sites, app store submissions, and APIs so founders can prove traction quickly.'
+        },
+        {
+          title: 'Cost-sensitive teams needing leverage',
+          description:
+            'SMBs and agencies that cannot hire a full squad count on us to deliver a full product stream for a fraction of in-house costs.'
+        }
+      ],
       valuesHeading: 'Our Values',
       values: [
         {
@@ -324,10 +311,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       statsHeading: 'What you can expect',
       stats: [
-        { number: '2-4', label: 'Engineers and designers per squad' },
+        { number: '2-3', label: 'Products handled in parallel' },
         { number: '<=1 day', label: 'Typical response time during the week' },
         { number: 'EST+1', label: 'Time zone overlap from Sao Paulo' },
-        { number: 'Weekly', label: 'Live demos and async status reports' }
+        { number: 'Weekly/Biweekly', label: 'Demo and deploy cadence' }
       ],
       passionTitle: 'Principles we live by',
       passionDescription: 'Stay curious, stay transparent, and keep clients confident about what comes next.'
@@ -337,7 +324,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Let’s plan',
       headingHighlight: 'your next release',
       description:
-        'Share the outcome you need and we will reply within one business day with next steps, a realistic timeline, and budget guidance.',
+        'Share the outcome you need and we will set up a zero-cost, zero-bureaucracy call within one business day to show how we work, walk through security, and align scope, timelines, and examples before kickoff.',
       infoHeading: 'How to reach us',
       info: [
         { title: 'Email', value: 'support@tgapps.dev', description: 'Responses within one business day' },
@@ -348,11 +335,25 @@ export const translations: Record<Locale, TranslationSchema> = {
       whyUs: [
         'Founder involvement from brief to launch',
         'North America-friendly overlap plus English-first, global delivery',
+        'Flexible billing: monthly retainers or per-task scopes',
         'Transparent budgets built for startups and SMBs',
-        'Post-launch support handled by the same builders'
+        'Post-launch support handled by the same builders',
+        'Fast kickoff calls—if you thought about it, we are already building'
       ],
       formHeading: 'Request a scope outline',
-      formDescription: 'Tell us about the milestone, constraints, and any assets you already have ready.',
+      formDescription:
+        'Tell us about the milestone, constraints, and assets available so we can prepare a quick call covering process, security, references, and realistic timelines.',
+      callout: {
+        title: 'Book a zero-bureaucracy kickoff call',
+        description:
+          'Before we write a single line of code we can jump on a fast, free call to explain how we help, how delivery works, and what security measures we adopt.',
+        bullets: [
+          'Understand the problem and how we can plug in',
+          'Review workflow, tooling, and collaboration model',
+          'Show anonymized work samples and security practices',
+          'Align scope, budget, and timelines—if you thought about it, we’re already building'
+        ]
+      },
       successTitle: 'Message sent!',
       successMessage: 'We will get back to you within one business day.',
       form: {
@@ -511,53 +512,16 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     portfolio: {
       badge: 'Engajamentos selecionados',
-      headingLine1: 'Trabalhos representativos',
-      headingHighlight: 'do nosso estúdio',
+      headingLine1: '',
+      headingHighlight: '',
       description:
-        'Trabalhamos quase sempre sob NDA, então os exemplos abaixo são snapshots anônimos do tipo de resultado que entregamos.',
+        'Grande parte do que fazemos está sob NDA — agende uma call rápida e gratuita para ver exemplos anonimizados, entender nossa segurança e combinar a melhor forma de entrega.',
       filters: [
         { id: 'all', label: 'Todos os Projetos' },
         { id: 'web', label: 'Websites' },
         { id: 'mobile', label: 'Apps Mobile' }
       ],
-      projects: [
-        {
-          title: 'Cockpit de billing por uso',
-          description: 'Evoluímos o dashboard de uma fintech dos EUA com relatórios de receita, webhooks Stripe e auditoria pronta para compliance.',
-          type: 'Web App',
-          status: 'done'
-        },
-        {
-          title: 'Marketplace B2B',
-          description: 'Reconstruímos o site e o onboarding de fornecedores usando Next.js, Sanity e deploy edge.',
-          type: 'Website',
-          status: 'done'
-        },
-        {
-          title: 'App para equipes de campo',
-          description: 'Aplicativo React Native para times de cuidado com autenticação compatível com HIPAA, modo offline e agenda de turnos.',
-          type: 'Mobile App',
-          status: 'inProgress'
-        },
-        {
-          title: 'Portal de operações educacionais',
-          description: 'Ferramenta interna que concentra acompanhamento de turmas, tarefas e automações no Slack.',
-          type: 'Web App',
-          status: 'done'
-        },
-        {
-          title: 'MVP de bem-estar',
-          description: 'Sprint de seis semanas entregando um app com rotinas personalizadas, lembretes e painel analítico.',
-          type: 'Mobile App',
-          status: 'done'
-        },
-        {
-          title: 'Toolkit de crédito embutido',
-          description: 'API e console administrativo para originar empréstimos, monitorar risco e exportar dados para compliance.',
-          type: 'Web App',
-          status: 'inProgress'
-        }
-      ],
+      projects: [],
       statusLabel: {
         done: 'Concluído',
         inProgress: 'Em desenvolvimento'
@@ -566,7 +530,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       bottomCta: {
         title: 'Quer entender o fit?',
         description:
-          'Envie um briefing rápido e compartilhamos Looms, códigos ou referências alinhadas ao seu cenário.',
+          'Envie um briefing e marcamos uma call sem burocracia para alinhar escopo, prazos e mostrar evidências do nosso trabalho.',
         button: 'Marcar call introdutória'
       }
     },
@@ -580,11 +544,25 @@ export const translations: Record<Locale, TranslationSchema> = {
       paragraphs: [
         'Mantemos o time enxuto para que clientes falem diretamente com quem escreve o código e desenha as experiências.',
         'Limitamos os projetos simultâneos para garantir foco, disponibilidade e decisões rápidas.',
-        'Demos semanais, relatórios escritos e ferramentas compartilhadas mantêm todos alinhados sobre escopo, prazo e orçamento.'
+        'Demos semanais, relatórios escritos e ferramentas compartilhadas mantêm todos alinhados sobre escopo, prazo e orçamento.',
+        'Trabalhamos com no máximo 2-3 produtos ao mesmo tempo e realizamos reuniões e deploys semanais ou quinzenais para manter cada entrega previsível.'
       ],
       missionHeading: 'Por que existimos',
       missionDescription:
         'Ajudar times enxutos a lançar software confiável de forma rápida por meio de escopos honestos, colaboração respeitosa e entrega responsável.',
+      clientHeading: 'Quem mais se beneficia',
+      clientTypes: [
+        {
+          title: 'Startups criando MVPs completos',
+          description:
+            'Cuidamos de banco de dados, autenticação, site, apps nas lojas e APIs para que fundadores validem o mercado o quanto antes.'
+        },
+        {
+          title: 'Empresas com orçamento enxuto',
+          description:
+            'Negócios e agências que não podem contratar um time inteiro contam conosco para entregar muito mais por uma fração do custo interno.'
+        }
+      ],
       valuesHeading: 'Nossos valores',
       values: [
         {
@@ -606,10 +584,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       statsHeading: 'O que você pode esperar',
       stats: [
-        { number: '2-4', label: 'Pessoas por squad' },
+        { number: '2-3', label: 'Produtos em paralelo' },
         { number: '<=1 dia', label: 'Tempo típico de resposta útil' },
         { number: 'Fuso EST+1', label: 'Colaboração em tempo real' },
-        { number: 'Demos semanais', label: 'Transparência constante' }
+        { number: 'Semanal/quinzenal', label: 'Ritmo de reuniões e deploys' }
       ],
       passionTitle: 'Princípios que seguimos',
       passionDescription: 'Clareza, respeito ao orçamento e foco total em entregar software utilizável.'
@@ -619,7 +597,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Vamos planejar',
       headingHighlight: 'seu próximo lançamento',
       description:
-        'Conte qual resultado precisa alcançar e respondemos em até um dia útil com próximos passos, estimativas e recomendações.',
+        'Conte qual resultado precisa alcançar e marcamos em até um dia útil uma call gratuita, sem burocracia, para explicar como trabalhamos, como cuidamos da segurança e quais exemplos podemos compartilhar antes de começar.',
       infoHeading: 'Como nos encontrar',
       info: [
         { title: 'Email', value: 'support@tgapps.dev', description: 'Respostas em até 1 dia útil' },
@@ -630,11 +608,25 @@ export const translations: Record<Locale, TranslationSchema> = {
       whyUs: [
         'Fundadores envolvidos do briefing ao deploy',
         'Processo pensado para colaboração com EUA/Canadá e clientes globais',
+        'Pagamentos flexíveis: mensalidade ou tarefas conforme a necessidade',
         'Orçamentos transparentes e alinhados ao seu estágio',
-        'Suporte pós-lançamento com o mesmo time que construiu'
+        'Suporte pós-lançamento com o mesmo time que construiu',
+        'Call rápida e sem burocracia — pensou em algo, já estamos construindo'
       ],
       formHeading: 'Peça um esboço de escopo',
-      formDescription: 'Compartilhe contexto, restrições e materiais disponíveis para montarmos o plano inicial.',
+      formDescription:
+        'Compartilhe contexto, restrições e materiais disponíveis para prepararmos uma call curta cobrindo processo, segurança, exemplos e prazos realistas.',
+      callout: {
+        title: 'Agende uma call rápida e gratuita',
+        description:
+          'Antes de começar, fazemos uma conversa sem custo para mostrar como posso ajudar, como será o trabalho, como cuidamos da segurança e quais exemplos podemos compartilhar.',
+        bullets: [
+          'Entenda o fluxo de trabalho e como integramos ao seu time',
+          'Veja exemplos de entregas e práticas de segurança',
+          'Alinhe escopo, prazos e formatos de pagamento em minutos',
+          'Marcamos rápido porque odiamos burocracia — pensou em algo, já estamos construindo'
+        ]
+      },
       successTitle: 'Mensagem enviada!',
       successMessage: 'Respondemos em até um dia útil. Obrigado!',
       form: {

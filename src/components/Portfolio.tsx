@@ -51,19 +51,24 @@ const Portfolio = () => {
     }
   ];
 
-  const projects = baseProjects.map((project) => {
-    const translation = t.portfolio.projects[project.translationIndex];
-    const statusKey = translation?.status ?? 'done';
-    return {
-      ...project,
-      title: translation?.title ?? '',
-      description: translation?.description ?? '',
-      type: translation?.type ?? '',
-      statusKey,
-      statusLabel:
-        statusKey === 'inProgress' ? t.portfolio.statusLabel.inProgress : t.portfolio.statusLabel.done
-    };
-  });
+  const projects = baseProjects
+    .map((project) => {
+      const translation = t.portfolio.projects[project.translationIndex];
+      if (!translation) {
+        return null;
+      }
+      const statusKey = translation.status ?? 'done';
+      return {
+        ...project,
+        title: translation.title,
+        description: translation.description,
+        type: translation.type,
+        statusKey,
+        statusLabel:
+          statusKey === 'inProgress' ? t.portfolio.statusLabel.inProgress : t.portfolio.statusLabel.done
+      };
+    })
+    .filter((project): project is NonNullable<typeof project> => project !== null);
 
   const filters = t.portfolio.filters.map((filter) => ({
     ...filter,
@@ -77,6 +82,8 @@ const Portfolio = () => {
     ? projects
     : projects.filter(project => project.category === activeFilter);
 
+  const hasHeading = Boolean(t.portfolio.headingLine1 || t.portfolio.headingHighlight);
+
   return (
     <section id="portfolio" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,113 +93,121 @@ const Portfolio = () => {
             <Filter className="w-4 h-4" />
             <span>{t.portfolio.badge}</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
-            {t.portfolio.headingLine1}
-            <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
-              {t.portfolio.headingHighlight}
-            </span>
-          </h2>
+          {hasHeading && (
+            <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+              {t.portfolio.headingLine1}
+              {t.portfolio.headingHighlight && (
+                <span className="block bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+                  {t.portfolio.headingHighlight}
+                </span>
+              )}
+            </h2>
+          )}
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.portfolio.description}</p>
         </div>
 
-        {/* Filters */}
-        <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {filters.map((filter) => (
-            <button
-              key={filter.id}
-              onClick={() => setActiveFilter(filter.id)}
-              className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
-                activeFilter === filter.id
-                  ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
-                  : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-              }`}
-            >
-              {filter.label} ({filter.count})
-            </button>
-          ))}
-        </div>
+        {projects.length > 0 && (
+          <>
+            {/* Filters */}
+            <div className="flex flex-wrap justify-center gap-4 mb-12">
+              {filters.map((filter) => (
+                <button
+                  key={filter.id}
+                  onClick={() => setActiveFilter(filter.id)}
+                  className={`px-6 py-3 rounded-full font-medium transition-all duration-300 ${
+                    activeFilter === filter.id
+                      ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg'
+                      : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
+                  }`}
+                >
+                  {filter.label} ({filter.count})
+                </button>
+              ))}
+            </div>
 
-        {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {filteredProjects.map((project) => (
-            <div
-              key={project.id}
-              className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
-            >
-              {/* Image */}
-              <div className="relative overflow-hidden">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                
-                {/* Status Badge */}
-            <div className="absolute top-4 left-4">
-                  <span className={`px-3 py-1 rounded-full text-xs font-medium ${
-                    project.statusKey === 'done'
-                      ? 'bg-green-100 text-green-600'
-                      : 'bg-yellow-100 text-yellow-600'
-                  }`}>
-                    {project.statusLabel}
-                  </span>
-                </div>
+            {/* Projects Grid */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {filteredProjects.map((project) => (
+                <div
+                  key={project.id}
+                  className="group bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-gray-100"
+                >
+                  {/* Image */}
+                  <div className="relative overflow-hidden">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
-                {/* Type Badge */}
-                <div className="absolute top-4 right-4">
-                  <div className="flex items-center space-x-1 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
-                    {project.category === 'mobile' ? (
-                      <Smartphone className="w-3 h-3 text-purple-600" />
-                    ) : (
-                      <Globe className="w-3 h-3 text-blue-600" />
-                    )}
-                    <span className="text-xs font-medium text-gray-700">{project.type}</span>
+                    {/* Status Badge */}
+                    <div className="absolute top-4 left-4">
+                      <span
+                        className={`px-3 py-1 rounded-full text-xs font-medium ${
+                          project.statusKey === 'done'
+                            ? 'bg-green-100 text-green-600'
+                            : 'bg-yellow-100 text-yellow-600'
+                        }`}
+                      >
+                        {project.statusLabel}
+                      </span>
+                    </div>
+
+                    {/* Type Badge */}
+                    <div className="absolute top-4 right-4">
+                      <div className="flex items-center space-x-1 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                        {project.category === 'mobile' ? (
+                          <Smartphone className="w-3 h-3 text-purple-600" />
+                        ) : (
+                          <Globe className="w-3 h-3 text-blue-600" />
+                        )}
+                        <span className="text-xs font-medium text-gray-700">{project.type}</span>
+                      </div>
+                    </div>
+
+                    {/* Hover Actions */}
+                    <div className="absolute bottom-4 left-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <button className="flex-1 bg-white/90 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-white transition-colors flex items-center justify-center space-x-2">
+                        <ExternalLink className="w-4 h-4" />
+                        <span>Ver Projeto</span>
+                      </button>
+                      <button className="bg-white/90 backdrop-blur-sm text-gray-700 p-2 rounded-lg hover:bg-white transition-colors">
+                        <Github className="w-4 h-4" />
+                      </button>
+                    </div>
+                  </div>
+
+                  {/* Content */}
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-gray-600 mb-4 text-sm leading-relaxed">{project.description}</p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, index) => (
+                        <span
+                          key={index}
+                          className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium"
+                        >
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
+
+                    {/* CTA */}
+                    <button className="group/btn flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors">
+                      <span>{t.portfolio.projectCta}</span>
+                      <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
                   </div>
                 </div>
-
-                {/* Hover Actions */}
-                <div className="absolute bottom-4 left-4 right-4 flex space-x-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <button className="flex-1 bg-white/90 backdrop-blur-sm text-gray-700 px-4 py-2 rounded-lg font-medium hover:bg-white transition-colors flex items-center justify-center space-x-2">
-                    <ExternalLink className="w-4 h-4" />
-                    <span>Ver Projeto</span>
-                  </button>
-                  <button className="bg-white/90 backdrop-blur-sm text-gray-700 p-2 rounded-lg hover:bg-white transition-colors">
-                    <Github className="w-4 h-4" />
-                  </button>
-                </div>
-              </div>
-
-              {/* Content */}
-              <div className="p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-purple-600 transition-colors">
-                  {project.title}
-                </h3>
-                <p className="text-gray-600 mb-4 text-sm leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, index) => (
-                    <span
-                      key={index}
-                      className="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-xs font-medium"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
-
-                {/* CTA */}
-                <button className="group/btn flex items-center text-purple-600 font-semibold hover:text-purple-700 transition-colors">
-                  <span>{t.portfolio.projectCta}</span>
-                  <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
-                </button>
-              </div>
+              ))}
             </div>
-          ))}
-        </div>
+          </>
+        )}
 
         {/* Bottom CTA */}
         <div className="text-center mt-16">
