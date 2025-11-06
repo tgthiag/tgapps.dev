@@ -68,7 +68,7 @@ const Services = () => {
         </div>
 
         {t.services.process && t.services.process.length > 0 && (
-          <div className="mt-20 mb-16">
+          <div id="process" className="mt-20 mb-16 scroll-mt-24">
             <div className="text-center mb-12">
               <h3 className="text-3xl font-bold text-gray-900 mb-4">{t.services.processHeading}</h3>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t.services.processDescription}</p>
@@ -102,7 +102,7 @@ const Services = () => {
         )}
 
         {/* Services Grid */}
-        <div className="mt-12">
+        <div id="servicos" className="mt-12 scroll-mt-24">
           {(t.services.gridHeading || t.services.gridDescription) && (
             <div className="text-center mb-10">
               {t.services.gridHeading && <h3 className="text-2xl font-bold text-gray-900">{t.services.gridHeading}</h3>}

@@ -168,8 +168,8 @@ export const translations: Record<Locale, TranslationSchema> = {
     header: {
       navItems: [
         { id: 'inicio', label: 'Home' },
-        { id: 'servicos', label: 'Services' },
-        { id: 'portfolio', label: 'Portfolio' },
+        { id: 'process', label: 'How we work' },
+        { id: 'servicos', label: 'What you get from us' },
         { id: 'sobre', label: 'About' },
         { id: 'contato', label: 'Contact' }
       ],
@@ -242,16 +242,16 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Product Websites & Apps',
           subtitle: 'Web, SaaS, and internal tools',
           description:
-            'React and Next.js builds for marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in.',
+            'React + TypeScript builds (Next.js/Remix) for marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in. We also integrate with other JS frameworks when needed.',
           features: ['Component libraries', 'Headless CMS', 'Core Web Vitals baseline', 'Analytics instrumentation'],
           cta: 'See approach'
         },
         {
-          title: 'React Native Delivery',
-          subtitle: 'Cross-platform mobile teams',
+          title: 'Flutter Multiplatform Delivery',
+          subtitle: 'Android, iOS, and web with one team',
           description:
-            'Cross-platform mobile apps that share a single codebase while respecting native guidelines and store requirements.',
-          features: ['iOS & Android builds', 'Store submissions', 'Native modules', 'CI/CD pipelines'],
+            'Flutter-first development for mobile and web so you can launch Android, iOS, and responsive web apps from the same codebase, with native integrations when required.',
+          features: ['Flutter & Dart', 'Android & iOS builds', 'Web responsive output', 'CI/CD and store submissions'],
           cta: 'See approach'
         },
         {
@@ -486,8 +486,8 @@ export const translations: Record<Locale, TranslationSchema> = {
     header: {
       navItems: [
         { id: 'inicio', label: 'Início' },
-        { id: 'servicos', label: 'Serviços' },
-        { id: 'portfolio', label: 'Portfólio' },
+        { id: 'process', label: 'Como trabalhamos' },
+        { id: 'servicos', label: 'O que entregamos' },
         { id: 'sobre', label: 'Sobre' },
         { id: 'contato', label: 'Contato' }
       ],
@@ -560,16 +560,16 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Sites e apps em React',
           subtitle: 'Web, SaaS e ferramentas internas',
           description:
-            'Desenvolvemos sites, dashboards e ferramentas internas em React/Next.js com acessibilidade e métricas configuradas desde o primeiro sprint.',
+            'Construímos experiências em React + TypeScript (Next.js/Remix) para marketing, SaaS e ferramentas internas, sempre com acessibilidade e métricas configuradas. Integramos outras stacks JS quando necessário.',
           features: ['Biblioteca de componentes', 'Headless CMS', 'Base Core Web Vitals', 'Instrumentação de analytics'],
           cta: 'Ver abordagem'
         },
         {
-          title: 'Apps React Native',
-          subtitle: 'Mobile multiplataforma',
+          title: 'Apps Flutter',
+          subtitle: 'Android, iOS e web no mesmo código',
           description:
-            'Aplicativos iOS e Android com um único codebase, respeitando guidelines nativas e exigências das lojas.',
-          features: ['Builds iOS & Android', 'Publicação nas lojas', 'Módulos nativos', 'Pipelines CI/CD'],
+            'Desenvolvimento Flutter como stack principal para entregar apps Android, iOS e experiências web responsivas em um único codebase, com integrações nativas quando preciso.',
+          features: ['Flutter & Dart', 'Builds Android & iOS', 'Saída web responsiva', 'CI/CD e publicação nas lojas'],
           cta: 'Ver abordagem'
         },
         {
