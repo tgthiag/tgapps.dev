@@ -157,82 +157,82 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Language'
     },
     hero: {
-      badge: 'Digital Product Experts',
-      titleLine1: 'We turn',
-      titleHighlight: 'Ideas into Reality',
-      titleLine2: 'Online',
+      badge: 'Nearshore Product Team',
+      titleLine1: 'Build digital products with',
+      titleHighlight: 'speed and integrity',
+      titleLine2: 'from Latin America',
       subtitle:
-        'We build modern websites and mobile apps that push your business to the next level and delight your customers.',
+        'TG Apps is a senior-led studio in Brazil helping North American startups and teams worldwide launch web and mobile experiences fast, without inflated promises or fragile budgets.',
       stats: [
-        { label: '100+ Clients' },
-        { label: '200+ Projects' },
-        { label: '5 Years of Experience' }
+        { label: 'Founder-led delivery' },
+        { label: 'Maximum 2 concurrent builds' },
+        { label: 'Replies within 1 business day' }
       ],
-      primaryCta: 'Start a Project',
-      secondaryCta: 'View Portfolio'
+      primaryCta: 'Plan your build',
+      secondaryCta: 'See recent work'
     },
     services: {
-      badge: 'Our Services',
-      headingLine1: 'End-to-end solutions for',
-      headingHighlight: 'Your Digital Success',
+      badge: 'What we build',
+      headingLine1: 'Boutique delivery for',
+      headingHighlight: 'startups and agencies',
       description:
-        'We offer a full ecosystem of digital services—from the first idea to launch and long-term evolution.',
+        'We plug into lean teams that need predictable execution without extra headcount. Each engagement is scoped around fast feedback loops, transparent budgets, and production-ready handoffs.',
       items: [
         {
-          title: 'Web Development',
+          title: 'Product Websites & Apps',
           description:
-            'Modern, responsive, conversion-focused websites built with the latest technologies and performance best practices.',
-          features: ['React & Next.js', 'Responsive Design', 'SEO Optimization', 'Top-tier Performance'],
-          cta: 'Learn more'
+            'React and Next.js builds for marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in.',
+          features: ['Component libraries', 'Headless CMS', 'Core Web Vitals baseline', 'Analytics instrumentation'],
+          cta: 'See approach'
         },
         {
-          title: 'Mobile Apps',
+          title: 'React Native Delivery',
           description:
-            'Native and cross-platform apps for iOS and Android that connect your brand with users wherever they are.',
-          features: ['React Native', 'iOS & Android', 'Native UI/UX', 'API Integrations'],
-          cta: 'Learn more'
+            'Cross-platform mobile apps that share a single codebase while respecting native guidelines and store requirements.',
+          features: ['iOS & Android builds', 'Store submissions', 'Native modules', 'CI/CD pipelines'],
+          cta: 'See approach'
         },
         {
-          title: 'UI/UX Design',
+          title: 'Discovery & UX Sprints',
           description:
-            'Intuitive interfaces and memorable experiences that delight users and drive measurable results.',
-          features: ['Design Systems', 'Prototyping', 'Usability Testing', 'Digital Branding'],
-          cta: 'Learn more'
+            'Remote workshops, prototypes, and usability reviews that clarify scope before a single line of code is written.',
+          features: ['Stakeholder interviews', 'Interactive prototypes', 'Design systems', 'Usability validation'],
+          cta: 'Book a sprint'
         },
         {
-          title: 'Backend Development',
+          title: 'API & Backend Engineering',
           description:
-            'Robust, scalable APIs and infrastructure that keep your applications secure, reliable, and future-proof.',
-          features: ['Node.js & Python', 'RESTful APIs', 'Databases', 'Cloud Deployments'],
-          cta: 'Learn more'
+            'Pragmatic Node.js and Python services with sensible databases, logging, and deployment pipelines.',
+          features: ['REST & GraphQL', 'SQL & NoSQL', 'Cloud-ready infra', 'Observability'],
+          cta: 'Discuss stack'
         },
         {
-          title: 'Optimization & Performance',
+          title: 'Performance & Hardening',
           description:
-            'We maximize the speed and efficiency of your products. Every millisecond matters for an outstanding experience.',
-          features: ['Core Web Vitals', 'Lazy Loading', 'Caching Strategy', 'CDN Setup'],
-          cta: 'Learn more'
+            'Audits and fixes that make existing products faster, more secure, and easier to operate.',
+          features: ['Web Vitals remediation', 'Security headers', 'Caching strategy', 'Monitoring setup'],
+          cta: 'Request audit'
         },
         {
-          title: 'Security & Maintenance',
+          title: 'Care Plans & Training',
           description:
-            'We protect your applications and keep everything running smoothly with continuous support and updates.',
-          features: ['SSL & HTTPS', 'Automated Backups', '24/7 Monitoring', 'Technical Support'],
-          cta: 'Learn more'
+            'Post-launch support handled directly by the builders so your team stays focused on roadmap work.',
+          features: ['Scheduled updates', 'On-call bug fixes', 'Team onboarding', 'Documentation kits'],
+          cta: 'Plan support'
         }
       ],
       bottomCta: {
-        title: 'Ready to kick off your project?',
-        description: 'Get in touch and discover how we can turn your idea into a high-impact digital product.',
-        button: 'Request a Quote'
+        title: 'Need a reliable build partner?',
+        description: 'Tell us about your roadmap and we will map a timeline, scope, and budget you can share with stakeholders.',
+        button: 'Start a scope call'
       }
     },
     portfolio: {
-      badge: 'Our Portfolio',
-      headingLine1: 'Projects that',
-      headingHighlight: 'Make a Difference',
+      badge: 'Selected engagements',
+      headingLine1: 'Representative work',
+      headingHighlight: 'from our studio',
       description:
-        'Every project is a chance to create something extraordinary. Explore a selection of our recent work.',
+        'We operate under NDAs on most builds, so the cases below are anonymized snapshots that reflect the type of outcomes we deliver.',
       filters: [
         { id: 'all', label: 'All Projects' },
         { id: 'web', label: 'Websites' },
@@ -240,39 +240,39 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       projects: [
         {
-          title: 'Fashion E-commerce',
-          description: 'Complete e-commerce platform with integrated payments and an intuitive admin dashboard.',
-          type: 'Website',
-          status: 'done'
-        },
-        {
-          title: 'Food Delivery App',
-          description: 'Delivery app with geolocation, online payments, and real-time customer reviews.',
-          type: 'Mobile App',
-          status: 'done'
-        },
-        {
-          title: 'Analytics Dashboard',
-          description: 'Real-time data visualization dashboard with customizable reports and KPIs.',
+          title: 'Usage-based billing cockpit',
+          description: 'Extended a North American fintech dashboard with revenue reporting, Stripe usage webhooks, and SOC2-ready auditing.',
           type: 'Web App',
           status: 'done'
         },
         {
-          title: 'Fitness Tracker App',
-          description: 'Fitness companion with wearable integration, personalized plans, and progress tracking.',
-          type: 'Mobile App',
-          status: 'inProgress'
-        },
-        {
-          title: 'Education Portal',
-          description: 'Online learning portal with video classes, interactive exercises, and certification.',
+          title: 'B2B marketplace storefront',
+          description: 'Rebuilt the marketing and vendor onboarding site for an industrial marketplace using Next.js, Sanity, and edge hosting.',
           type: 'Website',
           status: 'done'
         },
         {
-          title: 'Digital Banking App',
-          description: 'Banking experience with biometric authentication, transfers, and investment tools.',
+          title: 'Care workforce app',
+          description: 'React Native field app for care teams with HIPAA-friendly authentication, offline notes, and shift scheduling.',
           type: 'Mobile App',
+          status: 'inProgress'
+        },
+        {
+          title: 'Learning ops portal',
+          description: 'Internal tool that unifies cohort tracking, assignments, and Slack automation for a distributed academy.',
+          type: 'Web App',
+          status: 'done'
+        },
+        {
+          title: 'Wellness companion MVP',
+          description: 'Six-week design-and-build sprint delivering a mobile MVP with personalized routines, reminders, and analytics.',
+          type: 'Mobile App',
+          status: 'done'
+        },
+        {
+          title: 'Embedded lending toolkit',
+          description: 'API + admin console that lets partner agencies originate loans, monitor risk, and export compliance-ready data.',
+          type: 'Web App',
           status: 'inProgress'
         }
       ],
@@ -280,81 +280,81 @@ export const translations: Record<Locale, TranslationSchema> = {
         done: 'Completed',
         inProgress: 'In progress'
       },
-      projectCta: 'See details',
+      projectCta: 'Request a walkthrough',
       bottomCta: {
-        title: 'Like what you see?',
+        title: 'Curious about fit?',
         description:
-          'These are just a few of our projects. Let’s build something extraordinary for your company as well.',
-        button: 'Let’s Talk'
+          'Share a short brief and we will provide redacted Looms, repositories, or references that align with your needs.',
+        button: 'Schedule intro call'
       }
     },
     about: {
       badge: 'About Us',
-      headingLine1: 'Who we are and',
-      headingHighlight: 'Our Mission',
+      headingLine1: 'How we operate as a',
+      headingHighlight: 'founder-led studio',
       description:
-        'We are a team of technology enthusiasts dedicated to turning ideas into digital products that truly matter.',
-      timelineHeading: 'Building digital experiences since 2019',
+        'TG Apps is a boutique team in Sao Paulo supporting North American startups, agencies, and companies worldwide that need senior builders without the overhead.',
+      timelineHeading: 'Partnering with US, Canadian, and global teams since 2019',
       paragraphs: [
-        'TG Apps was born from a passion for crafting digital solutions that make a difference. We started as a small team of developers and designers and are now a trusted web and mobile development studio.',
-        'Our journey is defined by relentless technical excellence and client satisfaction. We believe technology should simplify people’s lives and drive business growth.',
-        'Every project is an opportunity to learn, innovate, and exceed expectations. We use agile methodologies, maintain transparent communication, and keep our focus on results.'
+        'We stay intentionally small so decision-makers talk directly to the people writing the code and leading the design.',
+        'By limiting ourselves to two parallel builds, we keep our attention on outcomes, not headcount charts.',
+        'Weekly demos, written updates, and transparent backlog tools keep budgets under control and stakeholders aligned.'
       ],
-      missionHeading: 'Our Mission',
+      missionHeading: 'Why we exist',
       missionDescription:
-        '“Democratize access to high-quality technology by creating digital solutions that connect people, empower businesses, and bring ideas to life.”',
+        'To help lean teams ship reliable software fast through honest scoping, respectful collaboration, and accountable delivery.',
       valuesHeading: 'Our Values',
       values: [
         {
-          title: 'Customer Focus',
-          description: 'Every project is tailored to the customer’s specific needs and business goals.'
+          title: 'Honest Scoping',
+          description: 'We only commit to work we can personally deliver with the right level of care.'
         },
         {
-          title: 'Continuous Innovation',
-          description: 'We constantly embrace new technologies and best practices to deliver cutting-edge solutions.'
+          title: 'Lean Collaboration',
+          description: 'We integrate with your rituals, documentation, and tools instead of forcing new bureaucracy.'
         },
         {
-          title: 'Premium Quality',
-          description: 'We never compromise on quality. Every line of code is crafted with care and attention.'
+          title: 'Sustainable Pace',
+          description: 'Clear priorities and healthy schedules keep the team creative and dependable.'
         },
         {
-          title: 'Measurable Results',
-          description: 'We build solutions that deliver tangible impact and measurable growth for your business.'
+          title: 'Ownership',
+          description: 'Founders review every deliverable and remain involved from kickoff to iteration.'
         }
       ],
-      statsHeading: 'Numbers that speak for themselves',
+      statsHeading: 'What you can expect',
       stats: [
-        { number: '100+', label: 'Projects Delivered' },
-        { number: '50+', label: 'Happy Clients' },
-        { number: '5+', label: 'Years of Experience' },
-        { number: '99%', label: 'Satisfaction Rate' }
+        { number: '2-4', label: 'Engineers and designers per squad' },
+        { number: '<=1 day', label: 'Typical response time during the week' },
+        { number: 'EST+1', label: 'Time zone overlap from Sao Paulo' },
+        { number: 'Weekly', label: 'Live demos and async status reports' }
       ],
-      passionTitle: 'Passion for what we do',
-      passionDescription: 'Every project is developed with dedication, creativity, and care.'
+      passionTitle: 'Principles we live by',
+      passionDescription: 'Stay curious, stay transparent, and keep clients confident about what comes next.'
     },
     contact: {
       badge: 'Talk to Us',
-      headingLine1: 'Let’s turn',
-      headingHighlight: 'Your Idea into Reality',
+      headingLine1: 'Let’s plan',
+      headingHighlight: 'your next release',
       description:
-        'We are ready to listen to your goals and create the ideal digital solution for your business. Reach out today!',
+        'Share the outcome you need and we will reply within one business day with next steps, a realistic timeline, and budget guidance.',
       infoHeading: 'How to reach us',
       info: [
-        { title: 'Email', value: 'support@tgapps.dev', description: 'Replies within 2 hours' },
-        { title: 'Phone', value: '+55 (11) 99999-9999', description: 'Mon-Fri, 9am to 6pm' },
-        { title: 'Location', value: 'São Paulo, Brazil', description: 'Remote service' }
+        { title: 'Email', value: 'support@tgapps.dev', description: 'Responses within one business day' },
+        { title: 'Phone / WhatsApp', value: '+55 (11) 99999-9999', description: 'Weekdays, 9am–6pm BRT (EST+1)' },
+        { title: 'Location', value: 'Sao Paulo, Brazil', description: 'Nearshore to North America with global delivery' }
       ],
-      whyUsHeading: 'Why choose TG Apps?',
+      whyUsHeading: 'Why partner with TG Apps?',
       whyUs: [
-        'Fast replies within 2 hours',
-        'Free, no-obligation estimates',
-        'Specialized technical consulting',
-        'Ongoing support after launch'
+        'Founder involvement from brief to launch',
+        'North America-friendly overlap plus English-first, global delivery',
+        'Transparent budgets built for startups and SMBs',
+        'Post-launch support handled by the same builders'
       ],
-      formHeading: 'Request your quote',
-      formDescription: 'Fill out the form below and we will get back to you soon.',
-      successTitle: 'Message sent successfully!',
-      successMessage: 'We will contact you shortly. Thank you!',
+      formHeading: 'Request a scope outline',
+      formDescription: 'Tell us about the milestone, constraints, and any assets you already have ready.',
+      successTitle: 'Message sent!',
+      successMessage: 'We will get back to you within one business day.',
       form: {
         nameLabel: 'Full name *',
         namePlaceholder: 'Your full name',
@@ -364,7 +364,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         phonePlaceholder: '(11) 99999-9999',
         serviceLabel: 'Service type *',
         servicePlaceholder: 'Select a service',
-        budgetLabel: 'Estimated budget',
+        budgetLabel: 'Estimated budget (USD)',
         budgetPlaceholder: 'Select a range',
         messageLabel: 'Describe your project *',
         messagePlaceholder: 'Tell us about your project, goals, and expectations...',
@@ -378,21 +378,22 @@ export const translations: Record<Locale, TranslationSchema> = {
         'UI/UX Design',
         'E-commerce',
         'Custom System',
+        'Product Discovery',
         'Technical Consulting',
         'Other'
       ],
       budgets: [
-        'BRL 5,000 - BRL 15,000',
-        'BRL 15,000 - BRL 30,000',
-        'BRL 30,000 - BRL 50,000',
-        'BRL 50,000 - BRL 100,000',
-        'Above BRL 100,000',
+        'USD 5k - USD 15k',
+        'USD 15k - USD 30k',
+        'USD 30k - USD 50k',
+        'USD 50k - USD 100k',
+        'Above USD 100k',
         'Prefer not to say'
       ]
     },
     footer: {
       description:
-        'We turn ideas into outstanding digital products. Specialists in web and mobile development with a user-first mindset.',
+        'Founder-led nearshore studio crafting dependable web and mobile products for North American and global teams.',
       navigationHeading: 'Navigation',
       navigation: [
         { id: 'inicio', label: 'Home' },
@@ -416,7 +417,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         phoneLabel: '+55 (11) 99999-9999',
         location: 'São Paulo, Brazil'
       },
-      cta: 'Request a Quote',
+      cta: 'Plan your build',
       bottom: {
         copyright: '© {year} TG Apps. All rights reserved.',
         privacy: 'Privacy Policy',
@@ -438,82 +439,82 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Especialistas em Produtos Digitais',
-      titleLine1: 'Transformamos',
-      titleHighlight: 'Ideias em Realidade',
-      titleLine2: 'Digital',
+      badge: 'Time nearshore de produtos',
+      titleLine1: 'Construímos produtos digitais com',
+      titleHighlight: 'velocidade e compromisso',
+      titleLine2: 'direto de São Paulo',
       subtitle:
-        'Criamos sites modernos e aplicativos mobile que impulsionam seu negócio para o próximo nível e encantam seus clientes.',
+        'A TG Apps é um estúdio sênior no Brasil que apoia startups e agências da América do Norte e empresas no mundo todo a lançar experiências web e mobile com rapidez, transparência e orçamentos honestos.',
       stats: [
-        { label: '100+ Clientes' },
-        { label: '200+ Projetos' },
-        { label: '5 Anos de Experiência' }
+        { label: 'Fundadores no dia a dia' },
+        { label: 'Máx. 2 projetos ativos' },
+        { label: 'Resposta em até 1 dia útil' }
       ],
-      primaryCta: 'Começar Projeto',
-      secondaryCta: 'Ver Portfólio'
+      primaryCta: 'Planejar projeto',
+      secondaryCta: 'Ver trabalhos recentes'
     },
     services: {
-      badge: 'Nossos Serviços',
-      headingLine1: 'Soluções completas para',
-      headingHighlight: 'Seu Sucesso Digital',
+      badge: 'O que entregamos',
+      headingLine1: 'Soluções sob medida para',
+      headingHighlight: 'times enxutos',
       description:
-        'Oferecemos um ecossistema completo de serviços digitais, do conceito inicial ao lançamento e evolução contínua.',
+        'Entramos como extensão nearshore para acelerar produtos sem inflar o headcount. Cada escopo prioriza ciclos rápidos de feedback, custos claros e entregas prontas para produção.',
       items: [
         {
-          title: 'Desenvolvimento Web',
+          title: 'Sites e apps em React',
           description:
-            'Sites modernos, responsivos e focados em conversão, utilizando as tecnologias mais recentes e práticas de performance.',
-          features: ['React & Next.js', 'Design Responsivo', 'SEO Otimizado', 'Performance Máxima'],
-          cta: 'Saiba mais'
+            'Desenvolvemos sites, dashboards e ferramentas internas em React/Next.js com acessibilidade e métricas configuradas desde o primeiro sprint.',
+          features: ['Biblioteca de componentes', 'Headless CMS', 'Base Core Web Vitals', 'Instrumentação de analytics'],
+          cta: 'Ver abordagem'
         },
         {
-          title: 'Apps Mobile',
+          title: 'Apps React Native',
           description:
-            'Aplicativos nativos e híbridos para iOS e Android que conectam sua marca aos usuários em qualquer lugar.',
-          features: ['React Native', 'iOS & Android', 'UI/UX Nativo', 'Integração de APIs'],
-          cta: 'Saiba mais'
+            'Aplicativos iOS e Android com um único codebase, respeitando guidelines nativas e exigências das lojas.',
+          features: ['Builds iOS & Android', 'Publicação nas lojas', 'Módulos nativos', 'Pipelines CI/CD'],
+          cta: 'Ver abordagem'
         },
         {
-          title: 'UI/UX Design',
+          title: 'Discovery e UX Sprints',
           description:
-            'Interfaces intuitivas e experiências memoráveis que encantam usuários e geram resultados mensuráveis.',
-          features: ['Design System', 'Prototipagem', 'Testes de Usabilidade', 'Branding Digital'],
-          cta: 'Saiba mais'
+            'Workshops remotos, protótipos e testes que alinham objetivos e reduzem retrabalho antes do desenvolvimento.',
+          features: ['Entrevistas com stakeholders', 'Protótipos interativos', 'Design system', 'Validações de usabilidade'],
+          cta: 'Agendar sprint'
         },
         {
-          title: 'Desenvolvimento Backend',
+          title: 'APIs e Backend pragmático',
           description:
-            'APIs robustas e escaláveis que garantem segurança, confiabilidade e futuro para suas aplicações.',
-          features: ['Node.js & Python', 'APIs RESTful', 'Banco de Dados', 'Deploy em Nuvem'],
-          cta: 'Saiba mais'
+            'Serviços em Node.js e Python com bancos adequados, logs e pipelines prontos para operação.',
+          features: ['REST & GraphQL', 'SQL & NoSQL', 'Infra pronta para nuvem', 'Observabilidade'],
+          cta: 'Definir stack'
         },
         {
-          title: 'Otimização & Performance',
+          title: 'Performance e Hardening',
           description:
-            'Maximizamos a velocidade e eficiência dos seus produtos. Cada milissegundo conta para uma experiência incrível.',
-          features: ['Core Web Vitals', 'Lazy Loading', 'Estratégia de Cache', 'Configuração de CDN'],
-          cta: 'Saiba mais'
+            'Auditorias e correções que deixam produtos existentes mais rápidos, seguros e fáceis de manter.',
+          features: ['Correções Web Vitals', 'Headers de segurança', 'Estratégia de cache', 'Monitoramento'],
+          cta: 'Solicitar auditoria'
         },
         {
-          title: 'Segurança & Manutenção',
+          title: 'Planos de suporte e treinamento',
           description:
-            'Protegemos suas aplicações e mantemos tudo funcionando perfeitamente com suporte contínuo e atualizações.',
-          features: ['SSL & HTTPS', 'Backup Automático', 'Monitoramento 24/7', 'Suporte Técnico'],
-          cta: 'Saiba mais'
+            'O mesmo time que constrói acompanha lançamentos, treinamentos e melhorias contínuas.',
+          features: ['Atualizações programadas', 'Correções sob demanda', 'Onboarding do time', 'Pacotes de documentação'],
+          cta: 'Planejar suporte'
         }
       ],
       bottomCta: {
-        title: 'Pronto para começar seu projeto?',
-        description: 'Entre em contato e descubra como podemos transformar sua ideia em um produto digital de alto impacto.',
-        button: 'Solicitar Orçamento'
+        title: 'Precisa de um parceiro confiável?',
+        description: 'Conte seu roadmap e montamos um cronograma com esforço e custos prontos para compartilhar com o time.',
+        button: 'Agendar call de escopo'
       }
     },
     portfolio: {
-      badge: 'Nosso Portfólio',
-      headingLine1: 'Projetos que',
-      headingHighlight: 'Fazem a Diferença',
+      badge: 'Engajamentos selecionados',
+      headingLine1: 'Trabalhos representativos',
+      headingHighlight: 'do nosso estúdio',
       description:
-        'Cada projeto é uma oportunidade de criar algo extraordinário. Explore alguns dos nossos trabalhos mais recentes.',
+        'Trabalhamos quase sempre sob NDA, então os exemplos abaixo são snapshots anônimos do tipo de resultado que entregamos.',
       filters: [
         { id: 'all', label: 'Todos os Projetos' },
         { id: 'web', label: 'Websites' },
@@ -521,39 +522,39 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       projects: [
         {
-          title: 'E-commerce Fashion',
-          description: 'Plataforma completa de e-commerce com pagamentos integrados e painel administrativo intuitivo.',
-          type: 'Website',
-          status: 'done'
-        },
-        {
-          title: 'App Delivery Food',
-          description: 'Aplicativo de delivery com geolocalização, pagamentos online e avaliações em tempo real.',
-          type: 'Mobile App',
-          status: 'done'
-        },
-        {
-          title: 'Dashboard Analytics',
-          description: 'Painel de controle com visualização de dados em tempo real e relatórios personalizados.',
+          title: 'Cockpit de billing por uso',
+          description: 'Evoluímos o dashboard de uma fintech dos EUA com relatórios de receita, webhooks Stripe e auditoria pronta para compliance.',
           type: 'Web App',
           status: 'done'
         },
         {
-          title: 'App Fitness Tracker',
-          description: 'Companheiro fitness com integração de wearables, planos personalizados e acompanhamento de evolução.',
-          type: 'Mobile App',
-          status: 'inProgress'
-        },
-        {
-          title: 'Portal Educacional',
-          description: 'Plataforma de ensino online com videoaulas, exercícios interativos e certificação.',
+          title: 'Marketplace B2B',
+          description: 'Reconstruímos o site e o onboarding de fornecedores usando Next.js, Sanity e deploy edge.',
           type: 'Website',
           status: 'done'
         },
         {
-          title: 'App Banking',
-          description: 'Experiência bancária com autenticação biométrica, transferências e ferramentas de investimento.',
+          title: 'App para equipes de campo',
+          description: 'Aplicativo React Native para times de cuidado com autenticação compatível com HIPAA, modo offline e agenda de turnos.',
           type: 'Mobile App',
+          status: 'inProgress'
+        },
+        {
+          title: 'Portal de operações educacionais',
+          description: 'Ferramenta interna que concentra acompanhamento de turmas, tarefas e automações no Slack.',
+          type: 'Web App',
+          status: 'done'
+        },
+        {
+          title: 'MVP de bem-estar',
+          description: 'Sprint de seis semanas entregando um app com rotinas personalizadas, lembretes e painel analítico.',
+          type: 'Mobile App',
+          status: 'done'
+        },
+        {
+          title: 'Toolkit de crédito embutido',
+          description: 'API e console administrativo para originar empréstimos, monitorar risco e exportar dados para compliance.',
+          type: 'Web App',
           status: 'inProgress'
         }
       ],
@@ -561,81 +562,81 @@ export const translations: Record<Locale, TranslationSchema> = {
         done: 'Concluído',
         inProgress: 'Em desenvolvimento'
       },
-      projectCta: 'Ver detalhes',
+      projectCta: 'Pedir walkthrough',
       bottomCta: {
-        title: 'Gostou do que viu?',
+        title: 'Quer entender o fit?',
         description:
-          'Estes são apenas alguns exemplos do nosso trabalho. Vamos criar algo incrível para a sua empresa também.',
-        button: 'Vamos Conversar'
+          'Envie um briefing rápido e compartilhamos Looms, códigos ou referências alinhadas ao seu cenário.',
+        button: 'Marcar call introdutória'
       }
     },
     about: {
-      badge: 'Sobre Nós',
-      headingLine1: 'Quem Somos e',
-      headingHighlight: 'Nossa Missão',
+      badge: 'Sobre nós',
+      headingLine1: 'Como trabalhamos como',
+      headingHighlight: 'estúdio liderado por fundadores',
       description:
-        'Somos uma equipe apaixonada por tecnologia, dedicada a transformar ideias em soluções digitais que fazem a diferença.',
-      timelineHeading: 'Transformando o digital desde 2019',
+        'A TG Apps é um time boutique em São Paulo que apoia empresas da América do Norte e de outros países com engenharia e design sênior sem inflar estruturas internas.',
+      timelineHeading: 'Conectados a equipes dos EUA e Canadá desde 2019',
       paragraphs: [
-        'A TG Apps nasceu da paixão por criar soluções digitais que realmente importam. Começamos como uma pequena equipe de desenvolvedores e designers, e hoje somos um estúdio de desenvolvimento web e mobile reconhecido.',
-        'Nossa jornada é marcada pela busca constante da excelência técnica e pela satisfação dos clientes. Acreditamos que a tecnologia deve simplificar a vida das pessoas e impulsionar negócios.',
-        'Cada projeto é uma oportunidade de aprender, inovar e superar expectativas. Trabalhamos com metodologias ágeis, comunicação transparente e foco total em resultados.'
+        'Mantemos o time enxuto para que clientes falem diretamente com quem escreve o código e desenha as experiências.',
+        'Limitamos os projetos simultâneos para garantir foco, disponibilidade e decisões rápidas.',
+        'Demos semanais, relatórios escritos e ferramentas compartilhadas mantêm todos alinhados sobre escopo, prazo e orçamento.'
       ],
-      missionHeading: 'Nossa Missão',
+      missionHeading: 'Por que existimos',
       missionDescription:
-        '“Democratizar o acesso à tecnologia de qualidade, criando soluções digitais que conectam pessoas, impulsionam negócios e transformam ideias em realidade.”',
-      valuesHeading: 'Nossos Valores',
+        'Ajudar times enxutos a lançar software confiável de forma rápida por meio de escopos honestos, colaboração respeitosa e entrega responsável.',
+      valuesHeading: 'Nossos valores',
       values: [
         {
-          title: 'Foco no Cliente',
-          description: 'Cada projeto é desenvolvido pensando nas necessidades específicas do cliente e seus objetivos de negócio.'
+          title: 'Escopos honestos',
+          description: 'Só assumimos demandas que conseguimos entregar pessoalmente com qualidade.'
         },
         {
-          title: 'Inovação Constante',
-          description: 'Estamos sempre em busca de novas tecnologias e melhores práticas para entregar soluções de ponta.'
+          title: 'Colaboração enxuta',
+          description: 'Entramos no seu processo, adotamos suas ferramentas e evitamos burocracia desnecessária.'
         },
         {
-          title: 'Qualidade Premium',
-          description: 'Não fazemos concessões quando se trata de qualidade. Cada linha de código é cuidadosamente elaborada.'
+          title: 'Ritmo sustentável',
+          description: 'Sprints claros e prioridades realistas mantêm o time motivado e previsível.'
         },
         {
-          title: 'Resultados Mensuráveis',
-          description: 'Desenvolvemos soluções que geram impacto real e resultados tangíveis para o seu negócio.'
+          title: 'Ownership total',
+          description: 'Fundadores revisam cada entrega e participam ativamente do dia a dia.'
         }
       ],
-      statsHeading: 'Números que Falam por Si',
+      statsHeading: 'O que você pode esperar',
       stats: [
-        { number: '100+', label: 'Projetos Entregues' },
-        { number: '50+', label: 'Clientes Satisfeitos' },
-        { number: '5+', label: 'Anos de Experiência' },
-        { number: '99%', label: 'Taxa de Satisfação' }
+        { number: '2-4', label: 'Pessoas por squad' },
+        { number: '<=1 dia', label: 'Tempo típico de resposta útil' },
+        { number: 'Fuso EST+1', label: 'Colaboração em tempo real' },
+        { number: 'Demos semanais', label: 'Transparência constante' }
       ],
-      passionTitle: 'Paixão pelo que fazemos',
-      passionDescription: 'Cada projeto é desenvolvido com dedicação, criatividade e carinho.'
+      passionTitle: 'Princípios que seguimos',
+      passionDescription: 'Clareza, respeito ao orçamento e foco total em entregar software utilizável.'
     },
     contact: {
       badge: 'Fale Conosco',
-      headingLine1: 'Vamos Transformar',
-      headingHighlight: 'Sua Ideia em Realidade',
+      headingLine1: 'Vamos planejar',
+      headingHighlight: 'seu próximo lançamento',
       description:
-        'Estamos prontos para ouvir seus objetivos e criar a solução digital ideal para o seu negócio. Fale com a gente!',
+        'Conte qual resultado precisa alcançar e respondemos em até um dia útil com próximos passos, estimativas e recomendações.',
       infoHeading: 'Como nos encontrar',
       info: [
-        { title: 'Email', value: 'support@tgapps.dev', description: 'Resposta em até 2 horas' },
-        { title: 'Telefone', value: '+55 (11) 99999-9999', description: 'Seg-Sex, 9h às 18h' },
-        { title: 'Localização', value: 'São Paulo, SP', description: 'Atendimento remoto' }
+        { title: 'Email', value: 'support@tgapps.dev', description: 'Respostas em até 1 dia útil' },
+        { title: 'Telefone / WhatsApp', value: '+55 (11) 99999-9999', description: 'Seg–Sex, 9h às 18h BRT (EST+1)' },
+        { title: 'Localização', value: 'São Paulo, SP', description: 'Atuação nearshore para Am. do Norte e clientes globais' }
       ],
-      whyUsHeading: 'Por que escolher a TG Apps?',
+      whyUsHeading: 'Por que trabalhar com a TG Apps?',
       whyUs: [
-        'Resposta rápida em até 2 horas',
-        'Orçamento gratuito e sem compromisso',
-        'Consultoria técnica especializada',
-        'Suporte contínuo após a entrega'
+        'Fundadores envolvidos do briefing ao deploy',
+        'Processo pensado para colaboração com EUA/Canadá e clientes globais',
+        'Orçamentos transparentes e alinhados ao seu estágio',
+        'Suporte pós-lançamento com o mesmo time que construiu'
       ],
-      formHeading: 'Solicite seu orçamento',
-      formDescription: 'Preencha o formulário abaixo e retornaremos em breve.',
-      successTitle: 'Mensagem enviada com sucesso!',
-      successMessage: 'Entraremos em contato em breve. Obrigado!',
+      formHeading: 'Peça um esboço de escopo',
+      formDescription: 'Compartilhe contexto, restrições e materiais disponíveis para montarmos o plano inicial.',
+      successTitle: 'Mensagem enviada!',
+      successMessage: 'Respondemos em até um dia útil. Obrigado!',
       form: {
         nameLabel: 'Nome completo *',
         namePlaceholder: 'Seu nome completo',
@@ -645,7 +646,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         phonePlaceholder: '(11) 99999-9999',
         serviceLabel: 'Tipo de serviço *',
         servicePlaceholder: 'Selecione um serviço',
-        budgetLabel: 'Orçamento estimado',
+        budgetLabel: 'Orçamento estimado (USD)',
         budgetPlaceholder: 'Selecione uma faixa',
         messageLabel: 'Descreva seu projeto *',
         messagePlaceholder: 'Conte-nos mais sobre seu projeto, objetivos e expectativas...',
@@ -659,21 +660,22 @@ export const translations: Record<Locale, TranslationSchema> = {
         'UI/UX Design',
         'E-commerce',
         'Sistema Personalizado',
+        'Discovery de Produto',
         'Consultoria Técnica',
         'Outro'
       ],
       budgets: [
-        'R$ 5.000 - R$ 15.000',
-        'R$ 15.000 - R$ 30.000',
-        'R$ 30.000 - R$ 50.000',
-        'R$ 50.000 - R$ 100.000',
-        'Acima de R$ 100.000',
+        'USD 5k - USD 15k',
+        'USD 15k - USD 30k',
+        'USD 30k - USD 50k',
+        'USD 50k - USD 100k',
+        'Acima de USD 100k',
         'Prefiro não informar'
       ]
     },
     footer: {
       description:
-        'Transformamos ideias em produtos digitais extraordinários. Especialistas em desenvolvimento web e mobile com foco no usuário.',
+        'Estúdio nearshore liderado por fundadores criando produtos web e mobile confiáveis para equipes na América do Norte e no resto do mundo.',
       navigationHeading: 'Navegação',
       navigation: [
         { id: 'inicio', label: 'Início' },
@@ -697,7 +699,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         phoneLabel: '+55 (11) 99999-9999',
         location: 'São Paulo, SP'
       },
-      cta: 'Solicitar Orçamento',
+      cta: 'Planejar projeto',
       bottom: {
         copyright: '© {year} TG Apps. Todos os direitos reservados.',
         privacy: 'Política de Privacidade',
