@@ -27,6 +27,14 @@ export interface TranslationSchema {
     headingLine1: string;
     headingHighlight: string;
     description: string;
+    processHeading?: string;
+    processDescription?: string;
+    processLabel?: string;
+    process?: {
+      title: string;
+      description: string;
+      highlights: string[];
+    }[];
     items: {
       title: string;
       description: string;
@@ -172,7 +180,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'speed and integrity',
       titleLine2: 'from Latin America',
       subtitle:
-        'TG Apps is a senior-led studio in Brazil helping North American startups and teams worldwide launch web and mobile experiences fast, without inflated promises or fragile budgets.',
+        'TG Apps is a senior-led studio in Brazil specialized in multi-platform, born-global applications, helping North American startups and teams worldwide launch web and mobile experiences fast without inflated promises or fragile budgets.',
       stats: [
         { label: 'Founder-led delivery' },
         { label: 'Maximum 2 concurrent builds' },
@@ -186,7 +194,43 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Boutique delivery for',
       headingHighlight: 'startups and agencies',
       description:
-        'We plug into lean teams that need predictable execution without extra headcount. Each engagement is scoped around fast feedback loops, transparent budgets, and production-ready handoffs.',
+        'We join lean teams that crave candid advice, fast feedback, and craftsmanship. Every scope starts with a call to understand outcomes, security needs, and success metrics before we draw timelines or code.',
+      processHeading: 'How collaboration works',
+      processLabel: 'Stage',
+      processDescription:
+        'Our playbook is simple: align quickly, build in tight loops, and stay to support launches. Here is what you can expect at every stage.',
+      process: [
+        {
+          title: 'Before kickoff',
+          description:
+            'We schedule a free, zero-bureaucracy call (usually within one business day) to unpack your goals and share sanitized work.',
+          highlights: [
+            'Clarify outcomes, constraints, and budgets',
+            'Choose payment model: monthly or per-task',
+            'Review how we handle security, access, and NDAs'
+          ]
+        },
+        {
+          title: 'During the build',
+          description:
+            'We cap the studio at 2–3 products so founders stay on every thread. Expect weekly or biweekly demos and deploys.',
+          highlights: [
+            'Shared backlogs, docs, and async updates',
+            'Direct access to the builders doing the work',
+            'Transparent tracking of scope, risks, and decisions'
+          ]
+        },
+        {
+          title: 'After launch',
+          description:
+            'The same team that shipped your release remains available for care plans, training, and new iterations.',
+          highlights: [
+            'Hypercare windows and rapid bug fixes',
+            'Team onboarding + documentation kits',
+            'Opportunity to spin up the next roadmap item fast'
+          ]
+        }
+      ],
       items: [
         {
           title: 'Product Websites & Apps',
@@ -238,11 +282,11 @@ export const translations: Record<Locale, TranslationSchema> = {
       }
     },
     portfolio: {
-      badge: 'Selected engagements',
+      badge: 'How we create impact',
       headingLine1: '',
       headingHighlight: '',
       description:
-        'Most of our work runs under NDAs—schedule a quick, free call and we will walk you through sanitized examples, security practices, and how we approach delivery.',
+        'We partner with startups, agencies, and enterprises to ship dependable web and mobile products. Tell us about your goals and we will share the most relevant references and outcomes.',
       filters: [
         { id: 'all', label: 'All Projects' },
         { id: 'web', label: 'Websites' },
@@ -257,7 +301,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       bottomCta: {
         title: 'Curious about fit?',
         description:
-          'Send a short brief and we will hop on a zero-bureaucracy call to align scope, timelines, and share proof of past work.',
+          'Send a short brief and we will align scope, timelines, and proof points tailored to what you need to build next.',
         button: 'Schedule intro call'
       }
     },
@@ -445,7 +489,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'velocidade e compromisso',
       titleLine2: 'direto de São Paulo',
       subtitle:
-        'A TG Apps é um estúdio sênior no Brasil que apoia startups e agências da América do Norte e empresas no mundo todo a lançar experiências web e mobile com rapidez, transparência e orçamentos honestos.',
+        'A TG Apps é um estúdio sênior no Brasil especializado na criação de aplicações multiplataforma e born-global, apoiando startups e empresas na América do Norte e no mundo todo a lançar experiências web e mobile com rapidez, transparência e orçamentos honestos.',
       stats: [
         { label: 'Fundadores no dia a dia' },
         { label: 'Máx. 2 projetos ativos' },
@@ -459,7 +503,43 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Soluções sob medida para',
       headingHighlight: 'times enxutos',
       description:
-        'Entramos como extensão nearshore para acelerar produtos sem inflar o headcount. Cada escopo prioriza ciclos rápidos de feedback, custos claros e entregas prontas para produção.',
+        'Somos o braço nearshore para equipes que precisam de alguém para pensar junto, responder rápido e construir com cuidado. Antes de escrever código, conversamos sobre metas, segurança e sucesso para desenhar o plano certo.',
+      processHeading: 'Como trabalhamos com você',
+      processLabel: 'Etapa',
+      processDescription:
+        'Nosso fluxo é direto: alinhar rápido, construir em ciclos curtos e permanecer após o lançamento. Veja o que acontece em cada etapa.',
+      process: [
+        {
+          title: 'Antes do kickoff',
+          description:
+            'Agendamos uma call gratuita (geralmente em até 1 dia útil) para entender objetivos e mostrar exemplos anonimizados.',
+          highlights: [
+            'Mapear resultados, restrições e orçamento',
+            'Escolher o modelo de pagamento: mensal ou por tarefa',
+            'Revisar como cuidamos de segurança, acessos e NDAs'
+          ]
+        },
+        {
+          title: 'Durante o desenvolvimento',
+          description:
+            'Limitamos o estúdio a 2–3 produtos para manter fundadores em cada decisão. Há demos e deploys semanais ou quinzenais.',
+          highlights: [
+            'Backlog compartilhado, documentação e updates assíncronos',
+            'Acesso direto a quem está construindo',
+            'Visibilidade total de escopo, riscos e decisões'
+          ]
+        },
+        {
+          title: 'Depois do lançamento',
+          description:
+            'O mesmo time continua disponível para suporte, treinamento e novas iterações sem perder contexto.',
+          highlights: [
+            'Janelas de hypercare e correções rápidas',
+            'Onboarding do seu time + pacotes de documentação',
+            'Facilidade para iniciar o próximo item do roadmap'
+          ]
+        }
+      ],
       items: [
         {
           title: 'Sites e apps em React',
@@ -511,11 +591,11 @@ export const translations: Record<Locale, TranslationSchema> = {
       }
     },
     portfolio: {
-      badge: 'Engajamentos selecionados',
+      badge: 'Como geramos impacto',
       headingLine1: '',
       headingHighlight: '',
       description:
-        'Grande parte do que fazemos está sob NDA — agende uma call rápida e gratuita para ver exemplos anonimizados, entender nossa segurança e combinar a melhor forma de entrega.',
+        'Atuamos com startups, agências e empresas para lançar produtos web e mobile confiáveis. Conte seus objetivos e compartilhamos os cases e resultados que fazem mais sentido para você.',
       filters: [
         { id: 'all', label: 'Todos os Projetos' },
         { id: 'web', label: 'Websites' },
@@ -530,7 +610,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       bottomCta: {
         title: 'Quer entender o fit?',
         description:
-          'Envie um briefing e marcamos uma call sem burocracia para alinhar escopo, prazos e mostrar evidências do nosso trabalho.',
+          'Envie um briefing e alinhamos escopo, prazos e evidências sob medida para o que você precisa construir agora.',
         button: 'Marcar call introdutória'
       }
     },

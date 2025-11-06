@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe, Smartphone, Palette, Code, Zap, Shield, ArrowRight } from 'lucide-react';
+import { Globe, Smartphone, Palette, Code, Zap, Shield, ArrowRight, CheckCircle } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 
 const Services = () => {
@@ -47,6 +47,7 @@ const Services = () => {
     ...config,
     ...t.services.items[index]
   }));
+  const processLabel = t.services.processLabel ?? 'Stage';
 
   return (
     <section id="servicos" className="py-24 bg-gray-50">
@@ -65,6 +66,40 @@ const Services = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.services.description}</p>
         </div>
+
+        {t.services.process && t.services.process.length > 0 && (
+          <div className="mt-20">
+            <div className="text-center mb-12">
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">{t.services.processHeading}</h3>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t.services.processDescription}</p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {t.services.process.map((stage, index) => (
+                <div
+                  key={stage.title ?? index}
+                  className="bg-white rounded-2xl p-8 border border-gray-100 shadow-lg hover:shadow-xl transition-shadow duration-300"
+                >
+                  <div className="flex items-center space-x-4">
+                    <div className="text-4xl font-bold text-blue-600">{String(index + 1).padStart(2, '0')}</div>
+                    <div>
+                      <p className="text-xs uppercase tracking-wide text-gray-400">{processLabel}</p>
+                      <h4 className="text-xl font-semibold text-gray-900">{stage.title}</h4>
+                    </div>
+                  </div>
+                  <p className="text-gray-600 mt-4 mb-6">{stage.description}</p>
+                  <ul className="space-y-3">
+                    {stage.highlights?.map((highlight, highlightIndex) => (
+                      <li key={highlightIndex} className="flex items-start space-x-3 text-sm text-gray-700">
+                        <CheckCircle className="w-4 h-4 text-green-500 mt-0.5 flex-shrink-0" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
 
         {/* Services Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

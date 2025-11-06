@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, Code, Smartphone, Check } from 'lucide-react';
+import { Menu, X, Check } from 'lucide-react';
 import type { Locale } from '../i18n/translations';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 
@@ -72,15 +72,12 @@ const Header = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="relative">
-              <div className="w-10 h-10 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-                <Code className="w-6 h-6 text-white" />
-              </div>
-              <div className="absolute -bottom-1 -right-1 w-4 h-4 bg-gradient-to-br from-purple-500 to-pink-500 rounded-full flex items-center justify-center">
-                <Smartphone className="w-2.5 h-2.5 text-white" />
-              </div>
-            </div>
+          <div className="flex items-center space-x-3">
+            <img
+              src="/logo.png"
+              alt="TG Apps logo"
+              className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1"
+            />
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
