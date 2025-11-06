@@ -50,7 +50,7 @@ const Services = () => {
   const processLabel = t.services.processLabel ?? 'Stage';
 
   return (
-    <section id="servicos" className="py-24 bg-gray-50">
+    <section id="what-you-get" className="py-24 bg-gray-50 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
@@ -102,7 +102,7 @@ const Services = () => {
         )}
 
         {/* Services Grid */}
-        <div id="servicos" className="mt-12 scroll-mt-24">
+        <div className="mt-12">
           {(t.services.gridHeading || t.services.gridDescription) && (
             <div className="text-center mb-10">
               {t.services.gridHeading && <h3 className="text-2xl font-bold text-gray-900">{t.services.gridHeading}</h3>}

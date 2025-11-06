@@ -50,29 +50,6 @@ export interface TranslationSchema {
       button: string;
     };
   };
-  portfolio: {
-    badge: string;
-    headingLine1: string;
-    headingHighlight: string;
-    description: string;
-    filters: { id: string; label: string }[];
-    projects: {
-      title: string;
-      description: string;
-      type: string;
-      status: string;
-    }[];
-    statusLabel: {
-      done: string;
-      inProgress: string;
-    };
-    projectCta: string;
-    bottomCta: {
-      title: string;
-      description: string;
-      button: string;
-    };
-  };
   about: {
     badge: string;
     headingLine1: string;
@@ -144,12 +121,12 @@ export interface TranslationSchema {
   };
   footer: {
     description: string;
-    navigationHeading: string;
-    navigation: NavigationItem[];
-    servicesHeading: string;
-    services: string[];
-    contactHeading: string;
-    contact: {
+    navigationHeading?: string;
+    navigation?: NavigationItem[];
+    servicesHeading?: string;
+    services?: string[];
+    contactHeading?: string;
+    contact?: {
       emailLabel: string;
       phoneLabel: string;
       location: string;
@@ -169,7 +146,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       navItems: [
         { id: 'inicio', label: 'Home' },
         { id: 'process', label: 'How we work' },
-        { id: 'servicos', label: 'What you get from us' },
+        { id: 'what-you-get', label: 'What you get from us' },
         { id: 'sobre', label: 'About' },
         { id: 'contato', label: 'Contact' }
       ],
@@ -186,7 +163,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'TG Apps is a senior-led studio in Brazil specialized in multi-platform, born-global applications, helping North American startups and teams worldwide launch web and mobile experiences fast without inflated promises or fragile budgets.',
       stats: [
         { label: 'Founder-led delivery' },
-        { label: 'Maximum 2 concurrent builds' },
+        { label: 'Up to 3 parallel products' },
         { label: 'Replies within 1 business day' }
       ],
       primaryCta: 'Plan your build',
@@ -242,15 +219,15 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Product Websites & Apps',
           subtitle: 'Web, SaaS, and internal tools',
           description:
-            'We architect and build marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in. React + TypeScript is our default stack, but we happily work with whichever front-end framework fits your infrastructure. We can embed alongside your current web team or handle the entire delivery ourselves.',
+            'We architect and build marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in. React is our default stack, but we happily work with whichever front-end framework fits your infrastructure. We can embed alongside your current web team or handle the entire delivery ourselves.',
           features: ['Component libraries', 'Headless CMS', 'Core Web Vitals baseline', 'Analytics instrumentation'],
           cta: 'See approach'
         },
         {
-          title: 'Flutter Multiplatform Delivery',
+          title: 'Multiplatform Delivery',
           subtitle: 'Android, iOS, and web with one team',
           description:
-            'We favor Flutter for multi-platform launches (Android, iOS, and responsive web) to keep one codebase. Need us to pair with your mobile squad or temporarily own the entire app while they focus elsewhere? We adapt.',
+            'We favor Flutter for multi-platform launches (Android, iOS, and responsive web) to keep one codebase, but we also work with Kotlin, React Native, or hybrid/WebView approaches when that better fits your roadmap. Need us to pair with your mobile squad or temporarily own the entire app while they focus elsewhere? We adapt.',
           features: ['Flutter & Dart', 'Android & iOS builds', 'Web responsive output', 'CI/CD and store submissions'],
           cta: 'See approach'
         },
@@ -384,7 +361,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       infoHeading: 'How to reach us',
       info: [
         { title: 'Email', value: 'support@tgapps.dev', description: 'Responses within one business day' },
-        { title: 'Phone / WhatsApp', value: '+55 (11) 99999-9999', description: 'Weekdays, 9am–6pm BRT (EST+1)' },
+        { title: 'Phone / WhatsApp', value: '+55 (11) 97971-7703', description: 'Weekdays, 9am–6pm BRT (EST+1)' },
         { title: 'Location', value: 'Sao Paulo, Brazil', description: 'Nearshore to North America with global delivery' }
       ],
       whyUsHeading: 'Why partner with TG Apps?',
@@ -454,19 +431,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       navigationHeading: 'Navigation',
       navigation: [
         { id: 'inicio', label: 'Home' },
-        { id: 'servicos', label: 'Services' },
-        { id: 'portfolio', label: 'Portfolio' },
+        { id: 'process', label: 'How we work' },
+        { id: 'what-you-get', label: 'What you get from us' },
         { id: 'sobre', label: 'About Us' },
         { id: 'contato', label: 'Contact' }
-      ],
-      servicesHeading: 'Services',
-      services: [
-        'Web Development',
-        'Mobile Apps',
-        'UI/UX Design',
-        'E-commerce',
-        'Custom Systems',
-        'Technical Consulting'
       ],
       contactHeading: 'Contact',
       contact: {
@@ -487,7 +455,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       navItems: [
         { id: 'inicio', label: 'Início' },
         { id: 'process', label: 'Como trabalhamos' },
-        { id: 'servicos', label: 'O que entregamos' },
+        { id: 'what-you-get', label: 'O que entregamos' },
         { id: 'sobre', label: 'Sobre' },
         { id: 'contato', label: 'Contato' }
       ],
@@ -504,7 +472,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'A TG Apps é um estúdio sênior no Brasil especializado na criação de aplicações multiplataforma e born-global, apoiando startups e empresas na América do Norte e no mundo todo a lançar experiências web e mobile com rapidez, transparência e orçamentos honestos.',
       stats: [
         { label: 'Fundadores no dia a dia' },
-        { label: 'Máx. 2 projetos ativos' },
+        { label: 'Até 3 projetos em paralelo' },
         { label: 'Resposta em até 1 dia útil' }
       ],
       primaryCta: 'Planejar projeto',
@@ -560,15 +528,15 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Sites e apps em React',
           subtitle: 'Web, SaaS e ferramentas internas',
           description:
-            'Desenhamos e construímos sites, SaaS e ferramentas internas com acessibilidade e métricas desde o início. Preferimos React + TypeScript, mas trabalhamos com o framework que fizer sentido para a sua infraestrutura, seja atuando com seu time ou tocando o desenvolvimento sozinho.',
+            'Desenhamos e construímos sites, SaaS e ferramentas internas com acessibilidade e métricas desde o início. Preferimos React, mas trabalhamos com o framework que fizer sentido para a sua infraestrutura, seja atuando com seu time ou tocando o desenvolvimento sozinho.',
           features: ['Biblioteca de componentes', 'Headless CMS', 'Base Core Web Vitals', 'Instrumentação de analytics'],
           cta: 'Ver abordagem'
         },
         {
-          title: 'Apps Flutter',
+          title: 'Delivery multiplataforma',
           subtitle: 'Android, iOS e web no mesmo código',
           description:
-            'Quando o objetivo é multiplataforma, usamos Flutter como stack principal para entregar Android, iOS e web responsivo em um único codebase. Podemos atuar junto ao seu squad mobile ou assumir o app enquanto a equipe interna foca em outro projeto.',
+            'Preferimos Flutter para lançar Android, iOS e web responsivo a partir de um único codebase, mas também trabalhamos com Kotlin, React Native ou WebView quando o projeto pede. Podemos atuar junto ao seu squad mobile ou assumir o app enquanto a equipe interna foca em outro produto.',
           features: ['Flutter & Dart', 'Builds Android & iOS', 'Saída web responsiva', 'CI/CD e publicação nas lojas'],
           cta: 'Ver abordagem'
         },
@@ -702,7 +670,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       infoHeading: 'Como nos encontrar',
       info: [
         { title: 'Email', value: 'support@tgapps.dev', description: 'Respostas em até 1 dia útil' },
-        { title: 'Telefone / WhatsApp', value: '+55 (11) 99999-9999', description: 'Seg–Sex, 9h às 18h BRT (EST+1)' },
+        { title: 'Telefone / WhatsApp', value: '+55 (11) 97971-7703', description: 'Seg–Sex, 9h às 18h BRT (EST+1)' },
         { title: 'Localização', value: 'São Paulo, SP', description: 'Atuação nearshore para Am. do Norte e clientes globais' }
       ],
       whyUsHeading: 'Por que trabalhar com a TG Apps?',
@@ -772,19 +740,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       navigationHeading: 'Navegação',
       navigation: [
         { id: 'inicio', label: 'Início' },
-        { id: 'servicos', label: 'Serviços' },
-        { id: 'portfolio', label: 'Portfólio' },
+        { id: 'process', label: 'Como trabalhamos' },
+        { id: 'what-you-get', label: 'O que entregamos' },
         { id: 'sobre', label: 'Sobre Nós' },
         { id: 'contato', label: 'Contato' }
-      ],
-      servicesHeading: 'Serviços',
-      services: [
-        'Desenvolvimento Web',
-        'Apps Mobile',
-        'UI/UX Design',
-        'E-commerce',
-        'Sistemas Personalizados',
-        'Consultoria Técnica'
       ],
       contactHeading: 'Contato',
       contact: {
