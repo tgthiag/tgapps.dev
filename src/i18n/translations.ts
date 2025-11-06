@@ -27,6 +27,8 @@ export interface TranslationSchema {
     headingLine1: string;
     headingHighlight: string;
     description: string;
+    gridHeading?: string;
+    gridDescription?: string;
     processHeading?: string;
     processDescription?: string;
     processLabel?: string;
@@ -37,6 +39,7 @@ export interface TranslationSchema {
     }[];
     items: {
       title: string;
+      subtitle?: string;
       description: string;
       features: string[];
       cta: string;
@@ -195,6 +198,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingHighlight: 'startups and agencies',
       description:
         'We join lean teams that crave candid advice, fast feedback, and craftsmanship. Every scope starts with a call to understand outcomes, security needs, and success metrics before we draw timelines or code.',
+      gridHeading: 'What you get from us',
+      gridDescription:
+        'A core set of capabilities that cover strategy, design, engineering, performance, and ongoing care—mixed and matched to fit your roadmap.',
       processHeading: 'How collaboration works',
       processLabel: 'Stage',
       processDescription:
@@ -234,6 +240,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       items: [
         {
           title: 'Product Websites & Apps',
+          subtitle: 'Web, SaaS, and internal tools',
           description:
             'React and Next.js builds for marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in.',
           features: ['Component libraries', 'Headless CMS', 'Core Web Vitals baseline', 'Analytics instrumentation'],
@@ -241,6 +248,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'React Native Delivery',
+          subtitle: 'Cross-platform mobile teams',
           description:
             'Cross-platform mobile apps that share a single codebase while respecting native guidelines and store requirements.',
           features: ['iOS & Android builds', 'Store submissions', 'Native modules', 'CI/CD pipelines'],
@@ -248,6 +256,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Discovery & UX Sprints',
+          subtitle: 'Strategy, prototypes, and research',
           description:
             'Remote workshops, prototypes, and usability reviews that clarify scope before a single line of code is written.',
           features: ['Stakeholder interviews', 'Interactive prototypes', 'Design systems', 'Usability validation'],
@@ -255,6 +264,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'API & Backend Engineering',
+          subtitle: 'Pragmatic services and data',
           description:
             'Pragmatic Node.js and Python services with sensible databases, logging, and deployment pipelines.',
           features: ['REST & GraphQL', 'SQL & NoSQL', 'Cloud-ready infra', 'Observability'],
@@ -262,6 +272,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Performance & Hardening',
+          subtitle: 'Audits, speed, and security',
           description:
             'Audits and fixes that make existing products faster, more secure, and easier to operate.',
           features: ['Web Vitals remediation', 'Security headers', 'Caching strategy', 'Monitoring setup'],
@@ -269,6 +280,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Care Plans & Training',
+          subtitle: 'Post-launch partnerships',
           description:
             'Post-launch support handled directly by the builders so your team stays focused on roadmap work.',
           features: ['Scheduled updates', 'On-call bug fixes', 'Team onboarding', 'Documentation kits'],
@@ -504,6 +516,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingHighlight: 'times enxutos',
       description:
         'Somos o braço nearshore para equipes que precisam de alguém para pensar junto, responder rápido e construir com cuidado. Antes de escrever código, conversamos sobre metas, segurança e sucesso para desenhar o plano certo.',
+      gridHeading: 'O que entregamos para você',
+      gridDescription:
+        'Conjunto completo de estratégia, design, engenharia, performance e suporte contínuo — combinamos conforme o momento do seu roadmap.',
       processHeading: 'Como trabalhamos com você',
       processLabel: 'Etapa',
       processDescription:
@@ -543,6 +558,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       items: [
         {
           title: 'Sites e apps em React',
+          subtitle: 'Web, SaaS e ferramentas internas',
           description:
             'Desenvolvemos sites, dashboards e ferramentas internas em React/Next.js com acessibilidade e métricas configuradas desde o primeiro sprint.',
           features: ['Biblioteca de componentes', 'Headless CMS', 'Base Core Web Vitals', 'Instrumentação de analytics'],
@@ -550,6 +566,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Apps React Native',
+          subtitle: 'Mobile multiplataforma',
           description:
             'Aplicativos iOS e Android com um único codebase, respeitando guidelines nativas e exigências das lojas.',
           features: ['Builds iOS & Android', 'Publicação nas lojas', 'Módulos nativos', 'Pipelines CI/CD'],
@@ -557,6 +574,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Discovery e UX Sprints',
+          subtitle: 'Estratégia, protótipos e pesquisa',
           description:
             'Workshops remotos, protótipos e testes que alinham objetivos e reduzem retrabalho antes do desenvolvimento.',
           features: ['Entrevistas com stakeholders', 'Protótipos interativos', 'Design system', 'Validações de usabilidade'],
@@ -564,6 +582,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'APIs e Backend pragmático',
+          subtitle: 'Serviços e dados confiáveis',
           description:
             'Serviços em Node.js e Python com bancos adequados, logs e pipelines prontos para operação.',
           features: ['REST & GraphQL', 'SQL & NoSQL', 'Infra pronta para nuvem', 'Observabilidade'],
@@ -571,6 +590,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Performance e Hardening',
+          subtitle: 'Auditorias, velocidade e segurança',
           description:
             'Auditorias e correções que deixam produtos existentes mais rápidos, seguros e fáceis de manter.',
           features: ['Correções Web Vitals', 'Headers de segurança', 'Estratégia de cache', 'Monitoramento'],
@@ -578,6 +598,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Planos de suporte e treinamento',
+          subtitle: 'Parceria pós-lançamento',
           description:
             'O mesmo time que constrói acompanha lançamentos, treinamentos e melhorias contínuas.',
           features: ['Atualizações programadas', 'Correções sob demanda', 'Onboarding do time', 'Pacotes de documentação'],
