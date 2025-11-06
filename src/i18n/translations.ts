@@ -167,7 +167,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { label: 'Replies within 1 business day' }
       ],
       primaryCta: 'Plan your build',
-      secondaryCta: 'See recent work'
+      secondaryCta: 'See how we work'
     },
     services: {
       badge: 'What we build',
@@ -476,7 +476,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { label: 'Resposta em até 1 dia útil' }
       ],
       primaryCta: 'Planejar projeto',
-      secondaryCta: 'Ver trabalhos recentes'
+      secondaryCta: 'Conhecer nosso fluxo'
     },
     services: {
       badge: 'O que entregamos',
