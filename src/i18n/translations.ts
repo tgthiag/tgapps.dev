@@ -195,12 +195,12 @@ export const translations: Record<Locale, TranslationSchema> = {
     services: {
       badge: 'What we build',
       headingLine1: 'Boutique delivery for',
-      headingHighlight: 'startups and agencies',
+      headingHighlight: 'startups, agencies, and teams needing leverage',
       description:
-        'We join lean teams that crave candid advice, fast feedback, and craftsmanship. Every scope starts with a call to understand outcomes, security needs, and success metrics before we draw timelines or code.',
+        'Some clients plug us into their squads to unlock velocity; others hand us the entire product so their internal team stays focused elsewhere. Either way, we start with a call to understand outcomes, security, and success metrics before we touch scope or code.',
       gridHeading: 'What you get from us',
       gridDescription:
-        'A core set of capabilities that cover strategy, design, engineering, performance, and ongoing care—mixed and matched to fit your roadmap.',
+        'Whether we embed alongside your engineers or run a parallel squad, we bring strategy, design, engineering, performance, and ongoing care that you can mix and match for each roadmap push.',
       processHeading: 'How collaboration works',
       processLabel: 'Stage',
       processDescription:
@@ -219,7 +219,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         {
           title: 'During the build',
           description:
-            'We cap the studio at 2–3 products so founders stay on every thread. Expect weekly or biweekly demos and deploys.',
+            'We can embed with your engineers or run a parallel squad. Our studio caps at 2–3 products so founders stay on every thread, with weekly or biweekly demos and deploys.',
           highlights: [
             'Shared backlogs, docs, and async updates',
             'Direct access to the builders doing the work',
@@ -242,7 +242,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Product Websites & Apps',
           subtitle: 'Web, SaaS, and internal tools',
           description:
-            'React + TypeScript builds (Next.js/Remix) for marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in. We also integrate with other JS frameworks when needed.',
+            'We architect and build marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in. React + TypeScript is our default stack, but we happily work with whichever front-end framework fits your infrastructure. We can embed alongside your current web team or handle the entire delivery ourselves.',
           features: ['Component libraries', 'Headless CMS', 'Core Web Vitals baseline', 'Analytics instrumentation'],
           cta: 'See approach'
         },
@@ -250,7 +250,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Flutter Multiplatform Delivery',
           subtitle: 'Android, iOS, and web with one team',
           description:
-            'Flutter-first development for mobile and web so you can launch Android, iOS, and responsive web apps from the same codebase, with native integrations when required.',
+            'We favor Flutter for multi-platform launches (Android, iOS, and responsive web) to keep one codebase. Need us to pair with your mobile squad or temporarily own the entire app while they focus elsewhere? We adapt.',
           features: ['Flutter & Dart', 'Android & iOS builds', 'Web responsive output', 'CI/CD and store submissions'],
           cta: 'See approach'
         },
@@ -513,12 +513,12 @@ export const translations: Record<Locale, TranslationSchema> = {
     services: {
       badge: 'O que entregamos',
       headingLine1: 'Soluções sob medida para',
-      headingHighlight: 'times enxutos',
+      headingHighlight: 'startups, agências e times que precisam de reforço',
       description:
-        'Somos o braço nearshore para equipes que precisam de alguém para pensar junto, responder rápido e construir com cuidado. Antes de escrever código, conversamos sobre metas, segurança e sucesso para desenhar o plano certo.',
+        'Às vezes atuamos em conjunto com o seu time para liberar velocidade; em outras, assumimos o produto inteiro enquanto a equipe interna cuida de outro projeto. Sempre começamos alinhando resultados, segurança e sucesso antes de falar de escopo.',
       gridHeading: 'O que entregamos para você',
       gridDescription:
-        'Conjunto completo de estratégia, design, engenharia, performance e suporte contínuo — combinamos conforme o momento do seu roadmap.',
+        'Estamos prontos para somar ao seu squad ou tocar um escopo paralelo, cobrindo estratégia, design, engenharia, performance e suporte contínuo conforme o momento do roadmap.',
       processHeading: 'Como trabalhamos com você',
       processLabel: 'Etapa',
       processDescription:
@@ -560,7 +560,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Sites e apps em React',
           subtitle: 'Web, SaaS e ferramentas internas',
           description:
-            'Construímos experiências em React + TypeScript (Next.js/Remix) para marketing, SaaS e ferramentas internas, sempre com acessibilidade e métricas configuradas. Integramos outras stacks JS quando necessário.',
+            'Desenhamos e construímos sites, SaaS e ferramentas internas com acessibilidade e métricas desde o início. Preferimos React + TypeScript, mas trabalhamos com o framework que fizer sentido para a sua infraestrutura, seja atuando com seu time ou tocando o desenvolvimento sozinho.',
           features: ['Biblioteca de componentes', 'Headless CMS', 'Base Core Web Vitals', 'Instrumentação de analytics'],
           cta: 'Ver abordagem'
         },
@@ -568,7 +568,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Apps Flutter',
           subtitle: 'Android, iOS e web no mesmo código',
           description:
-            'Desenvolvimento Flutter como stack principal para entregar apps Android, iOS e experiências web responsivas em um único codebase, com integrações nativas quando preciso.',
+            'Quando o objetivo é multiplataforma, usamos Flutter como stack principal para entregar Android, iOS e web responsivo em um único codebase. Podemos atuar junto ao seu squad mobile ou assumir o app enquanto a equipe interna foca em outro projeto.',
           features: ['Flutter & Dart', 'Builds Android & iOS', 'Saída web responsiva', 'CI/CD e publicação nas lojas'],
           cta: 'Ver abordagem'
         },
