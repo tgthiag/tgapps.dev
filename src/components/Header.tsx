@@ -75,13 +75,13 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <img
               src="/logo.png"
-              alt="TG Apps logo"
+              alt="Tg Apps logo"
               className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1"
             />
             <span className={`text-xl font-bold transition-colors ${
               isScrolled ? 'text-gray-900' : 'text-white'
             }`}>
-              TG Apps
+              Tg Apps
             </span>
           </div>
 

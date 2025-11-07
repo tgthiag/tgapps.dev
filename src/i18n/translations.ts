@@ -162,7 +162,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'speed and integrity',
       titleLine2: 'from Latin America',
       subtitle:
-        'TG Apps is a senior-led studio in Brazil specialized in multi-platform, born-global applications, helping North American startups and teams worldwide launch web and mobile experiences fast without inflated promises or fragile budgets.',
+        'Tg Apps is a senior-led studio in Brazil specialized in multi-platform, born-global applications, helping North American startups and teams worldwide launch web and mobile experiences fast without inflated promises or fragile budgets.',
       stats: [
         { label: 'Founder-led delivery' },
         { label: 'Up to 3 parallel products' },
@@ -177,7 +177,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingHighlight: 'startups, agencies, and teams needing leverage',
       description:
         'Some clients plug us into their squads to unlock velocity; others hand us the entire product so their internal team stays focused elsewhere. Either way, we start with a call to understand outcomes, security, and success metrics before we touch scope or code.',
-      partnershipHeading: 'Why partner with TG Apps?',
+      partnershipHeading: 'Why partner with Tg Apps?',
       partnershipDescription:
         'Clients work with us because of founder access, honest scopes, and truly flexible engagements. Here are the promises we always keep:',
       gridHeading: 'What you get from us',
@@ -281,7 +281,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'How we operate as a',
       headingHighlight: 'founder-led studio',
       description:
-        'TG Apps is a boutique team in Sao Paulo supporting North American startups, agencies, and companies worldwide that need senior builders without the overhead.',
+        'Tg Apps is a boutique team in Sao Paulo supporting North American startups, agencies, and companies worldwide that need senior builders without the overhead.',
       timelineHeading: 'Partnering with US, Canadian, and global teams since 2019',
       paragraphs: [
         'We stay intentionally small so decision-makers talk directly to the people writing the code and leading the design.',
@@ -346,7 +346,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { title: 'Phone / WhatsApp', value: '+55 (11) 97971-7703', description: 'Weekdays, 9am–6pm BRT (EST+1)' },
         { title: 'Location', value: 'Sao Paulo, Brazil', description: 'Nearshore to North America with global delivery' }
       ],
-      whyUsHeading: 'Why partner with TG Apps?',
+      whyUsHeading: 'Why partner with Tg Apps?',
       whyUs: [
         'Founder involvement from brief to launch',
         'North America-friendly overlap plus English-first, global delivery',
@@ -428,7 +428,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       },
       cta: 'Plan your build',
       bottom: {
-        copyright: '© {year} TG Apps. All rights reserved.',
+        copyright: '© {year} Tg Apps. All rights reserved.',
         privacy: 'Privacy Policy',
         terms: 'Terms of Use'
       }
@@ -453,7 +453,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'velocidade e compromisso',
       titleLine2: 'direto de São Paulo',
       subtitle:
-        'A TG Apps é um estúdio sênior no Brasil especializado na criação de aplicações multiplataforma e born-global, apoiando startups e empresas na América do Norte e no mundo todo a lançar experiências web e mobile com rapidez, transparência e orçamentos honestos.',
+        'A Tg Apps é um estúdio sênior no Brasil especializado na criação de aplicações multiplataforma e born-global, apoiando startups e empresas na América do Norte e no mundo todo a lançar experiências web e mobile com rapidez, transparência e orçamentos honestos.',
       stats: [
         { label: 'Fundadores no dia a dia' },
         { label: 'Até 3 projetos em paralelo' },
@@ -468,7 +468,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingHighlight: 'startups, agências e times que precisam de reforço',
       description:
         'Às vezes atuamos em conjunto com o seu time para liberar velocidade; em outras, assumimos o produto inteiro enquanto a equipe interna cuida de outro projeto. Sempre começamos alinhando resultados, segurança e sucesso antes de falar de escopo.',
-      partnershipHeading: 'Por que trabalhar com a TG Apps?',
+      partnershipHeading: 'Por que trabalhar com a Tg Apps?',
       partnershipDescription:
         'Nossos clientes citam sempre os mesmos motivos: acesso aos fundadores, escopos honestos e acordos realmente flexíveis. Estes são os compromissos que mantemos:',
       gridHeading: 'O que entregamos para você',
@@ -571,7 +571,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Como trabalhamos como',
       headingHighlight: 'estúdio liderado por fundadores',
       description:
-        'A TG Apps é um time boutique em São Paulo que apoia empresas da América do Norte e de outros países com engenharia e design sênior sem inflar estruturas internas.',
+        'A Tg Apps é um time boutique em São Paulo que apoia empresas da América do Norte e de outros países com engenharia e design sênior sem inflar estruturas internas.',
       timelineHeading: 'Conectados a equipes dos EUA e Canadá desde 2019',
       paragraphs: [
         'Mantemos o time enxuto para que clientes falem diretamente com quem escreve o código e desenha as experiências.',
@@ -636,7 +636,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { title: 'Telefone / WhatsApp', value: '+55 (11) 97971-7703', description: 'Seg–Sex, 9h às 18h BRT (EST+1)' },
         { title: 'Localização', value: 'São Paulo, SP', description: 'Atuação nearshore para Am. do Norte e clientes globais' }
       ],
-      whyUsHeading: 'Por que trabalhar com a TG Apps?',
+      whyUsHeading: 'Por que trabalhar com a Tg Apps?',
       whyUs: [
         'Fundadores envolvidos do briefing ao deploy',
         'Processo pensado para colaboração com EUA/Canadá e clientes globais',
@@ -717,7 +717,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       },
       cta: 'Planejar projeto',
       bottom: {
-        copyright: '© {year} TG Apps. Todos os direitos reservados.',
+        copyright: '© {year} Tg Apps. Todos os direitos reservados.',
         privacy: 'Política de Privacidade',
         terms: 'Termos de Uso'
       }

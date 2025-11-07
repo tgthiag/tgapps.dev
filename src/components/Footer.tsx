@@ -31,8 +31,8 @@ const Footer = () => {
           {/* Company Info */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="TG Apps" className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1" />
-              <span className="text-xl font-bold">TG Apps</span>
+              <img src="/logo.png" alt="Tg Apps" className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1" />
+              <span className="text-xl font-bold">Tg Apps</span>
             </div>
             <p className="text-gray-400 mb-6 leading-relaxed">{t.footer.description}</p>
             <div className="flex space-x-4">

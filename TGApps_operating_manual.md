@@ -1,4 +1,4 @@
-# TG Apps Operating Guide
+# Tg Apps Operating Guide
 
 ## 1. Who We Are
 - Founder-led, boutique digital product studio based in São Paulo, Brazil.
