@@ -1,5 +1,5 @@
 import React from 'react';
-import { Users, Target, Lightbulb, Award, TrendingUp, Heart } from 'lucide-react';
+import { Users, Target, Lightbulb, Award, TrendingUp, Heart, CheckCircle } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 
 const About = () => {
@@ -17,6 +17,18 @@ const About = () => {
     number: t.about.stats[index]?.number ?? '',
     label: t.about.stats[index]?.label ?? ''
   }));
+
+  const expectationHighlights = [
+    stats[0]?.number && stats[0]?.label
+      ? `We cap ourselves at ${stats[0].number} ${stats[0].label.toLowerCase()} – typically a blend of frontends, dashboards, and pragmatic backends – so attention stays high. Scope counts adjust with complexity, and it is all included in the flat monthly pod.`
+      : null,
+    stats[1]?.number && stats[1]?.label
+      ? `Expect replies within ${stats[1].number} (${stats[1].label.toLowerCase()}) during the week, plus lighter weekend coverage when something cannot wait – all included in the flat pod cost.`
+      : null,
+    stats[3]?.number
+      ? `Demos and deploys follow a ${stats[3].number.toLowerCase()} cadence so stakeholders stay synced, with adjustments based on complexity and parallel work – always aligned together.`
+      : null
+  ].filter(Boolean);
 
   const clientIcons = [Lightbulb, TrendingUp];
   const clientTypes = clientIcons.map((IconComponent, index) => ({
@@ -138,22 +150,45 @@ const About = () => {
         </div>
 
         {/* Stats */}
-        <div className="bg-white rounded-2xl p-8 shadow-lg">
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">{t.about.statsHeading}</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
-            {stats.map((stat, index) => {
-              const IconComponent = stat.icon;
-              return (
-                <div key={index} className="text-center">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="w-6 h-6 text-white" />
+        <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-slate-900 via-blue-900 to-purple-900 text-white p-10 shadow-2xl">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.4em] text-white/60">
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-300"></span>
+                {t.about.statsHeading}
+              </div>
+              <h3 className="text-3xl font-bold">{t.about.headingLine1}</h3>
+              <p className="text-white/80 leading-relaxed">{t.about.description}</p>
+              <ul className="space-y-3 text-sm text-white/80">
+                {expectationHighlights.slice(0, 3).map((highlight, index) => (
+                  <li key={index} className="flex items-start gap-3">
+                    <CheckCircle size={16} className="mt-1 text-emerald-300 flex-shrink-0" />
+                    <span>{highlight}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className="lg:col-span-2 grid grid-cols-2 gap-4">
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <div
+                    key={index}
+                    className="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm hover:border-white/30 transition-colors"
+                  >
+                    <div className="flex items-center justify-between mb-6">
+                      <div className="text-3xl font-bold">{stat.number}</div>
+                      <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+                        <IconComponent className="w-5 h-5 text-white" />
+                      </div>
+                    </div>
+                    <p className="text-sm text-white/70">{stat.label}</p>
                   </div>
-                  <div className="text-3xl font-bold text-gray-900 mb-2">{stat.number}</div>
-                  <div className="text-gray-600 text-sm">{stat.label}</div>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
+          <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.45),_transparent_55%)]"></div>
         </div>
       </div>
     </section>

@@ -282,10 +282,10 @@ export const translations: Record<Locale, TranslationSchema> = {
   
     about: {
       badge: 'About Us',
-      headingLine1: 'How we operate as a',
-      headingHighlight: 'founder-led studio',
+      headingLine1: 'Built for lean, high-stakes launches',
+      headingHighlight: 'with founders in every squad',
       description:
-        'Tg Apps is a boutique team in Sao Paulo supporting North American startups, agencies, and companies worldwide that need senior builders without the overhead.',
+        'From Sao Paulo we pair senior designers, frontends, dashboards, and pragmatic backends with North American teams that need boutique focus without enterprise overhead.',
       timelineHeading: 'Partnering with US, Canadian, and global teams since 2019',
       paragraphs: [
         'We stay intentionally small so decision-makers talk directly to the people writing the code and leading the design.',
@@ -356,7 +356,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'North America-friendly overlap plus English-first, global delivery',
         'Flexible billing: monthly retainers or per-task scopes',
         'Transparent budgets built for startups and SMBs',
-        'No surprise fees—what we agree on is the only cost, and you direct us as needs evolve',
+        'No surprise fees—what we agree on is the only cost; you set the priorities and we execute as needs evolve',
         'No lock-in clauses—stay with us only while it makes sense for you',
         'Post-launch support handled by the same builders',
         'Rapid kickoff calls—by the time you outline the idea, our builders are already in motion'
@@ -574,10 +574,10 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     about: {
       badge: 'Sobre nós',
-      headingLine1: 'Como trabalhamos como',
-      headingHighlight: 'estúdio liderado por fundadores',
+      headingLine1: 'Feito para lançamentos enxutos e críticos',
+      headingHighlight: 'com fundadores em cada frente',
       description:
-        'A Tg Apps é um time boutique em São Paulo que apoia empresas da América do Norte e de outros países com engenharia e design sênior sem inflar estruturas internas.',
+        'De São Paulo conectamos designers, frontends, dashboards e backends pragmáticos a equipes da América do Norte que precisam de foco boutique sem inflar estruturas internas.',
       timelineHeading: 'Conectados a equipes dos EUA e Canadá desde 2019',
       paragraphs: [
         'Mantemos o time enxuto para que clientes falem diretamente com quem escreve o código e desenha as experiências.',
@@ -647,7 +647,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Fundadores envolvidos do briefing ao deploy',
         'Processo pensado para colaboração com EUA/Canadá e clientes globais',
         'Pagamentos flexíveis: mensalidade ou tarefas conforme a necessidade',
-        'Orçamentos transparentes: o que combinarmos será o único custo e você nos direciona conforme a demanda',
+        'Orçamentos transparentes: o que combinarmos será o único custo — você define as prioridades e nós executamos conforme a demanda',
         'Sem cláusulas de fidelidade – continue conosco apenas enquanto fizer sentido para você',
         'Suporte pós-lançamento com o mesmo time que construiu',
         'Chamadas de kickoff rápidas – assim que você detalha a ideia, nosso time já está em movimento'
