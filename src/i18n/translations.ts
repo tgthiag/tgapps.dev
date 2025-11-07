@@ -221,7 +221,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       items: [
         {
-          title: 'Product Websites & Apps',
+          title: 'Websites, Apps & Dashboards',
           subtitle: 'Web, SaaS, and internal tools',
           description:
             'We architect and build marketing sites, SaaS dashboards, and internal tools with accessibility and analytics baked in. React is our default stack, but we happily work with whichever front-end framework fits your infrastructure. We can embed alongside your current web team or handle the entire delivery ourselves.',
