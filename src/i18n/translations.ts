@@ -331,9 +331,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       statsHeading: 'What you can expect',
       stats: [
-        { number: '2-3', label: 'Products handled in parallel' },
-        { number: '<=1 day', label: 'Typical response time during the week' },
-        { number: 'EST+1', label: 'Time zone overlap from Sao Paulo' },
+        { number: '2-3', label: 'Product-related projects handled in parallel' },
+        { number: '≤1 day', label: 'Typical response time during the week (often within one hour)' },
+        { number: 'EST+1', label: 'Real-time collaboration and high team availability' },
         { number: 'Weekly/Biweekly', label: 'Demo and deploy cadence' }
       ],
       passionTitle: 'Principles we live by',
@@ -624,9 +624,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       statsHeading: 'O que você pode esperar',
       stats: [
-        { number: '2-3', label: 'Produtos em paralelo' },
-        { number: '<=1 dia', label: 'Tempo típico de resposta útil' },
-        { number: 'Fuso EST+1', label: 'Colaboração em tempo real' },
+        { number: '2-3', label: 'Projetos relacionados ao produto em paralelo' },
+        { number: '≤1 dia', label: 'Tempo típico de resposta útil (muitas vezes em até 1 hora)' },
+        { number: 'Fuso EST+1', label: 'Colaboração em tempo real e alta disponibilidade do time' },
         { number: 'Semanal/quinzenal', label: 'Ritmo de reuniões e deploys' }
       ],
       passionTitle: 'Princípios que seguimos',

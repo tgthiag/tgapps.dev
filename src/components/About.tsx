@@ -174,15 +174,13 @@ const About = () => {
                 return (
                   <div
                     key={index}
-                    className="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm hover:border-white/30 transition-colors"
+                    className="rounded-2xl border border-white/15 bg-white/5 p-6 backdrop-blur-sm hover:border-white/30 transition-colors flex flex-col items-center text-center gap-4"
                   >
-                    <div className="flex items-center justify-between mb-6">
-                      <div className="text-3xl font-bold">{stat.number}</div>
-                      <div className="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
-                        <IconComponent className="w-5 h-5 text-white" />
-                      </div>
+                    <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                      <IconComponent className="w-6 h-6 text-white" />
                     </div>
-                    <p className="text-sm text-white/70">{stat.label}</p>
+                    <div className="text-3xl font-bold">{stat.number}</div>
+                    <p className="text-sm text-white/80">{stat.label}</p>
                   </div>
                 );
               })}
