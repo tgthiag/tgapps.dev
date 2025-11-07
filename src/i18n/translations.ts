@@ -169,7 +169,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Tg Apps is a senior-led studio in Brazil specialized in multi-platform, born-global applications, helping North American startups and teams worldwide launch web and mobile experiences fast without inflated promises or fragile budgets.',
       stats: [
         { label: 'Founder-led delivery' },
-        { label: 'Up to 3 parallel products' },
+        { label: 'Up to 3 product-related projects in motion' },
         { label: 'Replies within 1 business day' }
       ],
       primaryCta: 'Plan your build',
@@ -205,7 +205,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         {
           title: 'During the build',
           description:
-            'We can embed with your engineers or run a parallel squad. Our studio caps at 2–3 products so founders stay on every thread, with weekly or biweekly demos and deploys.',
+            'We typically own a single product per client at a time, juggling its dashboards, mobile apps, data work, and landing pages under one pod. When helpful, we embed directly with your engineers instead of running a separate squad.',
           highlights: [
             'Shared backlogs, docs, and async updates',
             'Direct access to the builders doing the work',
@@ -463,7 +463,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'A Tg Apps é um estúdio sênior no Brasil especializado na criação de aplicações multiplataforma e born-global, apoiando startups e empresas na América do Norte e no mundo todo a lançar experiências web e mobile com rapidez, transparência e orçamentos honestos.',
       stats: [
         { label: 'Fundadores no dia a dia' },
-        { label: 'Até 3 projetos em paralelo' },
+        { label: 'Até 3 frentes relacionadas ao mesmo produto' },
         { label: 'Resposta em até 1 dia útil' }
       ],
       primaryCta: 'Planejar projeto',
@@ -499,7 +499,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         {
           title: 'Durante o desenvolvimento',
           description:
-            'Limitamos o estúdio a 2–3 produtos para manter fundadores em cada decisão. Há demos e deploys semanais ou quinzenais.',
+            'Normalmente assumimos um produto por cliente, orquestrando dashboards, mobile, landing pages e backend sob o mesmo pod. Quando fizer sentido, também podemos entrar no seu squad em vez de rodar em paralelo.',
           highlights: [
             'Backlog compartilhado, documentação e updates assíncronos',
             'Acesso direto a quem está construindo',
