@@ -21,17 +21,31 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+
+    const recipientEmail =
+      t.contact.info?.find((item) => (item.title || '').toLowerCase().includes('email'))?.value ?? 'support@tgapps.dev';
+    const subject = `${formData.service || 'New project inquiry'} • ${formData.name}`;
+    const bodyLines = [
+      `Name: ${formData.name}`,
+      `Email: ${formData.email}`,
+      `Phone / WhatsApp: ${formData.phone || 'Not provided'}`,
+      `Preferred Service: ${formData.service || 'Not specified'}`,
+      '',
+      'Plans / Notes:',
+      formData.message || '(No additional notes)',
+      '',
+      'Reminder: USD 2,000 flat monthly pod requested via contact form.'
+    ];
+    const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
+
+    window.location.href = mailtoLink;
+
     setIsSubmitting(false);
     setIsSubmitted(true);
-    
-    // Reset form after 3 seconds
+
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
