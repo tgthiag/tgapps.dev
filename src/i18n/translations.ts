@@ -423,7 +423,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       contactHeading: 'Contact',
       contact: {
         emailLabel: 'support@tgapps.dev',
-        phoneLabel: '+55 (11) 99999-9999',
+        phoneLabel: '+55 (11) 97971-7703',
         location: 'São Paulo, Brazil'
       },
       cta: 'Plan your build',
@@ -512,7 +512,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       items: [
         {
-          title: 'Sites e apps em React',
+          title: 'Sites, apps e dashboards',
           subtitle: 'Web, SaaS e ferramentas internas',
           description:
             'Desenhamos e construímos sites, SaaS e ferramentas internas com acessibilidade e métricas desde o início. Preferimos React, mas trabalhamos com o framework que fizer sentido para a sua infraestrutura, seja atuando com seu time ou tocando o desenvolvimento sozinho.',
@@ -712,7 +712,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       contactHeading: 'Contato',
       contact: {
         emailLabel: 'support@tgapps.dev',
-        phoneLabel: '+55 (11) 99999-9999',
+        phoneLabel: '+55 (11) 97971-7703',
         location: 'São Paulo, SP'
       },
       cta: 'Planejar projeto',
