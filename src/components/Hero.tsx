@@ -18,7 +18,10 @@ const Hero = () => {
   }));
 
   return (
-    <section id="inicio" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section
+      id="inicio"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden pt-24 md:pt-32"
+    >
       {/* Background with gradient */}
       <div className="absolute inset-0 bg-gradient-to-br from-blue-900 via-purple-900 to-indigo-900">
         <div className="absolute inset-0 bg-black/20"></div>
