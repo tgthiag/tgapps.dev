@@ -363,15 +363,15 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       costSection: {
         badge: 'Flat monthly pod',
-        title: 'Focused build team from USD 2K/month',
+        title: 'Focused build team for USD 2K/month',
         description:
-          'Starting at USD 2,000 per month you get a senior pod shipping scopes quickly. Tell us your plans and watch them take shape fast, with full code access and zero extra fees.',
+          'For a flat USD 2,000 per month you get a senior pod shipping scopes quickly. Tell us your plans and watch them take shape fast, with full code access, one invoice, and zero extra fees.',
         highlights: [
           'Dedicated builders with founders on every thread',
           'Full repository and tooling access from day one',
-          'No platform markups, overtime, or change-order fees'
+          'No platform markups, overtime, or change-order fees—USD 2,000 covers everything'
         ],
-        note: 'Need shorter missions or outcome-based scopes? Mention it in the form—we keep the same transparent rules.'
+        note: 'Need shorter missions or outcome-based scopes? Mention it in the form—we’ll keep the USD 2,000 transparency.'
       },
       formHeading: 'Request a scope outline',
       formDescription:
@@ -654,15 +654,15 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       costSection: {
         badge: 'Equipe mensal fixa',
-        title: 'Time focado a partir de USD 2K/mês',
+        title: 'Time focado por USD 2K/mês',
         description:
-          'Com USD 2.000 por mês você garante um pod sênior que mantém o ritmo alto. Conte seus planos e veja tudo ganhar forma rapidamente, com acesso total ao código e nenhuma taxa extra.',
+          'Por USD 2.000 mensais — nem mais, nem menos — você garante um pod sênior que mantém o ritmo alto. Conte seus planos e veja tudo ganhar forma rapidamente, com acesso total ao código e nenhuma taxa extra.',
         highlights: [
           'Engenheiros dedicados com fundadores em cada thread',
           'Acesso completo a repositórios e ferramentas desde o primeiro dia',
-          'Sem intermediações, hora extra ou taxas surpresa'
+          'Sem intermediações, hora extra ou taxas surpresa — USD 2.000 cobre tudo'
         ],
-        note: 'Precisa de missões mais curtas ou escopos fechados? Conta pra gente — seguimos a mesma transparência.'
+        note: 'Precisa de missões mais curtas ou escopos fechados? Conta pra gente — seguimos a mesma regra de transparência.'
       },
       formHeading: 'Peça um esboço de escopo',
       formDescription:
