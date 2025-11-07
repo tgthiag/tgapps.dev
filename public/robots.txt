@@ -1,4 +1,10 @@
 User-agent: *
 Allow: /
+Disallow: /assets/*.map$
+
+# Block aggressive/malicious bots
+User-agent: MJ12bot
+User-agent: BLEXBot
+Disallow: /
 
 Sitemap: https://tgapps.dev/sitemap.xml
