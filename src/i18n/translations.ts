@@ -27,6 +27,8 @@ export interface TranslationSchema {
     headingLine1: string;
     headingHighlight: string;
     description: string;
+    partnershipHeading?: string;
+    partnershipDescription?: string;
     gridHeading?: string;
     gridDescription?: string;
     processHeading?: string;
@@ -175,6 +177,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingHighlight: 'startups, agencies, and teams needing leverage',
       description:
         'Some clients plug us into their squads to unlock velocity; others hand us the entire product so their internal team stays focused elsewhere. Either way, we start with a call to understand outcomes, security, and success metrics before we touch scope or code.',
+      partnershipHeading: 'Why partner with TG Apps?',
+      partnershipDescription:
+        'Clients work with us because of founder access, honest scopes, and truly flexible engagements. Here are the promises we always keep:',
       gridHeading: 'What you get from us',
       gridDescription:
         'Whether we embed alongside your engineers or run a parallel squad, we bring strategy, design, engineering, performance, and ongoing care that you can mix and match for each roadmap push.',
@@ -486,6 +491,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingHighlight: 'startups, agências e times que precisam de reforço',
       description:
         'Às vezes atuamos em conjunto com o seu time para liberar velocidade; em outras, assumimos o produto inteiro enquanto a equipe interna cuida de outro projeto. Sempre começamos alinhando resultados, segurança e sucesso antes de falar de escopo.',
+      partnershipHeading: 'Por que trabalhar com a TG Apps?',
+      partnershipDescription:
+        'Nossos clientes citam sempre os mesmos motivos: acesso aos fundadores, escopos honestos e acordos realmente flexíveis. Estes são os compromissos que mantemos:',
       gridHeading: 'O que entregamos para você',
       gridDescription:
         'Estamos prontos para somar ao seu squad ou tocar um escopo paralelo, cobrindo estratégia, design, engenharia, performance e suporte contínuo conforme o momento do roadmap.',

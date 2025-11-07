@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Globe, Smartphone, Palette, Code, Zap, Shield, ArrowRight, CheckCircle } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 
@@ -48,6 +48,20 @@ const Services = () => {
     ...t.services.items[index]
   }));
   const processLabel = t.services.processLabel ?? 'Stage';
+  const partnershipReasons = t.contact?.whyUs ?? [];
+  const partnershipHeading = t.services.partnershipHeading ?? t.contact?.whyUsHeading ?? '';
+  const partnershipDescription = t.services.partnershipDescription ?? '';
+  const [activeReasonIndex, setActiveReasonIndex] = useState(0);
+
+  useEffect(() => {
+    if (partnershipReasons.length <= 1) {
+      return;
+    }
+    const interval = setInterval(() => {
+      setActiveReasonIndex((prev) => (prev + 1) % partnershipReasons.length);
+    }, 4000);
+    return () => clearInterval(interval);
+  }, [partnershipReasons.length]);
 
   return (
     <section id="what-you-get" className="py-24 bg-gray-50 scroll-mt-24">
@@ -66,6 +80,35 @@ const Services = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.services.description}</p>
         </div>
+
+        {partnershipReasons.length > 0 && (
+          <div className="mt-16">
+            <div className="text-center mb-8">
+              {partnershipHeading && <h3 className="text-3xl font-bold text-gray-900">{partnershipHeading}</h3>}
+              {partnershipDescription && (
+                <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">{partnershipDescription}</p>
+              )}
+            </div>
+            <div className="relative overflow-hidden">
+              <div
+                className="flex transition-transform duration-[1500ms] ease-out"
+                style={{
+                  transform: `translateX(-${(activeReasonIndex * 320) / Math.max(1, Math.min(partnershipReasons.length, 3))}px)`
+                }}
+              >
+                {partnershipReasons.concat(partnershipReasons.slice(0, 3)).map((reason, index) => (
+                  <div
+                    key={`${reason}-${index}`}
+                    className="min-w-[300px] max-w-[320px] bg-white border border-gray-100 rounded-2xl p-6 shadow-md mx-2 flex items-start space-x-3"
+                  >
+                    <div className="w-3 h-3 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></div>
+                    <p className="text-gray-800 text-sm leading-relaxed">{reason}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        )}
 
         {t.services.process && t.services.process.length > 0 && (
           <div id="process" className="mt-20 mb-16 scroll-mt-24">
