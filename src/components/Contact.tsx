@@ -8,7 +8,6 @@ const Contact = () => {
     email: '',
     phone: '',
     service: '',
-    budget: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -40,7 +39,6 @@ const Contact = () => {
         email: '',
         phone: '',
         service: '',
-        budget: '',
         message: ''
       });
     }, 3000);
@@ -58,13 +56,13 @@ const Contact = () => {
   }));
 
   const services = t.contact.services;
-  const budgetRanges = t.contact.budgets;
+  const costSection = t.contact.costSection;
 
   return (
     <section id="contato" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-12">
           <div className="inline-flex items-center space-x-2 bg-orange-100 text-orange-600 px-4 py-2 rounded-full text-sm font-medium mb-4">
             <MessageSquare className="w-4 h-4" />
             <span>{t.contact.badge}</span>
@@ -77,6 +75,35 @@ const Contact = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.contact.description}</p>
         </div>
+
+        {costSection && (
+          <div className="mb-16">
+            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 text-white px-8 py-10 shadow-2xl">
+              <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
+                <div className="max-w-3xl">
+                  <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/80 mb-3">
+                    <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
+                    {costSection.badge}
+                  </div>
+                  <h3 className="text-3xl font-bold mb-3">{costSection.title}</h3>
+                  <p className="text-white/90 text-lg leading-relaxed">{costSection.description}</p>
+                </div>
+                {costSection.highlights && costSection.highlights.length > 0 && (
+                  <ul className="grid gap-3 text-sm text-white/90 sm:grid-cols-2 lg:grid-cols-1">
+                    {costSection.highlights.map((highlight, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <CheckCircle className="w-4 h-4 text-emerald-200 flex-shrink-0" />
+                        <span>{highlight}</span>
+                      </li>
+                    ))}
+                  </ul>
+                )}
+              </div>
+              {costSection.note && <p className="relative z-10 mt-6 text-sm text-white/80">{costSection.note}</p>}
+              <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.85),_transparent_55%)]"></div>
+            </div>
+          </div>
+        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Info */}
@@ -211,24 +238,6 @@ const Contact = () => {
                         ))}
                       </select>
                     </div>
-                  </div>
-
-                  <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
-                      {t.contact.form.budgetLabel}
-                    </label>
-                    <select
-                      id="budget"
-                      name="budget"
-                      value={formData.budget}
-                      onChange={handleChange}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
-                    >
-                      <option value="">{t.contact.form.budgetPlaceholder}</option>
-                      {budgetRanges.map((range, index) => (
-                        <option key={index} value={range}>{range}</option>
-                      ))}
-                    </select>
                   </div>
 
                   <div>

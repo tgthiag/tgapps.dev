@@ -92,6 +92,13 @@ export interface TranslationSchema {
     }[];
     whyUsHeading: string;
     whyUs: string[];
+    costSection?: {
+      badge: string;
+      title: string;
+      description: string;
+      highlights?: string[];
+      note?: string;
+    };
     formHeading: string;
     formDescription: string;
     callout: {
@@ -110,8 +117,6 @@ export interface TranslationSchema {
       phonePlaceholder: string;
       serviceLabel: string;
       servicePlaceholder: string;
-      budgetLabel: string;
-      budgetPlaceholder: string;
       messageLabel: string;
       messagePlaceholder: string;
       submit: string;
@@ -119,7 +124,6 @@ export interface TranslationSchema {
       policy: string;
     };
     services: string[];
-    budgets: string[];
   };
   footer: {
     description: string;
@@ -357,6 +361,18 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Post-launch support handled by the same builders',
         'Rapid kickoff calls—by the time you outline the idea, our builders are already in motion'
       ],
+      costSection: {
+        badge: 'Flat monthly pod',
+        title: 'Focused build team from USD 2K/month',
+        description:
+          'Starting at USD 2,000 per month you get a senior pod shipping scopes quickly. Tell us your plans and watch them take shape fast, with full code access and zero extra fees.',
+        highlights: [
+          'Dedicated builders with founders on every thread',
+          'Full repository and tooling access from day one',
+          'No platform markups, overtime, or change-order fees'
+        ],
+        note: 'Need shorter missions or outcome-based scopes? Mention it in the form—we keep the same transparent rules.'
+      },
       formHeading: 'Request a scope outline',
       formDescription:
         'Tell us about the milestone, constraints, and assets available so we can prepare a quick call covering process, security, references, and realistic timelines.',
@@ -382,8 +398,6 @@ export const translations: Record<Locale, TranslationSchema> = {
         phonePlaceholder: '(11) 99999-9999',
         serviceLabel: 'Service type *',
         servicePlaceholder: 'Select a service',
-        budgetLabel: 'Estimated budget (USD)',
-        budgetPlaceholder: 'Select a range',
         messageLabel: 'Describe your project *',
         messagePlaceholder: 'Tell us about your project, goals, and expectations...',
         submit: 'Send Message',
@@ -399,14 +413,6 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Product Discovery',
         'Technical Consulting',
         'Other'
-      ],
-      budgets: [
-        'USD 5k - USD 15k',
-        'USD 15k - USD 30k',
-        'USD 30k - USD 50k',
-        'USD 50k - USD 100k',
-        'Above USD 100k',
-        'Prefer not to say'
       ]
     },
     footer: {
@@ -642,10 +648,22 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Processo pensado para colaboração com EUA/Canadá e clientes globais',
         'Pagamentos flexíveis: mensalidade ou tarefas conforme a necessidade',
         'Orçamentos transparentes: o que combinarmos será o único custo e você nos direciona conforme a demanda',
-        'Sem cláusulas de fidelidade — continue conosco apenas enquanto fizer sentido para você',
+        'Sem cláusulas de fidelidade – continue conosco apenas enquanto fizer sentido para você',
         'Suporte pós-lançamento com o mesmo time que construiu',
         'Chamadas de kickoff rápidas – assim que você detalha a ideia, nosso time já está em movimento'
       ],
+      costSection: {
+        badge: 'Equipe mensal fixa',
+        title: 'Time focado a partir de USD 2K/mês',
+        description:
+          'Com USD 2.000 por mês você garante um pod sênior que mantém o ritmo alto. Conte seus planos e veja tudo ganhar forma rapidamente, com acesso total ao código e nenhuma taxa extra.',
+        highlights: [
+          'Engenheiros dedicados com fundadores em cada thread',
+          'Acesso completo a repositórios e ferramentas desde o primeiro dia',
+          'Sem intermediações, hora extra ou taxas surpresa'
+        ],
+        note: 'Precisa de missões mais curtas ou escopos fechados? Conta pra gente — seguimos a mesma transparência.'
+      },
       formHeading: 'Peça um esboço de escopo',
       formDescription:
         'Compartilhe contexto, restrições e materiais disponíveis para prepararmos uma call curta cobrindo processo, segurança, exemplos e prazos realistas.',
@@ -671,8 +689,6 @@ export const translations: Record<Locale, TranslationSchema> = {
         phonePlaceholder: '(11) 99999-9999',
         serviceLabel: 'Tipo de serviço *',
         servicePlaceholder: 'Selecione um serviço',
-        budgetLabel: 'Orçamento estimado (USD)',
-        budgetPlaceholder: 'Selecione uma faixa',
         messageLabel: 'Descreva seu projeto *',
         messagePlaceholder: 'Conte-nos mais sobre seu projeto, objetivos e expectativas...',
         submit: 'Enviar Mensagem',
@@ -688,14 +704,6 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Discovery de Produto',
         'Consultoria Técnica',
         'Outro'
-      ],
-      budgets: [
-        'USD 5k - USD 15k',
-        'USD 15k - USD 30k',
-        'USD 30k - USD 50k',
-        'USD 50k - USD 100k',
-        'Acima de USD 100k',
-        'Prefiro não informar'
       ]
     },
     footer: {
