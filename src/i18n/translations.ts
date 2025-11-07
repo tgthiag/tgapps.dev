@@ -275,30 +275,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         button: 'Start a scope call'
       }
     },
-    portfolio: {
-      badge: 'How we create impact',
-      headingLine1: '',
-      headingHighlight: '',
-      description:
-        'We partner with startups, agencies, and enterprises to ship dependable web and mobile products. Tell us about your goals and we will share the most relevant references and outcomes.',
-      filters: [
-        { id: 'all', label: 'All Projects' },
-        { id: 'web', label: 'Websites' },
-        { id: 'mobile', label: 'Mobile Apps' }
-      ],
-      projects: [],
-      statusLabel: {
-        done: 'Completed',
-        inProgress: 'In progress'
-      },
-      projectCta: 'Request a walkthrough',
-      bottomCta: {
-        title: 'Curious about fit?',
-        description:
-          'Send a short brief and we will align scope, timelines, and proof points tailored to what you need to build next.',
-        button: 'Schedule intro call'
-      }
-    },
+  
     about: {
       badge: 'About Us',
       headingLine1: 'How we operate as a',
@@ -587,30 +564,6 @@ export const translations: Record<Locale, TranslationSchema> = {
         title: 'Precisa de um parceiro confiável?',
         description: 'Conte seu roadmap e montamos um cronograma com esforço e custos prontos para compartilhar com o time.',
         button: 'Agendar call de escopo'
-      }
-    },
-    portfolio: {
-      badge: 'Como geramos impacto',
-      headingLine1: '',
-      headingHighlight: '',
-      description:
-        'Atuamos com startups, agências e empresas para lançar produtos web e mobile confiáveis. Conte seus objetivos e compartilhamos os cases e resultados que fazem mais sentido para você.',
-      filters: [
-        { id: 'all', label: 'Todos os Projetos' },
-        { id: 'web', label: 'Websites' },
-        { id: 'mobile', label: 'Apps Mobile' }
-      ],
-      projects: [],
-      statusLabel: {
-        done: 'Concluído',
-        inProgress: 'Em desenvolvimento'
-      },
-      projectCta: 'Pedir walkthrough',
-      bottomCta: {
-        title: 'Quer entender o fit?',
-        description:
-          'Envie um briefing e alinhamos escopo, prazos e evidências sob medida para o que você precisa construir agora.',
-        button: 'Marcar call introdutória'
       }
     },
     about: {
