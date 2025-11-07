@@ -59,6 +59,13 @@ const Services = () => {
     }) ?? -1;
   const highlightedReasonIndex = favoriteIndex >= 0 ? favoriteIndex : 0;
 
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="what-you-get" className="py-24 bg-gray-50 scroll-mt-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -201,7 +208,11 @@ const Services = () => {
                 </ul>
 
                 {/* CTA */}
-                <button className="group/btn flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors">
+                <button
+                  type="button"
+                  onClick={() => scrollToSection('contato')}
+                  className="group/btn flex items-center text-blue-600 font-semibold hover:text-blue-700 transition-colors"
+                >
                   <span>{service.cta}</span>
                   <ArrowRight className="w-4 h-4 ml-2 group-hover/btn:translate-x-1 transition-transform" />
                 </button>
