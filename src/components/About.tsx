@@ -168,7 +168,7 @@ const About = () => {
                 ))}
               </ul>
             </div>
-            <div className="lg:col-span-2 grid grid-cols-2 gap-4">
+            <div className="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (
@@ -179,7 +179,7 @@ const About = () => {
                     <div className="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
                       <IconComponent className="w-6 h-6 text-white" />
                     </div>
-                    <div className="text-3xl font-bold">{stat.number}</div>
+                    <div className="text-3xl font-bold whitespace-nowrap">{stat.number}</div>
                     <p className="text-sm text-white/80">{stat.label}</p>
                   </div>
                 );

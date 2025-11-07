@@ -170,7 +170,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       stats: [
         { label: 'Founder-led delivery' },
         { label: 'Up to 3 product-related projects in motion' },
-        { label: 'Replies within 1 business day' }
+        { label: 'Replies within 1–2 hours, including weekends' }
       ],
       primaryCta: 'Plan your build',
       secondaryCta: 'See how we work'
@@ -464,7 +464,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       stats: [
         { label: 'Fundadores no dia a dia' },
         { label: 'Até 3 frentes relacionadas ao mesmo produto' },
-        { label: 'Resposta em até 1 dia útil' }
+        { label: 'Respondemos entre 1 e 2 horas, inclusive nos fins de semana' }
       ],
       primaryCta: 'Planejar projeto',
       secondaryCta: 'Conhecer nosso fluxo'
