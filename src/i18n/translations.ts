@@ -355,7 +355,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'No surprise fees—what we agree on is the only cost, and you direct us as needs evolve',
         'No lock-in clauses—stay with us only while it makes sense for you',
         'Post-launch support handled by the same builders',
-        'Fast kickoff calls—if you thought about it, we are already building'
+        'Rapid kickoff calls—by the time you outline the idea, our builders are already in motion'
       ],
       formHeading: 'Request a scope outline',
       formDescription:
@@ -644,7 +644,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Orçamentos transparentes: o que combinarmos será o único custo e você nos direciona conforme a demanda',
         'Sem cláusulas de fidelidade — continue conosco apenas enquanto fizer sentido para você',
         'Suporte pós-lançamento com o mesmo time que construiu',
-        'Call rápida e sem burocracia — pensou em algo, já estamos construindo'
+        'Chamadas de kickoff rápidas – assim que você detalha a ideia, nosso time já está em movimento'
       ],
       formHeading: 'Peça um esboço de escopo',
       formDescription:
@@ -657,7 +657,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           'Entenda o fluxo de trabalho e como integramos ao seu time',
           'Veja exemplos de entregas e práticas de segurança',
           'Alinhe escopo, prazos e formatos de pagamento em minutos',
-          'Marcamos rápido porque odiamos burocracia — pensou em algo, já estamos construindo'
+          'Marcamos rápido porque odiamos burocracia – detalhou a ideia, nosso time já entrou em movimento'
         ]
       },
       successTitle: 'Mensagem enviada!',

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Globe, Smartphone, Palette, Code, Zap, Shield, ArrowRight, CheckCircle } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 
@@ -51,17 +51,13 @@ const Services = () => {
   const partnershipReasons = t.contact?.whyUs ?? [];
   const partnershipHeading = t.services.partnershipHeading ?? t.contact?.whyUsHeading ?? '';
   const partnershipDescription = t.services.partnershipDescription ?? '';
-  const [activeReasonIndex, setActiveReasonIndex] = useState(0);
-
-  useEffect(() => {
-    if (partnershipReasons.length <= 1) {
-      return;
-    }
-    const interval = setInterval(() => {
-      setActiveReasonIndex((prev) => (prev + 1) % partnershipReasons.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, [partnershipReasons.length]);
+  const accentColors = ['bg-blue-500', 'bg-purple-500', 'bg-pink-500', 'bg-amber-500', 'bg-emerald-500'];
+  const favoriteIndex =
+    partnershipReasons.findIndex((reason) => {
+      const normalized = reason.toLowerCase();
+      return normalized.includes('no surprise fees') || normalized.includes('orçamentos transparentes');
+    }) ?? -1;
+  const highlightedReasonIndex = favoriteIndex >= 0 ? favoriteIndex : 0;
 
   return (
     <section id="what-you-get" className="py-24 bg-gray-50 scroll-mt-24">
@@ -89,23 +85,38 @@ const Services = () => {
                 <p className="text-lg text-gray-600 max-w-3xl mx-auto mt-4">{partnershipDescription}</p>
               )}
             </div>
-            <div className="relative overflow-hidden">
-              <div
-                className="flex transition-transform duration-[1500ms] ease-out"
-                style={{
-                  transform: `translateX(-${(activeReasonIndex * 320) / Math.max(1, Math.min(partnershipReasons.length, 3))}px)`
-                }}
-              >
-                {partnershipReasons.concat(partnershipReasons.slice(0, 3)).map((reason, index) => (
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              {partnershipReasons.map((reason, index) => {
+                const isHero = index === highlightedReasonIndex;
+                const dotColor = accentColors[index % accentColors.length];
+                return (
                   <div
                     key={`${reason}-${index}`}
-                    className="min-w-[300px] max-w-[320px] bg-white border border-gray-100 rounded-2xl p-6 shadow-md mx-2 flex items-start space-x-3"
+                    className={`relative overflow-hidden rounded-2xl p-7 transition-all duration-300 ${
+                      isHero
+                        ? 'lg:col-span-2 bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 text-white shadow-2xl border border-transparent hover:shadow-blue-500/40'
+                        : 'bg-white border border-gray-100 text-gray-800 shadow-sm hover:-translate-y-1 hover:shadow-xl'
+                    }`}
                   >
-                    <div className="w-3 h-3 rounded-full bg-blue-500 mt-1.5 flex-shrink-0"></div>
-                    <p className="text-gray-800 text-sm leading-relaxed">{reason}</p>
+                    {isHero && (
+                      <>
+                        <div
+                          className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.8),_transparent_60%)]"
+                          aria-hidden="true"
+                        ></div>
+                        <div className="relative inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.25em] text-white/80 mb-3">
+                          <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
+                          Client favorite
+                        </div>
+                      </>
+                    )}
+                    <div className="relative flex items-start gap-3">
+                      <span className={`mt-1 inline-flex h-3 w-3 rounded-full ${isHero ? 'bg-white/90' : dotColor}`}></span>
+                      <p className={`text-base leading-relaxed ${isHero ? 'text-white/90' : 'text-gray-800'}`}>{reason}</p>
+                    </div>
                   </div>
-                ))}
-              </div>
+                );
+              })}
             </div>
           </div>
         )}
