@@ -1,0 +1,147 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tg Apps – SEO & GEO Audit (Nov/2025)</title>
+  <style>
+    body { font-family: "Segoe UI", Tahoma, sans-serif; background:#0b1120; color:#e2e8f0; padding:32px; margin:0; }
+    h1 { margin:0 0 24px; font-size:2rem; }
+    section { background:#111c3a; border:1px solid #24345d; border-radius:16px; padding:24px; margin-bottom:24px; }
+    h2 { color:#93c5fd; margin-top:0; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr)); gap:16px; }
+    .card { background:#0b142a; border-radius:14px; padding:18px 20px; border:1px solid #1d4ed8; }
+    .card h3 { margin-top:0; font-size:1.05rem; color:#bfdbfe; }
+    ul { margin:0; padding-left:18px; line-height:1.6; }
+    table { width:100%; border-collapse:collapse; margin-top:12px; }
+    th, td { border:1px solid #24345d; padding:12px; text-align:left; vertical-align:top; }
+    th { background:#0b142a; color:#bfdbfe; }
+    code { background:#010615; padding:0 4px; border-radius:4px; }
+    .tag { display:inline-flex; align-items:center; gap:6px; padding:4px 10px; border-radius:999px; font-size:0.8rem; background:#1d4ed8; color:#e0f2fe; }
+    .high { background:#dc2626; }
+    .medium { background:#ea580c; }
+    .low { background:#059669; }
+    footer { text-align:center; color:#94a3b8; font-size:0.85rem; margin-top:24px; }
+  </style>
+</head>
+<body>
+  <h1>SEO & GEO Health Report – Tg Apps</h1>
+
+  <section>
+    <h2>Key Observations</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Strengths</h3>
+        <ul>
+          <li>Localized content (EN/PT) already wired into src/i18n/translations.ts.</li>
+          <li>Structured sections with semantic IDs for anchor-based navigation.</li>
+          <li>Contact info repeated in header, hero, footer, and contact block.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Risks</h3>
+        <ul>
+          <li>Static &lt;head&gt; in index.html uses mixed language text with encoding issues; no canonical, hreflang, or OG/Twitter image.</li>
+          <li>No structured data (Organization/LocalBusiness) or geo meta tags; NAP not machine-readable.</li>
+          <li>Navigation uses &lt;button&gt; elements instead of &lt;a&gt; anchors, hurting crawlability.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Detailed Findings</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Area</th>
+          <th>Observation</th>
+          <th>Impact</th>
+          <th>Recommendation</th>
+          <th>File / Reference</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Head Metadata</td>
+          <td>index.html hard-codes titles/descriptions with mojibake characters and single lang="en", regardless of locale.</td>
+          <td><span class="tag high">High</span></td>
+          <td>Move head management to React Helmet or similar. For each locale, set lang, title, description, og:*, and twitter:* fields without encoding issues.</td>
+          <td>index.html:1-30</td>
+        </tr>
+        <tr>
+          <td>Canonical + Hreflang</td>
+          <td>No canonical URL or hreflang alternates; sitemap/robots not defined.</td>
+          <td><span class="tag high">High</span></td>
+          <td>Add &lt;link rel="canonical" href="https://tgapps.dev/"&gt; and hreflang pairs for /en & /pt-br. Publish sitemap.xml & robots.txt referencing both.</td>
+          <td>index.html</td>
+        </tr>
+        <tr>
+          <td>Structured Data</td>
+          <td>No JSON-LD for Organization/LocalBusiness; contact info only in markup text.</td>
+          <td><span class="tag high">High</span></td>
+          <td>Add JSON-LD describing Tg Apps (name, logo, sameAs, address, phone, serviceArea) and embed geo coordinates. Helps SEO + GEO ranking.</td>
+          <td>src/components/Contact.tsx, Footer.tsx</td>
+        </tr>
+        <tr>
+          <td>Navigation Semantics</td>
+          <td>Desktop nav uses &lt;button&gt; elements; crawlers can’t treat them as links.</td>
+          <td><span class="tag medium">Medium</span></td>
+          <td>Use &lt;a href="#section-id"&gt; anchors with smooth scroll enhancement. Keep buttons only for mobile toggles.</td>
+          <td>src/components/Header.tsx:61-111</td>
+        </tr>
+        <tr>
+          <td>OG/Twitter Media</td>
+          <td>No og:image / twitter:image; descriptions mix languages.</td>
+          <td><span class="tag medium">Medium</span></td>
+          <td>Export a 1200×630 hero image, host under /public/social-card.jpg, and set locale-specific descriptions plus image tags.</td>
+          <td>index.html:7-30</td>
+        </tr>
+        <tr>
+          <td>Geo Signals</td>
+          <td>Only textual mention of São Paulo; no geo meta, map embed, or business.address schema.</td>
+          <td><span class="tag medium">Medium</span></td>
+          <td>Add &lt;meta name="geo.position"&gt;, &lt;meta name="ICBM"&gt;, and include address/phone within schema. Consider embedding a static map or link to GBP.</td>
+          <td>Contact.tsx, Footer.tsx</td>
+        </tr>
+        <tr>
+          <td>Performance / Media</td>
+          <td>Hero/About images lack explicit dimensions and loading="lazy" (except top hero), impacting LCP.</td>
+          <td><span class="tag medium">Medium</span></td>
+          <td>Add width/height attributes and loading="lazy" for below-the-fold images; compress hero asset or host optimized version.</td>
+          <td>src/components/About.tsx:101-130, Hero.tsx</td>
+        </tr>
+        <tr>
+          <td>International URLs</td>
+          <td>Language switch toggles copy but not the URL, so search engines see only one language.</td>
+          <td><span class="tag high">High</span></td>
+          <td>Expose /en and /pt-br routes (or query param) and persist locale selection. Pair with hreflang/canonical entries.</td>
+          <td>src/context/LanguageContext.tsx, Router setup</td>
+        </tr>
+        <tr>
+          <td>Footer Links</td>
+          <td>Privacy / Terms anchors still point to #; social links removed (good) but placeholders remain for legal pages.</td>
+          <td><span class="tag low">Low</span></td>
+          <td>Point to real documents or remove until available. Broken links reduce trust and crawl quality.</td>
+          <td>src/components/Footer.tsx:64-86</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>Action Plan</h2>
+    <ol>
+      <li><strong>Implement dynamic head + locale routing:</strong> React Helmet, canonical/hreflang tags, localized meta descriptions.</li>
+      <li><strong>Add Organization/LocalBusiness JSON-LD:</strong> Include coordinates, address (São Paulo), phone, sameAs profiles.</li>
+      <li><strong>Convert nav buttons to anchors + update footer links:</strong> ensures crawlability and UX consistency.</li>
+      <li><strong>Create dedicated EN/PT URLs & sitemap:</strong> Allows search engines to index both locales; submit via GSC.</li>
+      <li><strong>Optimize hero/About media & OG/Twitter cards:</strong> Provide compressed assets, loading="lazy", and shareable preview images.</li>
+      <li><strong>Publish geo meta & GBP references:</strong> Use geo.position, ICBM, and link to Google Business profile or map embed.</li>
+    </ol>
+  </section>
+
+  <footer>
+    Generated for Tg Apps · Update referenced files to realize the SEO/GEO improvements.
+  </footer>
+</body>
+</html>
