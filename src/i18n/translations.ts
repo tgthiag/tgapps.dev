@@ -289,9 +289,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'Partnering with US, Canadian, and global teams since 2019',
       paragraphs: [
         'We stay intentionally small so decision-makers talk directly to the people writing the code and leading the design.',
-        'By limiting ourselves to two parallel builds, we keep our attention on outcomes, not headcount charts.',
+        'Most clients hand us the entire surface area of a product—dashboards, mobile, landing pages, and backends—but we can also plug into existing squads when that accelerates the roadmap.',
+        'Our cap is typically one product per client at a time, while the underlying projects (dashboards, iOS/Android, marketing sites, data work) move in parallel under the same pod.',
         'Weekly demos, written updates, and transparent backlog tools keep budgets under control and stakeholders aligned.',
-        'We cap our workload at 2-3 products at a time with weekly or biweekly planning and deploy sessions so every release stays predictable.'
+        'Cadence adjusts with complexity: we plan and deploy weekly or biweekly so every release stays predictable.'
       ],
       missionHeading: 'Why we exist',
       missionDescription:
@@ -581,9 +582,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'Conectados a equipes dos EUA e Canadá desde 2019',
       paragraphs: [
         'Mantemos o time enxuto para que clientes falem diretamente com quem escreve o código e desenha as experiências.',
-        'Limitamos os projetos simultâneos para garantir foco, disponibilidade e decisões rápidas.',
+        'Na maioria dos casos assumimos todo o produto — dashboards, landing pages, iOS/Android e backend — mas também conseguimos integrar com seu squad quando isso libera velocidade.',
+        'Normalmente é um produto por vez por cliente, enquanto múltiplos projetos desse mesmo produto rodam em paralelo dentro do mesmo pod.',
         'Demos semanais, relatórios escritos e ferramentas compartilhadas mantêm todos alinhados sobre escopo, prazo e orçamento.',
-        'Trabalhamos com no máximo 2-3 produtos ao mesmo tempo e realizamos reuniões e deploys semanais ou quinzenais para manter cada entrega previsível.'
+        'A cadência pode ser semanal ou quinzenal, ajustada à complexidade, para que cada release continue previsível.'
       ],
       missionHeading: 'Por que existimos',
       missionDescription:
