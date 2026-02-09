@@ -20,9 +20,9 @@ const About = () => {
             <MapPin className='w-4 h-4' />
             <span>{t.about.badge}</span>
           </div>
-          <h2 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-6'>
+          <h2 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight'>
             {t.about.headingLine1}
-            <span className='block bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent'>
+            <span className='block bg-gradient-to-r from-emerald-600 to-blue-600 bg-clip-text text-transparent pb-2'>
               {t.about.headingHighlight}
             </span>
           </h2>

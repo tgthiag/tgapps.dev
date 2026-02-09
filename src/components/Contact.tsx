@@ -81,9 +81,9 @@ const Contact = () => {
             <MessageSquare className="w-4 h-4" />
             <span>{t.contact.badge}</span>
           </div>
-          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight">
             {t.contact.headingLine1}
-            <span className="block bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent">
+            <span className="block bg-gradient-to-r from-orange-600 to-red-600 bg-clip-text text-transparent pb-2">
               {t.contact.headingHighlight}
             </span>
           </h2>

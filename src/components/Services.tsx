@@ -35,9 +35,9 @@ const Services = () => {
               <Zap className='w-4 h-4' />
               <span>{t.services.badge}</span>
             </div>
-            <h2 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-6'>
+            <h2 className='text-4xl sm:text-5xl font-bold text-gray-900 mb-6 leading-tight'>
               {t.services.headingLine1}
-              <span className='block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent'>
+              <span className='block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent pb-2'>
                 {t.services.headingHighlight}
               </span>
             </h2>
