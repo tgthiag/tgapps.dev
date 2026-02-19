@@ -20,23 +20,53 @@ const LOCALE_SEGMENTS: Record<Locale, string> = {
   pt: 'pt-br'
 };
 
+const normalizePathname = (pathname: string) => {
+  if (!pathname || pathname === '/') {
+    return '/';
+  }
+  const [pathOnly] = pathname.split(/[?#]/);
+  const trimmed = pathOnly.replace(/\/+$/, '');
+  if (!trimmed) {
+    return '/';
+  }
+  return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
+};
+
+const splitLocaleAndRoute = (pathname: string): { locale: Locale; routePath: string } => {
+  const normalized = normalizePathname(pathname);
+  const segments = normalized.split('/').filter(Boolean);
+  if (segments.length === 0) {
+    return { locale: DEFAULT_LOCALE, routePath: '/' };
+  }
+
+  const localizedEntry = (Object.entries(LOCALE_SEGMENTS) as [Locale, string][])
+    .find(([, segment]) => segment && segment === segments[0]);
+
+  if (!localizedEntry) {
+    return { locale: DEFAULT_LOCALE, routePath: `/${segments.join('/')}` };
+  }
+
+  const routeSegments = segments.slice(1);
+  return {
+    locale: localizedEntry[0],
+    routePath: routeSegments.length > 0 ? `/${routeSegments.join('/')}` : '/'
+  };
+};
+
 const detectLocaleFromPath = (): Locale => {
   if (typeof window === 'undefined') {
     return DEFAULT_LOCALE;
   }
-  const firstSegment = window.location.pathname.split('/').filter(Boolean)[0] ?? '';
-  const entry = (Object.entries(LOCALE_SEGMENTS) as [Locale, string][]).find(([, segment]) => segment === firstSegment);
-  return entry?.[0] ?? DEFAULT_LOCALE;
+  return splitLocaleAndRoute(window.location.pathname).locale;
 };
 
-const buildPathForLocale = (locale: Locale) => {
+const buildPathForLocale = (locale: Locale, routePath: string) => {
+  const normalizedRoutePath = normalizePathname(routePath);
   const segment = LOCALE_SEGMENTS[locale];
-  return segment ? `/${segment}/` : '/';
-};
-
-const normalizePathname = (pathname: string) => {
-  if (pathname === '/') return '/';
-  return pathname.endsWith('/') ? pathname : `${pathname}/`;
+  if (!segment) {
+    return normalizedRoutePath;
+  }
+  return normalizedRoutePath === '/' ? `/${segment}` : `/${segment}${normalizedRoutePath}`;
 };
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
@@ -46,7 +76,8 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
     if (typeof window === 'undefined') {
       return;
     }
-    const desiredPath = buildPathForLocale(locale);
+    const routePath = splitLocaleAndRoute(window.location.pathname).routePath;
+    const desiredPath = buildPathForLocale(locale, routePath);
     const currentPath = normalizePathname(window.location.pathname);
     if (currentPath !== desiredPath) {
       window.history.replaceState({}, '', desiredPath);

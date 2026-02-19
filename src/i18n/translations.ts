@@ -169,7 +169,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       subtitle:
         'Founder-led LatAm studio in São Paulo that designs, builds, and supports Android, iOS, Flutter, or React Native apps plus websites, landing pages, internal tools, dashboards, APIs, automations, and integrations. We operate mainly with US and Brazilian companies but can onboard teams anywhere. Expect full-stack delivery—backend services, databases, and cloud infra (including AWS EC2) bundled in one contract with zero upfront payment so lean teams stay fast without bureaucracy. We start building right after paperwork, keep backend, frontend, database, and mobile tracks moving in parallel, and let you steer priorities with weekly demos, releases, and handoffs.',
       stats: [
-        { label: 'D-U-N-S® 651029828 · issued Jan 28 2026 (valid until Feb 8 2027)' },
+        { label: 'D-U-N-S® 651029828 · issued Jan 28 2026' },
         { label: 'Kickoff call in one business day · we demo and deploy roughly once per week' },
         { label: 'Month-to-month control · cancel anytime · first five promo pods lock at USD 1.8k or 4k' }
       ],
@@ -308,7 +308,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { number: '5 days', label: 'Average time from contract signature to first branch and design artifact.' },
         { number: 'Weekly demo', label: 'Live call or Loom update with risks, decisions, and metrics.' }
       ],
-      passionTitle: 'D-U-N-S® 651029828 · valid until Feb 8 2027',
+      passionTitle: 'D-U-N-S® 651029828',
       passionDescription:
         'Issued Jan 28 2026 by Dun and Bradstreet. Use the record for banking, marketplace, or vendor onboarding without extra paperwork.'
     },
@@ -451,7 +451,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       subtitle:
         'Estúdio brasileiro liderado pelo fundador em São Paulo que projeta, desenvolve e sustenta apps Android, iOS, Flutter ou React Native, além de websites, landing pages, ferramentas internas, dashboards, APIs, automações e integrações. Atuamos principalmente com empresas dos EUA e do Brasil, mas podemos atender qualquer país. Entregamos o produto completo — backends, bancos de dados e infraestrutura em nuvem (como AWS EC2) — dentro de um contrato único, sem pagamento adiantado, para que times enxutos mantenham ritmo sem burocracia.',
       stats: [
-        { label: 'D-U-N-S® 651029828 · emitido em 28/01/2026 (válido até 08/02/2027)' },
+        { label: 'D-U-N-S® 651029828 · emitido em 28/01/2026' },
         { label: 'Chamada inicial em 1 dia útil · demos e deploys semanais guiados por você' },
         { label: 'Controle mês a mês · cancele quando quiser · promo de US$ 1,8k ou 4k fixa para os 5 primeiros' }
       ],
@@ -590,7 +590,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { number: '5 dias', label: 'Tempo médio entre assinatura e primeira branch ou entrega de design.' },
         { number: 'Demo semanal', label: 'Call ou Loom com riscos, decisões e métricas.' }
       ],
-      passionTitle: 'D-U-N-S® 651029828 · válido até 08/02/2027',
+      passionTitle: 'D-U-N-S® 651029828',
       passionDescription:
         'Emitido em 28/01/2026 pela Dun and Bradstreet. Use o registro em bancos, marketplaces ou cadastros sem papelada extra.'
     },

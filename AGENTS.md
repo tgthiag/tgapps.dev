@@ -2,7 +2,7 @@
 
 ## 1. Purpose & Outcomes
 - **Primary goal:** Convert US-based small businesses/startups into qualified leads for Android/iOS (native, Flutter, React Native) delivery pods that work contract-first with zero upfront payment.
-- **Secondary goals:** Highlight dependability (D‑U‑N‑S® 651029828 valid until 8 Feb 2027, contract + NDA before kickoff), show lean process (intake → build → support), and reassure buyers about fast deployments, integrations (payments, logistics, CRM, LLM/RAG), and ongoing support.
+- **Secondary goals:** Highlight dependability (D‑U‑N‑S® 651029828, contract + NDA before kickoff), show lean process (intake → build → support), and reassure buyers about fast deployments, integrations (payments, logistics, CRM, LLM/RAG), and ongoing support.
 - **Tone:** Mature, founder-led, low bureaucracy, high velocity. Always connect copy to practical deliverables (deploy cadence, releases included).
 
 ## 2. Page & Section Structure
@@ -41,7 +41,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
   - Timeline paragraphs: founder access, adoption of whatever tools the client already uses (Teams, Jira, Linear, Notion, etc.), release ops packaged with engineering.
   - Mission card: protect roadmap via signed agreement + D‑U‑N‑S + zero upfront.
   - Stats list (≤2h response, 5 days to first branch/deliverable, weekly demo).
-  - Passion badge text: “D‑U‑N‑S® 651029828 · valid until Feb 8 2027”.
+  - Passion badge text: “D‑U‑N‑S® 651029828”.
   - Values cards: D‑U‑N‑S validation, contract-first billing, US timezone coverage.
 
 - **Contact**
@@ -59,7 +59,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 
 ## 4. Company Facts & Assets
 - **Legal entity:** TG Applications Desenvolvimento Ltda (Brazil).
-- **D‑U‑N‑S® Number:** 651029828 (issued 28 Jan 2026, valid until 8 Feb 2027) — source `C:\Users\Kabum\Downloads\Número D‑U‑N‑S®.html`.
+- **D‑U‑N‑S® Number:** 651029828 (issued 28 Jan 2026) — source `C:\Users\Kabum\Downloads\Número D‑U‑N‑S®.html`.
 - **Billing:** No payment upfront; contracts + invoices via TG Applications. USD or BRL, W8‑BEN‑E ready.
 - **Core services:** Android/iOS builds (Kotlin, Swift, Flutter, React Native), pod-as-a-service (parallel squad, release ops), integrations/data (payments, logistics, CRM, analytics, LLM/RAG pipelines integrated with the client’s preferred vector/search stack), dashboards/admin tooling, support/handovers.
 - **Process promises:** Kickoff call ≤1 business day after contact; coding starts ≤5 business days post-signature; deploy cadence ≈ once per week; Kanban workflow keeps backend, frontend, database, and mobile workstreams moving in parallel; blue/green/staged releases + monitoring included; bug triage ≤24h with weekend standby for launches.
