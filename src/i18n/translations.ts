@@ -167,7 +167,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'for US small businesses',
       titleLine2: 'with contract-first billing',
       subtitle:
-        'Founder-led LatAm studio in São Paulo that designs, builds, and supports Android, iOS, Flutter, or React Native apps plus websites, landing pages, internal tools, dashboards, APIs, automations, and integrations. We operate mainly with US and Brazilian companies but can onboard teams anywhere. Expect full-stack delivery—backend services, databases, and cloud infra (including AWS EC2) bundled in one contract with zero upfront payment so lean teams stay fast without bureaucracy. We start building right after paperwork, keep backend, frontend, database, and mobile tracks moving in parallel, and let you steer priorities with weekly demos, releases, and handoffs.',
+        'Founder-led LatAm studio in São Paulo that designs, builds, and supports Android, iOS, Flutter, or React Native apps plus websites, landing pages, internal tools, dashboards, APIs, automations, and integrations. We operate mainly with US and Brazilian companies but can onboard teams anywhere. Expect full-stack delivery, backend services, databases, and cloud infra (including AWS EC2) bundled in one contract with zero upfront payment so lean teams stay fast without bureaucracy. We start building right after paperwork, keep backend, frontend, database, and mobile tracks moving in parallel, and let you steer priorities with weekly demos, releases, and handoffs.',
       stats: [
         { label: 'D-U-N-S® 651029828 · issued Jan 28 2026' },
         { label: 'Kickoff call in one business day · we demo and deploy roughly once per week' },
@@ -203,7 +203,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           highlights: [
             'Free 30-45 minute call within one business day.',
             'Statement of work plus D-U-N-S contract signed digitally.',
-            'Share Play Console, App Store, or internal tools—or let us set them up.'
+            'Share Play Console, App Store, or internal tools, or let us set them up.'
           ]
         },
         {
@@ -279,7 +279,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'What working with us feels like',
       paragraphs: [
         'You always speak with someone able to make decisions. We run compact pods so context, accountability, and product sense stay intact from kickoff to handoff.',
-        'We adopt your stack—Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use—or bring ours. Expect written notes plus short Loom videos three times per week and a weekly demo with timing, risks, and budgets.',
+        'We adopt your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. Expect written notes plus short Loom videos three times per week and a weekly demo with timing, risks, and budgets.',
         'Because release engineering and ops sit in the same pod, you do not need extra vendors for monitoring, analytics, or training. When we pause, you keep every repo, design file, and runbook.'
       ],
       missionHeading: 'How we protect your roadmap',
@@ -346,15 +346,15 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Weekly video calls with the actual developers so stakeholders can review deploys, metrics, and next steps live, and we adapt meeting hours to your preferred timezone.',
         'Prefer to use your own contract template? Send it and we co-review, sign, and adapt clauses together.',
         'Pricing stays fair because we dilute pod costs between clients instead of adding fees or retainers.',
-        'Limited promo for the first five clients: USD 1.8k/mo (1–2 full-stack/mobile devs, no dedicated designer) or USD 4k/mo (1–3 devs plus designer); once signed, the rate stays fixed for life.'
+        'Limited promo for the first five clients: USD 1.8k/mo (1-2 full-stack/mobile devs, no dedicated designer) or USD 4k/mo (1-3 devs plus designer); once signed, the rate stays fixed for life.'
       ],
       costSection: {
         badge: 'Transparent terms',
         title: 'Flat monthly pod · cancel any month',
         description:
-          'Limited promo for the first five clients: USD 1.8k/mo (1–2 full-stack/mobile devs, no dedicated designer) or USD 4k/mo (1–3 devs plus designer) and the rate stays fixed while the contract is active. Outside the promo, pods usually land between USD 6k and 8k per month. We dilute squad costs across concurrent clients so nobody overpays, there are no onboarding fees or retainers, and you can cancel any time without penalties.',
+          'Limited promo for the first five clients: USD 1.8k/mo (1-2 full-stack/mobile devs, no dedicated designer) or USD 4k/mo (1-3 devs plus designer) and the rate stays fixed while the contract is active. Outside the promo, pods usually land between USD 6k and 8k per month. We dilute squad costs across concurrent clients so nobody overpays, there are no onboarding fees or retainers, and you can cancel any time without penalties.',
         highlights: [
-          'Limited promo for the first five clients: USD 1.8k/mo (1–2 full-stack/mobile devs without design) or USD 4k/mo (1–3 devs plus designer).',
+          'Limited promo for the first five clients: USD 1.8k/mo (1-2 full-stack/mobile devs without design) or USD 4k/mo (1-3 devs plus designer).',
           'Contracts and invoices issued by TG Applications Desenvolvimento Ltda (Brazil).',
           'USD or BRL billing; W8-BEN-E already on file.',
           'Weekday coverage plus weekend standby for launches.'
@@ -365,7 +365,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       formDescription: 'We only ask for what we need to reply with a plan and calendar.',
       callout: {
         title: 'What happens next',
-        description: 'No spam or endless steps—just a tight process.',
+        description: 'No spam or endless steps, just a tight process.',
         bullets: [
           'We reply within one business day with clarifying questions.',
           'We schedule a 30-45 minute call to align budgets, deadlines, and access.',
@@ -449,7 +449,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'para pequenas empresas norte-americanas',
       titleLine2: 'sem cobrança antecipada',
       subtitle:
-        'Estúdio brasileiro liderado pelo fundador em São Paulo que projeta, desenvolve e sustenta apps Android, iOS, Flutter ou React Native, além de websites, landing pages, ferramentas internas, dashboards, APIs, automações e integrações. Atuamos principalmente com empresas dos EUA e do Brasil, mas podemos atender qualquer país. Entregamos o produto completo — backends, bancos de dados e infraestrutura em nuvem (como AWS EC2) — dentro de um contrato único, sem pagamento adiantado, para que times enxutos mantenham ritmo sem burocracia.',
+        'Estúdio brasileiro liderado pelo fundador em São Paulo que projeta, desenvolve e sustenta apps Android, iOS, Flutter ou React Native, além de websites, landing pages, ferramentas internas, dashboards, APIs, automações e integrações. Atuamos principalmente com empresas dos EUA e do Brasil, mas podemos atender qualquer país. Entregamos o produto completo, com backends, bancos de dados e infraestrutura em nuvem (como AWS EC2), dentro de um contrato único, sem pagamento adiantado, para que times enxutos mantenham ritmo sem burocracia.',
       stats: [
         { label: 'D-U-N-S® 651029828 · emitido em 28/01/2026' },
         { label: 'Chamada inicial em 1 dia útil · demos e deploys semanais guiados por você' },
@@ -463,7 +463,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Android, iOS e integrações',
       headingHighlight: 'para manter seu time entregando',
       description:
-        'Atuamos com startups, agências e líderes de TI dos EUA que precisam de um pod com cara de time interno, mas com a flexibilidade de um contrato mensal. Design, produto, engenharia, infraestrutura e operações caminham juntos para apps mobile, sites, landing pages, dashboards, ferramentas internas/externas, APIs e bancos de dados. Conseguimos tirar uma startup inteira do zero rapidamente enquanto sua empresa mantém o foco nos projetos atuais e prepara o terreno para receber o novo produto — sempre com você direcionando o backlog.',
+        'Atuamos com startups, agências e líderes de TI dos EUA que precisam de um pod com cara de time interno, mas com a flexibilidade de um contrato mensal. Design, produto, engenharia, infraestrutura e operações caminham juntos para apps mobile, sites, landing pages, dashboards, ferramentas internas/externas, APIs e bancos de dados. Conseguimos tirar uma startup inteira do zero rapidamente enquanto sua empresa mantém o foco nos projetos atuais e prepara o terreno para receber o novo produto, sempre com você direcionando o backlog.',
       pillars: [
         'Contrato e NDA assinados antes do kick-off; nenhum pagamento adiantado.',
         'Notas semanais no canal que você preferir com fotos do Kanban e Looms curtos.',
@@ -512,7 +512,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Construção Android e iOS',
           subtitle: 'Kotlin, Swift, Flutter, React Native',
           description:
-            'Lançamos produtos novos ou resgatamos bases existentes — apps, sites responsivos, landing pages e backends — enquanto cuidamos de UX writing, design system e arquitetura junto da engenharia.',
+            'Lançamos produtos novos ou resgatamos bases existentes, como apps, sites responsivos, landing pages e backends, enquanto cuidamos de UX writing, design system e arquitetura junto da engenharia.',
           features: [
             'Publicação na Play Store, App Store ou distribuição enterprise por nossa conta.',
             'Wearables, compras internas, SSO, analytics e push notificados.',
@@ -599,7 +599,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Fale direto com o fundador',
       headingHighlight: 'e receba um plano rapidamente',
       description:
-        'Envie o formulário ou mande mensagem no WhatsApp. Respondemos em até 1 dia útil com leitura honesta de escopo, orçamento e kickoff — sempre explicando como diluímos o custo do pod entre clientes para manter o preço justo.',
+        'Envie o formulário ou mande mensagem no WhatsApp. Respondemos em até 1 dia útil com leitura honesta de escopo, orçamento e kickoff, sempre explicando como diluímos o custo do pod entre clientes para manter o preço justo.',
       infoHeading: 'Canais diretos',
       info: [
         {
@@ -635,7 +635,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         badge: 'Termos claros',
         title: 'Pod mensal fixo · cancelamento simples',
         description:
-          'Promo agressiva para os 5 primeiros clientes: US$ 1,8k/mês (1-2 devs full-stack/mobile sem design) ou US$ 4k/mês (1-3 devs + design) — e o valor fica congelado enquanto o contrato estiver ativo. Fora da promo, os pods costumam ficar entre US$ 6k e 8k/mês. Diluiu-se o custo entre clientes, sem taxa de onboarding, retenção ou extras escondidos, e o cancelamento é livre de multas.',
+          'Promo agressiva para os 5 primeiros clientes: US$ 1,8k/mês (1-2 devs full-stack/mobile sem design) ou US$ 4k/mês (1-3 devs + design), e o valor fica congelado enquanto o contrato estiver ativo. Fora da promo, os pods costumam ficar entre US$ 6k e 8k/mês. Diluiu-se o custo entre clientes, sem taxa de onboarding, retenção ou extras escondidos, e o cancelamento é livre de multas.',
         highlights: [
           'Promo para os 5 primeiros: US$ 1,8k/mês (1-2 devs full-stack/mobile sem design) ou US$ 4k/mês (1-3 devs + design).',
           'Contrato e nota emitidos pela TG Applications Desenvolvimento Ltda (Brasil).',

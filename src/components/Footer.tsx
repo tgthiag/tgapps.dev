@@ -1,4 +1,3 @@
-import React from 'react';
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 

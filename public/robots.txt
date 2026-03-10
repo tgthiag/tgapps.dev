@@ -1,6 +1,14 @@
 User-agent: *
 Allow: /
 Disallow: /assets/*.map$
+Disallow: /privacy_policy
+Disallow: /account_deletion
+Disallow: /my_business_idea_privacy
+Disallow: /my_business_idea_delete_account
+Disallow: /pt-br/privacy_policy
+Disallow: /pt-br/account_deletion
+Disallow: /pt-br/my_business_idea_privacy
+Disallow: /pt-br/my_business_idea_delete_account
 
 # Block aggressive/malicious bots
 User-agent: MJ12bot

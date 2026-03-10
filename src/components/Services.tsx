@@ -1,4 +1,3 @@
-import React from 'react';
 import { Smartphone, Cpu, Cable, ArrowRight, CheckCircle, Zap } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 

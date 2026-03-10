@@ -1,4 +1,4 @@
-import React from 'react';
+import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -7,6 +7,10 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import MyBusinessIdeaPrivacyPage from './components/MyBusinessIdeaPrivacyPage';
 import MyBusinessIdeaAccountDeletionPage from './components/MyBusinessIdeaAccountDeletionPage';
+import KeywordLandingPage from './components/KeywordLandingPage';
+import { useLanguage } from './context/LanguageContext';
+import { applyRouteSeo } from './seo/routeSeo';
+import { getLandingContent, resolveLandingKeyByRoute } from './content/landingPages';
 
 const getCurrentRoutePath = () => {
   if (typeof window === 'undefined') {
@@ -21,12 +25,18 @@ const getCurrentRoutePath = () => {
 };
 
 function App() {
+  const { language } = useLanguage();
   const routePath = getCurrentRoutePath();
+  const landingKey = resolveLandingKeyByRoute(routePath);
   const myBusinessIdeaDefaults = {
     defaultAppName: 'My Business Idea',
     defaultPackageName: 'com.mybusinessidea',
     defaultSupportEmail: 'support@tgapps.dev'
   };
+
+  useEffect(() => {
+    applyRouteSeo(routePath, language);
+  }, [language, routePath]);
 
   // IMPORTANT (GOOGLE PLAY COMPLIANCE):
   // Do NOT rename/remove these legal-route paths without a coordinated Play Console update.
@@ -44,6 +54,9 @@ function App() {
   }
   if (routePath === '/account_deletion') {
     return <MyBusinessIdeaAccountDeletionPage />;
+  }
+  if (landingKey) {
+    return <KeywordLandingPage locale={language} content={getLandingContent(language, landingKey)} />;
   }
 
   return (

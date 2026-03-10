@@ -1,4 +1,3 @@
-import React from 'react';
 import { ShieldCheck, FileText, Clock3, MapPin, CheckCircle } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 

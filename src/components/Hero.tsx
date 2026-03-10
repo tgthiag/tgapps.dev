@@ -1,4 +1,3 @@
-import React from 'react';
 import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 
