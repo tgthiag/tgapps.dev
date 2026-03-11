@@ -78,9 +78,9 @@ const EN_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Month-to-month mobile development pod',
     proofHeading: 'How this model works',
     proofItems: [
-      'Flat monthly pod, typically USD 12k to 18k.',
+      'Temporary offer: USD 1,900/mo for the next 3 companies.',
       'Cancel any month with no penalties or hidden transition fees.',
-      'Runbooks and handoff docs are delivered continuously, not only at the end.'
+      'Monthly billing, no upfront payment, and runbooks plus handoff docs delivered continuously.'
     ],
     deliverablesHeading: 'Included in the pod',
     deliverables: [
@@ -193,9 +193,9 @@ const PT_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Pod mensal de desenvolvimento mobile',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
-      'Pod mensal fixo, normalmente entre USD 12k e 18k.',
+      'Oferta temporaria: US$ 1.900/mes para as proximas 3 empresas.',
       'Cancelamento em qualquer mes sem multa ou taxa surpresa.',
-      'Runbooks e handoff sao entregues continuamente, nao so no encerramento.'
+      'Cobranca mensal, sem adiantamento, e runbooks com handoff entregues continuamente.'
     ],
     deliverablesHeading: 'O que ja vem no pod',
     deliverables: [
@@ -292,4 +292,3 @@ export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | nu
 
 export const getLandingContent = (locale: Locale, key: LandingPageKey): LandingPageContent =>
   landingContentByLocale[locale][key];
-

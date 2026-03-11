@@ -175,7 +175,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       stats: [
         { label: 'D-U-N-S® 651029828 · issued Jan 28 2026' },
         { label: 'Kickoff call in one business day · we demo and deploy roughly once per week' },
-        { label: 'Month-to-month control · cancel anytime · first five promo pods lock at USD 1.8k or 4k' }
+        { label: 'Month-to-month control · cancel anytime · temporary USD 1,900/mo offer for the next 3 companies' }
       ],
       primaryCta: 'Schedule a discovery call',
       secondaryCta: 'Review the 3-step plan'
@@ -355,20 +355,21 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Weekly video calls with the actual developers so stakeholders can review deploys, metrics, and next steps live, and we adapt meeting hours to your preferred timezone.',
         'Prefer to use your own contract template? Send it and we co-review, sign, and adapt clauses together.',
         'Pricing stays fair because we dilute pod costs between clients instead of adding fees or retainers.',
-        'Limited promo for the first five clients: USD 1.8k/mo (1-2 full-stack/mobile devs, no dedicated designer) or USD 4k/mo (1-3 devs plus designer); once signed, the rate stays fixed for life.'
+        'Temporary offer for the next 3 companies: USD 1,900/mo, monthly billing, no upfront payment, and no hidden clauses while the contract stays active.'
       ],
       costSection: {
         badge: 'Transparent terms',
         title: 'Flat monthly pod · cancel any month',
         description:
-          'Limited promo for the first five clients: USD 1.8k/mo (1-2 full-stack/mobile devs, no dedicated designer) or USD 4k/mo (1-3 devs plus designer) and the rate stays fixed while the contract is active. Outside the promo, pods usually land between USD 6k and 8k per month. We dilute squad costs across concurrent clients so nobody overpays, there are no onboarding fees or retainers, and you can cancel any time without penalties.',
+          'Temporary offer for the next 3 companies: USD 1,900/mo for full-stack and mobile delivery with monthly billing, no upfront payment, and no hidden clauses. The rate stays fixed while the contract is active. Outside the temporary offer, pricing is scoped to workload and delivery model.',
         highlights: [
-          'Limited promo for the first five clients: USD 1.8k/mo (1-2 full-stack/mobile devs without design) or USD 4k/mo (1-3 devs plus designer).',
+          'Temporary offer: USD 1,900/mo for the next 3 companies.',
+          'Monthly billing, no upfront payment, and no hidden clauses.',
           'Contracts and invoices issued by TG Applications Desenvolvimento Ltda (Brazil).',
           'USD or BRL billing; W8-BEN-E already on file.',
           'Weekday coverage plus weekend standby for launches.'
         ],
-        note: 'Need NDAs, SOC, or vendor questionnaires? We keep sanitized templates ready. Promo slots are limited to the first five clients, and the rate stays locked while the contract is active.'
+        note: 'Need NDAs, SOC, or vendor questionnaires? We keep sanitized templates ready. The temporary offer is limited to the next 3 companies, and the rate stays locked while the contract is active.'
       },
       formHeading: 'Share a few details',
       formDescription: 'We only ask for what we need to reply with a plan and calendar.',
@@ -462,7 +463,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       stats: [
         { label: 'D-U-N-S® 651029828 · emitido em 28/01/2026' },
         { label: 'Chamada inicial em 1 dia útil · demos e deploys semanais guiados por você' },
-        { label: 'Controle mês a mês · cancele quando quiser · promo de US$ 1,8k ou 4k fixa para os 5 primeiros' }
+        { label: 'Controle mes a mes · cancele quando quiser · oferta temporaria de US$ 1.900/mes para as proximas 3 empresas' }
       ],
       primaryCta: 'Agende uma conversa',
       secondaryCta: 'Conheça o plano em 3 etapas'
@@ -643,20 +644,21 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Preferiu usar o contrato da sua empresa? Envie o modelo e revisamos juntos, ajustando cláusulas antes da assinatura.',
         'Você direciona o backlog e nós apresentamos releases/demos toda semana.',
         'Preço justo: diluímos o custo do pod entre clientes em vez de cobrar taxas extras ou retenção.',
-        'Promo limitada para os 5 primeiros clientes: US$ 1,8k/mês (1-2 devs full-stack/mobile sem design) ou US$ 4k/mês (1-3 devs + design). Assinou, o valor fica fixo enquanto fizer sentido ficar com a gente.'
+        'Oferta temporaria para as proximas 3 empresas: US$ 1.900/mes, cobranca mensal, sem adiantamento e sem clausulas escondidas enquanto o contrato estiver ativo.'
       ],
       costSection: {
         badge: 'Termos claros',
         title: 'Pod mensal fixo · cancelamento simples',
         description:
-          'Promo agressiva para os 5 primeiros clientes: US$ 1,8k/mês (1-2 devs full-stack/mobile sem design) ou US$ 4k/mês (1-3 devs + design), e o valor fica congelado enquanto o contrato estiver ativo. Fora da promo, os pods costumam ficar entre US$ 6k e 8k/mês. Diluiu-se o custo entre clientes, sem taxa de onboarding, retenção ou extras escondidos, e o cancelamento é livre de multas.',
+          'Oferta temporaria para as proximas 3 empresas: US$ 1.900/mes para entrega full-stack e mobile com cobranca mensal, sem adiantamento e sem clausulas escondidas. O valor fica congelado enquanto o contrato estiver ativo. Fora da oferta temporaria, o preco passa a ser definido pelo escopo e pelo modelo de entrega.',
         highlights: [
-          'Promo para os 5 primeiros: US$ 1,8k/mês (1-2 devs full-stack/mobile sem design) ou US$ 4k/mês (1-3 devs + design).',
+          'Oferta temporaria: US$ 1.900/mes para as proximas 3 empresas.',
+          'Cobranca mensal, sem adiantamento e sem clausulas escondidas.',
           'Contrato e nota emitidos pela TG Applications Desenvolvimento Ltda (Brasil).',
           'Cobrança em USD ou BRL; W8-BEN-E já disponível.',
           'Cobertura em dias úteis + plantão em lançamentos.'
         ],
-        note: 'Precisa de NDA, SOC ou questionário de fornecedor? Já temos os modelos. Promo vale só para os 5 primeiros e o valor permanece o mesmo enquanto o contrato estiver ativo.'
+        note: 'Precisa de NDA, SOC ou questionario de fornecedor? Ja temos os modelos. A oferta temporaria vale so para as proximas 3 empresas e o valor permanece o mesmo enquanto o contrato estiver ativo.'
       },
       formHeading: 'Conte um pouco do projeto',
       formDescription: 'Só pedimos o necessário para responder com plano e datas.',

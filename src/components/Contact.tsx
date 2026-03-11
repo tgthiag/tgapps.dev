@@ -37,7 +37,7 @@ const Contact = () => {
       'Plans / Notes:',
       formData.message || '(No additional notes)',
       '',
-      'Reminder: USD 2,000 flat monthly pod requested via contact form.'
+      'Reminder: temporary USD 1,900/mo offer requested via contact form.'
     ];
     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 

@@ -45,7 +45,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
   - Values cards: D‑U‑N‑S validation, contract-first billing, US timezone coverage.
 
 - **Contact**
-  - Cost section: “Flat monthly pod · cancel any month” (USD 12k–18k typical, W8‑BEN‑E on file, SOC/NDA templates ready).
+  - Cost section: “Flat monthly pod · cancel any month” (temporary USD 1,900/mo offer for the next 3 companies, W8‑BEN‑E on file, SOC/NDA templates ready, no upfront, no hidden clauses).
   - Info entries: Email `support@tgapps.dev`, WhatsApp/Phone `+55 11 97971‑7703`, location “São Paulo, Brazil · US overlap ET/CT”.
   - “Why us” bullets: zero upfront, D‑U‑N‑S trust, Android/iOS expertise, LLM/RAG integrations with guardrails, weekly release cadence powered by an agile Kanban pod (backend, frontend, database, mobile in parallel), client-led backlog with weekly demos and deployments.
   - Form callout: Outline response timeframe (≤1 business day), 30–45 min call, send SOW/checklist.
@@ -77,7 +77,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 ## 6. Operating Guardrails
 - Keep layout visually light: at most one lifestyle image per major block (Hero, Services, About).
 - Every mention of AI must be framed as “LLM/RAG integrations we deliver” — not “we use AI to build the site”.
-- Pricing: reference monthly pod range (USD 12k–18k) but avoid exact packages unless confirmed.
+- Pricing: reference the temporary USD 1,900/mo offer for the next 3 companies when relevant; reinforce monthly billing, no upfront, and no hidden clauses.
 - Ensure any new copy reaffirm zero upfront payment, contract/NDA, deploy cadence, D‑U‑N‑S trust signal.
 - Maintain bilingual parity; any new section in English must have a Portuguese counterpart in translations.
 
