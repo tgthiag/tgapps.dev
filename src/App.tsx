@@ -5,6 +5,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import SocialProof from './components/SocialProof';
 import MyBusinessIdeaPrivacyPage from './components/MyBusinessIdeaPrivacyPage';
 import MyBusinessIdeaAccountDeletionPage from './components/MyBusinessIdeaAccountDeletionPage';
 import KeywordLandingPage from './components/KeywordLandingPage';
@@ -63,6 +64,7 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <Hero />
+      <SocialProof />
       <Services />
       <About />
       <Contact />

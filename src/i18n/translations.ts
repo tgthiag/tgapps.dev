@@ -22,6 +22,10 @@ export interface TranslationSchema {
     primaryCta: string;
     secondaryCta: string;
   };
+  socialProof: {
+    heading: string;
+    description: string;
+  };
   services: {
     badge: string;
     headingLine1: string;
@@ -175,6 +179,11 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       primaryCta: 'Schedule a discovery call',
       secondaryCta: 'Review the 3-step plan'
+    },
+    socialProof: {
+      heading: 'Some of the companies we work with',
+      description:
+        'A few brands and operators we support across delivery, product execution, and ongoing operations.'
     },
     services: {
       badge: 'Capabilities and pods',
@@ -457,6 +466,11 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       primaryCta: 'Agende uma conversa',
       secondaryCta: 'Conheça o plano em 3 etapas'
+    },
+    socialProof: {
+      heading: 'Algumas das empresas com que trabalhamos',
+      description:
+        'Algumas marcas e operações que apoiamos em entregas, execução de produto e operação contínua.'
     },
     services: {
       badge: 'O que entregamos',
