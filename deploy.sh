@@ -40,6 +40,9 @@ ssh -i "$KEY_PATH" "$REMOTE_USER@$REMOTE_HOST" << EOF
     if [ -f $REMOTE_DIR/googlef125b47fc76d05b6.html ]; then
         sudo cp $REMOTE_DIR/googlef125b47fc76d05b6.html /tmp/google-verify-backup.html
     fi
+
+    # Reserva /apps para as rotas SPA; assets estáticos vivem fora desse path
+    sudo rm -rf $REMOTE_DIR/apps
     
     sudo tar xzf /tmp/dist.tar.gz -C $REMOTE_DIR --strip-components=1
     

@@ -65,8 +65,8 @@ export const appsDirectoryContent: Record<Locale, AppsDirectoryContent> = {
       status: 'Live product',
       highlights: ['50+ languages', 'Phone Call mode', 'Vocabulary and history'],
       cta: 'View app page',
-      heroImage: '/apps/anylanguage/screen-home-en.png',
-      icon: '/apps/anylanguage/logo.png'
+      heroImage: '/app-media/anylanguage/screen-home-en.png',
+      icon: '/app-media/anylanguage/logo.png'
     }
   },
   pt: {
@@ -85,8 +85,8 @@ export const appsDirectoryContent: Record<Locale, AppsDirectoryContent> = {
       status: 'Produto em operação',
       highlights: ['50+ idiomas', 'Modo Phone Call', 'Vocabulário e histórico'],
       cta: 'Ver página do app',
-      heroImage: '/apps/anylanguage/screen-home.png',
-      icon: '/apps/anylanguage/logo.png'
+      heroImage: '/app-media/anylanguage/screen-home.png',
+      icon: '/app-media/anylanguage/logo.png'
     }
   }
 };
@@ -98,7 +98,7 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
     subtitle: 'Natural voice practice across 50+ languages',
     description:
       'AnyLanguage helps learners practice speaking in a way that feels closer to real conversation. It combines voice-first chat, a dedicated Phone Call mode, vocabulary exploration, and session history so users can keep building fluency without leaving the app.',
-    heroImage: '/apps/anylanguage/screen-home-en.png',
+    heroImage: '/app-media/anylanguage/screen-home-en.png',
     primaryCta: 'Get it on Google Play',
     secondaryCta: 'Download on the App Store',
     backLabel: 'Back to apps',
@@ -148,17 +148,17 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
       {
         title: 'Language selection',
         description: 'Users can jump back into the language they want to practice and keep track of recent activity.',
-        src: '/apps/anylanguage/screen-language-en.png'
+        src: '/app-media/anylanguage/screen-language-en.png'
       },
       {
         title: 'Main home flow',
         description: 'The home screen highlights the main speaking actions and keeps the primary paths clear without clutter.',
-        src: '/apps/anylanguage/screen-home-en.png'
+        src: '/app-media/anylanguage/screen-home-en.png'
       },
       {
         title: 'Phone Call mode',
         description: 'A dedicated call-style screen keeps the practice focused on speaking and listening in one language.',
-        src: '/apps/anylanguage/screen-phonecall-clean-en.png'
+        src: '/app-media/anylanguage/screen-phonecall-clean-en.png'
       }
     ],
     finalCtaTitle: 'Need a custom app with this level of product polish?',
@@ -171,7 +171,7 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
     subtitle: 'Prática natural de conversação em 50+ idiomas',
     description:
       'O AnyLanguage ajuda o usuário a praticar fala de um jeito mais próximo de uma conversa real. Ele combina chat com foco em voz, modo Phone Call, exploração de vocabulário e histórico de sessões para manter a evolução dentro do próprio app.',
-    heroImage: '/apps/anylanguage/screen-home.png',
+    heroImage: '/app-media/anylanguage/screen-home.png',
     primaryCta: 'Baixar no Google Play',
     secondaryCta: 'Baixar na App Store',
     backLabel: 'Voltar para apps',
@@ -221,17 +221,17 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
       {
         title: 'Seleção de idioma',
         description: 'O usuário volta rapidamente ao idioma que quer praticar e vê a atividade recente.',
-        src: '/apps/anylanguage/screen-language.png'
+        src: '/app-media/anylanguage/screen-language.png'
       },
       {
         title: 'Fluxo principal',
         description: 'A home destaca as ações principais de fala e mantém os caminhos centrais claros.',
-        src: '/apps/anylanguage/screen-home.png'
+        src: '/app-media/anylanguage/screen-home.png'
       },
       {
         title: 'Módulos de prática',
         description: 'Os modos adicionais de aprendizado continuam visíveis sem deixar o app poluído.',
-        src: '/apps/anylanguage/screen-features.png'
+        src: '/app-media/anylanguage/screen-features.png'
       }
     ],
     finalCtaTitle: 'Precisa de um app com esse nível de produto e acabamento?',

@@ -37,7 +37,7 @@ const AnyLanguageAppPage = ({ locale }: AnyLanguageAppPageProps) => {
 
             <div className="flex items-center gap-4">
               <img
-                src="/apps/anylanguage/logo.png"
+                src="/app-media/anylanguage/logo.png"
                 alt="AnyLanguage Conversations"
                 className="h-20 w-20 rounded-[1.5rem] border border-white/15 bg-white p-1 shadow-lg"
               />
