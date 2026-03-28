@@ -77,22 +77,57 @@
   </url>
 
   <url>
-    <loc>https://tgapps.dev/llm-rag-integrations-for-apps</loc>
+    <loc>https://tgapps.dev/llm-integrations-for-apps</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.88</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/llm-rag-integrations-for-apps" />
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/integracoes-llm-rag-para-apps" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/llm-rag-integrations-for-apps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/llm-integrations-for-apps" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/integracoes-llm-para-apps" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/llm-integrations-for-apps" />
   </url>
   <url>
-    <loc>https://tgapps.dev/pt-br/integracoes-llm-rag-para-apps</loc>
+    <loc>https://tgapps.dev/pt-br/integracoes-llm-para-apps</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.84</priority>
-    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/llm-rag-integrations-for-apps" />
-    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/integracoes-llm-rag-para-apps" />
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/llm-rag-integrations-for-apps" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/llm-integrations-for-apps" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/integracoes-llm-para-apps" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/llm-integrations-for-apps" />
+  </url>
+  <url>
+    <loc>https://tgapps.dev/apps</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/apps" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/apps" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/apps" />
+  </url>
+  <url>
+    <loc>https://tgapps.dev/pt-br/apps</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.78</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/apps" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/apps" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/apps" />
+  </url>
+  <url>
+    <loc>https://tgapps.dev/apps/anylanguage</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.86</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/apps/anylanguage" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/apps/anylanguage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/apps/anylanguage" />
+  </url>
+  <url>
+    <loc>https://tgapps.dev/pt-br/apps/anylanguage</loc>
+    <lastmod>2026-03-28</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.82</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://tgapps.dev/apps/anylanguage" />
+    <xhtml:link rel="alternate" hreflang="pt-br" href="https://tgapps.dev/pt-br/apps/anylanguage" />
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://tgapps.dev/apps/anylanguage" />
   </url>
 </urlset>
-

@@ -26,11 +26,11 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            {t.hero.titleLine1}
+            <span className="block">{t.hero.titleLine1}</span>
             <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
               {t.hero.titleHighlight}
             </span>
-            {t.hero.titleLine2}
+            <span className="mt-2 block sm:mt-3">{t.hero.titleLine2}</span>
           </h1>
 
           <p className="text-lg sm:text-xl text-white/80 mb-8 leading-relaxed">{t.hero.subtitle}</p>

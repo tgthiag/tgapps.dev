@@ -2,7 +2,7 @@
 
 ## 1. Purpose & Outcomes
 - **Primary goal:** Convert US-based small businesses/startups into qualified leads for Android/iOS (native, Flutter, React Native) delivery pods that work contract-first with zero upfront payment.
-- **Secondary goals:** Highlight dependability (D‑U‑N‑S® 651029828, contract + NDA before kickoff), show lean process (intake → build → support), and reassure buyers about fast deployments, integrations (payments, logistics, CRM, LLM/RAG), and ongoing support.
+- **Secondary goals:** Highlight dependability (D‑U‑N‑S® 651029828, contract + NDA before kickoff), show lean process (intake → build → support), and reassure buyers about fast deployments, integrations (payments, logistics, CRM, LLM), and ongoing support.
 - **Tone:** Mature, founder-led, low bureaucracy, high velocity. Always connect copy to practical deliverables (deploy cadence, releases included).
 
 ## 2. Page & Section Structure
@@ -33,7 +33,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
   - Cards derived from translations:
     1. **Android and iOS builds** – Kotlin, Swift, Flutter, React Native; includes dashboards/admin tools.
     2. **Pod-as-a-service** – parallel squad, release management, weekend coverage.
-    3. **Integrations and data layers** – payments/logistics/CRM + LLM/RAG pipelines plugged into whichever vector/search stack the client already trusts; includes REST/GraphQL surfaces and observability.
+    3. **Integrations and data layers** – payments/logistics/CRM + LLM workflows plugged into whichever vector/search/knowledge stack the client already trusts; includes REST/GraphQL surfaces and observability.
   - Process loop (“Loop 01/02/03”): Intake & briefing (48h), Build & release (client-led priorities, weekly demos/deploys, staged rollouts), Support & handoff (runbooks, 24h triage, month-to-month exit).
   - Closing CTA banner: “Need a small-business-ready mobile partner? – Talk to the pod”.
 
@@ -47,21 +47,21 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 - **Contact**
   - Cost section: “Flat monthly pod · cancel any month” (temporary USD 1,900/mo offer for the next 3 companies, W8‑BEN‑E on file, SOC/NDA templates ready, no upfront, no hidden clauses).
   - Info entries: Email `support@tgapps.dev`, WhatsApp/Phone `+55 11 97971‑7703`, location “São Paulo, Brazil · US overlap ET/CT”.
-  - “Why us” bullets: zero upfront, D‑U‑N‑S trust, Android/iOS expertise, LLM/RAG integrations with guardrails, weekly release cadence powered by an agile Kanban pod (backend, frontend, database, mobile in parallel), client-led backlog with weekly demos and deployments.
+  - “Why us” bullets: zero upfront, D‑U‑N‑S trust, Android/iOS expertise, LLM integrations with guardrails, weekly release cadence powered by an agile Kanban pod (backend, frontend, database, mobile in parallel), client-led backlog with weekly demos and deployments.
   - Form callout: Outline response timeframe (≤1 business day), 30–45 min call, send SOW/checklist.
   - Form fields: Full name, Work email, Phone/WhatsApp, Service dropdown, Notes. Submit button composes email to contact address.
 
 - **Footer**
   - Description: reiterate founder-led Brazilian studio for US SMBs, zero upfront, weekly releases.
   - Quick links reference same IDs.
-  - “Popular requests”: mobile builds, pods/support, LLM/RAG, dashboards, release coverage.
+  - “Popular requests”: mobile builds, pods/support, LLM, dashboards, release coverage.
   - Contact snippet uses `support@tgapps.dev`, phone, São Paulo location.
 
 ## 4. Company Facts & Assets
 - **Legal entity:** TG Applications Desenvolvimento Ltda (Brazil).
 - **D‑U‑N‑S® Number:** 651029828 (issued 28 Jan 2026) — source `C:\Users\Kabum\Downloads\Número D‑U‑N‑S®.html`.
 - **Billing:** No payment upfront; contracts + invoices via TG Applications. USD or BRL, W8‑BEN‑E ready.
-- **Core services:** Android/iOS builds (Kotlin, Swift, Flutter, React Native), pod-as-a-service (parallel squad, release ops), integrations/data (payments, logistics, CRM, analytics, LLM/RAG pipelines integrated with the client’s preferred vector/search stack), dashboards/admin tooling, support/handovers.
+- **Core services:** Android/iOS builds (Kotlin, Swift, Flutter, React Native), pod-as-a-service (parallel squad, release ops), integrations/data (payments, logistics, CRM, analytics, LLM workflows integrated with the client’s preferred vector/search/knowledge stack), dashboards/admin tooling, support/handovers.
 - **Process promises:** Kickoff call ≤1 business day after contact; coding starts ≤5 business days post-signature; deploy cadence ≈ once per week; Kanban workflow keeps backend, frontend, database, and mobile workstreams moving in parallel; blue/green/staged releases + monitoring included; bug triage ≤24h with weekend standby for launches.
 - **Commercial promises:** Zero upfront/adiantamentos, no surprise fees, cancel anytime with zero penalties or notice periods.
 - **Communication stack:** Use whichever channel the client already runs (Teams, Jira, Linear, Notion, ClickUp, Trello, email, etc.), with written updates + Loom videos (3+/week) and a weekly demo/call.
@@ -69,15 +69,16 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 - **Differentiators:** Founder-led pod, bilingual (EN/PT), contract-first + zero upfront, mature compliance story (D‑U‑N‑S, NDA templates, vendor questionnaires), integrated release ops, ability to embed or run standalone.
 
 ## 5. SEO & Positioning
-- **Keywords focus:** “US small business app development”, “Android & iOS pod”, “zero upfront mobile development”, “LLM/RAG integrations for apps”.
+- **Keywords focus:** “US small business app development”, “Android & iOS pod”, “zero upfront mobile development”, “LLM integrations for apps”.
 - **Hreflang/canonical:** en (`/`) and pt (`/pt-br/`) served via LanguageContext; header toggle updates URL path.
 - **Meta tags:** Title/description/OG/Twitter highlight zero-upfront pods for US SMBs; JSON-LD includes updated description + D‑U‑N‑S identifier.
 - **CTAs:** Always point to scheduling a discovery call or composing the email (support@tgapps.dev).
 
 ## 6. Operating Guardrails
 - Keep layout visually light: at most one lifestyle image per major block (Hero, Services, About).
-- Every mention of AI must be framed as “LLM/RAG integrations we deliver” — not “we use AI to build the site”.
+- Every mention of AI must be framed as “LLM integrations we deliver” — not “we use AI to build the site”.
 - Pricing: reference the temporary USD 1,900/mo offer for the next 3 companies when relevant; reinforce monthly billing, no upfront, and no hidden clauses.
+- English copy stays US-first. PT-BR copy must position TG Apps as a global startup that builds born-global products and can work with companies from any market.
 - Ensure any new copy reaffirm zero upfront payment, contract/NDA, deploy cadence, D‑U‑N‑S trust signal.
 - Maintain bilingual parity; any new section in English must have a Portuguese counterpart in translations.
 

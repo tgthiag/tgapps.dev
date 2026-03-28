@@ -8,6 +8,7 @@ const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage } = useLanguage();
   const t = useTranslations();
+  const appsHref = language === 'pt' ? '/pt-br/apps' : '/apps';
 
   useEffect(() => {
     const handleScroll = () => {
@@ -98,6 +99,14 @@ const Header = () => {
                 {item.label}
               </button>
             ))}
+            <a
+              href={appsHref}
+              className={`text-sm font-medium transition-colors hover:text-blue-500 ${
+                isScrolled ? 'text-gray-700' : 'text-white/90'
+              }`}
+            >
+              Apps
+            </a>
             {renderLanguageSwitcher('desktop')}
             <button
               onClick={() => scrollToSection(t.header.contactId)}
@@ -131,6 +140,12 @@ const Header = () => {
                   {item.label}
                 </button>
               ))}
+              <a
+                href={appsHref}
+                className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
+              >
+                Apps
+              </a>
               <div className="pt-2">{renderLanguageSwitcher('mobile')}</div>
               <button
                 onClick={() => scrollToSection(t.header.contactId)}

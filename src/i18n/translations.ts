@@ -175,7 +175,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       stats: [
         { label: 'D-U-N-S® 651029828 · issued Jan 28 2026' },
         { label: 'Kickoff call in one business day · we demo and deploy roughly once per week' },
-        { label: 'Month-to-month control · cancel anytime · temporary USD 1,900/mo offer for the next 3 companies' }
+        { label: 'Month-to-month control · cancel anytime · USD 1,900/mo locked in for the next 3 companies' }
       ],
       primaryCta: 'Schedule a discovery call',
       secondaryCta: 'Review the 3-step plan'
@@ -261,12 +261,12 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Integrations and data layers',
-          subtitle: 'Payments, logistics, CRM, and LLM/RAG',
+          subtitle: 'Payments, logistics, CRM, and LLM',
           description:
             'Connect your app to billing, logistics, CRM, or knowledge bases with production-grade APIs, data layers, and automation guardrails.',
           features: [
             'REST or GraphQL plus Supabase, Firebase, MySQL, MariaDB, or dedicated Postgres.',
-            'Retrieval augmented generation pipelines with whichever vector store or search stack your team already trusts.',
+            'LLM workflows connected to the vector, search, or knowledge stack your team already trusts.',
             'AWS (including EC2) infrastructure plus runbooks and release checklists so your team can own the stack after handoff.'
           ],
           cta: 'Scope my integration'
@@ -350,26 +350,26 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Zero upfront payment; billing starts only after kickoff, you can cancel anytime, and there are no surprise fees.',
         'D-U-N-S® record and Brazilian LLC paperwork to pass procurement.',
         'Full-stack delivery: native apps, responsive sites, landing pages, dashboards, backend, and databases handled by one pod.',
-        'LLM and RAG integrations delivered with guardrails and documentation that match the stack you already trust.',
+        'LLM integrations delivered with guardrails and documentation that match the stack you already trust.',
         'Deploy cadence typically once per week, powered by a Kanban pod that moves backend, frontend, database, and mobile tracks in parallel with blue/green coverage.',
         'Weekly video calls with the actual developers so stakeholders can review deploys, metrics, and next steps live, and we adapt meeting hours to your preferred timezone.',
         'Prefer to use your own contract template? Send it and we co-review, sign, and adapt clauses together.',
         'Pricing stays fair because we dilute pod costs between clients instead of adding fees or retainers.',
-        'Temporary offer for the next 3 companies: USD 1,900/mo, monthly billing, no upfront payment, and no hidden clauses while the contract stays active.'
+        'USD 1,900/mo locked in for the next 3 companies, with monthly billing, no upfront payment, and no hidden clauses while the contract stays active.'
       ],
       costSection: {
         badge: 'Transparent terms',
         title: 'Flat monthly pod · cancel any month',
         description:
-          'Temporary offer for the next 3 companies: USD 1,900/mo for full-stack and mobile delivery with monthly billing, no upfront payment, and no hidden clauses. The rate stays fixed while the contract is active. Outside the temporary offer, pricing is scoped to workload and delivery model.',
+          'USD 1,900/mo locked in for the next 3 companies for full-stack and mobile delivery with monthly billing, no upfront payment, and no hidden clauses. The rate stays fixed while the contract is active. Outside those 3 locked-in slots, pricing is scoped to workload and delivery model.',
         highlights: [
-          'Temporary offer: USD 1,900/mo for the next 3 companies.',
+          'USD 1,900/mo locked in for the next 3 companies.',
           'Monthly billing, no upfront payment, and no hidden clauses.',
           'Contracts and invoices issued by TG Applications Desenvolvimento Ltda (Brazil).',
           'USD or BRL billing; W8-BEN-E already on file.',
           'Weekday coverage plus weekend standby for launches.'
         ],
-        note: 'Need NDAs, SOC, or vendor questionnaires? We keep sanitized templates ready. The temporary offer is limited to the next 3 companies, and the rate stays locked while the contract is active.'
+        note: 'Need NDAs, SOC, or vendor questionnaires? We keep sanitized templates ready. The next 3 companies lock the USD 1,900/mo rate while the contract stays active.'
       },
       formHeading: 'Share a few details',
       formDescription: 'We only ask for what we need to reply with a plan and calendar.',
@@ -422,7 +422,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       services: [
         'Android + iOS builds',
         'Parallel pods and support',
-        'LLM / RAG integrations',
+        'LLM integrations',
         'Dashboards and admin tools',
         'Release and store coverage'
       ],
@@ -454,16 +454,16 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Pod mobile para pequenas empresas dos EUA',
+      badge: 'Pod mobile para startups e empresas globais',
       titleLine1: 'Aplicativos Android e iOS sob medida',
-      titleHighlight: 'para pequenas empresas norte-americanas',
+      titleHighlight: 'para produtos born global',
       titleLine2: 'sem cobrança antecipada',
       subtitle:
-        'Estúdio brasileiro liderado pelo fundador em São Paulo que projeta, desenvolve e sustenta apps Android, iOS, Flutter ou React Native, além de websites, landing pages, ferramentas internas, dashboards, APIs, automações e integrações. Atuamos principalmente com empresas dos EUA e do Brasil, mas podemos atender qualquer país. Entregamos o produto completo, com backends, bancos de dados e infraestrutura em nuvem (como AWS EC2), dentro de um contrato único, sem pagamento adiantado, para que times enxutos mantenham ritmo sem burocracia.',
+        'Startup global liderada pelo fundador em São Paulo que projeta, desenvolve e sustenta apps Android, iOS, Flutter ou React Native, além de websites, landing pages, ferramentas internas, dashboards, APIs, automações e integrações. Construímos produtos born global desde o dia zero e também operamos como pod para empresas de qualquer mercado. Entregamos o produto completo, com backends, bancos de dados e infraestrutura em nuvem (como AWS EC2), dentro de um contrato único, sem pagamento adiantado, para que times enxutos mantenham ritmo sem burocracia.',
       stats: [
         { label: 'D-U-N-S® 651029828 · emitido em 28/01/2026' },
         { label: 'Chamada inicial em 1 dia útil · demos e deploys semanais guiados por você' },
-        { label: 'Controle mes a mes · cancele quando quiser · oferta temporaria de US$ 1.900/mes para as proximas 3 empresas' }
+        { label: 'Controle mês a mês · cancele quando quiser · US$ 1.900/mês fixos para as próximas 3 empresas' }
       ],
       primaryCta: 'Agende uma conversa',
       secondaryCta: 'Conheça o plano em 3 etapas'
@@ -478,7 +478,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Android, iOS e integrações',
       headingHighlight: 'para manter seu time entregando',
       description:
-        'Atuamos com startups, agências e líderes de TI dos EUA que precisam de um pod com cara de time interno, mas com a flexibilidade de um contrato mensal. Design, produto, engenharia, infraestrutura e operações caminham juntos para apps mobile, sites, landing pages, dashboards, ferramentas internas/externas, APIs e bancos de dados. Conseguimos tirar uma startup inteira do zero rapidamente enquanto sua empresa mantém o foco nos projetos atuais e prepara o terreno para receber o novo produto, sempre com você direcionando o backlog.',
+        'Atuamos com startups, agências e líderes de TI que precisam de um pod com cara de time interno, mas com a flexibilidade de um contrato mensal e ambição global. Design, produto, engenharia, infraestrutura e operações caminham juntos para apps mobile, sites, landing pages, dashboards, ferramentas internas/externas, APIs e bancos de dados. Conseguimos tirar uma startup born global do zero rapidamente ou reforçar produtos já em operação em qualquer mercado, sempre com você direcionando o backlog.',
       pillars: [
         'Contrato e NDA assinados antes do kick-off; nenhum pagamento adiantado.',
         'Notas semanais no canal que você preferir com fotos do Kanban e Looms curtos.',
@@ -549,12 +549,12 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Integrações e camadas de dados',
-          subtitle: 'Pagamentos, logística, CRM e LLM/RAG',
+          subtitle: 'Pagamentos, logística, CRM e LLM',
           description:
             'Conectamos seu app a billing, logística ou bases de conhecimento com APIs e automações prontas para produção.',
           features: [
             'REST ou GraphQL com Supabase, Firebase, MySQL, MariaDB ou Postgres dedicado.',
-            'Pipelines de RAG usando o stack de vetor/busca que o seu time já confia.',
+            'Fluxos de LLM conectados ao stack de vetor, busca ou conhecimento que o seu time já confia.',
             'Infraestrutura em AWS (incluindo EC2) com runbooks e checklists de release para o seu time assumir o stack.'
           ],
           cta: 'Escopar integração'
@@ -572,7 +572,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Pod confiável',
       headingHighlight: 'para fundadores e gestores',
       description:
-        'Somos um estúdio bilíngue em São Paulo que atende principalmente empresas dos Estados Unidos desde 2019.',
+        'Somos uma startup global bilíngue em São Paulo, construindo produtos born global e apoiando empresas de diferentes mercados desde 2019.',
       timelineHeading: 'Como é trabalhar conosco',
       paragraphs: [
         'Você fala direto com quem decide. Mantemos pods compactos para preservar contexto, responsabilidade e visão de produto.',
@@ -595,8 +595,8 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'Assinamos NDA e SOW digitalmente antes do kick-off. A cobrança só começa após as primeiras entregas.'
         },
         {
-          title: 'Cobertura de fuso dos EUA',
-          description: 'Atuação diária no horário do leste (ET) com plantões em lançamentos.'
+          title: 'Cobertura global de fuso',
+          description: 'Atuação diária com sobreposição para Américas e coordenação remota para outros mercados.'
         }
       ],
       statsHeading: 'Como operamos',
@@ -625,12 +625,12 @@ export const translations: Record<Locale, TranslationSchema> = {
         {
           title: 'WhatsApp / Telefone',
           value: '+55 11 97971-7703',
-          description: 'Chamadas, SMS ou WhatsApp com horários amigáveis aos EUA.'
+          description: 'Chamadas, SMS ou WhatsApp com janelas alinhadas ao fuso do cliente.'
         },
         {
           title: 'Base de operação',
-          value: 'São Paulo, Brasil · fuso compatível com ET/CT',
-          description: 'Estúdio brasileiro focado em clientes dos EUA desde 2019.'
+          value: 'São Paulo, Brasil · operação global com sobreposição de fuso',
+          description: 'Startup brasileira com atuação global desde 2019.'
         }
       ],
       whyUsHeading: 'Por que contratam a TG Apps',
@@ -638,27 +638,27 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Sem adiantamentos; cobramos só depois do início, sem surpresas e você cancela quando quiser.',
         'Registro D-U-N-S® e documentos brasileiros prontos para compras corporativas.',
         'Entrega ponta a ponta: apps, sites, landing pages, dashboards, backends e bancos de dados por um único pod.',
-        'Integrações LLM e RAG com guardrails e documentação alinhados ao stack que você já usa.',
+        'Integrações LLM com guardrails e documentação alinhados ao stack que você já usa.',
         'Cadência de deploy normalmente semanal, com pod Kanban tocando back, front, banco e mobile em paralelo + cobertura azul/verde.',
         'Chamadas em vídeo toda semana com o time de devs para revisar deploys e próximos passos, sempre adaptando o horário ao fuso do cliente.',
         'Preferiu usar o contrato da sua empresa? Envie o modelo e revisamos juntos, ajustando cláusulas antes da assinatura.',
         'Você direciona o backlog e nós apresentamos releases/demos toda semana.',
         'Preço justo: diluímos o custo do pod entre clientes em vez de cobrar taxas extras ou retenção.',
-        'Oferta temporaria para as proximas 3 empresas: US$ 1.900/mes, cobranca mensal, sem adiantamento e sem clausulas escondidas enquanto o contrato estiver ativo.'
+        'US$ 1.900/mês fixos para as próximas 3 empresas, com cobrança mensal, sem adiantamento e sem cláusulas escondidas enquanto o contrato estiver ativo.'
       ],
       costSection: {
         badge: 'Termos claros',
         title: 'Pod mensal fixo · cancelamento simples',
         description:
-          'Oferta temporaria para as proximas 3 empresas: US$ 1.900/mes para entrega full-stack e mobile com cobranca mensal, sem adiantamento e sem clausulas escondidas. O valor fica congelado enquanto o contrato estiver ativo. Fora da oferta temporaria, o preco passa a ser definido pelo escopo e pelo modelo de entrega.',
+          'US$ 1.900/mês fixos para as próximas 3 empresas para entrega full-stack e mobile com cobrança mensal, sem adiantamento e sem cláusulas escondidas. O valor fica congelado enquanto o contrato estiver ativo. Fora dessas 3 vagas com valor travado, o preço passa a ser definido pelo escopo e pelo modelo de entrega.',
         highlights: [
-          'Oferta temporaria: US$ 1.900/mes para as proximas 3 empresas.',
-          'Cobranca mensal, sem adiantamento e sem clausulas escondidas.',
+          'US$ 1.900/mês fixos para as próximas 3 empresas.',
+          'Cobrança mensal, sem adiantamento e sem cláusulas escondidas.',
           'Contrato e nota emitidos pela TG Applications Desenvolvimento Ltda (Brasil).',
           'Cobrança em USD ou BRL; W8-BEN-E já disponível.',
           'Cobertura em dias úteis + plantão em lançamentos.'
         ],
-        note: 'Precisa de NDA, SOC ou questionario de fornecedor? Ja temos os modelos. A oferta temporaria vale so para as proximas 3 empresas e o valor permanece o mesmo enquanto o contrato estiver ativo.'
+        note: 'Precisa de NDA, SOC ou questionário de fornecedor? Já temos os modelos. As próximas 3 empresas travam o valor de US$ 1.900/mês enquanto o contrato estiver ativo.'
       },
       formHeading: 'Conte um pouco do projeto',
       formDescription: 'Só pedimos o necessário para responder com plano e datas.',
@@ -698,7 +698,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A TG Apps é um estúdio brasileiro liderado pelo fundador que entrega pods Android, iOS, Flutter e integrações para pequenas empresas dos EUA sem pagamento antecipado.',
+        'A TG Apps é uma startup global liderada pelo fundador que entrega pods Android, iOS, Flutter e integrações para produtos born global e empresas de qualquer mercado, sem pagamento antecipado.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
@@ -711,7 +711,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       services: [
         'Apps Android e iOS',
         'Pods paralelos e suporte',
-        'Integrações LLM / RAG',
+        'Integrações LLM',
         'Dashboards e painéis',
         'Cobertura de releases'
       ],
@@ -719,7 +719,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       contact: {
         emailLabel: 'support@tgapps.dev',
         phoneLabel: '+55 11 97971-7703',
-        location: 'São Paulo · atendendo empresas dos EUA'
+        location: 'São Paulo · operação global'
       },
       cta: 'Agendar conversa',
       bottom: {

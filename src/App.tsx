@@ -9,9 +9,12 @@ import SocialProof from './components/SocialProof';
 import MyBusinessIdeaPrivacyPage from './components/MyBusinessIdeaPrivacyPage';
 import MyBusinessIdeaAccountDeletionPage from './components/MyBusinessIdeaAccountDeletionPage';
 import KeywordLandingPage from './components/KeywordLandingPage';
+import AppsDirectoryPage from './components/AppsDirectoryPage';
+import AnyLanguageAppPage from './components/AnyLanguageAppPage';
 import { useLanguage } from './context/LanguageContext';
 import { applyRouteSeo } from './seo/routeSeo';
 import { getLandingContent, resolveLandingKeyByRoute } from './content/landingPages';
+import { isAnyLanguageRoute, isAppsDirectoryRoute } from './content/apps';
 
 const getCurrentRoutePath = () => {
   if (typeof window === 'undefined') {
@@ -58,6 +61,12 @@ function App() {
   }
   if (landingKey) {
     return <KeywordLandingPage locale={language} content={getLandingContent(language, landingKey)} />;
+  }
+  if (isAppsDirectoryRoute(routePath)) {
+    return <AppsDirectoryPage locale={language} />;
+  }
+  if (isAnyLanguageRoute(routePath)) {
+    return <AnyLanguageAppPage locale={language} />;
   }
 
   return (

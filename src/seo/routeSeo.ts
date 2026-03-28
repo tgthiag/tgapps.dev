@@ -4,6 +4,7 @@ import {
   landingSlugsByLocale,
   resolveLandingKeyByRoute
 } from '../content/landingPages';
+import { appRoutes, isAnyLanguageRoute, isAppsDirectoryRoute } from '../content/apps';
 
 const SITE_URL = 'https://tgapps.dev';
 
@@ -25,12 +26,38 @@ const HOME_SEO: Record<Locale, Omit<SeoConfig, 'robots' | 'localizedRoutePaths'>
   en: {
     title: 'US Small Business App Development | Android, iOS, Pods | TG Apps',
     description:
-      'Founder-led Android and iOS app development pod for US small businesses. Zero upfront payment, contract-first delivery, weekly releases, and LLM/RAG integrations.'
+      'Founder-led Android and iOS app development pod for US small businesses. Zero upfront payment, contract-first delivery, weekly releases, and LLM integrations.'
   },
   pt: {
-    title: 'Desenvolvimento de Apps para PMEs dos EUA | Android, iOS e Pods | TG Apps',
+    title: 'Desenvolvimento Global de Apps | Android, iOS e Pods | TG Apps',
     description:
-      'Pod liderado pelo fundador para apps Android e iOS de pequenas empresas dos EUA. Contrato primeiro, zero adiantamento, releases semanais e integracoes LLM/RAG.'
+      'Startup global liderada pelo fundador para apps Android e iOS, produtos born global, contrato primeiro, zero adiantamento, releases semanais e integrações LLM.'
+  }
+};
+
+const APPS_DIRECTORY_SEO: Record<Locale, Omit<SeoConfig, 'robots' | 'localizedRoutePaths'>> = {
+  en: {
+    title: 'Apps by TG Apps | Mobile products we design and ship',
+    description:
+      'Explore mobile apps designed and operated by TG Apps, including AnyLanguage Conversations, a voice-first language practice app for natural speaking routines.'
+  },
+  pt: {
+    title: 'Apps da TG Apps | Produtos mobile que desenhamos e entregamos',
+    description:
+      'Conheça os apps desenhados e operados pela TG Apps, incluindo o AnyLanguage Conversations, um app de prática de idiomas com foco em fala natural.'
+  }
+};
+
+const ANYLANGUAGE_SEO: Record<Locale, Omit<SeoConfig, 'robots' | 'localizedRoutePaths'>> = {
+  en: {
+    title: 'AnyLanguage Conversations | Voice-first language practice app',
+    description:
+      'See the AnyLanguage Conversations app: natural voice practice, Phone Call mode, vocabulary flows, and polished mobile screens across 50+ languages.'
+  },
+  pt: {
+    title: 'AnyLanguage Conversations | App de prática de idiomas com foco em voz',
+    description:
+      'Veja o AnyLanguage Conversations: prática natural de fala, Phone Call mode, vocabulário e telas mobile refinadas em mais de 50 idiomas.'
   }
 };
 
@@ -73,6 +100,24 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
       description: content.intro,
       robots: 'index,follow',
       localizedRoutePaths
+    };
+  }
+
+  if (isAppsDirectoryRoute(normalizedRoutePath)) {
+    return {
+      title: APPS_DIRECTORY_SEO[locale].title,
+      description: APPS_DIRECTORY_SEO[locale].description,
+      robots: 'index,follow',
+      localizedRoutePaths: { en: appRoutes.appsDirectory, pt: appRoutes.appsDirectory }
+    };
+  }
+
+  if (isAnyLanguageRoute(normalizedRoutePath)) {
+    return {
+      title: ANYLANGUAGE_SEO[locale].title,
+      description: ANYLANGUAGE_SEO[locale].description,
+      robots: 'index,follow',
+      localizedRoutePaths: { en: appRoutes.anyLanguage, pt: appRoutes.anyLanguage }
     };
   }
 
@@ -164,4 +209,3 @@ export const applyRouteSeo = (routePath: string, locale: Locale): void => {
   upsertLinkTag('alternate', portugueseUrl, 'pt-br');
   upsertLinkTag('alternate', englishUrl, 'x-default');
 };
-

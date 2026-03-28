@@ -28,14 +28,14 @@ const EN_SLUGS: Record<LandingPageKey, string> = {
   androidIosSmb: '/android-ios-development-for-us-smb',
   monthlyPod: '/mobile-development-pod-month-to-month',
   zeroUpfront: '/zero-upfront-app-development',
-  llmRagIntegrations: '/llm-rag-integrations-for-apps'
+  llmRagIntegrations: '/llm-integrations-for-apps'
 };
 
 const PT_SLUGS: Record<LandingPageKey, string> = {
   androidIosSmb: '/desenvolvimento-android-ios-para-pequenas-empresas',
   monthlyPod: '/pod-mobile-mensal-cancelamento-livre',
   zeroUpfront: '/desenvolvimento-app-sem-adiantamento',
-  llmRagIntegrations: '/integracoes-llm-rag-para-apps'
+  llmRagIntegrations: '/integracoes-llm-para-apps'
 };
 
 const EN_CONTENT: LandingContentByLocale = {
@@ -126,28 +126,28 @@ const EN_CONTENT: LandingContentByLocale = {
   llmRagIntegrations: {
     key: 'llmRagIntegrations',
     slug: EN_SLUGS.llmRagIntegrations,
-    badge: 'LLM/RAG integrations for apps',
-    title: 'LLM and RAG integrations for mobile and web applications',
+    badge: 'LLM integrations for apps',
+    title: 'LLM integrations for mobile and web applications',
     intro:
-      'Production-ready LLM/RAG integrations we deliver with guardrails, observability, and release coverage, using the vector/search stack your team already trusts.',
+      'Production-ready LLM integrations we deliver with guardrails, observability, and release coverage, using the vector, search, or knowledge stack your team already trusts.',
     ctaLabel: 'Schedule a discovery call',
-    ctaSubject: 'LLM RAG integration services',
+    ctaSubject: 'LLM integration services',
     proofHeading: 'Integration model',
     proofItems: [
       'API-first delivery over REST or GraphQL for existing products.',
-      'Prompt, retrieval, and fallback flows documented for operations teams.',
+      'Prompt, context, and fallback flows documented for operations teams.',
       'Monitoring, release checklist, and handoff runbooks included.'
     ],
     deliverablesHeading: 'Typical deliverables',
     deliverables: [
-      'RAG pipelines connected to CRM, logistics, payments, or support data.',
+      'LLM workflows connected to CRM, logistics, payments, or support data.',
       'Admin controls for prompts, indexes, and safety thresholds.',
       'Mobile and dashboard surfaces to expose answers, actions, and analytics.'
     ],
     fitHeading: 'Best fit',
     fitItems: [
       'Teams that need AI features with auditability and operational control.',
-      'Products that already run on existing vector stores or search engines.',
+      'Products that already rely on search, knowledge, or structured data layers.',
       'Leaders who need weekly production progress, not experimental demos.'
     ]
   }
@@ -157,57 +157,57 @@ const PT_CONTENT: LandingContentByLocale = {
   androidIosSmb: {
     key: 'androidIosSmb',
     slug: PT_SLUGS.androidIosSmb,
-    badge: 'Desenvolvimento de apps para PMEs dos EUA',
-    title: 'Desenvolvimento Android e iOS para pequenas empresas dos EUA',
+    badge: 'Desenvolvimento global de apps',
+    title: 'Desenvolvimento Android e iOS para startups e empresas globais',
     intro:
-      'Pod mobile liderado pelo fundador para empresas norte-americanas que precisam de entrega nativa ou cross-platform com contrato primeiro, sem adiantamento, e releases semanais.',
+      'Pod mobile liderado pelo fundador para startups e empresas que precisam de entrega nativa ou cross-platform com contrato primeiro, sem adiantamento, releases semanais e visão de produto born global.',
     ctaLabel: 'Agendar discovery call',
-    ctaSubject: 'Desenvolvimento Android iOS para PMEs dos EUA',
+    ctaSubject: 'Desenvolvimento Android iOS para startup global',
     proofHeading: 'Provas antes do kickoff',
     proofItems: [
       'D-U-N-S 651029828 (emitido em 28/01/2026).',
       'Contrato + NDA assinados antes do inicio do desenvolvimento.',
-      'Call inicial em 1 dia util e primeira entrega em cerca de 5 dias.'
+      'Call inicial em 1 dia útil e primeira entrega em cerca de 5 dias.'
     ],
     deliverablesHeading: 'O que o pod entrega',
     deliverables: [
       'Apps Android e iOS em Kotlin, Swift, Flutter ou React Native.',
       'Dashboard administrativo, API, banco de dados e release ops no mesmo sprint.',
-      'Cadencia semanal de demo + deploy com rollout gradual ou blue/green.'
+      'Cadência semanal de demo + deploy com rollout gradual ou blue/green.'
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
-      'PMEs dos EUA que precisam substituir handoffs lentos de agencia.',
-      'Fundadores que querem app + backend + release em um parceiro so.',
-      'Times que precisam de flexibilidade mes a mes sem aumentar headcount.'
+      'Startups e empresas que precisam substituir handoffs lentos de agência.',
+      'Fundadores que querem app + backend + release em um parceiro só.',
+      'Times que precisam de flexibilidade mês a mês sem aumentar headcount.'
     ]
   },
   monthlyPod: {
     key: 'monthlyPod',
     slug: PT_SLUGS.monthlyPod,
-    badge: 'Pod mobile mensal com liberdade de saida',
-    title: 'Pod dedicado de desenvolvimento mobile com controle mes a mes',
+    badge: 'Pod mobile mensal com liberdade de saída',
+    title: 'Pod dedicado de desenvolvimento mobile com controle mês a mês',
     intro:
       'Use a TG Apps como squad paralelo para Android, iOS, backend e gerenciamento de release. Sem retainer, sem multa e sem prazo de aviso longo.',
     ctaLabel: 'Agendar discovery call',
     ctaSubject: 'Pod mensal de desenvolvimento mobile',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
-      'Oferta temporaria: US$ 1.900/mes para as proximas 3 empresas.',
-      'Cancelamento em qualquer mes sem multa ou taxa surpresa.',
-      'Cobranca mensal, sem adiantamento, e runbooks com handoff entregues continuamente.'
+      'US$ 1.900/mês fixos para as próximas 3 empresas.',
+      'Cancelamento em qualquer mês sem multa ou taxa surpresa.',
+      'Cobrança mensal, sem adiantamento, e runbooks com handoff entregues continuamente.'
     ],
-    deliverablesHeading: 'O que ja vem no pod',
+    deliverablesHeading: 'O que já vem no pod',
     deliverables: [
-      'Execucao em Kanban com backend, frontend, banco e mobile em paralelo.',
-      'Atualizacoes em Loom e demo semanal no Teams, Jira, Linear, Notion ou no seu stack.',
-      'Triage de bugs em ate 24h e cobertura de fim de semana em janelas de lancamento.'
+      'Execução em Kanban com backend, frontend, banco e mobile em paralelo.',
+      'Atualizações em Loom e demo semanal no Teams, Jira, Linear, Notion ou no seu stack.',
+      'Triage de bugs em até 24h e cobertura de fim de semana em janelas de lançamento.'
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
       'Empresas que precisam acelerar sem contratar time fixo completo.',
-      'Times que precisam de confiabilidade operacional e suporte de producao.',
-      'Startups e agencias que querem previsibilidade de entrega toda semana.'
+      'Times que precisam de confiabilidade operacional e suporte de produção.',
+      'Startups e agências que querem previsibilidade de entrega toda semana.'
     ]
   },
   zeroUpfront: {
@@ -216,54 +216,54 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Desenvolvimento de app sem adiantamento',
     title: 'Desenvolvimento de app sem pagamento antecipado com contrato primeiro',
     intro:
-      'Modelo comercial amigavel para times dos EUA: contrato e NDA primeiro, implementacao em seguida, sem adiantamento antes de iniciar o trabalho.',
+      'Modelo comercial amigável para empresas de qualquer mercado: contrato e NDA primeiro, implementação em seguida, sem adiantamento antes de iniciar o trabalho.',
     ctaLabel: 'Agendar discovery call',
     ctaSubject: 'Desenvolvimento de app sem adiantamento',
     proofHeading: 'Termos comerciais',
     proofItems: [
       'Nenhum pagamento antecipado antes do kickoff.',
-      'W8-BEN-E disponivel com faturamento em USD ou BRL.',
-      'Contratos e cobranca emitidos pela TG Applications Desenvolvimento Ltda.'
+      'W8-BEN-E disponível com faturamento em USD ou BRL.',
+      'Contratos e cobrança emitidos pela TG Applications Desenvolvimento Ltda.'
     ],
     deliverablesHeading: 'Garantias de entrega',
     deliverables: [
-      'Escopo e criterios de aceite definidos antes do sprint 1.',
-      'Releases semanais, demos para stakeholders e log de decisoes.',
-      'Continuacao mes a mes ou handoff limpo quando necessario.'
+      'Escopo e critérios de aceite definidos antes do sprint 1.',
+      'Releases semanais, demos para stakeholders e log de decisões.',
+      'Continuação mês a mês ou handoff limpo quando necessário.'
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
-      'Operacoes SMB com controle de caixa ou aprovacao financeira rigorosa.',
-      'Times que precisam de sinais de confianca para juridico e compras.',
+      'Operações SMB com controle de caixa ou aprovação financeira rigorosa.',
+      'Times que precisam de sinais de confiança para jurídico e compras.',
       'Fundadores que querem resultado e accountability antes de escalar custos.'
     ]
   },
   llmRagIntegrations: {
     key: 'llmRagIntegrations',
     slug: PT_SLUGS.llmRagIntegrations,
-    badge: 'Integracoes LLM/RAG para apps',
-    title: 'Integracoes LLM e RAG para aplicativos mobile e web',
+    badge: 'Integrações LLM para apps',
+    title: 'Integrações LLM para aplicativos mobile e web',
     intro:
-      'Integracoes LLM/RAG entregues em producao com guardrails, observabilidade e cobertura de release, usando o stack de vetor/busca que seu time ja confia.',
+      'Integrações LLM entregues em produção com guardrails, observabilidade e cobertura de release, usando o stack de vetor, busca ou conhecimento que seu time já confia.',
     ctaLabel: 'Agendar discovery call',
-    ctaSubject: 'Servico de integracoes LLM RAG',
-    proofHeading: 'Modelo de integracao',
+    ctaSubject: 'Serviço de integrações LLM',
+    proofHeading: 'Modelo de integração',
     proofItems: [
       'Entrega API-first em REST ou GraphQL para produtos existentes.',
-      'Fluxos de prompt, retrieval e fallback documentados para operacao.',
-      'Monitoramento, checklist de release e runbook de handoff incluidos.'
+      'Fluxos de prompt, contexto e fallback documentados para operação.',
+      'Monitoramento, checklist de release e runbook de handoff incluídos.'
     ],
-    deliverablesHeading: 'Entregas tipicas',
+    deliverablesHeading: 'Entregas típicas',
     deliverables: [
-      'Pipelines RAG conectados a CRM, logistica, pagamentos ou suporte.',
-      'Controles administrativos para prompts, indices e limiares de seguranca.',
-      'Superficies mobile e dashboards para expor respostas, acoes e metricas.'
+      'Fluxos de LLM conectados a CRM, logística, pagamentos ou suporte.',
+      'Controles administrativos para prompts, índices e limiares de segurança.',
+      'Superfícies mobile e dashboards para expor respostas, ações e métricas.'
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
       'Times que precisam de features de AI com rastreabilidade e controle.',
-      'Produtos que ja operam com vector stores ou search engines existentes.',
-      'Liderancas que exigem progresso semanal em producao, nao demo experimental.'
+      'Produtos que já operam com busca, conhecimento ou dados estruturados.',
+      'Lideranças que exigem progresso semanal em produção, não demo experimental.'
     ]
   }
 };
@@ -286,6 +286,9 @@ Object.entries(EN_SLUGS).forEach(([key, slug]) => {
 Object.entries(PT_SLUGS).forEach(([key, slug]) => {
   LANDING_ROUTE_ALIASES[slug] = key as LandingPageKey;
 });
+
+LANDING_ROUTE_ALIASES['/llm-rag-integrations-for-apps'] = 'llmRagIntegrations';
+LANDING_ROUTE_ALIASES['/integracoes-llm-rag-para-apps'] = 'llmRagIntegrations';
 
 export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | null =>
   LANDING_ROUTE_ALIASES[routePath] ?? null;
