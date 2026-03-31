@@ -1,4 +1,5 @@
 import type { Locale } from '../i18n/translations';
+import { getPublicRouteById } from './publicRoutes';
 
 export interface AppCardContent {
   slug: string;
@@ -40,13 +41,13 @@ export interface AnyLanguagePageContent {
   finalCtaDescription: string;
 }
 
-export const appRoutes = {
-  appsDirectory: '/apps',
-  anyLanguage: '/apps/anylanguage'
-} as const;
+const appsDirectoryRoute = getPublicRouteById('appsDirectory');
+const anyLanguageRoute = getPublicRouteById('anyLanguage');
 
-export const isAppsDirectoryRoute = (routePath: string): boolean => routePath === appRoutes.appsDirectory;
-export const isAnyLanguageRoute = (routePath: string): boolean => routePath === appRoutes.anyLanguage;
+export const appRoutes = {
+  appsDirectory: appsDirectoryRoute?.localizedPaths.en ?? '/apps',
+  anyLanguage: anyLanguageRoute?.localizedPaths.en ?? '/apps/anylanguage'
+} as const;
 
 export const appsDirectoryContent: Record<Locale, AppsDirectoryContent> = {
   en: {

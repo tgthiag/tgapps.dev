@@ -1,6 +1,12 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
 import type { Locale, TranslationSchema } from '../i18n/translations';
 import { translations } from '../i18n/translations';
+import {
+  buildLocalizedPath,
+  DEFAULT_PUBLIC_LOCALE,
+  resolvePublicRoute,
+  splitLocaleAndRoute
+} from '../content/publicRoutes';
 
 interface LanguageContextValue {
   language: Locale;
@@ -14,59 +20,11 @@ interface LanguageProviderProps {
   children: React.ReactNode;
 }
 
-const DEFAULT_LOCALE: Locale = 'en';
-const LOCALE_SEGMENTS: Record<Locale, string> = {
-  en: '',
-  pt: 'pt-br'
-};
-
-const normalizePathname = (pathname: string) => {
-  if (!pathname || pathname === '/') {
-    return '/';
-  }
-  const [pathOnly] = pathname.split(/[?#]/);
-  const trimmed = pathOnly.replace(/\/+$/, '');
-  if (!trimmed) {
-    return '/';
-  }
-  return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
-};
-
-const splitLocaleAndRoute = (pathname: string): { locale: Locale; routePath: string } => {
-  const normalized = normalizePathname(pathname);
-  const segments = normalized.split('/').filter(Boolean);
-  if (segments.length === 0) {
-    return { locale: DEFAULT_LOCALE, routePath: '/' };
-  }
-
-  const localizedEntry = (Object.entries(LOCALE_SEGMENTS) as [Locale, string][])
-    .find(([, segment]) => segment && segment === segments[0]);
-
-  if (!localizedEntry) {
-    return { locale: DEFAULT_LOCALE, routePath: `/${segments.join('/')}` };
-  }
-
-  const routeSegments = segments.slice(1);
-  return {
-    locale: localizedEntry[0],
-    routePath: routeSegments.length > 0 ? `/${routeSegments.join('/')}` : '/'
-  };
-};
-
 const detectLocaleFromPath = (): Locale => {
   if (typeof window === 'undefined') {
-    return DEFAULT_LOCALE;
+    return DEFAULT_PUBLIC_LOCALE;
   }
   return splitLocaleAndRoute(window.location.pathname).locale;
-};
-
-const buildPathForLocale = (locale: Locale, routePath: string) => {
-  const normalizedRoutePath = normalizePathname(routePath);
-  const segment = LOCALE_SEGMENTS[locale];
-  if (!segment) {
-    return normalizedRoutePath;
-  }
-  return normalizedRoutePath === '/' ? `/${segment}` : `/${segment}${normalizedRoutePath}`;
 };
 
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) => {
@@ -77,8 +35,10 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       return;
     }
     const routePath = splitLocaleAndRoute(window.location.pathname).routePath;
-    const desiredPath = buildPathForLocale(locale, routePath);
-    const currentPath = normalizePathname(window.location.pathname);
+    const publicRoute = resolvePublicRoute(routePath);
+    const localizedRoutePath = publicRoute?.localizedPaths[locale] ?? routePath;
+    const desiredPath = buildLocalizedPath(locale, localizedRoutePath);
+    const currentPath = window.location.pathname;
     if (currentPath !== desiredPath) {
       window.history.replaceState({}, '', desiredPath);
     }
@@ -101,7 +61,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({ children }) 
       setLanguage,
       t: translations[language]
     }),
-    [language]
+    [language, setLanguage]
   );
 
   return <LanguageContext.Provider value={value}>{children}</LanguageContext.Provider>;

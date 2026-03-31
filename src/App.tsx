@@ -13,25 +13,14 @@ import AppsDirectoryPage from './components/AppsDirectoryPage';
 import AnyLanguageAppPage from './components/AnyLanguageAppPage';
 import { useLanguage } from './context/LanguageContext';
 import { applyRouteSeo } from './seo/routeSeo';
-import { getLandingContent, resolveLandingKeyByRoute } from './content/landingPages';
-import { isAnyLanguageRoute, isAppsDirectoryRoute } from './content/apps';
-
-const getCurrentRoutePath = () => {
-  if (typeof window === 'undefined') {
-    return '/';
-  }
-  const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/';
-  const segments = normalizedPath.split('/').filter(Boolean);
-  if (segments[0] === 'pt-br') {
-    segments.shift();
-  }
-  return segments.length > 0 ? `/${segments.join('/')}` : '/';
-};
+import { getLandingContent } from './content/landingPages';
+import type { LandingPageKey } from './content/landingPages';
+import { resolvePublicRoute, splitLocaleAndRoute } from './content/publicRoutes';
 
 function App() {
   const { language } = useLanguage();
-  const routePath = getCurrentRoutePath();
-  const landingKey = resolveLandingKeyByRoute(routePath);
+  const routePath = typeof window === 'undefined' ? '/' : splitLocaleAndRoute(window.location.pathname).routePath;
+  const publicRoute = resolvePublicRoute(routePath);
   const myBusinessIdeaDefaults = {
     defaultAppName: 'My Business Idea',
     defaultPackageName: 'com.mybusinessidea',
@@ -59,13 +48,18 @@ function App() {
   if (routePath === '/account_deletion') {
     return <MyBusinessIdeaAccountDeletionPage />;
   }
-  if (landingKey) {
-    return <KeywordLandingPage locale={language} content={getLandingContent(language, landingKey)} />;
+  if (publicRoute?.page === 'landing' && publicRoute.landingKey) {
+    return (
+      <KeywordLandingPage
+        locale={language}
+        content={getLandingContent(language, publicRoute.landingKey as LandingPageKey)}
+      />
+    );
   }
-  if (isAppsDirectoryRoute(routePath)) {
+  if (publicRoute?.page === 'appsDirectory') {
     return <AppsDirectoryPage locale={language} />;
   }
-  if (isAnyLanguageRoute(routePath)) {
+  if (publicRoute?.page === 'appDetail' && publicRoute.appKey === 'anyLanguage') {
     return <AnyLanguageAppPage locale={language} />;
   }
 

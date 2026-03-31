@@ -1,4 +1,5 @@
 import type { Locale } from '../i18n/translations';
+import { getPublicRouteById, resolvePublicRoute } from './publicRoutes';
 
 export type LandingPageKey =
   | 'androidIosSmb'
@@ -24,24 +25,25 @@ export interface LandingPageContent {
 
 type LandingContentByLocale = Record<LandingPageKey, LandingPageContent>;
 
-const EN_SLUGS: Record<LandingPageKey, string> = {
-  androidIosSmb: '/android-ios-development-for-us-smb',
-  monthlyPod: '/mobile-development-pod-month-to-month',
-  zeroUpfront: '/zero-upfront-app-development',
-  llmRagIntegrations: '/llm-integrations-for-apps'
-};
+const LANDING_PAGE_KEYS: LandingPageKey[] = [
+  'androidIosSmb',
+  'monthlyPod',
+  'zeroUpfront',
+  'llmRagIntegrations'
+];
 
-const PT_SLUGS: Record<LandingPageKey, string> = {
-  androidIosSmb: '/desenvolvimento-android-ios-para-pequenas-empresas',
-  monthlyPod: '/pod-mobile-mensal-cancelamento-livre',
-  zeroUpfront: '/desenvolvimento-app-sem-adiantamento',
-  llmRagIntegrations: '/integracoes-llm-para-apps'
+const getLandingSlug = (locale: Locale, key: LandingPageKey): string => {
+  const route = getPublicRouteById(key);
+  if (!route || route.page !== 'landing') {
+    throw new Error(`Public landing route not found for "${key}".`);
+  }
+  return route.localizedPaths[locale];
 };
 
 const EN_CONTENT: LandingContentByLocale = {
   androidIosSmb: {
     key: 'androidIosSmb',
-    slug: EN_SLUGS.androidIosSmb,
+    slug: getLandingSlug('en', 'androidIosSmb'),
     badge: 'US small business app development',
     title: 'Android and iOS app development for US small businesses',
     intro:
@@ -69,7 +71,7 @@ const EN_CONTENT: LandingContentByLocale = {
   },
   monthlyPod: {
     key: 'monthlyPod',
-    slug: EN_SLUGS.monthlyPod,
+    slug: getLandingSlug('en', 'monthlyPod'),
     badge: 'Month-to-month mobile development pod',
     title: 'Dedicated mobile development pod with month-to-month control',
     intro:
@@ -97,7 +99,7 @@ const EN_CONTENT: LandingContentByLocale = {
   },
   zeroUpfront: {
     key: 'zeroUpfront',
-    slug: EN_SLUGS.zeroUpfront,
+    slug: getLandingSlug('en', 'zeroUpfront'),
     badge: 'Zero upfront app development',
     title: 'Zero upfront app development with contract-first delivery',
     intro:
@@ -125,7 +127,7 @@ const EN_CONTENT: LandingContentByLocale = {
   },
   llmRagIntegrations: {
     key: 'llmRagIntegrations',
-    slug: EN_SLUGS.llmRagIntegrations,
+    slug: getLandingSlug('en', 'llmRagIntegrations'),
     badge: 'LLM integrations for apps',
     title: 'LLM integrations for mobile and web applications',
     intro:
@@ -156,7 +158,7 @@ const EN_CONTENT: LandingContentByLocale = {
 const PT_CONTENT: LandingContentByLocale = {
   androidIosSmb: {
     key: 'androidIosSmb',
-    slug: PT_SLUGS.androidIosSmb,
+    slug: getLandingSlug('pt', 'androidIosSmb'),
     badge: 'Desenvolvimento global de apps',
     title: 'Desenvolvimento Android e iOS para startups e empresas globais',
     intro:
@@ -184,7 +186,7 @@ const PT_CONTENT: LandingContentByLocale = {
   },
   monthlyPod: {
     key: 'monthlyPod',
-    slug: PT_SLUGS.monthlyPod,
+    slug: getLandingSlug('pt', 'monthlyPod'),
     badge: 'Pod mobile mensal com liberdade de saída',
     title: 'Pod dedicado de desenvolvimento mobile com controle mês a mês',
     intro:
@@ -212,7 +214,7 @@ const PT_CONTENT: LandingContentByLocale = {
   },
   zeroUpfront: {
     key: 'zeroUpfront',
-    slug: PT_SLUGS.zeroUpfront,
+    slug: getLandingSlug('pt', 'zeroUpfront'),
     badge: 'Desenvolvimento de app sem adiantamento',
     title: 'Desenvolvimento de app sem pagamento antecipado com contrato primeiro',
     intro:
@@ -240,7 +242,7 @@ const PT_CONTENT: LandingContentByLocale = {
   },
   llmRagIntegrations: {
     key: 'llmRagIntegrations',
-    slug: PT_SLUGS.llmRagIntegrations,
+    slug: getLandingSlug('pt', 'llmRagIntegrations'),
     badge: 'Integrações LLM para apps',
     title: 'Integrações LLM para aplicativos mobile e web',
     intro:
@@ -274,24 +276,18 @@ export const landingContentByLocale: Record<Locale, LandingContentByLocale> = {
 };
 
 export const landingSlugsByLocale: Record<Locale, Record<LandingPageKey, string>> = {
-  en: EN_SLUGS,
-  pt: PT_SLUGS
+  en: LANDING_PAGE_KEYS.reduce<Record<LandingPageKey, string>>((accumulator, key) => {
+    accumulator[key] = getLandingSlug('en', key);
+    return accumulator;
+  }, {} as Record<LandingPageKey, string>),
+  pt: LANDING_PAGE_KEYS.reduce<Record<LandingPageKey, string>>((accumulator, key) => {
+    accumulator[key] = getLandingSlug('pt', key);
+    return accumulator;
+  }, {} as Record<LandingPageKey, string>)
 };
 
-const LANDING_ROUTE_ALIASES: Record<string, LandingPageKey> = {};
-
-Object.entries(EN_SLUGS).forEach(([key, slug]) => {
-  LANDING_ROUTE_ALIASES[slug] = key as LandingPageKey;
-});
-Object.entries(PT_SLUGS).forEach(([key, slug]) => {
-  LANDING_ROUTE_ALIASES[slug] = key as LandingPageKey;
-});
-
-LANDING_ROUTE_ALIASES['/llm-rag-integrations-for-apps'] = 'llmRagIntegrations';
-LANDING_ROUTE_ALIASES['/integracoes-llm-rag-para-apps'] = 'llmRagIntegrations';
-
 export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | null =>
-  LANDING_ROUTE_ALIASES[routePath] ?? null;
+  (resolvePublicRoute(routePath)?.landingKey as LandingPageKey | undefined) ?? null;
 
 export const getLandingContent = (locale: Locale, key: LandingPageKey): LandingPageContent =>
   landingContentByLocale[locale][key];

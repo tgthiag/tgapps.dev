@@ -1,0 +1,233 @@
+{
+  "siteUrl": "https://tgapps.dev",
+  "defaultLocale": "en",
+  "localePrefixes": {
+    "en": "",
+    "pt": "pt-br"
+  },
+  "routes": [
+    {
+      "id": "home",
+      "page": "home",
+      "localizedPaths": {
+        "en": "/",
+        "pt": "/"
+      },
+      "seo": {
+        "en": {
+          "title": "US Small Business App Development | Android, iOS, Pods | TG Apps",
+          "description": "Founder-led Android and iOS app development pod for US small businesses. Zero upfront payment, contract-first delivery, weekly releases, and LLM integrations.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Desenvolvimento Global de Apps | Android, iOS e Pods | TG Apps",
+          "description": "Startup global liderada pelo fundador para apps Android e iOS, produtos born global, contrato primeiro, zero adiantamento, releases semanais e integrações LLM.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 1.0,
+          "pt": 0.95
+        }
+      }
+    },
+    {
+      "id": "androidIosSmb",
+      "page": "landing",
+      "landingKey": "androidIosSmb",
+      "localizedPaths": {
+        "en": "/android-ios-development-for-us-smb",
+        "pt": "/desenvolvimento-android-ios-para-pequenas-empresas"
+      },
+      "seo": {
+        "en": {
+          "title": "Android and iOS app development for US small businesses | TG Apps",
+          "description": "Founder-led mobile pod for US SMBs that need native or cross-platform delivery with contract-first billing, no upfront payment, and weekly releases.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Desenvolvimento Android e iOS para startups e empresas globais | TG Apps",
+          "description": "Pod mobile liderado pelo fundador para startups e empresas que precisam de entrega nativa ou cross-platform com contrato primeiro, sem adiantamento, releases semanais e visão de produto born global.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.9,
+          "pt": 0.85
+        }
+      }
+    },
+    {
+      "id": "monthlyPod",
+      "page": "landing",
+      "landingKey": "monthlyPod",
+      "localizedPaths": {
+        "en": "/mobile-development-pod-month-to-month",
+        "pt": "/pod-mobile-mensal-cancelamento-livre"
+      },
+      "seo": {
+        "en": {
+          "title": "Dedicated mobile development pod with month-to-month control | TG Apps",
+          "description": "Use TG Apps as a parallel delivery squad for Android, iOS, backend, and release management. No retainers, no penalties, and no long notice periods.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Pod dedicado de desenvolvimento mobile com controle mês a mês | TG Apps",
+          "description": "Use a TG Apps como squad paralelo para Android, iOS, backend e gerenciamento de release. Sem retainer, sem multa e sem prazo de aviso longo.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.88,
+          "pt": 0.84
+        }
+      }
+    },
+    {
+      "id": "zeroUpfront",
+      "page": "landing",
+      "landingKey": "zeroUpfront",
+      "localizedPaths": {
+        "en": "/zero-upfront-app-development",
+        "pt": "/desenvolvimento-app-sem-adiantamento"
+      },
+      "seo": {
+        "en": {
+          "title": "Zero upfront app development with contract-first delivery | TG Apps",
+          "description": "Finance-friendly setup for US teams: sign contract and NDA first, then start implementation without paying upfront before work begins.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Desenvolvimento de app sem pagamento antecipado com contrato primeiro | TG Apps",
+          "description": "Modelo comercial amigável para empresas de qualquer mercado: contrato e NDA primeiro, implementação em seguida, sem adiantamento antes de iniciar o trabalho.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.88,
+          "pt": 0.84
+        }
+      }
+    },
+    {
+      "id": "llmRagIntegrations",
+      "page": "landing",
+      "landingKey": "llmRagIntegrations",
+      "localizedPaths": {
+        "en": "/llm-integrations-for-apps",
+        "pt": "/integracoes-llm-para-apps"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/llm-rag-integrations-for-apps"
+        ],
+        "pt": [
+          "/integracoes-llm-rag-para-apps"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "LLM integrations for mobile and web applications | TG Apps",
+          "description": "Production-ready LLM integrations we deliver with guardrails, observability, and release coverage, using the vector, search, or knowledge stack your team already trusts.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Integrações LLM para aplicativos mobile e web | TG Apps",
+          "description": "Integrações LLM entregues em produção com guardrails, observabilidade e cobertura de release, usando o stack de vetor, busca ou conhecimento que seu time já confia.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.88,
+          "pt": 0.84
+        }
+      }
+    },
+    {
+      "id": "appsDirectory",
+      "page": "appsDirectory",
+      "localizedPaths": {
+        "en": "/apps",
+        "pt": "/apps"
+      },
+      "seo": {
+        "en": {
+          "title": "Apps by TG Apps | Mobile products we design and ship",
+          "description": "Explore mobile apps designed and operated by TG Apps, including AnyLanguage Conversations, a voice-first language practice app for natural speaking routines.",
+          "ogImage": "https://tgapps.dev/app-media/anylanguage/screen-home-en.png"
+        },
+        "pt": {
+          "title": "Apps da TG Apps | Produtos mobile que desenhamos e entregamos",
+          "description": "Conheça os apps desenhados e operados pela TG Apps, incluindo o AnyLanguage Conversations, um app de prática de idiomas com foco em fala natural.",
+          "ogImage": "https://tgapps.dev/app-media/anylanguage/screen-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.82,
+          "pt": 0.78
+        }
+      }
+    },
+    {
+      "id": "anyLanguage",
+      "page": "appDetail",
+      "appKey": "anyLanguage",
+      "localizedPaths": {
+        "en": "/apps/anylanguage",
+        "pt": "/apps/anylanguage"
+      },
+      "seo": {
+        "en": {
+          "title": "AnyLanguage Conversations | Voice-first language practice app",
+          "description": "See the AnyLanguage Conversations app: natural voice practice, Phone Call mode, vocabulary flows, and polished mobile screens across 50+ languages.",
+          "ogImage": "https://tgapps.dev/app-media/anylanguage/screen-home-en.png"
+        },
+        "pt": {
+          "title": "AnyLanguage Conversations | App de prática de idiomas com foco em voz",
+          "description": "Veja o AnyLanguage Conversations: prática natural de fala, Phone Call mode, vocabulário e telas mobile refinadas em mais de 50 idiomas.",
+          "ogImage": "https://tgapps.dev/app-media/anylanguage/screen-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.86,
+          "pt": 0.82
+        }
+      }
+    }
+  ]
+}
