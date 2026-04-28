@@ -49,12 +49,12 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
   return {
     title:
       locale === 'pt'
-        ? 'Desenvolvimento Global de Apps | Android, iOS e Pods | TG Apps'
-        : 'US Small Business App Development | Android, iOS, Pods | TG Apps',
+        ? 'Software sob medida para startups e empresas | CRM, apps e sistemas | TG Apps'
+        : 'Custom Software for Startups & SMBs | CRM, Apps, Internal Tools | TG Apps',
     description:
       locale === 'pt'
-        ? 'Startup global liderada pelo fundador para apps Android e iOS, produtos born global, contrato primeiro, zero adiantamento, releases semanais e integrações LLM.'
-        : 'Founder-led Android and iOS app development pod for US small businesses. Zero upfront payment, contract-first delivery, weekly releases, and LLM integrations.',
+        ? 'Software sob medida, CRM, ferramentas internas, dashboards, automacoes, apps mobile, APIs e integrações de IA para startups e empresas em crescimento.'
+        : 'Custom software, CRM, internal tools, dashboards, workflow automation, mobile apps, APIs, and AI integrations for startups and SMB teams.',
     image: 'https://tgapps.dev/og-home.png',
     robots: 'index,follow',
     localizedRoutePaths: { en: '/', pt: '/' }

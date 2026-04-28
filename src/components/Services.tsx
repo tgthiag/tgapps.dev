@@ -1,8 +1,15 @@
 import { Smartphone, Cpu, Cable, ArrowRight, CheckCircle, Zap } from 'lucide-react';
-import { useTranslations } from '../context/LanguageContext';
+import { useLanguage, useTranslations } from '../context/LanguageContext';
+import { landingSlugsByLocale } from '../content/landingPages';
 
 const Services = () => {
+  const { language } = useLanguage();
   const t = useTranslations();
+  const serviceLandingHrefs = [
+    landingSlugsByLocale[language].customCrmInternalTools,
+    landingSlugsByLocale[language].androidIosSmb,
+    landingSlugsByLocale[language].llmRagIntegrations
+  ];
   const iconPalette = [Smartphone, Cpu, Cable];
   const colorPalette = [
     { bg: 'bg-blue-50', gradient: 'from-blue-500 to-indigo-500', icon: 'text-blue-700' },
@@ -76,7 +83,7 @@ const Services = () => {
             </div>
             <div className='absolute -bottom-6 left-6 bg-white shadow-xl rounded-2xl px-6 py-4 max-w-sm'>
               <p className='text-xs uppercase tracking-[0.25em] text-gray-500 mb-1'>Release kit</p>
-              <p className='text-sm font-semibold text-gray-900'>Deploys and support hours already included in every pod.</p>
+              <p className='text-sm font-semibold text-gray-900'>Deploys and support hours already included in the engagement.</p>
             </div>
           </div>
         </div>
@@ -96,6 +103,7 @@ const Services = () => {
               const IconComponent = service.IconComponent;
               const badgeClasses = 'w-16 h-16 ' + service.bg + ' rounded-2xl flex items-center justify-center mb-6';
               const iconClasses = 'w-8 h-8 ' + service.icon;
+              const landingHref = serviceLandingHrefs[index];
               return (
                 <div
                   key={service.title + '-' + index}
@@ -117,14 +125,21 @@ const Services = () => {
                       </li>
                     ))}
                   </ul>
-                  <button
-                    type='button'
-                    onClick={() => scrollToSection('contato')}
-                    className='group/btn inline-flex items-center text-blue-600 font-semibold'
-                  >
-                    <span>{service.cta}</span>
-                    <ArrowRight className='w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1' />
-                  </button>
+                  {landingHref ? (
+                    <a href={landingHref} className='group/btn inline-flex items-center text-blue-600 font-semibold'>
+                      <span>{service.cta}</span>
+                      <ArrowRight className='w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1' />
+                    </a>
+                  ) : (
+                    <button
+                      type='button'
+                      onClick={() => scrollToSection('contato')}
+                      className='group/btn inline-flex items-center text-blue-600 font-semibold'
+                    >
+                      <span>{service.cta}</span>
+                      <ArrowRight className='w-4 h-4 ml-2 transition-transform group-hover/btn:translate-x-1' />
+                    </button>
+                  )}
                 </div>
               );
             })}

@@ -1,0 +1,995 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TG Apps - Plano de Mudanca do Site</title>
+  <style>
+    :root {
+      --bg: #07111f;
+      --panel: #0f1c33;
+      --panel-soft: #152544;
+      --border: #24395f;
+      --text: #e5eefc;
+      --muted: #9fb3d1;
+      --blue: #5ea7ff;
+      --green: #3dd598;
+      --amber: #ffb84d;
+      --red: #ff6b6b;
+      --shadow: 0 18px 50px rgba(0, 0, 0, 0.25);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background:
+        radial-gradient(circle at top right, rgba(94, 167, 255, 0.14), transparent 24%),
+        linear-gradient(180deg, #07111f 0%, #0a1629 100%);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 24px 72px;
+    }
+
+    .hero {
+      padding: 28px 0 20px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border-radius: 999px;
+      background: rgba(94, 167, 255, 0.12);
+      color: #cfe3ff;
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 12px;
+      font-size: clamp(2rem, 4vw, 3.5rem);
+      line-height: 1.08;
+    }
+
+    .lead {
+      max-width: 840px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 28px;
+      background: rgba(15, 28, 51, 0.92);
+      border: 1px solid var(--border);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      font-size: 1.55rem;
+      color: #dcebff;
+    }
+
+    .section h3 {
+      margin: 0 0 10px;
+      font-size: 1.05rem;
+      color: #d8e7ff;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    }
+
+    .card {
+      background: var(--panel-soft);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .card p:last-child,
+    .card ul:last-child,
+    .card ol:last-child {
+      margin-bottom: 0;
+    }
+
+    .metric {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 4px;
+      color: #f5f9ff;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    ul,
+    ol {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 6px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    th,
+    td {
+      border: 1px solid var(--border);
+      padding: 14px 16px;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #10203e;
+      color: #cfe3ff;
+      font-size: 0.92rem;
+    }
+
+    td {
+      background: #0c182d;
+    }
+
+    code {
+      background: #08101f;
+      border: 1px solid #213353;
+      border-radius: 6px;
+      padding: 2px 6px;
+      color: #d8e7ff;
+      font-size: 0.92em;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .tag-blue { background: rgba(94, 167, 255, 0.15); color: #cfe3ff; }
+    .tag-green { background: rgba(61, 213, 152, 0.14); color: #b9f5dc; }
+    .tag-amber { background: rgba(255, 184, 77, 0.15); color: #ffe0aa; }
+    .tag-red { background: rgba(255, 107, 107, 0.14); color: #ffc0c0; }
+
+    .callout {
+      border-left: 4px solid var(--blue);
+      padding: 14px 16px;
+      background: rgba(94, 167, 255, 0.08);
+      border-radius: 0 16px 16px 0;
+      margin-top: 12px;
+      color: #d8e7ff;
+    }
+
+    .two-col {
+      columns: 2 280px;
+      gap: 24px;
+    }
+
+    .two-col p,
+    .two-col ul {
+      break-inside: avoid;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .section {
+        padding: 22px 18px;
+      }
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        border-top: none;
+      }
+
+      td:first-child {
+        border-top: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="eyebrow">Planejamento de mudanca do site</div>
+      <h1>TG Apps - reposicionamento para ser encontrada por <br />Startups &amp; SMBs</h1>
+      <p class="lead">
+        Este documento consolida o diagnostico do site atual, a direcao de posicionamento recomendada e o plano
+        de execucao para alinhar home, landing pages, SEO e anuncios ao que a TG Apps realmente vende:
+        software sob medida, apps, CRMs, dashboards, ferramentas internas, automacoes e integracoes para
+        startups e pequenas/medias empresas.
+      </p>
+    </header>
+
+    <section class="section">
+      <h2>Resumo executivo</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="metric">Problema central</div>
+          <p class="muted">
+            O site enfatiza <code>small business</code>, <code>app development</code> e <code>pods</code>, mas os
+            anuncios e a oferta real falam de CRM, sistemas internos, dashboards, automacoes e software sob medida.
+          </p>
+        </div>
+        <div class="card">
+          <div class="metric">Impacto</div>
+          <p class="muted">
+            Aquisicao e destino estao desalinhados. O clique chega com uma intencao e encontra uma promessa diferente,
+            o que enfraquece SEO, CTR, conversao e clareza de posicionamento.
+          </p>
+        </div>
+        <div class="card">
+          <div class="metric">Nova direcao</div>
+          <p class="muted">
+            Reposicionar a marca para <strong>Startups &amp; SMBs</strong>, tirar <code>pod/pods</code> das superficies
+            principais e construir paginas por intencao real de busca.
+          </p>
+        </div>
+      </div>
+      <div class="callout">
+        A empresa oferece o que o anuncio promete. Portanto, a correcao principal nao esta no anuncio: esta no site.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Diagnostico do estado atual</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>1. O SEO nao esta zerado, mas ainda nao existe descoberta relevante</h3>
+          <ul>
+            <li>O Search Console indica aparicoes no Google, entao o site ja entrou no indice.</li>
+            <li>Quase toda a descoberta observada ate agora ainda parece vir de marca.</li>
+            <li>Isso indica footprint organico pequeno para consultas comerciais nao-marca.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>2. O vocabulário principal esta desalinhado com a realidade da oferta</h3>
+          <ul>
+            <li><code>Pods</code> e linguagem interna/comercial, nao linguagem natural de busca.</li>
+            <li><code>Small business</code> e amplo e pode soar local/tradicional demais.</li>
+            <li>O site vende muito <code>mobile app development</code> enquanto a oferta real e bem mais ampla.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>3. O anuncio e a home estao falando de negocios diferentes</h3>
+          <ul>
+            <li>O anuncio fala de planilhas, CRM, sistema interno, operacao e fluxo financeiro.</li>
+            <li>O preview da home fala de <code>US Small Business App Development</code>.</li>
+            <li>Essa ruptura reduz aderencia entre a intencao do clique e a pagina de destino.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>4. O ICP esta misturado</h3>
+          <ul>
+            <li>Em varios pontos o site mistura startup, small business, agencies, IT leaders e mobile-first.</li>
+            <li>A TG Apps pode atender varios perfis, mas a home precisa ter uma narrativa principal clara.</li>
+            <li>A recomendacao e assumir dois ICPs explicitos: <strong>Startups</strong> e <strong>SMBs</strong>.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Decisao de posicionamento</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Tema</th>
+            <th>Direcao recomendada</th>
+            <th>Motivo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>ICP principal</td>
+            <td><strong>Startups &amp; SMBs</strong></td>
+            <td>Representa melhor quem compra software sob medida, apps, ferramentas internas e automacoes.</td>
+          </tr>
+          <tr>
+            <td>Termo a reduzir</td>
+            <td><code>small business</code></td>
+            <td>Termo amplo, menos preciso e, em varios contextos, desalinhado com a proposta mais consultiva/tecnica.</td>
+          </tr>
+          <tr>
+            <td>Termo a retirar das superficies principais</td>
+            <td><code>pod / pods</code></td>
+            <td>E embalagem comercial, nao promessa de valor pesquisada naturalmente por clientes.</td>
+          </tr>
+          <tr>
+            <td>Linguagem mais direta</td>
+            <td><code>custom software</code>, <code>custom CRM</code>, <code>internal tools</code>, <code>dashboards</code>, <code>app development team</code>, <code>dedicated development team</code></td>
+            <td>Termos mais literais, mais compreensiveis e mais proximos da intencao de busca.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Restricao critica de compliance</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Rotas que nao podem mudar</h3>
+          <ul>
+            <li><code>/my_business_idea_privacy</code></li>
+            <li><code>/privacy_policy</code></li>
+            <li><code>/my_business_idea_delete_account</code></li>
+            <li><code>/account_deletion</code></li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Motivo</h3>
+          <p class="muted">
+            Essas URLs ja estao sendo usadas em compliance de lojas, incluindo Play Store e App Store. Portanto,
+            o reposicionamento do site nao pode renomear, remover ou redirecionar essas rotas sem uma atualizacao
+            coordenada nos cadastros externos.
+          </p>
+        </div>
+      </div>
+      <div class="callout">
+        O plano de mudanca deve atuar sobre home, landing pages comerciais, metadata e arquitetura de aquisicao,
+        preservando integralmente as rotas legais ja publicadas.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Novo enunciado da marca</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Mensagem principal recomendada</h3>
+          <p>
+            <strong>Custom software for startups and SMB teams.</strong>
+          </p>
+          <p class="muted">
+            Apps, CRMs, internal tools, dashboards, automations, backend systems and AI integrations built by one team.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Promessa operacional</h3>
+          <p>
+            A TG Apps entra como time de execucao e entrega produto, backend, interface, dados, integrações e release
+            em ritmo semanal, com contrato simples e baixa burocracia.
+          </p>
+        </div>
+      </div>
+      <div class="callout">
+        O modelo comercial pode continuar existindo como diferencial interno, mas ele nao deve liderar title, hero,
+        preview social ou H1.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Arquitetura recomendada do site</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Home</h3>
+          <ul>
+            <li>Pagina institucional principal com foco em Startups &amp; SMBs.</li>
+            <li>Apresenta a empresa inteira, nao apenas mobile.</li>
+            <li>Mostra clusters de oferta: apps, software interno, CRM, dashboards, integracoes, AI.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Landing pages por intencao</h3>
+          <ul>
+            <li><code>/custom-software-for-startups</code></li>
+            <li><code>/custom-software-for-smbs</code></li>
+            <li><code>/custom-crm-and-internal-tools</code></li>
+            <li><code>/mobile-app-development-for-startups-and-smbs</code></li>
+            <li><code>/ai-integrations-for-crm-and-internal-tools</code></li>
+            <li><code>/dedicated-development-team-month-to-month</code></li>
+            <li><code>/zero-upfront-custom-software-development</code></li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 18px;">
+        <h3>Regra de ouro</h3>
+        <p class="muted">
+          Cada anuncio, post, outreach ou campanha deve apontar para a pagina cuja promessa coincide com o texto de
+          aquisicao. Nao enviar tudo para a home.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Plano para a home</h2>
+      <div class="two-col">
+        <p><strong>Hero:</strong> abandonar o eixo "US Small Business App Development" e assumir "Custom software for startups and SMBs".</p>
+        <ul>
+          <li>H1 deve vender a categoria real da empresa.</li>
+          <li>Subtitulo deve listar os blocos da oferta real: apps, CRM, internal tools, dashboards, automations, backend e AI integrations.</li>
+          <li>CTA principal deve levar para contato ou discovery.</li>
+        </ul>
+        <p><strong>Bloco de servicos:</strong> reorganizar por problema/resultado, nao por linguagem interna.</p>
+        <ul>
+          <li>Custom software &amp; internal systems</li>
+          <li>CRM, dashboards &amp; operations tooling</li>
+          <li>Mobile apps &amp; customer-facing products</li>
+          <li>AI / LLM integrations</li>
+        </ul>
+        <p><strong>Bloco "quem atendemos":</strong> separar explicitamente <strong>Startups</strong> de <strong>SMBs</strong>.</p>
+        <ul>
+          <li>Startups: MVP, product delivery, launch, iteration, backend + app.</li>
+          <li>SMBs: CRM, dashboards, internal tools, workflow automation, disconnected systems.</li>
+        </ul>
+        <p><strong>Modelo comercial:</strong> mover a ideia de time mensal / flexibilidade para uma secao secundaria.</p>
+        <ul>
+          <li>Continuar podendo falar de contrato simples, mensalidade, cancelamento livre e zero upfront.</li>
+          <li>Mas isso deve entrar como modo de trabalho, nao como nome da oferta.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Plano para as novas landings</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pagina</th>
+            <th>Intencao</th>
+            <th>Mensagem principal</th>
+            <th>Origem ideal do trafego</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>/custom-crm-and-internal-tools</code></td>
+            <td>Empresas com planilhas, processos manuais e sistemas desconectados</td>
+            <td>CRM sob medida, dashboards, workflow e sistema interno para operacao</td>
+            <td>Anuncios como o exemplo atual, outreach, grupos, social posts</td>
+          </tr>
+          <tr>
+            <td><code>/custom-software-for-smbs</code></td>
+            <td>SMBs que precisam modernizar a operacao ou criar software proprio</td>
+            <td>Software sob medida para pequenas e medias empresas</td>
+            <td>Busca organica, campanhas amplas e conteudo comparativo</td>
+          </tr>
+          <tr>
+            <td><code>/custom-software-for-startups</code></td>
+            <td>Fundadores e times de produto em construcao ou aceleracao</td>
+            <td>Product delivery, app, backend e MVP/iteration</td>
+            <td>Busca organica, comunidades de startup, cold outreach</td>
+          </tr>
+          <tr>
+            <td><code>/mobile-app-development-for-startups-and-smbs</code></td>
+            <td>Busca explicita por desenvolvimento mobile</td>
+            <td>Android, iOS, Flutter e React Native com backend e release</td>
+            <td>Busca organica especifica mobile</td>
+          </tr>
+          <tr>
+            <td><code>/ai-integrations-for-crm-and-internal-tools</code></td>
+            <td>Times buscando IA aplicada ao produto ou operacao</td>
+            <td>Integracoes LLM com guardrails, dados, dashboards e operacao</td>
+            <td>Busca organica e conteudo tecnico</td>
+          </tr>
+          <tr>
+            <td><code>/dedicated-development-team-month-to-month</code></td>
+            <td>Quem busca equipe dedicada / monthly team</td>
+            <td>Equipe de desenvolvimento dedicada com contrato flexivel</td>
+            <td>Busca por modelo comercial ou comparacao de outsourcing</td>
+          </tr>
+          <tr>
+            <td><code>/zero-upfront-custom-software-development</code></td>
+            <td>Quem tem barreira de caixa, compras ou aprovacao interna</td>
+            <td>Software sob medida com contrato primeiro e sem pagamento antecipado</td>
+            <td>Anuncios, outbound e comparacao comercial</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Especificacao da landing prioritaria - Internal Tools &amp; CRMs</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Objetivo</h3>
+          <p class="muted">
+            Criar a principal pagina de destino para anuncios e posts que falam de planilhas, ferramentas
+            desconectadas, CRM sob medida, dashboards operacionais, workflow e sistema interno.
+          </p>
+        </div>
+        <div class="card">
+          <h3>ICP</h3>
+          <p class="muted">
+            SMBs e operacoes em crescimento que ja sentem atrito real de processo, financeiro, atendimento,
+            aprovacoes, visibilidade ou handoff entre equipes.
+          </p>
+        </div>
+      </div>
+
+      <table style="margin-top: 18px;">
+        <thead>
+          <tr>
+            <th>Elemento</th>
+            <th>Direcao recomendada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Slug EN</td>
+            <td><code>/custom-crm-and-internal-tools</code></td>
+          </tr>
+          <tr>
+            <td>Slug PT</td>
+            <td><code>/crm-e-ferramentas-internas-sob-medida</code></td>
+          </tr>
+          <tr>
+            <td>Title EN</td>
+            <td><code>Custom Internal Tools, CRM &amp; Business Systems for Startups and SMBs | TG Apps</code></td>
+          </tr>
+          <tr>
+            <td>Meta description EN</td>
+            <td>Custom internal tools, CRM, dashboards, workflow automation, scheduling, lead operations, and business systems for startups and SMB teams that outgrew spreadsheets and disconnected software.</td>
+          </tr>
+          <tr>
+            <td>Hero angle</td>
+            <td>Replace spreadsheets and disconnected tools with internal software, CRM, dashboards, and business systems built around your operation.</td>
+          </tr>
+          <tr>
+            <td>CTA principal</td>
+            <td><code>Schedule a discovery call</code> / <code>Agendar discovery call</code></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card" style="margin-top: 18px;">
+        <h3>Blocos recomendados na pagina</h3>
+        <ul>
+          <li><strong>Hero:</strong> dor operacional + promessa de transformação.</li>
+          <li><strong>Sinais de problema:</strong> planilhas, retrabalho, falta de visibilidade, aprovacoes lentas, software desconectado.</li>
+          <li><strong>O que construimos:</strong> CRM, dashboards, admin tools, scheduling, lead operations, customer apps, employee apps, workflow, portals, automations, APIs e database.</li>
+          <li><strong>Como entregamos:</strong> discovery, definicao de fluxo, construcao, demos semanais, rollout e suporte.</li>
+          <li><strong>Melhor encaixe:</strong> operacoes com dores reais de processo e ganho claro com software proprio.</li>
+          <li><strong>Contato:</strong> bloco simples com CTA e e-mail.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top: 18px;">
+        <h3>Linguagem que deve aparecer nessa landing</h3>
+        <ul>
+          <li><code>custom internal tools</code></li>
+          <li><code>custom CRM</code></li>
+          <li><code>business systems</code></li>
+          <li><code>internal tools</code></li>
+          <li><code>dashboards</code></li>
+          <li><code>workflow automation</code></li>
+          <li><code>operations software</code></li>
+          <li><code>scheduling software</code></li>
+          <li><code>lead management</code> / <code>lead operations</code></li>
+          <li><code>customer portal</code> / <code>employee app</code></li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top: 18px;">
+        <h3>Observacao estrategica importante</h3>
+        <p class="muted">
+          A landing nao deve enquadrar a TG Apps como "empresa que faz CRM". O CRM e uma das pecas. A narrativa maior
+          precisa ser: <strong>sistemas internos e software operacional sob medida</strong> que podem incluir CRM,
+          scheduling, lead capture and conversion, dashboards, apps para cliente e apps para employee.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Reaproveitamento de header e footer</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Footer</h3>
+          <p class="muted">
+            Vale reaproveitar. O rodape ja carrega marca, contato e identidade visual coerentes com o restante do site.
+            A unica adaptacao recomendada e ajustar links que hoje dependem do scroll da home para um modo de landing.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Header</h3>
+          <p class="muted">
+            Vale reaproveitar o visual, mas nao o comportamento bruto. O header atual esta acoplado a secoes da home,
+            entao na landing ele precisa entrar em <strong>modo landing</strong>, com navegacao simplificada.
+          </p>
+        </div>
+      </div>
+
+      <table style="margin-top: 18px;">
+        <thead>
+          <tr>
+            <th>Componente</th>
+            <th>Pode reaproveitar?</th>
+            <th>Como</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Header</td>
+            <td><span class="tag tag-amber">Sim, com adaptacao</span></td>
+            <td>Logo + link para home + idioma + CTA. Remover, nessa landing, os itens de nav que tentam scrollar secoes da home.</td>
+          </tr>
+          <tr>
+            <td>Footer</td>
+            <td><span class="tag tag-green">Sim</span></td>
+            <td>Reaproveitar estrutura e contato, adaptando links internos para a landing ou para a home quando necessario.</td>
+          </tr>
+          <tr>
+            <td>Hero / corpo da pagina</td>
+            <td><span class="tag tag-blue">Nao como estao</span></td>
+            <td>Precisam ser novos, com narrativa especifica de CRM, sistema interno, dashboards e operacao.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Estrategia de preco na landing</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Decisao recomendada</h3>
+          <p class="muted">
+            Mostrar preco <strong>sim</strong>, mas nao como primeira mensagem do hero. Para esse tipo de servico
+            customizado, a melhor leitura e apresentar primeiro a dor, depois a capacidade de entrega e o encaixe,
+            e so entao introduzir o valor como acelerador de shortlist.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Motivo</h3>
+          <p class="muted">
+            Compradores B2B norte-americanos valorizam transparencia de preco para shortlist, alinhamento interno e
+            aprovacao. Ao mesmo tempo, como a oferta e ampla e consultiva, jogar o valor no topo sem contexto pode
+            rebaixar a percepcao da solucao para "servico barato" antes do usuario entender o escopo.
+          </p>
+        </div>
+      </div>
+
+      <table style="margin-top: 18px;">
+        <thead>
+          <tr>
+            <th>Elemento</th>
+            <th>Direcao recomendada</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Posicao do preco</td>
+            <td>Secao intermediaria ou final da landing, apos valor, encaixe e forma de entrega.</td>
+          </tr>
+          <tr>
+            <td>Forma de apresentar</td>
+            <td><strong>Current introductory rate: USD 2,000/month.</strong></td>
+          </tr>
+          <tr>
+            <td>Mensagem de permanencia</td>
+            <td>Deixar explicito que o valor fica travado para quem entra nessa faixa enquanto o contrato/engajamento permanecer ativo.</td>
+          </tr>
+          <tr>
+            <td>Mensagem de escassez</td>
+            <td>Preferir <code>limited-time introductory rate</code> em vez de <code>for the first 3 clients</code>, para reduzir ansiedade e parecer menos artificial.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div class="card" style="margin-top: 18px;">
+        <h3>Formula recomendada</h3>
+        <p>
+          <strong>Current introductory rate: USD 2,000/month.</strong>
+        </p>
+        <p class="muted">
+          Limited-time pricing for new engagements. If you join at this rate, it stays fixed for your account while the engagement remains active.
+        </p>
+      </div>
+
+      <div class="callout">
+        A recomendacao aqui e uma inferencia de conversao baseada no tipo de oferta da TG Apps e em pesquisas B2B:
+        compradores querem transparencia de preco, mas uma oferta custom e multi-camada tende a performar melhor quando
+        o valor entra depois que a pagina ja qualificou a dor e o escopo.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Trocas de linguagem recomendadas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Evitar como headline principal</th>
+            <th>Preferir</th>
+            <th>Observacao</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>pods</code></td>
+            <td><code>development team</code>, <code>custom software team</code>, <code>dedicated team</code></td>
+            <td><code>pod</code> pode permanecer no discurso comercial secundario.</td>
+          </tr>
+          <tr>
+            <td><code>small business app development</code></td>
+            <td><code>custom software for startups and SMBs</code></td>
+            <td>Amplia o espectro real da empresa e melhora a aderencia entre oferta e busca.</td>
+          </tr>
+          <tr>
+            <td><code>mobile-first</code> em tudo</td>
+            <td><code>apps, CRM, dashboards, internal tools, automations</code></td>
+            <td>Mobile passa a ser uma linha de oferta, nao o unico enquadramento.</td>
+          </tr>
+          <tr>
+            <td><code>CRM</code> como nome de toda a categoria</td>
+            <td><code>internal tools, CRM and business systems</code></td>
+            <td>CRM e forte como keyword, mas pequeno demais para representar a amplitude real da oferta.</td>
+          </tr>
+          <tr>
+            <td><code>small business</code> como unico ICP</td>
+            <td><code>startups and SMB teams</code></td>
+            <td>Mais coerente com o tipo de dor, ticket e maturidade operacional.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Plano de SEO e descoberta</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Superficies a atualizar primeiro</h3>
+          <ul>
+            <li><code>index.html</code> - title e description iniciais</li>
+            <li><code>src/seo/routeSeo.ts</code> - fallback de SEO por rota</li>
+            <li><code>src/content/publicRoutes.json</code> - titles, descriptions e slugs</li>
+            <li><code>src/content/landingPages.ts</code> - conteudo das landings</li>
+            <li><code>src/i18n/translations.ts</code> - copy da home e do contato</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Principios de execucao</h3>
+          <ul>
+            <li>Cada pagina precisa ter uma promessa clara e um H1 coerente com seu title.</li>
+            <li>Remover termos internos das superficies principais de busca.</li>
+            <li>Usar palavras que o comprador realmente diria ou buscaria.</li>
+            <li>Conectar home e landings com links internos claros e ancoras legiveis.</li>
+            <li>Quando o preco ajudar a qualificar e acelerar shortlist, mostrar com contexto e com linguagem de permanencia.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        O objetivo nao e "encher de keywords". O objetivo e alinhar a linguagem do site a linguagem da dor e da procura.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Plano para anuncios e aquisicao</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>O que manter</h3>
+          <ul>
+            <li>O anuncio atual comunica uma dor real: planilhas, ferramentas desconectadas, CRM e fluxo financeiro.</li>
+            <li>Essa linha e boa para SMBs com operacao travada.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>O que corrigir</h3>
+          <ul>
+            <li>Esse anuncio nao deve levar para a home atual.</li>
+            <li>Ele deve apontar para uma landing dedicada de CRM / internal systems.</li>
+            <li>O preview social da pagina compartilhada precisa refletir essa promessa.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="card" style="margin-top: 18px;">
+        <h3>Mapeamento recomendado</h3>
+        <ul>
+          <li>Anuncio sobre CRM, sistema interno, operacao e planilhas - landing de <code>custom CRM and internal tools</code>.</li>
+          <li>Anuncio sobre app, produto, lancamento e MVP - landing de <code>custom software for startups</code> ou <code>mobile app development</code>.</li>
+          <li>Anuncio sobre time mensal / equipe externa / flexibilidade - landing de <code>dedicated development team</code>.</li>
+        </ul>
+      </div>
+
+      <div class="card" style="margin-top: 18px;">
+        <h3>Insight estrategico de venda</h3>
+        <p class="muted">
+          Parte da narrativa comercial pode educar o cliente para uma tese mais ambiciosa: o sistema interno que hoje
+          organiza a sua operacao pode, em alguns casos, virar um ativo vendavel, uma plataforma vertical ou um produto
+          para o seu proprio mercado. Isso nao deve ser o centro da home, mas pode entrar como insight de capacidade
+          e visao em landings, vendas ou cases.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Fases de implementacao</h2>
+      <ol>
+        <li>
+          <strong>Fase 1 - Reposicionamento da home</strong>
+          <ul>
+            <li>Reescrever hero, metadata e secoes principais.</li>
+            <li>Retirar <code>pods</code> das superficies centrais.</li>
+            <li>Introduzir eixo <strong>Startups &amp; SMBs</strong>.</li>
+            <li>Preservar todas as rotas legais e de privacidade existentes.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Fase 2 - Criacao das landings criticas</strong>
+          <ul>
+            <li>Prioridade maxima para <code>/custom-crm-and-internal-tools</code>.</li>
+            <li>Depois <code>/custom-software-for-smbs</code> e <code>/custom-software-for-startups</code>.</li>
+            <li>Introduzir modo de landing no header e no footer para reaproveitar a estrutura sem quebrar a navegacao.</li>
+            <li>Adicionar secao de pricing contextualizado na landing prioritaria.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Fase 3 - Alinhamento de aquisicao</strong>
+          <ul>
+            <li>Atualizar links dos anuncios e posts.</li>
+            <li>Revisar previews sociais, titles e descriptions das paginas alvo.</li>
+          </ul>
+        </li>
+        <li>
+          <strong>Fase 4 - Medicao e iteracao</strong>
+          <ul>
+            <li>Monitorar consultas nao-marca, impressões por landing, CTR e conversoes.</li>
+            <li>Refinar copy com base nas paginas que atraem impressoes relevantes.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Indicadores de sucesso</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>SEO / Descoberta</h3>
+          <ul>
+            <li>Aumento de impressões em consultas nao-marca.</li>
+            <li>Crescimento de consultas relacionadas a custom software, CRM, internal tools e dashboards.</li>
+            <li>Mais paginas recebendo impressões alem da home.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Aquisicao / Conversao</h3>
+          <ul>
+            <li>Melhor aderencia entre anuncio e pagina de destino.</li>
+            <li>Mais cliques qualificados em CTA de contato.</li>
+            <li>Mais leads com escopo alinhado ao texto de aquisicao.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Referencias externas que sustentam as decisoes</h2>
+      <ul>
+        <li>
+          <a href="https://6sense.com/science-of-b2b/buyer-experience-report-2025/" target="_blank" rel="noopener noreferrer" style="color:#9ecbff;">
+            6sense - The B2B Buyer Experience Report 2025
+          </a>
+          <span class="muted">: compradores normalmente chegam ao primeiro contato ja com favorito e tendem a decidir grande parte da jornada antes de falar com vendas.</span>
+        </li>
+        <li>
+          <a href="https://learn.g2.com/software-pricing-transparency" target="_blank" rel="noopener noreferrer" style="color:#9ecbff;">
+            G2 - Software Pricing Transparency
+          </a>
+          <span class="muted">: transparencia de preco ajuda shortlist, confianca e alinhamento com times internos.</span>
+        </li>
+        <li>
+          <a href="https://investor.forrester.com/node/16366/pdf" target="_blank" rel="noopener noreferrer" style="color:#9ecbff;">
+            Forrester - Global B2B Buyers' Journey Survey
+          </a>
+          <span class="muted">: compradores estao sensiveis a preco e esperam transparencia upfront com demonstracao de ROI.</span>
+        </li>
+        <li>
+          <a href="https://www.emarketer.com/content/b2b-tech-buyers-crave-pricing-transparency" target="_blank" rel="noopener noreferrer" style="color:#9ecbff;">
+            EMARKETER / TrustRadius - B2B tech buyers crave pricing transparency
+          </a>
+          <span class="muted">: transparencia de preco aparece como desejo prioritario de compradores de tecnologia.</span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section">
+      <h2>Decisoes praticas para o proximo ciclo</h2>
+      <ol>
+        <li>Reposicionar a home para <strong>custom software for startups and SMBs</strong>.</li>
+        <li>Criar a landing <strong>custom CRM and internal tools</strong> como prioridade imediata.</li>
+        <li>Trocar o vocabulário principal de <code>pods</code> por linguagem de busca mais direta.</li>
+        <li>Revisar todos os titles e descriptions em <code>index.html</code>, <code>routeSeo.ts</code> e <code>publicRoutes.json</code>.</li>
+        <li>Passar a conectar cada anuncio a uma landing coerente com a promessa do anuncio.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Status de execucao aplicado</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Implementado nesta etapa</h3>
+          <ul>
+            <li>Nova landing EN/PT para <code>/custom-software-for-smbs</code> e <code>/pt-br/software-sob-medida-para-empresas</code>.</li>
+            <li>Nova landing EN/PT para <code>/custom-software-for-startups</code> e <code>/pt-br/software-sob-medida-para-startups</code>.</li>
+            <li>Nova landing EN/PT para <code>/custom-crm-and-internal-tools</code> e <code>/pt-br/crm-e-ferramentas-internas-sob-medida</code>.</li>
+            <li>Rota mobile reposicionada para <code>/mobile-app-development-for-startups-and-smbs</code> com aliases antigos preservados.</li>
+            <li>Rota AI/LLM reposicionada para <code>/ai-integrations-for-crm-and-internal-tools</code> com aliases antigos preservados.</li>
+            <li>Rota zero upfront reposicionada para <code>/zero-upfront-custom-software-development</code> com aliases antigos preservados.</li>
+            <li>Rota de time dedicado mantida como <code>/dedicated-development-team-month-to-month</code> com conteudo sem linguagem principal de pods.</li>
+            <li>Home reposicionada para custom software, CRM, internal tools, apps e integrações para startups e SMBs.</li>
+            <li>Metatags base, Open Graph, Twitter card e JSON-LD atualizados no <code>index.html</code>.</li>
+            <li>Manifest de rotas, SEO dinâmico e sitemap atualizados para 10 definicoes de rota e 20 URLs localizadas.</li>
+            <li>Header e footer reaproveitados em modo landing.</li>
+            <li>Preço contextualizado como valor introdutório de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.</li>
+            <li>Cards de servicos da home agora apontam para landings comerciais especificas, distribuindo SEO interno.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Preservado</h3>
+          <ul>
+            <li><code>/my_business_idea_privacy</code></li>
+            <li><code>/privacy_policy</code></li>
+            <li><code>/my_business_idea_delete_account</code></li>
+            <li><code>/account_deletion</code></li>
+            <li>Alias das rotas antigas de monthly development para não quebrar URLs já existentes.</li>
+            <li>Alias das rotas antigas de mobile, AI/LLM e zero upfront para nao quebrar URLs compartilhadas.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        Proxima etapa recomendada: revisar visualmente as novas landings, apontar cada anuncio para a landing correspondente e acompanhar no Search Console quais consultas nao-marca passam a gerar impressoes.
+      </div>
+    </section>
+
+    <div class="footer">
+      Documento de planejamento criado em 28/04/2026 para orientar a mudanca de posicionamento e estrutura do site TG Apps.
+    </div>
+  </div>
+</body>
+</html>

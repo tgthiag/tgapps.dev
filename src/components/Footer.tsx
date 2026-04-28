@@ -1,7 +1,15 @@
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
-import { useTranslations } from '../context/LanguageContext';
+import { useLanguage, useTranslations } from '../context/LanguageContext';
 
-const Footer = () => {
+interface FooterProps {
+  variant?: 'home' | 'landing';
+  ctaHref?: string;
+  ctaLabel?: string;
+  onCtaClick?: () => void;
+}
+
+const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps) => {
+  const { language } = useLanguage();
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -15,12 +23,15 @@ const Footer = () => {
 
   const currentYear = new Date().getFullYear();
   const t = useTranslations();
+  const isLanding = variant === 'landing';
+  const homeHref = language === 'pt' ? '/pt-br/' : '/';
   const navigationLinks = t.footer.navigation ?? [];
   const servicesList = t.footer.services ?? [];
   const hasNavigation = navigationLinks.length > 0;
   const hasServices = servicesList.length > 0 && Boolean(t.footer.servicesHeading);
   const contactInfo = t.footer.contact;
   const copyright = t.footer.bottom.copyright.replace('{year}', currentYear.toString());
+  const resolvedCtaLabel = ctaLabel ?? t.footer.cta;
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -29,10 +40,10 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-3 mb-6">
+            <a href={homeHref} className="flex items-center space-x-3 mb-6">
               <img src="/logo.png" alt="Tg Apps" className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1" />
               <span className="text-xl font-bold">Tg Apps</span>
-            </div>
+            </a>
             <p className="text-gray-400 mb-6 leading-relaxed">{t.footer.description}</p>
           </div>
 
@@ -43,12 +54,21 @@ const Footer = () => {
               <ul className="space-y-3">
                 {navigationLinks.map((link) => (
                   <li key={link.id}>
-                    <button
-                      onClick={() => scrollToSection(link.id)}
-                      className="text-gray-400 hover:text-white transition-colors cursor-pointer"
-                    >
-                      {link.label}
-                    </button>
+                    {isLanding ? (
+                      <a
+                        href={`${homeHref}#${link.id}`}
+                        className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <button
+                        onClick={() => scrollToSection(link.id)}
+                        className="text-gray-400 hover:text-white transition-colors cursor-pointer"
+                      >
+                        {link.label}
+                      </button>
+                    )}
                   </li>
                 ))}
               </ul>
@@ -96,12 +116,29 @@ const Footer = () => {
 
               {/* CTA */}
               <div className="mt-6">
-                <button
-                  onClick={() => scrollToSection('contato')}
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-                >
-                  {t.footer.cta}
-                </button>
+                {isLanding && onCtaClick ? (
+                  <button
+                    type="button"
+                    onClick={onCtaClick}
+                    className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    {resolvedCtaLabel}
+                  </button>
+                ) : isLanding ? (
+                  <a
+                    href={ctaHref ?? `${homeHref}#contato`}
+                    className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    {resolvedCtaLabel}
+                  </a>
+                ) : (
+                  <button
+                    onClick={() => scrollToSection('contato')}
+                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                  >
+                    {resolvedCtaLabel}
+                  </button>
+                )}
               </div>
             </div>
           )}

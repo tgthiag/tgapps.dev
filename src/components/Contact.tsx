@@ -13,6 +13,8 @@ const Contact = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const t = useTranslations();
+  const whatsappHref =
+    'https://wa.me/5511979717703?text=Hi%20I%20found%20you%20on%20Google%20and%20would%20like%20to%20build%20a%20project';
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -37,7 +39,7 @@ const Contact = () => {
       'Plans / Notes:',
       formData.message || '(No additional notes)',
       '',
-      'Reminder: temporary USD 1,900/mo offer requested via contact form.'
+      'Reminder: introductory USD 2,000/mo rate requested via contact form.'
     ];
     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
@@ -140,6 +142,25 @@ const Contact = () => {
                 );
               })}
             </div>
+
+            <a
+              href={whatsappHref}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-8 flex items-center gap-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:bg-emerald-100 hover:shadow-xl"
+            >
+              <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 text-white">
+                <MessageSquare className="h-6 w-6" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-900">
+                  {t.contact.whatsappCta?.title ?? 'Prefer WhatsApp?'}
+                </h4>
+                <p className="mt-1 text-sm text-gray-600">
+                  {t.contact.whatsappCta?.description ?? 'Open a direct chat with TG Apps.'}
+                </p>
+              </div>
+            </a>
 
             {/* Quick Stats */}
             <div className="mt-12 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border border-blue-100">

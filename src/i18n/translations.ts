@@ -95,6 +95,10 @@ export interface TranslationSchema {
       value: string;
       description: string;
     }[];
+    whatsappCta?: {
+      title: string;
+      description: string;
+    };
     whyUsHeading: string;
     whyUs: string[];
     costSection?: {
@@ -166,16 +170,16 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Language'
     },
     hero: {
-      badge: 'Mobile pod for US small businesses',
-      titleLine1: 'Mobile app delivery squads',
-      titleHighlight: 'for US small businesses',
-      titleLine2: 'with contract-first billing',
+      badge: 'Custom software for startups & SMBs',
+      titleLine1: 'Internal tools, apps, and systems',
+      titleHighlight: 'for startups and SMB teams',
+      titleLine2: 'built by one product team',
       subtitle:
-        'Founder-led LatAm studio in São Paulo that designs, builds, and supports Android, iOS, Flutter, or React Native apps plus websites, landing pages, internal tools, dashboards, APIs, automations, and integrations. We operate mainly with US and Brazilian companies but can onboard teams anywhere. Expect full-stack delivery, backend services, databases, and cloud infra (including AWS EC2) bundled in one contract with zero upfront payment so lean teams stay fast without bureaucracy. We start building right after paperwork, keep backend, frontend, database, and mobile tracks moving in parallel, and let you steer priorities with weekly demos, releases, and handoffs.',
+        'Founder-led LatAm studio in São Paulo building custom CRM, internal tools, dashboards, workflow automation, mobile apps, customer portals, employee apps, APIs, databases, and AI integrations for startups and SMBs that have outgrown spreadsheets or disconnected software.',
       stats: [
         { label: 'D-U-N-S® 651029828 · issued Jan 28 2026' },
         { label: 'Kickoff call in one business day · we demo and deploy roughly once per week' },
-        { label: 'Month-to-month control · cancel anytime · USD 1,900/mo locked in for the next 3 companies' }
+        { label: 'Introductory USD 2,000/mo rate · fixed while your engagement stays active' }
       ],
       primaryCta: 'Schedule a discovery call',
       secondaryCta: 'Review the 3-step plan'
@@ -186,11 +190,11 @@ export const translations: Record<Locale, TranslationSchema> = {
         'A few brands and operators we support across delivery, product execution, and ongoing operations.'
     },
     services: {
-      badge: 'Capabilities and pods',
-      headingLine1: 'Android, iOS, and integrations',
-      headingHighlight: 'that keep small teams shipping',
+      badge: 'Custom software capabilities',
+      headingLine1: 'Operational software, apps, and integrations',
+      headingHighlight: 'built around how your team works',
       description:
-        'We partner with US startups, agencies, and IT leaders who need a product squad that feels in-house but stays contract-flexible. You get senior design, product, engineering, infrastructure, and release ops bundled in the same pod for mobile apps, marketing sites, landing pages, dashboards, admin tools, and the APIs plus databases behind them. We can start from zero and build an entire startup-grade product quickly while your company keeps existing projects moving, and you stay in control of priorities the whole time.',
+        'We partner with startups, SMB operators, agencies, and IT leaders who need a practical software team without full-time hiring overhead. We can build the CRM, internal system, app, backend, dashboard, automation, or AI integration that keeps your operation moving, with weekly demos and clear ownership from kickoff to handoff.',
       pillars: [
         'Contract and NDA signed before kickoff; zero upfront payment.',
         'Weekly status notes inside your own tools plus Kanban snapshots and Loom recaps keep everyone aligned.',
@@ -200,7 +204,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       partnershipDescription: '',
       gridHeading: 'What we ship',
       gridDescription:
-        'Mix and match pods for new builds, co-development, or integrations; each pod already includes design, release ops, infra, web/mobile surfaces, and reporting.',
+        'Use us for a complete build or a focused product push. Strategy, design, backend, frontend, mobile, integrations, infrastructure, and release support stay connected inside one accountable team.',
       processHeading: 'How we collaborate in three tight loops',
       processDescription:
         'Lean structure: align, ship, support. Each loop keeps decision-makers involved without draining their calendar.',
@@ -236,32 +240,32 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       items: [
         {
-          title: 'Android and iOS builds',
-          subtitle: 'Kotlin, Swift, Flutter, React Native',
+          title: 'Internal tools and business systems',
+          subtitle: 'CRM, dashboards, scheduling, lead operations',
           description:
-            'Ship greenfield products or rescue existing apps, responsive sites, marketing websites, and landing pages while we cover UX writing, design systems, architecture, and the supporting backends/databases together with engineering.',
+            'Replace spreadsheets and disconnected tools with custom CRM, dashboards, workflow automation, scheduling, lead operations, portals, and admin systems built around the way your company works.',
+          features: [
+            'Lead capture, conversion, follow-up, and operational visibility.',
+            'Permissions, data models, reports, and integrations designed from the real workflow.',
+            'Customer portals and employee tools connected to the same backend.'
+          ],
+          cta: 'Plan my system'
+        },
+        {
+          title: 'Mobile and customer-facing apps',
+          subtitle: 'Android, iOS, Flutter, React Native',
+          description:
+            'Launch mobile apps, responsive products, landing pages, portals, and customer experiences with the backend, database, and release path planned together.',
           features: [
             'Play Store, App Store, and private distribution compliance handled for you.',
-            'Wearables, in-app purchases, SSO, analytics, and push notifications.',
-            'Dashboards, admin tooling, landing pages, and internal/external tools so operations and customers can see and use what we ship.'
+            'SSO, analytics, push notifications, subscriptions, and integrations.',
+            'Weekly demos, staged rollout, monitoring, and clean handoff.'
           ],
-          cta: 'Plan my mobile release'
+          cta: 'Plan my app'
         },
         {
-          title: 'Pod-as-a-service',
-          subtitle: 'Support, co-development, and release ops',
-          description:
-            'Use us as a parallel squad that owns backlogs, automation, and release management while your internal team keeps roadmap focus.',
-          features: [
-            'Weekly Kanban reviews (in whichever tool you already use) plus shared docs.',
-            'Blue or green releases and monitoring already budgeted.',
-            'Bug triage within 24 hours with weekend coverage for go-lives.'
-          ],
-          cta: 'Embed the pod'
-        },
-        {
-          title: 'Integrations and data layers',
-          subtitle: 'Payments, logistics, CRM, and LLM',
+          title: 'Integrations, AI, and data layers',
+          subtitle: 'Payments, logistics, CRM, LLM, APIs',
           description:
             'Connect your app to billing, logistics, CRM, or knowledge bases with production-grade APIs, data layers, and automation guardrails.',
           features: [
@@ -273,10 +277,10 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Need a small-business-ready mobile partner?',
+        title: 'Need software built around your operation?',
         description:
-          'Send us the problem, platform, and deadline. We respond in under one business day with next steps or a referral.',
-        button: 'Talk to the pod'
+          'Send us the process, tools, spreadsheet, or product idea. We respond in under one business day with next steps or a referral.',
+        button: 'Plan my system'
       }
     },
     about: {
@@ -284,17 +288,17 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Trusted delivery partner',
       headingHighlight: 'for founders and operators',
       description:
-        'We are a bilingual studio in São Paulo working mostly with US startups, agencies, and IT leaders who need dependable Android and iOS releases.',
+        'We are a bilingual studio in São Paulo working with startups, SMB operators, agencies, and IT leaders who need dependable custom software delivery.',
       timelineHeading: 'What working with us feels like',
       paragraphs: [
-        'You always speak with someone able to make decisions. We run compact pods so context, accountability, and product sense stay intact from kickoff to handoff.',
+        'You always speak with someone able to make decisions. We keep the team compact so context, accountability, and product sense stay intact from kickoff to handoff.',
         'We adopt your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. Expect written notes plus short Loom videos three times per week and a weekly demo with timing, risks, and budgets.',
-        'Because release engineering and ops sit in the same pod, you do not need extra vendors for monitoring, analytics, or training. When we pause, you keep every repo, design file, and runbook.'
+        'Because product, engineering, release, and ops stay together, you do not need extra vendors for monitoring, analytics, or training. When we pause, you keep every repo, design file, and runbook.'
       ],
       missionHeading: 'How we protect your roadmap',
       missionDescription:
         'Signed agreement, D-U-N-S record, Brazilian LLC paperwork, and zero upfront payment keep finance and legal happy without slowing delivery.',
-      clientHeading: 'Founder-led pod, lean bureaucracy',
+      clientHeading: 'Founder-led team, lean bureaucracy',
       clientTypes: [],
       valuesHeading: 'Safeguards baked into every contract',
       values: [
@@ -326,7 +330,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Talk directly to the founder',
       headingHighlight: 'and get a scoped plan fast',
       description:
-        'Fill the form or ping us on WhatsApp. We answer within one business day with an honest read on scope, budget, and kickoff timing, and we always explain how pricing stays fair by diluting pod costs across clients.',
+        'Fill the form or ping us on WhatsApp. We answer within one business day with an honest read on scope, budget, kickoff timing, and whether the current introductory monthly rate fits your project.',
       infoHeading: 'Direct channels',
       info: [
         {
@@ -345,31 +349,35 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'LatAm studio building for US businesses since 2019.'
         }
       ],
-      whyUsHeading: 'Why small teams hire TG Apps',
+      whatsappCta: {
+        title: 'Prefer WhatsApp?',
+        description: 'Open a direct chat with TG Apps and tell us what you want to build.'
+      },
+      whyUsHeading: 'Why startups and SMB teams hire TG Apps',
       whyUs: [
         'Zero upfront payment; billing starts only after kickoff, you can cancel anytime, and there are no surprise fees.',
         'D-U-N-S® record and Brazilian LLC paperwork to pass procurement.',
-        'Full-stack delivery: native apps, responsive sites, landing pages, dashboards, backend, and databases handled by one pod.',
+        'Full-stack delivery: custom CRM, internal tools, native apps, responsive sites, dashboards, backend, and databases handled by one team.',
         'LLM integrations delivered with guardrails and documentation that match the stack you already trust.',
-        'Deploy cadence typically once per week, powered by a Kanban pod that moves backend, frontend, database, and mobile tracks in parallel with blue/green coverage.',
+        'Deploy cadence typically once per week, with backend, frontend, database, and mobile tracks moving in parallel with blue/green coverage.',
         'Weekly video calls with the actual developers so stakeholders can review deploys, metrics, and next steps live, and we adapt meeting hours to your preferred timezone.',
         'Prefer to use your own contract template? Send it and we co-review, sign, and adapt clauses together.',
-        'Pricing stays fair because we dilute pod costs between clients instead of adding fees or retainers.',
-        'USD 1,900/mo locked in for the next 3 companies, with monthly billing, no upfront payment, and no hidden clauses while the contract stays active.'
+        'Pricing stays fair because the same compact team structure supports multiple clients without adding unnecessary retainers.',
+        'Current introductory rate: USD 2,000/mo, fixed for your account while the engagement stays active.'
       ],
       costSection: {
         badge: 'Transparent terms',
-        title: 'Flat monthly pod · cancel any month',
+        title: 'Introductory monthly rate · cancel any month',
         description:
-          'USD 1,900/mo locked in for the next 3 companies for full-stack and mobile delivery with monthly billing, no upfront payment, and no hidden clauses. The rate stays fixed while the contract is active. Outside those 3 locked-in slots, pricing is scoped to workload and delivery model.',
+          'Current introductory rate: USD 2,000/mo for custom software, internal tools, apps, integrations, and release support with monthly billing, no upfront payment, and no hidden clauses. If you start under this rate, it stays fixed for your account while the engagement remains active.',
         highlights: [
-          'USD 1,900/mo locked in for the next 3 companies.',
+          'USD 2,000/mo introductory rate for new engagements.',
           'Monthly billing, no upfront payment, and no hidden clauses.',
           'Contracts and invoices issued by TG Applications Desenvolvimento Ltda (Brazil).',
           'USD or BRL billing; W8-BEN-E already on file.',
           'Weekday coverage plus weekend standby for launches.'
         ],
-        note: 'Need NDAs, SOC, or vendor questionnaires? We keep sanitized templates ready. The next 3 companies lock the USD 1,900/mo rate while the contract stays active.'
+        note: 'Need NDAs, SOC, or vendor questionnaires? We keep sanitized templates ready. Clients who start under the introductory rate keep it fixed while the engagement stays active.'
       },
       formHeading: 'Share a few details',
       formDescription: 'We only ask for what we need to reply with a plan and calendar.',
@@ -400,8 +408,8 @@ export const translations: Record<Locale, TranslationSchema> = {
         policy: 'We only use these details to contact you about this request.'
       },
       services: [
+        'Custom CRM / internal tools',
         'Android + iOS build',
-        'Parallel pod / support',
         'Integrations + dashboards',
         'Rescue or modernization',
         'Product discovery'
@@ -409,7 +417,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'TG Apps is a founder-led LatAm (Brazilian) studio delivering Android, iOS, Flutter, and integration pods for US small businesses with zero upfront payment and weekly releases.',
+        'TG Apps is a founder-led LatAm studio building custom software, internal tools, CRMs, dashboards, apps, and integrations for startups and SMB teams.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
@@ -420,17 +428,17 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       servicesHeading: 'Popular requests',
       services: [
+        'Custom CRM and internal tools',
+        'Business systems and dashboards',
         'Android + iOS builds',
-        'Parallel pods and support',
         'LLM integrations',
-        'Dashboards and admin tools',
         'Release and store coverage'
       ],
       contactHeading: 'Contact',
       contact: {
         emailLabel: 'support@tgapps.dev',
         phoneLabel: '+55 11 97971-7703',
-        location: 'São Paulo · serving US small businesses'
+        location: 'São Paulo · serving startups and SMBs'
       },
       cta: 'Schedule a discovery call',
       bottom: {
@@ -454,16 +462,16 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Pod mobile para startups e empresas globais',
-      titleLine1: 'Aplicativos Android e iOS sob medida',
-      titleHighlight: 'para produtos born global',
-      titleLine2: 'sem cobrança antecipada',
+      badge: 'Software sob medida para startups e SMBs',
+      titleLine1: 'Ferramentas internas, apps e sistemas',
+      titleHighlight: 'para startups e empresas em crescimento',
+      titleLine2: 'construidos por um time de produto',
       subtitle:
-        'Startup global liderada pelo fundador em São Paulo que projeta, desenvolve e sustenta apps Android, iOS, Flutter ou React Native, além de websites, landing pages, ferramentas internas, dashboards, APIs, automações e integrações. Construímos produtos born global desde o dia zero e também operamos como pod para empresas de qualquer mercado. Entregamos o produto completo, com backends, bancos de dados e infraestrutura em nuvem (como AWS EC2), dentro de um contrato único, sem pagamento adiantado, para que times enxutos mantenham ritmo sem burocracia.',
+        'Studio LatAm liderado pelo fundador em São Paulo que constrói CRM sob medida, ferramentas internas, dashboards, automações, apps mobile, portais de cliente, apps para equipe, APIs, bancos de dados e integrações de IA para startups e empresas que cresceram além das planilhas e softwares desconectados.',
       stats: [
         { label: 'D-U-N-S® 651029828 · emitido em 28/01/2026' },
         { label: 'Chamada inicial em 1 dia útil · demos e deploys semanais guiados por você' },
-        { label: 'Controle mês a mês · cancele quando quiser · US$ 1.900/mês fixos para as próximas 3 empresas' }
+        { label: 'Valor introdutório de US$ 2.000/mês · fixo enquanto o engajamento estiver ativo' }
       ],
       primaryCta: 'Agende uma conversa',
       secondaryCta: 'Conheça o plano em 3 etapas'
@@ -474,11 +482,11 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Algumas marcas e operações que apoiamos em entregas, execução de produto e operação contínua.'
     },
     services: {
-      badge: 'O que entregamos',
-      headingLine1: 'Android, iOS e integrações',
-      headingHighlight: 'para manter seu time entregando',
+      badge: 'Capacidades de software sob medida',
+      headingLine1: 'Software operacional, apps e integrações',
+      headingHighlight: 'construidos em torno do seu processo',
       description:
-        'Atuamos com startups, agências e líderes de TI que precisam de um pod com cara de time interno, mas com a flexibilidade de um contrato mensal e ambição global. Design, produto, engenharia, infraestrutura e operações caminham juntos para apps mobile, sites, landing pages, dashboards, ferramentas internas/externas, APIs e bancos de dados. Conseguimos tirar uma startup born global do zero rapidamente ou reforçar produtos já em operação em qualquer mercado, sempre com você direcionando o backlog.',
+        'Atuamos com startups, operações SMB, agências e líderes de TI que precisam de um time prático de software sem contratar internamente. Construímos CRM, sistemas internos, apps, backends, dashboards, automações e integrações de IA com demos semanais e ownership claro do kickoff ao handoff.',
       pillars: [
         'Contrato e NDA assinados antes do kick-off; nenhum pagamento adiantado.',
         'Notas semanais no canal que você preferir com fotos do Kanban e Looms curtos.',
@@ -488,7 +496,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       partnershipDescription: '',
       gridHeading: 'Formatos mais comuns',
       gridDescription:
-        'Misture pods para novos apps, co-desenvolvimento ou integrações. Cada pod já inclui design, operações de release, infraestrutura, superfícies web/mobile e relatórios.',
+        'Use a TG Apps para uma construção completa ou para um avanço específico de produto. Estratégia, design, backend, frontend, mobile, integrações, infraestrutura e release ficam conectados em um único time responsável.',
       processHeading: 'Como trabalhamos em três ciclos',
       processDescription:
         'Estrutura enxuta: alinhamento, construção e suporte. Cada ciclo mantém decisores próximos sem roubar agenda.',
@@ -507,7 +515,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Construção e release',
           description: 'Design, engenharia e releases rodando juntos com demos semanais enquanto você direciona as prioridades.',
           highlights: [
-            'Notas semanais no canal que você usa e pelo menos um Loom ou videocall com o pod por semana.',
+            'Notas semanais no canal que você usa e pelo menos um Loom ou videocall com o time por semana.',
             'Deploy azul/verde ou gradual com monitoramento incluído.',
             'Trabalhamos nos seus repositórios ou hospedamos por aqui.'
           ]
@@ -524,32 +532,32 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       items: [
         {
-          title: 'Construção Android e iOS',
-          subtitle: 'Kotlin, Swift, Flutter, React Native',
+          title: 'Ferramentas internas e sistemas de negócio',
+          subtitle: 'CRM, dashboards, agendamento, operação de leads',
           description:
-            'Lançamos produtos novos ou resgatamos bases existentes, como apps, sites responsivos, landing pages e backends, enquanto cuidamos de UX writing, design system e arquitetura junto da engenharia.',
+            'Substituímos planilhas e ferramentas desconectadas por CRM, dashboards, automações, agendamento, operação de leads, portais e sistemas administrativos feitos para o jeito que sua empresa trabalha.',
+          features: [
+            'Captação, conversão, follow-up e visibilidade operacional.',
+            'Permissões, dados, relatórios e integrações desenhados a partir do fluxo real.',
+            'Portais de cliente e ferramentas de equipe conectados ao mesmo backend.'
+          ],
+          cta: 'Planejar meu sistema'
+        },
+        {
+          title: 'Apps mobile e experiências para clientes',
+          subtitle: 'Android, iOS, Flutter, React Native',
+          description:
+            'Lançamos apps mobile, produtos responsivos, landing pages, portais e experiências para clientes com backend, banco de dados e caminho de release planejados juntos.',
           features: [
             'Publicação na Play Store, App Store ou distribuição enterprise por nossa conta.',
-            'Wearables, compras internas, SSO, analytics e push notificados.',
-            'Dashboards, painéis, landing pages e ferramentas internas/externas para operações e clientes acompanharem cada release.'
+            'SSO, analytics, push notifications, assinaturas e integrações.',
+            'Demos semanais, rollout gradual, monitoramento e handoff limpo.'
           ],
           cta: 'Planejar meu app'
         },
         {
-          title: 'Pod sob demanda',
-          subtitle: 'Suporte, co-dev e operações de release',
-          description:
-            'Viramos um esquadrão paralelo que assume backlog, automação e entregas enquanto seu time interno foca na estratégia.',
-          features: [
-            'Acompanhamento semanal no canal do cliente com quadro Kanban compartilhado.',
-            'Deploy azul/verde, rollout gradual e monitoramento previstos no contrato.',
-            'Triage em até 24 horas com plantão nos lançamentos.'
-          ],
-          cta: 'Integrar o pod'
-        },
-        {
-          title: 'Integrações e camadas de dados',
-          subtitle: 'Pagamentos, logística, CRM e LLM',
+          title: 'Integrações, IA e camadas de dados',
+          subtitle: 'Pagamentos, logística, CRM, LLM, APIs',
           description:
             'Conectamos seu app a billing, logística ou bases de conhecimento com APIs e automações prontas para produção.',
           features: [
@@ -561,28 +569,28 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Precisa de um parceiro mobile maduro?',
+        title: 'Precisa de software feito para sua operação?',
         description:
-          'Conte o problema, plataforma e prazo. Respondemos em até 1 dia útil com próximos passos ou uma indicação honesta.',
-        button: 'Falar com o pod'
+          'Conte o processo, ferramenta, planilha ou ideia de produto. Respondemos em até 1 dia útil com próximos passos ou uma indicação honesta.',
+        button: 'Planejar meu sistema'
       }
     },
     about: {
       badge: 'Provas e operação',
-      headingLine1: 'Pod confiável',
+      headingLine1: 'Time confiável',
       headingHighlight: 'para fundadores e gestores',
       description:
-        'Somos uma startup global bilíngue em São Paulo, construindo produtos born global e apoiando empresas de diferentes mercados desde 2019.',
+        'Somos um studio bilíngue em São Paulo, construindo software sob medida, produtos digitais e sistemas operacionais para empresas de diferentes mercados desde 2019.',
       timelineHeading: 'Como é trabalhar conosco',
       paragraphs: [
-        'Você fala direto com quem decide. Mantemos pods compactos para preservar contexto, responsabilidade e visão de produto.',
+        'Você fala direto com quem decide. Mantemos o time compacto para preservar contexto, responsabilidade e visão de produto.',
         'Entramos no seu stack (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos o nosso. Mandamos notas escritas e Looms curtos três vezes por semana, além de demo semanal com riscos e custos.',
         'Engenharia de release e operações estão no mesmo time, então você não precisa de outros fornecedores para monitoramento, analytics ou treinamento. Ao finalizar, tudo fica com você.'
       ],
       missionHeading: 'Como protegemos seu roadmap',
       missionDescription:
         'Contrato assinado, registro D-U-N-S, empresa brasileira regularizada e zero pagamento antecipado. Finanças, jurídico e o time de produto ficam tranquilos.',
-      clientHeading: 'Pod liderado pelo fundador',
+      clientHeading: 'Time liderado pelo fundador',
       clientTypes: [],
       valuesHeading: 'Garantias em todo contrato',
       values: [
@@ -614,7 +622,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Fale direto com o fundador',
       headingHighlight: 'e receba um plano rapidamente',
       description:
-        'Envie o formulário ou mande mensagem no WhatsApp. Respondemos em até 1 dia útil com leitura honesta de escopo, orçamento e kickoff, sempre explicando como diluímos o custo do pod entre clientes para manter o preço justo.',
+        'Envie o formulário ou mande mensagem no WhatsApp. Respondemos em até 1 dia útil com leitura honesta de escopo, orçamento, kickoff e se o valor mensal introdutório faz sentido para seu projeto.',
       infoHeading: 'Canais diretos',
       info: [
         {
@@ -633,38 +641,42 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'Startup brasileira com atuação global desde 2019.'
         }
       ],
+      whatsappCta: {
+        title: 'Prefere WhatsApp?',
+        description: 'Abra uma conversa direta com a TG Apps e conte o que você quer construir.'
+      },
       whyUsHeading: 'Por que contratam a TG Apps',
       whyUs: [
         'Sem adiantamentos; cobramos só depois do início, sem surpresas e você cancela quando quiser.',
         'Registro D-U-N-S® e documentos brasileiros prontos para compras corporativas.',
-        'Entrega ponta a ponta: apps, sites, landing pages, dashboards, backends e bancos de dados por um único pod.',
+        'Entrega ponta a ponta: CRM sob medida, ferramentas internas, apps, sites, dashboards, backends e bancos de dados por um único time.',
         'Integrações LLM com guardrails e documentação alinhados ao stack que você já usa.',
-        'Cadência de deploy normalmente semanal, com pod Kanban tocando back, front, banco e mobile em paralelo + cobertura azul/verde.',
+        'Cadência de deploy normalmente semanal, com back, front, banco e mobile em paralelo + cobertura azul/verde.',
         'Chamadas em vídeo toda semana com o time de devs para revisar deploys e próximos passos, sempre adaptando o horário ao fuso do cliente.',
         'Preferiu usar o contrato da sua empresa? Envie o modelo e revisamos juntos, ajustando cláusulas antes da assinatura.',
         'Você direciona o backlog e nós apresentamos releases/demos toda semana.',
-        'Preço justo: diluímos o custo do pod entre clientes em vez de cobrar taxas extras ou retenção.',
-        'US$ 1.900/mês fixos para as próximas 3 empresas, com cobrança mensal, sem adiantamento e sem cláusulas escondidas enquanto o contrato estiver ativo.'
+        'Preço justo: a estrutura compacta do time permite atender múltiplos clientes sem inflar retainer ou taxas extras.',
+        'Valor introdutório atual: US$ 2.000/mês, fixo para sua conta enquanto o engajamento permanecer ativo.'
       ],
       costSection: {
         badge: 'Termos claros',
-        title: 'Pod mensal fixo · cancelamento simples',
+        title: 'Valor mensal introdutório · cancelamento simples',
         description:
-          'US$ 1.900/mês fixos para as próximas 3 empresas para entrega full-stack e mobile com cobrança mensal, sem adiantamento e sem cláusulas escondidas. O valor fica congelado enquanto o contrato estiver ativo. Fora dessas 3 vagas com valor travado, o preço passa a ser definido pelo escopo e pelo modelo de entrega.',
+          'Valor introdutório atual: US$ 2.000/mês para software sob medida, ferramentas internas, apps, integrações e suporte de release com cobrança mensal, sem adiantamento e sem cláusulas escondidas. Quem iniciar nessa faixa mantém o valor fixo enquanto o engajamento permanecer ativo.',
         highlights: [
-          'US$ 1.900/mês fixos para as próximas 3 empresas.',
+          'US$ 2.000/mês como valor introdutório para novos engajamentos.',
           'Cobrança mensal, sem adiantamento e sem cláusulas escondidas.',
           'Contrato e nota emitidos pela TG Applications Desenvolvimento Ltda (Brasil).',
           'Cobrança em USD ou BRL; W8-BEN-E já disponível.',
           'Cobertura em dias úteis + plantão em lançamentos.'
         ],
-        note: 'Precisa de NDA, SOC ou questionário de fornecedor? Já temos os modelos. As próximas 3 empresas travam o valor de US$ 1.900/mês enquanto o contrato estiver ativo.'
+        note: 'Precisa de NDA, SOC ou questionário de fornecedor? Já temos os modelos. Clientes que iniciarem no valor introdutório mantêm esse valor fixo enquanto o engajamento estiver ativo.'
       },
       formHeading: 'Conte um pouco do projeto',
       formDescription: 'Só pedimos o necessário para responder com plano e datas.',
       callout: {
         title: 'O que acontece depois',
-        description: 'Processo leve e sem spans.',
+        description: 'Processo leve e sem spam.',
         bullets: [
           'Respondemos em até 1 dia útil com dúvidas pontuais.',
           'Marcamos uma call de 30-45 minutos para alinhar orçamento, prazo e acessos.',
@@ -689,8 +701,8 @@ export const translations: Record<Locale, TranslationSchema> = {
         policy: 'Usaremos essas informações apenas para retornar seu contato.'
       },
       services: [
+        'CRM / ferramentas internas',
         'App Android + iOS',
-        'Pod paralelo / suporte',
         'Integrações + dashboards',
         'Resgate ou modernização',
         'Discovery de produto'
@@ -698,7 +710,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A TG Apps é uma startup global liderada pelo fundador que entrega pods Android, iOS, Flutter e integrações para produtos born global e empresas de qualquer mercado, sem pagamento antecipado.',
+        'A TG Apps é um studio LatAm liderado pelo fundador que constrói software sob medida, CRMs, ferramentas internas, dashboards, apps e integrações para startups e empresas em crescimento.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
@@ -709,10 +721,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       servicesHeading: 'Pedidos frequentes',
       services: [
+        'CRM e ferramentas internas',
+        'Sistemas de negócio e dashboards',
         'Apps Android e iOS',
-        'Pods paralelos e suporte',
         'Integrações LLM',
-        'Dashboards e painéis',
         'Cobertura de releases'
       ],
       contactHeading: 'Contato',

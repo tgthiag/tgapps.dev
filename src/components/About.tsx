@@ -61,7 +61,7 @@ const About = () => {
             <div className='rounded-3xl overflow-hidden shadow-2xl'>
               <img
                 src='https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1200'
-                alt='TG Apps pod preparing a delivery roadmap'
+                alt='TG Apps team preparing a delivery roadmap'
                 className='w-full h-[420px] object-cover'
               />
               <div className='absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent'></div>

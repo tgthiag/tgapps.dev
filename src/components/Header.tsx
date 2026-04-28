@@ -3,20 +3,36 @@ import { Menu, X, Check } from 'lucide-react';
 import type { Locale } from '../i18n/translations';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 
-const Header = () => {
+interface HeaderProps {
+  variant?: 'home' | 'landing';
+  ctaHref?: string;
+  ctaLabel?: string;
+  onCtaClick?: () => void;
+}
+
+const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const { language, setLanguage } = useLanguage();
   const t = useTranslations();
   const appsHref = language === 'pt' ? '/pt-br/apps' : '/apps';
+  const homeHref = language === 'pt' ? '/pt-br/' : '/';
+  const isLanding = variant === 'landing';
+  const isSolid = isLanding || isScrolled;
+  const resolvedCtaLabel = ctaLabel ?? t.header.contactCta;
 
   useEffect(() => {
+    if (isLanding) {
+      setIsScrolled(true);
+      return undefined;
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [isLanding]);
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -35,7 +51,7 @@ const Header = () => {
     <div
       className={`flex items-center gap-2 ${
         variant === 'desktop'
-          ? isScrolled
+          ? isSolid
             ? 'bg-gray-100 border border-gray-200'
             : 'bg-white/10 border border-white/20 backdrop-blur-sm'
           : 'bg-gray-100 border border-gray-200'
@@ -68,59 +84,84 @@ const Header = () => {
 
   return (
     <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-      isScrolled ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
+      isSolid ? 'bg-white/95 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <div className="flex items-center space-x-3">
+          <a href={homeHref} className="flex items-center space-x-3">
             <img
               src="/logo.png"
               alt="Tg Apps logo"
               className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1"
             />
             <span className={`text-xl font-bold transition-colors ${
-              isScrolled ? 'text-gray-900' : 'text-white'
+              isSolid ? 'text-gray-900' : 'text-white'
             }`}>
               Tg Apps
             </span>
-          </div>
+          </a>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {t.header.navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
+            {!isLanding &&
+              t.header.navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`text-sm font-medium transition-colors hover:text-blue-500 ${
+                    isSolid ? 'text-gray-700' : 'text-white/90'
+                  }`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            {!isLanding && (
+              <a
+                href={appsHref}
                 className={`text-sm font-medium transition-colors hover:text-blue-500 ${
-                  isScrolled ? 'text-gray-700' : 'text-white/90'
+                  isSolid ? 'text-gray-700' : 'text-white/90'
                 }`}
               >
-                {item.label}
-              </button>
-            ))}
-            <a
-              href={appsHref}
-              className={`text-sm font-medium transition-colors hover:text-blue-500 ${
-                isScrolled ? 'text-gray-700' : 'text-white/90'
-              }`}
-            >
-              Apps
-            </a>
+                Apps
+              </a>
+            )}
+            {isLanding && (
+              <a href={homeHref} className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-500">
+                {language === 'pt' ? 'Site principal' : 'Main site'}
+              </a>
+            )}
             {renderLanguageSwitcher('desktop')}
-            <button
-              onClick={() => scrollToSection(t.header.contactId)}
-              className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
-            >
-              {t.header.contactCta}
-            </button>
+            {isLanding && onCtaClick ? (
+              <button
+                type="button"
+                onClick={onCtaClick}
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                {resolvedCtaLabel}
+              </button>
+            ) : isLanding && ctaHref ? (
+              <a
+                href={ctaHref}
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                {resolvedCtaLabel}
+              </a>
+            ) : (
+              <button
+                onClick={() => scrollToSection(t.header.contactId)}
+                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+              >
+                {resolvedCtaLabel}
+              </button>
+            )}
           </nav>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className={`md:hidden p-2 rounded-lg transition-colors ${
-              isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+              isSolid ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
             }`}
           >
             {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -131,28 +172,59 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden absolute top-16 left-0 right-0 bg-white shadow-xl rounded-b-2xl border-t">
             <nav className="px-4 py-6 space-y-4">
-              {t.header.navItems.map((item) => (
-                <button
-                  key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+              {isLanding ? (
+                <a
+                  href={homeHref}
                   className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
                 >
-                  {item.label}
-                </button>
-              ))}
-              <a
-                href={appsHref}
-                className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
-              >
-                Apps
-              </a>
+                  {language === 'pt' ? 'Site principal' : 'Main site'}
+                </a>
+              ) : (
+                <>
+                  {t.header.navItems.map((item) => (
+                    <button
+                      key={item.id}
+                      onClick={() => scrollToSection(item.id)}
+                      className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
+                    >
+                      {item.label}
+                    </button>
+                  ))}
+                  <a
+                    href={appsHref}
+                    className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
+                  >
+                    Apps
+                  </a>
+                </>
+              )}
               <div className="pt-2">{renderLanguageSwitcher('mobile')}</div>
-              <button
-                onClick={() => scrollToSection(t.header.contactId)}
-                className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
-              >
-                {t.header.contactCta}
-              </button>
+              {isLanding && onCtaClick ? (
+                <button
+                  type="button"
+                  onClick={() => {
+                    onCtaClick();
+                    setIsMenuOpen(false);
+                  }}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
+                >
+                  {resolvedCtaLabel}
+                </button>
+              ) : isLanding && ctaHref ? (
+                <a
+                  href={ctaHref}
+                  className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium text-center hover:shadow-lg transition-all duration-300"
+                >
+                  {resolvedCtaLabel}
+                </a>
+              ) : (
+                <button
+                  onClick={() => scrollToSection(t.header.contactId)}
+                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
+                >
+                  {resolvedCtaLabel}
+                </button>
+              )}
             </nav>
           </div>
         )}
