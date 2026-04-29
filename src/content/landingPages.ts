@@ -169,13 +169,13 @@ const EN_CONTENT: LandingContentByLocale = {
     key: 'whyTgApps',
     slug: getLandingSlug('en', 'whyTgApps'),
     badge: 'Why TG Apps',
-    title: 'Founder-led software delivery with less overhead and clearer accountability',
+    title: 'Founder-led, team-delivered software with less overhead and clearer accountability',
     intro:
-      'TG Apps is built for founders, startups, and SMB teams that need practical software execution without a large vendor process. Clients work directly with the people responsible for product, architecture, delivery, release, and handoff.',
+      'TG Apps is built for founders, startups, and SMB teams that need practical software execution without a large vendor process. Clients work directly with the people responsible for product, architecture, delivery, release, and handoff, while a compact core team and scope-based collaborators are allocated according to project needs.',
     heroHighlights: [
-      'Direct access to decision-makers and builders.',
+      'Direct access to decision-makers and the delivery team.',
       'Written scope, contract, milestones, and weekly demos.',
-      'Compact execution model that reduces overhead without lowering accountability.'
+      'Compact core team with collaborators added when the scope requires more capacity or specialization.'
     ],
     ctaLabel: 'Talk to TG Apps',
     ctaSubject: 'Why TG Apps',
@@ -201,11 +201,11 @@ const EN_CONTENT: LandingContentByLocale = {
       {
         title: 'Small by design does not mean immature',
         description:
-          'The compact founder-led model is a delivery choice: less bureaucracy, direct communication, lower overhead, and tighter product context.',
+          'The compact founder-led model is a delivery choice: less bureaucracy, direct communication, lower overhead, and tighter product context, without implying solo execution.',
         items: [
-          'Clients speak with the person responsible for product, architecture, and delivery.',
+          'Clients speak directly with the delivery leadership responsible for product, architecture, and execution.',
           'Scope is modularized so larger work can move through milestones instead of one vague commitment.',
-          'Weekly demos expose progress, risks, and next decisions before the project drifts.'
+          'When a project needs more throughput or specific expertise, collaborators are added around a clear scope instead of unmanaged headcount.'
         ]
       },
       {
@@ -242,7 +242,7 @@ const EN_CONTENT: LandingContentByLocale = {
     proofHeading: 'Verified public profile',
     proofItems: [
       'Operating base in São Paulo, Brazil, with remote delivery for US, Brazil, and other remote-first markets.',
-      'Founder-led software studio model with compact execution, direct communication, and monthly engagement options.',
+      'Founder-led software studio model with compact team execution, direct communication, and monthly engagement options.',
       'Public website, official email, WhatsApp/phone, published app pages, and compliance routes for app store requirements.'
     ],
     deliverablesHeading: 'Services represented by TG Apps',
@@ -253,7 +253,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Operating model',
     fitItems: [
-      'Founder-led and compact by design to reduce overhead and keep context close to delivery.',
+      'Founder-led with a compact core team and scope-based collaborators to reduce overhead while keeping context close to delivery.',
       'Contract-first engagement with written scope, no upfront payment before work begins, and monthly options.',
       'Can execute defined builds in parallel for larger organizations, then hand over cleanly to an internal team.'
     ],
@@ -280,9 +280,9 @@ const EN_CONTENT: LandingContentByLocale = {
       }
     ],
     finalNote: {
-      title: 'Compact, founder-led, and explicit about fit',
+      title: 'Compact, founder-led, team-delivered, and explicit about fit',
       description:
-        'TG Apps is not trying to look like a large enterprise consultancy. The company is positioned as a practical software delivery partner for teams that value direct access, cost efficiency, strict plan execution, useful insight, and clean ownership.'
+        'TG Apps is not trying to look like a large enterprise consultancy, and it is not a solo-dev promise. The company is positioned as a practical software delivery partner with a compact core team, scope-based collaborators, direct access, cost efficiency, strict plan execution, useful insight, and clean ownership.'
     }
   },
   dueDiligence: {
@@ -302,7 +302,7 @@ const EN_CONTENT: LandingContentByLocale = {
     proofHeading: 'Key buyer questions',
     proofItems: [
       'How do I know the company exists? Legal entity, D-U-N-S, official domain, official email, WhatsApp/phone, and company documents when needed.',
-      'Who builds? A founder-led delivery model with compact execution and scope-based collaborators when required.',
+      'Who builds? A founder-led core team coordinates delivery, with scope-based collaborators added when the project needs more capacity or specialization.',
       'How is abandonment risk reduced? Written scope, milestones, weekly demos, repositories, documentation, runbooks, handoff, and clear ownership.'
     ],
     deliverablesHeading: 'Delivery controls',
@@ -882,13 +882,13 @@ const PT_CONTENT: LandingContentByLocale = {
     key: 'whyTgApps',
     slug: getLandingSlug('pt', 'whyTgApps'),
     badge: 'Por que TG Apps',
-    title: 'Entrega de software founder-led com menos overhead e mais accountability',
+    title: 'Entrega liderada pelo fundador e executada por um time enxuto',
     intro:
-      'A TG Apps foi desenhada para fundadores, startups e empresas que precisam de execução prática de software sem um processo pesado de fornecedor grande. O cliente fala direto com quem responde por produto, arquitetura, entrega, release e handoff.',
+      'A TG Apps foi desenhada para fundadores, startups e empresas que precisam de execução prática de software sem um processo pesado de fornecedor grande. O cliente fala direto com quem responde por produto, arquitetura, entrega, release e handoff, enquanto um núcleo enxuto e colaboradores por escopo são alocados conforme a necessidade do projeto.',
     heroHighlights: [
-      'Acesso direto a quem decide e constrói.',
+      'Acesso direto à liderança de entrega e ao time que executa.',
       'Escopo escrito, contrato, milestones e demos semanais.',
-      'Modelo compacto que reduz overhead sem reduzir responsabilidade.'
+      'Núcleo compacto com colaboradores adicionados quando o escopo exige mais capacidade ou especialidade.'
     ],
     ctaLabel: 'Falar com a TG Apps',
     ctaSubject: 'Por que TG Apps',
@@ -914,11 +914,11 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         title: 'Pequeno por design não significa imaturo',
         description:
-          'O modelo compacto e founder-led é uma escolha de entrega: menos burocracia, comunicação direta, menor overhead e mais contexto de produto.',
+          'O modelo compacto e founder-led é uma escolha de entrega: menos burocracia, comunicação direta, menor overhead e mais contexto de produto, sem significar execução solo.',
         items: [
-          'Clientes falam com a pessoa responsável por produto, arquitetura e entrega.',
+          'Clientes falam direto com a liderança responsável por produto, arquitetura e execução.',
           'O escopo é modularizado para trabalhos maiores avançarem por milestones em vez de uma promessa vaga.',
-          'Demos semanais expõem progresso, riscos e próximas decisões antes do projeto desviar.'
+          'Quando o projeto precisa de mais vazão ou conhecimento específico, colaboradores entram em torno de um escopo claro, não como headcount solto.'
         ]
       },
       {
@@ -955,7 +955,7 @@ const PT_CONTENT: LandingContentByLocale = {
     proofHeading: 'Perfil público verificável',
     proofItems: [
       'Base operacional em São Paulo, Brasil, com entrega remota para EUA, Brasil e mercados remote-first.',
-      'Modelo de software studio founder-led com execução compacta, comunicação direta e opções mensais.',
+      'Modelo de software studio liderado pelo fundador, com execução por núcleo enxuto, comunicação direta e opções mensais.',
       'Site público, e-mail oficial, WhatsApp/telefone, páginas de apps publicados e rotas de compliance para lojas.'
     ],
     deliverablesHeading: 'Serviços representados pela TG Apps',
@@ -966,7 +966,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Modelo operacional',
     fitItems: [
-      'Founder-led e compacto por design para reduzir overhead e manter contexto perto da entrega.',
+      'Liderado pelo fundador, com núcleo enxuto e colaboradores por escopo para reduzir overhead sem afastar contexto da entrega.',
       'Engajamento contract-first com escopo escrito, sem pagamento antecipado antes do trabalho e opções mensais.',
       'Pode executar builds definidos em paralelo para organizações maiores e entregar limpo para o time interno continuar.'
     ],
@@ -993,9 +993,9 @@ const PT_CONTENT: LandingContentByLocale = {
       }
     ],
     finalNote: {
-      title: 'Compacta, founder-led e explícita sobre encaixe',
+      title: 'Compacta, liderada pelo fundador, executada por time e explícita sobre encaixe',
       description:
-        'A TG Apps não tenta parecer uma consultoria enterprise gigante. O posicionamento é ser parceira prática de entrega para times que valorizam acesso direto, custo eficiente, execução rigorosa do plano, insights úteis e ownership limpo.'
+        'A TG Apps não tenta parecer uma consultoria enterprise gigante, nem se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega com núcleo enxuto, colaboradores por escopo, acesso direto, custo eficiente, execução rigorosa do plano, insights úteis e ownership limpo.'
     }
   },
   dueDiligence: {
@@ -1015,7 +1015,7 @@ const PT_CONTENT: LandingContentByLocale = {
     proofHeading: 'Perguntas-chave de compradores',
     proofItems: [
       'Como sei que a empresa existe? Entidade legal, D-U-N-S, domínio oficial, e-mail oficial, WhatsApp/telefone e documentos quando necessário.',
-      'Quem constrói? Modelo founder-led com execução compacta e colaboradores por escopo quando necessário.',
+      'Quem constrói? Um núcleo liderado pelo fundador coordena a entrega, com colaboradores por escopo quando o projeto exige mais capacidade ou especialidade.',
       'Como reduzem risco de abandono? Escopo escrito, milestones, demos semanais, repositórios, documentação, runbooks, handoff e ownership claro.'
     ],
     deliverablesHeading: 'Controles de entrega',

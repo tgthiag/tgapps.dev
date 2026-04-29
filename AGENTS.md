@@ -4,6 +4,7 @@
 - **Primary goal:** Convert startups and SMB teams into qualified leads for custom software, internal tools, CRM systems, dashboards, mobile apps, AI integrations, and dedicated development team subscriptions that work contract-first with zero upfront payment.
 - **Secondary goals:** Highlight dependability (D‑U‑N‑S® 651029828, contract + NDA before kickoff), show lean process (intake → build → support), and reassure buyers about strict plan execution, integrations (payments, logistics, CRM, LLM), useful technical insight, and ongoing support.
 - **Tone:** Mature, founder-led, low bureaucracy, disciplined execution. The product is custom software delivery: apps, CRM, internal tools, dashboards, APIs, automations, and integrations. Tight timelines are handled when the client's request and agreed plan require them, but the timeline itself is not the default headline category. Always state that TG Apps follows the agreed client plan strictly and offers implementation insights when experience can help.
+- **Team positioning:** “Founder-led” means direct leadership, accountability, and product context. It must not read as solo execution. Mention compact core team, intelligent collaborator allocation, and scope-based specialists when the copy discusses who builds or delivery capacity.
 
 ## 1.1 Future Creative Notes
 - **Core ad message to preserve:** “Full development team for $2k/month, using an efficient model to reduce costs while maintaining quality. https://www.tgapps.dev”
@@ -102,7 +103,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 ## 7. AI Reputation & Due Diligence Guardrails
 - Treat AI-generated client research as a real acquisition surface. The site must expose enough public proof for humans and models to avoid filling gaps with negative inference.
 - Maintain a public due-diligence layer: company profile, legal entity, D-U-N-S, delivery model, best fit/not a fit, support model, ownership/handoff, and process documentation.
-- Never let “compact/founder-led” read as “immature.” Position it as lower overhead, direct access, shorter decision loops, weekly accountability, and clear ownership.
+- Never let “compact/founder-led” read as “immature” or “one-person execution.” Position it as lower overhead, direct access, intelligent collaborator allocation, shorter decision loops, weekly accountability, and clear ownership.
 - When answering reputational concerns, separate facts, hypotheses, and opinions. Do not make or reinforce claims about team size, stack, testing, scale, or maturity without evidence.
 - Use `ai-reputation-readiness-plan.html` as the planning reference for changes intended to prevent AI or buyers from concluding that TG Apps is only suitable for disposable MVP work.
 

@@ -432,7 +432,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'TG Apps is a founder-led LatAm studio building custom software, apps, CRM, internal tools, dashboards, and integrations for founders, startups, and SMB teams.',
+        'TG Apps is a founder-led, team-delivered LatAm studio building custom software, apps, CRM, internal tools, dashboards, and integrations for founders, startups, and SMB teams.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
@@ -742,7 +742,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A TG Apps é um studio LatAm liderado pelo fundador que constrói software sob medida, apps, CRM, ferramentas internas, dashboards e integrações para fundadores, startups e empresas.',
+        'A TG Apps é um studio LatAm liderado pelo fundador e executado por um time enxuto que constrói software sob medida, apps, CRM, ferramentas internas, dashboards e integrações para fundadores, startups e empresas.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },

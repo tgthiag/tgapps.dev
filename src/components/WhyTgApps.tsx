@@ -5,9 +5,9 @@ import { landingSlugsByLocale } from '../content/landingPages';
 const contentByLocale = {
   en: {
     badge: 'Why TG Apps',
-    title: 'Founder-led delivery, public proof, and clean handoff',
+    title: 'Founder-led, team-delivered execution with public proof',
     description:
-      'TG Apps is compact by design: less bureaucracy, direct access to the builder, written scope, weekly demos, strict execution of the agreed plan, and practical software that can be launched, evolved, or handed over according to the client goal.',
+      'TG Apps is compact by design: less bureaucracy, direct access to delivery leadership and builders, written scope, weekly demos, strict execution of the agreed plan, and collaborators allocated when the project needs more capacity or specialization.',
     cards: [
       {
         title: 'Verified company profile',
@@ -43,9 +43,9 @@ const contentByLocale = {
   },
   pt: {
     badge: 'Por que TG Apps',
-    title: 'Entrega founder-led, provas públicas e handoff limpo',
+    title: 'Entrega liderada pelo fundador, executada por time e com provas públicas',
     description:
-      'A TG Apps é compacta por design: menos burocracia, acesso direto a quem constrói, escopo escrito, demos semanais, execução rigorosa do plano combinado e software prático para lançar, evoluir ou entregar ao time do cliente conforme o objetivo.',
+      'A TG Apps é compacta por design: menos burocracia, acesso direto à liderança de entrega e ao time que executa, escopo escrito, demos semanais, execução rigorosa do plano combinado e colaboradores alocados quando o projeto exige mais capacidade ou especialidade.',
     cards: [
       {
         title: 'Perfil verificável',
