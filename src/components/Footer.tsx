@@ -45,6 +45,10 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
     {
       label: language === 'pt' ? 'Due diligence' : 'Due diligence',
       href: landingSlugsByLocale[language].dueDiligence
+    },
+    {
+      label: language === 'pt' ? 'Perfil para IA' : 'AI profile',
+      href: '/llms.txt'
     }
   ];
 
