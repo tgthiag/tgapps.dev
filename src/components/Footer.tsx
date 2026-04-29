@@ -49,6 +49,10 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
     {
       label: language === 'pt' ? 'Perfil para IA' : 'AI profile',
       href: '/llms.txt'
+    },
+    {
+      label: language === 'pt' ? 'LinkedIn do founder' : 'Founder LinkedIn',
+      href: 'https://www.linkedin.com/in/tgthiag/'
     }
   ];
 
@@ -72,6 +76,8 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                 <a
                   key={link.href}
                   href={link.href}
+                  target={link.href.startsWith('http') ? '_blank' : undefined}
+                  rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
                   className="block text-sm text-gray-400 transition-colors hover:text-white"
                 >
                   {link.label}

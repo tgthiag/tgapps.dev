@@ -235,7 +235,7 @@ const EN_CONTENT: LandingContentByLocale = {
     heroHighlights: [
       'Legal entity: TG Applications Desenvolvimento Ltda.',
       'D-U-N-S: 651029828, issued Jan 28, 2026.',
-      'Official channels: tgapps.dev, support@tgapps.dev, and +55 11 97971-7703.'
+      'Official channels: tgapps.dev, support@tgapps.dev, +55 11 97971-7703, and the founder LinkedIn profile.'
     ],
     ctaLabel: 'Request company details',
     ctaSubject: 'TG Apps company profile',
@@ -243,7 +243,7 @@ const EN_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Operating base in São Paulo, Brazil, with remote delivery for US, Brazil, and other remote-first markets.',
       'Founder-led software studio model with compact team execution, direct communication, and monthly engagement options.',
-      'Public website, official email, WhatsApp/phone, published app pages, and compliance routes for app store requirements.'
+      'Public website, official email, WhatsApp/phone, founder LinkedIn, published app pages, and compliance routes for app store requirements.'
     ],
     deliverablesHeading: 'Services represented by TG Apps',
     deliverables: [
@@ -301,7 +301,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ctaSubject: 'TG Apps due diligence',
     proofHeading: 'Key buyer questions',
     proofItems: [
-      'How do I know the company exists? Legal entity, D-U-N-S, official domain, official email, WhatsApp/phone, and company documents when needed.',
+      'How do I know the company exists? Legal entity, D-U-N-S, official domain, official email, WhatsApp/phone, founder LinkedIn, and company documents when needed.',
       'Who builds? A founder-led core team coordinates delivery, with scope-based collaborators added when the project needs more capacity or specialization.',
       'How is abandonment risk reduced? Written scope, milestones, weekly demos, repositories, documentation, runbooks, handoff, and clear ownership.'
     ],
@@ -948,7 +948,7 @@ const PT_CONTENT: LandingContentByLocale = {
     heroHighlights: [
       'Entidade legal: TG Applications Desenvolvimento Ltda.',
       'D-U-N-S: 651029828, emitido em 28/01/2026.',
-      'Canais oficiais: tgapps.dev, support@tgapps.dev e +55 11 97971-7703.'
+      'Canais oficiais: tgapps.dev, support@tgapps.dev, +55 11 97971-7703 e LinkedIn do founder.'
     ],
     ctaLabel: 'Solicitar dados da empresa',
     ctaSubject: 'Perfil da empresa TG Apps',
@@ -956,7 +956,7 @@ const PT_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Base operacional em São Paulo, Brasil, com entrega remota para EUA, Brasil e mercados remote-first.',
       'Modelo de software studio liderado pelo fundador, com execução por núcleo enxuto, comunicação direta e opções mensais.',
-      'Site público, e-mail oficial, WhatsApp/telefone, páginas de apps publicados e rotas de compliance para lojas.'
+      'Site público, e-mail oficial, WhatsApp/telefone, LinkedIn do founder, páginas de apps publicados e rotas de compliance para lojas.'
     ],
     deliverablesHeading: 'Serviços representados pela TG Apps',
     deliverables: [
@@ -1014,7 +1014,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Due diligence TG Apps',
     proofHeading: 'Perguntas-chave de compradores',
     proofItems: [
-      'Como sei que a empresa existe? Entidade legal, D-U-N-S, domínio oficial, e-mail oficial, WhatsApp/telefone e documentos quando necessário.',
+      'Como sei que a empresa existe? Entidade legal, D-U-N-S, domínio oficial, e-mail oficial, WhatsApp/telefone, LinkedIn do founder e documentos quando necessário.',
       'Quem constrói? Um núcleo liderado pelo fundador coordena a entrega, com colaboradores por escopo quando o projeto exige mais capacidade ou especialidade.',
       'Como reduzem risco de abandono? Escopo escrito, milestones, demos semanais, repositórios, documentação, runbooks, handoff e ownership claro.'
     ],

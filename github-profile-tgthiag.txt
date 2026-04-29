@@ -1,0 +1,41 @@
+# Thiago Carvalho - Full Stack & Mobile Engineer
+
+Founder and software developer at [TG Apps](https://tgapps.dev).
+
+![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tgthiag&theme=aura_dark)
+![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tgthiag&theme=aura_dark)
+
+## About Me
+
+I build practical software for founders, startups, and growing businesses: custom apps, CRM systems, internal tools, backend platforms, dashboards, automations, and AI integrations.
+
+Most client work is private because it involves business operations, internal systems, credentials, customer data, and NDA-sensitive repositories. Public repositories here may include experiments, utilities, learning projects, and selected product work.
+
+## What I work on
+
+- Mobile apps for Android and iOS
+- Custom CRM and internal business systems
+- Backend APIs, databases, dashboards, and integrations
+- App rescue and release execution for unfinished or stalled products
+- AI and LLM integrations with practical guardrails
+- Born-global apps with multilingual UX and contextual localization
+
+## TG Apps
+
+TG Apps is a founder-led, team-delivered software studio. We work with a compact core team and scope-based collaborators when projects need more capacity or specific expertise.
+
+We follow the agreed client plan, provide implementation insight when useful, and focus on clean delivery: written scope, weekly demos, release support, documentation, and handoff when applicable.
+
+Website: [tgapps.dev](https://tgapps.dev)  
+Contact: [support@tgapps.dev](mailto:support@tgapps.dev)  
+WhatsApp: [message me about a software project](https://wa.me/5511979717703?text=Hi%20Thiago%2C%20I%20found%20your%20GitHub%20profile%20and%20would%20like%20to%20talk%20about%20a%20software%20project)  
+LinkedIn: [linkedin.com/in/tgthiag](https://www.linkedin.com/in/tgthiag/)
+
+## Notes
+
+If you are looking at this profile for due diligence, the best public references are:
+
+- [TG Apps website](https://tgapps.dev)
+- [Company profile](https://tgapps.dev/company-profile)
+- [Due diligence profile](https://tgapps.dev/due-diligence)
+- [LLM profile](https://tgapps.dev/llms.txt)
