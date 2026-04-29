@@ -1562,24 +1562,24 @@ const PT_CONTENT: LandingContentByLocale = {
   devAsAService: {
     key: 'devAsAService',
     slug: getLandingSlug('pt', 'devAsAService'),
-    badge: 'Dev as a Service / desenvolvimento por assinatura',
-    title: 'Desenvolvimento de software por assinatura para empresas que precisam de time todo mês',
+    badge: 'Dev as a Service / time de desenvolvimento sob demanda',
+    title: 'Time de desenvolvimento sob demanda para empresas que precisam avançar todo mês',
     intro:
-      'A TG Apps oferece uma assinatura de desenvolvimento de software liderada pelo fundador e executada por time para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de release, sem exigir que a empresa contrate um time completo antes.',
+      'A TG Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de release, sem exigir que a empresa contrate um time completo antes.',
     heroHighlights: [
       'Entrega liderada pelo fundador com núcleo enxuto e colaboradores por escopo.',
       'Valor introdutório de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.',
       'Sem pagamento antecipado, demos semanais e um time para produto, backend, frontend, mobile, IA e release.'
     ],
     ctaLabel: 'Agendar discovery call',
-    ctaSubject: 'Dev as a Service por assinatura',
-    proofHeading: 'Por que escolher uma assinatura de desenvolvimento',
+    ctaSubject: 'Time de desenvolvimento sob demanda',
+    proofHeading: 'Por que escolher um time sob demanda',
     proofItems: [
       'Contratar um time permanente está lento ou caro, mas o roadmap ainda precisa avançar toda semana.',
       'A empresa precisa de apps, CRM, ferramentas internas, backend, dashboards, integrações ou IA com um time responsável pelo conjunto.',
       'O negócio quer um compromisso comercial menor que uma agência grande, sem abrir mão de escopo, demos, documentação e handoff.'
     ],
-    deliverablesHeading: 'O que a assinatura pode cobrir',
+    deliverablesHeading: 'O que o time sob demanda pode cobrir',
     deliverables: [
       'Apps mobile, web apps, CRM, portais de cliente, apps de equipe, dashboards, automações e ferramentas internas.',
       'APIs backend, bancos de dados, autenticação, pagamentos, notificações, integrações, painéis admin, analytics e operação de release.',
@@ -1595,7 +1595,7 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         title: 'Execução liderada pelo fundador e entregue por time',
         description:
-          'A assinatura é compacta de propósito: acesso direto à liderança de entrega, núcleo que preserva contexto de produto e colaboradores por escopo quando o trabalho exige mais capacidade ou especialidade.',
+          'O modelo é compacto de propósito: acesso direto à liderança de entrega, núcleo que preserva contexto de produto e colaboradores por escopo quando o trabalho exige mais capacidade ou especialidade.',
         items: [
           'Planejar escopo, critérios de aceite, prioridades e dependências antes de cada ciclo de entrega.',
           'Usar o mesmo loop para decisões de produto, arquitetura, implementação, QA, release e suporte.',
@@ -1603,7 +1603,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       },
       {
-        title: 'Ritmo de assinatura sem retainer indefinido',
+        title: 'Ritmo mensal sem retainer indefinido',
         description:
           'Dev as a Service só faz sentido quando o engajamento mensal gera saída visível, comunicação clara e ownership prático.',
         items: [
@@ -1615,7 +1615,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     pricing: PT_INTRODUCTORY_PRICING,
     finalNote: {
-      title: 'Uma assinatura de desenvolvimento deve comprar tração, não dependência',
+      title: 'Um time sob demanda deve comprar tração, não dependência',
       description:
         'A TG Apps é um bom fit quando você precisa de execução contínua com accountability direta, sem adiantamento, demos semanais e caminho claro para continuar, expandir, pausar ou fazer handoff.'
     }
