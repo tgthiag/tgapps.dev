@@ -15,13 +15,13 @@
       },
       "seo": {
         "en": {
-          "title": "Custom Software for Startups & SMBs | CRM, Apps, Internal Tools | TG Apps",
-          "description": "Custom software, CRM, internal tools, dashboards, workflow automation, mobile apps, APIs, and AI integrations for startups and SMB teams.",
+          "title": "Custom Software for Startups & SMBs | Apps, CRM, Internal Tools | TG Apps",
+          "description": "Custom software, apps, CRM, internal tools, dashboards, workflow automation, APIs, and AI integrations for founders, startups, and SMBs, built around the agreed plan with practical execution and experienced delivery insight.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
-          "title": "Software sob medida para startups e empresas | CRM, apps e sistemas | TG Apps",
-          "description": "Software sob medida, CRM, ferramentas internas, dashboards, automacoes, apps mobile, APIs e integrações de IA para startups e empresas em crescimento.",
+          "title": "Software sob medida para startups e empresas | Apps, CRM e sistemas | TG Apps",
+          "description": "Software sob medida, apps, CRM, ferramentas internas, dashboards, automações, APIs e integrações de IA para fundadores, startups e empresas, seguindo o plano combinado com execução prática e insights de entrega.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -31,7 +31,7 @@
         "include": true,
         "changefreq": "weekly",
         "priorities": {
-          "en": 1.0,
+          "en": 1,
           "pt": 0.95
         }
       }
@@ -52,7 +52,7 @@
         },
         "pt": {
           "title": "Software sob medida para empresas | CRM, apps e ferramentas internas | TG Apps",
-          "description": "Software sob medida para empresas que precisam de CRM, ferramentas internas, dashboards, automacoes, portais, apps de equipe, integracoes e apps mobile.",
+          "description": "Software sob medida para empresas que precisam de CRM, ferramentas internas, dashboards, automações, portais, apps de equipe, integrações e apps mobile.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -64,6 +64,119 @@
         "priorities": {
           "en": 0.93,
           "pt": 0.89
+        }
+      }
+    },
+    {
+      "id": "whyTgApps",
+      "page": "landing",
+      "landingKey": "whyTgApps",
+      "localizedPaths": {
+        "en": "/why-tg-apps",
+        "pt": "/por-que-tg-apps"
+      },
+      "seo": {
+        "en": {
+          "title": "Why TG Apps | Founder-Led Software Delivery",
+          "description": "Why clients choose TG Apps: founder-led software delivery, direct communication, weekly demos, contract-first scope, zero upfront payment, and clean handoff.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Por que TG Apps | Entrega de software founder-led",
+          "description": "Por que clientes escolhem a TG Apps: entrega founder-led, comunicação direta, demos semanais, contrato primeiro, zero adiantamento e handoff limpo.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0.84,
+          "pt": 0.8
+        }
+      }
+    },
+    {
+      "id": "companyProfile",
+      "page": "landing",
+      "landingKey": "companyProfile",
+      "localizedPaths": {
+        "en": "/company-profile",
+        "pt": "/perfil-da-empresa"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/about-tg-apps",
+          "/company-info"
+        ],
+        "pt": [
+          "/perfil-tg-apps",
+          "/informacoes-da-empresa"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "TG Apps Company Profile | Legal Entity, D-U-N-S, Services",
+          "description": "TG Apps company profile: legal entity, D-U-N-S number, official channels, operating model, services, and founder-led software delivery structure.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Perfil da empresa TG Apps | CNPJ, D-U-N-S e serviços",
+          "description": "Perfil da TG Apps: entidade legal, D-U-N-S, canais oficiais, modelo operacional, serviços e estrutura de entrega founder-led.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0.86,
+          "pt": 0.82
+        }
+      }
+    },
+    {
+      "id": "dueDiligence",
+      "page": "landing",
+      "landingKey": "dueDiligence",
+      "localizedPaths": {
+        "en": "/due-diligence",
+        "pt": "/due-diligence"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/vendor-due-diligence",
+          "/technical-due-diligence"
+        ],
+        "pt": [
+          "/validacao-da-empresa",
+          "/perguntas-de-due-diligence"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "TG Apps Due Diligence | Scope, Contract, Handoff, Support",
+          "description": "Due diligence answers for TG Apps: legal entity, contract, milestones, code ownership, repositories, documentation, support, security, SLA, and handoff.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Due Diligence TG Apps | Contrato, handoff e suporte",
+          "description": "Respostas de due diligence da TG Apps: entidade legal, contrato, milestones, propriedade do código, repositórios, documentação, suporte, segurança e handoff.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0.86,
+          "pt": 0.82
         }
       }
     },
@@ -83,7 +196,7 @@
         },
         "pt": {
           "title": "Software sob medida para startups | Apps, MVPs e backend | TG Apps",
-          "description": "Desenvolvimento de software para startups que precisam de MVP, apps mobile, backend, dashboards, integracoes de IA, suporte de lancamento e entrega semanal.",
+          "description": "Desenvolvimento de software para startups que precisam de MVP, apps mobile, backend, dashboards, integrações de IA, suporte de lançamento e entrega semanal.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -140,6 +253,92 @@
       }
     },
     {
+      "id": "appRescueLaunch",
+      "page": "landing",
+      "landingKey": "appRescueLaunch",
+      "localizedPaths": {
+        "en": "/app-rescue-and-launch-acceleration",
+        "pt": "/finalizar-e-publicar-app-rapido"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/finish-my-app",
+          "/launch-app-quickly",
+          "/app-deployment"
+        ],
+        "pt": [
+          "/finalizar-meu-app",
+          "/publicar-app-rapido",
+          "/deploy-de-app"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "Finish and Launch Your App | App Rescue | TG Apps",
+          "description": "App rescue and launch support for founders and startups with unfinished apps, rough prototypes, outdated apps, or stalled codebases that need a clear release path.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Finalizar e publicar seu app | App rescue | TG Apps",
+          "description": "Resgate e suporte de lançamento para fundadores e startups com apps inacabados, protótipos, apps desatualizados ou código travado que precisa de um caminho claro até o release.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.91,
+          "pt": 0.87
+        }
+      }
+    },
+    {
+      "id": "bornGlobalApps",
+      "page": "landing",
+      "landingKey": "bornGlobalApps",
+      "localizedPaths": {
+        "en": "/born-global-app-development",
+        "pt": "/desenvolvimento-de-apps-born-global"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/global-app-development",
+          "/multilingual-app-development",
+          "/international-app-development"
+        ],
+        "pt": [
+          "/apps-born-global",
+          "/desenvolvimento-de-apps-multilingues",
+          "/desenvolvimento-de-apps-internacionais"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "Born-Global App Development | Multilingual Apps | TG Apps",
+          "description": "Born-global app development for founders and startups that need multilingual UX, contextual translation, cultural adaptation, international release planning, and app store support.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Desenvolvimento de apps born global | Apps multilíngues | TG Apps",
+          "description": "Desenvolvimento de apps born global para fundadores e startups que precisam de UX multilíngue, tradução contextualizada, adaptação cultural, release internacional e suporte de lojas.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.9,
+          "pt": 0.86
+        }
+      }
+    },
+    {
       "id": "customCrmInternalTools",
       "page": "landing",
       "landingKey": "customCrmInternalTools",
@@ -155,7 +354,7 @@
         },
         "pt": {
           "title": "CRM, ferramentas internas e sistemas sob medida | TG Apps",
-          "description": "Ferramentas internas, CRM, dashboards, automacoes, agendamento, operacao de leads, apps de cliente e apps de equipe para startups e empresas em crescimento.",
+          "description": "Ferramentas internas, CRM, dashboards, automações, agendamento, operação de leads, apps de cliente e apps de equipe para startups e empresas em crescimento.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -274,7 +473,7 @@
         },
         "pt": {
           "title": "Integrações de IA para CRM e ferramentas internas | TG Apps",
-          "description": "Integrações de IA e LLM para CRM, ferramentas internas, dashboards, atendimento, operacao, apps e fluxos de negocio.",
+          "description": "Integrações de IA e LLM para CRM, ferramentas internas, dashboards, atendimento, operação, apps e fluxos de negócio.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -299,12 +498,12 @@
       "seo": {
         "en": {
           "title": "Apps by TG Apps | Mobile products we design and ship",
-          "description": "Explore mobile apps designed and operated by TG Apps, including AnyLanguage Conversations, a voice-first language practice app for natural speaking routines.",
+          "description": "Explore mobile apps designed, launched, and operated by TG Apps, including AnyLanguage Conversations, plus the product quality we bring to founders and startups.",
           "ogImage": "https://tgapps.dev/app-media/anylanguage/screen-home-en.png"
         },
         "pt": {
           "title": "Apps da TG Apps | Produtos mobile que desenhamos e entregamos",
-          "description": "Conheça os apps desenhados e operados pela TG Apps, incluindo o AnyLanguage Conversations, um app de prática de idiomas com foco em fala natural.",
+          "description": "Conheça os apps desenhados, publicados e operados pela TG Apps, incluindo o AnyLanguage Conversations, e o padrão de produto que levamos para fundadores e startups.",
           "ogImage": "https://tgapps.dev/app-media/anylanguage/screen-home.png"
         }
       },

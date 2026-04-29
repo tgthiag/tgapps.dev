@@ -49,12 +49,12 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
   return {
     title:
       locale === 'pt'
-        ? 'Software sob medida para startups e empresas | CRM, apps e sistemas | TG Apps'
-        : 'Custom Software for Startups & SMBs | CRM, Apps, Internal Tools | TG Apps',
+        ? 'Software sob medida para startups e empresas | Apps, CRM e sistemas | TG Apps'
+        : 'Custom Software for Startups & SMBs | Apps, CRM, Internal Tools | TG Apps',
     description:
       locale === 'pt'
-        ? 'Software sob medida, CRM, ferramentas internas, dashboards, automacoes, apps mobile, APIs e integrações de IA para startups e empresas em crescimento.'
-        : 'Custom software, CRM, internal tools, dashboards, workflow automation, mobile apps, APIs, and AI integrations for startups and SMB teams.',
+        ? 'Software sob medida, apps, CRM, ferramentas internas, dashboards, automações, APIs e integrações de IA para fundadores, startups e empresas, seguindo o plano combinado com execução prática e insights de entrega.'
+        : 'Custom software, apps, CRM, internal tools, dashboards, workflow automation, APIs, and AI integrations for founders, startups, and SMBs, built around the agreed plan with practical execution and experienced delivery insight.',
     image: 'https://tgapps.dev/og-home.png',
     robots: 'index,follow',
     localizedRoutePaths: { en: '/', pt: '/' }

@@ -1,5 +1,6 @@
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
+import { landingSlugsByLocale } from '../content/landingPages';
 
 interface FooterProps {
   variant?: 'home' | 'landing';
@@ -32,6 +33,20 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
   const contactInfo = t.footer.contact;
   const copyright = t.footer.bottom.copyright.replace('{year}', currentYear.toString());
   const resolvedCtaLabel = ctaLabel ?? t.footer.cta;
+  const trustLinks = [
+    {
+      label: language === 'pt' ? 'Por que TG Apps' : 'Why TG Apps',
+      href: landingSlugsByLocale[language].whyTgApps
+    },
+    {
+      label: language === 'pt' ? 'Perfil da empresa' : 'Company profile',
+      href: landingSlugsByLocale[language].companyProfile
+    },
+    {
+      label: language === 'pt' ? 'Due diligence' : 'Due diligence',
+      href: landingSlugsByLocale[language].dueDiligence
+    }
+  ];
 
   return (
     <footer className="bg-gray-900 text-white">
@@ -45,6 +60,20 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
               <span className="text-xl font-bold">Tg Apps</span>
             </a>
             <p className="text-gray-400 mb-6 leading-relaxed">{t.footer.description}</p>
+            <div className="space-y-2">
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-gray-500">
+                {language === 'pt' ? 'Confiança' : 'Trust'}
+              </p>
+              {trustLinks.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="block text-sm text-gray-400 transition-colors hover:text-white"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </div>
           </div>
 
           {/* Quick Links */}

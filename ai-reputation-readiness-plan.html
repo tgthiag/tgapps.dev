@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TG Apps - Plano de Reputacao para IA e Due Diligence</title>
+  <style>
+    :root {
+      --bg: #070b14;
+      --panel: #101827;
+      --panel-soft: #172033;
+      --border: #2a3954;
+      --text: #edf4ff;
+      --muted: #a8b7ce;
+      --blue: #62a8ff;
+      --green: #44d7a2;
+      --amber: #ffbf5f;
+      --red: #ff7676;
+      --purple: #a78bfa;
+      --shadow: 0 22px 70px rgba(0, 0, 0, 0.28);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background:
+        radial-gradient(circle at 12% 5%, rgba(98, 168, 255, 0.18), transparent 28%),
+        radial-gradient(circle at 88% 0%, rgba(167, 139, 250, 0.12), transparent 26%),
+        linear-gradient(180deg, #070b14 0%, #0b1220 100%);
+      color: var(--text);
+      line-height: 1.62;
+    }
+
+    .container {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 42px 24px 80px;
+    }
+
+    .hero {
+      padding: 30px 0 18px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 14px;
+      border: 1px solid rgba(98, 168, 255, 0.22);
+      border-radius: 999px;
+      background: rgba(98, 168, 255, 0.11);
+      color: #d7eaff;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 18px 0 14px;
+      max-width: 980px;
+      font-size: clamp(2rem, 4.2vw, 3.6rem);
+      line-height: 1.05;
+    }
+
+    .lead {
+      max-width: 900px;
+      color: var(--muted);
+      font-size: 1.08rem;
+    }
+
+    .section {
+      margin-top: 28px;
+      padding: 28px;
+      background: rgba(16, 24, 39, 0.94);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      margin: 0 0 14px;
+      color: #eaf3ff;
+      font-size: 1.55rem;
+    }
+
+    .section h3 {
+      margin: 0 0 10px;
+      color: #deebff;
+      font-size: 1.05rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid-2 {
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    .grid-3 {
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    }
+
+    .card {
+      background: var(--panel-soft);
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 20px;
+    }
+
+    .card p:last-child,
+    .card ul:last-child,
+    .card ol:last-child {
+      margin-bottom: 0;
+    }
+
+    .metric {
+      margin-bottom: 8px;
+      color: #ffffff;
+      font-size: 1.45rem;
+      font-weight: 800;
+      line-height: 1.15;
+    }
+
+    .muted {
+      color: var(--muted);
+    }
+
+    .quote {
+      margin: 14px 0 0;
+      padding: 16px 18px;
+      border-left: 4px solid var(--amber);
+      border-radius: 0 16px 16px 0;
+      background: rgba(255, 191, 95, 0.09);
+      color: #ffe7bd;
+      font-weight: 650;
+    }
+
+    .callout {
+      margin-top: 14px;
+      padding: 15px 18px;
+      border-left: 4px solid var(--blue);
+      border-radius: 0 16px 16px 0;
+      background: rgba(98, 168, 255, 0.09);
+      color: #dcecff;
+    }
+
+    .danger {
+      border-left-color: var(--red);
+      background: rgba(255, 118, 118, 0.1);
+      color: #ffd1d1;
+    }
+
+    .success {
+      border-left-color: var(--green);
+      background: rgba(68, 215, 162, 0.09);
+      color: #ccf8e8;
+    }
+
+    .tag {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      white-space: nowrap;
+    }
+
+    .tag-red { background: rgba(255, 118, 118, 0.13); color: #ffc8c8; }
+    .tag-amber { background: rgba(255, 191, 95, 0.14); color: #ffe2ad; }
+    .tag-green { background: rgba(68, 215, 162, 0.13); color: #c5f7e6; }
+    .tag-blue { background: rgba(98, 168, 255, 0.13); color: #d7eaff; }
+    .tag-purple { background: rgba(167, 139, 250, 0.13); color: #e8ddff; }
+
+    ul,
+    ol {
+      margin: 10px 0 0;
+      padding-left: 20px;
+    }
+
+    li + li {
+      margin-top: 7px;
+    }
+
+    table {
+      width: 100%;
+      margin-top: 12px;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: 16px;
+    }
+
+    th,
+    td {
+      padding: 14px 16px;
+      border: 1px solid var(--border);
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: #111c30;
+      color: #dcecff;
+      font-size: 0.92rem;
+    }
+
+    td {
+      background: #0d1626;
+      color: #d9e6f7;
+    }
+
+    code {
+      display: inline-block;
+      padding: 2px 7px;
+      border: 1px solid #304261;
+      border-radius: 7px;
+      background: #07101f;
+      color: #e8f1ff;
+      font-size: 0.92em;
+    }
+
+    .footer {
+      margin-top: 28px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    @media (max-width: 720px) {
+      .container {
+        padding-left: 16px;
+        padding-right: 16px;
+      }
+
+      .section {
+        padding: 22px 18px;
+      }
+
+      table,
+      thead,
+      tbody,
+      th,
+      td,
+      tr {
+        display: block;
+      }
+
+      thead {
+        display: none;
+      }
+
+      td {
+        border-top: 0;
+      }
+
+      td:first-child {
+        border-top: 1px solid var(--border);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="eyebrow">Plano de reputacao para IA</div>
+      <h1>TG Apps - preparar o site para due diligence humana e respostas de IA</h1>
+      <p class="lead">
+        Este documento nasce do incidente em que uma IA respondeu a um potencial cliente com conclusoes negativas sobre
+        a TG Apps baseadas em inferencia, nao em auditoria tecnica. O objetivo e reduzir esse risco com provas publicas,
+        paginas de due diligence, linguagem precisa e um pacote de resposta comercial que separe fatos, hipoteses e opiniao.
+      </p>
+    </header>
+
+    <section class="section">
+      <h2>Resumo executivo</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <div class="metric">Problema</div>
+          <p class="muted">
+            A IA viu poucos sinais publicos estruturados e preencheu as lacunas com uma narrativa de risco:
+            empresa pequena, pouco madura, boa so para MVP e questionavel para longo prazo.
+          </p>
+        </div>
+        <div class="card">
+          <div class="metric">Causa raiz</div>
+          <p class="muted">
+            O site e os perfis publicos ainda nao explicam com forca suficiente a estrutura real de entrega,
+            garantias, processo, contrato, suporte, tecnologias, limites e provas verificaveis.
+          </p>
+        </div>
+        <div class="card">
+          <div class="metric">Mudanca necessaria</div>
+          <p class="muted">
+            Criar uma camada publica de confiança: <strong>Company Profile</strong>, <strong>Due Diligence</strong>,
+            <strong>Delivery Process</strong>, <strong>Best Fit / Not a Fit</strong> e respostas padrao.
+          </p>
+        </div>
+      </div>
+      <div class="callout danger">
+        A resposta ruim nao prova que a empresa e fraca. Ela prova que a presenca publica ainda permite que um modelo
+        complete lacunas com inferencias agressivas.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Por que a IA respondeu desse jeito</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>O padrao de erro</h3>
+          <ul>
+            <li>O usuario pediu uma analise critica.</li>
+            <li>A IA encontrou poucos sinais publicos de autoridade, escala e cases.</li>
+            <li>O modelo associou empresa pequena + apps proprios + poucos dados publicos a risco operacional.</li>
+            <li>Em vez de separar fato, hipotese e opiniao, apresentou inferencias como diagnostico.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>O que deveria ter acontecido</h3>
+          <ul>
+            <li>Listar apenas fatos verificaveis como fatos.</li>
+            <li>Marcar duvidas como pontos de due diligence.</li>
+            <li>Evitar conclusoes tecnicas sem acesso a codigo, arquitetura, contrato, clientes ou entrevista.</li>
+            <li>Recomendar uma conversa tecnica antes de avaliar risco real.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="quote">
+        Regra central: quando nao ha evidencia publica suficiente, a resposta correta e "precisa verificar", nao
+        "provavelmente e fraco".
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Classificacao das afirmacoes problemáticas</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Afirmação feita pela IA</th>
+            <th>Problema</th>
+            <th>Resposta correta</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>"Provavelmente 1-3 pessoas"</td>
+            <td><span class="tag tag-red">Inferencia sem fonte</span></td>
+            <td>O porte exato da equipe deve ser confirmado em conversa, proposta ou material institucional.</td>
+          </tr>
+          <tr>
+            <td>"Backend simples, Firebase ou Node basico"</td>
+            <td><span class="tag tag-red">Suposicao tecnica</span></td>
+            <td>Sem acesso a arquitetura, repositorios ou entrevista tecnica, nao da para concluir stack real.</td>
+          </tr>
+          <tr>
+            <td>"Pouca documentacao, testes limitados"</td>
+            <td><span class="tag tag-red">Julgamento sem evidencia</span></td>
+            <td>Transformar em pergunta de due diligence: como documentam, testam, versionam e fazem handoff?</td>
+          </tr>
+          <tr>
+            <td>"Questionavel para sistemas críticos ou escaláveis"</td>
+            <td><span class="tag tag-red">Conclusao pesada demais</span></td>
+            <td>Capacidade para escala depende de escopo, arquitetura, SLA, equipe alocada e contrato.</td>
+          </tr>
+          <tr>
+            <td>"Contrataria so para MVP e reescreveria depois"</td>
+            <td><span class="tag tag-red">Conselho comercial danoso</span></td>
+            <td>Recomendar avaliação por escopo, contrato, etapas, referencias e processo de entrega.</td>
+          </tr>
+          <tr>
+            <td>"Site vazio / cartao de visita basico"</td>
+            <td><span class="tag tag-amber">Pode ter vindo de snapshot antigo</span></td>
+            <td>Garantir que o site atual exponha claramente serviços, provas, processos, rotas e autoridade.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Narrativa correta para assumir publicamente</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Assumir sem defensividade</h3>
+          <p class="muted">
+            A TG Apps deve assumir que e uma operacao enxuta e founder-led. Isso nao e fraqueza; e parte do modelo:
+            menos overhead, contato direto, decisao rapida, custo menor e entrega semanal.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Nao tentar parecer Accenture</h3>
+          <p class="muted">
+            O risco e tentar parecer uma consultoria gigante. O posicionamento mais forte e: somos pequenos de proposito,
+            mas trabalhamos com contrato, escopo, marcos, demos, documentacao, suporte e expansao gradual.
+          </p>
+        </div>
+      </div>
+      <div class="callout success">
+        Frase guia: <strong>Founder-led software studio: less bureaucracy, direct access to the builders, clear scope,
+        weekly delivery, and practical systems built around the business.</strong>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Mudancas recomendadas no site</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Mudanca</th>
+            <th>Objetivo</th>
+            <th>Prioridade</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Criar rota <code>/company-profile</code></td>
+            <td>Expor entidade legal, D-U-N-S, contato, base operacional, areas atendidas, modelo founder-led e canais oficiais.</td>
+            <td><span class="tag tag-red">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Criar rota <code>/due-diligence</code></td>
+            <td>Responder perguntas que cliente ou IA fariam: contrato, escopo, handoff, suporte, segurança, SLA, propriedade do codigo e processo.</td>
+            <td><span class="tag tag-red">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Adicionar bloco <code>Why TG Apps</code> na home</td>
+            <td>Transformar empresa enxuta em vantagem: custo, velocidade, acesso direto, demos semanais, contrato e documentacao.</td>
+            <td><span class="tag tag-red">Alta</span></td>
+          </tr>
+          <tr>
+            <td>Adicionar bloco <code>Best fit / Not a fit</code></td>
+            <td>Mostrar maturidade ao dizer para quem a TG Apps serve e para quem nao serve.</td>
+            <td><span class="tag tag-amber">Media</span></td>
+          </tr>
+          <tr>
+            <td>Criar pagina/processo <code>Delivery Process</code></td>
+            <td>Detalhar intake, arquitetura, milestone, demo, QA, release, suporte, runbooks e handoff.</td>
+            <td><span class="tag tag-amber">Media</span></td>
+          </tr>
+          <tr>
+            <td>Adicionar <code>llms.txt</code></td>
+            <td>Dar contexto resumido e verificavel para crawlers/modelos sobre quem e a TG Apps e como descreve-la.</td>
+            <td><span class="tag tag-amber">Media</span></td>
+          </tr>
+          <tr>
+            <td>Adicionar JSON-LD mais completo</td>
+            <td>Melhorar leitura estruturada por buscadores: Organization, LocalBusiness, founder-led studio, services, D-U-N-S.</td>
+            <td><span class="tag tag-blue">Media</span></td>
+          </tr>
+          <tr>
+            <td>Publicar posts de prova</td>
+            <td>Gerar fontes publicas adicionais: como trabalhamos, exemplos de escopo, contrato primeiro, sistema interno para SMBs.</td>
+            <td><span class="tag tag-blue">Continua</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Conteudo recomendado para Company Profile</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Blocos obrigatorios</h3>
+          <ul>
+            <li>Legal entity: TG Applications Desenvolvimento Ltda.</li>
+            <li>D-U-N-S 651029828 e data de emissao.</li>
+            <li>Base operacional no Brasil e atendimento remoto global/US-friendly.</li>
+            <li>Servicos: custom software, CRM, internal tools, mobile apps, AI integrations.</li>
+            <li>Modelo: founder-led, compact team, monthly engagement, no upfront.</li>
+            <li>Canais oficiais: site, e-mail, WhatsApp, Play Store/App Store quando aplicavel.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Frases que reduzem risco de inferencia</h3>
+          <ul>
+            <li>"We are a compact, founder-led software studio by design."</li>
+            <li>"Clients work directly with the person responsible for product, architecture, and delivery."</li>
+            <li>"Every engagement starts with written scope, contract, milestones, and weekly demos."</li>
+            <li>"The code, documentation, credentials, and runbooks are handed over cleanly."</li>
+            <li>"For larger projects, scope is modularized and expanded through milestones."</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Conteudo recomendado para Due Diligence</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Pergunta do cliente</th>
+            <th>Resposta que o site deve oferecer</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Como eu sei que a empresa existe?</td>
+            <td>Entidade legal, D-U-N-S, dominio, e-mail oficial, canais oficiais e documentos disponíveis sob NDA quando necessário.</td>
+          </tr>
+          <tr>
+            <td>Quem constrói?</td>
+            <td>Modelo founder-led com time compacto e rede de execucao conforme escopo; cliente fala com quem decide e entrega.</td>
+          </tr>
+          <tr>
+            <td>Como evitam abandono?</td>
+            <td>Contrato, milestones, demos semanais, repositorios, documentacao, runbooks, handoff e propriedade clara do codigo.</td>
+          </tr>
+          <tr>
+            <td>Serve para projetos maiores?</td>
+            <td>Projetos maiores entram por fases: discovery, arquitetura, MVP operacional, rollout e expansao modular.</td>
+          </tr>
+          <tr>
+            <td>Existe suporte?</td>
+            <td>Modelo mensal, triagem de bugs, suporte de release, canal combinado e plantao em janelas criticas quando contratado.</td>
+          </tr>
+          <tr>
+            <td>Como lidam com segurança?</td>
+            <td>Acessos minimos, ambientes separados, credenciais documentadas, permissões, logs e checklist de release por projeto.</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="section">
+      <h2>Best fit / Not a fit</h2>
+      <div class="grid grid-2">
+        <div class="card">
+          <h3>Best fit</h3>
+          <ul>
+            <li>SMBs que precisam substituir planilhas por sistemas reais.</li>
+            <li>Startups que precisam entregar produto sem montar equipe completa primeiro.</li>
+            <li>Empresas com CRM, agendamento, lead operations, dashboards ou apps internos.</li>
+            <li>Projetos que valorizam comunicação direta, demos semanais e custo eficiente.</li>
+            <li>Clientes que aceitam escopo modular e evolucao por milestones.</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>Not a fit</h3>
+          <ul>
+            <li>Procurement enterprise que exige equipe grande desde o primeiro dia.</li>
+            <li>Projetos que exigem SLA corporativo 24/7 sem orçamento proporcional.</li>
+            <li>Clientes que querem escopo indefinido, sem contrato, sem milestones e sem dono interno.</li>
+            <li>Ambientes regulados extremos sem discovery tecnico, seguranca e compliance dedicados.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="callout">
+        Dizer "not a fit" aumenta maturidade percebida. Mostra criterio, reduz risco e impede que o mercado force a TG Apps
+        a prometer algo fora do modelo.
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Resposta padrao para cliente quando uma IA inferir risco</h2>
+      <div class="card">
+        <p>
+          Vi a analise gerada sobre a TG Apps e preciso corrigir alguns pontos. A TG Apps e uma empresa formalizada,
+          com canais oficiais, produtos publicados, suporte oficial e posicionamento claro em desenvolvimento de software
+          sob medida, apps, CRMs, ferramentas internas e integracoes.
+        </p>
+        <p>
+          Algumas conclusoes daquele texto foram especulativas, como tamanho exato da equipe, stack usada, ausencia de
+          testes, baixa capacidade de escala ou risco tecnico elevado. Essas conclusoes nao foram baseadas em auditoria
+          tecnica, analise de codigo, entrevista, proposta comercial, contrato ou referencias.
+        </p>
+        <p>
+          Somos uma operacao enxuta e founder-led por design. Isso reduz overhead, acelera decisao e melhora comunicacao.
+          Para cada projeto, trabalhamos com escopo claro, contrato, milestones, demos semanais, documentacao, suporte de
+          release e handoff limpo.
+        </p>
+        <p>
+          O melhor caminho e avaliar a TG Apps pelo escopo do seu projeto, processo de entrega, contrato, cronograma,
+          documentacao, suporte e capacidade demonstrada em uma reuniao tecnica.
+        </p>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Checklist de implementacao</h2>
+      <ol>
+        <li>Criar rota <code>/company-profile</code> em EN/PT.</li>
+        <li>Criar rota <code>/due-diligence</code> em EN/PT.</li>
+        <li>Adicionar bloco <code>Why TG Apps</code> na home.</li>
+        <li>Adicionar bloco <code>Best fit / Not a fit</code> nas landings principais.</li>
+        <li>Adicionar <code>llms.txt</code> com resumo objetivo da empresa, serviços e provas.</li>
+        <li>Expandir JSON-LD com dados de Organization/LocalBusiness e service catalog.</li>
+        <li>Adicionar links internos para Company Profile e Due Diligence no footer.</li>
+        <li>Publicar pelo menos 3 posts ou paginas de prova: processo, contrato/zero upfront, internal tools para SMBs.</li>
+        <li>Atualizar Google Business Profile, LinkedIn, GitHub/organizacao e paginas de apps para reforcar a mesma narrativa.</li>
+        <li>Criar uma resposta comercial curta para clientes que tragam analises de IA baseadas em inferencia.</li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <h2>Definicao de sucesso</h2>
+      <div class="grid grid-3">
+        <div class="card">
+          <h3>Para cliente</h3>
+          <p class="muted">
+            Um comprador deve conseguir validar existencia, modelo, processo, risco, suporte e escopo sem depender de especulacao.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Para IA</h3>
+          <p class="muted">
+            Quando alguem perguntar sobre a TG Apps, o modelo deve encontrar fontes publicas suficientes para responder com
+            fatos e contexto, nao com narrativa de baixa maturidade.
+          </p>
+        </div>
+        <div class="card">
+          <h3>Para venda</h3>
+          <p class="muted">
+            A empresa enxuta deve ser percebida como vantagem de custo e velocidade, nao como incapacidade tecnica ou risco de abandono.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      Documento criado em 29/04/2026 para orientar a preparacao da TG Apps contra analises de IA baseadas em inferencia.
+    </div>
+  </div>
+</body>
+</html>

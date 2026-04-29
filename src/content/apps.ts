@@ -164,7 +164,7 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
     ],
     finalCtaTitle: 'Need a custom app with this level of product polish?',
     finalCtaDescription:
-      'TG Apps can design, build, and operate mobile products like AnyLanguage for startups and businesses that need real delivery speed.'
+      'TG Apps can build, design, rescue, launch, and evolve mobile products like AnyLanguage for founders, startups, and businesses that need a clear release path and real product iteration.'
   },
   pt: {
     badge: 'AnyLanguage Conversations',
@@ -237,7 +237,7 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
     ],
     finalCtaTitle: 'Precisa de um app com esse nível de produto e acabamento?',
     finalCtaDescription:
-      'A TG Apps pode desenhar, construir e operar produtos mobile como o AnyLanguage para startups e empresas que precisam de entrega real.'
+      'A TG Apps pode desenhar, resgatar, publicar e evoluir produtos mobile como o AnyLanguage para fundadores, startups e empresas que precisam de um caminho claro de release e iteracao real de produto.'
   }
 };
 

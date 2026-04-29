@@ -171,14 +171,14 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     hero: {
       badge: 'Custom software for startups & SMBs',
-      titleLine1: 'Internal tools, apps, and systems',
-      titleHighlight: 'for startups and SMB teams',
+      titleLine1: 'Custom apps, CRM, and internal tools',
+      titleHighlight: 'for founders and SMB teams',
       titleLine2: 'built by one product team',
       subtitle:
-        'Founder-led LatAm studio in São Paulo building custom CRM, internal tools, dashboards, workflow automation, mobile apps, customer portals, employee apps, APIs, databases, and AI integrations for startups and SMBs that have outgrown spreadsheets or disconnected software.',
+        'Founder-led LatAm studio in São Paulo building custom software, apps, CRM, internal tools, dashboards, workflow automation, customer portals, employee apps, APIs, databases, and AI integrations for founders, startups, and SMBs. We follow the agreed client plan strictly, execute with practical discipline, and share delivery insights when our experience can help.',
       stats: [
         { label: 'D-U-N-S® 651029828 · issued Jan 28 2026' },
-        { label: 'Kickoff call in one business day · we demo and deploy roughly once per week' },
+        { label: 'Client-led plan · strict execution · experienced delivery insights when useful' },
         { label: 'Introductory USD 2,000/mo rate · fixed while your engagement stays active' }
       ],
       primaryCta: 'Schedule a discovery call',
@@ -191,20 +191,20 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     services: {
       badge: 'Custom software capabilities',
-      headingLine1: 'Operational software, apps, and integrations',
-      headingHighlight: 'built around how your team works',
+      headingLine1: 'Apps, operational software, and integrations',
+      headingHighlight: 'built around your business',
       description:
-        'We partner with startups, SMB operators, agencies, and IT leaders who need a practical software team without full-time hiring overhead. We can build the CRM, internal system, app, backend, dashboard, automation, or AI integration that keeps your operation moving, with weekly demos and clear ownership from kickoff to handoff.',
+        'We partner with founders, startups, SMB operators, agencies, and IT leaders who need a practical software team without full-time hiring overhead. We build, finish, rescue, launch, and evolve apps, CRM, internal systems, backend, dashboards, automations, and AI integrations according to the agreed plan, while offering implementation insights when useful.',
       pillars: [
         'Contract and NDA signed before kickoff; zero upfront payment.',
-        'Weekly status notes inside your own tools plus Kanban snapshots and Loom recaps keep everyone aligned.',
+        'Client-led execution: we follow the plan strictly and flag risks, tradeoffs, and improvements when experience helps.',
         'Play Store, App Store, private MDM, and phased releases handled by us.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
       gridHeading: 'What we ship',
       gridDescription:
-        'Use us for a complete build or a focused product push. Strategy, design, backend, frontend, mobile, integrations, infrastructure, and release support stay connected inside one accountable team.',
+        'Use us for a complete build, an app rescue, or a focused product push. Strategy, design, backend, frontend, mobile, integrations, infrastructure, and release support stay connected inside one accountable team.',
       processHeading: 'How we collaborate in three tight loops',
       processDescription:
         'Lean structure: align, ship, support. Each loop keeps decision-makers involved without draining their calendar.',
@@ -252,16 +252,28 @@ export const translations: Record<Locale, TranslationSchema> = {
           cta: 'Plan my system'
         },
         {
-          title: 'Mobile and customer-facing apps',
-          subtitle: 'Android, iOS, Flutter, React Native',
+          title: 'App rescue and release execution',
+          subtitle: 'Finish, release, validate when needed',
           description:
-            'Launch mobile apps, responsive products, landing pages, portals, and customer experiences with the backend, database, and release path planned together.',
+            'Take unfinished apps, rough prototypes, outdated builds, or stalled codebases and turn them into usable products with a clear release path, backend, database, store release, and iteration plan defined together.',
           features: [
-            'Play Store, App Store, and private distribution compliance handled for you.',
-            'SSO, analytics, push notifications, subscriptions, and integrations.',
-            'Weekly demos, staged rollout, monitoring, and clean handoff.'
+            'Audit the current app, codebase, stores, backend, and deployment blockers.',
+            'Fix, rebuild, or complete the core flows required by the agreed release plan.',
+            'Publish when the plan calls for it, validate with users when applicable, monitor results, and keep improving.'
           ],
-          cta: 'Plan my app'
+          cta: 'Finish my app'
+        },
+        {
+          title: 'Born-global apps',
+          subtitle: 'Multilingual, cultural, international-ready',
+          description:
+            'Build apps that can serve more than one market from day one, with contextual translation, locale-aware UX, app store preparation, and content structure ready for global iteration.',
+          features: [
+            'Multilingual onboarding, notifications, support flows, and product copy.',
+            'Translation adapted to user intent, tone, examples, and cultural context.',
+            'Analytics, release checklists, fallback language behavior, and market-by-market iteration.'
+          ],
+          cta: 'Plan my global app'
         },
         {
           title: 'Integrations, AI, and data layers',
@@ -277,10 +289,10 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Need software built around your operation?',
+        title: 'Need a software team to execute your plan?',
         description:
-          'Send us the process, tools, spreadsheet, or product idea. We respond in under one business day with next steps or a referral.',
-        button: 'Plan my system'
+          'Send us the current app, repo, process, spreadsheet, or product idea. We respond in under one business day with blockers, risks, next steps, or a referral.',
+        button: 'Plan the build'
       }
     },
     about: {
@@ -328,7 +340,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     contact: {
       badge: 'Ready in one call',
       headingLine1: 'Talk directly to the founder',
-      headingHighlight: 'and get a scoped plan fast',
+      headingHighlight: 'and get a clear scoped plan',
       description:
         'Fill the form or ping us on WhatsApp. We answer within one business day with an honest read on scope, budget, kickoff timing, and whether the current introductory monthly rate fits your project.',
       infoHeading: 'Direct channels',
@@ -357,6 +369,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       whyUs: [
         'Zero upfront payment; billing starts only after kickoff, you can cancel anytime, and there are no surprise fees.',
         'D-U-N-S® record and Brazilian LLC paperwork to pass procurement.',
+        'Strong fit for unfinished apps, app drafts, outdated builds, and stalled codebases when the client needs a clear path to release.',
         'Full-stack delivery: custom CRM, internal tools, native apps, responsive sites, dashboards, backend, and databases handled by one team.',
         'LLM integrations delivered with guardrails and documentation that match the stack you already trust.',
         'Deploy cadence typically once per week, with backend, frontend, database, and mobile tracks moving in parallel with blue/green coverage.',
@@ -409,6 +422,8 @@ export const translations: Record<Locale, TranslationSchema> = {
       },
       services: [
         'Custom CRM / internal tools',
+        'App rescue / release execution',
+        'Born-global app',
         'Android + iOS build',
         'Integrations + dashboards',
         'Rescue or modernization',
@@ -417,7 +432,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'TG Apps is a founder-led LatAm studio building custom software, internal tools, CRMs, dashboards, apps, and integrations for startups and SMB teams.',
+        'TG Apps is a founder-led LatAm studio building custom software, apps, CRM, internal tools, dashboards, and integrations for founders, startups, and SMB teams.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
@@ -428,6 +443,8 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       servicesHeading: 'Popular requests',
       services: [
+        'App rescue and release execution',
+        'Born-global apps',
         'Custom CRM and internal tools',
         'Business systems and dashboards',
         'Android + iOS builds',
@@ -462,15 +479,15 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Software sob medida para startups e SMBs',
-      titleLine1: 'Ferramentas internas, apps e sistemas',
-      titleHighlight: 'para startups e empresas em crescimento',
-      titleLine2: 'construidos por um time de produto',
+      badge: 'Software sob medida para startups e empresas',
+      titleLine1: 'Apps, CRM e ferramentas internas',
+      titleHighlight: 'para fundadores e empresas',
+      titleLine2: 'construídos por um time de produto',
       subtitle:
-        'Studio LatAm liderado pelo fundador em São Paulo que constrói CRM sob medida, ferramentas internas, dashboards, automações, apps mobile, portais de cliente, apps para equipe, APIs, bancos de dados e integrações de IA para startups e empresas que cresceram além das planilhas e softwares desconectados.',
+        'Studio LatAm liderado pelo fundador em São Paulo que constrói software sob medida, apps, CRM, ferramentas internas, dashboards, automações, portais de cliente, apps de equipe, APIs, bancos de dados e integrações de IA para fundadores, startups e empresas. Seguimos o plano combinado com rigor, executamos com disciplina prática e compartilhamos insights quando nossa experiência pode ajudar.',
       stats: [
         { label: 'D-U-N-S® 651029828 · emitido em 28/01/2026' },
-        { label: 'Chamada inicial em 1 dia útil · demos e deploys semanais guiados por você' },
+        { label: 'Plano guiado pelo cliente · execução rigorosa · insights quando forem úteis' },
         { label: 'Valor introdutório de US$ 2.000/mês · fixo enquanto o engajamento estiver ativo' }
       ],
       primaryCta: 'Agende uma conversa',
@@ -481,22 +498,22 @@ export const translations: Record<Locale, TranslationSchema> = {
       description:
         'Algumas marcas e operações que apoiamos em entregas, execução de produto e operação contínua.'
     },
-    services: {
+      services: {
       badge: 'Capacidades de software sob medida',
-      headingLine1: 'Software operacional, apps e integrações',
-      headingHighlight: 'construidos em torno do seu processo',
+      headingLine1: 'Apps, software operacional e integrações',
+      headingHighlight: 'construídos em torno do seu negócio',
       description:
-        'Atuamos com startups, operações SMB, agências e líderes de TI que precisam de um time prático de software sem contratar internamente. Construímos CRM, sistemas internos, apps, backends, dashboards, automações e integrações de IA com demos semanais e ownership claro do kickoff ao handoff.',
+        'Atuamos com fundadores, startups, empresas em crescimento, agências e líderes de TI que precisam de um time prático de software sem contratar internamente. Construímos, finalizamos, resgatamos, lançamos e evoluímos apps, CRM, sistemas internos, backends, dashboards, automações e integrações de IA conforme o plano combinado, oferecendo insights de implementação quando fizer sentido.',
       pillars: [
         'Contrato e NDA assinados antes do kick-off; nenhum pagamento adiantado.',
-        'Notas semanais no canal que você preferir com fotos do Kanban e Looms curtos.',
+        'Execução guiada pelo cliente: seguimos o plano com rigor e sinalizamos riscos, tradeoffs e melhorias quando a experiência ajuda.',
         'Play Store, App Store ou distribuição interna conduzidas por nós.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
       gridHeading: 'Formatos mais comuns',
       gridDescription:
-        'Use a TG Apps para uma construção completa ou para um avanço específico de produto. Estratégia, design, backend, frontend, mobile, integrações, infraestrutura e release ficam conectados em um único time responsável.',
+        'Use a TG Apps para uma construção completa, um resgate de app ou um avanço específico de produto. Estratégia, design, backend, frontend, mobile, integrações, infraestrutura e release ficam conectados em um único time responsável.',
       processHeading: 'Como trabalhamos em três ciclos',
       processDescription:
         'Estrutura enxuta: alinhamento, construção e suporte. Cada ciclo mantém decisores próximos sem roubar agenda.',
@@ -544,16 +561,28 @@ export const translations: Record<Locale, TranslationSchema> = {
           cta: 'Planejar meu sistema'
         },
         {
-          title: 'Apps mobile e experiências para clientes',
-          subtitle: 'Android, iOS, Flutter, React Native',
+          title: 'Resgate de app e execução de release',
+          subtitle: 'Finalizar, publicar, validar quando preciso',
           description:
-            'Lançamos apps mobile, produtos responsivos, landing pages, portais e experiências para clientes com backend, banco de dados e caminho de release planejados juntos.',
+            'Pegamos apps inacabados, protótipos, builds antigas ou codebases travadas e transformamos em produtos utilizáveis com caminho claro de release, backend, banco, publicação em lojas e plano de iteração definidos juntos.',
           features: [
-            'Publicação na Play Store, App Store ou distribuição enterprise por nossa conta.',
-            'SSO, analytics, push notifications, assinaturas e integrações.',
-            'Demos semanais, rollout gradual, monitoramento e handoff limpo.'
+            'Auditoria do app, código, lojas, backend e bloqueios de deploy.',
+            'Correção, rebuild ou finalização dos fluxos centrais exigidos pelo plano de release combinado.',
+            'Publicação quando o plano pedir, validação com usuários quando aplicável, monitoramento e melhoria contínua.'
           ],
-          cta: 'Planejar meu app'
+          cta: 'Finalizar meu app'
+        },
+        {
+          title: 'Apps born global',
+          subtitle: 'Multilíngue, cultural, pronto para o mundo',
+          description:
+            'Construímos apps que podem atender mais de um mercado desde o primeiro release, com tradução contextualizada, UX sensível a idioma, preparação de lojas e estrutura de conteúdo pronta para iteração global.',
+          features: [
+            'Onboarding, notificações, suporte e copy de produto preparados para múltiplos idiomas.',
+            'Tradução adaptada à intenção do usuário, tom, exemplos e contexto cultural.',
+            'Analytics, checklist de release, fallback de idioma e evolução mercado por mercado.'
+          ],
+          cta: 'Planejar app global'
         },
         {
           title: 'Integrações, IA e camadas de dados',
@@ -569,10 +598,10 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Precisa de software feito para sua operação?',
+        title: 'Precisa de um time de software para executar seu plano?',
         description:
-          'Conte o processo, ferramenta, planilha ou ideia de produto. Respondemos em até 1 dia útil com próximos passos ou uma indicação honesta.',
-        button: 'Planejar meu sistema'
+          'Envie o app atual, repo, processo, planilha ou ideia de produto. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos ou uma indicação honesta.',
+        button: 'Planejar a construção'
       }
     },
     about: {
@@ -620,7 +649,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     contact: {
       badge: 'Prontos em uma call',
       headingLine1: 'Fale direto com o fundador',
-      headingHighlight: 'e receba um plano rapidamente',
+      headingHighlight: 'e receba um plano claro',
       description:
         'Envie o formulário ou mande mensagem no WhatsApp. Respondemos em até 1 dia útil com leitura honesta de escopo, orçamento, kickoff e se o valor mensal introdutório faz sentido para seu projeto.',
       infoHeading: 'Canais diretos',
@@ -649,6 +678,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       whyUs: [
         'Sem adiantamentos; cobramos só depois do início, sem surpresas e você cancela quando quiser.',
         'Registro D-U-N-S® e documentos brasileiros prontos para compras corporativas.',
+        'Encaixe forte para apps inacabados, rascunhos, builds antigas e codebases travadas quando o cliente precisa de um caminho claro até o release.',
         'Entrega ponta a ponta: CRM sob medida, ferramentas internas, apps, sites, dashboards, backends e bancos de dados por um único time.',
         'Integrações LLM com guardrails e documentação alinhados ao stack que você já usa.',
         'Cadência de deploy normalmente semanal, com back, front, banco e mobile em paralelo + cobertura azul/verde.',
@@ -689,7 +719,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         nameLabel: 'Nome completo',
         namePlaceholder: 'Seu nome',
         emailLabel: 'Email corporativo',
-        emailPlaceholder: 'voce@empresa.com',
+        emailPlaceholder: 'você@empresa.com',
         phoneLabel: 'Telefone ou WhatsApp',
         phonePlaceholder: '+55 (11) 99999-0000',
         serviceLabel: 'Do que você precisa?',
@@ -702,6 +732,8 @@ export const translations: Record<Locale, TranslationSchema> = {
       },
       services: [
         'CRM / ferramentas internas',
+        'Resgate de app / lançamento',
+        'App born global',
         'App Android + iOS',
         'Integrações + dashboards',
         'Resgate ou modernização',
@@ -710,7 +742,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A TG Apps é um studio LatAm liderado pelo fundador que constrói software sob medida, CRMs, ferramentas internas, dashboards, apps e integrações para startups e empresas em crescimento.',
+        'A TG Apps é um studio LatAm liderado pelo fundador que constrói software sob medida, apps, CRM, ferramentas internas, dashboards e integrações para fundadores, startups e empresas.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
@@ -721,6 +753,8 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       servicesHeading: 'Pedidos frequentes',
       services: [
+        'Resgate de app e lançamento',
+        'Apps born global',
         'CRM e ferramentas internas',
         'Sistemas de negócio e dashboards',
         'Apps Android e iOS',

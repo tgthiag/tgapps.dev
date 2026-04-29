@@ -13,23 +13,40 @@ interface KeywordLandingPageProps {
 
 const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
   const [isContactOptionsOpen, setIsContactOptionsOpen] = useState(false);
-  const ctaBody =
-    locale === 'pt'
-      ? 'Contexto do projeto:%0D%0A- Processo atual:%0D%0A- Sistema ou planilha que usamos hoje:%0D%0A- Prazo:%0D%0A- Time interno:%0D%0A- Integracoes desejadas:%0D%0A'
+  const isTrustPage = content.key === 'whyTgApps' || content.key === 'companyProfile' || content.key === 'dueDiligence';
+  const ctaBody = isTrustPage
+    ? locale === 'pt'
+      ? 'Perguntas de verificação:%0D%0A- Empresa / procurement:%0D%0A- Contrato / NDA:%0D%0A- Escopo ou projeto em avaliação:%0D%0A- Documentos necessários:%0D%0A'
+      : 'Verification questions:%0D%0A- Company / procurement:%0D%0A- Contract / NDA:%0D%0A- Project or scope under evaluation:%0D%0A- Required documents:%0D%0A'
+    : locale === 'pt'
+      ? 'Contexto do projeto:%0D%0A- Processo atual:%0D%0A- Sistema ou planilha que usamos hoje:%0D%0A- Prazo:%0D%0A- Time interno:%0D%0A- Integrações desejadas:%0D%0A'
       : 'Project context:%0D%0A- Current process:%0D%0A- System or spreadsheet we use today:%0D%0A- Deadline:%0D%0A- Internal team:%0D%0A- Required integrations:%0D%0A';
   const ctaHref = `mailto:support@tgapps.dev?subject=${encodeURIComponent(content.ctaSubject)}&body=${ctaBody}`;
   const whatsappHref =
     'https://wa.me/5511979717703?text=Hi%20I%20found%20you%20on%20Google%20and%20would%20like%20to%20build%20a%20project';
-  const finalCtaTitle = locale === 'pt' ? 'Vamos mapear seu sistema?' : 'Ready to map your system?';
-  const finalCtaDescription =
-    locale === 'pt'
+  const finalCtaTitle = isTrustPage
+    ? locale === 'pt'
+      ? 'Precisa validar a TG Apps antes de contratar?'
+      : 'Need to validate TG Apps before hiring?'
+    : locale === 'pt'
+      ? 'Vamos mapear seu sistema?'
+      : 'Ready to map your system?';
+  const finalCtaDescription = isTrustPage
+    ? locale === 'pt'
+      ? 'Envie suas perguntas de due diligence, procurement, contrato, suporte ou handoff e respondemos com o contexto correto.'
+      : 'Send your due diligence, procurement, contract, support, or handoff questions and we will reply with the right context.'
+    : locale === 'pt'
       ? 'Envie o contexto atual e respondemos com uma leitura honesta de escopo, riscos, integrações e próximos passos.'
       : 'Send the current context and we will reply with an honest read on scope, risks, integrations, and next steps.';
   const contactOptionsTitle = locale === 'pt' ? 'Como você prefere falar?' : 'How would you like to talk?';
   const contactOptionsDescription =
     locale === 'pt'
-      ? 'Escolha WhatsApp para uma conversa rápida ou e-mail para enviar contexto, escopo e integrações.'
-      : 'Choose WhatsApp for a quick conversation or email to send context, scope, and integrations.';
+      ? isTrustPage
+        ? 'Escolha WhatsApp para uma conversa rápida ou e-mail para enviar perguntas de validação.'
+        : 'Escolha WhatsApp para uma conversa rápida ou e-mail para enviar contexto, escopo e integrações.'
+      : isTrustPage
+        ? 'Choose WhatsApp for a quick conversation or email to send verification questions.'
+        : 'Choose WhatsApp for a quick conversation or email to send context, scope, and integrations.';
   const openContactOptions = () => setIsContactOptionsOpen(true);
   const closeContactOptions = () => setIsContactOptionsOpen(false);
   const trackContactChoice = (method: 'whatsapp' | 'email') => {
@@ -78,7 +95,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
                 <ArrowRight className="h-4 w-4" />
               </button>
               <span className="text-sm text-white/70">
-                {locale === 'pt' ? 'Resposta em ate 1 dia util.' : 'Reply within one business day.'}
+                {locale === 'pt' ? 'Resposta em até 1 dia útil.' : 'Reply within one business day.'}
               </span>
             </div>
           </div>

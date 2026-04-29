@@ -1,4 +1,4 @@
-import { Smartphone, Cpu, Cable, ArrowRight, CheckCircle, Zap } from 'lucide-react';
+import { Smartphone, Cpu, Cable, ArrowRight, CheckCircle, Zap, Globe2 } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
 
@@ -7,13 +7,15 @@ const Services = () => {
   const t = useTranslations();
   const serviceLandingHrefs = [
     landingSlugsByLocale[language].customCrmInternalTools,
-    landingSlugsByLocale[language].androidIosSmb,
+    landingSlugsByLocale[language].appRescueLaunch,
+    landingSlugsByLocale[language].bornGlobalApps,
     landingSlugsByLocale[language].llmRagIntegrations
   ];
-  const iconPalette = [Smartphone, Cpu, Cable];
+  const iconPalette = [Cpu, Smartphone, Globe2, Cable];
   const colorPalette = [
     { bg: 'bg-blue-50', gradient: 'from-blue-500 to-indigo-500', icon: 'text-blue-700' },
     { bg: 'bg-purple-50', gradient: 'from-purple-500 to-pink-500', icon: 'text-purple-700' },
+    { bg: 'bg-amber-50', gradient: 'from-amber-500 to-orange-500', icon: 'text-amber-700' },
     { bg: 'bg-emerald-50', gradient: 'from-emerald-500 to-cyan-500', icon: 'text-emerald-700' }
   ];
   const serviceCards = (t.services.items ?? []).map((item, index) => ({
@@ -98,7 +100,7 @@ const Services = () => {
             </div>
           )}
 
-          <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8'>
             {serviceCards.map((service, index) => {
               const IconComponent = service.IconComponent;
               const badgeClasses = 'w-16 h-16 ' + service.bg + ' rounded-2xl flex items-center justify-center mb-6';

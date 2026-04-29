@@ -7,7 +7,7 @@ const SocialProof = () => {
   return (
     <section className="relative -mt-2 bg-white pb-10">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="rounded-[2rem] border border-slate-200 bg-white px-6 py-8 shadow-[0_24px_60px_rgba(15,23,42,0.06)] sm:px-8">
+        <div className="rounded-[2rem] px-6 py-8  sm:px-8">
           <div className="max-w-3xl">
             <h2 className="text-3xl font-bold text-slate-950 sm:text-4xl">{t.socialProof.heading}</h2>
             <p className="mt-3 text-base leading-relaxed text-slate-600">{t.socialProof.description}</p>
