@@ -4,6 +4,7 @@ import type { Locale } from '../i18n/translations';
 import type { LandingPageContent } from '../content/landingPages';
 import Header from './Header';
 import Footer from './Footer';
+import { trackLeadContact } from '../utils/analytics';
 
 interface KeywordLandingPageProps {
   locale: Locale;
@@ -31,6 +32,10 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
       : 'Choose WhatsApp for a quick conversation or email to send context, scope, and integrations.';
   const openContactOptions = () => setIsContactOptionsOpen(true);
   const closeContactOptions = () => setIsContactOptionsOpen(false);
+  const trackContactChoice = (method: 'whatsapp' | 'email') => {
+    trackLeadContact(method, `landing_${content.key}`);
+    closeContactOptions();
+  };
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-950">
@@ -246,7 +251,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
                 href={whatsappHref}
                 target="_blank"
                 rel="noreferrer"
-                onClick={closeContactOptions}
+                onClick={() => trackContactChoice('whatsapp')}
                 className="group rounded-2xl border border-emerald-200 bg-emerald-50 p-5 text-left transition duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:bg-emerald-100"
               >
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-emerald-600 text-white">
@@ -260,7 +265,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
 
               <a
                 href={ctaHref}
-                onClick={closeContactOptions}
+                onClick={() => trackContactChoice('email')}
                 className="group rounded-2xl border border-blue-200 bg-blue-50 p-5 text-left transition duration-300 hover:-translate-y-1 hover:border-blue-300 hover:bg-blue-100"
               >
                 <div className="mb-4 flex h-11 w-11 items-center justify-center rounded-full bg-blue-600 text-white">

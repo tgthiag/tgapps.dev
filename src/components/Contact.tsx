@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageSquare } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
+import { trackLeadContact } from '../utils/analytics';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -43,6 +44,7 @@ const Contact = () => {
     ];
     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
+    trackLeadContact('contact_form_email', 'home_contact_form');
     window.location.href = mailtoLink;
 
     setIsSubmitting(false);
@@ -147,6 +149,7 @@ const Contact = () => {
               href={whatsappHref}
               target="_blank"
               rel="noreferrer"
+              onClick={() => trackLeadContact('whatsapp', 'home_contact_whatsapp')}
               className="mt-8 flex items-center gap-4 rounded-2xl border border-emerald-200 bg-emerald-50 p-5 transition-all duration-300 hover:-translate-y-1 hover:border-emerald-300 hover:bg-emerald-100 hover:shadow-xl"
             >
               <div className="flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-green-500 to-emerald-600 text-white">
