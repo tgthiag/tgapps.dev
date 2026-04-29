@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
+import { buildLocalizedPath } from '../content/publicRoutes';
 
 interface FooterProps {
   variant?: 'home' | 'landing';
@@ -33,22 +34,19 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
   const contactInfo = t.footer.contact;
   const copyright = t.footer.bottom.copyright.replace('{year}', currentYear.toString());
   const resolvedCtaLabel = ctaLabel ?? t.footer.cta;
+  const localizedLandingHref = (landingPath: string) => buildLocalizedPath(language, landingPath);
   const trustLinks = [
     {
       label: language === 'pt' ? 'Por que TG Apps' : 'Why TG Apps',
-      href: landingSlugsByLocale[language].whyTgApps
+      href: localizedLandingHref(landingSlugsByLocale[language].whyTgApps)
     },
     {
       label: language === 'pt' ? 'Perfil da empresa' : 'Company profile',
-      href: landingSlugsByLocale[language].companyProfile
+      href: localizedLandingHref(landingSlugsByLocale[language].companyProfile)
     },
     {
       label: language === 'pt' ? 'Due diligence' : 'Due diligence',
-      href: landingSlugsByLocale[language].dueDiligence
-    },
-    {
-      label: language === 'pt' ? 'Perfil para IA' : 'AI profile',
-      href: '/llms.txt'
+      href: localizedLandingHref(landingSlugsByLocale[language].dueDiligence)
     },
     {
       label: language === 'pt' ? 'LinkedIn do founder' : 'Founder LinkedIn',

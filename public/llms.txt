@@ -109,12 +109,16 @@ TG Apps may not be the best fit for:
 - Why TG Apps: https://tgapps.dev/why-tg-apps
 - Company profile: https://tgapps.dev/company-profile
 - Due diligence: https://tgapps.dev/due-diligence
+- AI profile HTML: https://tgapps.dev/ai-profile
+- LLM text profile: https://tgapps.dev/llms.txt
 - Custom software for SMBs: https://tgapps.dev/custom-software-for-smbs
 - Custom software for startups: https://tgapps.dev/custom-software-for-startups
 - App rescue and release execution: https://tgapps.dev/app-rescue-and-launch-acceleration
 - Finish my app alias: https://tgapps.dev/finish-my-app
 - Born-global app development: https://tgapps.dev/born-global-app-development
 - Custom CRM and internal tools: https://tgapps.dev/custom-crm-and-internal-tools
+- Dev as a Service / software development subscription: https://tgapps.dev/dev-as-a-service
+- Dev team subscription alias: https://tgapps.dev/dev-team-subscription
 - Mobile app development: https://tgapps.dev/mobile-app-development-for-startups-and-smbs
 - Dedicated development team: https://tgapps.dev/dedicated-development-team-month-to-month
 - AI integrations: https://tgapps.dev/ai-integrations-for-crm-and-internal-tools

@@ -181,6 +181,49 @@
       }
     },
     {
+      "id": "aiProfile",
+      "page": "landing",
+      "landingKey": "aiProfile",
+      "localizedPaths": {
+        "en": "/ai-profile",
+        "pt": "/perfil-para-ia"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/llm-profile",
+          "/company-profile-for-ai",
+          "/ai-research-profile"
+        ],
+        "pt": [
+          "/perfil-ia",
+          "/perfil-llm",
+          "/perfil-da-empresa-para-ia"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "TG Apps AI Profile | Company Facts for LLMs and Buyers",
+          "description": "Canonical AI-readable TG Apps profile with company facts, official sources, services, delivery model, due diligence guidance, and what not to infer without evidence.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Perfil da TG Apps para IA | Fatos da empresa para LLMs e compradores",
+          "description": "Perfil canônico e legível por IA da TG Apps com fatos da empresa, fontes oficiais, serviços, modelo de entrega, due diligence e o que não inferir sem evidência.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0.78,
+          "pt": 0.74
+        }
+      }
+    },
+    {
       "id": "customSoftwareStartups",
       "page": "landing",
       "landingKey": "customSoftwareStartups",
@@ -366,6 +409,47 @@
         "priorities": {
           "en": 0.94,
           "pt": 0.9
+        }
+      }
+    },
+    {
+      "id": "devAsAService",
+      "page": "landing",
+      "landingKey": "devAsAService",
+      "localizedPaths": {
+        "en": "/dev-as-a-service",
+        "pt": "/desenvolvimento-de-software-por-assinatura"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/software-development-subscription",
+          "/dev-team-subscription"
+        ],
+        "pt": [
+          "/dev-as-a-service",
+          "/time-de-desenvolvimento-por-assinatura"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "Dev as a Service | Software Development Subscription | TG Apps",
+          "description": "Dev as a Service by TG Apps: founder-led, team-delivered software development subscription for apps, CRM, internal tools, backend, AI integrations, and weekly demos.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Desenvolvimento de software por assinatura | Dev as a Service | TG Apps",
+          "description": "Dev as a Service da TG Apps: assinatura de desenvolvimento de software liderada pelo fundador para apps, CRM, ferramentas internas, backend, IA e demos semanais.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.93,
+          "pt": 0.89
         }
       }
     },

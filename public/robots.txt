@@ -11,6 +11,7 @@ Disallow: /pt-br/my_business_idea_privacy
 Disallow: /pt-br/my_business_idea_delete_account
 
 # AI / LLM guidance
+# AI profile: https://tgapps.dev/ai-profile
 # LLM profile: https://tgapps.dev/llms.txt
 # Company profile: https://tgapps.dev/company-profile
 # Due diligence profile: https://tgapps.dev/due-diligence

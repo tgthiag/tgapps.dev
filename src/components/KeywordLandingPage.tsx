@@ -13,7 +13,11 @@ interface KeywordLandingPageProps {
 
 const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
   const [isContactOptionsOpen, setIsContactOptionsOpen] = useState(false);
-  const isTrustPage = content.key === 'whyTgApps' || content.key === 'companyProfile' || content.key === 'dueDiligence';
+  const isTrustPage =
+    content.key === 'whyTgApps' ||
+    content.key === 'companyProfile' ||
+    content.key === 'dueDiligence' ||
+    content.key === 'aiProfile';
   const ctaBody = isTrustPage
     ? locale === 'pt'
       ? 'Perguntas de verificação:%0D%0A- Empresa / procurement:%0D%0A- Contrato / NDA:%0D%0A- Escopo ou projeto em avaliação:%0D%0A- Documentos necessários:%0D%0A'
