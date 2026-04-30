@@ -49,12 +49,12 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
   return {
     title:
       locale === 'pt'
-        ? 'Software sob medida para startups e empresas | Apps, CRM e sistemas | TG Apps'
-        : 'Custom Software for Startups & SMBs | Apps, CRM, Internal Tools | TG Apps',
+        ? 'Mais software entregue por valor investido | Apps, CRM, IA e sistemas | TG Apps'
+        : 'More Software Delivery Per Dollar | Apps, CRM, AI & Internal Tools | TG Apps',
     description:
       locale === 'pt'
-        ? 'Software sob medida, apps, CRM, ferramentas internas, dashboards, automações, APIs e integrações de IA para fundadores, startups e empresas, seguindo o plano combinado com execução prática e insights de entrega.'
-        : 'Custom software, apps, CRM, internal tools, dashboards, workflow automation, APIs, and AI integrations for founders, startups, and SMBs, built around the agreed plan with practical execution and experienced delivery insight.',
+        ? 'Time de software sob demanda para apps mobile, CRM, ferramentas internas, backend, APIs e integrações de IA. A TG Apps ajuda fundadores e empresas a obter mais entrega por valor investido, com demos semanais, sem adiantamento e valor mensal atual de US$ 2.000/mês, fixo para quem contratar nesse valor.'
+        : 'Custom software team for mobile apps, CRM, internal tools, backend, APIs, and AI integrations. TG Apps helps founders and growing teams get more software delivery per dollar with weekly demos, zero upfront payment, and a USD 2,000/mo fixed monthly rate for clients who hire at that rate.',
     image: 'https://tgapps.dev/og-home.png',
     robots: 'index,follow',
     localizedRoutePaths: { en: '/', pt: '/' }

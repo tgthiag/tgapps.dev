@@ -5,18 +5,22 @@ import { landingSlugsByLocale } from '../content/landingPages';
 const Services = () => {
   const { language } = useLanguage();
   const t = useTranslations();
-  const serviceLandingHrefs = [
+  const serviceLandingHrefs: (string | undefined)[] = [
+    landingSlugsByLocale[language].androidIosSmb,
     landingSlugsByLocale[language].customCrmInternalTools,
     landingSlugsByLocale[language].appRescueLaunch,
-    landingSlugsByLocale[language].bornGlobalApps,
-    landingSlugsByLocale[language].llmRagIntegrations
+    undefined,
+    landingSlugsByLocale[language].llmRagIntegrations,
+    landingSlugsByLocale[language].bornGlobalApps
   ];
-  const iconPalette = [Cpu, Smartphone, Globe2, Cable];
+  const iconPalette = [Smartphone, Cpu, Zap, Cable, Cable, Globe2];
   const colorPalette = [
     { bg: 'bg-blue-50', gradient: 'from-blue-500 to-indigo-500', icon: 'text-blue-700' },
     { bg: 'bg-purple-50', gradient: 'from-purple-500 to-pink-500', icon: 'text-purple-700' },
     { bg: 'bg-amber-50', gradient: 'from-amber-500 to-orange-500', icon: 'text-amber-700' },
-    { bg: 'bg-emerald-50', gradient: 'from-emerald-500 to-cyan-500', icon: 'text-emerald-700' }
+    { bg: 'bg-emerald-50', gradient: 'from-emerald-500 to-cyan-500', icon: 'text-emerald-700' },
+    { bg: 'bg-cyan-50', gradient: 'from-cyan-500 to-blue-500', icon: 'text-cyan-700' },
+    { bg: 'bg-rose-50', gradient: 'from-rose-500 to-orange-500', icon: 'text-rose-700' }
   ];
   const serviceCards = (t.services.items ?? []).map((item, index) => ({
     ...item,
@@ -100,7 +104,7 @@ const Services = () => {
             </div>
           )}
 
-          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
             {serviceCards.map((service, index) => {
               const IconComponent = service.IconComponent;
               const badgeClasses = 'w-16 h-16 ' + service.bg + ' rounded-2xl flex items-center justify-center mb-6';

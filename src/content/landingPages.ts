@@ -81,30 +81,30 @@ const getLandingSlug = (locale: Locale, key: LandingPageKey): string => {
   return route.localizedPaths[locale];
 };
 
-const EN_INTRODUCTORY_PRICING: LandingPagePricing = {
-  label: 'Introductory monthly rate',
-  title: 'Current introductory rate: USD 2,000/month',
+const EN_CURRENT_PRICING: LandingPagePricing = {
+  label: 'Current monthly rate',
+  title: 'Current monthly rate: USD 2,000/month',
   description:
-    'Limited-time pricing for new engagements. If you join at this rate, it stays fixed for your account while the engagement remains active.',
+    'Current pricing for new engagements. If you hire us at this rate, it stays fixed for your account while the engagement remains active.',
   highlights: [
     'No upfront payment before work begins.',
     'Month-to-month engagement with no lock-in.',
     'Design, backend, frontend, database, integrations, and release support included in the same team.'
   ],
-  note: 'Final scope still depends on complexity, security needs, and required integrations, but the introductory monthly rate is locked for clients who start under this offer.'
+  note: 'Final scope still depends on complexity, security needs, and required integrations, but the USD 2,000/month rate is locked for clients who hire us at this offer.'
 };
 
-const PT_INTRODUCTORY_PRICING: LandingPagePricing = {
-  label: 'Valor mensal introdutório',
+const PT_CURRENT_PRICING: LandingPagePricing = {
+  label: 'Valor mensal atual',
   title: 'Valor atual: US$ 2.000/mês',
   description:
-    'Preço por tempo limitado para novos contratos. Quem entrar nessa faixa mantém o valor fixo enquanto o engajamento permanecer ativo.',
+    'Preço atual para novos contratos. Quem contratar nesse valor mantém o valor fixo enquanto o engajamento permanecer ativo.',
   highlights: [
     'Sem pagamento antecipado antes do trabalho começar.',
     'Contrato mês a mês, sem lock-in.',
     'Design, backend, frontend, banco de dados, integrações e suporte de release no mesmo time.'
   ],
-  note: 'O escopo final ainda depende da complexidade, segurança e integrações necessárias, mas o valor mensal introdutório fica travado para clientes que iniciarem nessa oferta.'
+  note: 'O escopo final ainda depende da complexidade, segurança e integrações necessárias, mas o valor de US$ 2.000/mês fica travado para clientes que contratarem nessa oferta.'
 };
 
 const EN_CONTENT: LandingContentByLocale = {
@@ -162,7 +162,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING,
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'The best SMB software usually starts inside the business',
       description:
@@ -463,7 +463,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING,
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'A startup does not always need a big team to start shipping',
       description:
@@ -524,7 +524,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING,
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'A real launch is useful when validation is the objective',
       description:
@@ -585,7 +585,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING,
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'If the product should be global, do not treat localization as a final task',
       description:
@@ -646,7 +646,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING,
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'The app is only one part of the delivery',
       description:
@@ -708,16 +708,16 @@ const EN_CONTENT: LandingContentByLocale = {
       }
     ],
     pricing: {
-      label: 'Introductory monthly rate',
-      title: 'Current introductory rate: USD 2,000/month',
+      label: 'Current monthly rate',
+      title: 'Current monthly rate: USD 2,000/month',
       description:
-        'Limited-time pricing for new engagements. If you join at this rate, it stays fixed for your account while the engagement remains active.',
+        'Current pricing for new engagements. If you hire us at this rate, it stays fixed for your account while the engagement remains active.',
       highlights: [
         'No upfront payment before work begins.',
         'Month-to-month engagement with no lock-in.',
         'Design, backend, frontend, database, integrations, and release support included in the same team.'
       ],
-      note: 'Final scope still depends on complexity, security needs, and required integrations, but the introductory monthly rate is locked for clients who start under this offer.'
+      note: 'Final scope still depends on complexity, security needs, and required integrations, but the USD 2,000/month rate is locked for clients who hire us at this offer.'
     },
     finalNote: {
       title: 'Your internal system can become a business asset',
@@ -734,7 +734,7 @@ const EN_CONTENT: LandingContentByLocale = {
       'TG Apps gives founders, startups, and SMB teams a founder-led, team-delivered software development subscription for apps, CRM, internal tools, backend systems, AI integrations, and release support, without hiring a full product team first.',
     heroHighlights: [
       'Founder-led delivery with a compact core team and scope-based collaborators.',
-      'USD 2,000/mo introductory rate, fixed while the engagement remains active.',
+      'USD 2,000/mo monthly rate, fixed while the engagement remains active.',
       'Zero upfront payment, weekly demos, and one team for product, backend, frontend, mobile, AI, and release.'
     ],
     ctaLabel: 'Schedule a discovery call',
@@ -775,11 +775,11 @@ const EN_CONTENT: LandingContentByLocale = {
         items: [
           'Weekly demos show what was built, what changed, and what is blocked.',
           'Backlog, decision notes, repositories, credentials, runbooks, and handoff materials stay organized as the product evolves.',
-          'The introductory USD 2,000/mo rate remains fixed for your account while the engagement remains active.'
+          'The USD 2,000/mo rate remains fixed for your account while the engagement remains active.'
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING,
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'A development subscription should buy momentum, not dependency',
       description:
@@ -802,7 +802,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Month-to-month dedicated development team',
     proofHeading: 'How this model works',
     proofItems: [
-      'Introductory rate: USD 2,000/mo, fixed while the engagement remains active.',
+      'Current monthly rate: USD 2,000/mo, fixed while the engagement remains active.',
       'Cancel any month with no penalties or hidden transition fees.',
       'Monthly billing, no upfront payment, and runbooks plus handoff docs delivered continuously.'
     ],
@@ -830,7 +830,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING
+    pricing: EN_CURRENT_PRICING
   },
   zeroUpfront: {
     key: 'zeroUpfront',
@@ -876,7 +876,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING
+    pricing: EN_CURRENT_PRICING
   },
   llmRagIntegrations: {
     key: 'llmRagIntegrations',
@@ -932,7 +932,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: EN_INTRODUCTORY_PRICING,
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'AI should make the existing system more useful',
       description:
@@ -996,7 +996,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING,
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'O melhor software para empresas geralmente nasce dentro da operação',
       description:
@@ -1297,7 +1297,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING,
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'Uma startup não precisa sempre de um time grande para começar a entregar',
       description:
@@ -1358,7 +1358,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING,
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'Um lançamento real é útil quando validação é o objetivo',
       description:
@@ -1419,7 +1419,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING,
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'Se o produto deve ser global, localização não pode ser a última tarefa',
       description:
@@ -1480,7 +1480,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING,
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'O app e apenas uma parte da entrega',
       description:
@@ -1542,16 +1542,16 @@ const PT_CONTENT: LandingContentByLocale = {
       }
     ],
     pricing: {
-      label: 'Valor mensal introdutório',
+      label: 'Valor mensal atual',
       title: 'Valor atual: US$ 2.000/mês',
       description:
-        'Preço por tempo limitado para novos contratos. Quem entrar nessa faixa mantém o valor fixo enquanto o engajamento permanecer ativo.',
+        'Preço atual para novos contratos. Quem contratar nesse valor mantém o valor fixo enquanto o engajamento permanecer ativo.',
       highlights: [
         'Sem pagamento antecipado antes do trabalho começar.',
         'Contrato mês a mês, sem lock-in.',
         'Design, backend, frontend, banco de dados, integrações e suporte de release no mesmo time.'
       ],
-      note: 'O escopo final ainda depende da complexidade, segurança e integrações necessárias, mas o valor mensal introdutório fica travado para clientes que iniciarem nessa oferta.'
+      note: 'O escopo final ainda depende da complexidade, segurança e integrações necessárias, mas o valor de US$ 2.000/mês fica travado para clientes que contratarem nessa oferta.'
     },
     finalNote: {
       title: 'Seu sistema interno pode virar ativo de negócio',
@@ -1568,7 +1568,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'A TG Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de release, sem exigir que a empresa contrate um time completo antes.',
     heroHighlights: [
       'Entrega liderada pelo fundador com núcleo enxuto e colaboradores por escopo.',
-      'Valor introdutório de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.',
+      'Valor mensal atual de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.',
       'Sem pagamento antecipado, demos semanais e um time para produto, backend, frontend, mobile, IA e release.'
     ],
     ctaLabel: 'Agendar discovery call',
@@ -1609,11 +1609,11 @@ const PT_CONTENT: LandingContentByLocale = {
         items: [
           'Demos semanais mostram o que foi construído, o que mudou e o que está bloqueado.',
           'Backlog, decisões, repositórios, credenciais, runbooks e materiais de handoff ficam organizados enquanto o produto evolui.',
-          'O valor introdutório de US$ 2.000/mês permanece fixo para sua conta enquanto o engajamento permanecer ativo.'
+          'O valor de US$ 2.000/mês permanece fixo para sua conta enquanto o engajamento permanecer ativo.'
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING,
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'Um time sob demanda deve comprar tração, não dependência',
       description:
@@ -1636,7 +1636,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Time mensal de desenvolvimento',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
-      'Valor introdutório de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.',
+      'Valor mensal atual de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.',
       'Cancelamento em qualquer mês sem multa ou taxa surpresa.',
       'Cobrança mensal, sem adiantamento, e runbooks com handoff entregues continuamente.'
     ],
@@ -1664,7 +1664,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING
+    pricing: PT_CURRENT_PRICING
   },
   zeroUpfront: {
     key: 'zeroUpfront',
@@ -1710,7 +1710,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING
+    pricing: PT_CURRENT_PRICING
   },
   llmRagIntegrations: {
     key: 'llmRagIntegrations',
@@ -1766,7 +1766,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: PT_INTRODUCTORY_PRICING,
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'IA deve tornar o sistema existente mais útil',
       description:

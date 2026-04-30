@@ -1,7 +1,8 @@
-import { ArrowRight, Play, Star, Users, Award, Zap } from 'lucide-react';
-import { useTranslations } from '../context/LanguageContext';
+import { ArrowRight, Award, Play, ShieldCheck, Star, Users, Zap } from 'lucide-react';
+import { useLanguage, useTranslations } from '../context/LanguageContext';
 
 const Hero = () => {
+  const { language } = useLanguage();
   const t = useTranslations();
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -10,11 +11,21 @@ const Hero = () => {
     }
   };
 
-  const statsIcons = [Users, Award, Zap];
+  const statsIcons = [Award, Users, ShieldCheck, Zap];
   const stats = statsIcons.map((IconComponent, index) => ({
     IconComponent,
     label: t.hero.stats[index]?.label ?? ''
-  }));
+  })).filter((stat) => stat.label);
+  const heroCard =
+    language === 'pt'
+      ? {
+          eyebrow: 'Valor mensal atual',
+          line: 'US$ 2.000/mês · fixo enquanto ativo'
+        }
+      : {
+          eyebrow: 'Current monthly rate',
+          line: 'USD 2,000/mo · fixed while active'
+        };
 
   return (
     <section id="inicio" className="bg-slate-950 text-white py-24">
@@ -27,17 +38,19 @@ const Hero = () => {
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
             <span className="block">{t.hero.titleLine1}</span>
-            <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
-              {t.hero.titleHighlight}
-            </span>
-            <span className="mt-2 block sm:mt-3">{t.hero.titleLine2}</span>
+            {t.hero.titleHighlight && (
+              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                {t.hero.titleHighlight}
+              </span>
+            )}
+            {t.hero.titleLine2 && <span className="mt-2 block sm:mt-3">{t.hero.titleLine2}</span>}
           </h1>
 
           <p className="text-lg sm:text-xl text-white/80 mb-8 leading-relaxed">{t.hero.subtitle}</p>
 
-          <div className="flex flex-wrap gap-6 mb-10">
+          <div className="mb-10 grid gap-3 sm:grid-cols-2">
             {stats.map(({ IconComponent, label }, index) => (
-              <div key={label} className="flex items-center gap-2 text-white/90">
+              <div key={label} className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white/90">
                 <IconComponent
                   className={`w-5 h-5 ${
                     index === 0 ? 'text-blue-400' : index === 1 ? 'text-purple-400' : 'text-pink-400'
@@ -76,8 +89,8 @@ const Hero = () => {
             />
           </div>
           <div className="absolute -bottom-6 left-6 bg-white/90 text-slate-900 rounded-2xl px-5 py-4 shadow-xl">
-            <p className="text-sm font-semibold">Latest build</p>
-            <p className="text-xs text-slate-500">US-based deliveries · zero upfront</p>
+            <p className="text-sm font-semibold">{heroCard.eyebrow}</p>
+            <p className="text-xs text-slate-500">{heroCard.line}</p>
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@
 - **Where TG Apps is positioned now:** The site is being repositioned away from vague "small business app development" and away from "pods" language. The stronger positioning is custom software, CRM, internal tools, app rescue, born-global apps, AI integrations, and on-demand development team capacity.
 - **Primary market reality:** English copy should be US-first and buyer-oriented. Portuguese copy should sound natural in Brazil and avoid imported acronyms such as "SMB" in visible PT-BR text.
 - **Operating model:** Founder-led does not mean solo. It means direct leadership, product context, accountability, compact core team execution, and scope-based collaborators when a project requires more throughput or specialized expertise.
-- **Commercial model:** The current offer can mention USD 2,000/month or $2k/mo when relevant, but it must be framed as an efficient on-demand development team model, not cheap labor and not a vague retainer. Clients who enter at the current introductory rate keep it fixed while the engagement remains active.
+- **Commercial model:** The current offer can mention USD 2,000/month or $2k/mo when relevant, but it must be framed as an efficient on-demand development team model, not cheap labor and not a vague retainer. Clients who hire TG Apps at the current USD 2,000/month rate keep it fixed while the engagement remains active.
 - **Core differentiator:** Output efficiency. TG Apps helps clients get more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls.
 - **Delivery model:** TG Apps follows the agreed client plan strictly, flags risks and tradeoffs, and shares implementation insights when useful. Speed is a strength, but "fast delivery" is not the main product category; the product is reliable custom software execution.
 - **Best public narrative:** "We build the software your operation actually needs: apps, CRM, internal tools, backend, dashboards, automations, AI integrations, and release support, with a compact team, clear scope, weekly demos, and clean handoff."
@@ -85,7 +85,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
   - Values cards: D‑U‑N‑S validation, contract-first billing, US timezone coverage.
 
 - **Contact**
-  - Cost section: “Dev Team Subscription · $2k/mo” or “Introductory monthly rate · cancel any month” (current USD 2,000/mo offer, W8‑BEN‑E on file, SOC/NDA templates ready, no upfront, no hidden clauses). Avoid “first 3 companies”; if scarcity is needed, use limited-time introductory rate and clarify the rate remains fixed for clients while the engagement stays active.
+  - Cost section: “Dev Team Subscription · $2k/mo” or “Current monthly rate · cancel any month” (current USD 2,000/mo offer, W8‑BEN‑E on file, SOC/NDA templates ready, no upfront, no hidden clauses). Do not call the USD 2,000/mo offer introductory. The correct promise is that clients who hire TG Apps at this rate keep it fixed while the engagement stays active.
   - Info entries: Email `support@tgapps.dev`, WhatsApp/Phone `+55 11 97971‑7703`, location “São Paulo, Brazil · US overlap ET/CT”.
   - “Why us” bullets: zero upfront, D‑U‑N‑S trust, Android/iOS expertise, LLM integrations with guardrails, weekly release cadence powered by a compact Kanban development team (backend, frontend, database, mobile in parallel), client-led backlog with weekly demos and deployments.
   - Form callout: Outline response timeframe (≤1 business day), 30–45 min call, send SOW/checklist.
@@ -166,7 +166,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 - Final vision statement: choose whether to emphasize LatAm-to-US delivery, born-global products, or compact founder-led software execution.
 - Values language: decide whether values should sound more technical, more commercial, or more founder-led.
 - Proof layer: decide which client examples can be named publicly and which should stay abstract.
-- Pricing visibility: decide when the USD 2,000/month introductory rate belongs high on a page versus near the final CTA.
+- Pricing visibility: decide when the current USD 2,000/month fixed rate belongs high on a page versus near the final CTA.
 - Navigation strategy: decide whether Dev as a Service should eventually appear in header navigation or remain footer/direct-link only.
 
 Use this AGENTS.md as the authoritative brief when making future edits, so the site stays concise, visual, and aligned with TG Apps’ positioning. 

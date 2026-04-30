@@ -1,0 +1,120 @@
+CLUTCH COMPANY INFORMATION - TG APPS
+
+Use this file to fill the Clutch company profile.
+
+============================================================
+STEP 2 - ADD COMPANY INFORMATION
+============================================================
+
+Company Name
+TG Apps
+
+Company Website
+https://tgapps.dev
+
+Sales Email
+support@tgapps.dev
+
+Scheduling Link
+Recommended: leave blank for now.
+
+Reason: this field is optional and should ideally be a real scheduling URL
+such as Calendly, Cal.com, HubSpot meetings, or a dedicated booking page.
+Do not use WhatsApp here if Clutch expects a scheduling tool.
+
+If Clutch accepts a normal contact page and you want to fill it:
+https://tgapps.dev/#contato
+
+Admin Contact Phone
++55 11 97971-7703
+
+Founding Year
+2024
+
+Note: confirm this against the official CNPJ registration before final submit.
+If Clutch asks for the year TG Apps started operating publicly rather than
+legal incorporation, use the most accurate operational year.
+
+Total Employees
+Recommended dropdown: 2 - 9
+
+Reason: TG Apps is founder-led and compact, but not positioned as solo
+execution. The current public positioning is compact core team plus
+scope-based collaborators when a project needs more capacity or specific
+expertise.
+
+If Clutch only counts direct payroll and you prefer a stricter answer, review
+before submitting.
+
+Tagline
+Custom apps, CRM & internal tools
+
+Alternative taglines under 50 characters:
+Custom software for growing teams
+On-demand software development team
+Apps, CRM, backend & AI integrations
+High-output software delivery
+More software delivery per dollar
+
+Recommended Tagline
+High-output software delivery
+
+Reason: this makes the differentiation clearer than listing services only.
+The description can explain that the high output comes from low overhead,
+intelligent allocation, direct communication, and disciplined delivery.
+
+Differentiator - short version
+TG Apps helps clients get more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, and direct access to senior delivery leadership.
+
+Differentiator - profile version
+Our main difference is output efficiency. We combine a compact core team, intelligent allocation, direct communication, and low bureaucracy so clients can move faster and get more software delivery per dollar without losing structure, weekly demos, documentation, or clean handoff.
+
+Recommended Clutch Description
+TG Apps builds custom software for founders, startups, SMBs, agencies, and teams that need high-output execution without the overhead of a large agency or a full internal product team.
+
+Our main difference is output efficiency: clients get more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, and direct access to senior delivery leadership.
+
+Our work includes mobile apps, web platforms, custom CRM systems, internal tools, dashboards, backend APIs, databases, workflow automation, AI and LLM integrations, app rescue, release execution, and born-global apps with multilingual UX and contextual localization.
+
+Clients work directly with senior delivery leadership while our compact core team and project-based collaborators are allocated intelligently according to project needs, complexity, and required expertise. The process stays low-bureaucracy but structured: we follow the agreed client plan, define scope and acceptance criteria, ship weekly demos, flag risks and tradeoffs, and provide clean handoff with repositories, credentials, documentation, and runbooks when applicable.
+
+TG Apps is a strong fit for companies replacing spreadsheets and disconnected tools, founders trying to finish and launch an app, startups needing product delivery before hiring a full engineering team, and SMBs that need CRM, scheduling, customer portals, employee apps, dashboards, integrations, or operational systems built around how the business actually works.
+
+We operate from Brazil with remote delivery for US and international clients, offering English communication, timezone overlap, strong value for the budget, and practical software ownership. Our cost advantage comes from low overhead, direct communication, and intelligent allocation, not from cutting delivery discipline. We are not positioned as a large enterprise consultancy or a vague staffing vendor. We are an execution partner for clear, practical software builds.
+
+============================================================
+SHORTER DESCRIPTION OPTION
+============================================================
+
+TG Apps builds custom apps, CRM systems, internal tools, dashboards, backend systems, workflow automation, AI integrations, app rescue projects, and born-global apps for founders, startups, SMBs, agencies, and growing teams.
+
+Our difference is output efficiency: clients get more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, and direct access to senior delivery leadership.
+
+Clients work directly with senior delivery leadership while a compact core team and project-based collaborators are allocated according to project needs, complexity, and required expertise. The process is low-bureaucracy but structured: clear scope, weekly demos, risk and tradeoff notes, and clean handoff with repositories, credentials, documentation, and runbooks when applicable.
+
+Our best fit is practical software execution: replacing spreadsheets, finishing stalled apps, launching new products, building internal business systems, and helping teams get more delivery per dollar without hiring a full internal engineering department first. We operate from Brazil with remote delivery for US and international clients.
+
+============================================================
+PROFILE POSITIONING NOTES
+============================================================
+
+Use:
+- Founder-led, team-delivered software studio
+- Custom software development
+- Custom apps, CRM, internal tools, backend, dashboards, AI integrations
+- On-demand development team
+- Compact core team with scope-based collaborators
+- Weekly demos, clear scope, clean handoff
+
+Avoid:
+- Telegram app / Telegram client / APK service
+- Indie app lab only
+- Disposable MVP shop
+- Solo developer only
+- Cheap developers
+- Vague retainer
+- Large enterprise consultancy
+
+Logo
+Recommended file from this project:
+public/logo.png

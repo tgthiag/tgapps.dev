@@ -5,35 +5,35 @@ import { landingSlugsByLocale } from '../content/landingPages';
 const contentByLocale = {
   en: {
     badge: 'Why TG Apps',
-    title: 'Founder-led, team-delivered execution with public proof',
+    title: 'Why clients choose us over agencies and internal hires',
     description:
-      'TG Apps is compact by design: less bureaucracy, direct access to delivery leadership and builders, written scope, weekly demos, strict execution of the agreed plan, and collaborators allocated when the project needs more capacity or specialization.',
+      'Our difference is output efficiency: more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, and direct access to senior delivery leadership.',
     cards: [
       {
-        title: 'Verified company profile',
+        title: 'Compact team model',
         description:
-          'TG Applications Desenvolvimento Ltda, D-U-N-S 651029828, official domain, official email, and direct contact channels are public and consistent.',
+          'A core team and project-based collaborators allocated according to your project needs, complexity, and required expertise. No bloated retainers. No unnecessary layers.',
         icon: ShieldCheck
       },
       {
-        title: 'Contract-first delivery',
+        title: 'Low bureaucracy, structured process',
         description:
-          'Every engagement starts with scope, milestones, demos, ownership expectations, and release responsibilities before implementation.',
+          'Clear scope, weekly demos, written decision history, risk and tradeoff notes, and clean handoff with repositories, credentials, and runbooks.',
         icon: FileCheck
       },
       {
-        title: 'Best fit, not everything',
+        title: 'Direct access to delivery leadership',
         description:
-          'We are strongest for founders, startups, SMBs, app rescue, CRM, internal tools, and defined builds where the client wants clear execution plus useful delivery insight.',
+          'You speak with people who can make decisions. No account managers between you and the team responsible for product, architecture, build, release, and handoff.',
         icon: Handshake
       }
     ],
     bullets: [
-      'No upfront payment before work begins.',
-      'Weekly demos and written decision history.',
-      'Repositories, credentials, runbooks, and handoff when applicable.',
-      'Unknowns should be evaluated through scope, architecture, contract, and references, not guessed from public gaps.',
-      'Tight timelines are handled when the agreed plan requires them; the default posture is disciplined execution of the client plan.'
+      'Our cost advantage comes from low overhead, direct communication, and intelligent allocation, not from cutting delivery discipline.',
+      'We are not a large enterprise consultancy or a vague staffing vendor.',
+      'We are an execution partner for clear, practical software builds.',
+      'No upfront payment before work begins; monthly engagement can be cancelled without lock-in.',
+      'Weekly demos, written decision history, repositories, credentials, runbooks, and handoff when applicable.'
     ],
     links: [
       { label: 'Company profile', hrefKey: 'companyProfile' },
@@ -43,35 +43,35 @@ const contentByLocale = {
   },
   pt: {
     badge: 'Por que TG Apps',
-    title: 'Entrega liderada pelo fundador, executada por time e com provas públicas',
+    title: 'Por que clientes escolhem a TG Apps em vez de agências grandes ou contratação interna',
     description:
-      'A TG Apps é compacta por design: menos burocracia, acesso direto à liderança de entrega e ao time que executa, escopo escrito, demos semanais, execução rigorosa do plano combinado e colaboradores alocados quando o projeto exige mais capacidade ou especialidade.',
+      'Nosso diferencial é eficiência de entrega: mais software entregue por valor investido por meio de time compacto, baixa burocracia, alocação inteligente e acesso direto à liderança técnica e de produto.',
     cards: [
       {
-        title: 'Perfil verificável',
+        title: 'Modelo de time compacto',
         description:
-          'TG Applications Desenvolvimento Ltda, D-U-N-S 651029828, domínio oficial, e-mail oficial e canais diretos estão públicos e consistentes.',
+          'Time central e colaboradores por projeto alocados de acordo com necessidade, complexidade e especialidade exigida. Sem retainer inflado. Sem camadas desnecessárias.',
         icon: ShieldCheck
       },
       {
-        title: 'Contrato antes da execução',
+        title: 'Baixa burocracia, processo estruturado',
         description:
-          'Todo engajamento começa com escopo, milestones, demos, expectativas de ownership e responsabilidades de release antes da implementação.',
+          'Escopo claro, demos semanais, histórico de decisões, notas de riscos e tradeoffs, além de handoff com repositórios, credenciais e runbooks quando aplicável.',
         icon: FileCheck
       },
       {
-        title: 'Melhor encaixe, não tudo',
+        title: 'Acesso direto à liderança de entrega',
         description:
-          'Somos mais fortes para fundadores, startups, empresas, resgate de app, CRM, ferramentas internas e builds definidos em que o cliente quer execução clara com insights de entrega.',
+          'Você fala com quem decide. Sem gerente de conta entre você e o time responsável por produto, arquitetura, construção, release e handoff.',
         icon: Handshake
       }
     ],
     bullets: [
-      'Sem pagamento antecipado antes do trabalho começar.',
-      'Demos semanais e historico escrito de decisões.',
-      'Repositórios, credenciais, runbooks e handoff quando aplicável.',
-      'Lacunas devem ser avaliadas por escopo, arquitetura, contrato e referências, não por suposição.',
-      'Prazos mais agressivos são tratados quando o plano combinado exige; a postura padrão e executar com disciplina o plano do cliente.'
+      'Nossa vantagem de custo vem de baixo overhead, comunicação direta e alocação inteligente, não de cortar disciplina de entrega.',
+      'Não somos uma consultoria enterprise pesada nem um fornecedor vago de staffing.',
+      'Somos um parceiro de execução para builds claros, práticos e com dono.',
+      'Sem pagamento antecipado antes do trabalho começar; engajamento mensal sem lock-in.',
+      'Demos semanais, histórico de decisões, repositórios, credenciais, runbooks e handoff quando aplicável.'
     ],
     links: [
       { label: 'Perfil da empresa', hrefKey: 'companyProfile' },

@@ -1,8 +1,13 @@
-import { useTranslations } from '../context/LanguageContext';
+import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { trustedCompanies } from '../content/trustedCompanies';
 
 const SocialProof = () => {
+  const { language } = useLanguage();
   const t = useTranslations();
+  const proofBadges =
+    language === 'pt'
+      ? ['D-U-N-S® 651029828', 'US$ 2.000/mês fixo', 'Sem adiantamento', 'Cancele quando quiser']
+      : ['D-U-N-S® 651029828', 'USD 2,000/mo fixed rate', 'Zero upfront', 'Cancel anytime'];
 
   return (
     <section className="relative -mt-2 bg-white pb-10">
@@ -31,6 +36,17 @@ const SocialProof = () => {
                   loading="lazy"
                 />
               </a>
+            ))}
+          </div>
+
+          <div className="mt-8 flex flex-wrap gap-3">
+            {proofBadges.map((badge) => (
+              <span
+                key={badge}
+                className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-semibold text-slate-700"
+              >
+                {badge}
+              </span>
             ))}
           </div>
         </div>

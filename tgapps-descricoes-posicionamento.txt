@@ -1,0 +1,249 @@
+TG APPS - DESCRICOES E POSICIONAMENTO
+
+Objetivo deste documento:
+Comparar a descricao atualmente adotada no site com a nova descricao que
+analisamos para Clutch/marketplaces, registrando o racional de posicionamento
+e como podemos usar cada uma.
+
+============================================================
+1. DESCRICAO ATUAL ADOTADA NO SITE
+============================================================
+
+Uso atual:
+- Home
+- Metatags
+- Footer
+- JSON-LD
+- Perfil publico geral
+- SEO amplo
+
+Descricao atual em ingles usada no site:
+Custom software, apps, CRM, internal tools, dashboards, workflow automation,
+APIs, and AI integrations for founders, startups, and SMBs, built around the
+agreed plan with practical execution and experienced delivery insight.
+
+Descricao institucional atual:
+Founder-led, team-delivered LatAm studio building custom software, apps, CRM,
+internal tools, dashboards, mobile apps, APIs, and AI integrations for founders,
+startups, and small or mid-sized teams. TG Apps follows the agreed client plan
+strictly, uses a compact core team with scope-based collaborators, and offers
+delivery insights when experience can reduce risk or improve execution.
+
+Descricao atual do footer:
+TG Apps is a founder-led, team-delivered LatAm studio building custom software,
+apps, CRM, internal tools, dashboards, and integrations for founders, startups,
+and SMB teams.
+
+Leitura estrategica da descricao atual:
+A descricao atual e boa para SEO amplo e para explicar o que a TG Apps faz.
+Ela comunica custom software, apps, CRM, ferramentas internas, APIs e IA.
+Tambem protege contra a leitura de "solo dev", porque usa founder-led +
+team-delivered.
+
+Ponto fraco:
+Ela ainda soa um pouco institucional e explicativa. Fala muito "o que fazemos",
+mas nao destaca com forca suficiente o diferencial comercial: entregar muito
+por um custo eficiente, com baixa burocracia e alocacao inteligente.
+
+============================================================
+2. NOVA DESCRICAO ANALISADA PARA CLUTCH / MARKETPLACES
+============================================================
+
+Uso recomendado:
+- Clutch
+- Marketplaces B2B
+- Perfis publicos de venda
+- Apresentacoes comerciais curtas
+- Mensagens para parceiros
+- Criativos onde o diferencial precisa aparecer rapido
+
+Descricao nova recomendada:
+TG Apps builds custom software for founders, startups, SMBs, agencies, and
+teams that need high-output execution without the overhead of a large agency
+or a full internal product team.
+
+Our main difference is output efficiency: clients get more software delivery
+per dollar through a compact team model, low bureaucracy, intelligent
+allocation, and direct access to senior delivery leadership.
+
+Our work includes mobile apps, web platforms, custom CRM systems, internal
+tools, dashboards, backend APIs, databases, workflow automation, AI and LLM
+integrations, app rescue, release execution, and born-global apps with
+multilingual UX and contextual localization.
+
+Clients work directly with senior delivery leadership while our compact core
+team and project-based collaborators are allocated intelligently according to
+project needs, complexity, and required expertise. The process stays
+low-bureaucracy but structured: we follow the agreed client plan, define scope
+and acceptance criteria, ship weekly demos, flag risks and tradeoffs, and
+provide clean handoff with repositories, credentials, documentation, and
+runbooks when applicable.
+
+TG Apps is a strong fit for companies replacing spreadsheets and disconnected
+tools, founders trying to finish and launch an app, startups needing product
+delivery before hiring a full engineering team, and SMBs that need CRM,
+scheduling, customer portals, employee apps, dashboards, integrations, or
+operational systems built around how the business actually works.
+
+We operate from Brazil with remote delivery for US and international clients,
+offering English communication, timezone overlap, strong value for the budget,
+and practical software ownership. Our cost advantage comes from low overhead,
+direct communication, and intelligent allocation, not from cutting delivery
+discipline. We are not positioned as a large enterprise consultancy or a vague
+staffing vendor. We are an execution partner for clear, practical software
+builds.
+
+============================================================
+3. VERSAO CURTA DA NOVA DESCRICAO
+============================================================
+
+TG Apps builds custom apps, CRM systems, internal tools, dashboards, backend
+systems, workflow automation, AI integrations, app rescue projects, and
+born-global apps for founders, startups, SMBs, agencies, and growing teams.
+
+Our difference is output efficiency: clients get more software delivery per
+dollar through a compact team model, low bureaucracy, intelligent allocation,
+and direct access to senior delivery leadership.
+
+Clients work directly with senior delivery leadership while a compact core
+team and project-based collaborators are allocated according to project needs,
+complexity, and required expertise. The process is low-bureaucracy but
+structured: clear scope, weekly demos, risk and tradeoff notes, and clean
+handoff with repositories, credentials, documentation, and runbooks when
+applicable.
+
+Our best fit is practical software execution: replacing spreadsheets,
+finishing stalled apps, launching new products, building internal business
+systems, and helping teams get more delivery per dollar without hiring a full
+internal engineering department first.
+
+============================================================
+4. DIFERENCIAL CENTRAL QUE SURGIU DA ANALISE
+============================================================
+
+Diferencial:
+Output efficiency.
+
+Forma curta:
+More software delivery per dollar.
+
+Forma explicada:
+TG Apps entrega mais software por dolar investido porque opera com baixa
+burocracia, time compacto, comunicacao direta, alocacao inteligente e controles
+de entrega suficientes para manter qualidade, visibilidade e handoff.
+
+O que isso comunica:
+- Nao somos "cheap developers".
+- Nao somos uma agencia grande com overhead alto.
+- Nao somos staffing vago.
+- Nao vendemos apenas horas.
+- Vendemos execucao eficiente, com foco em software funcionando.
+
+Frase recomendada:
+Our cost advantage comes from low overhead, direct communication, and
+intelligent allocation, not from cutting delivery discipline.
+
+============================================================
+5. QUANDO USAR CADA DESCRICAO
+============================================================
+
+Usar a descricao atual do site quando:
+- O contexto for SEO amplo.
+- A pessoa ainda nao sabe o que a TG Apps faz.
+- O objetivo for listar servicos com clareza.
+- A pagina precisar parecer institucional e segura.
+- O conteudo for para home, metadados, footer ou due diligence.
+
+Usar a nova descricao quando:
+- O contexto for marketplace como Clutch.
+- O comprador estiver comparando fornecedores.
+- Precisarmos destacar custo-beneficio sem parecer barato.
+- O objetivo for explicar por que contratar a TG Apps em vez de agencia grande
+  ou contratar time interno.
+- O canal exigir uma proposta de valor mais forte e comercial.
+
+============================================================
+6. PROPOSTA HIBRIDA PARA O FUTURO SITE
+============================================================
+
+Podemos evoluir o site para misturar as duas ideias:
+
+TG Apps builds custom apps, CRM systems, internal tools, backend platforms,
+dashboards, workflow automation, and AI integrations for founders, startups,
+and growing businesses.
+
+Our difference is output efficiency: clients get more software delivery per
+dollar through a compact team model, low bureaucracy, intelligent allocation,
+weekly demos, and direct access to senior delivery leadership.
+
+This keeps the site clear about what we build while bringing forward the
+commercial differentiator that became stronger during the Clutch work.
+
+============================================================
+7. TAGLINES DISCUTIDAS
+============================================================
+
+Tagline atual usada no Clutch inicialmente:
+Custom apps, CRM & internal tools
+
+Problema:
+Lista servicos, mas nao comunica o diferencial.
+
+Tagline recomendada para Clutch:
+High-output software delivery
+
+Alternativas:
+Custom software for growing teams
+On-demand software development team
+Apps, CRM, backend & AI integrations
+More software delivery per dollar
+We build CRMs & internal tools
+
+Observacao:
+"We build CRMs & internal tools" e claro, mas pode ser estreito.
+"High-output software delivery" comunica melhor o diferencial de custo,
+volume de entrega e baixa burocracia.
+
+============================================================
+8. CUIDADOS DE POSICIONAMENTO
+============================================================
+
+Evitar:
+- Cheap developers
+- Low-cost developers
+- Solo developer
+- Indie app lab only
+- Disposable MVP shop
+- Vague retainer
+- Large enterprise consultancy
+- Telegram client / Telegram app / APK service
+
+Preferir:
+- High-output execution
+- Output efficiency
+- More software delivery per dollar
+- Cost-efficient delivery model
+- Low-bureaucracy but structured process
+- Intelligent allocation
+- Direct access to senior delivery leadership
+- Compact core team and project-based collaborators
+- Clear scope, weekly demos, clean handoff
+
+============================================================
+9. DECISAO ATUAL
+============================================================
+
+Para o site:
+Manter a descricao atual por enquanto, pois ela esta alinhada com SEO,
+servicos e reputacao publica.
+
+Para Clutch:
+Usar a nova descricao com foco em output efficiency, more software delivery per
+dollar, low bureaucracy, intelligent allocation e direct access to senior
+delivery leadership.
+
+Para futura revisao do site:
+Considerar trazer o diferencial "output efficiency" mais para cima, talvez na
+home, no bloco de Why TG Apps ou na landing Dev as a Service / Time sob
+demanda.
+
