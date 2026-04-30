@@ -85,7 +85,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
   - Values cards: D‑U‑N‑S validation, contract-first billing, US timezone coverage.
 
 - **Contact**
-  - Cost section: “Dev Team Subscription · $2k/mo” or “Current monthly rate · cancel any month” (current USD 2,000/mo offer, W8‑BEN‑E on file, SOC/NDA templates ready, no upfront, no hidden clauses). Do not call the USD 2,000/mo offer introductory. The correct promise is that clients who hire TG Apps at this rate keep it fixed while the engagement stays active.
+  - Cost section: “Dev Team Subscription · $2k/mo” or “Current monthly rate · cancel any month” (current USD 2,000/mo offer, W8‑BEN‑E on file, SOC/NDA templates ready, no upfront, no hidden clauses). Do not describe the USD 2,000/mo offer as temporary. The correct promise is that clients who hire TG Apps at this rate keep it fixed while the engagement stays active.
   - Info entries: Email `support@tgapps.dev`, WhatsApp/Phone `+55 11 97971‑7703`, location “São Paulo, Brazil · US overlap ET/CT”.
   - “Why us” bullets: zero upfront, D‑U‑N‑S trust, Android/iOS expertise, LLM integrations with guardrails, weekly release cadence powered by a compact Kanban development team (backend, frontend, database, mobile in parallel), client-led backlog with weekly demos and deployments.
   - Form callout: Outline response timeframe (≤1 business day), 30–45 min call, send SOW/checklist.
