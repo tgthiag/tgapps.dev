@@ -6,6 +6,7 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SocialProof from './components/SocialProof';
+import CasesSection from './components/CasesSection';
 import WhyTgApps from './components/WhyTgApps';
 import MyBusinessIdeaPrivacyPage from './components/MyBusinessIdeaPrivacyPage';
 import MyBusinessIdeaAccountDeletionPage from './components/MyBusinessIdeaAccountDeletionPage';
@@ -69,6 +70,7 @@ function App() {
       <Header />
       <Hero />
       <SocialProof />
+      <CasesSection />
       <WhyTgApps />
       <Services />
       <About />

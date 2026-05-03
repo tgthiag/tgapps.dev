@@ -162,7 +162,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { id: 'inicio', label: 'Overview' },
         { id: 'what-you-get', label: 'Capabilities' },
         { id: 'process', label: 'Process' },
-        { id: 'sobre', label: 'Proof' },
+        { id: 'cases', label: 'Proof' },
         { id: 'contato', label: 'Contact' }
       ],
       contactCta: 'Book a call',
@@ -171,11 +171,11 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     hero: {
       badge: 'Custom software · Dev as a Service',
-      titleLine1: 'More software delivery',
-      titleHighlight: 'per dollar.',
+      titleLine1: 'Your app, built',
+      titleHighlight: 'and shipped.',
       titleLine2: '',
       subtitle:
-        "One product team for mobile, web, CRM, backend, and AI integrations without the overhead of a large agency or a full internal engineering team. Most clients come to us after a freelancer stalled, an agency overcharged, or an internal hire did not work out. We scope what is actually needed, build it, and ship with weekly demos, clear handoff, and no upfront payment.",
+        'Got an idea or a stalled project? One team handles everything: mobile, web, backend, and release, for a fixed monthly rate, no upfront.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'USD 2,000/mo' },
@@ -314,7 +314,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Need more software delivery without hiring a full product team?',
+        title: 'Need your app built without hiring a full product team?',
         description:
           'Send us the current app, repo, spreadsheet, process, or product idea. We respond in under one business day with blockers, risks, next steps, or an honest referral.',
         button: 'Plan the build'
@@ -458,13 +458,13 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'TG Apps helps founders, startups, and growing teams get more software delivery per dollar across mobile apps, CRM, internal tools, backend, AI integrations, and release support.',
+        'TG Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. One team, fixed monthly rate, no upfront.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
         { id: 'what-you-get', label: 'Capabilities' },
         { id: 'process', label: 'Process' },
-        { id: 'sobre', label: 'Proof' },
+        { id: 'cases', label: 'Proof' },
         { id: 'contato', label: 'Contact' }
       ],
       servicesHeading: 'Popular requests',
@@ -497,7 +497,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { id: 'inicio', label: 'Início' },
         { id: 'what-you-get', label: 'Serviços' },
         { id: 'process', label: 'Processo' },
-        { id: 'sobre', label: 'Provas' },
+        { id: 'cases', label: 'Provas' },
         { id: 'contato', label: 'Contato' }
       ],
       contactCta: 'Fale com a gente',
@@ -506,11 +506,11 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     hero: {
       badge: 'Software sob medida · time sob demanda',
-      titleLine1: 'Mais software entregue',
-      titleHighlight: 'por valor investido.',
+      titleLine1: 'Seu app, construído',
+      titleHighlight: 'e entregue.',
       titleLine2: '',
       subtitle:
-        'Um time de produto para mobile, web, CRM, backend e integrações de IA sem o overhead de uma agência grande ou de um time interno completo. Ajudamos quando um freelancer travou, uma agência cobrou demais ou a contratação interna não funcionou. Escopamos o que realmente precisa ser feito, construímos e colocamos no ar com demos semanais, handoff claro e sem pagamento antecipado.',
+        'Tem uma ideia ou um projeto parado? Um time cuida de tudo: mobile, web, backend e lançamento, por uma mensalidade fixa, sem pagamento inicial.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'US$ 2.000/mês' },
@@ -649,7 +649,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Precisa de mais entrega de software sem contratar um time interno completo?',
+        title: 'Precisa construir seu app sem contratar um time interno completo?',
         description:
           'Envie o app atual, repo, processo, planilha ou ideia de produto. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos ou uma indicação honesta.',
         button: 'Planejar a construção'
@@ -794,13 +794,13 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A TG Apps ajuda fundadores, startups e empresas em crescimento a obter mais entrega de software por valor investido em apps, CRM, ferramentas internas, backend, IA e suporte de release.',
+        'A TG Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Um time, mensalidade fixa, sem pagamento inicial.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
         { id: 'what-you-get', label: 'Serviços' },
         { id: 'process', label: 'Processo' },
-        { id: 'sobre', label: 'Provas' },
+        { id: 'cases', label: 'Provas' },
         { id: 'contato', label: 'Contato' }
       ],
       servicesHeading: 'Pedidos frequentes',

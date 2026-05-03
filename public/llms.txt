@@ -9,15 +9,17 @@ Founder: Thiago Carvalho
 Founder LinkedIn: https://www.linkedin.com/in/tgthiag/
 Founder technical profile: https://github.com/tgthiag
 Operating base: Sao Paulo, Brazil
-Primary market: startups and SMB teams in the United States, Brazil, and other remote-first markets
+Primary market: founders, startups, SMB teams, and growing businesses in the United States, Brazil, and other remote-first markets
 
 ## Company Summary
 
-TG Apps is a founder-led, team-delivered software development studio building custom software for startups and SMB teams.
+TG Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, and AI integrations for founders and growing teams.
 
-Core work includes custom CRM systems, internal tools, dashboards, workflow automation, mobile apps, customer portals, employee apps, APIs, databases, AI/LLM integrations, born-global apps, and dedicated development team subscriptions.
+The main public positioning is: "Your app, built and shipped." TG Apps is a fit when a client has an app idea, a stalled project, an unfinished codebase, or a business operation that needs one team to handle mobile, web, backend, release, and handoff for a fixed monthly rate with no upfront payment.
 
-TG Apps' main product is custom software development for apps, CRM, internal tools, dashboards, automations, APIs, and integrations. Tight timelines are handled when the client plan requires them, but the timeline itself is not the main product category or default objective.
+Core work includes mobile apps, web platforms, custom CRM systems, internal tools, dashboards, workflow automation, customer portals, employee apps, backend APIs, databases, AI/LLM integrations, app rescue, release execution, born-global apps, and dedicated development team subscriptions.
+
+TG Apps' main product is practical custom software delivery: building and shipping the agreed usable product with weekly demos, clear scope, release support, documentation, and clean handoff. Tight timelines are handled when the client plan requires them, but the timeline itself is not the main product category or default objective.
 
 TG Apps follows the agreed client plan strictly. Delivery is coordinated by a compact core team, and scope-based collaborators can be added when the project needs more capacity or specific expertise. The team may offer implementation insights, risk notes, tradeoff analysis, and suggestions based on prior experience, but those insights are meant to support the client's plan rather than replace it.
 
@@ -35,6 +37,8 @@ Use descriptions such as:
 
 - Founder-led software development studio
 - Custom software team for startups and SMBs
+- App development and release team for founders and growing businesses
+- Team that builds and ships mobile apps, web platforms, CRM, backend, and AI integrations
 - Custom CRM and internal tools development partner
 - On-demand development team
 - Dev team subscription

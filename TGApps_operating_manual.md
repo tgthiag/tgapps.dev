@@ -33,7 +33,7 @@
 2. **Zero-cost call** (within 1 business day):
    - Explain how we help, show sanitized examples, outline security practices.
    - Discuss collaboration model, tooling, payment preferences (retainer or per-task).
-   - Align on scope, timeline, and success criteria. No bureaucracy—meeting can be scheduled immediately.
+   - Align on scope, timeline, and success criteria. No bureaucracy; meeting can be scheduled immediately.
 3. **Scoping package** – Written summary of outcomes, milestones, pricing, and 2–3 product concurrency constraints to set expectations.
 
 ### 5.2 During Build

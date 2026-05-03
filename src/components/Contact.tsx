@@ -74,7 +74,6 @@ const Contact = () => {
   }));
 
   const services = t.contact.services;
-  const costSection = t.contact.costSection;
 
   return (
     <section id="contato" className="py-24 bg-white">
@@ -93,35 +92,6 @@ const Contact = () => {
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">{t.contact.description}</p>
         </div>
-
-        {costSection && (
-          <div className="mb-16">
-            <div className="relative overflow-hidden rounded-3xl bg-gradient-to-r from-blue-700 via-purple-600 to-pink-500 text-white px-8 py-10 shadow-2xl">
-              <div className="relative z-10 flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
-                <div className="max-w-3xl">
-                  <div className="inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.3em] text-white/80 mb-3">
-                    <span className="h-1.5 w-1.5 rounded-full bg-white"></span>
-                    {costSection.badge}
-                  </div>
-                  <h3 className="text-3xl font-bold mb-3">{costSection.title}</h3>
-                  <p className="text-white/90 text-lg leading-relaxed">{costSection.description}</p>
-                </div>
-                {costSection.highlights && costSection.highlights.length > 0 && (
-                  <ul className="grid gap-3 text-sm text-white/90 sm:grid-cols-2 lg:grid-cols-1">
-                    {costSection.highlights.map((highlight, index) => (
-                      <li key={index} className="flex items-center gap-2">
-                        <CheckCircle className="w-4 h-4 text-emerald-200 flex-shrink-0" />
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-              {costSection.note && <p className="relative z-10 mt-6 text-sm text-white/80">{costSection.note}</p>}
-              <div className="pointer-events-none absolute inset-0 opacity-40 bg-[radial-gradient(circle_at_top,_rgba(255,255,255,0.85),_transparent_55%)]"></div>
-            </div>
-          </div>
-        )}
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
           {/* Contact Info */}
@@ -160,23 +130,11 @@ const Contact = () => {
                   {t.contact.whatsappCta?.title ?? 'Prefer WhatsApp?'}
                 </h4>
                 <p className="mt-1 text-sm text-gray-600">
-                  {t.contact.whatsappCta?.description ?? 'Open a direct chat with TG Apps.'}
+                  {t.contact.whatsappCta?.description ?? 'Open a direct chat with Tg Apps.'}
                 </p>
               </div>
             </a>
 
-            {/* Quick Stats */}
-            <div className="mt-12 p-6 bg-gradient-to-br from-blue-50 to-purple-50 rounded-2xl border border-blue-100">
-              <h4 className="font-bold text-gray-900 mb-4">{t.contact.whyUsHeading}</h4>
-              <div className="space-y-3">
-                {t.contact.whyUs.map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle size={16} className="text-green-500 flex-shrink-0" />
-                    <span className="text-gray-700 text-sm">{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
 
           {/* Contact Form */}

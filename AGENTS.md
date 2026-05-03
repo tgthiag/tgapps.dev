@@ -2,11 +2,11 @@
 
 ## 0. Strategic Identity Snapshot
 - **Who TG Apps is:** TG Apps is the public brand of TG Applications Desenvolvimento Ltda, a founder-led and team-delivered software studio. The company builds practical custom software for founders, startups, SMBs, agencies, and teams that need real systems delivered with direct communication and disciplined execution.
-- **Where TG Apps is positioned now:** The site is being repositioned away from vague "small business app development" and away from "pods" language. The stronger positioning is custom software, CRM, internal tools, app rescue, born-global apps, AI integrations, and on-demand development team capacity.
+- **Where TG Apps is positioned now:** The current homepage headline is **"Your app, built and shipped."** / **"Seu app, construído e entregue."** The site is positioned away from vague "small business app development" and away from "pods" language. The stronger positioning is app ideas, stalled projects, mobile apps, web platforms, CRM, internal tools, backend, app rescue, born-global apps, AI integrations, and on-demand development team capacity.
 - **Primary market reality:** English copy should be US-first and buyer-oriented. Portuguese copy should sound natural in Brazil and avoid imported acronyms such as "SMB" in visible PT-BR text.
 - **Operating model:** Founder-led does not mean solo. It means direct leadership, product context, accountability, compact core team execution, and scope-based collaborators when a project requires more throughput or specialized expertise.
 - **Commercial model:** The current offer can mention USD 2,000/month or $2k/mo when relevant, but it must be framed as an efficient on-demand development team model, not cheap labor and not a vague retainer. Clients who hire TG Apps at the current USD 2,000/month rate keep it fixed while the engagement remains active.
-- **Core differentiator:** Output efficiency. TG Apps helps clients get more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls.
+- **Supporting differentiator:** Output efficiency. TG Apps builds and ships usable software through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls. Cost efficiency can be used as a supporting argument, but it is no longer the primary homepage headline.
 - **Delivery model:** TG Apps follows the agreed client plan strictly, flags risks and tradeoffs, and shares implementation insights when useful. Speed is a strength, but "fast delivery" is not the main product category; the product is reliable custom software execution.
 - **Best public narrative:** "We build the software your operation actually needs: apps, CRM, internal tools, backend, dashboards, automations, AI integrations, and release support, with a compact team, clear scope, weekly demos, and clean handoff."
 - **What TG Apps is not:** Not a Telegram client, not a Telegram mod, not an APK distribution site, not an unofficial Telegram service, not only an indie app lab, not only a disposable MVP shop, and not trying to look like a large enterprise consultancy.
@@ -40,7 +40,7 @@
 - This section overrides older “pod” language if any legacy note conflicts with current positioning.
 - Use this concept for future ad creatives, social posts, and landing-page experiments when the goal is to make the offer immediately understandable.
 - The commercial angle is not “cheap developers” or “we only deliver fast”; it is an efficient, compact full development team model that reduces overhead while maintaining quality, communication, strict plan execution, and delivery accountability.
-- When explaining the cost advantage, prefer: “more software delivery per dollar,” “output efficiency,” “cost-efficient delivery model,” and “low overhead through intelligent allocation.” Avoid “cheap” or “low-cost developers.”
+- When explaining the cost advantage, prefer: “output efficiency,” “more usable software per invested dollar,” “cost-efficient delivery model,” and “low overhead through intelligent allocation.” Avoid “cheap” or “low-cost developers.”
 - Prefer “development team”, “dev team subscription”, “custom software team”, “dedicated development team”, or “on-demand development team” over “pod/pods” in customer-facing copy.
 - In Portuguese, prefer **“time de desenvolvimento sob demanda”** or **“time sob demanda”** over **“desenvolvimento por assinatura”** as visible headline copy. Keep “assinatura” only where useful for SEO, aliases, or explanatory context.
 - When mentioning price, use **USD 2,000/month** or **$2k/mo** and clarify when needed that clients who enter at the current rate keep it fixed while the engagement remains active.
@@ -51,7 +51,7 @@ The React single-page app renders these sections in order (see `src/App.tsx`):
 | Section | Component | Key Purpose |
 | --- | --- | --- |
 | Sticky Header | `Header.tsx` | Navigation (Overview, Capabilities, Process, Proof, Contact), language toggle (EN/PT), CTA scroll to contact. |
-| Hero | `Hero.tsx` | Snapshot of offer (custom software, internal tools, apps, dev team subscription, zero upfront), trust stats, dual CTAs (schedule call / see plan), lifestyle image showing collaboration. |
+| Hero | `Hero.tsx` | Main offer: "Your app, built and shipped." / "Seu app, construído e entregue." Snapshot of app ideas, stalled projects, mobile/web/backend/release, fixed monthly rate, no upfront, trust stats, dual CTAs (schedule call / see plan), lifestyle image showing collaboration. |
 | Capabilities | `Services.tsx` | Two-column intro (pillars + photo), service cards (Internal tools/business systems, Mobile/customer apps, App rescue/release execution, Integrations/AI/data), pillars list, three-step collaboration loop, CTA banner. |
 | Proof/About | `About.tsx` | Story of operations, mission, response/deploy cadence, D‑U‑N‑S proof badge, values cards, lifestyle photo. |
 | Contact | `Contact.tsx` | Cost transparency card, contact info (support@tgapps.dev, +55 11 97971‑7703, São Paulo), reasons to hire, callout about next steps, form that opens mailto draft. |
@@ -61,8 +61,8 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 
 ## 3. Content Guidance Per Section
 - **Hero**
-  - Badge should center custom software for startups and SMBs, not pods.
-  - Title/subtitle stress internal tools, CRM, mobile apps, business systems, dev team subscription, contract-first billing, and no upfront.
+  - Badge should center custom software and time sob demanda for startups and growing teams, not pods.
+  - Title/subtitle should use the current primary positioning: “Your app, built and shipped.” / “Seu app, construído e entregue.” Support copy should mention app ideas, stalled projects, mobile, web, backend, release, fixed monthly rate, and no upfront.
   - Stats array (from translations) must mention D‑U‑N‑S number, kickoff cadence, deploy/support coverage.
   - Photo card tagline: “Latest build – US-based deliveries · zero upfront”.
   - CTAs: `primary` scrolls to contact; `secondary` scrolls to process loop.
@@ -101,7 +101,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 
 ## 4. Company Facts & Assets
 - **Legal entity:** TG Applications Desenvolvimento Ltda (Brazil).
-- **D‑U‑N‑S® Number:** 651029828 (issued 28 Jan 2026) — source `C:\Users\Kabum\Downloads\Número D‑U‑N‑S®.html`.
+- **D‑U‑N‑S® Number:** 651029828 (issued 28 Jan 2026), source `C:\Users\Kabum\Downloads\Número D‑U‑N‑S®.html`.
 - **Billing:** No payment upfront; contracts + invoices via TG Applications. USD or BRL, W8‑BEN‑E ready.
 - **Core services:** Custom software, CRM/internal tools, app rescue and release execution for unfinished or outdated apps, born-global app development with multilingual UX/contextual translation/cultural adaptation, Android/iOS builds (Kotlin, Swift, Flutter, React Native), on-demand development team subscription (parallel execution, release ops), integrations/data (payments, logistics, CRM, analytics, LLM workflows integrated with the client’s preferred vector/search/knowledge stack), dashboards/admin tooling, support/handovers.
 - **Process promises:** Kickoff call ≤1 business day after contact; coding starts ≤5 business days post-signature; deploy cadence ≈ once per week; Kanban workflow keeps backend, frontend, database, and mobile workstreams moving in parallel; blue/green/staged releases + monitoring included; bug triage ≤24h with weekend standby for launches.
@@ -124,7 +124,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 
 ## 6. Operating Guardrails
 - Keep layout visually light: at most one lifestyle image per major block (Hero, Services, About).
-- Every mention of AI must be framed as “LLM integrations we deliver” — not “we use AI to build the site”.
+- Every mention of AI must be framed as “LLM integrations we deliver”, not “we use AI to build the site”.
 - Pricing: reference the current USD 2,000/mo / $2k/mo dev team subscription when relevant; reinforce monthly billing, no upfront, no hidden clauses, and that clients who enter at the current rate keep it fixed while the engagement remains active.
 - English copy stays US-first. PT-BR copy must position TG Apps as a global startup that builds born-global products and can work with companies from any market.
 - Ensure any new copy reaffirm zero upfront payment, contract/NDA, deploy cadence, D‑U‑N‑S trust signal.

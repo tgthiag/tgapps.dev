@@ -30,8 +30,8 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
     'https://wa.me/5511979717703?text=Hi%20I%20found%20you%20on%20Google%20and%20would%20like%20to%20build%20a%20project';
   const finalCtaTitle = isTrustPage
     ? locale === 'pt'
-      ? 'Precisa validar a TG Apps antes de contratar?'
-      : 'Need to validate TG Apps before hiring?'
+      ? 'Precisa validar a Tg Apps antes de contratar?'
+      : 'Need to validate Tg Apps before hiring?'
     : locale === 'pt'
       ? 'Vamos mapear seu sistema?'
       : 'Ready to map your system?';
@@ -280,7 +280,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
                 </div>
                 <h3 className="font-semibold text-slate-950">WhatsApp</h3>
                 <p className="mt-2 text-sm leading-relaxed text-slate-600">
-                  {locale === 'pt' ? 'Abrir conversa rápida com a TG Apps.' : 'Open a quick chat with TG Apps.'}
+                  {locale === 'pt' ? 'Abrir conversa rápida com a Tg Apps.' : 'Open a quick chat with Tg Apps.'}
                 </p>
               </a>
 

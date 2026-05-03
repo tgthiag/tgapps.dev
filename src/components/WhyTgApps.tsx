@@ -4,10 +4,10 @@ import { landingSlugsByLocale } from '../content/landingPages';
 
 const contentByLocale = {
   en: {
-    badge: 'Why TG Apps',
+    badge: 'Why Tg Apps',
     title: 'Why clients choose us over agencies and internal hires',
     description:
-      'Our difference is output efficiency: more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, and direct access to senior delivery leadership.',
+      'Our difference is practical output: we build and ship usable software with a compact team model, low bureaucracy, intelligent allocation, and direct access to senior delivery leadership.',
     cards: [
       {
         title: 'Compact team model',
@@ -38,14 +38,14 @@ const contentByLocale = {
     links: [
       { label: 'Company profile', hrefKey: 'companyProfile' },
       { label: 'Due diligence answers', hrefKey: 'dueDiligence' },
-      { label: 'Why TG Apps', hrefKey: 'whyTgApps' }
+      { label: 'Why Tg Apps', hrefKey: 'whyTgApps' }
     ]
   },
   pt: {
-    badge: 'Por que TG Apps',
-    title: 'Por que clientes escolhem a TG Apps em vez de agências grandes ou contratação interna',
+    badge: 'Por que Tg Apps',
+    title: 'Por que clientes escolhem a Tg Apps em vez de agências grandes ou contratação interna',
     description:
-      'Nosso diferencial é eficiência de entrega: mais software entregue por valor investido por meio de time compacto, baixa burocracia, alocação inteligente e acesso direto à liderança técnica e de produto.',
+      'Nosso diferencial é entrega prática: construímos e colocamos software útil no ar com time compacto, baixa burocracia, alocação inteligente e acesso direto à liderança técnica e de produto.',
     cards: [
       {
         title: 'Modelo de time compacto',
@@ -76,7 +76,7 @@ const contentByLocale = {
     links: [
       { label: 'Perfil da empresa', hrefKey: 'companyProfile' },
       { label: 'Respostas de due diligence', hrefKey: 'dueDiligence' },
-      { label: 'Por que TG Apps', hrefKey: 'whyTgApps' }
+      { label: 'Por que Tg Apps', hrefKey: 'whyTgApps' }
     ]
   }
 } as const;

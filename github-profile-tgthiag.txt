@@ -1,13 +1,13 @@
 # Thiago Carvalho - Full Stack & Mobile Engineer
 
-Founder and software developer at [TG Apps](https://tgapps.dev), a custom software studio focused on high-output delivery for apps, CRM, internal tools, backend platforms, and AI integrations.
+Founder and software developer at [TG Apps](https://tgapps.dev), a custom software studio that builds and ships apps, CRM systems, internal tools, backend platforms, and AI integrations.
 
 ![](https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=tgthiag&theme=aura_dark)
 ![](https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=tgthiag&theme=aura_dark)
 
 ## About Me
 
-I build practical software for founders, startups, and growing businesses that need more product and engineering delivery without the overhead of a large agency or a full internal team.
+I build practical software for founders, startups, and growing businesses that need an app built, a stalled project rescued, or real product delivery without the overhead of a large agency or a full internal team.
 
 Most client work is private because it involves business operations, internal systems, credentials, customer data, and NDA-sensitive repositories. Public repositories here may include experiments, utilities, learning projects, and selected product work.
 
@@ -22,7 +22,7 @@ Most client work is private because it involves business operations, internal sy
 
 ## TG Apps
 
-TG Apps helps founders, startups, and growing teams get more software delivery per dollar through a compact team model, low bureaucracy, intelligent allocation, weekly demos, and clean handoff.
+TG Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, and AI integrations for founders, startups, and growing teams.
 
 We follow the agreed client plan, provide implementation insight when useful, and focus on practical delivery: mobile apps, CRM systems, internal tools, backend APIs, AI integrations, release support, documentation, and handoff when applicable.
 

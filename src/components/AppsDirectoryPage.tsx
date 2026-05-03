@@ -21,7 +21,7 @@ const AppsDirectoryPage = ({ locale }: AppsDirectoryPageProps) => {
               alt="TG Apps"
               className="h-10 w-10 rounded-xl bg-black/35 p-1 shadow-lg shadow-blue-500/20"
             />
-            <span>TG Apps</span>
+            <span>Tg Apps</span>
           </a>
           <a
             href={homeHref}

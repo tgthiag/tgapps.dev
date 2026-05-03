@@ -155,7 +155,7 @@ const AnyLanguageAppPage = ({ locale }: AnyLanguageAppPageProps) => {
               href={locale === 'pt' ? '/pt-br/#contato' : '/#contato'}
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-transform duration-200 hover:-translate-y-0.5"
             >
-              TG Apps
+              Tg Apps
               <ArrowUpRight className="h-4 w-4" />
             </a>
           </div>

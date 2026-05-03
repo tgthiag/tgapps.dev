@@ -49,12 +49,12 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
   return {
     title:
       locale === 'pt'
-        ? 'Mais software entregue por valor investido | Apps, CRM, IA e sistemas | TG Apps'
-        : 'More Software Delivery Per Dollar | Apps, CRM, AI & Internal Tools | TG Apps',
+        ? 'Seu App, Construído e Entregue | TG Apps'
+        : 'Your App, Built and Shipped | TG Apps',
     description:
       locale === 'pt'
-        ? 'Time de software sob demanda para apps mobile, CRM, ferramentas internas, backend, APIs e integrações de IA. A TG Apps ajuda fundadores e empresas a obter mais entrega por valor investido, com demos semanais, sem adiantamento e valor mensal atual de US$ 2.000/mês, fixo para quem contratar nesse valor.'
-        : 'Custom software team for mobile apps, CRM, internal tools, backend, APIs, and AI integrations. TG Apps helps founders and growing teams get more software delivery per dollar with weekly demos, zero upfront payment, and a USD 2,000/mo fixed monthly rate for clients who hire at that rate.',
+        ? 'Tem uma ideia ou um projeto parado? A TG Apps constrói e entrega apps mobile, plataformas web, CRM, backend e integrações de IA para fundadores e times em crescimento. Mensalidade fixa, sem pagamento inicial, demos semanais.'
+        : 'Got an idea or a stalled project? TG Apps builds and ships mobile apps, web platforms, CRM, backend, and AI integrations for founders and growing teams. Fixed monthly rate, no upfront payment, weekly demos.',
     image: 'https://tgapps.dev/og-home.png',
     robots: 'index,follow',
     localizedRoutePaths: { en: '/', pt: '/' }

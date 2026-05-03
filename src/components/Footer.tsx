@@ -37,7 +37,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
   const localizedLandingHref = (landingPath: string) => buildLocalizedPath(language, landingPath);
   const trustLinks = [
     {
-      label: language === 'pt' ? 'Por que TG Apps' : 'Why TG Apps',
+      label: language === 'pt' ? 'Por que Tg Apps' : 'Why Tg Apps',
       href: localizedLandingHref(landingSlugsByLocale[language].whyTgApps)
     },
     {
