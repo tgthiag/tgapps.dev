@@ -406,8 +406,8 @@ export const translations: Record<Locale, TranslationSchema> = {
         servicePlaceholder: 'Select an option',
         messageLabel: 'Notes',
         messagePlaceholder: 'Tell us about platforms, deadlines, or blockers.',
-        submit: 'Compose email draft',
-        submitting: 'Preparing email...',
+        submit: 'Start the conversation',
+        submitting: 'Opening email...',
         policy: 'We only use these details to contact you about this request.'
       },
       services: [
@@ -715,8 +715,8 @@ export const translations: Record<Locale, TranslationSchema> = {
         servicePlaceholder: 'Selecione uma opção',
         messageLabel: 'Notas',
         messagePlaceholder: 'Compartilhe prazos, lojas ou dores atuais.',
-        submit: 'Gerar email',
-        submitting: 'Preparando email...',
+        submit: 'Iniciar conversa',
+        submitting: 'Abrindo email...',
         policy: 'Usaremos essas informações apenas para retornar seu contato.'
       },
       services: [
