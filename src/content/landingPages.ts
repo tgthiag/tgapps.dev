@@ -82,29 +82,29 @@ const getLandingSlug = (locale: Locale, key: LandingPageKey): string => {
 };
 
 const EN_CURRENT_PRICING: LandingPagePricing = {
-  label: 'Current monthly rate',
-  title: 'Current monthly rate: USD 2,000/month',
+  label: 'Monthly software plans',
+  title: 'Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500/mo',
   description:
-    'Current pricing for new engagements. If you hire us at this rate, it stays fixed for your account while the engagement remains active.',
+    'Choose the delivery capacity that fits the current stage. Growth is the most selected plan because it uses intelligent allocation across the highest-priority part of the product each week.',
   highlights: [
-    'No upfront payment before work begins.',
-    'Month-to-month engagement with no lock-in.',
-    'Design, backend, frontend, database, integrations, and release support included in the same team.'
+    'Starter: focused small scope, fixes, maintenance, controlled product movement, and weekly demand intake meeting.',
+    'Growth: weekly demand intake meeting plus intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, and release support.',
+    'Dedicated: more capacity for multiple workstreams, urgent delivery, active operations, and daily coordination meetings when needed.'
   ],
-  note: 'Final scope still depends on complexity, security needs, and required integrations, but the USD 2,000/month rate is locked for clients who hire us at this offer.'
+  note: 'No upfront payment, month-to-month engagement, and the selected plan rate stays fixed while the engagement remains active.'
 };
 
 const PT_CURRENT_PRICING: LandingPagePricing = {
-  label: 'Valor mensal atual',
-  title: 'Valor atual: US$ 2.000/mês',
+  label: 'Planos mensais de software',
+  title: 'Starter US$ 1.500/mês, Growth US$ 2.000/mês, Dedicated US$ 3.500/mês',
   description:
-    'Preço atual para novos contratos. Quem contratar nesse valor mantém o valor fixo enquanto o engajamento permanecer ativo.',
+    'Escolha a capacidade de entrega que combina com o momento atual. Growth é o plano mais escolhido porque usa alocação inteligente na parte mais prioritária do produto a cada semana.',
   highlights: [
-    'Sem pagamento antecipado antes do trabalho começar.',
-    'Contrato mês a mês, sem lock-in.',
-    'Design, backend, frontend, banco de dados, integrações e suporte de release no mesmo time.'
+    'Starter: escopo pequeno, correções, manutenção, movimento controlado de produto e reunião semanal para demandas.',
+    'Growth: reunião semanal para demandas e alocação inteligente entre mobile, web, backend, CRM, ferramentas internas, integrações e release.',
+    'Dedicated: mais capacidade para múltiplas frentes, urgência, operações ativas e reuniões diárias quando necessário.'
   ],
-  note: 'O escopo final ainda depende da complexidade, segurança e integrações necessárias, mas o valor de US$ 2.000/mês fica travado para clientes que contratarem nessa oferta.'
+  note: 'Sem pagamento inicial, contrato mês a mês e o valor do plano escolhido permanece fixo enquanto o engajamento estiver ativo.'
 };
 
 const EN_CONTENT: LandingContentByLocale = {
@@ -707,18 +707,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: {
-      label: 'Current monthly rate',
-      title: 'Current monthly rate: USD 2,000/month',
-      description:
-        'Current pricing for new engagements. If you hire us at this rate, it stays fixed for your account while the engagement remains active.',
-      highlights: [
-        'No upfront payment before work begins.',
-        'Month-to-month engagement with no lock-in.',
-        'Design, backend, frontend, database, integrations, and release support included in the same team.'
-      ],
-      note: 'Final scope still depends on complexity, security needs, and required integrations, but the USD 2,000/month rate is locked for clients who hire us at this offer.'
-    },
+    pricing: EN_CURRENT_PRICING,
     finalNote: {
       title: 'Your internal system can become a business asset',
       description:
@@ -734,7 +723,7 @@ const EN_CONTENT: LandingContentByLocale = {
       'TG Apps gives founders, startups, and SMB teams a founder-led, team-delivered software development subscription for apps, CRM, internal tools, backend systems, AI integrations, and release support, without hiring a full product team first.',
     heroHighlights: [
       'Founder-led delivery with a compact core team and scope-based collaborators.',
-      'USD 2,000/mo monthly rate, fixed while the engagement remains active.',
+      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500/mo.',
       'Zero upfront payment, weekly demos, and one team for product, backend, frontend, mobile, AI, and release.'
     ],
     ctaLabel: 'Schedule a discovery call',
@@ -775,7 +764,7 @@ const EN_CONTENT: LandingContentByLocale = {
         items: [
           'Weekly demos show what was built, what changed, and what is blocked.',
           'Backlog, decision notes, repositories, credentials, runbooks, and handoff materials stay organized as the product evolves.',
-          'The USD 2,000/mo rate remains fixed for your account while the engagement remains active.'
+          'The selected plan rate remains fixed for your account while the engagement remains active.'
         ]
       }
     ],
@@ -802,7 +791,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Month-to-month dedicated development team',
     proofHeading: 'How this model works',
     proofItems: [
-      'Current monthly rate: USD 2,000/mo, fixed while the engagement remains active.',
+      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500/mo.',
       'Cancel any month with no penalties or hidden transition fees.',
       'Monthly billing, no upfront payment, and runbooks plus handoff docs delivered continuously.'
     ],
@@ -1541,18 +1530,7 @@ const PT_CONTENT: LandingContentByLocale = {
         ]
       }
     ],
-    pricing: {
-      label: 'Valor mensal atual',
-      title: 'Valor atual: US$ 2.000/mês',
-      description:
-        'Preço atual para novos contratos. Quem contratar nesse valor mantém o valor fixo enquanto o engajamento permanecer ativo.',
-      highlights: [
-        'Sem pagamento antecipado antes do trabalho começar.',
-        'Contrato mês a mês, sem lock-in.',
-        'Design, backend, frontend, banco de dados, integrações e suporte de release no mesmo time.'
-      ],
-      note: 'O escopo final ainda depende da complexidade, segurança e integrações necessárias, mas o valor de US$ 2.000/mês fica travado para clientes que contratarem nessa oferta.'
-    },
+    pricing: PT_CURRENT_PRICING,
     finalNote: {
       title: 'Seu sistema interno pode virar ativo de negócio',
       description:
@@ -1568,7 +1546,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'A TG Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de release, sem exigir que a empresa contrate um time completo antes.',
     heroHighlights: [
       'Entrega liderada pelo fundador com núcleo enxuto e colaboradores por escopo.',
-      'Valor mensal atual de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.',
+      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500/mês.',
       'Sem pagamento antecipado, demos semanais e um time para produto, backend, frontend, mobile, IA e release.'
     ],
     ctaLabel: 'Agendar discovery call',
@@ -1599,7 +1577,7 @@ const PT_CONTENT: LandingContentByLocale = {
         items: [
           'Planejar escopo, critérios de aceite, prioridades e dependências antes de cada ciclo de entrega.',
           'Usar o mesmo loop para decisões de produto, arquitetura, implementação, QA, release e suporte.',
-          'Adicionar colaboradores em pacotes de trabalho definidos, sem transformar a assinatura em staffing vago.'
+          'Adicionar colaboradores em pacotes de trabalho definidos, sem transformar o modelo em staffing vago.'
         ]
       },
       {
@@ -1609,7 +1587,7 @@ const PT_CONTENT: LandingContentByLocale = {
         items: [
           'Demos semanais mostram o que foi construído, o que mudou e o que está bloqueado.',
           'Backlog, decisões, repositórios, credenciais, runbooks e materiais de handoff ficam organizados enquanto o produto evolui.',
-          'O valor de US$ 2.000/mês permanece fixo para sua conta enquanto o engajamento permanecer ativo.'
+          'O valor do plano escolhido permanece fixo para sua conta enquanto o engajamento permanecer ativo.'
         ]
       }
     ],
@@ -1636,7 +1614,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Time mensal de desenvolvimento',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
-      'Valor mensal atual de US$ 2.000/mês, fixo enquanto o engajamento permanecer ativo.',
+      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500/mês.',
       'Cancelamento em qualquer mês sem multa ou taxa surpresa.',
       'Cobrança mensal, sem adiantamento, e runbooks com handoff entregues continuamente.'
     ],

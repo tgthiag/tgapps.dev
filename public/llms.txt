@@ -15,9 +15,19 @@ Primary market: founders, startups, SMB teams, and growing businesses in the Uni
 
 TG Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, and AI integrations for founders and growing teams.
 
-The main public positioning is: "Your app, built and shipped." TG Apps is a fit when a client has an app idea, a stalled project, an unfinished codebase, or a business operation that needs one team to handle mobile, web, backend, release, and handoff for a fixed monthly rate with no upfront payment.
+The main public positioning is: "Your app, built and shipped." TG Apps is a fit when a client has an app idea, a stalled project, an unfinished codebase, or a business operation that needs one team to handle mobile, web, backend, release, and handoff through a clear monthly plan with no upfront payment.
 
 Core work includes mobile apps, web platforms, custom CRM systems, internal tools, dashboards, workflow automation, customer portals, employee apps, backend APIs, databases, AI/LLM integrations, app rescue, release execution, born-global apps, and dedicated development team subscriptions.
+
+## Public Pricing
+
+TG Apps uses clear monthly software delivery plans:
+
+- Starter: USD 1,500/month for focused small scope, maintenance, fixes, controlled improvements, or tightly scoped product movement. Includes a weekly meeting to collect and prioritize demands.
+- Growth: USD 2,000/month. This is the most selected plan and uses intelligent allocation across the highest-priority part of the product each week, including mobile, web, backend, CRM, internal tools, integrations, AI, and release support. Includes a weekly meeting to collect demands, review priorities, and show progress.
+- Dedicated: USD 3,500/month and up for more capacity, multiple workstreams, active operations, urgent delivery needs, or projects that require additional collaborators. Daily coordination meetings can be used when the project needs tighter alignment.
+
+All plans are month-to-month, have no upfront payment, and keep the selected plan rate fixed while the engagement remains active.
 
 TG Apps' main product is practical custom software delivery: building and shipping the agreed usable product with weekly demos, clear scope, release support, documentation, and clean handoff. Tight timelines are handled when the client plan requires them, but the timeline itself is not the main product category or default objective.
 

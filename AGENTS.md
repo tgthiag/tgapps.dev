@@ -5,7 +5,8 @@
 - **Where TG Apps is positioned now:** The current homepage headline is **"Your app, built and shipped."** / **"Seu app, construído e entregue."** The site is positioned away from vague "small business app development" and away from "pods" language. The stronger positioning is app ideas, stalled projects, mobile apps, web platforms, CRM, internal tools, backend, app rescue, born-global apps, AI integrations, and on-demand development team capacity.
 - **Primary market reality:** English copy should be US-first and buyer-oriented. Portuguese copy should sound natural in Brazil and avoid imported acronyms such as "SMB" in visible PT-BR text.
 - **Operating model:** Founder-led does not mean solo. It means direct leadership, product context, accountability, compact core team execution, and scope-based collaborators when a project requires more throughput or specialized expertise.
-- **Commercial model:** The current offer can mention USD 2,000/month or $2k/mo when relevant, but it must be framed as an efficient on-demand development team model, not cheap labor and not a vague retainer. Clients who hire TG Apps at the current USD 2,000/month rate keep it fixed while the engagement remains active.
+- **Commercial model:** The public pricing ladder is Starter USD 1,500/month, Growth USD 2,000/month, and Dedicated USD 3,500/month and up. Growth is the main and most selected plan because it uses intelligent allocation across the part of the product that needs the most attention each week. Frame pricing as output efficiency, low bureaucracy, and smart allocation, not cheap labor or a vague retainer. Clients keep the selected plan rate fixed while the engagement remains active.
+- **Meeting cadence by plan:** Starter and Growth include a weekly meeting to collect demands, review priorities, and align what should move next. Dedicated can include daily coordination meetings when the project needs tighter alignment, multiple workstreams, or active release pressure.
 - **Supporting differentiator:** Output efficiency. TG Apps builds and ships usable software through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls. Cost efficiency can be used as a supporting argument, but it is no longer the primary homepage headline.
 - **Delivery model:** TG Apps follows the agreed client plan strictly, flags risks and tradeoffs, and shares implementation insights when useful. Speed is a strength, but "fast delivery" is not the main product category; the product is reliable custom software execution.
 - **Best public narrative:** "We build the software your operation actually needs: apps, CRM, internal tools, backend, dashboards, automations, AI integrations, and release support, with a compact team, clear scope, weekly demos, and clean handoff."
@@ -31,40 +32,44 @@
 - **Team positioning:** “Founder-led” means direct leadership, accountability, and product context. It must not read as solo execution. Mention compact core team, intelligent collaborator allocation, and scope-based specialists when the copy discusses who builds or delivery capacity.
 
 ## 1.1 Future Creative Notes
-- **Core ad message to preserve:** “Full development team for $2k/month, using an efficient model to reduce costs while maintaining quality. https://www.tgapps.dev”
+- **Core ad message to preserve:** “Full development team from $1.5k/month, with Growth at $2k/month as the most selected plan, using an efficient model to reduce costs while maintaining quality. https://www.tgapps.dev”
 - **Internal tools creative:** “Build custom internal tools for your business. Replace spreadsheets with real systems. Clear plan, weekly demos, practical execution.”
 - **App rescue / launch creative:** TG Apps is a strong fit for individual founders and startups with unfinished apps, rough prototypes, outdated apps, or app drafts that need to be updated, completed, deployed, and published according to a clear plan.
 - **Born-global apps creative:** TG Apps has experience building international apps that support multiple languages, contextual translation, localized flows, and cultural adaptation. Use this for founders and startups that need an app to be global from day one rather than translated later.
 - **Execution creative:** “Build the software your business needs. We follow the agreed plan, flag risks, and share delivery insights when useful.”
-- **Short creative hooks:** “Dev Team Subscription $2k/mo”, “Dev Team Subscription”, and “On-demand development team”.
+- **Short creative hooks:** “Dev Team Subscription from $1.5k/mo”, “Growth Dev Team $2k/mo”, “Dev Team Subscription”, and “On-demand development team”.
 - This section overrides older “pod” language if any legacy note conflicts with current positioning.
 - Use this concept for future ad creatives, social posts, and landing-page experiments when the goal is to make the offer immediately understandable.
 - The commercial angle is not “cheap developers” or “we only deliver fast”; it is an efficient, compact full development team model that reduces overhead while maintaining quality, communication, strict plan execution, and delivery accountability.
 - When explaining the cost advantage, prefer: “output efficiency,” “more usable software per invested dollar,” “cost-efficient delivery model,” and “low overhead through intelligent allocation.” Avoid “cheap” or “low-cost developers.”
 - Prefer “development team”, “dev team subscription”, “custom software team”, “dedicated development team”, or “on-demand development team” over “pod/pods” in customer-facing copy.
 - In Portuguese, prefer **“time de desenvolvimento sob demanda”** or **“time sob demanda”** over **“desenvolvimento por assinatura”** as visible headline copy. Keep “assinatura” only where useful for SEO, aliases, or explanatory context.
-- When mentioning price, use **USD 2,000/month** or **$2k/mo** and clarify when needed that clients who enter at the current rate keep it fixed while the engagement remains active.
+- When mentioning price, use the public ladder: **Starter USD 1,500/month**, **Growth USD 2,000/month**, and **Dedicated USD 3,500/month and up**. Growth is the default recommendation and the most selected plan. Clarify when needed that the selected plan rate stays fixed while the engagement remains active.
 
 ## 2. Page & Section Structure
 The React single-page app renders these sections in order (see `src/App.tsx`):
 
 | Section | Component | Key Purpose |
 | --- | --- | --- |
-| Sticky Header | `Header.tsx` | Navigation (Overview, Capabilities, Process, Proof, Contact), language toggle (EN/PT), CTA scroll to contact. |
-| Hero | `Hero.tsx` | Main offer: "Your app, built and shipped." / "Seu app, construído e entregue." Snapshot of app ideas, stalled projects, mobile/web/backend/release, fixed monthly rate, no upfront, trust stats, dual CTAs (schedule call / see plan), lifestyle image showing collaboration. |
+| Sticky Header | `Header.tsx` | Navigation (Overview, Capabilities, Process, Proof, Plans, Contact), language toggle (EN/PT), CTA scroll to contact. |
+| Hero | `Hero.tsx` | Main offer: "Your app, built and shipped." / "Seu app, construído e entregue." Snapshot of app ideas, stalled projects, mobile/web/backend/release, clear monthly plans, no upfront, trust stats, dual CTAs (schedule call / see plan), lifestyle image showing collaboration. |
+| Social Proof | `SocialProof.tsx` | Logo strip and short proof badges including D-U-N-S, plan range, Growth plan, and no upfront payment. |
+| Selected Work | `CasesSection.tsx` | Public proof layer with logos and short delivery snapshots. This can stay unpublished or be adjusted before publishing if client visibility decisions change. |
+| Why TG Apps | `WhyTgApps.tsx` | Differentiation block: output efficiency, low bureaucracy, intelligent allocation, direct access, and delivery controls. |
 | Capabilities | `Services.tsx` | Two-column intro (pillars + photo), service cards (Internal tools/business systems, Mobile/customer apps, App rescue/release execution, Integrations/AI/data), pillars list, three-step collaboration loop, CTA banner. |
 | Proof/About | `About.tsx` | Story of operations, mission, response/deploy cadence, D‑U‑N‑S proof badge, values cards, lifestyle photo. |
-| Contact | `Contact.tsx` | Cost transparency card, contact info (support@tgapps.dev, +55 11 97971‑7703, São Paulo), reasons to hire, callout about next steps, form that opens mailto draft. |
+| Pricing | `PricingPlans.tsx` | Three-plan pricing ladder: Starter, Growth, Dedicated. Growth is highlighted as most selected with intelligent allocation. |
+| Contact | `Contact.tsx` | Direct contact info, WhatsApp CTA, next-step callout, and form that opens a mailto draft. Do not repeat long why-us blocks or pricing banners here. |
 | Footer | `Footer.tsx` | Recap of services, navigation, contact info, CTA button, legal links. |
 
-Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `contato`) for smooth scroll and SEO anchors.
+Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `plans`, `contato`) for smooth scroll and SEO anchors.
 
 ## 3. Content Guidance Per Section
 - **Hero**
   - Badge should center custom software and time sob demanda for startups and growing teams, not pods.
-  - Title/subtitle should use the current primary positioning: “Your app, built and shipped.” / “Seu app, construído e entregue.” Support copy should mention app ideas, stalled projects, mobile, web, backend, release, fixed monthly rate, and no upfront.
-  - Stats array (from translations) must mention D‑U‑N‑S number, kickoff cadence, deploy/support coverage.
-  - Photo card tagline: “Latest build – US-based deliveries · zero upfront”.
+  - Title/subtitle should use the current primary positioning: “Your app, built and shipped.” / “Seu app, construído e entregue.” Support copy should mention app ideas, stalled projects, mobile, web, backend, release, clear monthly plans, and no upfront.
+  - Stats array (from translations) must mention D-U-N-S number, Growth plan, no upfront, and cancel-anytime or equivalent flexibility.
+  - Photo card tagline should highlight the most selected Growth plan and fixed rate while active.
   - CTAs: `primary` scrolls to contact; `secondary` scrolls to process loop.
 
 - **Services (“Custom software capabilities”)**
@@ -84,10 +89,15 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
   - Passion badge text: “D‑U‑N‑S® 651029828”.
   - Values cards: D‑U‑N‑S validation, contract-first billing, US timezone coverage.
 
+- **Pricing**
+  - Plans: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500/month and up.
+  - Growth must be visually highlighted as the most selected plan and should mention intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, AI, and release support.
+  - Starter and Growth should mention weekly meetings for demand intake, priority review, and progress alignment.
+  - Dedicated should mention daily coordination meetings when needed.
+  - Pricing should reinforce month-to-month engagement, no upfront payment, fixed selected-plan rate while active, and clear scope before kickoff.
+
 - **Contact**
-  - Cost section: “Dev Team Subscription · $2k/mo” or “Current monthly rate · cancel any month” (current USD 2,000/mo offer, W8‑BEN‑E on file, SOC/NDA templates ready, no upfront, no hidden clauses). Do not describe the USD 2,000/mo offer as temporary. The correct promise is that clients who hire TG Apps at this rate keep it fixed while the engagement stays active.
   - Info entries: Email `support@tgapps.dev`, WhatsApp/Phone `+55 11 97971‑7703`, location “São Paulo, Brazil · US overlap ET/CT”.
-  - “Why us” bullets: zero upfront, D‑U‑N‑S trust, Android/iOS expertise, LLM integrations with guardrails, weekly release cadence powered by a compact Kanban development team (backend, frontend, database, mobile in parallel), client-led backlog with weekly demos and deployments.
   - Form callout: Outline response timeframe (≤1 business day), 30–45 min call, send SOW/checklist.
   - Form fields: Full name, Work email, Phone/WhatsApp, Service dropdown, Notes. Submit button composes email to contact address.
 
@@ -125,10 +135,11 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 ## 6. Operating Guardrails
 - Keep layout visually light: at most one lifestyle image per major block (Hero, Services, About).
 - Every mention of AI must be framed as “LLM integrations we deliver”, not “we use AI to build the site”.
-- Pricing: reference the current USD 2,000/mo / $2k/mo dev team subscription when relevant; reinforce monthly billing, no upfront, no hidden clauses, and that clients who enter at the current rate keep it fixed while the engagement remains active.
+- Pricing: reference the public ladder when relevant: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500/month and up. Reinforce monthly billing, no upfront, no hidden clauses, and that the selected plan rate stays fixed while the engagement remains active.
 - English copy stays US-first. PT-BR copy must position TG Apps as a global startup that builds born-global products and can work with companies from any market.
 - Ensure any new copy reaffirm zero upfront payment, contract/NDA, deploy cadence, D‑U‑N‑S trust signal.
 - Maintain bilingual parity; any new section in English must have a Portuguese counterpart in translations.
+- Do not use the em dash character in site copy, documentation copy, or suggested copy. Use commas, colons, parentheses, or a simple hyphen instead.
 
 ## 7. AI Reputation & Due Diligence Guardrails
 - Treat AI-generated client research as a real acquisition surface. The site must expose enough public proof for humans and models to avoid filling gaps with negative inference.
@@ -150,6 +161,8 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 - `llms.txt` remains public and should point to the HTML AI profile, company profile, due diligence profile, important service pages, founder LinkedIn, and founder GitHub.
 - The Dev as a Service landing is part of the existing `publicRoutes.json` + `landingPages.ts` landing system, not a separate implementation.
 - The visible Portuguese positioning for Dev as a Service is “Time de desenvolvimento sob demanda.” Keep "assinatura" in slug/alias where useful, but avoid making it the main PT promise.
+- The homepage now has a visible pricing ladder through `PricingPlans.tsx`: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500/month and up. Growth is the central plan and should be described as intelligent allocation.
+- Contact has been simplified: no repeated why-us block and no repeated pricing banner inside the contact section.
 - Footer visible trust links may include: Why TG Apps, Time sob demanda / Dev as a Service, Company profile, Due diligence, and Founder LinkedIn.
 - Privacy and account-deletion routes are compliance-critical and must not be renamed or removed:
   - `/my_business_idea_privacy`
@@ -166,7 +179,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `sobre`, `co
 - Final vision statement: choose whether to emphasize LatAm-to-US delivery, born-global products, or compact founder-led software execution.
 - Values language: decide whether values should sound more technical, more commercial, or more founder-led.
 - Proof layer: decide which client examples can be named publicly and which should stay abstract.
-- Pricing visibility: decide when the current USD 2,000/month fixed rate belongs high on a page versus near the final CTA.
+- Pricing visibility: decide per page whether to show the full ladder, highlight Growth only, or move pricing near the final CTA.
 - Navigation strategy: decide whether Dev as a Service should eventually appear in header navigation or remain footer/direct-link only.
 
 Use this AGENTS.md as the authoritative brief when making future edits, so the site stays concise, visual, and aligned with TG Apps’ positioning. 

@@ -19,12 +19,12 @@ const Hero = () => {
   const heroCard =
     language === 'pt'
       ? {
-          eyebrow: 'Valor mensal atual',
-          line: 'US$ 2.000/mês · fixo enquanto ativo'
+          eyebrow: 'Plano mais escolhido',
+          line: 'Growth, US$ 2.000/mês, fixo enquanto ativo'
         }
       : {
-          eyebrow: 'Current monthly rate',
-          line: 'USD 2,000/mo · fixed while active'
+          eyebrow: 'Most selected plan',
+          line: 'Growth, USD 2,000/mo, fixed while active'
         };
 
   return (

@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import SocialProof from './components/SocialProof';
 import CasesSection from './components/CasesSection';
 import WhyTgApps from './components/WhyTgApps';
+import PricingPlans from './components/PricingPlans';
 import MyBusinessIdeaPrivacyPage from './components/MyBusinessIdeaPrivacyPage';
 import MyBusinessIdeaAccountDeletionPage from './components/MyBusinessIdeaAccountDeletionPage';
 import KeywordLandingPage from './components/KeywordLandingPage';
@@ -74,6 +75,7 @@ function App() {
       <WhyTgApps />
       <Services />
       <About />
+      <PricingPlans />
       <Contact />
       <Footer />
     </div>

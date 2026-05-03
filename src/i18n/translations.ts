@@ -99,15 +99,6 @@ export interface TranslationSchema {
       title: string;
       description: string;
     };
-    whyUsHeading: string;
-    whyUs: string[];
-    costSection?: {
-      badge: string;
-      title: string;
-      description: string;
-      highlights?: string[];
-      note?: string;
-    };
     formHeading: string;
     formDescription: string;
     callout: {
@@ -163,6 +154,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { id: 'what-you-get', label: 'Capabilities' },
         { id: 'process', label: 'Process' },
         { id: 'cases', label: 'Proof' },
+        { id: 'plans', label: 'Plans' },
         { id: 'contato', label: 'Contact' }
       ],
       contactCta: 'Book a call',
@@ -175,10 +167,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'and shipped.',
       titleLine2: '',
       subtitle:
-        'Got an idea or a stalled project? One team handles everything: mobile, web, backend, and release, for a fixed monthly rate, no upfront.',
+        'Got an idea or a stalled project? One team handles everything: mobile, web, backend, and release, through a clear monthly plan with no upfront payment.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
-        { label: 'USD 2,000/mo' },
+        { label: 'Growth plan: USD 2,000/mo' },
         { label: 'Zero upfront' },
         { label: 'Cancel anytime' }
       ],
@@ -390,34 +382,6 @@ export const translations: Record<Locale, TranslationSchema> = {
         title: 'Prefer WhatsApp?',
         description: 'Open a direct chat with TG Apps and tell us what you want to build.'
       },
-      whyUsHeading: 'Why startups and SMB teams hire TG Apps',
-      whyUs: [
-        'Zero upfront payment; billing starts only after kickoff, you can cancel anytime, and there are no surprise fees.',
-        'D-U-N-S® record and Brazilian LLC paperwork to pass procurement.',
-        'Strong fit for unfinished apps, app drafts, outdated builds, and stalled codebases when the client needs a clear path to release.',
-        'Full-stack delivery: custom CRM, internal tools, native apps, responsive sites, dashboards, backend, and databases handled by one team.',
-        'LLM integrations delivered with guardrails and documentation that match the stack you already trust.',
-        'Deploy cadence typically once per week, with backend, frontend, database, and mobile tracks moving in parallel with blue/green coverage.',
-        'Weekly video calls with the actual developers so stakeholders can review deploys, metrics, and next steps live, and we adapt meeting hours to your preferred timezone.',
-        'Prefer to use your own contract template? Send it and we co-review, sign, and adapt clauses together.',
-        'Pricing stays fair because the same compact team structure supports multiple clients without adding unnecessary retainers.',
-        'Current monthly rate: USD 2,000/mo, fixed for your account while the engagement stays active.'
-      ],
-      costSection: {
-        badge: 'Transparent terms',
-        title: 'Current monthly rate: USD 2,000/mo',
-        description:
-          'Current monthly rate: USD 2,000/mo for custom software, internal tools, apps, integrations, and release support with monthly billing, no upfront payment, and no hidden clauses. If you hire us at this rate, it stays fixed for your account while the engagement remains active.',
-        highlights: [
-          'Custom software, internal tools, apps, integrations, and release support.',
-          'Monthly billing, no upfront payment, and no hidden clauses.',
-          'Cancel any month; no lock-in.',
-          'Rate stays fixed while your engagement remains active.',
-          'Contracts and invoices issued by TG Applications Desenvolvimento Ltda (Brazil).',
-          'USD or BRL billing; W8-BEN-E already on file.'
-        ],
-        note: 'Need NDAs, SOC, or vendor questionnaires? We keep sanitized templates ready. Clients who hire us at the current USD 2,000/mo rate keep it fixed while the engagement stays active.'
-      },
       formHeading: 'Share a few details',
       formDescription: 'We only ask for what we need to reply with a plan and calendar.',
       callout: {
@@ -458,13 +422,14 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'TG Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. One team, fixed monthly rate, no upfront.',
+        'TG Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. Plans from USD 1,500/mo, Growth at USD 2,000/mo, no upfront.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
         { id: 'what-you-get', label: 'Capabilities' },
         { id: 'process', label: 'Process' },
         { id: 'cases', label: 'Proof' },
+        { id: 'plans', label: 'Plans' },
         { id: 'contato', label: 'Contact' }
       ],
       servicesHeading: 'Popular requests',
@@ -498,6 +463,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { id: 'what-you-get', label: 'Serviços' },
         { id: 'process', label: 'Processo' },
         { id: 'cases', label: 'Provas' },
+        { id: 'plans', label: 'Planos' },
         { id: 'contato', label: 'Contato' }
       ],
       contactCta: 'Fale com a gente',
@@ -510,10 +476,10 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'e entregue.',
       titleLine2: '',
       subtitle:
-        'Tem uma ideia ou um projeto parado? Um time cuida de tudo: mobile, web, backend e lançamento, por uma mensalidade fixa, sem pagamento inicial.',
+        'Tem uma ideia ou um projeto parado? Um time cuida de tudo: mobile, web, backend e lançamento, com plano mensal claro e sem pagamento inicial.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
-        { label: 'US$ 2.000/mês' },
+        { label: 'Plano Growth: US$ 2.000/mês' },
         { label: 'Sem adiantamento' },
         { label: 'Cancele quando quiser' }
       ],
@@ -725,35 +691,6 @@ export const translations: Record<Locale, TranslationSchema> = {
         title: 'Prefere WhatsApp?',
         description: 'Abra uma conversa direta com a TG Apps e conte o que você quer construir.'
       },
-      whyUsHeading: 'Por que contratam a TG Apps',
-      whyUs: [
-        'Sem adiantamentos; cobramos só depois do início, sem surpresas e você cancela quando quiser.',
-        'Registro D-U-N-S® e documentos brasileiros prontos para compras corporativas.',
-        'Encaixe forte para apps inacabados, rascunhos, builds antigas e codebases travadas quando o cliente precisa de um caminho claro até o release.',
-        'Entrega ponta a ponta: CRM sob medida, ferramentas internas, apps, sites, dashboards, backends e bancos de dados por um único time.',
-        'Integrações LLM com guardrails e documentação alinhados ao stack que você já usa.',
-        'Cadência de deploy normalmente semanal, com back, front, banco e mobile em paralelo + cobertura azul/verde.',
-        'Chamadas em vídeo toda semana com o time de devs para revisar deploys e próximos passos, sempre adaptando o horário ao fuso do cliente.',
-        'Preferiu usar o contrato da sua empresa? Envie o modelo e revisamos juntos, ajustando cláusulas antes da assinatura.',
-        'Você direciona o backlog e nós apresentamos releases/demos toda semana.',
-        'Preço justo: a estrutura compacta do time permite atender múltiplos clientes sem inflar retainer ou taxas extras.',
-        'Valor mensal atual: US$ 2.000/mês, fixo para sua conta enquanto o engajamento permanecer ativo.'
-      ],
-      costSection: {
-        badge: 'Termos claros',
-        title: 'Valor mensal atual: US$ 2.000/mês',
-        description:
-          'Valor mensal atual: US$ 2.000/mês para software sob medida, ferramentas internas, apps, integrações e suporte de release com cobrança mensal, sem adiantamento e sem cláusulas escondidas. Quem contratar nesse valor mantém o valor fixo enquanto o engajamento permanecer ativo.',
-        highlights: [
-          'Software sob medida, ferramentas internas, apps, integrações e suporte de release.',
-          'Cobrança mensal, sem adiantamento e sem cláusulas escondidas.',
-          'Cancele em qualquer mês; sem lock-in.',
-          'Valor fixo enquanto o engajamento permanecer ativo.',
-          'Contrato e nota emitidos pela TG Applications Desenvolvimento Ltda (Brasil).',
-          'Cobrança em USD ou BRL; W8-BEN-E já disponível.'
-        ],
-        note: 'Precisa de NDA, SOC ou questionário de fornecedor? Já temos os modelos. Clientes que contratarem no valor atual de US$ 2.000/mês mantêm esse valor fixo enquanto o engajamento estiver ativo.'
-      },
       formHeading: 'Conte um pouco do projeto',
       formDescription: 'Só pedimos o necessário para responder com plano e datas.',
       callout: {
@@ -794,13 +731,14 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A TG Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Um time, mensalidade fixa, sem pagamento inicial.',
+        'A TG Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Planos desde US$ 1.500/mês, Growth por US$ 2.000/mês, sem pagamento inicial.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
         { id: 'what-you-get', label: 'Serviços' },
         { id: 'process', label: 'Processo' },
         { id: 'cases', label: 'Provas' },
+        { id: 'plans', label: 'Planos' },
         { id: 'contato', label: 'Contato' }
       ],
       servicesHeading: 'Pedidos frequentes',

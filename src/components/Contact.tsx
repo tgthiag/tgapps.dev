@@ -40,7 +40,7 @@ const Contact = () => {
       'Plans / Notes:',
       formData.message || '(No additional notes)',
       '',
-      'Reminder: USD 2,000/mo fixed monthly rate requested via contact form.'
+      'Pricing reference: Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500/mo. Requested via contact form.'
     ];
     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 
