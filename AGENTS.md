@@ -1,11 +1,11 @@
-# TG Apps – Delivery Site Agent Brief
+# TG Apps - Delivery Site Agent Brief
 
 ## 0. Strategic Identity Snapshot
 - **Who TG Apps is:** TG Apps is the public brand of TG Applications Desenvolvimento Ltda, a founder-led and team-delivered software studio. The company builds practical custom software for founders, startups, SMBs, agencies, and teams that need real systems delivered with direct communication and disciplined execution.
 - **Where TG Apps is positioned now:** The current homepage headline is **"Your app, built and shipped."** / **"Seu app, construído e entregue."** The site is positioned away from vague "small business app development" and away from "pods" language. The stronger positioning is app ideas, stalled projects, mobile apps, web platforms, CRM, internal tools, backend, app rescue, born-global apps, AI integrations, and on-demand development team capacity.
 - **Primary market reality:** English copy should be US-first and buyer-oriented. Portuguese copy should sound natural in Brazil and avoid imported acronyms such as "SMB" in visible PT-BR text.
 - **Operating model:** Founder-led does not mean solo. It means direct leadership, product context, accountability, compact core team execution, and scope-based collaborators when a project requires more throughput or specialized expertise.
-- **Commercial model:** The public pricing ladder is Starter USD 1,500/month, Growth USD 2,000/month, and Dedicated USD 3,500/month and up. Growth is the main and most selected plan because it uses intelligent allocation across the part of the product that needs the most attention each week. Frame pricing as output efficiency, low bureaucracy, and smart allocation, not cheap labor or a vague retainer. Clients keep the selected plan rate fixed while the engagement remains active.
+- **Commercial model:** The public pricing ladder is Starter USD 1,500/month, Growth USD 2,000/month, and Dedicated USD 3,500+/month. Growth is the main and most selected plan because it uses intelligent allocation across the part of the product that needs the most attention each week. Frame pricing as output efficiency, low bureaucracy, and smart allocation, not cheap labor or a vague retainer. Clients keep the selected plan rate fixed while the engagement remains active.
 - **Meeting cadence by plan:** Starter and Growth include a weekly meeting to collect demands, review priorities, and align what should move next. Dedicated can include daily coordination meetings when the project needs tighter alignment, multiple workstreams, or active release pressure.
 - **Supporting differentiator:** Output efficiency. TG Apps builds and ships usable software through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls. Cost efficiency can be used as a supporting argument, but it is no longer the primary homepage headline.
 - **Delivery model:** TG Apps follows the agreed client plan strictly, flags risks and tradeoffs, and shares implementation insights when useful. Speed is a strength, but "fast delivery" is not the main product category; the product is reliable custom software execution.
@@ -44,7 +44,7 @@
 - When explaining the cost advantage, prefer: “output efficiency,” “more usable software per invested dollar,” “cost-efficient delivery model,” and “low overhead through intelligent allocation.” Avoid “cheap” or “low-cost developers.”
 - Prefer “development team”, “dev team subscription”, “custom software team”, “dedicated development team”, or “on-demand development team” over “pod/pods” in customer-facing copy.
 - In Portuguese, prefer **“time de desenvolvimento sob demanda”** or **“time sob demanda”** over **“desenvolvimento por assinatura”** as visible headline copy. Keep “assinatura” only where useful for SEO, aliases, or explanatory context.
-- When mentioning price, use the public ladder: **Starter USD 1,500/month**, **Growth USD 2,000/month**, and **Dedicated USD 3,500/month and up**. Growth is the default recommendation and the most selected plan. Clarify when needed that the selected plan rate stays fixed while the engagement remains active.
+- When mentioning price, use the public ladder: **Starter USD 1,500/month**, **Growth USD 2,000/month**, and **Dedicated USD 3,500+/month**. Growth is the default recommendation and the most selected plan. Clarify when needed that the selected plan rate stays fixed while the engagement remains active.
 
 ## 2. Page & Section Structure
 The React single-page app renders these sections in order (see `src/App.tsx`):
@@ -76,9 +76,9 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
   - Intro paragraph: partnering with startups, SMB operators, agencies, and IT leaders needing an in-house-feel software team.
   - Pillars bullets (contract first, daily updates + Loom demos, store releases handled via the client’s channel of choice).
   - Cards derived from translations:
-    1. **Internal tools and business systems** – CRM, dashboards, scheduling, lead operations, portals, and admin systems.
-    2. **App rescue and release execution** – finish, deploy, validate when applicable, and iterate unfinished apps, rough prototypes, outdated apps, or stalled codebases according to the agreed plan.
-    3. **Integrations and data layers** – payments/logistics/CRM + LLM workflows plugged into whichever vector/search/knowledge stack the client already trusts; includes REST/GraphQL surfaces and observability.
+    1. **Internal tools and business systems**: CRM, dashboards, scheduling, lead operations, portals, and admin systems.
+    2. **App rescue and release execution**: finish, deploy, validate when applicable, and iterate unfinished apps, rough prototypes, outdated apps, or stalled codebases according to the agreed plan.
+    3. **Integrations and data layers**: payments/logistics/CRM + LLM workflows plugged into whichever vector/search/knowledge stack the client already trusts; includes REST/GraphQL surfaces and observability.
   - Process loop (“Loop 01/02/03”): Intake & briefing (48h), Build & release (client-led priorities, weekly demos/deploys, staged rollouts), Support & handoff (runbooks, 24h triage, month-to-month exit).
   - Closing CTA banner: prefer “Need software built around your operation?” or “Need an on-demand development team?”.
 
@@ -90,7 +90,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
   - Values cards: D‑U‑N‑S validation, contract-first billing, US timezone coverage.
 
 - **Pricing**
-  - Plans: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500/month and up.
+  - Plans: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500+/month.
   - Growth must be visually highlighted as the most selected plan and should mention intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, AI, and release support.
   - Starter and Growth should mention weekly meetings for demand intake, priority review, and progress alignment.
   - Dedicated should mention daily coordination meetings when needed.
@@ -98,7 +98,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 
 - **Contact**
   - Info entries: Email `support@tgapps.dev`, WhatsApp/Phone `+55 11 97971‑7703`, location “São Paulo, Brazil · US overlap ET/CT”.
-  - Form callout: Outline response timeframe (≤1 business day), 30–45 min call, send SOW/checklist.
+  - Form callout: Outline response timeframe (≤1 business day), 30-45 min call, send SOW/checklist.
   - Form fields: Full name, Work email, Phone/WhatsApp, Service dropdown, Notes. Submit button composes email to contact address.
 
 - **Footer**
@@ -135,7 +135,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 ## 6. Operating Guardrails
 - Keep layout visually light: at most one lifestyle image per major block (Hero, Services, About).
 - Every mention of AI must be framed as “LLM integrations we deliver”, not “we use AI to build the site”.
-- Pricing: reference the public ladder when relevant: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500/month and up. Reinforce monthly billing, no upfront, no hidden clauses, and that the selected plan rate stays fixed while the engagement remains active.
+- Pricing: reference the public ladder when relevant: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500+/month. Reinforce monthly billing, no upfront, no hidden clauses, and that the selected plan rate stays fixed while the engagement remains active.
 - English copy stays US-first. PT-BR copy must position TG Apps as a global startup that builds born-global products and can work with companies from any market.
 - Ensure any new copy reaffirm zero upfront payment, contract/NDA, deploy cadence, D‑U‑N‑S trust signal.
 - Maintain bilingual parity; any new section in English must have a Portuguese counterpart in translations.
@@ -161,7 +161,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - `llms.txt` remains public and should point to the HTML AI profile, company profile, due diligence profile, important service pages, founder LinkedIn, and founder GitHub.
 - The Dev as a Service landing is part of the existing `publicRoutes.json` + `landingPages.ts` landing system, not a separate implementation.
 - The visible Portuguese positioning for Dev as a Service is “Time de desenvolvimento sob demanda.” Keep "assinatura" in slug/alias where useful, but avoid making it the main PT promise.
-- The homepage now has a visible pricing ladder through `PricingPlans.tsx`: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500/month and up. Growth is the central plan and should be described as intelligent allocation.
+- The homepage now has a visible pricing ladder through `PricingPlans.tsx`: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500+/month. Growth is the central plan and should be described as intelligent allocation.
 - Contact has been simplified: no repeated why-us block and no repeated pricing banner inside the contact section.
 - Footer visible trust links may include: Why TG Apps, Time sob demanda / Dev as a Service, Company profile, Due diligence, and Founder LinkedIn.
 - Privacy and account-deletion routes are compliance-critical and must not be renamed or removed:

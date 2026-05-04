@@ -439,6 +439,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Custom CRM and internal tools',
         'Business systems and dashboards',
         'Android + iOS builds',
+        'Backend, APIs and integrations',
         'LLM integrations',
         'Release and store coverage'
       ],
@@ -748,6 +749,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'CRM e ferramentas internas',
         'Sistemas de negócio e dashboards',
         'Apps Android e iOS',
+        'Backend, APIs e integrações',
         'Integrações LLM',
         'Cobertura de releases'
       ],

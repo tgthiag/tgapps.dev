@@ -50,11 +50,11 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
     },
     {
       name: 'Dedicated',
-      price: 'USD 3,500/mo',
+      price: 'USD 3,500+/mo',
       badge: 'More capacity',
       audience: 'For companies with more urgency, multiple workstreams, active operations, or a product that needs stronger weekly throughput.',
       description:
-        'A higher-capacity engagement for clients that need more structured planning, priority support, and collaborators allocated when scope requires it.',
+        'A higher-capacity engagement starting at USD 3,500/mo for clients that need more structured planning, priority support, and collaborators allocated when scope requires it.',
       features: [
         'Larger monthly delivery capacity',
         'Multiple workstreams when needed',
@@ -105,11 +105,11 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
     },
     {
       name: 'Dedicated',
-      price: 'US$ 3.500/mês',
+      price: 'US$ 3.500+/mês',
       badge: 'Mais capacidade',
       audience: 'Para empresas com mais urgência, múltiplas frentes, operação ativa ou produto que exige mais throughput semanal.',
       description:
-        'Engajamento com mais capacidade para clientes que precisam de planejamento mais estruturado, suporte prioritário e colaboradores alocados quando o escopo exigir.',
+        'Engajamento com mais capacidade a partir de US$ 3.500/mês para clientes que precisam de planejamento mais estruturado, suporte prioritário e colaboradores alocados quando o escopo exigir.',
       features: [
         'Maior capacidade mensal de entrega',
         'Múltiplas frentes quando necessário',
@@ -133,7 +133,7 @@ const copyByLocale = {
       'Choose the level of support you need now. No upfront payment, weekly progress, month-to-month engagement, and a fixed rate while your plan remains active.',
     note:
       'Plans define the monthly delivery capacity and operating rhythm. Final scope is always agreed before kickoff so the engagement stays practical.',
-    footer: 'Need a custom scope? We can structure a focused monthly plan around your current app, backlog, team, or release deadline.'
+    footer: 'Need more capacity or a custom scope? We can structure a focused monthly plan around your current app, backlog, team, or release deadline.'
   },
   pt: {
     eyebrow: 'Planos mensais',
@@ -143,7 +143,7 @@ const copyByLocale = {
       'Escolha o nível de suporte que você precisa agora. Sem pagamento inicial, progresso semanal, engajamento mês a mês e valor fixo enquanto o plano permanecer ativo.',
     note:
       'Os planos definem capacidade mensal de entrega e ritmo operacional. O escopo final sempre é combinado antes do kickoff para manter o engajamento prático.',
-    footer: 'Precisa de um escopo diferente? Podemos montar um plano mensal focado no seu app, backlog, time ou prazo de release.'
+    footer: 'Precisa de mais capacidade ou um escopo diferente? Podemos montar um plano mensal focado no seu app, backlog, time ou prazo de release.'
   }
 } as const;
 

@@ -1,6 +1,7 @@
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
+import type { LandingPageKey } from '../content/landingPages';
 import { buildLocalizedPath } from '../content/publicRoutes';
 
 interface FooterProps {
@@ -35,6 +36,23 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
   const copyright = t.footer.bottom.copyright.replace('{year}', currentYear.toString());
   const resolvedCtaLabel = ctaLabel ?? t.footer.cta;
   const localizedLandingHref = (landingPath: string) => buildLocalizedPath(language, landingPath);
+  const serviceLinkKeys: LandingPageKey[] = [
+    'appRescueLaunch',
+    'bornGlobalApps',
+    'customCrmInternalTools',
+    'customSoftwareSmbs',
+    'androidIosSmb',
+    'backendApiIntegrations',
+    'llmRagIntegrations',
+    'appRescueLaunch'
+  ];
+  const serviceLinks = servicesList.map((service, index) => {
+    const landingKey = serviceLinkKeys[index] ?? 'customSoftwareSmbs';
+    return {
+      label: service,
+      href: localizedLandingHref(landingSlugsByLocale[language][landingKey])
+    };
+  });
   const trustLinks = [
     {
       label: language === 'pt' ? 'Por que Tg Apps' : 'Why Tg Apps',
@@ -121,11 +139,14 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
             <div>
               <h3 className="text-lg font-semibold mb-6">{t.footer.servicesHeading}</h3>
               <ul className="space-y-3">
-                {servicesList.map((service) => (
-                  <li key={service}>
-                    <span className="text-gray-400 hover:text-white transition-colors cursor-pointer">
-                      {service}
-                    </span>
+                {serviceLinks.map((service) => (
+                  <li key={service.label}>
+                    <a
+                      href={service.href}
+                      className="text-gray-400 hover:text-white transition-colors"
+                    >
+                      {service.label}
+                    </a>
                   </li>
                 ))}
               </ul>

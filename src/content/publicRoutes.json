@@ -413,6 +413,47 @@
       }
     },
     {
+      "id": "backendApiIntegrations",
+      "page": "landing",
+      "landingKey": "backendApiIntegrations",
+      "localizedPaths": {
+        "en": "/backend-api-development-and-integrations",
+        "pt": "/desenvolvimento-backend-apis-e-integracoes"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/backend-api-development",
+          "/api-development-and-integrations"
+        ],
+        "pt": [
+          "/desenvolvimento-de-backend-e-apis",
+          "/apis-e-integracoes"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "Backend API Development and Integrations | TG Apps",
+          "description": "Backend API development, databases, auth, billing, dashboards, CRM integrations, workflow automation, release infrastructure, documentation, and handoff.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Backend, APIs e integrações sob medida | TG Apps",
+          "description": "Desenvolvimento de backend, APIs, bancos de dados, auth, billing, dashboards, integrações com CRM, automações, infraestrutura, documentação e handoff.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "weekly",
+        "priorities": {
+          "en": 0.9,
+          "pt": 0.86
+        }
+      }
+    },
+    {
       "id": "devAsAService",
       "page": "landing",
       "landingKey": "devAsAService",

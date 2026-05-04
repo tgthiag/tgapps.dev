@@ -71,6 +71,114 @@ const getOutputPath = (pathname) => {
 
 const escapeRegExp = (value) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 
+const escapeHtml = (value) =>
+  String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+
+const serviceRouteIds = [
+  'androidIosSmb',
+  'customCrmInternalTools',
+  'backendApiIntegrations',
+  'appRescueLaunch',
+  'devAsAService',
+  'llmRagIntegrations',
+  'bornGlobalApps',
+  'customSoftwareStartups',
+  'zeroUpfront'
+];
+
+const trustRouteIds = [
+  'whyTgApps',
+  'companyProfile',
+  'dueDiligence',
+  'aiProfile',
+  'appsDirectory',
+  'anyLanguage'
+];
+
+const routeById = new Map(routes.map((route) => [route.id, route]));
+
+const stripBrandFromTitle = (title) =>
+  title
+    .replace(/\s*\|\s*TG Apps.*$/i, '')
+    .replace(/\s*\|\s*Tg Apps.*$/i, '')
+    .trim();
+
+const buildRouteLink = (routeId, locale) => {
+  const targetRoute = routeById.get(routeId);
+  if (!targetRoute || !targetRoute.localizedPaths?.[locale] || !targetRoute.seo?.[locale]) {
+    return '';
+  }
+
+  const href = buildAbsoluteUrl(buildLocalizedPath(locale, targetRoute.localizedPaths[locale]));
+  const label = stripBrandFromTitle(targetRoute.seo[locale].title);
+  return `<li><a href="${escapeHtml(href)}">${escapeHtml(label)}</a></li>`;
+};
+
+const buildLinkList = (routeIds, locale) =>
+  routeIds
+    .map((routeId) => buildRouteLink(routeId, locale))
+    .filter(Boolean)
+    .join('\n');
+
+const buildStaticSeoFallback = (route, locale) => {
+  const localeSeo = route.seo[locale];
+  const serviceLinks = buildLinkList(serviceRouteIds, locale);
+  const trustLinks = buildLinkList(trustRouteIds, locale);
+  const contactHref = locale === 'pt' ? '/pt-br/#contato' : '/#contato';
+  const homeHref = locale === 'pt' ? '/pt-br/' : '/';
+  const title = escapeHtml(stripBrandFromTitle(localeSeo.title));
+  const description = escapeHtml(localeSeo.description);
+  const serviceHeading = locale === 'pt' ? 'Páginas de serviços' : 'Service pages';
+  const trustHeading = locale === 'pt' ? 'Confiança e validação' : 'Trust and validation';
+  const intro =
+    locale === 'pt'
+      ? 'TG Apps constrói e entrega apps mobile, web, CRM, backend, integrações de IA, ferramentas internas e sistemas sob medida.'
+      : 'TG Apps builds and ships mobile apps, web platforms, CRM, backend, AI integrations, internal tools, and custom business systems.';
+  const contactLabel = locale === 'pt' ? 'Fale com a TG Apps' : 'Contact TG Apps';
+  const homeLabel = locale === 'pt' ? 'Página inicial' : 'Home';
+
+  return `<!-- static-seo-fallback:start -->
+      <div class="static-seo-fallback" style="font-family:Arial,sans-serif;max-width:1120px;margin:0 auto;padding:48px 24px;line-height:1.55;color:#0f172a">
+        <header>
+          <a href="${homeHref}">${homeLabel}</a>
+          <h1>${title}</h1>
+          <p>${description}</p>
+          <p>${escapeHtml(intro)}</p>
+          <p><a href="${contactHref}">${contactLabel}</a></p>
+        </header>
+        <nav aria-label="${serviceHeading}">
+          <h2>${serviceHeading}</h2>
+          <ul>
+            ${serviceLinks}
+          </ul>
+        </nav>
+        <nav aria-label="${trustHeading}">
+          <h2>${trustHeading}</h2>
+          <ul>
+            ${trustLinks}
+          </ul>
+        </nav>
+      </div>
+    <!-- static-seo-fallback:end -->`;
+};
+
+const injectStaticSeoFallback = (html, route, locale) => {
+  const fallback = buildStaticSeoFallback(route, locale);
+  const replacement = `<div id="root">\n    ${fallback}\n    </div>`;
+  const pattern = /<div id="root">(?:\s*<!-- static-seo-fallback:start -->[\s\S]*?<!-- static-seo-fallback:end -->\s*)?<\/div>/i;
+
+  if (pattern.test(html)) {
+    return html.replace(pattern, replacement);
+  }
+
+  return html.replace('</body>', `${replacement}\n  </body>`);
+};
+
 const replaceMeta = (html, selector, content) => {
   const selectorPattern = escapeRegExp(selector);
   const pattern = new RegExp(`<meta[^>]*${selectorPattern}[^>]*>`, 'i');
@@ -134,6 +242,7 @@ const writeRouteHtml = (route, locale, routePath) => {
   html = replaceLink(html, 'alternate', buildAbsoluteUrl(englishPath), 'en');
   html = replaceLink(html, 'alternate', buildAbsoluteUrl(portuguesePath), 'pt-br');
   html = replaceLink(html, 'alternate', buildAbsoluteUrl(buildLocalizedPath(defaultLocale, route.localizedPaths[defaultLocale])), 'x-default');
+  html = injectStaticSeoFallback(html, route, locale);
 
   fs.mkdirSync(path.dirname(outputPath), { recursive: true });
   fs.writeFileSync(outputPath, html);

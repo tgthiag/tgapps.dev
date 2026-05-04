@@ -12,6 +12,7 @@ export type LandingPageKey =
   | 'customSoftwareStartups'
   | 'bornGlobalApps'
   | 'customCrmInternalTools'
+  | 'backendApiIntegrations'
   | 'devAsAService'
   | 'monthlyPod'
   | 'zeroUpfront'
@@ -66,6 +67,7 @@ const LANDING_PAGE_KEYS: LandingPageKey[] = [
   'appRescueLaunch',
   'bornGlobalApps',
   'customCrmInternalTools',
+  'backendApiIntegrations',
   'devAsAService',
   'androidIosSmb',
   'llmRagIntegrations',
@@ -83,26 +85,26 @@ const getLandingSlug = (locale: Locale, key: LandingPageKey): string => {
 
 const EN_CURRENT_PRICING: LandingPagePricing = {
   label: 'Monthly software plans',
-  title: 'Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500/mo',
+  title: 'Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500+/mo',
   description:
     'Choose the delivery capacity that fits the current stage. Growth is the most selected plan because it uses intelligent allocation across the highest-priority part of the product each week.',
   highlights: [
     'Starter: focused small scope, fixes, maintenance, controlled product movement, and weekly demand intake meeting.',
     'Growth: weekly demand intake meeting plus intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, and release support.',
-    'Dedicated: more capacity for multiple workstreams, urgent delivery, active operations, and daily coordination meetings when needed.'
+    'Dedicated: starts at USD 3,500/mo for more capacity, multiple workstreams, urgent delivery, active operations, and daily coordination meetings when needed.'
   ],
   note: 'No upfront payment, month-to-month engagement, and the selected plan rate stays fixed while the engagement remains active.'
 };
 
 const PT_CURRENT_PRICING: LandingPagePricing = {
   label: 'Planos mensais de software',
-  title: 'Starter US$ 1.500/mês, Growth US$ 2.000/mês, Dedicated US$ 3.500/mês',
+  title: 'Starter US$ 1.500/mês, Growth US$ 2.000/mês, Dedicated US$ 3.500+/mês',
   description:
     'Escolha a capacidade de entrega que combina com o momento atual. Growth é o plano mais escolhido porque usa alocação inteligente na parte mais prioritária do produto a cada semana.',
   highlights: [
     'Starter: escopo pequeno, correções, manutenção, movimento controlado de produto e reunião semanal para demandas.',
     'Growth: reunião semanal para demandas e alocação inteligente entre mobile, web, backend, CRM, ferramentas internas, integrações e release.',
-    'Dedicated: mais capacidade para múltiplas frentes, urgência, operações ativas e reuniões diárias quando necessário.'
+    'Dedicated: a partir de US$ 3.500/mês para mais capacidade, múltiplas frentes, urgência, operações ativas e reuniões diárias quando necessário.'
   ],
   note: 'Sem pagamento inicial, contrato mês a mês e o valor do plano escolhido permanece fixo enquanto o engajamento estiver ativo.'
 };
@@ -714,6 +716,67 @@ const EN_CONTENT: LandingContentByLocale = {
         'Some companies start by solving their own operational problem and later turn that system into a product for customers, partners, or even competitors in the same vertical. We can help you build with that path in mind from the beginning.'
     }
   },
+  backendApiIntegrations: {
+    key: 'backendApiIntegrations',
+    slug: getLandingSlug('en', 'backendApiIntegrations'),
+    badge: 'Backend, APIs, and integrations',
+    title: 'Backend API development and integrations for apps, CRM, and internal tools',
+    intro:
+      'TG Apps builds the backend layer behind real products and operations: APIs, databases, authentication, billing, dashboards, CRM integrations, workflow automation, release infrastructure, and documentation your team can own.',
+    heroHighlights: [
+      'APIs, databases, auth, billing, notifications, and operational dashboards.',
+      'Integrations with CRM, payments, logistics, analytics, email, AI, and internal workflows.',
+      'Documentation, runbooks, credentials, and handoff planned from the start.'
+    ],
+    ctaLabel: 'Scope my backend',
+    ctaSubject: 'Backend API development and integrations',
+    proofHeading: 'When backend becomes the bottleneck',
+    proofItems: [
+      'The app exists, but data, auth, payments, notifications, reporting, or integrations are blocking real usage.',
+      'The business needs APIs and dashboards that connect mobile, web, CRM, operations, and finance.',
+      'A previous build works in pieces, but deploys, credentials, environments, and documentation are fragile.'
+    ],
+    deliverablesHeading: 'What we can deliver',
+    deliverables: [
+      'REST or GraphQL APIs, databases, auth, admin dashboards, files, notifications, payments, and operational reports.',
+      'Integrations with CRM, logistics, email, analytics, billing, AI workflows, internal tools, and third-party platforms.',
+      'Deployment pipeline, environment setup, monitoring, release checklist, runbooks, documentation, and handoff.'
+    ],
+    fitHeading: 'Best fit',
+    fitItems: [
+      'Founders and growing teams that need a reliable backend behind a mobile app, web platform, CRM, or internal system.',
+      'Companies replacing manual operations with APIs, integrations, dashboards, and automated workflows.',
+      'Teams that need practical infrastructure and handoff instead of undocumented server-side patches.'
+    ],
+    sections: [
+      {
+        title: 'Backend built around the workflow',
+        description:
+          'A good backend is not only endpoints. It is the operational contract between app, dashboard, data, permissions, integrations, and release.',
+        items: [
+          'Map users, roles, data models, statuses, events, notifications, and operational reports before implementation.',
+          'Connect mobile apps, web apps, admin panels, CRM, payment, logistics, and AI workflows through one consistent backend layer.',
+          'Define environments, credentials, access rules, deployment steps, and monitoring before release.'
+        ]
+      },
+      {
+        title: 'Designed for ownership after delivery',
+        description:
+          'The client should not depend on hidden knowledge to keep the backend alive after launch.',
+        items: [
+          'Keep repositories, environment variables, credentials, deployment steps, and runbooks organized during delivery.',
+          'Document API behavior, integrations, background jobs, release steps, and common operational actions.',
+          'Support handoff to an internal team or continue month to month when the product needs ongoing movement.'
+        ]
+      }
+    ],
+    pricing: EN_CURRENT_PRICING,
+    finalNote: {
+      title: 'Most apps need the backend solved before growth',
+      description:
+        'A polished app cannot scale commercially if auth, data, payments, integrations, dashboards, and release operations are unreliable. This is where a practical backend team changes the outcome.'
+    }
+  },
   devAsAService: {
     key: 'devAsAService',
     slug: getLandingSlug('en', 'devAsAService'),
@@ -723,7 +786,7 @@ const EN_CONTENT: LandingContentByLocale = {
       'TG Apps gives founders, startups, and SMB teams a founder-led, team-delivered software development subscription for apps, CRM, internal tools, backend systems, AI integrations, and release support, without hiring a full product team first.',
     heroHighlights: [
       'Founder-led delivery with a compact core team and scope-based collaborators.',
-      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500/mo.',
+      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
       'Zero upfront payment, weekly demos, and one team for product, backend, frontend, mobile, AI, and release.'
     ],
     ctaLabel: 'Schedule a discovery call',
@@ -791,7 +854,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Month-to-month dedicated development team',
     proofHeading: 'How this model works',
     proofItems: [
-      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500/mo.',
+      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
       'Cancel any month with no penalties or hidden transition fees.',
       'Monthly billing, no upfront payment, and runbooks plus handoff docs delivered continuously.'
     ],
@@ -1537,6 +1600,67 @@ const PT_CONTENT: LandingContentByLocale = {
         'Algumas empresas começam resolvendo a própria operação e depois transformam esse sistema em produto para clientes, parceiros ou até concorrentes do mesmo mercado. Podemos construir desde o início considerando esse caminho.'
     }
   },
+  backendApiIntegrations: {
+    key: 'backendApiIntegrations',
+    slug: getLandingSlug('pt', 'backendApiIntegrations'),
+    badge: 'Backend, APIs e integrações',
+    title: 'Desenvolvimento de backend, APIs e integrações para apps, CRM e ferramentas internas',
+    intro:
+      'A TG Apps constrói a camada de backend por trás de produtos e operações reais: APIs, bancos de dados, autenticação, billing, dashboards, integrações com CRM, automações, infraestrutura de release e documentação para seu time assumir.',
+    heroHighlights: [
+      'APIs, bancos, auth, billing, notificações e dashboards operacionais.',
+      'Integrações com CRM, pagamentos, logística, analytics, email, IA e fluxos internos.',
+      'Documentação, runbooks, credenciais e handoff planejados desde o começo.'
+    ],
+    ctaLabel: 'Escopar meu backend',
+    ctaSubject: 'Backend, APIs e integrações',
+    proofHeading: 'Quando o backend vira gargalo',
+    proofItems: [
+      'O app existe, mas dados, auth, pagamentos, notificações, relatórios ou integrações bloqueiam o uso real.',
+      'A empresa precisa de APIs e dashboards conectando mobile, web, CRM, operação e financeiro.',
+      'Uma construção anterior funciona em partes, mas deploys, credenciais, ambientes e documentação estão frágeis.'
+    ],
+    deliverablesHeading: 'O que podemos entregar',
+    deliverables: [
+      'APIs REST ou GraphQL, bancos de dados, autenticação, dashboards admin, arquivos, notificações, pagamentos e relatórios operacionais.',
+      'Integrações com CRM, logística, email, analytics, billing, fluxos de IA, ferramentas internas e plataformas externas.',
+      'Pipeline de deploy, ambientes, monitoramento, checklist de release, runbooks, documentação e handoff.'
+    ],
+    fitHeading: 'Melhor encaixe',
+    fitItems: [
+      'Fundadores e times em crescimento que precisam de backend confiável por trás de app mobile, web, CRM ou sistema interno.',
+      'Empresas substituindo operação manual por APIs, integrações, dashboards e workflows automatizados.',
+      'Times que precisam de infraestrutura prática e handoff, não remendos server-side sem documentação.'
+    ],
+    sections: [
+      {
+        title: 'Backend construído em torno do fluxo',
+        description:
+          'Um bom backend não é só endpoints. Ele é o contrato operacional entre app, dashboard, dados, permissões, integrações e release.',
+        items: [
+          'Mapear usuários, papéis, dados, status, eventos, notificações e relatórios antes da implementação.',
+          'Conectar apps mobile, web apps, painéis admin, CRM, pagamentos, logística e fluxos de IA por uma camada de backend consistente.',
+          'Definir ambientes, credenciais, regras de acesso, deploy e monitoramento antes do lançamento.'
+        ]
+      },
+      {
+        title: 'Projetado para ownership depois da entrega',
+        description:
+          'O cliente não deve depender de conhecimento escondido para manter o backend vivo depois do launch.',
+        items: [
+          'Organizar repositórios, variáveis de ambiente, credenciais, deploy e runbooks durante a entrega.',
+          'Documentar comportamento de APIs, integrações, jobs, release e ações comuns de operação.',
+          'Fazer handoff para time interno ou continuar mês a mês quando o produto precisar seguir evoluindo.'
+        ]
+      }
+    ],
+    pricing: PT_CURRENT_PRICING,
+    finalNote: {
+      title: 'A maioria dos apps precisa resolver o backend antes de crescer',
+      description:
+        'Um app bonito não escala comercialmente se auth, dados, pagamentos, integrações, dashboards e release ops não são confiáveis. É aqui que um time prático de backend muda o resultado.'
+    }
+  },
   devAsAService: {
     key: 'devAsAService',
     slug: getLandingSlug('pt', 'devAsAService'),
@@ -1546,7 +1670,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'A TG Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de release, sem exigir que a empresa contrate um time completo antes.',
     heroHighlights: [
       'Entrega liderada pelo fundador com núcleo enxuto e colaboradores por escopo.',
-      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500/mês.',
+      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
       'Sem pagamento antecipado, demos semanais e um time para produto, backend, frontend, mobile, IA e release.'
     ],
     ctaLabel: 'Agendar discovery call',
@@ -1614,7 +1738,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Time mensal de desenvolvimento',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
-      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500/mês.',
+      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
       'Cancelamento em qualquer mês sem multa ou taxa surpresa.',
       'Cobrança mensal, sem adiantamento, e runbooks com handoff entregues continuamente.'
     ],

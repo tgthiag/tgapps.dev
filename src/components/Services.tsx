@@ -9,7 +9,7 @@ const Services = () => {
     landingSlugsByLocale[language].androidIosSmb,
     landingSlugsByLocale[language].customCrmInternalTools,
     landingSlugsByLocale[language].appRescueLaunch,
-    undefined,
+    landingSlugsByLocale[language].backendApiIntegrations,
     landingSlugsByLocale[language].llmRagIntegrations,
     landingSlugsByLocale[language].bornGlobalApps
   ];
