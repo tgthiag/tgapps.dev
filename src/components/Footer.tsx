@@ -3,6 +3,7 @@ import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
 import type { LandingPageKey } from '../content/landingPages';
 import { buildLocalizedPath } from '../content/publicRoutes';
+import { trackLeadContact } from '../utils/analytics';
 
 interface FooterProps {
   variant?: 'home' | 'landing';
@@ -160,7 +161,11 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
-                  <a href={`mailto:${contactInfo.emailLabel}`} className="text-gray-400 hover:text-white transition-colors">
+                  <a
+                    href={`mailto:${contactInfo.emailLabel}`}
+                    onClick={() => trackLeadContact('email', 'footer_email')}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     {contactInfo.emailLabel}
                   </a>
                 </div>
