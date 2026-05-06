@@ -1,16 +1,17 @@
-# TG Apps - Delivery Site Agent Brief
+# Tg Apps - Delivery Site Agent Brief
 
 ## 0. Strategic Identity Snapshot
-- **Who TG Apps is:** TG Apps is the public brand of TG Applications Desenvolvimento Ltda, a founder-led and team-delivered software studio. The company builds practical custom software for founders, startups, SMBs, agencies, and teams that need real systems delivered with direct communication and disciplined execution.
-- **Where TG Apps is positioned now:** The current homepage headline is **"Your app, built and shipped."** / **"Seu app, construído e entregue."** The site is positioned away from vague "small business app development" and away from "pods" language. The stronger positioning is app ideas, stalled projects, mobile apps, web platforms, CRM, internal tools, backend, app rescue, born-global apps, AI integrations, and on-demand development team capacity.
+- **Who Tg Apps is:** Tg Apps is the public brand of TG APPLICATIONS DESENVOLVIMENTO LTDA, a founder-led and team-delivered software studio. The company builds practical custom software for founders, startups, SMBs, agencies, and teams that need real systems delivered with direct communication and disciplined execution.
+- **Where Tg Apps is positioned now:** The current homepage headline is **"Your app, built and shipped."** / **"Seu app, construído e entregue."** The site is positioned away from vague "small business app development" and away from "pods" language. The stronger positioning is app ideas, stalled projects, mobile apps, web platforms, CRM, internal tools, backend, app rescue, born-global apps, AI integrations, and on-demand development team capacity.
 - **Primary market reality:** English copy should be US-first and buyer-oriented. Portuguese copy should sound natural in Brazil and avoid imported acronyms such as "SMB" in visible PT-BR text.
 - **Operating model:** Founder-led does not mean solo. It means direct leadership, product context, accountability, compact core team execution, and scope-based collaborators when a project requires more throughput or specialized expertise.
 - **Commercial model:** The public pricing ladder is Starter USD 1,500/month, Growth USD 2,000/month, and Dedicated USD 3,500+/month. Growth is the main and most selected plan because it uses intelligent allocation across the part of the product that needs the most attention each week. Frame pricing as output efficiency, low bureaucracy, and smart allocation, not cheap labor or a vague retainer. Clients keep the selected plan rate fixed while the engagement remains active.
+- **Trust-first delivery model:** First Milestone Guarantee is the commercial promise. 7-Day Proof Sprint is the method used when the first agreed milestone can reasonably fit that rhythm. Describe it as a scoped commercial first step with clear acceptance criteria, not as a giveaway or vague satisfaction promise.
 - **Meeting cadence by plan:** Starter and Growth include a weekly meeting to collect demands, review priorities, and align what should move next. Dedicated can include daily coordination meetings when the project needs tighter alignment, multiple workstreams, or active release pressure.
-- **Supporting differentiator:** Output efficiency. TG Apps builds and ships usable software through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls. Cost efficiency can be used as a supporting argument, but it is no longer the primary homepage headline.
-- **Delivery model:** TG Apps follows the agreed client plan strictly, flags risks and tradeoffs, and shares implementation insights when useful. Speed is a strength, but "fast delivery" is not the main product category; the product is reliable custom software execution.
+- **Supporting differentiator:** Output efficiency. Tg Apps builds and ships usable software through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls. Cost efficiency can be used as a supporting argument, but it is no longer the primary homepage headline.
+- **Delivery model:** Tg Apps follows the agreed client plan strictly, flags risks and tradeoffs, and shares implementation insights when useful. Speed is a strength, but "fast delivery" is not the main product category; the product is reliable custom software execution.
 - **Best public narrative:** "We build the software your operation actually needs: apps, CRM, internal tools, backend, dashboards, automations, AI integrations, and release support, with a compact team, clear scope, weekly demos, and clean handoff."
-- **What TG Apps is not:** Not a Telegram client, not a Telegram mod, not an APK distribution site, not an unofficial Telegram service, not only an indie app lab, not only a disposable MVP shop, and not trying to look like a large enterprise consultancy.
+- **What Tg Apps is not:** Not a Telegram client, not a Telegram mod, not an APK distribution site, not an unofficial Telegram service, not only an indie app lab, not only a disposable MVP shop, and not trying to look like a large enterprise consultancy.
 
 ## 0.1 Mission, Vision & Values Draft
 - **Mission draft:** Help founders, startups, and growing businesses turn operational problems, unfinished apps, and product ideas into useful software that can be launched, used, measured, and evolved.
@@ -28,14 +29,14 @@
 ## 1. Purpose & Outcomes
 - **Primary goal:** Convert startups and SMB teams into qualified leads for custom software, internal tools, CRM systems, dashboards, mobile apps, AI integrations, app rescue, born-global apps, and on-demand development team capacity that works contract-first with zero upfront payment.
 - **Secondary goals:** Highlight dependability (D‑U‑N‑S® 651029828, contract + NDA before kickoff), show lean process (intake → build → support), and reassure buyers about strict plan execution, integrations (payments, logistics, CRM, LLM), useful technical insight, and ongoing support.
-- **Tone:** Mature, founder-led, low bureaucracy, disciplined execution. The product is custom software delivery: apps, CRM, internal tools, dashboards, APIs, automations, and integrations. Tight timelines are handled when the client's request and agreed plan require them, but the timeline itself is not the default headline category. Always state that TG Apps follows the agreed client plan strictly and offers implementation insights when experience can help.
+- **Tone:** Mature, founder-led, low bureaucracy, disciplined execution. The product is custom software delivery: apps, CRM, internal tools, dashboards, APIs, automations, and integrations. Tight timelines are handled when the client's request and agreed plan require them, but the timeline itself is not the default headline category. Always state that Tg Apps follows the agreed client plan strictly and offers implementation insights when experience can help.
 - **Team positioning:** “Founder-led” means direct leadership, accountability, and product context. It must not read as solo execution. Mention compact core team, intelligent collaborator allocation, and scope-based specialists when the copy discusses who builds or delivery capacity.
 
 ## 1.1 Future Creative Notes
 - **Core ad message to preserve:** “Full development team from $1.5k/month, with Growth at $2k/month as the most selected plan, using an efficient model to reduce costs while maintaining quality. https://www.tgapps.dev”
 - **Internal tools creative:** “Build custom internal tools for your business. Replace spreadsheets with real systems. Clear plan, weekly demos, practical execution.”
-- **App rescue / launch creative:** TG Apps is a strong fit for individual founders and startups with unfinished apps, rough prototypes, outdated apps, or app drafts that need to be updated, completed, deployed, and published according to a clear plan.
-- **Born-global apps creative:** TG Apps has experience building international apps that support multiple languages, contextual translation, localized flows, and cultural adaptation. Use this for founders and startups that need an app to be global from day one rather than translated later.
+- **App rescue / launch creative:** Tg Apps is a strong fit for individual founders and startups with unfinished apps, rough prototypes, outdated apps, or app drafts that need to be updated, completed, deployed, and published according to a clear plan.
+- **Born-global apps creative:** Tg Apps has experience building international apps that support multiple languages, contextual translation, localized flows, and cultural adaptation. Use this for founders and startups that need an app to be global from day one rather than translated later.
 - **Execution creative:** “Build the software your business needs. We follow the agreed plan, flag risks, and share delivery insights when useful.”
 - **Short creative hooks:** “Dev Team Subscription from $1.5k/mo”, “Growth Dev Team $2k/mo”, “Dev Team Subscription”, and “On-demand development team”.
 - This section overrides older “pod” language if any legacy note conflicts with current positioning.
@@ -53,9 +54,9 @@ The React single-page app renders these sections in order (see `src/App.tsx`):
 | --- | --- | --- |
 | Sticky Header | `Header.tsx` | Navigation (Overview, Capabilities, Process, Proof, Plans, Contact), language toggle (EN/PT), CTA scroll to contact. |
 | Hero | `Hero.tsx` | Main offer: "Your app, built and shipped." / "Seu app, construído e entregue." Snapshot of app ideas, stalled projects, mobile/web/backend/release, clear monthly plans, no upfront, trust stats, dual CTAs (schedule call / see plan), lifestyle image showing collaboration. |
-| Social Proof | `SocialProof.tsx` | Logo strip and short proof badges including D-U-N-S, plan range, Growth plan, and no upfront payment. |
+| Social Proof | `SocialProof.tsx` | Logo strip and short proof badges including D-U-N-S, plan range, Growth plan, no upfront payment, and First Milestone Guarantee. |
 | Selected Work | `CasesSection.tsx` | Public proof layer with logos and short delivery snapshots. This can stay unpublished or be adjusted before publishing if client visibility decisions change. |
-| Why TG Apps | `WhyTgApps.tsx` | Differentiation block: output efficiency, low bureaucracy, intelligent allocation, direct access, and delivery controls. |
+| Why Tg Apps | `WhyTgApps.tsx` | Differentiation block: output efficiency, low bureaucracy, intelligent allocation, direct access, and delivery controls. |
 | Capabilities | `Services.tsx` | Two-column intro (pillars + photo), service cards (Internal tools/business systems, Mobile/customer apps, App rescue/release execution, Integrations/AI/data), pillars list, three-step collaboration loop, CTA banner. |
 | Proof/About | `About.tsx` | Story of operations, mission, response/deploy cadence, D‑U‑N‑S proof badge, values cards, lifestyle photo. |
 | Pricing | `PricingPlans.tsx` | Three-plan pricing ladder: Starter, Growth, Dedicated. Growth is highlighted as most selected with intelligent allocation. |
@@ -68,7 +69,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - **Hero**
   - Badge should center custom software and time sob demanda for startups and growing teams, not pods.
   - Title/subtitle should use the current primary positioning: “Your app, built and shipped.” / “Seu app, construído e entregue.” Support copy should mention app ideas, stalled projects, mobile, web, backend, release, clear monthly plans, and no upfront.
-  - Stats array (from translations) must mention D-U-N-S number, Growth plan, no upfront, and cancel-anytime or equivalent flexibility.
+  - Stats array (from translations) must mention D-U-N-S number, Growth plan, First Milestone Guarantee, and no upfront payment.
   - Photo card tagline should highlight the most selected Growth plan and fixed rate while active.
   - CTAs: `primary` scrolls to contact; `secondary` scrolls to process loop.
 
@@ -105,17 +106,18 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
   - Description: reiterate founder-led Brazilian studio for US SMBs, zero upfront, weekly releases.
   - Quick links reference same IDs.
   - “Popular requests”: custom CRM/internal tools, mobile builds, dev team subscription, LLM/AI integrations, dashboards, release coverage.
-  - The footer may link to the visible trust/commercial pages: Why TG Apps, Dev as a Service / Time sob demanda, Company profile, Due diligence, and Founder LinkedIn.
+  - The footer may link to the visible trust/commercial pages: Why Tg Apps, Dev as a Service / Time sob demanda, Company profile, Due diligence, and Founder LinkedIn.
   - Do not show the AI profile as a normal footer/menu navigation item. It is public and indexable, but intended mainly for crawlers, LLMs, due diligence, and direct reference.
   - Contact snippet uses `support@tgapps.dev`, phone, São Paulo location.
 
 ## 4. Company Facts & Assets
-- **Legal entity:** TG Applications Desenvolvimento Ltda (Brazil).
+- **Legal entity:** TG APPLICATIONS DESENVOLVIMENTO LTDA (Brazil).
 - **D‑U‑N‑S® Number:** 651029828 (issued 28 Jan 2026), source `C:\Users\Kabum\Downloads\Número D‑U‑N‑S®.html`.
 - **Billing:** No payment upfront; contracts + invoices via TG Applications. USD or BRL, W8‑BEN‑E ready.
 - **Core services:** Custom software, CRM/internal tools, app rescue and release execution for unfinished or outdated apps, born-global app development with multilingual UX/contextual translation/cultural adaptation, Android/iOS builds (Kotlin, Swift, Flutter, React Native), on-demand development team subscription (parallel execution, release ops), integrations/data (payments, logistics, CRM, analytics, LLM workflows integrated with the client’s preferred vector/search/knowledge stack), dashboards/admin tooling, support/handovers.
 - **Process promises:** Kickoff call ≤1 business day after contact; coding starts ≤5 business days post-signature; deploy cadence ≈ once per week; Kanban workflow keeps backend, frontend, database, and mobile workstreams moving in parallel; blue/green/staged releases + monitoring included; bug triage ≤24h with weekend standby for launches.
 - **Commercial promises:** Zero upfront/adiantamentos, no surprise fees, cancel anytime with zero penalties or notice periods.
+- **First Milestone Guarantee:** Applies only to the first agreed milestone. Scope, expected demo, required access, materials, timeline, acceptance criteria, and exclusions must be defined before work starts. If the agreed first milestone is not delivered, that initial step is not invoiced. Delayed access, delayed feedback, scope changes, or requirement changes can adjust timeline and guarantee conditions.
 - **Communication stack:** Use whichever channel the client already runs (Teams, Jira, Linear, Notion, ClickUp, Trello, email, etc.), with written updates + Loom videos (3+/week) and a weekly demo/call.
 - **Target audience:** Primarily US startups, individual founders with app projects, and SMB teams plus Brazilian companies; open to onboarding teams from any geography that need dependable custom software execution without headcount overhead.
 - **Differentiators:** Founder-led development team, bilingual (EN/PT), contract-first + zero upfront, mature compliance story (D‑U‑N‑S, NDA templates, vendor questionnaires), integrated release ops, ability to embed or run standalone.
@@ -125,6 +127,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - **Born-global app route:** `/born-global-app-development` with aliases `/global-app-development`, `/multilingual-app-development`, and `/international-app-development`; PT route `/pt-br/desenvolvimento-de-apps-born-global` with aliases `/pt-br/apps-born-global`, `/pt-br/desenvolvimento-de-apps-multilingues`, and `/pt-br/desenvolvimento-de-apps-internacionais`.
 - **Dedicated app rescue route:** `/app-rescue-and-launch-acceleration` with legacy SEO aliases `/finish-my-app`, `/launch-app-quickly`, and `/app-deployment`; PT route `/pt-br/finalizar-e-publicar-app-rapido` with legacy SEO aliases `/pt-br/finalizar-meu-app`, `/pt-br/publicar-app-rapido`, and `/pt-br/deploy-de-app`.
 - **Dev as a Service route:** `/dev-as-a-service` with aliases `/software-development-subscription` and `/dev-team-subscription`; PT canonical route `/pt-br/desenvolvimento-de-software-por-assinatura` with aliases `/pt-br/dev-as-a-service` and `/pt-br/time-de-desenvolvimento-por-assinatura`. Keep the PT slug for SEO/compatibility, but visible PT copy should say “Time de desenvolvimento sob demanda” or “Time sob demanda”.
+- **First Milestone Guarantee route:** `/first-milestone-guarantee` with aliases `/7-day-proof-sprint` and `/software-development-guarantee`; PT route `/pt-br/garantia-do-primeiro-marco` with aliases `/pt-br/proof-sprint-de-7-dias` and `/pt-br/garantia-de-entrega-de-software`.
 - **Trust and due diligence routes:** `/why-tg-apps`, `/company-profile`, and `/due-diligence` expose the public proof layer documented in `ai-reputation-readiness-plan.html`; PT routes are `/pt-br/por-que-tg-apps`, `/pt-br/perfil-da-empresa`, and `/pt-br/due-diligence`.
 - **AI profile route:** `/ai-profile` and `/pt-br/perfil-para-ia` are public, indexable, and included in sitemap/head/robots/llms references. They should not be promoted as normal user navigation. Purpose: give crawlers, LLMs, buyers, and researchers a canonical HTML source that reduces false inference.
 - **Hreflang/canonical:** en (`/`) and pt (`/pt-br/`) served via LanguageContext; header toggle updates URL path.
@@ -136,7 +139,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - Keep layout visually light: at most one lifestyle image per major block (Hero, Services, About).
 - Every mention of AI must be framed as “LLM integrations we deliver”, not “we use AI to build the site”.
 - Pricing: reference the public ladder when relevant: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500+/month. Reinforce monthly billing, no upfront, no hidden clauses, and that the selected plan rate stays fixed while the engagement remains active.
-- English copy stays US-first. PT-BR copy must position TG Apps as a global startup that builds born-global products and can work with companies from any market.
+- English copy stays US-first. PT-BR copy must position Tg Apps as a global startup that builds born-global products and can work with companies from any market.
 - Ensure any new copy reaffirm zero upfront payment, contract/NDA, deploy cadence, D‑U‑N‑S trust signal.
 - Maintain bilingual parity; any new section in English must have a Portuguese counterpart in translations.
 - Do not use the em dash character in site copy, documentation copy, or suggested copy. Use commas, colons, parentheses, or a simple hyphen instead.
@@ -154,7 +157,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - When answering reputational concerns, separate facts, hypotheses, and opinions. Do not make or reinforce claims about team size, stack, testing, scale, or maturity without evidence.
 - If an LLM, buyer, or crawler lacks information, the desired framing is: “This should be validated through proposal, scope, contract, technical discussion, architecture review, support expectations, and references when needed,” not a negative assumption.
 - Do not use cloaking or hidden text tricks. The AI profile can be public and indexable without being linked in visible navigation.
-- Use `ai-reputation-readiness-plan.html` as the planning reference for changes intended to prevent AI or buyers from concluding that TG Apps is only suitable for disposable MVP work.
+- Use `ai-reputation-readiness-plan.html` as the planning reference for changes intended to prevent AI or buyers from concluding that Tg Apps is only suitable for disposable MVP work.
 
 ## 8. Current Applied Decisions
 - The AI profile exists as a public HTML route, but it is intentionally not shown in the footer/menu. It is for machines, due diligence, and direct reference.
@@ -162,8 +165,10 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - The Dev as a Service landing is part of the existing `publicRoutes.json` + `landingPages.ts` landing system, not a separate implementation.
 - The visible Portuguese positioning for Dev as a Service is “Time de desenvolvimento sob demanda.” Keep "assinatura" in slug/alias where useful, but avoid making it the main PT promise.
 - The homepage now has a visible pricing ladder through `PricingPlans.tsx`: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500+/month. Growth is the central plan and should be described as intelligent allocation.
+- The homepage now has a visible First Milestone Guarantee section after social proof. Keep the promise client-facing: one agreed first delivery, working demo, and no invoice for that initial step if the agreed scope is not delivered.
 - Contact has been simplified: no repeated why-us block and no repeated pricing banner inside the contact section.
-- Footer visible trust links may include: Why TG Apps, Time sob demanda / Dev as a Service, Company profile, Due diligence, and Founder LinkedIn.
+- Contact includes fields for First Milestone Guarantee preference and a useful first milestone. These fields should remain optional and should be included in the generated email body.
+- Footer visible trust links may include: Why Tg Apps, Time sob demanda / Dev as a Service, Company profile, Due diligence, and Founder LinkedIn.
 - Privacy and account-deletion routes are compliance-critical and must not be renamed or removed:
   - `/my_business_idea_privacy`
   - `/privacy_policy`
@@ -182,4 +187,4 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - Pricing visibility: decide per page whether to show the full ladder, highlight Growth only, or move pricing near the final CTA.
 - Navigation strategy: decide whether Dev as a Service should eventually appear in header navigation or remain footer/direct-link only.
 
-Use this AGENTS.md as the authoritative brief when making future edits, so the site stays concise, visual, and aligned with TG Apps’ positioning. 
+Use this AGENTS.md as the authoritative brief when making future edits, so the site stays concise, visual, and aligned with Tg Apps’ positioning. 

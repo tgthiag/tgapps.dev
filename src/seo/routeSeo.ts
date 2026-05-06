@@ -35,11 +35,11 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
 
   if (LEGAL_ROUTES.has(routePath)) {
     return {
-      title: locale === 'pt' ? 'Documento legal | TG Apps' : 'Legal document | TG Apps',
+      title: locale === 'pt' ? 'Documento legal | Tg Apps' : 'Legal document | Tg Apps',
       description:
         locale === 'pt'
-          ? 'Documento legal hospedado pela TG Apps para compliance de aplicativo.'
-          : 'Legal document hosted by TG Apps for app compliance.',
+          ? 'Documento legal hospedado pela Tg Apps para compliance de aplicativo.'
+          : 'Legal document hosted by Tg Apps for app compliance.',
       image: 'https://tgapps.dev/og-home.png',
       robots: 'noindex,follow',
       localizedRoutePaths: { en: routePath, pt: routePath }
@@ -49,12 +49,12 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
   return {
     title:
       locale === 'pt'
-        ? 'Seu App, Construído e Entregue | TG Apps'
-        : 'Your App, Built and Shipped | TG Apps',
+        ? 'Seu App, Construído e Entregue | Tg Apps'
+        : 'Your App, Built and Shipped | Tg Apps',
     description:
       locale === 'pt'
-        ? 'Tem uma ideia ou um projeto parado? A TG Apps constrói e entrega apps mobile, web, CRM, backend e IA para fundadores e times em crescimento. Planos desde US$ 1.500/mês, sem pagamento inicial.'
-        : 'Got an idea or a stalled project? TG Apps builds and ships mobile apps, web platforms, CRM, backend, and AI integrations. Plans from USD 1,500/mo, no upfront payment.',
+        ? 'Tem uma ideia ou app parado? A Tg Apps constrói mobile, web, CRM, backend e IA com demonstrações semanais, sem pagamento inicial e Garantia da Primeira Entrega.'
+        : 'Got an idea or a stalled app? Tg Apps builds and ships mobile, web, CRM, backend, and AI with no upfront payment, weekly demos, and a First Milestone Guarantee.',
     image: 'https://tgapps.dev/og-home.png',
     robots: 'index,follow',
     localizedRoutePaths: { en: '/', pt: '/' }

@@ -20,7 +20,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
     content.key === 'aiProfile';
   const ctaBody = isTrustPage
     ? locale === 'pt'
-      ? 'Perguntas de verificação:%0D%0A- Empresa / procurement:%0D%0A- Contrato / NDA:%0D%0A- Escopo ou projeto em avaliação:%0D%0A- Documentos necessários:%0D%0A'
+      ? 'Perguntas de verificação:%0D%0A- Empresa / compras:%0D%0A- Contrato / NDA:%0D%0A- Escopo ou projeto em avaliação:%0D%0A- Documentos necessários:%0D%0A'
       : 'Verification questions:%0D%0A- Company / procurement:%0D%0A- Contract / NDA:%0D%0A- Project or scope under evaluation:%0D%0A- Required documents:%0D%0A'
     : locale === 'pt'
       ? 'Contexto do projeto:%0D%0A- Processo atual:%0D%0A- Sistema ou planilha que usamos hoje:%0D%0A- Prazo:%0D%0A- Time interno:%0D%0A- Integrações desejadas:%0D%0A'
@@ -37,7 +37,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
       : 'Ready to map your system?';
   const finalCtaDescription = isTrustPage
     ? locale === 'pt'
-      ? 'Envie suas perguntas de due diligence, procurement, contrato, suporte ou handoff e respondemos com o contexto correto.'
+      ? 'Envie suas perguntas de due diligence, compras, contrato, suporte ou transferência técnica e respondemos com o contexto correto.'
       : 'Send your due diligence, procurement, contract, support, or handoff questions and we will reply with the right context.'
     : locale === 'pt'
       ? 'Envie o contexto atual e respondemos com uma leitura honesta de escopo, riscos, integrações e próximos passos.'
@@ -57,6 +57,20 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
     trackLeadContact(method, `landing_${content.key}`);
     closeContactOptions();
   };
+  const faqStructuredData = content.faq
+    ? JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: content.faq.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer
+          }
+        }))
+      })
+    : null;
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-950">
@@ -186,6 +200,29 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
           </section>
         ))}
 
+        {content.faq && (
+          <section className="bg-white px-4 py-20 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-5xl">
+              <div className="max-w-3xl">
+                <p className="inline-flex rounded-full bg-blue-50 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-blue-700 ring-1 ring-blue-100">
+                  FAQ
+                </p>
+                <h2 className="mt-3 text-3xl font-bold text-slate-950">
+                  {locale === 'pt' ? 'Perguntas frequentes' : 'Frequently asked questions'}
+                </h2>
+              </div>
+              <div className="mt-8 divide-y divide-slate-200 rounded-[2rem] border border-slate-200 bg-slate-50/60 shadow-[0_18px_60px_rgba(15,23,42,0.07)]">
+                {content.faq.map((item) => (
+                  <article key={item.question} className="p-6 sm:p-8">
+                    <h3 className="text-lg font-semibold text-slate-950">{item.question}</h3>
+                    <p className="mt-3 text-sm leading-7 text-slate-600">{item.answer}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         {content.pricing && (
           <section className="relative overflow-hidden bg-slate-950 py-20 text-white">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_10%,rgba(59,130,246,0.22),transparent_30%),radial-gradient(circle_at_82%_64%,rgba(16,185,129,0.16),transparent_28%)]"></div>
@@ -300,6 +337,13 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
             </div>
           </div>
         </div>
+      )}
+
+      {faqStructuredData && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: faqStructuredData }}
+        />
       )}
 
       <Footer variant="landing" ctaHref={ctaHref} ctaLabel={content.ctaLabel} onCtaClick={openContactOptions} />

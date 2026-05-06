@@ -26,6 +26,15 @@ export interface TranslationSchema {
     heading: string;
     description: string;
   };
+  firstMilestone: {
+    badge: string;
+    heading: string;
+    description: string;
+    cards: {
+      title: string;
+      description: string;
+    }[];
+  };
   services: {
     badge: string;
     headingLine1: string;
@@ -117,6 +126,10 @@ export interface TranslationSchema {
       phonePlaceholder: string;
       serviceLabel: string;
       servicePlaceholder: string;
+      guaranteeLabel: string;
+      guaranteePlaceholder: string;
+      firstMilestoneLabel: string;
+      firstMilestonePlaceholder: string;
       messageLabel: string;
       messagePlaceholder: string;
       submit: string;
@@ -124,6 +137,7 @@ export interface TranslationSchema {
       policy: string;
     };
     services: string[];
+    guaranteeOptions: string[];
   };
   footer: {
     description: string;
@@ -167,20 +181,40 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'and shipped.',
       titleLine2: '',
       subtitle:
-        'Got an idea or a stalled project? One team handles everything: mobile, web, backend, and release, through a clear monthly plan with no upfront payment.',
+        'Got an idea, a stalled app, or an internal workflow that needs software? Tg Apps builds and ships mobile, web, CRM, backend, and AI with weekly demos, no upfront payment, and a First Milestone Guarantee.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth plan: USD 2,000/mo' },
-        { label: 'Zero upfront' },
-        { label: 'Cancel anytime' }
+        { label: 'First milestone guarantee' },
+        { label: 'Zero upfront' }
       ],
-      primaryCta: 'Schedule a discovery call',
-      secondaryCta: 'Review the 3-step plan'
+      primaryCta: 'Start your first milestone',
+      secondaryCta: 'See how it works'
     },
     socialProof: {
       heading: 'Trusted by founders and operators',
       description:
         'A few brands and operators we support across custom software delivery, product execution, and ongoing operations.'
+    },
+    firstMilestone: {
+      badge: 'Real first delivery',
+      heading: 'See working delivery before moving forward',
+      description:
+        'We align one small, objective first delivery, build it, and show it working. If the agreed scope is not delivered, that step is not invoiced.',
+      cards: [
+        {
+          title: 'First Milestone Guarantee',
+          description: 'Evaluate real delivery before continuing.'
+        },
+        {
+          title: '7-Day Proof Sprint',
+          description: 'A small, practical first delivery designed to be demonstrated within 7 business days.'
+        },
+        {
+          title: 'Month-to-month after that',
+          description: 'If it makes sense, continue month to month. If not, pause or stop without long lock-in.'
+        }
+      ]
     },
     services: {
       badge: 'Custom software capabilities',
@@ -204,30 +238,30 @@ export const translations: Record<Locale, TranslationSchema> = {
       processLabel: 'Loop',
       process: [
         {
-          title: 'Intake and briefing',
-          description: '48-hour intake with sanitized references, backlog templates, and access checklist.',
+          title: 'Scope the first milestone',
+          description: 'Start with one useful deliverable, clear acceptance criteria, and the access needed to build it.',
           highlights: [
             'Free 30-45 minute call within one business day.',
             'Statement of work plus D-U-N-S contract signed digitally.',
-            'Share Play Console, App Store, or internal tools, or let us set them up.'
+            'First milestone scope, demo criteria, required access, and timeline agreed before kickoff.'
           ]
         },
         {
-          title: 'Build and release',
-          description: 'Design, engineering, and release management run together with weekly progress demos while you direct priorities.',
+          title: 'Build the proof sprint',
+          description: 'Design, engineering, and release management run together while you see progress early.',
           highlights: [
-            'Weekly Kanban notes in your preferred channel plus a recorded Loom or full video call with the squad every week.',
+            'First milestone usually designed for a 7 business day proof sprint when the scope allows it.',
             'Blue or green releases, staged rollouts, and monitoring included.',
             'Work inside your repos or ours with clean documentation.'
           ]
         },
         {
-          title: 'Support and handoff',
-          description: 'We stay on-call for incidents, training, and follow-up scope so nothing is left hanging.',
+          title: 'Demo, continue, or hand off',
+          description: 'You judge a working demo, then continue month to month, pause, stop, or hand off the work.',
           highlights: [
             'Runbooks, dashboards, and credentials handed over.',
             'Bug triage within 24 hours with weekend standby for launches.',
-            'Month-to-month extensions or clean exit without penalties.'
+            'If the agreed scope is not delivered, that step is not invoiced.'
           ]
         }
       ],
@@ -380,7 +414,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       whatsappCta: {
         title: 'Prefer WhatsApp?',
-        description: 'Open a direct chat with TG Apps and tell us what you want to build.'
+        description: 'Open a direct chat with Tg Apps and tell us what you want to build.'
       },
       formHeading: 'Share a few details',
       formDescription: 'We only ask for what we need to reply with a plan and calendar.',
@@ -404,6 +438,10 @@ export const translations: Record<Locale, TranslationSchema> = {
         phonePlaceholder: '+1 (555) 000-0000',
         serviceLabel: 'What do you need help with?',
         servicePlaceholder: 'Select an option',
+        guaranteeLabel: 'How would you like to start?',
+        guaranteePlaceholder: 'Select a starting point',
+        firstMilestoneLabel: 'Useful first milestone',
+        firstMilestonePlaceholder: 'Example: login flow, release blocker, dashboard screen, API endpoint, app store build, or rescue milestone.',
         messageLabel: 'Notes',
         messagePlaceholder: 'Tell us about platforms, deadlines, or blockers.',
         submit: 'Start the conversation',
@@ -418,11 +456,16 @@ export const translations: Record<Locale, TranslationSchema> = {
         'AI / LLM integration',
         'Born-global app',
         'Product discovery'
+      ],
+      guaranteeOptions: [
+        'I want to start with a First Milestone Guarantee',
+        'I want to discuss the full monthly plan',
+        'I am not sure yet'
       ]
     },
     footer: {
       description:
-        'TG Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. Plans from USD 1,500/mo, Growth at USD 2,000/mo, no upfront.',
+        'Tg Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. Plans from USD 1,500/mo, no upfront, First Milestone Guarantee.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
@@ -451,7 +494,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       },
       cta: 'Schedule a discovery call',
       bottom: {
-        copyright: '© {year} TG Applications Desenvolvimento Ltda. All rights reserved.',
+        copyright: '© {year} TG APPLICATIONS DESENVOLVIMENTO LTDA. All rights reserved.',
         privacy: 'Privacy',
         terms: 'Terms'
       }
@@ -477,31 +520,51 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'e entregue.',
       titleLine2: '',
       subtitle:
-        'Tem uma ideia ou um projeto parado? Um time cuida de tudo: mobile, web, backend e lançamento, com plano mensal claro e sem pagamento inicial.',
+        'Tem uma ideia, um app parado ou uma operação que precisa de software? A Tg Apps constrói mobile, web, CRM, backend e IA com demonstrações semanais, sem pagamento inicial e Garantia da Primeira Entrega.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
-        { label: 'Plano Growth: US$ 2.000/mês' },
-        { label: 'Sem adiantamento' },
-        { label: 'Cancele quando quiser' }
+        { label: 'Growth US$ 2.000/mês' },
+        { label: 'Garantia da primeira entrega' },
+        { label: 'Sem pagamento inicial' }
       ],
-      primaryCta: 'Agende uma conversa',
-      secondaryCta: 'Conheça o plano em 3 etapas'
+      primaryCta: 'Começar pela primeira entrega',
+      secondaryCta: 'Ver como funciona'
     },
     socialProof: {
       heading: 'Confiança de fundadores e operadores',
       description:
         'Algumas marcas e operações que apoiamos em software sob medida, execução de produto e operação contínua.'
     },
+    firstMilestone: {
+      badge: 'Primeira entrega real',
+      heading: 'Veja uma entrega funcionando antes de avançar',
+      description:
+        'Alinhamos uma primeira entrega pequena e objetiva, construímos e mostramos funcionando. Se o combinado não for entregue, essa etapa não é cobrada.',
+      cards: [
+        {
+          title: 'Garantia da Primeira Entrega',
+          description: 'Você avalia uma entrega real antes de continuar.'
+        },
+        {
+          title: 'Sprint inicial de 7 dias',
+          description: 'Uma primeira entrega pequena, prática e demonstrável, pensada para até 7 dias úteis quando o escopo permitir.'
+        },
+        {
+          title: 'Depois, mês a mês',
+          description: 'Se fizer sentido, seguimos mês a mês. Se não fizer, você pode pausar ou encerrar sem multa.'
+        }
+      ]
+    },
       services: {
       badge: 'Capacidades de software sob medida',
       headingLine1: 'O que construímos',
       headingHighlight: 'quando seu produto ou operação precisa andar',
       description:
-        'Use a TG Apps para uma construção completa, um resgate de app ou um avanço específico de produto. Mobile, CRM, backend, IA, integrações, infraestrutura e release ficam conectados em um único time responsável.',
+        'Conte com a Tg Apps para construir do zero, resgatar um app parado ou avançar uma parte específica do produto. Mobile, CRM, backend, IA, integrações, infraestrutura e deploy ficam conectados em um único time responsável.',
       pillars: [
-        'Entrega mobile-first para Android, iOS, Play Store, App Store, distribuição interna e releases graduais.',
+        'Entrega com prioridade para mobile: Android, iOS, Play Store, App Store, distribuição interna e deploys graduais.',
         'Sistemas operacionais feitos para o jeito que a empresa realmente trabalha, não para limites de SaaS genérico.',
-        'Escopo claro, demos semanais, suporte de release, documentação e handoff quando aplicável.'
+        'Escopo claro, demonstrações semanais, suporte de deploy, documentação e transferência técnica quando aplicável.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
@@ -514,43 +577,43 @@ export const translations: Record<Locale, TranslationSchema> = {
       processLabel: 'Ciclo',
       process: [
         {
-          title: 'Imersão e briefing',
-          description: 'Até 48 horas para alinhar metas, revisar acessos e mostrar referências sanitizadas.',
+          title: 'Escopo da primeira entrega',
+          description: 'Começamos com uma entrega útil, critérios de aceite claros e acessos necessários para construir.',
           highlights: [
-            'Call gratuita de 30-45 minutos em até 1 dia útil.',
+            'Conversa gratuita de 30 a 45 minutos em até 1 dia útil.',
             'Contrato e D-U-N-S assinados digitalmente.',
-            'Recebemos acessos ou criamos as contas para você.'
+            'Escopo, critério da demonstração, acessos e prazo da primeira entrega combinados antes do início do projeto.'
           ]
         },
         {
-          title: 'Construção e release',
-          description: 'Design, engenharia e releases rodando juntos com demos semanais enquanto você direciona as prioridades.',
+          title: 'Construção da primeira entrega',
+          description: 'Design, engenharia e deploy caminham juntos enquanto você acompanha o progresso desde cedo.',
           highlights: [
-            'Notas semanais no canal que você usa e pelo menos um Loom ou videocall com o time por semana.',
-            'Deploy azul/verde ou gradual com monitoramento incluído.',
+            'Primeira entrega normalmente desenhada para uma sprint inicial de até 7 dias úteis quando o escopo permite.',
+            'Publicação azul/verde ou gradual com monitoramento incluído.',
             'Trabalhamos nos seus repositórios ou hospedamos por aqui.'
           ]
         },
         {
-          title: 'Suporte e handoff',
-          description: 'Ficamos de prontidão para incidentes, treinamentos e escopos seguintes.',
+          title: 'Demonstração, continuidade ou transferência',
+          description: 'Você avalia uma demonstração funcional, depois continua mês a mês, coloca em pausa, encerra ou recebe a transferência técnica.',
           highlights: [
-            'Runbooks, dashboards e credenciais entregues ao seu time.',
-            'Triage em até 24 horas e plantão de lançamentos nos fins de semana.',
-            'Renove mês a mês ou encerre sem multas.'
+            'Guias operacionais, dashboards e credenciais entregues ao seu time.',
+            'Triagem em até 24 horas e plantão de deploys nos fins de semana.',
+            'Se o combinado não for entregue, essa etapa não é cobrada.'
           ]
         }
       ],
       items: [
         {
           title: 'Apps mobile',
-          subtitle: 'Android, iOS, lojas e releases privados',
+          subtitle: 'Android, iOS, lojas e publicações privadas',
           description:
-            'Apps nativos ou multiplataforma feitos para usuários reais, lojas reais e restrições reais de release. Play Store, App Store, distribuição interna, rollout gradual, monitoramento e suporte podem ficar com a gente.',
+            'Apps nativos ou multiplataforma feitos para usuários reais, lojas reais e regras reais de publicação. Play Store, App Store, distribuição interna, deploy gradual, monitoramento e suporte podem ficar com a gente.',
           features: [
             'Fluxos Android e iOS conectados a backend, banco de dados, analytics e painéis administrativos.',
-            'Preparação de release, assets de loja, links de privacidade, correções de review e rollout gradual.',
-            'Arquitetura prática para seu time continuar evoluindo depois do handoff.'
+            'Preparação de publicação, materiais de loja, links de privacidade, correções de revisão e deploy gradual.',
+            'Arquitetura prática para seu time continuar evoluindo depois da transferência técnica.'
           ],
           cta: 'Planejar meu app'
         },
@@ -567,36 +630,36 @@ export const translations: Record<Locale, TranslationSchema> = {
           cta: 'Planejar meu sistema'
         },
         {
-          title: 'Resgate de app e execução de release',
+          title: 'Resgate de app e execução de deploy',
           subtitle: 'Auditar, corrigir, publicar e iterar',
           description:
-            'Pegamos apps inacabados, protótipos, builds antigas ou codebases travadas e transformamos em produtos utilizáveis com caminho claro de release, backend, banco, publicação em lojas e plano de iteração definidos juntos.',
+            'Pegamos apps inacabados, protótipos, builds antigas ou bases de código travadas e transformamos em produtos utilizáveis com caminho claro de deploy, backend, banco, publicação em lojas e plano de iteração definidos juntos.',
           features: [
-            'Auditoria do app, código, lojas, backend e bloqueios de deploy.',
-            'Correção, rebuild ou finalização dos fluxos centrais exigidos pelo plano de release combinado.',
+            'Auditoria do app, código, lojas, backend e bloqueios de publicação.',
+            'Correção, reconstrução ou finalização dos fluxos centrais exigidos pelo plano de deploy combinado.',
             'Publicação quando o plano pedir, validação com usuários quando aplicável, monitoramento e melhoria contínua.'
           ],
           cta: 'Finalizar meu app'
         },
         {
           title: 'Backend, APIs e integrações',
-          subtitle: 'Dados, auth, billing e infraestrutura',
+          subtitle: 'Dados, autenticação, cobrança e infraestrutura',
           description:
-            'Construímos a camada operacional por trás do app: APIs, bancos, autenticação, billing, logística, integrações com CRM, dashboards, infraestrutura AWS, runbooks e checklists de release.',
+            'Construímos a camada operacional por trás do app: APIs, bancos, autenticação, cobrança, logística, integrações com CRM, dashboards, infraestrutura AWS, guias operacionais e checklists de deploy.',
           features: [
             'REST ou GraphQL com Supabase, Firebase, MySQL, MariaDB ou Postgres dedicado.',
             'Integrações com pagamentos, logística, CRM, analytics, email e fluxos internos.',
-            'Infraestrutura e documentação pensadas para seu time assumir o stack depois do handoff.'
+            'Infraestrutura e documentação pensadas para seu time assumir a base técnica depois da transferência.'
           ],
           cta: 'Escopar integração'
         },
         {
           title: 'Integrações de IA e LLM',
-          subtitle: 'Fluxos úteis, guardrails e documentação',
+          subtitle: 'Fluxos úteis, controles e documentação',
           description:
-            'Adicionamos fluxos de LLM a produtos e ferramentas reais sem transformar o app em demo. Conectamos IA ao stack de busca, vetor, CRM ou conhecimento que o seu time já confia.',
+            'Adicionamos fluxos de LLM a produtos e ferramentas reais sem transformar o app em uma vitrine sem uso real. Conectamos IA à busca, vetores, CRM ou base de conhecimento que o seu time já usa.',
           features: [
-            'Outputs estruturados, aprovação humana, logs, fallback e guardrails práticos.',
+            'Saídas estruturadas, aprovação humana, logs, alternativas quando a IA falha e controles práticos.',
             'Copilotos, documentos, apoio a CRM, busca, triagem e automações internas.',
             'Documentação separando comportamento do modelo, regras de negócio e revisão humana.'
           ],
@@ -606,11 +669,11 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Apps born global',
           subtitle: 'Multilíngue, cultural, pronto para o mundo',
           description:
-            'Construímos apps que podem atender mais de um mercado desde o primeiro release, com tradução contextualizada, UX sensível a idioma, preparação de lojas e estrutura de conteúdo pronta para iteração global.',
+            'Construímos apps que podem atender mais de um mercado desde o primeiro deploy, com tradução contextualizada, UX adaptada ao idioma, preparação de lojas e estrutura de conteúdo pronta para evolução global.',
           features: [
-            'Onboarding, notificações, suporte e copy de produto preparados para múltiplos idiomas.',
+            'Onboarding, notificações, suporte e texto de produto preparados para múltiplos idiomas.',
             'Tradução adaptada à intenção do usuário, tom, exemplos e contexto cultural.',
-            'Analytics, checklist de release, fallback de idioma e evolução mercado por mercado.'
+            'Analytics, checklist de deploy, idioma alternativo e evolução mercado por mercado.'
           ],
           cta: 'Planejar app global'
         }
@@ -618,7 +681,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       bottomCta: {
         title: 'Precisa construir seu app sem contratar um time interno completo?',
         description:
-          'Envie o app atual, repo, processo, planilha ou ideia de produto. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos ou uma indicação honesta.',
+          'Envie o app atual, repositório, processo, planilha ou ideia de produto. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos ou uma indicação honesta.',
         button: 'Planejar a construção'
       }
     },
@@ -627,14 +690,14 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Time confiável',
       headingHighlight: 'para fundadores e gestores',
       description:
-        'Somos um studio bilíngue em São Paulo, construindo software sob medida, produtos digitais e sistemas operacionais para empresas de diferentes mercados desde 2019.',
+        'Somos um estúdio bilíngue em São Paulo, construindo software sob medida, produtos digitais e sistemas operacionais para empresas de diferentes mercados desde 2019.',
       timelineHeading: 'Como é trabalhar conosco',
       paragraphs: [
         'Você fala direto com quem decide. Mantemos o time compacto para preservar contexto, responsabilidade e visão de produto.',
-        'Entramos no seu stack (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos o nosso. Mandamos notas escritas e Looms curtos três vezes por semana, além de demo semanal com riscos e custos.',
-        'Engenharia de release e operações estão no mesmo time, então você não precisa de outros fornecedores para monitoramento, analytics ou treinamento. Ao finalizar, tudo fica com você.'
+        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. Mandamos notas escritas e vídeos curtos no Loom três vezes por semana, além de demonstração semanal com riscos e custos.',
+        'Engenharia de deploy e operação ficam no mesmo time, então você não precisa de outros fornecedores para monitoramento, analytics ou treinamento. Ao finalizar, tudo fica com você.'
       ],
-      missionHeading: 'Como protegemos seu roadmap',
+      missionHeading: 'Como protegemos seu plano de evolução',
       missionDescription:
         'Contrato assinado, registro D-U-N-S, empresa brasileira regularizada e zero pagamento antecipado. Finanças, jurídico e o time de produto ficam tranquilos.',
       clientHeading: 'Liderança direta e baixa burocracia',
@@ -647,7 +710,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         },
         {
           title: 'Contrato primeiro, pagamento depois',
-          description: 'Assinamos NDA e SOW digitalmente antes do kick-off. A cobrança só começa após as primeiras entregas.'
+          description: 'Assinamos NDA e escopo de trabalho digitalmente antes do início do projeto. A cobrança só começa após as primeiras entregas.'
         },
         {
           title: 'Cobertura global de fuso',
@@ -657,8 +720,8 @@ export const translations: Record<Locale, TranslationSchema> = {
       statsHeading: 'Como operamos',
       stats: [
         { number: '≤2h', label: 'Tempo médio de resposta no canal escolhido ou e-mail em dias úteis.' },
-        { number: '5 dias', label: 'Tempo médio entre assinatura e primeira branch ou entrega de design.' },
-        { number: 'Demo semanal', label: 'Call ou Loom com riscos, decisões e métricas.' }
+        { number: '5 dias', label: 'Tempo médio entre assinatura e primeiro código no repositório ou entrega de design.' },
+        { number: 'Demonstração semanal', label: 'Reunião ou Loom com riscos, decisões e métricas.' }
       ],
       passionTitle: 'D-U-N-S® 651029828',
       passionDescription:
@@ -669,7 +732,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Conte o que você precisa',
       headingHighlight: 'e receba uma leitura honesta',
       description:
-        'Envie o formulário ou mande mensagem no WhatsApp. Respondemos em até 1 dia útil com uma leitura direta de escopo, orçamento, kickoff, bloqueios e encaixe.',
+        'Envie o formulário ou mande mensagem no WhatsApp. Respondemos em até 1 dia útil com uma leitura direta de escopo, orçamento, início do projeto, bloqueios e encaixe.',
       infoHeading: 'Canais diretos',
       info: [
         {
@@ -690,7 +753,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       whatsappCta: {
         title: 'Prefere WhatsApp?',
-        description: 'Abra uma conversa direta com a TG Apps e conte o que você quer construir.'
+        description: 'Abra uma conversa direta com a Tg Apps e conte o que você quer construir.'
       },
       formHeading: 'Conte um pouco do projeto',
       formDescription: 'Só pedimos o necessário para responder com plano e datas.',
@@ -699,8 +762,8 @@ export const translations: Record<Locale, TranslationSchema> = {
         description: 'Processo leve e sem spam.',
         bullets: [
           'Respondemos em até 1 dia útil com dúvidas pontuais.',
-          'Marcamos uma call de 30-45 minutos para alinhar orçamento, prazo e acessos.',
-          'Enviamos contrato, checklist e data de kick-off.'
+          'Marcamos uma conversa de 30 a 45 minutos para alinhar orçamento, prazo e acessos.',
+          'Enviamos contrato, checklist e data de início.'
         ]
       },
       successTitle: 'Recebemos sua mensagem!',
@@ -714,25 +777,34 @@ export const translations: Record<Locale, TranslationSchema> = {
         phonePlaceholder: '+55 (11) 99999-0000',
         serviceLabel: 'Do que você precisa?',
         servicePlaceholder: 'Selecione uma opção',
+        guaranteeLabel: 'Como você gostaria de começar?',
+        guaranteePlaceholder: 'Selecione um ponto de partida',
+        firstMilestoneLabel: 'Primeira entrega útil',
+        firstMilestonePlaceholder: 'Exemplo: fluxo de login, bloqueio de deploy, tela de painel, endpoint de API, versão para loja de aplicativos ou etapa de resgate.',
         messageLabel: 'Notas',
         messagePlaceholder: 'Compartilhe prazos, lojas ou dores atuais.',
         submit: 'Iniciar conversa',
-        submitting: 'Abrindo email...',
+        submitting: 'Abrindo e-mail...',
         policy: 'Usaremos essas informações apenas para retornar seu contato.'
       },
       services: [
         'Desenvolvimento de app mobile',
         'CRM / ferramentas internas',
-        'Resgate de app / lançamento',
+        'Resgate de app / publicação',
         'Backend / API / integrações',
         'Integração de IA / LLM',
         'App born global',
-        'Discovery de produto'
+        'Descoberta de produto'
+      ],
+      guaranteeOptions: [
+        'Quero começar com a Garantia da Primeira Entrega',
+        'Quero discutir o plano mensal completo',
+        'Ainda não tenho certeza'
       ]
     },
     footer: {
       description:
-        'A TG Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Planos desde US$ 1.500/mês, Growth por US$ 2.000/mês, sem pagamento inicial.',
+        'A Tg Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Planos desde US$ 1.500/mês, sem pagamento inicial, Garantia da Primeira Entrega.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
@@ -744,14 +816,14 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       servicesHeading: 'Pedidos frequentes',
       services: [
-        'Resgate de app e lançamento',
+        'Resgate de app e deploy',
         'Apps born global',
         'CRM e ferramentas internas',
         'Sistemas de negócio e dashboards',
         'Apps Android e iOS',
         'Backend, APIs e integrações',
         'Integrações LLM',
-        'Cobertura de releases'
+        'Cobertura de deploys'
       ],
       contactHeading: 'Contato',
       contact: {
@@ -761,7 +833,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       },
       cta: 'Agendar conversa',
       bottom: {
-        copyright: '© {year} TG Applications Desenvolvimento Ltda. Todos os direitos reservados.',
+        copyright: '© {year} TG APPLICATIONS DESENVOLVIMENTO LTDA. Todos os direitos reservados.',
         privacy: 'Privacidade',
         terms: 'Termos'
       }

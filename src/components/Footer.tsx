@@ -64,6 +64,10 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
       href: localizedLandingHref(landingSlugsByLocale[language].devAsAService)
     },
     {
+      label: language === 'pt' ? 'Garantia da primeira entrega' : 'First Milestone Guarantee',
+      href: localizedLandingHref(landingSlugsByLocale[language].firstMilestoneGuarantee)
+    },
+    {
       label: language === 'pt' ? 'Perfil da empresa' : 'Company profile',
       href: localizedLandingHref(landingSlugsByLocale[language].companyProfile)
     },
@@ -72,7 +76,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
       href: localizedLandingHref(landingSlugsByLocale[language].dueDiligence)
     },
     {
-      label: language === 'pt' ? 'LinkedIn do founder' : 'Founder LinkedIn',
+      label: language === 'pt' ? 'LinkedIn do fundador' : 'Founder LinkedIn',
       href: 'https://www.linkedin.com/in/tgthiag/'
     }
   ];

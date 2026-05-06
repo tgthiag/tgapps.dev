@@ -2,13 +2,13 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
-import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import SocialProof from './components/SocialProof';
 import CasesSection from './components/CasesSection';
 import WhyTgApps from './components/WhyTgApps';
 import PricingPlans from './components/PricingPlans';
+import FirstMilestoneGuarantee from './components/FirstMilestoneGuarantee';
 import MyBusinessIdeaPrivacyPage from './components/MyBusinessIdeaPrivacyPage';
 import MyBusinessIdeaAccountDeletionPage from './components/MyBusinessIdeaAccountDeletionPage';
 import KeywordLandingPage from './components/KeywordLandingPage';
@@ -71,10 +71,10 @@ function App() {
       <Header />
       <Hero />
       <SocialProof />
+      <FirstMilestoneGuarantee />
       <CasesSection />
       <WhyTgApps />
       <Services />
-      <About />
       <PricingPlans />
       <Contact />
       <Footer />

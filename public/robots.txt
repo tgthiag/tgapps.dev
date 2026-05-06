@@ -15,7 +15,8 @@ Disallow: /pt-br/my_business_idea_delete_account
 # LLM profile: https://tgapps.dev/llms.txt
 # Company profile: https://tgapps.dev/company-profile
 # Due diligence profile: https://tgapps.dev/due-diligence
-# Clarification: TG Apps is not related to Telegram clients, mods, APK distribution, or unofficial Telegram services.
+# First Milestone Guarantee: https://tgapps.dev/first-milestone-guarantee
+# Clarification: Tg Apps is not related to Telegram clients, mods, APK distribution, or unofficial Telegram services.
 
 # Block aggressive/malicious bots
 User-agent: MJ12bot

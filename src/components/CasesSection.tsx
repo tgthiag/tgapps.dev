@@ -55,7 +55,7 @@ const cases: CaseItem[] = [
     },
     description: {
       en: 'Inherited a legacy app that previous developers could not finish. Rebuilt, completed, and shipped across Android, iOS, web, and desktop, with a management dashboard and automated ecommerce data pipelines.',
-      pt: 'Assumimos um app legado que outros desenvolvedores não conseguiram concluir. Reconstruímos, finalizamos e publicamos em Android, iOS, web e desktop, com dashboard de gestão e pipelines automatizados conectados ao ecommerce.'
+      pt: 'Assumimos um app legado que outros desenvolvedores não conseguiram concluir. Reconstruímos, finalizamos e publicamos em Android, iOS, web e desktop, com dashboard de gestão e pipelines automatizados conectados ao e-commerce.'
     },
     tags: ['App Rescue', 'Android', 'iOS', 'Desktop', 'Ecommerce']
   },
@@ -69,7 +69,7 @@ const cases: CaseItem[] = [
     },
     description: {
       en: 'Built from idea to production: AI-integrated health document management, Flutter apps on Android, iOS and web, Node backend, and MySQL. A new pet health app is currently in deployment.',
-      pt: 'Construído da ideia à produção: gestão de documentos de saúde com IA, apps Flutter em Android, iOS e web, backend Node e MySQL. Um novo app de saúde pet está em deploy.'
+      pt: 'Construído da ideia à produção: gestão de documentos de saúde com IA, apps Flutter em Android, iOS e web, backend Node e MySQL. Um novo app de saúde pet está em implantação.'
     },
     tags: ['AI', 'Flutter', 'Health', 'Node', 'MySQL']
   },
@@ -79,11 +79,11 @@ const cases: CaseItem[] = [
     logoName: 'Mathex',
     location: {
       en: 'Brazil, enterprise squad',
-      pt: 'Brasil, squad enterprise'
+      pt: 'Brasil, equipe corporativa'
     },
     description: {
       en: "Tg Apps provides embedded frontend engineering through Mathex for the Smiles loyalty program, one of Brazil's largest airline rewards platforms, building and maintaining screens with microfrontend architecture inside an enterprise squad.",
-      pt: 'A Tg Apps atua com engenharia frontend embarcada via Mathex no programa de fidelidade Smiles, uma das maiores plataformas de recompensas aéreas do Brasil, construindo e mantendo telas com arquitetura de microfrontends dentro de um squad enterprise.'
+      pt: 'A Tg Apps atua com engenharia frontend embarcada via Mathex no programa de fidelidade Smiles, uma das maiores plataformas de recompensas aéreas do Brasil, construindo e mantendo telas com arquitetura de microfrontends dentro de uma equipe corporativa.'
     },
     tags: ['Microfrontend', 'Enterprise Squad', 'Airline', 'Loyalty Platform']
   }
@@ -113,7 +113,7 @@ const CasesSection = () => {
           </div>
           <p className="max-w-md text-left text-base leading-8 text-slate-600 lg:text-right">
             {isPt
-              ? 'Cinco relações ativas com clientes no Brasil e nos Estados Unidos. Indústrias diferentes, stacks diferentes, todos em movimento.'
+              ? 'Cinco relações ativas com clientes no Brasil e nos Estados Unidos. Setores diferentes, bases técnicas diferentes, todos em movimento.'
               : 'Five active client relationships across the US and Brazil. Different industries, different stacks, all in motion.'}
           </p>
         </div>

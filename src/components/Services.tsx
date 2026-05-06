@@ -39,7 +39,7 @@ const Services = () => {
   };
 
   return (
-    <section id='what-you-get' className='py-24 bg-white scroll-mt-24'>
+    <section id='what-you-get' className='py-20 bg-white scroll-mt-24'>
       <div className='max-w-6xl mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='grid gap-10 lg:grid-cols-2 lg:items-center'>
           <div>
@@ -84,7 +84,7 @@ const Services = () => {
               <img
                 src='https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=1200'
                 alt='Product team reviewing Android and iOS mockups'
-                className='w-full h-[420px] object-cover'
+                className='w-full h-[360px] object-cover'
               />
             </div>
             <div className='absolute -bottom-6 left-6 bg-white shadow-xl rounded-2xl px-6 py-4 max-w-sm'>
@@ -94,7 +94,7 @@ const Services = () => {
           </div>
         </div>
 
-        <div className='mt-20'>
+        <div className='mt-14'>
           {(t.services.gridHeading || t.services.gridDescription) && (
             <div className='text-center mb-10'>
               {t.services.gridHeading && <h3 className='text-2xl font-bold text-gray-900'>{t.services.gridHeading}</h3>}
@@ -104,27 +104,27 @@ const Services = () => {
             </div>
           )}
 
-          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8'>
+          <div className='grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6'>
             {serviceCards.map((service, index) => {
               const IconComponent = service.IconComponent;
-              const badgeClasses = 'w-16 h-16 ' + service.bg + ' rounded-2xl flex items-center justify-center mb-6';
-              const iconClasses = 'w-8 h-8 ' + service.icon;
+              const badgeClasses = 'w-12 h-12 ' + service.bg + ' rounded-2xl flex items-center justify-center mb-5';
+              const iconClasses = 'w-6 h-6 ' + service.icon;
               const landingHref = serviceLandingHrefs[index];
               return (
                 <div
                   key={service.title + '-' + index}
-                  className='group bg-white border border-gray-100 rounded-2xl p-8 shadow-lg hover:-translate-y-2 hover:shadow-2xl transition-all duration-300'
+                  className='group bg-white border border-gray-100 rounded-2xl p-6 shadow-md hover:-translate-y-1 hover:shadow-xl transition-all duration-300'
                 >
                   <div className={badgeClasses}>
                     <IconComponent className={iconClasses} />
                   </div>
                   <div className='space-y-1 mb-4'>
                     {service.subtitle && <p className='text-xs font-semibold uppercase tracking-wide text-slate-500'>{service.subtitle}</p>}
-                    <h3 className='text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors'>{service.title}</h3>
+                    <h3 className='text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors'>{service.title}</h3>
                   </div>
-                  <p className='text-sm text-gray-600 mb-5 leading-relaxed'>{service.description}</p>
+                  <p className='text-sm text-gray-600 mb-5 leading-relaxed line-clamp-3'>{service.description}</p>
                   <ul className='space-y-2 mb-6 text-sm text-gray-700'>
-                    {service.features?.map((feature, featureIndex) => (
+                    {service.features?.slice(0, 2).map((feature, featureIndex) => (
                       <li key={feature + '-' + featureIndex} className='flex items-start gap-2'>
                         <span className='mt-1 h-1.5 w-1.5 rounded-full bg-slate-400'></span>
                         <span>{feature}</span>
@@ -153,7 +153,7 @@ const Services = () => {
         </div>
 
         {processSteps.length > 0 && (
-          <div id='process' className='mt-20 scroll-mt-24'>
+          <div id='process' className='mt-16 scroll-mt-24'>
             <div className='text-center mb-10'>
               <h3 className='text-3xl font-bold text-gray-900 mb-4'>{t.services.processHeading}</h3>
               <p className='text-gray-600 max-w-3xl mx-auto'>{t.services.processDescription}</p>
@@ -174,7 +174,7 @@ const Services = () => {
                   <ul className='space-y-2 text-sm text-gray-700'>
                     {stage.highlights?.map((highlight, highlightIndex) => (
                       <li key={highlight + '-' + highlightIndex} className='flex items-start gap-2'>
-                        <CheckCircle className='w-4 h-4 text-emerald-500 mt-0.5' />
+                        <CheckCircle className='mt-0.5 h-4 w-4 flex-shrink-0 text-emerald-500' />
                         <span>{highlight}</span>
                       </li>
                     ))}
@@ -185,18 +185,6 @@ const Services = () => {
           </div>
         )}
 
-        <div className='mt-20'>
-          <div className='bg-slate-900 rounded-3xl px-8 py-10 text-white text-center'>
-            <h3 className='text-2xl font-bold mb-3'>{t.services.bottomCta.title}</h3>
-            <p className='text-white/80 max-w-2xl mx-auto mb-6'>{t.services.bottomCta.description}</p>
-            <button
-              onClick={() => scrollToSection('contato')}
-              className='bg-white text-slate-900 font-semibold px-8 py-3 rounded-full hover:bg-slate-100 transition-colors'
-            >
-              {t.services.bottomCta.button}
-            </button>
-          </div>
-        </div>
       </div>
     </section>
   );

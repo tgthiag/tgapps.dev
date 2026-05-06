@@ -9,6 +9,8 @@ const Contact = () => {
     email: '',
     phone: '',
     service: '',
+    guaranteePreference: '',
+    firstMilestone: '',
     message: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -36,6 +38,9 @@ const Contact = () => {
       `Email: ${formData.email}`,
       `Phone / WhatsApp: ${formData.phone || 'Not provided'}`,
       `Preferred Service: ${formData.service || 'Not specified'}`,
+      `Starting preference: ${formData.guaranteePreference || 'Not specified'}`,
+      `Useful first milestone: ${formData.firstMilestone || 'Not specified'}`,
+      'First delivery note: scope, access, timeline, and acceptance criteria are aligned before work starts.',
       '',
       'Plans / Notes:',
       formData.message || '(No additional notes)',
@@ -57,6 +62,8 @@ const Contact = () => {
         email: '',
         phone: '',
         service: '',
+        guaranteePreference: '',
+        firstMilestone: '',
         message: ''
       });
     }, 3000);
@@ -74,6 +81,7 @@ const Contact = () => {
   }));
 
   const services = t.contact.services;
+  const guaranteeOptions = t.contact.guaranteeOptions;
 
   return (
     <section id="contato" className="py-24 bg-white">
@@ -233,6 +241,40 @@ const Contact = () => {
                           <option key={index} value={service}>{service}</option>
                         ))}
                       </select>
+                    </div>
+                  </div>
+
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                      <label htmlFor="guaranteePreference" className="block text-sm font-medium text-gray-700 mb-2">
+                        {t.contact.form.guaranteeLabel}
+                      </label>
+                      <select
+                        id="guaranteePreference"
+                        name="guaranteePreference"
+                        value={formData.guaranteePreference}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                      >
+                        <option value="">{t.contact.form.guaranteePlaceholder}</option>
+                        {guaranteeOptions.map((option, index) => (
+                          <option key={index} value={option}>{option}</option>
+                        ))}
+                      </select>
+                    </div>
+                    <div>
+                      <label htmlFor="firstMilestone" className="block text-sm font-medium text-gray-700 mb-2">
+                        {t.contact.form.firstMilestoneLabel}
+                      </label>
+                      <input
+                        type="text"
+                        id="firstMilestone"
+                        name="firstMilestone"
+                        value={formData.firstMilestone}
+                        onChange={handleChange}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors"
+                        placeholder={t.contact.form.firstMilestonePlaceholder}
+                      />
                     </div>
                   </div>
 

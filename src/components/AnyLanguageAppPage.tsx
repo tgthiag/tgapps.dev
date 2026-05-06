@@ -21,10 +21,10 @@ const AnyLanguageAppPage = ({ locale }: AnyLanguageAppPageProps) => {
           <a href={locale === 'pt' ? '/pt-br/' : '/'} className="inline-flex items-center gap-3 text-sm text-white/85 hover:text-white">
             <img
               src="/logo.png"
-              alt="TG Apps"
+              alt="Tg Apps"
               className="h-10 w-10 rounded-xl bg-black/35 p-1 shadow-lg shadow-blue-500/20"
             />
-            <span>TG Apps</span>
+            <span>Tg Apps</span>
           </a>
         </header>
 

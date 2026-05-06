@@ -51,11 +51,11 @@ export const appRoutes = {
 
 export const appsDirectoryContent: Record<Locale, AppsDirectoryContent> = {
   en: {
-    badge: 'Apps by TG Apps',
+    badge: 'Apps by Tg Apps',
     title: 'Apps we design, ship, and keep improving',
     description:
       'A curated view of the products we build and operate. Start with AnyLanguage, our voice-first language practice app built for natural speaking routines.',
-    backLabel: 'Back to TG Apps',
+    backLabel: 'Back to Tg Apps',
     appSectionLabel: 'Featured app',
     appCard: {
       slug: appRoutes.anyLanguage,
@@ -71,11 +71,11 @@ export const appsDirectoryContent: Record<Locale, AppsDirectoryContent> = {
     }
   },
   pt: {
-    badge: 'Apps da TG Apps',
+    badge: 'Apps da Tg Apps',
     title: 'Apps que desenhamos, entregamos e seguimos evoluindo',
     description:
       'Uma vitrine dos produtos que construímos e operamos. Comece pelo AnyLanguage, nosso app focado em prática de conversação com voz e rotina real de fala.',
-    backLabel: 'Voltar para a TG Apps',
+    backLabel: 'Voltar para a Tg Apps',
     appSectionLabel: 'App em destaque',
     appCard: {
       slug: appRoutes.anyLanguage,
@@ -84,7 +84,7 @@ export const appsDirectoryContent: Record<Locale, AppsDirectoryContent> = {
       description:
         'Pratique conversas reais, alterne entre modos de fala, expanda vocabulário e acompanhe progresso em mais de 50 idiomas dentro de um fluxo mobile refinado.',
       status: 'Produto em operação',
-      highlights: ['50+ idiomas', 'Modo Phone Call', 'Vocabulário e histórico'],
+      highlights: ['50+ idiomas', 'Modo de ligação por voz', 'Vocabulário e histórico'],
       cta: 'Ver página do app',
       heroImage: '/app-media/anylanguage/screen-home.png',
       icon: '/app-media/anylanguage/logo.png'
@@ -164,14 +164,14 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
     ],
     finalCtaTitle: 'Need a custom app with this level of product polish?',
     finalCtaDescription:
-      'TG Apps can build, design, rescue, launch, and evolve mobile products like AnyLanguage for founders, startups, and businesses that need a clear release path and real product iteration.'
+      'Tg Apps can build, design, rescue, launch, and evolve mobile products like AnyLanguage for founders, startups, and businesses that need a clear release path and real product iteration.'
   },
   pt: {
     badge: 'AnyLanguage Conversations',
     title: 'Um app de idiomas pensado para fala real, não só exercícios',
     subtitle: 'Prática natural de conversação em 50+ idiomas',
     description:
-      'O AnyLanguage ajuda o usuário a praticar fala de um jeito mais próximo de uma conversa real. Ele combina chat com foco em voz, modo Phone Call, exploração de vocabulário e histórico de sessões para manter a evolução dentro do próprio app.',
+      'O AnyLanguage ajuda o usuário a praticar fala de um jeito mais próximo de uma conversa real. Ele combina chat com foco em voz, modo de ligação por voz, exploração de vocabulário e histórico de sessões para manter a evolução dentro do próprio app.',
     heroImage: '/app-media/anylanguage/screen-home.png',
     primaryCta: 'Baixar no Google Play',
     secondaryCta: 'Baixar na App Store',
@@ -190,7 +190,7 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
       {
         title: 'Mude de modo conforme o objetivo',
         description:
-          'O usuário pode alternar entre conversa livre, Phone Call, prática por tema, entrevistas e vocabulário sem precisar trocar de app.'
+          'O usuário pode alternar entre conversa livre, ligação por voz, prática por tema, entrevistas e vocabulário sem precisar trocar de app.'
       },
       {
         title: 'Mantenha o ritmo',
@@ -205,7 +205,7 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
         description: 'Prática aberta de fala com respostas rápidas e naturais da IA.'
       },
       {
-        title: 'Phone Call mode',
+        title: 'Modo de ligação por voz',
         description: 'Uma experiência de chamada pensada para tornar a prática oral mais natural e focada.'
       },
       {
@@ -237,7 +237,7 @@ export const anyLanguagePageContent: Record<Locale, AnyLanguagePageContent> = {
     ],
     finalCtaTitle: 'Precisa de um app com esse nível de produto e acabamento?',
     finalCtaDescription:
-      'A TG Apps pode desenhar, resgatar, publicar e evoluir produtos mobile como o AnyLanguage para fundadores, startups e empresas que precisam de um caminho claro de release e iteracao real de produto.'
+      'A Tg Apps pode desenhar, resgatar, publicar e evoluir produtos mobile como o AnyLanguage para fundadores, startups e empresas que precisam de um caminho claro de deploy e iteração real de produto.'
   }
 };
 

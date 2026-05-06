@@ -93,6 +93,7 @@ const serviceRouteIds = [
 
 const trustRouteIds = [
   'whyTgApps',
+  'firstMilestoneGuarantee',
   'companyProfile',
   'dueDiligence',
   'aiProfile',
@@ -104,7 +105,7 @@ const routeById = new Map(routes.map((route) => [route.id, route]));
 
 const stripBrandFromTitle = (title) =>
   title
-    .replace(/\s*\|\s*TG Apps.*$/i, '')
+    .replace(/\s*\|\s*Tg Apps.*$/i, '')
     .replace(/\s*\|\s*Tg Apps.*$/i, '')
     .trim();
 
@@ -137,9 +138,9 @@ const buildStaticSeoFallback = (route, locale) => {
   const trustHeading = locale === 'pt' ? 'Confiança e validação' : 'Trust and validation';
   const intro =
     locale === 'pt'
-      ? 'TG Apps constrói e entrega apps mobile, web, CRM, backend, integrações de IA, ferramentas internas e sistemas sob medida.'
-      : 'TG Apps builds and ships mobile apps, web platforms, CRM, backend, AI integrations, internal tools, and custom business systems.';
-  const contactLabel = locale === 'pt' ? 'Fale com a TG Apps' : 'Contact TG Apps';
+      ? 'Tg Apps constrói e entrega apps mobile, web, CRM, backend, integrações de IA, ferramentas internas e sistemas sob medida.'
+      : 'Tg Apps builds and ships mobile apps, web platforms, CRM, backend, AI integrations, internal tools, and custom business systems.';
+  const contactLabel = locale === 'pt' ? 'Fale com a Tg Apps' : 'Contact Tg Apps';
   const homeLabel = locale === 'pt' ? 'Página inicial' : 'Home';
 
   return `<!-- static-seo-fallback:start -->
@@ -232,7 +233,7 @@ const writeRouteHtml = (route, locale, routePath) => {
   html = ensureMeta(html, 'property', 'og:locale', locale === 'pt' ? 'pt_BR' : 'en_US');
   html = ensureMeta(html, 'property', 'og:locale:alternate', locale === 'pt' ? 'en_US' : 'pt_BR');
   html = ensureMeta(html, 'property', 'og:image', localeSeo.ogImage);
-  html = ensureMeta(html, 'property', 'og:site_name', 'TG Apps');
+  html = ensureMeta(html, 'property', 'og:site_name', 'Tg Apps');
   html = ensureMeta(html, 'name', 'twitter:card', 'summary_large_image');
   html = ensureMeta(html, 'name', 'twitter:title', localeSeo.title);
   html = ensureMeta(html, 'name', 'twitter:description', localeSeo.description);

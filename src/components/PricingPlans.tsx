@@ -21,6 +21,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       description:
         'A focused entry plan for founders and teams that need useful software movement without opening a larger product cycle yet.',
       features: [
+        'Can start with a clearly scoped first milestone',
         'Small monthly software scope',
         'Bug fixes and focused improvements',
         'Simple frontend, backend, or app tasks',
@@ -37,8 +38,9 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       badge: 'Most selected',
       audience: 'For founders, startups, and growing teams that need weekly software delivery without hiring a full product team.',
       description:
-        'The main TG Apps plan: intelligent allocation across the part of the product that needs the most attention each week.',
+        'The main Tg Apps plan: intelligent allocation across the part of the product that needs the most attention each week, usually starting with a clear first milestone.',
       features: [
+        'Clear first delivery available before expanding the monthly plan',
         'Intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, and release support',
         'Weekly meeting to collect demands, review priorities, and show progress',
         'App rescue, product evolution, dashboards, and workflow improvements',
@@ -56,6 +58,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       description:
         'A higher-capacity engagement starting at USD 3,500/mo for clients that need more structured planning, priority support, and collaborators allocated when scope requires it.',
       features: [
+        'First milestone scoped before larger workstreams begin',
         'Larger monthly delivery capacity',
         'Multiple workstreams when needed',
         'Mobile, web, backend, database, CRM, AI, and integrations',
@@ -76,12 +79,13 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       description:
         'Plano de entrada para fundadores e times que precisam de movimento útil em software sem abrir ainda um ciclo maior de produto.',
       features: [
+        'Pode começar com uma primeira entrega bem definida',
         'Escopo mensal pequeno',
         'Correções e melhorias focadas',
         'Tarefas simples de frontend, backend ou app',
-        'Suporte de release quando aplicável',
+        'Suporte de deploy quando aplicável',
         'Reunião semanal para coletar e priorizar demandas',
-        'Atualização assíncrona após progresso ou release',
+        'Atualização assíncrona após progresso ou deploy',
         'Sem pagamento inicial'
       ],
       cta: 'Falar sobre Starter'
@@ -92,13 +96,14 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       badge: 'Mais escolhido',
       audience: 'Para fundadores, startups e times em crescimento que precisam de entrega semanal sem contratar um time completo de produto.',
       description:
-        'O plano principal da TG Apps: alocação inteligente na parte do produto que mais precisa de atenção a cada semana.',
+        'O plano principal da Tg Apps: alocação inteligente na parte do produto que mais precisa de atenção a cada semana, normalmente começando por uma primeira entrega clara.',
       features: [
-        'Alocação inteligente entre mobile, web, backend, CRM, ferramentas internas, integrações e release',
+        'Primeira entrega clara antes de expandir o plano mensal',
+        'Alocação inteligente entre mobile, web, backend, CRM, ferramentas internas, integrações e deploy',
         'Reunião semanal para coletar demandas, revisar prioridades e mostrar progresso',
         'Resgate de app, evolução de produto, dashboards e melhorias de fluxo',
         'Acesso direto à liderança de entrega',
-        'Documentação e handoff quando aplicável',
+        'Documentação e transferência técnica quando aplicável',
         'Valor fixo enquanto ativo'
       ],
       cta: 'Escolher Growth'
@@ -111,10 +116,11 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       description:
         'Engajamento com mais capacidade a partir de US$ 3.500/mês para clientes que precisam de planejamento mais estruturado, suporte prioritário e colaboradores alocados quando o escopo exigir.',
       features: [
+        'Primeira entrega definida antes de frentes maiores começarem',
         'Maior capacidade mensal de entrega',
         'Múltiplas frentes quando necessário',
         'Mobile, web, backend, banco, CRM, IA e integrações',
-        'Suporte prioritário e cobertura de release',
+        'Suporte prioritário e cobertura de deploy',
         'Reuniões diárias de alinhamento quando o projeto exigir',
         'Colaboradores adicionais quando o escopo exigir',
         'Planejamento semanal estruturado'
@@ -130,9 +136,9 @@ const copyByLocale = {
     title: 'Clear software delivery plans',
     highlight: 'without hiring first',
     subtitle:
-      'Choose the level of support you need now. No upfront payment, weekly progress, month-to-month engagement, and a fixed rate while your plan remains active.',
+      'Choose the level of support you need now. Start with a clear first milestone, then continue month to month with no upfront payment, weekly progress, and a fixed rate while your plan remains active.',
     note:
-      'Plans define the monthly delivery capacity and operating rhythm. Final scope is always agreed before kickoff so the engagement stays practical.',
+      'Plans define monthly delivery capacity and operating rhythm. For the first step, we align scope, access, timeline, and acceptance criteria so you can evaluate real delivery before expanding.',
     footer: 'Need more capacity or a custom scope? We can structure a focused monthly plan around your current app, backlog, team, or release deadline.'
   },
   pt: {
@@ -140,10 +146,10 @@ const copyByLocale = {
     title: 'Planos claros para entrega de software',
     highlight: 'sem contratar primeiro',
     subtitle:
-      'Escolha o nível de suporte que você precisa agora. Sem pagamento inicial, progresso semanal, engajamento mês a mês e valor fixo enquanto o plano permanecer ativo.',
+      'Escolha o nível de suporte que você precisa agora. Comece por uma primeira entrega clara e continue mês a mês sem pagamento inicial, com progresso semanal e valor fixo enquanto o plano permanecer ativo.',
     note:
-      'Os planos definem capacidade mensal de entrega e ritmo operacional. O escopo final sempre é combinado antes do kickoff para manter o engajamento prático.',
-    footer: 'Precisa de mais capacidade ou um escopo diferente? Podemos montar um plano mensal focado no seu app, backlog, time ou prazo de release.'
+      'Os planos definem capacidade mensal de entrega e ritmo operacional. Na primeira etapa, alinhamos escopo, acessos, prazo e critérios de aceite para você avaliar uma entrega real antes de expandir.',
+    footer: 'Precisa de mais capacidade ou um escopo diferente? Podemos montar um plano mensal focado no seu app, backlog, time ou prazo de deploy.'
   }
 } as const;
 
