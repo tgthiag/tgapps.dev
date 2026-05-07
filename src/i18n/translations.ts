@@ -340,7 +340,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Need your app built without hiring a full product team?',
+        title: 'Need your app built with clear scope and delivery ownership?',
         description:
           'Send us the current app, repo, spreadsheet, process, or product idea. We respond in under one business day with blockers, risks, next steps, or an honest referral.',
         button: 'Plan the build'
@@ -679,7 +679,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Precisa construir seu app sem contratar um time interno completo?',
+        title: 'Precisa construir seu app com escopo claro e responsabilidade de entrega?',
         description:
           'Envie o app atual, repositório, processo, planilha ou ideia de produto. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos ou uma indicação honesta.',
         button: 'Planejar a construção'

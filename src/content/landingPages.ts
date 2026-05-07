@@ -444,13 +444,13 @@ const EN_CONTENT: LandingContentByLocale = {
     key: 'customSoftwareStartups',
     slug: getLandingSlug('en', 'customSoftwareStartups'),
     badge: 'Custom software for startups',
-    title: 'Custom software for startups that need product delivery without building a full team first',
+    title: 'Custom software for startups that need real product delivery with one execution team',
     intro:
       'Tg Apps helps founders and startup teams ship MVPs, mobile apps, backend systems, dashboards, internal tools, AI integrations, and product iterations with one execution team and weekly delivery cadence.',
     heroHighlights: [
       'MVP, mobile app, backend, dashboard, and launch support.',
       'Weekly demos, clear scope, and production-minded delivery.',
-      'Useful when you need traction before hiring a full product team.'
+      'Useful when you need traction with one team carrying the delivery rhythm.'
     ],
     ctaLabel: 'Schedule a discovery call',
     ctaSubject: 'Custom software for startups',
@@ -723,7 +723,7 @@ const EN_CONTENT: LandingContentByLocale = {
     fitHeading: 'Built for',
     fitItems: [
       'SMB operators replacing fragile spreadsheets and manual handoffs.',
-      'Startups that need operational software before hiring a full product team.',
+      'Startups that need operational software with one team carrying the build and delivery.',
       'Founders who see an internal system as a future product, marketplace, or vertical SaaS.'
     ],
     sections: [
@@ -822,7 +822,7 @@ const EN_CONTENT: LandingContentByLocale = {
     badge: 'Dev as a Service / software development subscription',
     title: 'Dev as a Service for companies that need a practical software team every month',
     intro:
-      'Tg Apps gives founders, startups, and SMB teams a founder-led, team-delivered software development subscription for apps, CRM, internal tools, backend systems, AI integrations, and release support, without hiring a full product team first.',
+      'Tg Apps gives founders, startups, and SMB teams a founder-led, team-delivered software development subscription for apps, CRM, internal tools, backend systems, AI integrations, and release support, with one team carrying the monthly delivery rhythm.',
     heroHighlights: [
       'Founder-led delivery with a compact core team and scope-based collaborators.',
       'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
@@ -1846,7 +1846,7 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Dev as a Service / time de desenvolvimento sob demanda',
     title: 'Time de desenvolvimento sob demanda para empresas que precisam avançar todo mês',
     intro:
-      'A Tg Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, sem exigir que a empresa contrate um time completo antes.',
+      'A Tg Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com um time conduzindo o ritmo mensal de entrega.',
     heroHighlights: [
       'Entrega liderada pelo fundador com núcleo enxuto e colaboradores por escopo.',
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
@@ -1939,7 +1939,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
-      'Empresas que precisam de capacidade de execução sem contratar time fixo completo.',
+      'Empresas que precisam de capacidade de execução contínua com um modelo mais leve.',
       'Times que precisam de confiabilidade operacional e suporte de produção.',
       'Startups e agências que querem previsibilidade de entrega toda semana.'
     ],

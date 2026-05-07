@@ -1,3 +1,45 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@media print {
+  @page {
+    size: A4 landscape;
+    margin: 10mm;
+  }
+
+  html,
+  body {
+    background: #ffffff !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  header {
+    position: static !important;
+    box-shadow: none !important;
+  }
+
+  header nav,
+  header button {
+    display: none !important;
+  }
+
+  section,
+  footer {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+
+  section {
+    scroll-margin-top: 0 !important;
+  }
+
+  img {
+    max-width: 100% !important;
+  }
+
+  button {
+    display: none !important;
+  }
+}

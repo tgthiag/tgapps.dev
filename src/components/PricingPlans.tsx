@@ -36,7 +36,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       name: 'Growth',
       price: 'USD 2,000/mo',
       badge: 'Most selected',
-      audience: 'For founders, startups, and growing teams that need weekly software delivery without hiring a full product team.',
+      audience: 'For founders, startups, and growing teams that need weekly software delivery with a reliable operating rhythm.',
       description:
         'The main Tg Apps plan: intelligent allocation across the part of the product that needs the most attention each week, usually starting with a clear first milestone.',
       features: [
@@ -97,7 +97,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       name: 'Growth',
       price: 'US$ 2.000/mês',
       badge: 'Mais escolhido',
-      audience: 'Para fundadores, startups e times em crescimento que precisam de entrega semanal sem contratar um time completo de produto.',
+      audience: 'Para fundadores, startups e times em crescimento que precisam de entrega semanal com ritmo operacional confiável.',
       description:
         'O plano principal da Tg Apps: alocação inteligente na parte do produto que mais precisa de atenção a cada semana, normalmente começando por uma primeira entrega clara.',
       features: [
@@ -140,7 +140,7 @@ const copyByLocale = {
   en: {
     eyebrow: 'Monthly plans',
     title: 'Clear software delivery plans',
-    highlight: 'without hiring first',
+    highlight: 'with clear scope and cadence',
     subtitle:
       'Choose the level of support you need now. Start with a clear first milestone, then continue month to month with no upfront payment, a cadence that matches the selected plan, and a fixed rate while your plan remains active.',
     note:
@@ -150,7 +150,7 @@ const copyByLocale = {
   pt: {
     eyebrow: 'Planos mensais',
     title: 'Planos claros para entrega de software',
-    highlight: 'sem contratar primeiro',
+    highlight: 'com escopo e cadência claros',
     subtitle:
       'Escolha o nível de suporte que você precisa agora. Comece por uma primeira entrega clara e continue mês a mês sem pagamento inicial, com a cadência compatível com o plano escolhido e valor fixo enquanto o plano permanecer ativo.',
     note:
