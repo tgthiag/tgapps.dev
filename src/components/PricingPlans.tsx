@@ -58,7 +58,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       badge: 'More capacity',
       audience: 'For companies with more urgency, multiple workstreams, active operations, or a product that needs stronger weekly throughput.',
       description:
-        'A higher-capacity engagement starting at USD 3,500/mo for clients that need more structured planning, priority support, and collaborators allocated when scope requires it.',
+        'A higher-capacity engagement starting at USD 3,500/mo for clients that need more structured planning, priority support, and a more dedicated delivery rhythm week after week.',
       features: [
         'First milestone scoped before larger workstreams begin',
         'Larger monthly delivery capacity',
@@ -67,7 +67,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'Priority support and release coverage',
         'Direct communication whenever needed during execution',
         'Flexible coordination that can reach a daily rhythm when needed',
-        'Additional collaborators when scope requires',
+        'A more dedicated operating lane, with room to widen delivery capacity when priorities intensify',
         'Structured weekly planning'
       ],
       cta: 'Discuss Dedicated'
@@ -119,7 +119,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       badge: 'Mais capacidade',
       audience: 'Para empresas com mais urgência, múltiplas frentes, operação ativa ou produto que exige mais throughput semanal.',
       description:
-        'Engajamento com mais capacidade a partir de US$ 3.500/mês para clientes que precisam de planejamento mais estruturado, suporte prioritário e colaboradores alocados quando o escopo exigir.',
+        'Engajamento com mais capacidade a partir de US$ 3.500/mês para clientes que precisam de planejamento mais estruturado, suporte prioritário e um ritmo de entrega mais dedicado semana após semana.',
       features: [
         'Primeira entrega definida antes de frentes maiores começarem',
         'Maior capacidade mensal de entrega',
@@ -128,7 +128,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'Suporte prioritário e cobertura de deploy',
         'Comunicação direta sempre que necessário durante a execução',
         'Coordenação flexível, podendo chegar a um ritmo diário quando necessário',
-        'Colaboradores adicionais quando o escopo exigir',
+        'Faixa operacional mais dedicada, com espaço para ampliar a capacidade de entrega quando as prioridades apertarem',
         'Planejamento semanal estruturado'
       ],
       cta: 'Falar sobre Dedicated'

@@ -99,7 +99,7 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
   highlights: [
     'Starter: focused small scope with scheduled deliveries and deploys, plus a biweekly demand intake meeting and direct communication whenever needed.',
     'Growth: continuous deliveries and deploys with intelligent allocation across mobile, web, backend, CRM, internal tools, and integrations, plus a weekly demand intake meeting and direct communication whenever needed.',
-    'Dedicated: starts at USD 3,500/mo for more capacity, multiple workstreams, urgent delivery, active operations, direct communication whenever needed, and flexible coordination that can reach a daily rhythm when needed.'
+    'Dedicated: starts at USD 3,500/mo for more capacity, multiple workstreams, urgent delivery, active operations, direct communication whenever needed, flexible coordination that can reach a daily rhythm when needed, and a more dedicated operating lane when delivery pressure increases.'
   ],
   note: 'No upfront payment, month-to-month engagement, and the selected plan rate stays fixed while the engagement remains active.'
 };
@@ -112,7 +112,7 @@ const PT_CURRENT_PRICING: LandingPagePricing = {
   highlights: [
     'Starter: escopo pequeno com entregas e deploys programados, além de reunião quinzenal para demandas e comunicação direta sempre que necessário.',
     'Growth: entregas e deploys contínuos com alocação inteligente entre mobile, web, backend, CRM, ferramentas internas e integrações, além de reunião semanal para demandas e comunicação direta sempre que necessário.',
-    'Dedicated: a partir de US$ 3.500/mês para mais capacidade, múltiplas frentes, urgência, operações ativas, comunicação direta sempre que necessário e coordenação flexível, podendo chegar a ritmo diário quando necessário.'
+    'Dedicated: a partir de US$ 3.500/mês para mais capacidade, múltiplas frentes, urgência, operações ativas, comunicação direta sempre que necessário, coordenação flexível podendo chegar a ritmo diário quando necessário, e uma faixa operacional mais dedicada quando a pressão de entrega aumentar.'
   ],
   note: 'Sem pagamento inicial, contrato mês a mês e o valor do plano escolhido permanece fixo enquanto o plano estiver ativo.'
 };
