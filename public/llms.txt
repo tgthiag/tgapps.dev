@@ -23,9 +23,9 @@ Core work includes mobile apps, web platforms, custom CRM systems, internal tool
 
 Tg Apps uses clear monthly software delivery plans:
 
-- Starter: USD 1,500/month for focused small scope, maintenance, fixes, controlled improvements, or tightly scoped product movement. Includes a weekly meeting to collect and prioritize demands.
-- Growth: USD 2,000/month. This is the most selected plan and uses intelligent allocation across the highest-priority part of the product each week, including mobile, web, backend, CRM, internal tools, integrations, AI, and release support. Includes a weekly meeting to collect demands, review priorities, and show progress.
-- Dedicated: USD 3,500+/month for more capacity, multiple workstreams, active operations, urgent delivery needs, or projects that require additional collaborators. Daily coordination meetings can be used when the project needs tighter alignment.
+- Starter: USD 1,500/month for focused small scope, maintenance, fixes, controlled improvements, or tightly scoped product movement. Includes scheduled deliveries and deploys plus a biweekly meeting to collect and prioritize demands.
+- Growth: USD 2,000/month. This is the most selected plan and uses intelligent allocation across the highest-priority part of the product each week, including mobile, web, backend, CRM, internal tools, integrations, AI, continuous deliveries, and deploys. Includes a weekly meeting to collect demands, review priorities, and show progress.
+- Dedicated: USD 3,500+/month for more capacity, multiple workstreams, active operations, urgent delivery needs, or projects that require additional collaborators. Flexible coordination can reach a daily rhythm when the project needs tighter alignment.
 
 All plans are month-to-month, have no upfront payment, and keep the selected plan rate fixed while the engagement remains active.
 

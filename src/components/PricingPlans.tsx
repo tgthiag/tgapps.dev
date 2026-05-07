@@ -25,9 +25,9 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'Small monthly software scope',
         'Bug fixes and focused improvements',
         'Simple frontend, backend, or app tasks',
-        'Release support when applicable',
-        'Weekly meeting to collect and prioritize demands',
-        'Async update after progress or release work',
+        'Scheduled deliveries and deploys within a controlled monthly scope',
+        'Biweekly meeting to collect and prioritize demands',
+        'Direct communication whenever needed during execution',
         'No upfront payment'
       ],
       cta: 'Discuss Starter'
@@ -41,8 +41,10 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'The main Tg Apps plan: intelligent allocation across the part of the product that needs the most attention each week, usually starting with a clear first milestone.',
       features: [
         'Clear first delivery available before expanding the monthly plan',
-        'Intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, and release support',
+        'Continuous deliveries and deploys with intelligent allocation across mobile, web, backend, CRM, internal tools, and integrations',
         'Weekly meeting to collect demands, review priorities, and show progress',
+        'Direct communication whenever needed during execution',
+        'Continuous delivery and deploy rhythm while the plan is active',
         'App rescue, product evolution, dashboards, and workflow improvements',
         'Direct access to delivery leadership',
         'Documentation and handoff when applicable',
@@ -63,7 +65,8 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'Multiple workstreams when needed',
         'Mobile, web, backend, database, CRM, AI, and integrations',
         'Priority support and release coverage',
-        'Daily coordination meetings when the project needs tighter alignment',
+        'Direct communication whenever needed during execution',
+        'Flexible coordination that can reach a daily rhythm when needed',
         'Additional collaborators when scope requires',
         'Structured weekly planning'
       ],
@@ -83,9 +86,9 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'Escopo mensal pequeno',
         'Correções e melhorias focadas',
         'Tarefas simples de frontend, backend ou app',
-        'Suporte de deploy quando aplicável',
-        'Reunião semanal para coletar e priorizar demandas',
-        'Atualização assíncrona após progresso ou deploy',
+        'Entregas e deploys programados dentro de um escopo mensal controlado',
+        'Reunião quinzenal para coletar e priorizar demandas',
+        'Comunicação direta sempre que necessário durante a execução',
         'Sem pagamento inicial'
       ],
       cta: 'Falar sobre Starter'
@@ -99,8 +102,10 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'O plano principal da Tg Apps: alocação inteligente na parte do produto que mais precisa de atenção a cada semana, normalmente começando por uma primeira entrega clara.',
       features: [
         'Primeira entrega clara antes de expandir o plano mensal',
-        'Alocação inteligente entre mobile, web, backend, CRM, ferramentas internas, integrações e deploy',
+        'Entregas e deploys contínuos com alocação inteligente entre mobile, web, backend, CRM, ferramentas internas e integrações',
         'Reunião semanal para coletar demandas, revisar prioridades e mostrar progresso',
+        'Comunicação direta sempre que necessário durante a execução',
+        'Ritmo contínuo de entregas e deploys enquanto o plano estiver ativo',
         'Resgate de app, evolução de produto, dashboards e melhorias de fluxo',
         'Acesso direto à liderança de entrega',
         'Documentação e transferência técnica quando aplicável',
@@ -121,7 +126,8 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
         'Múltiplas frentes quando necessário',
         'Mobile, web, backend, banco, CRM, IA e integrações',
         'Suporte prioritário e cobertura de deploy',
-        'Reuniões diárias de alinhamento quando o projeto exigir',
+        'Comunicação direta sempre que necessário durante a execução',
+        'Coordenação flexível, podendo chegar a um ritmo diário quando necessário',
         'Colaboradores adicionais quando o escopo exigir',
         'Planejamento semanal estruturado'
       ],
@@ -136,7 +142,7 @@ const copyByLocale = {
     title: 'Clear software delivery plans',
     highlight: 'without hiring first',
     subtitle:
-      'Choose the level of support you need now. Start with a clear first milestone, then continue month to month with no upfront payment, weekly progress, and a fixed rate while your plan remains active.',
+      'Choose the level of support you need now. Start with a clear first milestone, then continue month to month with no upfront payment, a cadence that matches the selected plan, and a fixed rate while your plan remains active.',
     note:
       'Plans define monthly delivery capacity and operating rhythm. For the first step, we align scope, access, timeline, and acceptance criteria so you can evaluate real delivery before expanding.',
     footer: 'Need more capacity or a custom scope? We can structure a focused monthly plan around your current app, backlog, team, or release deadline.'
@@ -146,7 +152,7 @@ const copyByLocale = {
     title: 'Planos claros para entrega de software',
     highlight: 'sem contratar primeiro',
     subtitle:
-      'Escolha o nível de suporte que você precisa agora. Comece por uma primeira entrega clara e continue mês a mês sem pagamento inicial, com progresso semanal e valor fixo enquanto o plano permanecer ativo.',
+      'Escolha o nível de suporte que você precisa agora. Comece por uma primeira entrega clara e continue mês a mês sem pagamento inicial, com a cadência compatível com o plano escolhido e valor fixo enquanto o plano permanecer ativo.',
     note:
       'Os planos definem capacidade mensal de entrega e ritmo operacional. Na primeira etapa, alinhamos escopo, acessos, prazo e critérios de aceite para você avaliar uma entrega real antes de expandir.',
     footer: 'Precisa de mais capacidade ou um escopo diferente? Podemos montar um plano mensal focado no seu app, backlog, time ou prazo de deploy.'

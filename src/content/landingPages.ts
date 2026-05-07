@@ -97,9 +97,9 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
   description:
     'Choose the delivery capacity that fits the current stage. Growth is the most selected plan because it uses intelligent allocation across the highest-priority part of the product each week.',
   highlights: [
-    'Starter: focused small scope, fixes, maintenance, controlled product movement, and weekly demand intake meeting.',
-    'Growth: weekly demand intake meeting plus intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, and release support.',
-    'Dedicated: starts at USD 3,500/mo for more capacity, multiple workstreams, urgent delivery, active operations, and daily coordination meetings when needed.'
+    'Starter: focused small scope with scheduled deliveries and deploys, plus a biweekly demand intake meeting and direct communication whenever needed.',
+    'Growth: continuous deliveries and deploys with intelligent allocation across mobile, web, backend, CRM, internal tools, and integrations, plus a weekly demand intake meeting and direct communication whenever needed.',
+    'Dedicated: starts at USD 3,500/mo for more capacity, multiple workstreams, urgent delivery, active operations, direct communication whenever needed, and flexible coordination that can reach a daily rhythm when needed.'
   ],
   note: 'No upfront payment, month-to-month engagement, and the selected plan rate stays fixed while the engagement remains active.'
 };
@@ -110,9 +110,9 @@ const PT_CURRENT_PRICING: LandingPagePricing = {
   description:
     'Escolha a capacidade de entrega que combina com o momento atual. Growth é o plano mais escolhido porque usa alocação inteligente na parte mais prioritária do produto a cada semana.',
   highlights: [
-    'Starter: escopo pequeno, correções, manutenção, movimento controlado de produto e reunião semanal para demandas.',
-    'Growth: reunião semanal para demandas e alocação inteligente entre mobile, web, backend, CRM, ferramentas internas, integrações e deploy.',
-    'Dedicated: a partir de US$ 3.500/mês para mais capacidade, múltiplas frentes, urgência, operações ativas e reuniões diárias quando necessário.'
+    'Starter: escopo pequeno com entregas e deploys programados, além de reunião quinzenal para demandas e comunicação direta sempre que necessário.',
+    'Growth: entregas e deploys contínuos com alocação inteligente entre mobile, web, backend, CRM, ferramentas internas e integrações, além de reunião semanal para demandas e comunicação direta sempre que necessário.',
+    'Dedicated: a partir de US$ 3.500/mês para mais capacidade, múltiplas frentes, urgência, operações ativas, comunicação direta sempre que necessário e coordenação flexível, podendo chegar a ritmo diário quando necessário.'
   ],
   note: 'Sem pagamento inicial, contrato mês a mês e o valor do plano escolhido permanece fixo enquanto o plano estiver ativo.'
 };
@@ -826,7 +826,7 @@ const EN_CONTENT: LandingContentByLocale = {
     heroHighlights: [
       'Founder-led delivery with a compact core team and scope-based collaborators.',
       'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
-      'Zero upfront payment, weekly demos, and one team for product, backend, frontend, mobile, AI, and release.'
+      'Zero upfront payment, plan-aligned delivery cadence, and one team for product, backend, frontend, mobile, AI, and release.'
     ],
     ctaLabel: 'Schedule a discovery call',
     ctaSubject: 'Dev as a Service subscription',
@@ -910,7 +910,7 @@ const EN_CONTENT: LandingContentByLocale = {
     deliverablesHeading: 'Included in the team',
     deliverables: [
       'Kanban-based execution with backend, frontend, database, internal tools, and mobile in parallel.',
-      'Loom updates plus weekly demos in Teams, Jira, Linear, Notion, or your stack.',
+      'Direct communication whenever needed, written updates during the week, and weekly demos, with coordination able to reach a daily rhythm when needed, in Teams, Jira, Linear, Notion, or your stack.',
       'Bug triage within 24 hours and weekend standby during launch windows.'
     ],
     fitHeading: 'Best fit',
@@ -1850,7 +1850,7 @@ const PT_CONTENT: LandingContentByLocale = {
     heroHighlights: [
       'Entrega liderada pelo fundador com núcleo enxuto e colaboradores por escopo.',
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
-      'Sem pagamento antecipado, demonstrações semanais e um time para produto, backend, frontend, mobile, IA e deploy.'
+      'Sem pagamento antecipado, cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy.'
     ],
     ctaLabel: 'Agendar conversa inicial',
     ctaSubject: 'Time de desenvolvimento sob demanda',
@@ -1934,7 +1934,7 @@ const PT_CONTENT: LandingContentByLocale = {
     deliverablesHeading: 'O que já vem com o time',
     deliverables: [
       'Execução em Kanban com backend, frontend, banco, ferramentas internas e mobile em paralelo.',
-      'Atualizações em Loom e demonstração semanal no Teams, Jira, Linear, Notion ou nas ferramentas que você já usa.',
+      'Comunicação direta sempre que necessário, atualizações escritas ao longo da semana e demonstração semanal, com coordenação podendo chegar a ritmo diário quando necessário, no Teams, Jira, Linear, Notion ou nas ferramentas que você já usa.',
       'Triage de bugs em até 24h e cobertura de fim de semana em janelas de deploy.'
     ],
     fitHeading: 'Melhor encaixe',

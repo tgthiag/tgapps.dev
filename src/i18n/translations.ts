@@ -355,7 +355,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'What working with us feels like',
       paragraphs: [
         'You always speak with someone able to make decisions. We keep the team compact so context, accountability, and product sense stay intact from kickoff to handoff.',
-        'We adopt your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. Expect written notes plus short Loom videos three times per week and a weekly demo with timing, risks, and budgets.',
+        'We adopt your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. Expect direct communication whenever needed, written updates during the week, and a weekly demo with timing, risks, and budgets.',
         'Because product, engineering, release, and ops stay together, you do not need extra vendors for monitoring, analytics, or training. When we pause, you keep every repo, design file, and runbook.'
       ],
       missionHeading: 'How we protect your roadmap',
@@ -382,7 +382,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       stats: [
         { number: '≤2 hours', label: 'Average weekday response time on your chosen channel or email.' },
         { number: '5 days', label: 'Average time from contract signature to first branch and design artifact.' },
-        { number: 'Weekly demo', label: 'Live call or Loom update with risks, decisions, and metrics.' }
+        { number: 'Weekly demo', label: 'Weekly demo with risks, decisions, and metrics.' }
       ],
       passionTitle: 'D-U-N-S® 651029828',
       passionDescription:
@@ -694,7 +694,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'Como é trabalhar conosco',
       paragraphs: [
         'Você fala direto com quem decide. Mantemos o time compacto para preservar contexto, responsabilidade e visão de produto.',
-        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. Mandamos notas escritas e vídeos curtos no Loom três vezes por semana, além de demonstração semanal com riscos e custos.',
+        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. Mantemos comunicação direta sempre que necessário, atualizações escritas ao longo da semana e demonstração semanal com riscos e custos.',
         'Engenharia de deploy e operação ficam no mesmo time, então você não precisa de outros fornecedores para monitoramento, analytics ou treinamento. Ao finalizar, tudo fica com você.'
       ],
       missionHeading: 'Como protegemos seu plano de evolução',
@@ -721,7 +721,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       stats: [
         { number: '≤2h', label: 'Tempo médio de resposta no canal escolhido ou e-mail em dias úteis.' },
         { number: '5 dias', label: 'Tempo médio entre assinatura e primeiro código no repositório ou entrega de design.' },
-        { number: 'Demonstração semanal', label: 'Reunião ou Loom com riscos, decisões e métricas.' }
+        { number: 'Demonstração semanal', label: 'Demonstração semanal com riscos, decisões e métricas.' }
       ],
       passionTitle: 'D-U-N-S® 651029828',
       passionDescription:
