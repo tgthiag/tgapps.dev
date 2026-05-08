@@ -20,11 +20,11 @@ const Hero = () => {
     language === 'pt'
       ? {
           eyebrow: 'Plano mais escolhido',
-          line: 'Growth, US$ 2.000/mês, fixo enquanto ativo'
+          line: 'Growth, US$ 2.000/mês, com entregas contínuas e revisão semanal'
         }
       : {
           eyebrow: 'Most selected plan',
-          line: 'Growth, USD 2,000/mo, fixed while active'
+          line: 'Growth, USD 2,000/mo, with continuous delivery and weekly review'
         };
 
   return (

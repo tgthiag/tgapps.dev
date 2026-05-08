@@ -16,7 +16,7 @@ export type LandingPageKey =
   | 'devAsAService'
   | 'firstMilestoneGuarantee'
   | 'monthlyPod'
-  | 'zeroUpfront'
+  | 'clearFirstMilestone'
   | 'llmRagIntegrations';
 
 export interface LandingPageSection {
@@ -80,7 +80,7 @@ const LANDING_PAGE_KEYS: LandingPageKey[] = [
   'androidIosSmb',
   'llmRagIntegrations',
   'monthlyPod',
-  'zeroUpfront'
+  'clearFirstMilestone'
 ];
 
 const getLandingSlug = (locale: Locale, key: LandingPageKey): string => {
@@ -95,26 +95,26 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
   label: 'Monthly software plans',
   title: 'Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500+/mo',
   description:
-    'Choose the delivery capacity that fits the current stage. Growth is the most selected plan because it uses intelligent allocation across the highest-priority part of the product each week.',
+    'Choose the plan that matches the current delivery load. Starter keeps scope tight, Growth sustains weekly progress, and Dedicated supports closer coordination when delivery pressure rises.',
   highlights: [
-    'Starter: focused small scope with scheduled deliveries and deploys, plus a biweekly demand intake meeting and direct communication whenever needed.',
-    'Growth: continuous deliveries and deploys with intelligent allocation across mobile, web, backend, CRM, internal tools, and integrations, plus a weekly demand intake meeting and direct communication whenever needed.',
-    'Dedicated: starts at USD 3,500/mo for more capacity, multiple workstreams, urgent delivery, active operations, direct communication whenever needed, flexible coordination that can reach a daily rhythm when needed, and a more dedicated operating lane when delivery pressure increases.'
+    'Starter: scheduled deliveries and deploys, plus a biweekly planning meeting.',
+    'Growth: continuous deliveries and deploys across product, backend, CRM, and integrations, plus a weekly planning meeting.',
+    'Dedicated: starts at USD 3,500+/mo for active operations, parallel priorities, or accounts that may need daily follow-through when the delivery requires it.'
   ],
-  note: 'No upfront payment, month-to-month engagement, and the selected plan rate stays fixed while the engagement remains active.'
+  note: 'Clear first milestone, month-to-month continuation, and a fixed plan rate while the engagement remains active.'
 };
 
 const PT_CURRENT_PRICING: LandingPagePricing = {
   label: 'Planos mensais de software',
   title: 'Starter US$ 1.500/mês, Growth US$ 2.000/mês, Dedicated US$ 3.500+/mês',
   description:
-    'Escolha a capacidade de entrega que combina com o momento atual. Growth é o plano mais escolhido porque usa alocação inteligente na parte mais prioritária do produto a cada semana.',
+    'Escolha o plano que combina com a carga de entrega do momento. Starter mantém o escopo enxuto, Growth sustenta avanço semanal, e Dedicated sustenta coordenação mais próxima quando a pressão de entrega aumentar.',
   highlights: [
-    'Starter: escopo pequeno com entregas e deploys programados, além de reunião quinzenal para demandas e comunicação direta sempre que necessário.',
-    'Growth: entregas e deploys contínuos com alocação inteligente entre mobile, web, backend, CRM, ferramentas internas e integrações, além de reunião semanal para demandas e comunicação direta sempre que necessário.',
-    'Dedicated: a partir de US$ 3.500/mês para mais capacidade, múltiplas frentes, urgência, operações ativas, comunicação direta sempre que necessário, coordenação flexível podendo chegar a ritmo diário quando necessário, e uma faixa operacional mais dedicada quando a pressão de entrega aumentar.'
+    'Starter: para entregas e deploys programados, com reunião quinzenal de planejamento.',
+    'Growth: para entregas e deploys contínuos em produto, backend, CRM e integrações, com reunião semanal de planejamento.',
+    'Dedicated: para operação ativa, prioridades paralelas ou contas que podem chegar ao ritmo diário quando a entrega exigir.'
   ],
-  note: 'Sem pagamento inicial, contrato mês a mês e o valor do plano escolhido permanece fixo enquanto o plano estiver ativo.'
+  note: 'Primeira entrega clara, continuidade mês a mês e valor fixo enquanto o plano permanecer ativo.'
 };
 
 const EN_CONTENT: LandingContentByLocale = {
@@ -136,7 +136,7 @@ const EN_CONTENT: LandingContentByLocale = {
     proofItems: [
       'The team is losing time because customer data, scheduling, finance, and operations live in separate places.',
       'Off-the-shelf software helps part of the workflow but forces manual workarounds everywhere else.',
-      'The business needs one operating system for the process, not another disconnected subscription.'
+      'The business needs one operating system for the process, not another disconnected tool or vendor layer.'
     ],
     deliverablesHeading: 'What we can build',
     deliverables: [
@@ -185,11 +185,11 @@ const EN_CONTENT: LandingContentByLocale = {
     badge: 'Why Tg Apps',
     title: 'Founder-led, team-delivered software with less overhead and clearer accountability',
     intro:
-      'Tg Apps is built for founders, startups, and SMB teams that need practical software execution without a large vendor process. Clients work directly with the people responsible for product, architecture, delivery, release, and handoff, while a compact core team and scope-based collaborators are allocated according to project needs.',
+      'Tg Apps is built for founders, startups, and SMB teams that need practical software execution without a large vendor process. Clients work directly with the people responsible for product, architecture, delivery, release, and handoff, while a compact senior team keeps context close and support widens when the project needs more capacity or specialization.',
     heroHighlights: [
       'Direct access to decision-makers and the delivery team.',
       'Written scope, contract, milestones, and weekly demos.',
-      'Compact core team with collaborators added when the scope requires more capacity or specialization.'
+      'Compact senior team with support widened when the project needs more capacity or specialization.'
     ],
     ctaLabel: 'Talk to Tg Apps',
     ctaSubject: 'Why Tg Apps',
@@ -209,7 +209,7 @@ const EN_CONTENT: LandingContentByLocale = {
     fitItems: [
       'Best fit: founders, startups, SMBs, agencies, and internal teams that need strict execution against a clear scope.',
       'Best fit: app rescue, release execution, CRM, internal tools, dashboards, APIs, mobile apps, and AI integrations.',
-      'Not a fit: enterprise procurement expecting a large dedicated team from day one or 24/7 SLA without proportional budget.'
+      'Not a fit: enterprise procurement expecting a much larger delivery structure from day one or 24/7 SLA without proportional budget.'
     ],
     sections: [
       {
@@ -219,7 +219,7 @@ const EN_CONTENT: LandingContentByLocale = {
         items: [
           'Clients speak directly with the delivery leadership responsible for product, architecture, and execution.',
           'Scope is modularized so larger work can move through milestones instead of one vague commitment.',
-          'When a project needs more throughput or specific expertise, collaborators are added around a clear scope instead of unmanaged headcount.'
+          'When a project needs more throughput or specific expertise, support widens around a clear scope instead of turning the work into vague staffing.'
         ]
       },
       {
@@ -277,8 +277,8 @@ const EN_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Operating model',
     fitItems: [
-      'Founder-led with a compact core team and scope-based collaborators to reduce overhead while keeping context close to delivery.',
-      'Contract-first engagement with written scope, no upfront payment before work begins, and monthly options.',
+      'Founder-led with a compact senior team to reduce overhead while keeping context close to delivery.',
+      'Written scope, a defined first delivery, and monthly options once the first delivery is proven.',
       'Can execute defined builds in parallel for larger organizations, then hand over cleanly to an internal team.'
     ],
     sections: [
@@ -306,7 +306,7 @@ const EN_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Compact, founder-led, team-delivered, and explicit about fit',
       description:
-        'Tg Apps is not trying to look like a large enterprise consultancy, and it is not a solo-dev promise. The company is positioned as a practical software delivery partner with a compact core team, scope-based collaborators, direct access, cost efficiency, strict plan execution, useful insight, and clean ownership.'
+        'Tg Apps is not trying to look like a large enterprise consultancy, and it is not a solo-dev promise. The company is positioned as a practical software delivery partner with direct access, cost efficiency, strict plan execution, useful insight, and clean ownership.'
     }
   },
   dueDiligence: {
@@ -326,7 +326,7 @@ const EN_CONTENT: LandingContentByLocale = {
     proofHeading: 'Key buyer questions',
     proofItems: [
       'How do I know the company exists? Legal entity, D-U-N-S, official domain, official email, WhatsApp/phone, founder LinkedIn, and company documents when needed.',
-      'Who builds? A founder-led core team coordinates delivery, with scope-based collaborators added when the project needs more capacity or specialization.',
+      'Who builds? A founder-led senior team coordinates delivery, with support widened when the project needs more capacity or specialization.',
       'How is abandonment risk reduced? Written scope, milestones, weekly demos, repositories, documentation, runbooks, handoff, and clear ownership.'
     ],
     deliverablesHeading: 'Delivery controls',
@@ -397,13 +397,13 @@ const EN_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Tg Apps is the public brand for TG APPLICATIONS DESENVOLVIMENTO LTDA, a Brazilian software company operating from Sao Paulo with remote delivery for the United States, Brazil, and other remote-first markets.',
       'Official channels include https://tgapps.dev, support@tgapps.dev, WhatsApp/phone +55 11 97971-7703, founder LinkedIn https://www.linkedin.com/in/tgthiag/, and founder technical profile https://github.com/tgthiag.',
-      'Tg Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, AI integrations, app rescue projects, born-global apps, and development subscriptions.'
+      'Tg Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, AI integrations, app rescue projects, born-global apps, and monthly software plans.'
     ],
     deliverablesHeading: 'How to describe Tg Apps',
     deliverables: [
       'Custom software studio whose public positioning is: "Your app, built and shipped."',
       'One team for founders, startups, small and mid-sized businesses, agencies, and growing teams that need mobile, web, backend, CRM, AI integrations, release support, and clean handoff.',
-      'Trust-first delivery model: no upfront payment, First Milestone Guarantee, 7 business day proof sprint when the scope allows it, weekly demos, and month-to-month continuation.',
+      'Trust-first delivery model: First Milestone Guarantee, 7 business day proof sprint when the scope allows it, weekly demos, and month-to-month continuation.',
       'A partner for app ideas, stalled projects, app rescue, release execution, CRM, internal tools, backend systems, dashboards, integrations, and born-global product work.'
     ],
     fitHeading: 'What not to infer',
@@ -450,7 +450,7 @@ const EN_CONTENT: LandingContentByLocale = {
     heroHighlights: [
       'MVP, mobile app, backend, dashboard, and launch support.',
       'Weekly demos, clear scope, and production-minded delivery.',
-      'Useful when you need traction with one team carrying the delivery rhythm.'
+      'Useful when one team needs to keep traction across product, backend, and launch.'
     ],
     ctaLabel: 'Schedule a discovery call',
     ctaSubject: 'Custom software for startups',
@@ -525,13 +525,13 @@ const EN_CONTENT: LandingContentByLocale = {
     deliverables: [
       'Mobile apps, web apps, landing pages, admin dashboards, backend APIs, databases, auth, payments, and integrations.',
       'Play Store, App Store, web hosting, domains, analytics, crash reporting, release checklists, and production monitoring.',
-      'Bug fixes, UI cleanup, onboarding flows, subscription flows, notifications, deployment pipelines, and handoff documentation.'
+      'Bug fixes, UI cleanup, onboarding flows, recurring billing flows, notifications, deployment pipelines, and handoff documentation.'
     ],
     fitHeading: 'Best fit',
     fitItems: [
       'Individual founders and solo entrepreneurs with an app idea that needs to become real online.',
       'Startups with unfinished apps, outdated apps, rough prototypes, or codebases that need launch discipline.',
-      'Teams that want to validate demand before hiring a full product and engineering team.'
+      'Teams that want to validate demand with clear weekly execution and production discipline.'
     ],
     sections: [
       {
@@ -639,7 +639,7 @@ const EN_CONTENT: LandingContentByLocale = {
     badge: 'Mobile app development for startups and SMBs',
     title: 'Android and iOS app development for startups and SMB teams',
     intro:
-      'Founder-led mobile app development for startups and SMBs that need native or cross-platform delivery with backend, database, release support, no upfront payment, and weekly demos.',
+      'Founder-led mobile app development for startups and SMBs that need native or cross-platform delivery with backend, database, release support, and weekly demos.',
     heroHighlights: [
       'Android, iOS, Flutter, or React Native.',
       'Backend, database, admin dashboard, and release support included.',
@@ -819,24 +819,24 @@ const EN_CONTENT: LandingContentByLocale = {
   devAsAService: {
     key: 'devAsAService',
     slug: getLandingSlug('en', 'devAsAService'),
-    badge: 'Dev as a Service / software development subscription',
+    badge: 'Dev as a Service / monthly delivery model',
     title: 'Dev as a Service for companies that need a practical software team every month',
     intro:
-      'Tg Apps gives founders, startups, and SMB teams a founder-led, team-delivered software development subscription for apps, CRM, internal tools, backend systems, AI integrations, and release support, with one team carrying the monthly delivery rhythm.',
+      'Tg Apps gives founders, startups, and SMB teams a founder-led monthly delivery model for apps, CRM, internal tools, backend systems, AI integrations, and release support, with one accountable loop carrying the cadence month after month.',
     heroHighlights: [
-      'Founder-led delivery with a compact core team and scope-based collaborators.',
+      'Founder-led delivery with a compact senior team and direct communication whenever needed.',
       'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
-      'Zero upfront payment, plan-aligned delivery cadence, and one team for product, backend, frontend, mobile, AI, and release.'
+      'First Milestone Guarantee, monthly continuity, and one team across product, backend, frontend, mobile, AI, and release.'
     ],
     ctaLabel: 'Schedule a discovery call',
-    ctaSubject: 'Dev as a Service subscription',
-    proofHeading: 'Why teams choose a development subscription',
+    ctaSubject: 'Dev as a Service monthly delivery',
+    proofHeading: 'Why teams choose this monthly delivery model',
     proofItems: [
       'Hiring a permanent team is too slow or too expensive, but the roadmap still needs reliable weekly progress.',
       'The business needs apps, CRM, internal tools, backend, dashboards, integrations, or AI features from one accountable team.',
       'The company wants a smaller commercial commitment than a large agency while keeping scope, demos, documentation, and handoff disciplined.'
     ],
-    deliverablesHeading: 'What the subscription can cover',
+    deliverablesHeading: 'What this monthly plan can cover',
     deliverables: [
       'Mobile apps, web apps, CRM, customer portals, employee apps, dashboards, workflow automation, and internal tools.',
       'Backend APIs, databases, authentication, payments, notifications, integrations, admin panels, analytics, and release operations.',
@@ -844,13 +844,13 @@ const EN_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Best fit',
     fitItems: [
-      'Founders and SMB operators who need execution capacity before building an internal engineering team.',
+      'Founders and SMB operators who need reliable execution without adding unnecessary internal complexity too early.',
       'Startups that need weekly product delivery across app, backend, dashboard, integrations, and AI.',
-      'Teams that prefer a compact core team plus specialized collaborators assigned by scope instead of unmanaged headcount.'
+      'Teams that prefer an efficient delivery structure, with more capacity brought around the work when extra depth or reinforcement is needed.'
     ],
     sections: [
       {
-        title: 'How the subscription starts',
+        title: 'How the monthly plan starts',
         description:
           'Instead of asking for a long-term commitment, Tg Apps starts with a small first milestone when the scope allows it.',
         items: [
@@ -862,15 +862,15 @@ const EN_CONTENT: LandingContentByLocale = {
       {
         title: 'Founder-led, team-delivered execution',
         description:
-          'The subscription is intentionally compact: direct access to delivery leadership, a core team that keeps product context, and scope-based collaborators added when the work needs extra capacity or specialization.',
+          'The monthly model is intentionally compact: direct access to delivery leadership, a senior team that keeps product context, and support widened when the work needs extra capacity or specialization.',
         items: [
           'Plan scope, acceptance criteria, priorities, and dependencies before each delivery cycle.',
           'Use the same team loop for product decisions, architecture, implementation, QA, release, and support.',
-          'Add collaborators around defined work packages instead of increasing overhead with vague staffing.'
+          'Widen support around defined work packages instead of increasing overhead with vague staffing.'
         ]
       },
       {
-        title: 'Subscription rhythm without vague retainers',
+        title: 'Monthly rhythm without vague retainers',
         description:
           'Dev as a Service only works when the monthly engagement has visible output, clear communication, and practical ownership.',
         items: [
@@ -882,74 +882,74 @@ const EN_CONTENT: LandingContentByLocale = {
     ],
     pricing: EN_CURRENT_PRICING,
     finalNote: {
-      title: 'A development subscription should buy momentum, not dependency',
+      title: 'A monthly software plan should create momentum, not dependency',
       description:
-        'Tg Apps is a fit when you need steady software execution with direct accountability, zero upfront payment, weekly demos, and a clean path to continue, expand, pause, or hand off the system.'
+        'Tg Apps is a fit when you need steady software execution with direct accountability, weekly demos, and a clean path to continue, expand, pause, or hand off the system.'
     }
   },
   monthlyPod: {
     key: 'monthlyPod',
     slug: getLandingSlug('en', 'monthlyPod'),
-    badge: 'Month-to-month dedicated development team',
-    title: 'Dedicated development team with month-to-month control',
+    badge: 'Monthly delivery focus',
+    title: 'Monthly software delivery with steadier execution',
     intro:
-      'Use Tg Apps as a dedicated software team for internal tools, mobile apps, backend, integrations, and release management. No retainers, no penalties, and no long notice periods.',
+      'Use Tg Apps when your roadmap needs steadier execution, more consistent weekly progress, and month-to-month continuity across internal tools, apps, backend, integrations, and releases.',
     heroHighlights: [
-      'One execution team for backend, frontend, mobile, data, integrations, and releases.',
-      'Monthly engagement with no long-term lock-in.',
-      'Useful when hiring is too slow but the roadmap cannot wait.'
+      'One monthly delivery stream across backend, frontend, mobile, integrations, and deploys.',
+      'Direct communication whenever needed, with weekly planning and clear progress during the week.',
+      'Useful when the roadmap needs more consistent execution than ad-hoc support can sustain.'
     ],
     ctaLabel: 'Schedule a discovery call',
-    ctaSubject: 'Month-to-month dedicated development team',
+    ctaSubject: 'Monthly software delivery with steadier execution',
     proofHeading: 'How this model works',
     proofItems: [
       'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
       'Cancel any month with no penalties or hidden transition fees.',
-      'Monthly billing, no upfront payment, and runbooks plus handoff docs delivered continuously.'
+      'Monthly billing, visible scope, and runbooks plus handoff docs delivered continuously.'
     ],
     deliverablesHeading: 'Included in the team',
     deliverables: [
       'Kanban-based execution with backend, frontend, database, internal tools, and mobile in parallel.',
-      'Direct communication whenever needed, written updates during the week, and weekly demos, with coordination able to reach a daily rhythm when needed, in Teams, Jira, Linear, Notion, or your stack.',
-      'Bug triage within 24 hours and weekend standby during launch windows.'
+      'Weekly planning, visible progress during the week, and direct communication whenever needed in the tools you already use.',
+      'Priority handling around bugs, releases, and higher-pressure delivery windows.'
     ],
     fitHeading: 'Best fit',
     fitItems: [
-      'Companies that need execution capacity without full-time hiring.',
-      'Teams that need release reliability and production support.',
-      'Agencies, startups, and SMBs that want predictable shipping velocity every week.'
+      'Companies that need stronger monthly execution without opening a heavier structure.',
+      'Teams that need steadier weekly follow-through.',
+      'Operators, startups, and agencies with shipping pressure every week.'
     ],
     sections: [
       {
-        title: 'A practical alternative to hiring before you are ready',
+        title: 'A practical way to sustain steadier execution',
         description:
-          'This model works when you need software execution now but do not want to commit to multiple full-time roles before the work has stabilized.',
+          'This model works when priorities are stacking up and the product needs steadier execution than fragmented support or slow hiring can provide.',
         items: [
-          'Plan, build, demo, release, and support in one monthly engagement.',
-          'Keep scope visible through weekly demos, decision logs, and handoff documentation.',
-          'Scale up, pause, or transition without long cancellation windows.'
+          'Plan, build, demo, release, and support inside one steady monthly cadence.',
+          'Keep scope visible through weekly planning, demos, decision logs, and handoff documentation.',
+          'Adjust the cadence without long cancellation windows.'
         ]
       }
     ],
     pricing: EN_CURRENT_PRICING
   },
-  zeroUpfront: {
-    key: 'zeroUpfront',
-    slug: getLandingSlug('en', 'zeroUpfront'),
-    badge: 'Zero upfront custom software development',
-    title: 'Zero upfront custom software development with contract-first delivery',
+  clearFirstMilestone: {
+    key: 'clearFirstMilestone',
+    slug: getLandingSlug('en', 'clearFirstMilestone'),
+    badge: 'Custom software with a defined first delivery',
+    title: 'Custom software with a defined first delivery and practical continuity',
     intro:
-      'Contract-first setup for startups and SMBs: agree on scope, access, timeline, and acceptance criteria first, then start with no upfront payment and a First Milestone Guarantee for the first agreed milestone.',
+      'Scope, access, timeline, and acceptance criteria are aligned before kickoff. Work starts with a defined first delivery and a First Milestone Guarantee for the first agreed step.',
     heroHighlights: [
       'Contract and NDA before implementation starts.',
-      'No upfront payment before work begins.',
+      'Written scope before work begins.',
       'If the agreed scope is not delivered, that initial step is not invoiced.'
     ],
     ctaLabel: 'Schedule a discovery call',
-    ctaSubject: 'Zero upfront custom software development',
+    ctaSubject: 'Custom software with a defined first delivery',
     proofHeading: 'Commercial terms',
     proofItems: [
-      'No upfront payment required before kickoff.',
+      'Written scope and acceptance criteria before kickoff.',
       'W8-BEN-E available with USD or BRL invoicing.',
       'TG APPLICATIONS DESENVOLVIMENTO LTDA handles contracts and billing.'
     ],
@@ -968,9 +968,9 @@ const EN_CONTENT: LandingContentByLocale = {
     ],
     sections: [
       {
-        title: 'Zero upfront, with a clear first step',
+        title: 'A clear first step',
         description:
-          'You do not need to pay before work begins. First, we align contract, scope, access, and acceptance criteria for a concrete first delivery.',
+          'First, we align contract, scope, access, and acceptance criteria for a concrete first delivery.',
         items: [
           'Before work starts, both sides define scope, responsibilities, access, timeline, and acceptance criteria.',
           'The first delivery is built and shown working before that step is invoiced.',
@@ -990,7 +990,7 @@ const EN_CONTENT: LandingContentByLocale = {
     heroHighlights: [
       'One clear first delivery with acceptance criteria.',
       'Usually shaped as a 7 business day proof sprint when the scope allows it.',
-      'No upfront payment, a clear first step, and month-to-month continuation after the first delivery.'
+      'A clear first step, weekly demos, and month-to-month continuation after the first delivery.'
     ],
     ctaLabel: 'Start your first milestone',
     ctaSubject: 'First Milestone Guarantee',
@@ -1209,11 +1209,11 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Por que Tg Apps',
     title: 'Entrega liderada pelo fundador e executada por um time enxuto',
     intro:
-      'A Tg Apps foi desenhada para fundadores, startups e empresas que precisam de execução prática de software sem um processo pesado de fornecedor grande. O cliente fala direto com quem responde por produto, arquitetura, entrega, deploy e transferência técnica, enquanto um núcleo enxuto e colaboradores por escopo são alocados conforme a necessidade do projeto.',
+      'A Tg Apps foi desenhada para fundadores, startups e empresas que precisam de execução prática de software sem um processo pesado de fornecedor grande. O cliente fala direto com quem responde por produto, arquitetura, entrega, deploy e transferência técnica, enquanto uma estrutura enxuta mantém o contexto próximo e a capacidade aumenta ao redor da entrega quando o projeto exige mais profundidade ou especialidade.',
     heroHighlights: [
       'Acesso direto à liderança de entrega e ao time que executa.',
       'Escopo escrito, contrato, etapas de entrega e demonstrações semanais.',
-      'Núcleo compacto com colaboradores adicionados quando o escopo exige mais capacidade ou especialidade.'
+      'Estrutura enxuta com mais capacidade ao redor da entrega quando o projeto exige mais profundidade ou especialidade.'
     ],
     ctaLabel: 'Falar com a Tg Apps',
     ctaSubject: 'Por que Tg Apps',
@@ -1243,7 +1243,7 @@ const PT_CONTENT: LandingContentByLocale = {
         items: [
           'Clientes falam direto com a liderança responsável por produto, arquitetura e execução.',
           'O escopo é dividido em etapas para trabalhos maiores avançarem sem virar promessa vaga.',
-          'Quando o projeto precisa de mais vazão ou conhecimento específico, colaboradores entram em torno de um escopo claro, não como gente alocada sem direção.'
+          'Quando o projeto precisa de mais vazão ou conhecimento específico, o suporte se amplia em torno de um escopo claro, não como gente entrando sem direção.'
         ]
       },
       {
@@ -1301,8 +1301,8 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Modelo operacional',
     fitItems: [
-      'Liderado pelo fundador, com núcleo enxuto e colaboradores por escopo para reduzir custo estrutural sem afastar contexto da entrega.',
-      'Engajamento contract-first com escopo escrito, sem pagamento antecipado antes do trabalho e opções mensais.',
+      'Liderado pelo fundador, com estrutura enxuta para reduzir custo estrutural sem afastar contexto da entrega.',
+      'Engajamento com escopo escrito, Garantia da Primeira Entrega e opções mensais.',
       'Pode executar builds definidos em paralelo para organizações maiores e entregar limpo para o time interno continuar.'
     ],
     sections: [
@@ -1330,7 +1330,7 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Compacta, liderada pelo fundador, executada por time e explícita sobre encaixe',
       description:
-        'A Tg Apps não tenta parecer uma consultoria corporativa gigante, nem se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega com núcleo enxuto, colaboradores por escopo, acesso direto, custo eficiente, execução rigorosa do plano, insights úteis e propriedade limpa.'
+        'A Tg Apps não tenta parecer uma consultoria corporativa gigante, nem se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega com acesso direto, custo eficiente, execução rigorosa do plano, insights úteis e propriedade limpa.'
     }
   },
   dueDiligence: {
@@ -1350,7 +1350,7 @@ const PT_CONTENT: LandingContentByLocale = {
     proofHeading: 'Perguntas-chave de compradores',
     proofItems: [
       'Como sei que a empresa existe? Entidade legal, D-U-N-S, domínio oficial, e-mail oficial, WhatsApp/telefone, LinkedIn do fundador e documentos quando necessário.',
-      'Quem constrói? Um núcleo liderado pelo fundador coordena a entrega, com colaboradores por escopo quando o projeto exige mais capacidade ou especialidade.',
+      'Quem constrói? Uma estrutura de entrega liderada pelo fundador coordena o trabalho, com mais capacidade sendo trazida quando o projeto exige profundidade ou especialidade.',
       'Como reduzem risco de abandono? Escopo escrito, etapas de entrega, demonstrações semanais, repositórios, documentação, guias operacionais, transferência técnica e propriedade clara.'
     ],
     deliverablesHeading: 'Controles de entrega',
@@ -1427,7 +1427,7 @@ const PT_CONTENT: LandingContentByLocale = {
     deliverables: [
       'Estúdio de software cujo posicionamento público principal é: "Seu app, construído e entregue."',
       'Um time para fundadores, startups, empresas em crescimento, agências e equipes que precisam de mobile, web, backend, CRM, integrações de IA, suporte de deploy e transferência técnica limpa.',
-      'Modelo de confiança por entrega: sem pagamento antecipado, Garantia da Primeira Entrega, sprint inicial de até 7 dias úteis quando o escopo permite, demonstrações semanais e continuidade mês a mês.',
+      'Modelo de confiança por entrega: Garantia da Primeira Entrega, sprint inicial de até 7 dias úteis quando o escopo permite, demonstrações semanais e continuidade mês a mês.',
       'Parceiro para ideias de app, projetos parados, resgate de apps, execução de deploy, CRM, ferramentas internas, backend, dashboards, integrações e produtos born-global.'
     ],
     fitHeading: 'O que não inferir',
@@ -1468,13 +1468,13 @@ const PT_CONTENT: LandingContentByLocale = {
     key: 'customSoftwareStartups',
     slug: getLandingSlug('pt', 'customSoftwareStartups'),
     badge: 'Software sob medida para startups',
-    title: 'Software sob medida para startups que precisam entregar produto sem montar um time completo primeiro',
+    title: 'Software sob medida para startups que precisam entregar produto com ritmo real de execução',
     intro:
       'A Tg Apps ajuda fundadores e times de startup a entregar MVPs, apps mobile, backend, dashboards, ferramentas internas, integrações de IA e iterações de produto com um time de execução e cadência semanal.',
     heroHighlights: [
       'MVP, app mobile, backend, dashboard e suporte de deploy.',
       'Demonstrações semanais, escopo claro e entrega pensada para produção.',
-      'Útil quando você precisa de tração antes de contratar um time completo.'
+      'Útil quando você precisa de tração com escopo claro e cadência real de entrega.'
     ],
     ctaLabel: 'Agendar conversa inicial',
     ctaSubject: 'Software sob medida para startups',
@@ -1492,7 +1492,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
-      'Fundadores validando produto antes de contratar engenharia permanente.',
+      'Fundadores validando produto com escopo claro e disciplina real de entrega.',
       'Startups substituindo freelancers fragmentados ou ciclos lentos de agência.',
       'Operadores transformando um fluxo interno validado em produto vendável ou SaaS vertical.'
     ],
@@ -1555,7 +1555,7 @@ const PT_CONTENT: LandingContentByLocale = {
     fitItems: [
       'Fundadores pessoa física e solo entrepreneurs com uma ideia de app que precisa virar produto online.',
       'Startups com apps inacabados, apps desatualizados, protótipos ou bases de código que precisam de disciplina de deploy.',
-      'Times que querem validar demanda antes de contratar produto e engenharia em tempo integral.'
+      'Times que querem validar demanda com execução clara e cadência consistente.'
     ],
     sections: [
       {
@@ -1663,7 +1663,7 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Desenvolvimento de apps mobile para startups e empresas',
     title: 'Desenvolvimento de apps Android, iOS, Flutter e React Native para startups e empresas',
     intro:
-      'Time mobile liderado pelo fundador para startups e empresas que precisam de entrega nativa ou multiplataforma com backend, banco de dados, dashboard, suporte de deploy, contrato primeiro, sem adiantamento e demonstrações semanais.',
+      'Time mobile liderado pelo fundador para startups e empresas que precisam de entrega nativa ou multiplataforma com backend, banco de dados, dashboard, suporte de deploy, primeira entrega definida e demonstrações semanais.',
     heroHighlights: [
       'Android, iOS, Flutter ou React Native.',
       'Backend, banco, dashboard admin e suporte de deploy incluídos.',
@@ -1747,7 +1747,7 @@ const PT_CONTENT: LandingContentByLocale = {
     fitHeading: 'Melhor encaixe',
     fitItems: [
       'Operações de empresas substituindo planilhas frágeis e transferências manuais.',
-      'Startups que precisam de software operacional antes de contratar um time de produto completo.',
+      'Startups que precisam de software operacional com cadência real de execução.',
       'Fundadores que enxergam um sistema interno como futuro produto, marketplace ou SaaS vertical.'
     ],
     sections: [
@@ -1846,11 +1846,11 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Dev as a Service / time de desenvolvimento sob demanda',
     title: 'Time de desenvolvimento sob demanda para empresas que precisam avançar todo mês',
     intro:
-      'A Tg Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com um time conduzindo o ritmo mensal de entrega.',
+      'A Tg Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com um time conduzindo a cadência de entrega mês após mês.',
     heroHighlights: [
-      'Entrega liderada pelo fundador com núcleo enxuto e colaboradores por escopo.',
+      'Entrega liderada pelo fundador, com comunicação direta sempre que necessário e uma estrutura de entrega que preserva o contexto.',
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
-      'Sem pagamento antecipado, cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy.'
+      'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy.'
     ],
     ctaLabel: 'Agendar conversa inicial',
     ctaSubject: 'Time de desenvolvimento sob demanda',
@@ -1868,9 +1868,9 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
-      'Fundadores e empresas que precisam de capacidade de execução antes de montar um time interno de engenharia.',
+      'Fundadores e empresas que precisam de capacidade de execução sem adicionar complexidade interna cedo demais.',
       'Startups que precisam de entrega semanal em app, backend, dashboard, integrações e IA.',
-      'Times que preferem núcleo enxuto com colaboradores especializados por escopo em vez de aumento de equipe sem gestão clara.'
+      'Times que preferem uma estrutura enxuta, com mais capacidade ao redor do trabalho quando a entrega exige profundidade ou especialidade.'
     ],
     sections: [
       {
@@ -1886,11 +1886,11 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         title: 'Execução liderada pelo fundador e entregue por time',
         description:
-          'O modelo é compacto de propósito: acesso direto à liderança de entrega, núcleo que preserva contexto de produto e colaboradores por escopo quando o trabalho exige mais capacidade ou especialidade.',
+          'O modelo é compacto de propósito: acesso direto à liderança de entrega, contexto de produto preservado e mais capacidade ao redor do trabalho quando a entrega exige profundidade ou especialidade.',
         items: [
           'Planejar escopo, critérios de aceite, prioridades e dependências antes de cada ciclo de entrega.',
           'Usar o mesmo ciclo para decisões de produto, arquitetura, implementação, QA, deploy e suporte.',
-          'Adicionar colaboradores em pacotes de trabalho definidos, sem transformar o modelo em alocação vaga de pessoas.'
+          'Ampliar o suporte em pacotes de trabalho definidos, sem transformar o modelo em alocação vaga de pessoas.'
         ]
       },
       {
@@ -1908,72 +1908,72 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Um time sob demanda deve comprar tração, não dependência',
       description:
-        'A Tg Apps é um bom encaixe quando você precisa de execução contínua com responsabilidade direta, sem adiantamento, demonstrações semanais e caminho claro para continuar, expandir, pausar ou fazer transferência técnica.'
+        'A Tg Apps é um bom encaixe quando você precisa de execução contínua com responsabilidade direta, demonstrações semanais e caminho claro para continuar, expandir, pausar ou fazer transferência técnica.'
     }
   },
   monthlyPod: {
     key: 'monthlyPod',
     slug: getLandingSlug('pt', 'monthlyPod'),
-    badge: 'Time dedicado mensal com liberdade de saída',
-    title: 'Time dedicado de desenvolvimento com controle mês a mês',
+    badge: 'Entrega mensal contínua',
+    title: 'Entrega mensal de software com ritmo mais estável',
     intro:
-      'Use a Tg Apps como time dedicado para ferramentas internas, apps mobile, backend, integrações e gerenciamento de deploy. Sem pacote mensal indefinido, sem multa e sem prazo de aviso longo.',
+      'Use a Tg Apps quando seu roadmap precisa de execução mais estável, continuidade mês a mês e avanço semanal consistente em ferramentas internas, apps, backend, integrações e releases.',
     heroHighlights: [
-      'Um time de execução para backend, frontend, mobile, dados, integrações e deploys.',
-        'Contrato mensal, sem multa e sem prazo longo de aviso.',
-      'Útil quando contratar está lento, mas o plano de evolução não pode esperar.'
+      'Uma faixa mensal contínua entre backend, frontend, mobile, integrações e deploys.',
+      'Comunicação direta sempre que necessário, com planejamento semanal e acompanhamento visível embutidos.',
+      'Útil quando o roadmap pede mais consistência de execução do que um apoio pontual consegue sustentar.'
     ],
     ctaLabel: 'Agendar conversa inicial',
-    ctaSubject: 'Time mensal de desenvolvimento',
+    ctaSubject: 'Entrega mensal de software com execução mais estável',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
       'Cancelamento em qualquer mês sem multa ou taxa surpresa.',
-      'Cobrança mensal, sem adiantamento, e guias operacionais com transferência técnica entregues continuamente.'
+      'Cobrança mensal, escopo visível e guias operacionais com transferência técnica entregues continuamente.'
     ],
     deliverablesHeading: 'O que já vem com o time',
     deliverables: [
       'Execução em Kanban com backend, frontend, banco, ferramentas internas e mobile em paralelo.',
-      'Comunicação direta sempre que necessário, atualizações escritas ao longo da semana e demonstração semanal, com coordenação podendo chegar a ritmo diário quando necessário, no Teams, Jira, Linear, Notion ou nas ferramentas que você já usa.',
-      'Triage de bugs em até 24h e cobertura de fim de semana em janelas de deploy.'
+      'Planejamento semanal, progresso visível ao longo da semana e comunicação direta sempre que necessário nas ferramentas que você já usa.',
+      'Prioridade para bugs, releases e momentos de entrega mais sensíveis.'
     ],
     fitHeading: 'Melhor encaixe',
     fitItems: [
-      'Empresas que precisam de capacidade de execução contínua com um modelo mais leve.',
-      'Times que precisam de confiabilidade operacional e suporte de produção.',
-      'Startups e agências que querem previsibilidade de entrega toda semana.'
+      'Empresas que precisam sustentar uma execução mensal mais forte sem abrir uma estrutura mais pesada.',
+      'Times que precisam de continuidade semanal mais estável.',
+      'Operadores, startups e agências com pressão constante de entrega.'
     ],
     sections: [
       {
-        title: 'Alternativa prática a contratar antes da hora',
+        title: 'Uma forma prática de sustentar mais ritmo',
         description:
-          'Esse modelo funciona quando você precisa de execução agora, mas não quer assumir várias contratações em tempo integral antes do trabalho estabilizar.',
+          'Esse modelo funciona quando as prioridades começam a se acumular e o produto precisa de uma execução mais estável do que apoio fragmentado ou contratação lenta conseguem dar.',
         items: [
-          'Planejar, construir, demonstrar, publicar e dar suporte em um contrato mensal.',
-          'Manter escopo visível com demonstrações semanais, log de decisões e documentação de transferência.',
-          'Escalar, pausar ou transicionar sem janelas longas de cancelamento.'
+          'Planejar, construir, demonstrar, publicar e dar suporte dentro de uma cadência mensal contínua.',
+          'Manter escopo visível com planejamento semanal, demonstrações, log de decisões e documentação de transferência.',
+          'Ajustar a cadência sem janelas longas de cancelamento.'
         ]
       }
     ],
     pricing: PT_CURRENT_PRICING
   },
-  zeroUpfront: {
-    key: 'zeroUpfront',
-    slug: getLandingSlug('pt', 'zeroUpfront'),
-    badge: 'Desenvolvimento de software sem adiantamento',
-    title: 'Desenvolvimento de software sob medida sem pagamento antecipado com contrato primeiro',
+  clearFirstMilestone: {
+    key: 'clearFirstMilestone',
+    slug: getLandingSlug('pt', 'clearFirstMilestone'),
+    badge: 'Software sob medida com primeira entrega definida',
+    title: 'Software sob medida com primeira entrega definida e continuidade prática',
     intro:
-      'Modelo com contrato primeiro para startups e empresas: escopo, acessos, prazo e critérios de aceite são combinados antes, depois o trabalho começa sem pagamento antecipado e com Garantia da Primeira Entrega.',
+      'Escopo, acessos, prazo e critérios de aceite são alinhados antes do início. O trabalho começa com uma primeira entrega definida e com Garantia da Primeira Entrega para a primeira etapa combinada.',
     heroHighlights: [
       'Contrato e NDA antes da implementação.',
-      'Sem pagamento antecipado antes do trabalho começar.',
+      'Escopo alinhado antes do trabalho começar.',
       'Se o combinado não for entregue, essa etapa não é cobrada.'
     ],
     ctaLabel: 'Agendar conversa inicial',
-    ctaSubject: 'Desenvolvimento de software sem adiantamento',
+    ctaSubject: 'Software sob medida com primeira entrega definida',
     proofHeading: 'Termos comerciais',
     proofItems: [
-      'Nenhum pagamento antecipado antes do início do projeto.',
+      'Escopo e critérios definidos antes do início do projeto.',
       'W8-BEN-E disponível com faturamento em USD ou BRL.',
       'Contratos e cobrança emitidos pela TG APPLICATIONS DESENVOLVIMENTO LTDA.'
     ],
@@ -1992,9 +1992,9 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     sections: [
       {
-        title: 'Sem adiantamento, com começo claro',
+        title: 'Um começo claro',
         description:
-          'Você não precisa pagar antes do trabalho começar. Primeiro alinhamos contrato, escopo, acessos e critérios de aceite para construir uma entrega objetiva.',
+          'Primeiro alinhamos contrato, escopo, acessos e critérios de aceite para construir uma entrega objetiva.',
         items: [
           'Antes do trabalho começar, os dois lados definem escopo, responsabilidades, acessos, prazo e critérios de aceite.',
           'Mostramos a primeira entrega funcionando antes da cobrança dessa etapa.',
@@ -2014,7 +2014,7 @@ const PT_CONTENT: LandingContentByLocale = {
     heroHighlights: [
       'Uma primeira entrega pequena, útil e com critérios de aceite.',
       'Normalmente organizada em um sprint inicial de até 7 dias úteis quando o escopo permite.',
-      'Sem pagamento inicial, continuidade mês a mês e sem contrato longo obrigatório depois da primeira entrega.'
+      'Primeira entrega clara, continuidade mês a mês e sem contrato longo obrigatório depois da primeira entrega.'
     ],
     ctaLabel: 'Começar pela primeira entrega',
     ctaSubject: 'Garantia da Primeira Entrega',

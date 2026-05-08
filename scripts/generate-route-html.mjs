@@ -88,7 +88,7 @@ const serviceRouteIds = [
   'llmRagIntegrations',
   'bornGlobalApps',
   'customSoftwareStartups',
-  'zeroUpfront'
+  'clearFirstMilestone'
 ];
 
 const trustRouteIds = [

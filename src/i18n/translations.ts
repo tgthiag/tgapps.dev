@@ -181,12 +181,12 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'and shipped.',
       titleLine2: '',
       subtitle:
-        'Got an idea, a stalled app, or an internal workflow that needs software? Tg Apps builds and ships mobile, web, CRM, backend, and AI with weekly demos, no upfront payment, and a First Milestone Guarantee.',
+        'Got an idea, a stalled app, or an internal workflow that needs software? Tg Apps builds and ships mobile, web, CRM, backend, and AI with a First Milestone Guarantee, weekly demos, and month-to-month continuity after the first delivery, with no upfront payment to start.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth plan: USD 2,000/mo' },
-        { label: 'First milestone guarantee' },
-        { label: 'Zero upfront' }
+        { label: 'First Milestone Guarantee' },
+        { label: 'No upfront payment to start' }
       ],
       primaryCta: 'Start your first milestone',
       secondaryCta: 'See how it works'
@@ -270,11 +270,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Mobile apps',
           subtitle: 'Android, iOS, stores, private releases',
           description:
-            'Native or cross-platform apps built for real users, real stores, and real release constraints. Play Store, App Store, private MDM, phased rollout, monitoring, and support can be handled by us.',
+            'Native apps built for real users and real stores.',
           features: [
-            'Android and iOS product flows connected to backend, database, analytics, and admin panels.',
-            'Release preparation, store assets, privacy links, review fixes, and staged rollout support.',
-            'Practical app architecture your team can keep evolving after handoff.'
+            'Play Store, App Store, private MDM, phased rollout, and release support handled by us.'
           ],
           cta: 'Plan my app'
         },
@@ -282,11 +280,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'CRM, dashboards and internal tools',
           subtitle: 'Scheduling, lead operations, portals',
           description:
-            'Replace spreadsheets and disconnected tools with custom CRM, dashboards, workflow automation, scheduling, lead operations, portals, and admin systems built around the way your company works.',
+            'Replace spreadsheets with custom CRM, dashboards, workflow automation, and admin systems.',
           features: [
-            'Lead capture, conversion, follow-up, and operational visibility.',
-            'Permissions, data models, reports, and integrations designed from the real workflow.',
-            'Customer portals and employee tools connected to the same backend.'
+            'Built around the way your business actually works.'
           ],
           cta: 'Plan my system'
         },
@@ -294,11 +290,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'App rescue and release execution',
           subtitle: 'Audit, fix, ship, iterate',
           description:
-            'Take unfinished apps, rough prototypes, outdated builds, or stalled codebases and turn them into usable products with a clear release path, backend, database, store release, and iteration plan defined together.',
+            'Unfinished apps, stalled codebases, or outdated builds turned into usable products with a clear release path.',
           features: [
-            'Audit the current app, codebase, stores, backend, and deployment blockers.',
-            'Fix, rebuild, or complete the core flows required by the agreed release plan.',
-            'Publish when the plan calls for it, validate with users when applicable, monitor results, and keep improving.'
+            'We audit, fix, rebuild, and ship.'
           ],
           cta: 'Finish my app'
         },
@@ -306,11 +300,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Backend, APIs and integrations',
           subtitle: 'Data, auth, billing, infrastructure',
           description:
-            'Build the operational layer behind your app: APIs, databases, auth, billing, logistics, CRM integrations, dashboards, AWS infrastructure, runbooks, and release checklists.',
+            'REST or GraphQL, Supabase, Firebase, MySQL, or Postgres.',
           features: [
-            'REST or GraphQL plus Supabase, Firebase, MySQL, MariaDB, or dedicated Postgres.',
-            'Payment, logistics, CRM, analytics, email, and internal workflow integrations.',
-            'Infrastructure and documentation designed so your team can own the stack after handoff.'
+            'AWS infrastructure, runbooks, and release checklists so your team can own the stack after handoff.'
           ],
           cta: 'Scope my integration'
         },
@@ -318,11 +310,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'AI and LLM integrations',
           subtitle: 'Useful workflows, guardrails, documentation',
           description:
-            'Add LLM workflows to real products and internal tools without turning the app into a demo. We connect AI to the search, vector, CRM, or knowledge stack your team already trusts.',
+            'LLM workflows connected to your CRM, search, or knowledge stack.',
           features: [
-            'Structured outputs, approval flows, logs, fallback behavior, and practical guardrails.',
-            'AI copilots, document workflows, CRM assistance, search, triage, and automation layers.',
-            'Documentation that separates model behavior, business rules, and human review.'
+            'Guardrails, structured outputs, and documentation that separates model from business logic.'
           ],
           cta: 'Add AI to my product'
         },
@@ -330,11 +320,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Born-global apps',
           subtitle: 'Multilingual, cultural, international-ready',
           description:
-            'Build apps that can serve more than one market from day one, with contextual translation, locale-aware UX, app store preparation, and content structure ready for global iteration.',
+            'Apps built for more than one market from day one.',
           features: [
-            'Multilingual onboarding, notifications, support flows, and product copy.',
-            'Translation adapted to user intent, tone, examples, and cultural context.',
-            'Analytics, release checklists, fallback language behavior, and market-by-market iteration.'
+            'Contextual translation, locale-aware UX, and app store preparation for global iteration.'
           ],
           cta: 'Plan my global app'
         }
@@ -355,12 +343,12 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'What working with us feels like',
       paragraphs: [
         'You always speak with someone able to make decisions. We keep the team compact so context, accountability, and product sense stay intact from kickoff to handoff.',
-        'We adopt your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. Expect direct communication whenever needed, written updates during the week, and a weekly demo with timing, risks, and budgets.',
+        'We adopt your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. Expect direct communication whenever needed, visible progress during the week, and a weekly demo with timing, risks, and budgets.',
         'Because product, engineering, release, and ops stay together, you do not need extra vendors for monitoring, analytics, or training. When we pause, you keep every repo, design file, and runbook.'
       ],
       missionHeading: 'How we protect your roadmap',
       missionDescription:
-        'Signed agreement, D-U-N-S record, Brazilian LLC paperwork, and zero upfront payment keep finance and legal happy without slowing delivery.',
+        'Signed agreement, D-U-N-S record, and Brazilian LLC paperwork keep finance and legal comfortable while delivery keeps moving.',
       clientHeading: 'Direct leadership, lean bureaucracy',
       clientTypes: [],
       valuesHeading: 'Safeguards baked into every contract',
@@ -370,8 +358,8 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'CIAL Dun and Bradstreet verified on Jan 28 2026 so you can add us to procurement portals without delays.'
         },
         {
-          title: 'Contract-first, zero upfront',
-          description: 'Statement of work and NDA signed digitally before kickoff; invoices arrive only after we start shipping.'
+          title: 'Signed before kickoff',
+          description: 'Statement of work and NDA are signed digitally before kickoff, with billing aligned to the agreed delivery path.'
         },
         {
           title: 'US timezone coverage',
@@ -465,7 +453,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'Tg Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. Plans from USD 1,500/mo, no upfront, First Milestone Guarantee.',
+        'Tg Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. Monthly plans from USD 1,500, First Milestone Guarantee, and month-to-month continuity after the first delivery.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
@@ -520,12 +508,12 @@ export const translations: Record<Locale, TranslationSchema> = {
       titleHighlight: 'e entregue.',
       titleLine2: '',
       subtitle:
-        'Tem uma ideia, um app parado ou uma operação que precisa de software? A Tg Apps constrói mobile, web, CRM, backend e IA com demonstrações semanais, sem pagamento inicial e Garantia da Primeira Entrega.',
+        'Tem uma ideia, um app parado ou uma operação que precisa de software? A Tg Apps entrega mobile, web, CRM, backend e IA com Garantia da Primeira Entrega, demonstrações semanais e continuidade mês a mês após a primeira entrega, sem pagamento antecipado para começar.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth US$ 2.000/mês' },
-        { label: 'Garantia da primeira entrega' },
-        { label: 'Sem pagamento inicial' }
+        { label: 'Garantia da Primeira Entrega' },
+        { label: 'Sem pagamento antecipado para começar' }
       ],
       primaryCta: 'Começar pela primeira entrega',
       secondaryCta: 'Ver como funciona'
@@ -609,11 +597,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Apps mobile',
           subtitle: 'Android, iOS, lojas e publicações privadas',
           description:
-            'Apps nativos ou multiplataforma feitos para usuários reais, lojas reais e regras reais de publicação. Play Store, App Store, distribuição interna, deploy gradual, monitoramento e suporte podem ficar com a gente.',
+            'Apps nativos feitos para usuários reais e lojas reais.',
           features: [
-            'Fluxos Android e iOS conectados a backend, banco de dados, analytics e painéis administrativos.',
-            'Preparação de publicação, materiais de loja, links de privacidade, correções de revisão e deploy gradual.',
-            'Arquitetura prática para seu time continuar evoluindo depois da transferência técnica.'
+            'Play Store, App Store, distribuicao interna, deploy gradual e suporte de release ficam com a gente.'
           ],
           cta: 'Planejar meu app'
         },
@@ -621,11 +607,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'CRM, dashboards e ferramentas internas',
           subtitle: 'Agendamento, operação de leads e portais',
           description:
-            'Substituímos planilhas e ferramentas desconectadas por CRM, dashboards, automações, agendamento, operação de leads, portais e sistemas administrativos feitos para o jeito que sua empresa trabalha.',
+            'Troque planilhas por CRM, dashboards, automacoes e sistemas administrativos.',
           features: [
-            'Captação, conversão, follow-up e visibilidade operacional.',
-            'Permissões, dados, relatórios e integrações desenhados a partir do fluxo real.',
-            'Portais de cliente e ferramentas de equipe conectados ao mesmo backend.'
+            'Construidos em torno do jeito que sua operacao realmente funciona.'
           ],
           cta: 'Planejar meu sistema'
         },
@@ -633,11 +617,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Resgate de app e execução de deploy',
           subtitle: 'Auditar, corrigir, publicar e iterar',
           description:
-            'Pegamos apps inacabados, protótipos, builds antigas ou bases de código travadas e transformamos em produtos utilizáveis com caminho claro de deploy, backend, banco, publicação em lojas e plano de iteração definidos juntos.',
+            'Apps inacabados, bases travadas ou builds antigas viram produtos utilizaveis com caminho claro de release.',
           features: [
-            'Auditoria do app, código, lojas, backend e bloqueios de publicação.',
-            'Correção, reconstrução ou finalização dos fluxos centrais exigidos pelo plano de deploy combinado.',
-            'Publicação quando o plano pedir, validação com usuários quando aplicável, monitoramento e melhoria contínua.'
+            'A gente audita, corrige, reconstrói e publica.'
           ],
           cta: 'Finalizar meu app'
         },
@@ -645,11 +627,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Backend, APIs e integrações',
           subtitle: 'Dados, autenticação, cobrança e infraestrutura',
           description:
-            'Construímos a camada operacional por trás do app: APIs, bancos, autenticação, cobrança, logística, integrações com CRM, dashboards, infraestrutura AWS, guias operacionais e checklists de deploy.',
+            'REST ou GraphQL, Supabase, Firebase, MySQL ou Postgres.',
           features: [
-            'REST ou GraphQL com Supabase, Firebase, MySQL, MariaDB ou Postgres dedicado.',
-            'Integrações com pagamentos, logística, CRM, analytics, email e fluxos internos.',
-            'Infraestrutura e documentação pensadas para seu time assumir a base técnica depois da transferência.'
+            'Infraestrutura AWS, runbooks e checklist de release para seu time assumir a stack depois.'
           ],
           cta: 'Escopar integração'
         },
@@ -657,11 +637,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Integrações de IA e LLM',
           subtitle: 'Fluxos úteis, controles e documentação',
           description:
-            'Adicionamos fluxos de LLM a produtos e ferramentas reais sem transformar o app em uma vitrine sem uso real. Conectamos IA à busca, vetores, CRM ou base de conhecimento que o seu time já usa.',
+            'Fluxos de LLM conectados ao seu CRM, busca ou base de conhecimento.',
           features: [
-            'Saídas estruturadas, aprovação humana, logs, alternativas quando a IA falha e controles práticos.',
-            'Copilotos, documentos, apoio a CRM, busca, triagem e automações internas.',
-            'Documentação separando comportamento do modelo, regras de negócio e revisão humana.'
+            'Guardrails, saidas estruturadas e documentacao separando modelo de regra de negocio.'
           ],
           cta: 'Adicionar IA ao produto'
         },
@@ -669,11 +647,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Apps born global',
           subtitle: 'Multilíngue, cultural, pronto para o mundo',
           description:
-            'Construímos apps que podem atender mais de um mercado desde o primeiro deploy, com tradução contextualizada, UX adaptada ao idioma, preparação de lojas e estrutura de conteúdo pronta para evolução global.',
+            'Apps feitos para mais de um mercado desde o primeiro dia.',
           features: [
-            'Onboarding, notificações, suporte e texto de produto preparados para múltiplos idiomas.',
-            'Tradução adaptada à intenção do usuário, tom, exemplos e contexto cultural.',
-            'Analytics, checklist de deploy, idioma alternativo e evolução mercado por mercado.'
+            'Traducao contextual, UX sensivel ao idioma e preparo de loja para iteracao global.'
           ],
           cta: 'Planejar app global'
         }
@@ -694,12 +670,12 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'Como é trabalhar conosco',
       paragraphs: [
         'Você fala direto com quem decide. Mantemos o time compacto para preservar contexto, responsabilidade e visão de produto.',
-        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. Mantemos comunicação direta sempre que necessário, atualizações escritas ao longo da semana e demonstração semanal com riscos e custos.',
+        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. Mantemos comunicação direta sempre que necessário, progresso visível ao longo da semana e demonstração semanal com riscos e custos.',
         'Engenharia de deploy e operação ficam no mesmo time, então você não precisa de outros fornecedores para monitoramento, analytics ou treinamento. Ao finalizar, tudo fica com você.'
       ],
       missionHeading: 'Como protegemos seu plano de evolução',
       missionDescription:
-        'Contrato assinado, registro D-U-N-S, empresa brasileira regularizada e zero pagamento antecipado. Finanças, jurídico e o time de produto ficam tranquilos.',
+        'Contrato assinado, registro D-U-N-S, empresa brasileira regularizada e escopo claro desde o início. Finanças, jurídico e o time de produto ficam tranquilos.',
       clientHeading: 'Liderança direta e baixa burocracia',
       clientTypes: [],
       valuesHeading: 'Garantias em todo contrato',
@@ -709,8 +685,8 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'Validado pela Dun and Bradstreet em 28/01/2026. Útil para marketplaces e cadastros de fornecedores.'
         },
         {
-          title: 'Contrato primeiro, pagamento depois',
-          description: 'Assinamos NDA e escopo de trabalho digitalmente antes do início do projeto. A cobrança só começa após as primeiras entregas.'
+          title: 'Assinado antes do kickoff',
+          description: 'Assinamos NDA e escopo de trabalho digitalmente antes do início do projeto, com a cobrança alinhada ao caminho de entrega combinado.'
         },
         {
           title: 'Cobertura global de fuso',
@@ -804,7 +780,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A Tg Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Planos desde US$ 1.500/mês, sem pagamento inicial, Garantia da Primeira Entrega.',
+        'A Tg Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Planos mensais a partir de US$ 1.500, Garantia da Primeira Entrega e continuidade mês a mês após a primeira entrega.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },

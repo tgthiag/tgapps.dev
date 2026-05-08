@@ -16,12 +16,12 @@
       "seo": {
         "en": {
           "title": "Your App, Built and Shipped | Tg Apps",
-          "description": "Got an idea or a stalled app? Tg Apps builds and ships mobile, web, CRM, backend, and AI with no upfront payment, weekly demos, and a First Milestone Guarantee.",
+          "description": "Got an idea or a stalled app? Tg Apps builds and ships mobile, web, CRM, backend, and AI with a First Milestone Guarantee, weekly demos, and month-to-month continuity, so you can start without paying upfront.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
           "title": "Seu App, Construído e Entregue | Tg Apps",
-          "description": "Tem uma ideia ou app parado? A Tg Apps constrói mobile, web, CRM, backend e IA com demonstrações semanais, sem pagamento inicial e Garantia da Primeira Entrega.",
+          "description": "Tem uma ideia ou app parado? A Tg Apps entrega mobile, web, CRM, backend e IA com Garantia da Primeira Entrega, demonstrações semanais e continuidade mês a mês, sem pagamento antecipado para começar.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -78,12 +78,12 @@
       "seo": {
         "en": {
           "title": "Why Tg Apps | Founder-Led, Team-Delivered Software",
-          "description": "Why clients choose Tg Apps: founder-led, team-delivered software execution, direct communication, weekly demos, contract-first scope, zero upfront payment, and clean handoff.",
+          "description": "Why clients choose Tg Apps: founder-led, team-delivered software execution, direct communication, weekly demos, and clean handoff.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
           "title": "Por que Tg Apps | Entrega liderada pelo fundador e executada por time",
-          "description": "Por que clientes escolhem a Tg Apps: entrega liderada pelo fundador, núcleo enxuto, colaboradores por escopo, comunicação direta, demonstrações semanais e transferência técnica limpa.",
+          "description": "Por que clientes escolhem a Tg Apps: entrega liderada pelo fundador, operação enxuta, comunicação direta, demonstrações semanais e transferência técnica limpa.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -119,12 +119,12 @@
       "seo": {
         "en": {
           "title": "Tg Apps Company Profile | Legal Entity, D-U-N-S, Services",
-          "description": "Tg Apps company profile: legal entity, D-U-N-S number, official channels, operating model, services, compact core team, and scope-based collaborator structure.",
+          "description": "Tg Apps company profile: legal entity, D-U-N-S number, official channels, operating model, services, and a compact senior delivery team.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
           "title": "Perfil da empresa Tg Apps | CNPJ, D-U-N-S e serviços",
-          "description": "Perfil da Tg Apps: entidade legal, D-U-N-S, canais oficiais, modelo operacional, serviços, núcleo enxuto e colaboradores por escopo.",
+          "description": "Perfil da Tg Apps: entidade legal, D-U-N-S, canais oficiais, modelo operacional, serviços e estrutura enxuta de entrega.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -474,12 +474,12 @@
       "seo": {
         "en": {
           "title": "Dev as a Service | Software Development Subscription | Tg Apps",
-          "description": "Dev as a Service by Tg Apps: on-demand software team for apps, CRM, internal tools, backend, AI integrations, weekly demos, and First Milestone Guarantee.",
+          "description": "Dev as a Service by Tg Apps: an on-demand software team for apps, CRM, internal tools, backend, AI integrations, weekly demos, and a defined first delivery.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
           "title": "Time de desenvolvimento sob demanda | Tg Apps",
-          "description": "Time de desenvolvimento sob demanda da Tg Apps para apps, CRM, ferramentas internas, backend, IA, demonstrações semanais e Garantia da Primeira Entrega.",
+          "description": "Time de desenvolvimento sob demanda da Tg Apps para apps, CRM, ferramentas internas, backend, IA, demonstrações semanais e uma primeira entrega definida.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -512,13 +512,13 @@
       },
       "seo": {
         "en": {
-          "title": "Dedicated Development Team with Month-to-Month Control | Tg Apps",
-          "description": "Use Tg Apps as a dedicated software team for internal tools, apps, backend, integrations, and release support with monthly billing and no lock-in.",
+          "title": "Dedicated Software Delivery with Month-to-Month Control | Tg Apps",
+          "description": "Use Tg Apps for closer software delivery coordination across internal tools, apps, backend, integrations, and release support with monthly billing and no lock-in.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
-          "title": "Time dedicado de desenvolvimento com controle mês a mês | Tg Apps",
-          "description": "Use a Tg Apps como time dedicado para ferramentas internas, apps, backend, integrações e suporte de deploy com cobrança mensal, sem multa e sem contrato longo obrigatório.",
+          "title": "Coordenação de entrega mais próxima com controle mês a mês | Tg Apps",
+          "description": "Use a Tg Apps para ganhar coordenação de entrega mais próxima em ferramentas internas, apps, backend, integrações e suporte de deploy com cobrança mensal, sem multa e sem contrato longo obrigatório.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -534,30 +534,30 @@
       }
     },
     {
-      "id": "zeroUpfront",
+      "id": "clearFirstMilestone",
       "page": "landing",
-      "landingKey": "zeroUpfront",
+      "landingKey": "clearFirstMilestone",
       "localizedPaths": {
-        "en": "/zero-upfront-custom-software-development",
-        "pt": "/desenvolvimento-software-sob-medida-sem-adiantamento"
+        "en": "/custom-software-with-a-clear-first-milestone",
+        "pt": "/software-sob-medida-com-primeira-entrega-clara"
       },
       "aliasesByLocale": {
         "en": [
-          "/zero-upfront-app-development"
+          "/clear-first-milestone-app-development"
         ],
         "pt": [
-          "/desenvolvimento-app-sem-adiantamento"
+          "/desenvolvimento-app-com-primeira-entrega-clara"
         ]
       },
       "seo": {
         "en": {
-          "title": "Zero Upfront Custom Software Development | Tg Apps",
-          "description": "Contract-first custom software development with no upfront payment. Define scope, see the first delivery working, then continue month to month.",
+          "title": "Custom Software With a Clear First Milestone | Tg Apps",
+          "description": "Custom software development with a defined first delivery. Define scope, see the first delivery working, then continue month to month.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
-          "title": "Desenvolvimento de software sob medida sem adiantamento | Tg Apps",
-          "description": "Software sob medida sem adiantamento. Defina o escopo, veja a primeira entrega funcionando e continue mês a mês se fizer sentido.",
+          "title": "Software Sob Medida Com Primeira Entrega Clara | Tg Apps",
+          "description": "Software sob medida com primeira entrega definida. Defina o escopo, veja a primeira entrega funcionando e continue mês a mês se fizer sentido.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },

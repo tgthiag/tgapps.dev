@@ -6,8 +6,8 @@ const SocialProof = () => {
   const t = useTranslations();
   const proofBadges =
     language === 'pt'
-      ? ['D-U-N-S® 651029828', 'Planos desde US$ 1.500/mês', 'Growth US$ 2.000/mês', 'Sem adiantamento', 'Garantia da primeira entrega']
-      : ['D-U-N-S® 651029828', 'Plans from USD 1,500/mo', 'Growth USD 2,000/mo', 'Zero upfront', 'First milestone guarantee'];
+      ? ['D-U-N-S® 651029828', 'Planos a partir de US$ 1.500/mês', 'Growth US$ 2.000/mês', 'Garantia da Primeira Entrega', 'Sem pagamento antecipado para começar']
+      : ['D-U-N-S® 651029828', 'Plans from USD 1,500/mo', 'Growth USD 2,000/mo', 'First Milestone Guarantee', 'Start without paying upfront'];
 
   return (
     <section className="relative -mt-2 bg-white pb-10">

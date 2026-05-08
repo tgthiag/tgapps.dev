@@ -7,12 +7,12 @@ const contentByLocale = {
     badge: 'Why Tg Apps',
     title: 'Why clients choose us over agencies and internal hires',
     description:
-      'Our difference is practical output: we build and ship usable software with a compact team model, low bureaucracy, intelligent allocation, and direct access to senior delivery leadership.',
+      'Our difference is practical output: we build and ship usable software with a compact senior team, low bureaucracy, and direct access to senior delivery leadership.',
     cards: [
       {
-        title: 'Compact team model',
+        title: 'Compact delivery model',
         description:
-          'A core team and project-based collaborators allocated according to your project needs, complexity, and required expertise. No bloated retainers. No unnecessary layers.',
+          'A compact senior team, with support widened when the project needs more capacity or specialized work. No bloated retainers. No unnecessary layers.',
         icon: ShieldCheck
       },
       {
@@ -44,12 +44,12 @@ const contentByLocale = {
     badge: 'Por que Tg Apps',
     title: 'Por que clientes escolhem a Tg Apps em vez de agências grandes ou contratação interna',
     description:
-      'Nosso diferencial é entrega prática: construímos e colocamos software útil no ar com time compacto, baixa burocracia, alocação inteligente e acesso direto à liderança técnica e de produto.',
+      'Nosso diferencial é entrega prática: construímos e colocamos software útil no ar com operação enxuta, baixa burocracia e acesso direto à liderança técnica e de produto.',
     cards: [
       {
-        title: 'Modelo de time compacto',
+        title: 'Modelo de entrega enxuto',
         description:
-          'Time central e colaboradores por projeto alocados de acordo com necessidade, complexidade e especialidade exigida. Sem pacote mensal inflado. Sem camadas desnecessárias.',
+          'Estrutura enxuta, com mais capacidade ao redor da entrega quando o trabalho exigir reforço ou especialidade. Sem pacote mensal inflado. Sem camadas desnecessárias.',
         icon: ShieldCheck
       },
       {
@@ -97,7 +97,7 @@ const WhyTgApps = () => {
             <p className="mt-4 max-w-2xl text-sm leading-7 text-white/72">{content.description}</p>
           </div>
 
-          <div className="grid gap-4 md:grid-cols-3 lg:grid-cols-1">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
             {content.cards.slice(0, 3).map((card) => {
               const Icon = card.icon;
               return (
