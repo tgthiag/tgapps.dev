@@ -16,13 +16,13 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
     {
       name: 'Starter',
       price: 'USD 1,500/mo',
-      badge: 'Controlled scope',
+      badge: 'Biweekly rhythm',
       audience:
-        'For smaller scopes, controlled monthly priorities, and teams that need useful delivery without opening a larger product cadence too early.',
+        'For teams that need a controlled biweekly rhythm, useful delivery, and a lower monthly entry point without limiting the type of software we can work on.',
       description:
-        'A compact monthly plan for founders and operators who need scheduled deliveries, deploys, and a lighter coordination rhythm.',
+        'A compact monthly plan for founders and operators who want scheduled deliveries, deploys, and biweekly planning for the next set of tasks.',
       features: [
-        'Controlled monthly scope for app, frontend, backend, or rescue tasks',
+        'Biweekly rhythm for app, frontend, backend, or rescue tasks',
         'Scheduled deliveries and deploys',
         'Biweekly planning meeting',
         'Direct communication whenever needed'
@@ -34,30 +34,30 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       price: 'USD 2,000/mo',
       badge: 'Most selected',
       audience:
-        'For founders and growing teams that need weekly software delivery with a cadence they can rely on.',
+        'For founders and growing teams that want steady software delivery without daily management overhead.',
       description:
-        'The main Tg Apps plan: weekly progress for the part of the product that needs the most attention right now.',
+        'The main Tg Apps plan: weekly delivery rhythm, smart allocation, and one weekly planning/demo call to review what shipped, realign priorities, and choose what matters next.',
       features: [
-        'Continuous deliveries and deploys across mobile, web, backend, CRM, and integrations',
-        'Weekly planning meeting',
-        'Product evolution, app rescue, and workflow improvements',
-        'Direct communication whenever needed'
+        'Smart allocation across mobile, web, backend, CRM, and integrations',
+        'Weekly planning/demo meeting to review progress and set priorities',
+        'Async communication for normal questions and blockers',
+        'Best balance between delivery, focus, and monthly cost'
       ],
       cta: 'Choose Growth'
     },
     {
       name: 'Dedicated',
       price: 'USD 3,500+/mo',
-      badge: 'More capacity',
+      badge: 'Higher availability',
       audience:
-        'For companies with tighter delivery windows, multiple priorities moving at once, or products that need closer coordination around the work.',
+        'For companies that need the same delivery capabilities as Growth, plus more availability, faster reprioritization, and closer coordination during urgent windows.',
       description:
-        'A higher-capacity monthly plan for accounts that need steadier follow-through, faster decision loops, and more room around critical delivery.',
+        'Dedicated is for accounts that may need daily check-ins, same-day priority shifts, release pressure handling, urgent fixes, or more contact than a weekly cadence should absorb.',
       features: [
-        'More delivery capacity across parallel fronts when needed',
-        'More room around releases, rescue work, and critical priorities',
-        'Weekly planning, with room to reach a daily cadence when the delivery requires it',
-        'Direct communication whenever needed'
+        'Same delivery capabilities as Growth, with higher availability',
+        'Daily check-ins available during critical windows when needed',
+        'Urgent same-day priority shifts when feasible within the agreed scope',
+        'More room for interruptions, quick decisions, and reprioritization'
       ],
       cta: 'Discuss Dedicated'
     }
@@ -66,13 +66,13 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
     {
       name: 'Starter',
       price: 'US$ 1.500/mês',
-      badge: 'Escopo controlado',
+      badge: 'Ritmo quinzenal',
       audience:
-        'Para escopos menores, prioridades mensais controladas e times que precisam de entrega útil sem abrir cedo demais uma cadência maior de produto.',
+        'Para times que precisam de um ritmo quinzenal controlado, entrega útil e um valor mensal de entrada menor sem limitar o tipo de software que podemos trabalhar.',
       description:
-        'Um plano mensal enxuto para fundadores e operadores que precisam de entregas programadas, deploys e uma coordenação mais leve.',
+        'Um plano mensal enxuto para fundadores e operadores que querem entregas programadas, deploys e planejamento quinzenal das próximas demandas.',
       features: [
-        'Escopo mensal controlado para app, frontend, backend ou resgate',
+        'Ritmo quinzenal para app, frontend, backend ou resgate',
         'Entregas e deploys programados',
         'Reunião quinzenal de planejamento',
         'Comunicação direta sempre que necessário'
@@ -84,30 +84,30 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       price: 'US$ 2.000/mês',
       badge: 'Mais escolhido',
       audience:
-        'Para fundadores e times em crescimento que precisam de entrega semanal com uma cadência confiável.',
+        'Para fundadores e times em crescimento que querem entrega constante sem gestão diária.',
       description:
-        'O plano principal da Tg Apps: avanço semanal na parte do produto que mais precisa de atenção agora.',
+        'O plano principal da Tg Apps: ritmo semanal de entrega, alocação inteligente e uma reunião semanal para revisar o que saiu, realinhar prioridades e escolher o próximo foco.',
       features: [
-        'Entrega semanal entre mobile, web, backend, CRM e IA',
-        'Reunião semanal para revisar prioridades e mostrar progresso',
-        'Resgate de app, evolução de produto e melhorias de fluxo',
-        'Comunicação direta sempre que necessário'
+        'Alocação inteligente entre mobile, web, backend, CRM e integrações',
+        'Reunião semanal para revisar progresso e priorizar próximas demandas',
+        'Comunicação assíncrona para dúvidas e bloqueios normais',
+        'Melhor equilíbrio entre entrega, foco e custo mensal'
       ],
       cta: 'Escolher Growth'
     },
     {
       name: 'Dedicated',
       price: 'US$ 3.500+/mês',
-      badge: 'Mais capacidade',
+      badge: 'Maior disponibilidade',
       audience:
-        'Para empresas com janelas mais apertadas de entrega, múltiplas prioridades ao mesmo tempo ou produtos que precisam de coordenação mais próxima ao redor do trabalho.',
+        'Para empresas que precisam das mesmas capacidades do Growth, com mais disponibilidade, repriorização rápida e coordenação próxima em janelas urgentes.',
       description:
-        'Um plano mensal de maior capacidade para contas que precisam de acompanhamento mais firme, ciclos mais rápidos de decisão e mais espaço em entrega crítica.',
+        'Dedicated é para contas que podem precisar de daily, mudança de prioridade no mesmo dia, pressão de release, correções urgentes ou mais contato do que uma cadência semanal deve absorver.',
       features: [
-        'Mais capacidade de entrega em frentes paralelas quando necessário',
-        'Mais espaço para releases, resgate de app e prioridades críticas',
-        'Planejamento semanal, podendo chegar ao ritmo diário quando a entrega exigir',
-        'Comunicação direta sempre que necessário'
+        'Mesmas capacidades do Growth, com maior disponibilidade',
+        'Daily disponível em janelas críticas, quando necessário',
+        'Prioridades urgentes no mesmo dia, quando viável no escopo combinado',
+        'Mais espaço para interrupções, decisões rápidas e repriorização'
       ],
       cta: 'Falar sobre Dedicated'
     }
@@ -122,7 +122,7 @@ const copyByLocale = {
     subtitle:
       'Choose the plan that fits the current delivery load, the cadence you need, and the level of continuity the account requires. Every plan starts with the First Milestone Guarantee, lets you start without paying upfront, and then continues month to month with the operating rhythm that fits the work.',
     note:
-      'Every plan starts with the First Milestone Guarantee, continues month to month, and keeps communication close to the work. Billing can be in USD or BRL, with procurement documents ready when needed.',
+      'Most teams start with Growth. Dedicated is for accounts that truly need higher availability, urgent priority shifts, or daily coordination during critical delivery windows. Every plan starts with the First Milestone Guarantee and continues month to month.',
     footer: ''
   },
   pt: {
@@ -132,7 +132,7 @@ const copyByLocale = {
     subtitle:
       'Escolha o plano que combina com a carga de entrega do momento, a cadência necessária e o nível de continuidade que a conta pede. Todo plano começa com a Garantia da Primeira Entrega, sem pagamento antecipado para começar, e depois segue mês a mês com o ritmo operacional que faz sentido para o trabalho.',
     note:
-      'Todo plano começa com a Garantia da Primeira Entrega, segue mês a mês e mantém a comunicação perto do trabalho. A cobrança pode ser em USD ou BRL, com a documentação necessária pronta quando for preciso.',
+      'A maioria dos clientes começa pelo Growth. Dedicated é para contas que realmente precisam de mais disponibilidade, mudanças urgentes de prioridade ou coordenação diária em janelas críticas. Todo plano começa com a Garantia da Primeira Entrega e segue mês a mês.',
     footer: ''
   }
 } as const;

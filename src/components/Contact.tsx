@@ -45,7 +45,7 @@ const Contact = () => {
       'Plans / Notes:',
       formData.message || '(No additional notes)',
       '',
-      'Pricing reference: Starter USD 1,500/mo with scheduled deliveries, deploys, and a biweekly planning meeting, Growth USD 2,000/mo with continuous deliveries, deploys, and a weekly planning meeting, Dedicated USD 3,500+/mo for heavier delivery load, parallel priorities, and more room around critical work. Requested via contact form.'
+      'Pricing reference: Starter USD 1,500/mo with scheduled deliveries, deploys, and a biweekly planning meeting, Growth USD 2,000/mo as the main plan with smart allocation, weekly delivery rhythm, and one weekly planning/demo meeting, Dedicated USD 3,500+/mo for the same delivery capabilities with higher availability, daily check-ins when needed, and urgent same-day priority handling when feasible within the agreed scope. Requested via contact form.'
     ];
     const mailtoLink = `mailto:${recipientEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(bodyLines.join('\n'))}`;
 

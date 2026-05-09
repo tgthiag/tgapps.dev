@@ -7,7 +7,7 @@
 - **Operating model:** Founder-led does not mean solo. It means direct leadership, product context, accountability, compact core team execution, and scope-based collaborators when a project requires more throughput or specialized expertise.
 - **Commercial model:** The public pricing ladder is Starter USD 1,500/month, Growth USD 2,000/month, and Dedicated USD 3,500+/month. Growth is the main and most selected plan because it uses intelligent allocation across the part of the product that needs the most attention each week. Frame pricing as output efficiency, low bureaucracy, and smart allocation, not cheap labor or a vague retainer. Clients keep the selected plan rate fixed while the engagement remains active.
 - **Trust-first delivery model:** First Milestone Guarantee is the commercial promise. 7-Day Proof Sprint is the method used when the first agreed milestone can reasonably fit that rhythm. Describe it as a scoped commercial first step with clear acceptance criteria, not as a giveaway or vague satisfaction promise.
-- **Meeting cadence by plan:** Starter includes a biweekly meeting to collect demands, review priorities, and align what should move next. Growth includes a weekly meeting for demand intake, priority review, progress alignment, and intelligent allocation. Dedicated can include daily coordination meetings when the project needs tighter alignment, multiple workstreams, or active release pressure.
+- **Meeting cadence by plan:** Starter includes a biweekly meeting to collect demands, review priorities, and align what should move next. Growth includes a weekly meeting for demand intake, priority review, progress alignment, and intelligent allocation. Dedicated can include daily coordination meetings, same-day priority shifts when feasible, and more frequent contact when the project needs tighter alignment, multiple workstreams, urgent fixes, or active release pressure.
 - **Supporting differentiator:** Output efficiency. Tg Apps builds and ships usable software through a compact team model, low bureaucracy, intelligent allocation, direct communication, and disciplined delivery controls. Cost efficiency can be used as a supporting argument, but it is no longer the primary homepage headline.
 - **Delivery model:** Tg Apps follows the agreed client plan strictly, flags risks and tradeoffs, and shares implementation insights when useful. Speed is a strength, but "fast delivery" is not the main product category; the product is reliable custom software execution.
 - **Best public narrative:** "We build the software your operation actually needs: apps, CRM, internal tools, backend, dashboards, automations, AI integrations, and release support, with a compact team, clear scope, weekly demos, and clean handoff."
@@ -46,7 +46,7 @@
 - Prefer “development team”, “dev team subscription”, “custom software team”, “dedicated development team”, or “on-demand development team” over “pod/pods” in customer-facing copy.
 - In Portuguese, prefer **“time de desenvolvimento sob demanda”** or **“time sob demanda”** over **“desenvolvimento por assinatura”** as visible headline copy. Keep “assinatura” only where useful for SEO, aliases, or explanatory context.
 - When mentioning price, use the public ladder: **Starter USD 1,500/month**, **Growth USD 2,000/month**, and **Dedicated USD 3,500+/month**. Growth is the default recommendation and the most selected plan. Clarify when needed that the selected plan rate stays fixed while the engagement remains active.
-- Plans define monthly delivery capacity, cadence, and operating rhythm. They do not define how large or ambitious the product can be. Starter can be used for products of any size when the client wants controlled monthly progress, lighter cadence, maintenance, fixes, deploy support, or focused feature batches.
+- Plans define delivery cadence, availability, and operating rhythm. They do not define how large or ambitious the product can be. Starter can be used for products of any size when the client wants a controlled biweekly rhythm, lighter coordination, maintenance, fixes, deploy support, or focused feature batches.
 
 ## 2. Page & Section Structure
 The React single-page app renders these sections in order (see `src/App.tsx`):
@@ -94,9 +94,9 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - **Pricing**
   - Plans: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500+/month.
   - Growth must be visually highlighted as the most selected plan and should mention intelligent allocation across mobile, web, backend, CRM, internal tools, integrations, AI, and release support.
-  - Starter should mention biweekly demand intake and controlled monthly delivery capacity. Do not describe Starter as only for small apps or small products.
+  - Starter should mention biweekly demand intake and controlled biweekly rhythm. Do not describe Starter as only for small apps or small products.
   - Growth should mention weekly meetings for demand intake, priority review, progress alignment, and intelligent allocation.
-  - Dedicated should mention daily coordination meetings when needed.
+  - Dedicated should mention the same delivery capabilities as Growth, plus higher availability, daily coordination when needed, urgent same-day priority shifts when feasible, and more room for interruptions and reprioritization.
   - Pricing should reinforce month-to-month engagement, no upfront payment, fixed selected-plan rate while active, and clear scope before kickoff.
 
 - **Contact**
@@ -141,7 +141,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - Keep layout visually light: at most one lifestyle image per major block (Hero, Services, About).
 - Every mention of AI must be framed as “LLM integrations we deliver”, not “we use AI to build the site”.
 - Pricing: reference the public ladder when relevant: Starter USD 1,500/month, Growth USD 2,000/month, Dedicated USD 3,500+/month. Reinforce monthly billing, no upfront, no hidden clauses, and that the selected plan rate stays fixed while the engagement remains active.
-- Pricing ladder interpretation: Starter is not a "small app" plan. It is the controlled-cadence plan. Growth is the intelligent-allocation weekly plan. Dedicated is the higher-capacity plan, starting at USD 3,500+/month, with daily coordination available when the project requires it.
+- Pricing ladder interpretation: Starter is not a "small app" plan. It is the controlled biweekly rhythm plan. Growth is the intelligent-allocation weekly plan and should feel like the natural default. Dedicated starts at USD 3,500+/month and is for the same services with higher availability, daily coordination when needed, urgent priority shifts when feasible, and more tolerance for interruptions.
 - English copy stays US-first. PT-BR copy must position Tg Apps as a global startup that builds born-global products and can work with companies from any market.
 - Ensure any new copy reaffirm zero upfront payment, contract/NDA, deploy cadence, D‑U‑N‑S trust signal.
 - Maintain bilingual parity; any new section in English must have a Portuguese counterpart in translations.
