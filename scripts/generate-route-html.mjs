@@ -170,8 +170,9 @@ const buildStaticSeoFallback = (route, locale) => {
 
 const injectStaticSeoFallback = (html, route, locale) => {
   const fallback = buildStaticSeoFallback(route, locale);
-  const replacement = `<div id="root">\n    ${fallback}\n    </div>`;
-  const pattern = /<div id="root">(?:\s*<!-- static-seo-fallback:start -->[\s\S]*?<!-- static-seo-fallback:end -->\s*)?<\/div>/i;
+  const replacement = `<div id="root"></div>\n    <noscript>\n    ${fallback}\n    </noscript>`;
+  const pattern =
+    /<div id="root">(?:\s*<!-- static-seo-fallback:start -->[\s\S]*?<!-- static-seo-fallback:end -->\s*)?<\/div>(?:\s*<noscript>\s*<!-- static-seo-fallback:start -->[\s\S]*?<!-- static-seo-fallback:end -->\s*<\/noscript>)?/i;
 
   if (pattern.test(html)) {
     return html.replace(pattern, replacement);
