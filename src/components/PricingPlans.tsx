@@ -50,14 +50,14 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       price: 'USD 3,500+/mo',
       badge: 'Higher availability',
       audience:
-        'For companies that need the same delivery capabilities as Growth, plus more availability, faster reprioritization, and closer coordination during urgent windows.',
+        'For companies that need the same delivery capabilities as Growth, with higher availability, daily participation when requested, and priority handling at any time.',
       description:
-        'Dedicated is for accounts that may need daily check-ins, same-day priority shifts, release pressure handling, urgent fixes, or more contact than a weekly cadence should absorb.',
+        'Dedicated is for accounts that want closer coordination: we join client dailies when that is the chosen cadence, keep room for urgent work at any time, and can arrange extra capacity around the account.',
       features: [
         'Same delivery capabilities as Growth, with higher availability',
-        'Daily check-ins available during critical windows when needed',
-        'Urgent same-day priority shifts when feasible within the agreed scope',
-        'More room for interruptions, quick decisions, and reprioritization'
+        'Participation in client dailies whenever requested',
+        'Urgent priority handling at any time, with capacity arranged for the account',
+        'More room for interruptions, quick decisions, and close coordination'
       ],
       cta: 'Discuss Dedicated'
     }
@@ -100,14 +100,14 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       price: 'US$ 3.500+/mês',
       badge: 'Maior disponibilidade',
       audience:
-        'Para empresas que precisam das mesmas capacidades do Growth, com mais disponibilidade, repriorização rápida e coordenação próxima em janelas urgentes.',
+        'Para empresas que precisam das mesmas capacidades do Growth, com mais disponibilidade, participação em dailies quando quiserem e prioridades urgentes a qualquer hora.',
       description:
-        'Dedicated é para contas que podem precisar de daily, mudança de prioridade no mesmo dia, pressão de release, correções urgentes ou mais contato do que uma cadência semanal deve absorver.',
+        'Dedicated é para contas que querem acompanhamento mais próximo: participamos das dailies do cliente quando essa for a rotina escolhida, abrimos espaço para urgências a qualquer hora e podemos organizar capacidade extra ao redor da conta.',
       features: [
         'Mesmas capacidades do Growth, com maior disponibilidade',
-        'Daily disponível em janelas críticas, quando necessário',
-        'Prioridades urgentes no mesmo dia, quando viável no escopo combinado',
-        'Mais espaço para interrupções, decisões rápidas e repriorização'
+        'Participação nas dailies do cliente sempre que solicitado',
+        'Atendimento de prioridades urgentes a qualquer hora, com capacidade organizada para a conta',
+        'Mais espaço para interrupções, decisões rápidas e coordenação próxima'
       ],
       cta: 'Falar sobre Dedicated'
     }
@@ -122,7 +122,7 @@ const copyByLocale = {
     subtitle:
       'Choose the plan that fits the current delivery load, the cadence you need, and the level of continuity the account requires. Every plan starts with the First Milestone Guarantee, lets you start without paying upfront, and then continues month to month with the operating rhythm that fits the work.',
     note:
-      'Most teams start with Growth. Dedicated is for accounts that truly need higher availability, urgent priority shifts, or daily coordination during critical delivery windows. Every plan starts with the First Milestone Guarantee and continues month to month.',
+      'Most teams start with Growth. Dedicated is for accounts that truly need higher availability, daily participation when requested, urgent priority handling at any time, and more room around the account. Every plan starts with the First Milestone Guarantee and continues month to month.',
     footer: ''
   },
   pt: {
@@ -132,7 +132,7 @@ const copyByLocale = {
     subtitle:
       'Escolha o plano que combina com a carga de entrega do momento, a cadência necessária e o nível de continuidade que a conta pede. Todo plano começa com a Garantia da Primeira Entrega, sem pagamento antecipado para começar, e depois segue mês a mês com o ritmo operacional que faz sentido para o trabalho.',
     note:
-      'A maioria dos clientes começa pelo Growth. Dedicated é para contas que realmente precisam de mais disponibilidade, mudanças urgentes de prioridade ou coordenação diária em janelas críticas. Todo plano começa com a Garantia da Primeira Entrega e segue mês a mês.',
+      'A maioria dos clientes começa pelo Growth. Dedicated é para contas que realmente precisam de mais disponibilidade, participação em dailies quando solicitada, prioridades urgentes a qualquer hora e mais espaço ao redor da conta. Todo plano começa com a Garantia da Primeira Entrega e segue mês a mês.',
     footer: ''
   }
 } as const;
