@@ -52,10 +52,10 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       audience:
         'For teams that need the same delivery capabilities as Growth, with higher availability, faster reprioritization, and closer coordination.',
       description:
-        'Dedicated is for clients that want a closer cadence: we join the client daily standups when that is the chosen workflow, handle urgent priorities at any time within the agreement, and keep more room for fast decisions.',
+        'Dedicated is for clients that want a closer cadence: we join your daily meetings when that is the chosen workflow, handle urgent priorities at any time within the agreement, and keep more room for fast decisions.',
       features: [
         'Same capabilities as Growth, with higher availability',
-        'We join client daily standups when that cadence is requested',
+        'We join your daily meetings when that cadence is requested',
         'Urgent priority handling at any time within the agreement',
         'More room for interruptions, fast decisions, and closer coordination'
       ],
@@ -122,7 +122,7 @@ const copyByLocale = {
     subtitle:
       'Choose the plan that fits the current delivery load, the cadence you need, and the level of continuity the account requires. Every plan starts with the First Milestone Guarantee, lets you start without paying upfront, and then continues month to month with the operating rhythm that fits the work.',
     note:
-      'Most teams start with Growth. Dedicated is for accounts that truly need higher availability, client daily standups when requested, urgent priorities at any time within the agreement, and more room for fast decisions. Every plan starts with the First Milestone Guarantee and continues month to month.',
+      'Most teams start with Growth. Dedicated is for accounts that truly need higher availability, participation in your daily meetings when requested, urgent priorities at any time within the agreement, and more room for fast decisions. Every plan starts with the First Milestone Guarantee and continues month to month.',
     footer: ''
   },
   pt: {

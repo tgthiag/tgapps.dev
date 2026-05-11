@@ -95,11 +95,11 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
   label: 'Monthly software plans',
   title: 'Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500+/mo',
   description:
-    'Choose the plan by operating rhythm, not by a different service list. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, closer coordination, client daily standups when requested, and urgent priorities at any time within the agreement.',
+    'Choose the plan by operating rhythm, not by a different service list. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, closer coordination, participation in your daily meetings when requested, and urgent priorities at any time within the agreement.',
   highlights: [
     'Starter: scheduled deliveries and deploys, plus a biweekly planning meeting.',
     'Growth: smart allocation across mobile, web, backend, CRM, and integrations, with one weekly planning/demo meeting to review progress and set priorities.',
-    'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, client daily standups when requested, and urgent priority handling at any time within the agreement.'
+    'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, participation in your daily meetings when requested, and urgent priority handling at any time within the agreement.'
   ],
   note: 'Clear first milestone, month-to-month continuation, and a fixed plan rate while the engagement remains active.'
 };
