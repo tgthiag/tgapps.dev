@@ -95,11 +95,11 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
   label: 'Monthly software plans',
   title: 'Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500+/mo',
   description:
-    'Choose the plan by operating rhythm, not by a different service list. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, daily participation when requested, and urgent priority handling at any time.',
+    'Choose the plan by operating rhythm, not by a different service list. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability when the account needs urgent reprioritization or daily coordination.',
   highlights: [
     'Starter: scheduled deliveries and deploys, plus a biweekly planning meeting.',
     'Growth: smart allocation across mobile, web, backend, CRM, and integrations, with one weekly planning/demo meeting to review progress and set priorities.',
-    'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, participation in client dailies whenever requested, and urgent priority handling at any time with capacity arranged for the account.'
+    'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, possible daily check-ins, and same-day urgent priority handling when feasible within the agreed scope.'
   ],
   note: 'Clear first milestone, month-to-month continuation, and a fixed plan rate while the engagement remains active.'
 };
@@ -108,11 +108,11 @@ const PT_CURRENT_PRICING: LandingPagePricing = {
   label: 'Planos mensais de software',
   title: 'Starter US$ 1.500/mês, Growth US$ 2.000/mês, Dedicated US$ 3.500+/mês',
   description:
-    'Escolha o plano pelo ritmo operacional, não por uma lista diferente de serviços. Starter é quinzenal, Growth é o plano principal semanal, e Dedicated adiciona mais disponibilidade, participação em dailies quando solicitado e prioridades urgentes a qualquer hora.',
+    'Escolha o plano pelo ritmo operacional, não por uma lista diferente de serviços. Starter é quinzenal, Growth é o plano principal semanal, e Dedicated adiciona mais disponibilidade quando a conta precisa de repriorização urgente ou coordenação diária.',
   highlights: [
     'Starter: para entregas e deploys programados, com reunião quinzenal de planejamento.',
     'Growth: alocação inteligente entre mobile, web, backend, CRM e integrações, com uma reunião semanal para revisar progresso e definir prioridades.',
-    'Dedicated: começa em US$ 3.500+/mês para as mesmas capacidades de entrega com maior disponibilidade, participação nas dailies do cliente sempre que solicitado e prioridades urgentes a qualquer hora com capacidade organizada para a conta.'
+    'Dedicated: começa em US$ 3.500+/mês para as mesmas capacidades de entrega com maior disponibilidade, daily quando necessário e prioridades urgentes no mesmo dia quando for viável dentro do escopo combinado.'
   ],
   note: 'Primeira entrega clara, continuidade mês a mês e valor fixo enquanto o plano permanecer ativo.'
 };
