@@ -5,7 +5,7 @@
 
 # Variáveis
 REMOTE_USER="ec2-user"
-REMOTE_HOST="ec2-3-144-43-171.us-east-2.compute.amazonaws.com"
+REMOTE_HOST="18.216.244.68"
 REMOTE_DIR="/var/www/tgapps"
 KEY_PATH="/c/Users/Kabum/OneDrive/Documents/keypem.pem"
 

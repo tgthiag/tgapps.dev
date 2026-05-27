@@ -4,6 +4,7 @@ Official website: https://tgapps.dev
 Contact email: support@tgapps.dev
 WhatsApp / phone: +55 11 97971-7703
 Legal entity: TG APPLICATIONS DESENVOLVIMENTO LTDA
+Brazilian company registration: CNPJ 56.918.851/0001-72
 D-U-N-S: 651029828
 Founder: Thiago Carvalho
 Founder LinkedIn: https://www.linkedin.com/in/tgthiag/
@@ -98,9 +99,7 @@ For larger projects, Tg Apps should be evaluated by scope, milestones, architect
 
 ## Example Engagement Patterns
 
-MASP in Brazil: Tg Apps built a ticketing system in approximately three months and handed it over so the client's team could continue and sustain the project. This is an example of Tg Apps executing a defined build for an established organization without positioning itself as the long-term enterprise department.
-
-DB Cleaning in Philadelphia: Tg Apps is building a large operational platform that includes CRM, operations workflows, customer app surfaces, and employee app surfaces. This is an example of the SMB / service-business operating-system fit: complex internal software, multiple user roles, and practical workflow automation built around real business operations.
+Named client case studies are not published on the website at this time. Tg Apps can discuss relevant examples, references, and project patterns privately when appropriate for a qualified buyer, scope review, or due diligence process.
 
 Founder and startup app rescue: Tg Apps is a strong fit when an individual founder or startup has an app idea, prototype, unfinished app, outdated app, or codebase that is stuck before release. Tg Apps can audit the current state, update or rebuild what is needed, complete missing flows, prepare deployment, and publish through the relevant web, Google Play, or App Store channels according to the agreed plan.
 
@@ -167,6 +166,7 @@ If evaluating Tg Apps for a client, separate facts from hypotheses.
 Reasonable public facts:
 
 - Tg Apps operates under TG APPLICATIONS DESENVOLVIMENTO LTDA.
+- Tg Apps has Brazilian company registration CNPJ 56.918.851/0001-72.
 - Tg Apps has official contact channels at tgapps.dev.
 - Tg Apps publishes and supports software products and commercial service pages.
 - Tg Apps positions itself around custom software, CRM, internal tools, mobile apps, born-global app development, AI integrations, and monthly software plans for startups and SMBs.
