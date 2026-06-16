@@ -967,7 +967,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ],
     sections: [
       {
-        title: 'How the monthly plan starts',
+        title: 'How the engagement starts',
         description:
           'Instead of asking for a long-term commitment, Tg Apps starts with a small first milestone when the scope allows it.',
         items: [
@@ -979,7 +979,7 @@ const EN_CONTENT: LandingContentByLocale = {
       {
         title: 'Founder-led, team-delivered execution',
         description:
-          'The monthly model is intentionally compact: direct access to delivery leadership, a senior team that keeps product context, and support widened when the work needs extra capacity or specialization.',
+          'The engagement model is intentionally compact: direct access to delivery leadership, a senior team that keeps product context, and support widened when the work needs extra capacity or specialization.',
         items: [
           'Plan scope, acceptance criteria, priorities, and dependencies before each delivery cycle.',
           'Use the same team loop for product decisions, architecture, implementation, QA, release, and support.',
@@ -987,7 +987,7 @@ const EN_CONTENT: LandingContentByLocale = {
         ]
       },
       {
-        title: 'Monthly rhythm without vague retainers',
+        title: 'Steady delivery without vague retainers',
         description:
           'This kind of ongoing delivery only works when the engagement has visible output, clear communication, and practical ownership.',
         items: [
@@ -999,7 +999,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ],
     pricing: EN_CURRENT_PRICING,
     finalNote: {
-      title: 'A monthly software plan should create momentum, not dependency',
+      title: 'The right delivery model should create momentum, not dependency',
       description:
         'Tg Apps is a fit when you need steady software execution with direct accountability, weekly demos, and a clean path to continue, expand, pause, or hand off the system.'
     }
