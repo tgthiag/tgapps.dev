@@ -42,6 +42,11 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
     : locale === 'pt'
       ? 'Envie o contexto atual e respondemos com uma leitura honesta de escopo, riscos, integrações e próximos passos.'
       : 'Send the current context and we will reply with an honest read on scope, risks, integrations, and next steps.';
+  const finalCtaProcessNote = isTrustPage
+    ? null
+    : locale === 'pt'
+      ? 'Na conversa, revisamos seus objetivos, explicamos como normalmente abordamos desafios parecidos, desenhamos o caminho técnico recomendado e definimos uma primeira entrega prática.'
+      : 'During the call, we review your goals, explain how we usually approach similar challenges, outline the recommended technical path, and define a practical first milestone.';
   const contactOptionsTitle = locale === 'pt' ? 'Como você prefere falar?' : 'How would you like to talk?';
   const contactOptionsDescription =
     locale === 'pt'
@@ -265,6 +270,9 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
           <div className="mx-auto max-w-4xl rounded-[2rem] bg-slate-950 px-6 py-12 text-center text-white shadow-[0_24px_75px_rgba(15,23,42,0.16)] sm:px-12">
             <h2 className="text-3xl font-bold text-white">{finalCtaTitle}</h2>
             <p className="mx-auto mt-4 max-w-2xl text-white/70">{finalCtaDescription}</p>
+            {finalCtaProcessNote && (
+              <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-white/60">{finalCtaProcessNote}</p>
+            )}
             <button
               type="button"
               onClick={openContactOptions}

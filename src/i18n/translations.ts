@@ -412,6 +412,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         bullets: [
           'We reply within one business day with clarifying questions.',
           'We schedule a 30-45 minute call to align budgets, deadlines, and access.',
+          'We review your goals, explain how we usually approach similar challenges, outline the recommended technical path, and define a practical first milestone.',
           'You receive the statement of work, onboarding checklist, and kickoff date.'
         ]
       },
@@ -739,6 +740,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         bullets: [
           'Respondemos em até 1 dia útil com dúvidas pontuais.',
           'Marcamos uma conversa de 30 a 45 minutos para alinhar orçamento, prazo e acessos.',
+          'Revisamos seus objetivos, explicamos como normalmente abordamos desafios parecidos, desenhamos o caminho técnico recomendado e definimos uma primeira entrega prática.',
           'Enviamos contrato, checklist e data de início.'
         ]
       },
