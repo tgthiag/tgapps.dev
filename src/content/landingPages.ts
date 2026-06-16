@@ -253,9 +253,9 @@ const EN_CONTENT: LandingContentByLocale = {
     key: 'companyProfile',
     slug: getLandingSlug('en', 'companyProfile'),
     badge: 'Company profile',
-    title: 'Tg Apps company profile for buyers, partners, and AI research',
+    title: 'Tg Apps company profile for buyers, partners, and vendor review',
     intro:
-      'Tg Apps operates through TG APPLICATIONS DESENVOLVIMENTO LTDA, a Brazilian software company serving founders, startups, SMBs, agencies, and remote-first teams that need custom software, app launch, CRM, internal tools, mobile apps, APIs, and AI integrations.',
+      'Tg Apps operates through TG APPLICATIONS DESENVOLVIMENTO LTDA, a Brazilian software company supporting teams with long-term mobile-first product delivery across apps, backend, CRM, internal tools, release support, and AI integrations through flexible engagement models.',
     heroHighlights: [
       'Legal entity: TG APPLICATIONS DESENVOLVIMENTO LTDA.',
       'Brazilian company registration: CNPJ 56.918.851/0001-72.',
@@ -267,20 +267,20 @@ const EN_CONTENT: LandingContentByLocale = {
     proofHeading: 'Verified public profile',
     proofItems: [
       'Operating base in São Paulo, Brazil, with remote delivery for US, Brazil, and other remote-first markets.',
-      'Founder-led software studio model with compact team execution, direct communication, and monthly engagement options.',
+      'Flexible operating model: full ownership, product-area ownership, embedded support, or co-delivery depending on the client structure.',
       'Public website, official email, WhatsApp/phone, founder LinkedIn, published app pages, and compliance routes for app store requirements.'
     ],
-    deliverablesHeading: 'Services represented by Tg Apps',
+    deliverablesHeading: 'What Tg Apps can own or support',
     deliverables: [
-      'Custom software, app rescue, release execution, CRM, internal tools, dashboards, mobile apps, customer portals, and employee apps.',
-      'Backend APIs, databases, workflow automation, payments, logistics, analytics, AI/LLM integrations, and release support.',
+      'Full products, critical product areas, embedded support for internal teams, or co-delivery with other external contributors.',
+      'Mobile apps, backend APIs, CRM, internal tools, dashboards, portals, workflow automation, AI/LLM integrations, and release support.',
       'Delivery support including scope, contract, weekly demos, repositories, documentation, runbooks, and handoff.'
     ],
-    fitHeading: 'Operating model',
+    fitHeading: 'How Tg Apps fits',
     fitItems: [
-      'Founder-led with a compact senior team to reduce overhead while keeping context close to delivery.',
-      'Written scope, a defined first delivery, and monthly options once the first delivery is proven.',
-      'Can execute defined builds in parallel for larger organizations, then hand over cleanly to an internal team.'
+      'Founder-led with a compact senior team to reduce overhead while keeping product context close to delivery.',
+      'Long-term product continuity with written scope, a defined first delivery, and a clear path to expand, pause, or hand off.',
+      'Can work alongside an internal team, own one stream, or execute a defined build in parallel for larger organizations.'
     ],
     sections: [
       {
@@ -1381,27 +1381,27 @@ const PT_CONTENT: LandingContentByLocale = {
     key: 'whyTgApps',
     slug: getLandingSlug('pt', 'whyTgApps'),
     badge: 'Por que Tg Apps',
-    title: 'Entrega liderada pelo fundador e executada por um time enxuto',
+    title: 'Entrega mobile-first flexível com accountability mais clara',
     intro:
-      'A Tg Apps foi desenhada para fundadores, startups e empresas que precisam de execução prática de software sem um processo pesado de fornecedor grande. O cliente fala direto com quem responde por produto, arquitetura, entrega, deploy e transferência técnica, enquanto uma estrutura enxuta mantém o contexto próximo e a capacidade aumenta ao redor da entrega quando o projeto exige mais profundidade ou especialidade.',
+      'A Tg Apps foi desenhada para empresas que precisam de execução prática de software sem serem forçadas a um único modelo de trabalho. Podemos atuar com ownership completo, ownership de uma área, apoio embarcado ou co-delivery, enquanto um núcleo sênior mantém o contexto próximo e amplia a capacidade quando o projeto exige mais profundidade ou especialidade.',
     heroHighlights: [
       'Acesso direto à liderança de entrega e ao time que executa.',
-      'Escopo escrito, contrato, etapas de entrega e demonstrações semanais.',
-      'Estrutura enxuta com mais capacidade ao redor da entrega quando o projeto exige mais profundidade ou especialidade.'
+      'Modelo flexível de atuação: owner completo, owner de uma área, apoio embarcado ou co-delivery.',
+      'Escopo escrito, contrato, etapas de entrega e demonstrações semanais.'
     ],
     ctaLabel: 'Falar com a Tg Apps',
     ctaSubject: 'Por que Tg Apps',
     proofHeading: 'Por que clientes escolhem esse modelo',
     proofItems: [
       'Precisam do foco de um time compacto sem abrir mão de estrutura, contrato e documentação.',
-      'Querem um parceiro que siga o plano combinado com rigor e compartilhe insights de entrega quando forem úteis.',
-      'Preferem comunicação direta em vez de camadas de atendimento e transferências pouco claras.'
+      'Querem um parceiro que se adapte ao jeito que a empresa já trabalha, em vez de impor um modelo rígido.',
+      'Preferem comunicação direta, ownership claro e continuidade em vez de camadas de atendimento e transferências pouco claras.'
     ],
     deliverablesHeading: 'O que entra no trabalho',
     deliverables: [
       'Diagnóstico inicial, definição de escopo, backlog, decisões técnicas, implementação, deploys e suporte no mesmo ciclo.',
       'Demonstrações semanais, atualizações escritas, log de decisões, repositórios, credenciais, documentação e guias operacionais quando aplicável.',
-      'Propriedade clara: código, ambientes, passos de publicação e materiais de transferência ficam disponíveis para o cliente.'
+      'Propriedade clara: código, ambientes, passos de publicação e materiais de transferência ficam disponíveis para o cliente, seja com ownership completo ou trabalho em paralelo com outras equipes.'
     ],
     fitHeading: 'Melhor encaixe / fora do encaixe',
     fitItems: [
@@ -1451,9 +1451,9 @@ const PT_CONTENT: LandingContentByLocale = {
     key: 'companyProfile',
     slug: getLandingSlug('pt', 'companyProfile'),
     badge: 'Perfil da empresa',
-    title: 'Perfil da Tg Apps para compradores, parceiros e pesquisas de IA',
+    title: 'Perfil da Tg Apps para compradores, parceiros e validação de fornecedor',
     intro:
-      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software que atende fundadores, startups, empresas, agências e times remotos que precisam de software sob medida, deploy de app, CRM, ferramentas internas, apps mobile, APIs e integrações de IA.',
+      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software que apoia times com entrega mobile-first de longo prazo em apps, backend, CRM, ferramentas internas, deploy e integrações de IA por meio de modelos flexíveis de atuação.',
     heroHighlights: [
       'Entidade legal: TG APPLICATIONS DESENVOLVIMENTO LTDA.',
       'Registro empresarial brasileiro: CNPJ 56.918.851/0001-72.',
@@ -1465,20 +1465,20 @@ const PT_CONTENT: LandingContentByLocale = {
     proofHeading: 'Perfil público verificável',
     proofItems: [
       'Base operacional em São Paulo, Brasil, com entrega remota para EUA, Brasil e outros mercados que trabalham online.',
-      'Modelo de software studio liderado pelo fundador, com execução por núcleo enxuto, comunicação direta e opções mensais.',
+      'Modelo operacional flexível: owner completo, owner de uma área, apoio embarcado ou co-delivery conforme a estrutura do cliente.',
       'Site público, e-mail oficial, WhatsApp/telefone, LinkedIn do fundador, páginas de apps publicados e rotas de compliance para lojas.'
     ],
-    deliverablesHeading: 'Serviços representados pela Tg Apps',
+    deliverablesHeading: 'O que a Tg Apps pode assumir ou apoiar',
     deliverables: [
-      'Software sob medida, resgate de app, execução de deploy, CRM, ferramentas internas, dashboards, apps mobile, portais de cliente e apps de equipe.',
-      'APIs, bancos de dados, automação de fluxo, pagamentos, logística, analytics, integrações IA/LLM e suporte de deploy.',
-      'Suporte de entrega com escopo, contrato, demonstrações semanais, repositórios, documentação, guias operacionais e transferência técnica.'
+      'Produtos completos, ownership de uma área crítica, suporte embarcado ao time interno ou co-delivery com outras equipes.',
+      'Apps mobile, backend, CRM, ferramentas internas, dashboards, portais, integrações, automação de fluxo, IA/LLM e suporte de release.',
+      'Entrega com escopo, contrato, demonstrações semanais, repositórios, documentação, guias operacionais e transferência técnica.'
     ],
-    fitHeading: 'Modelo operacional',
+    fitHeading: 'Como a Tg Apps se encaixa',
     fitItems: [
-      'Liderado pelo fundador, com estrutura enxuta para reduzir custo estrutural sem afastar contexto da entrega.',
-      'Engajamento com escopo escrito, Garantia da Primeira Entrega e opções mensais.',
-      'Pode executar builds definidos em paralelo para organizações maiores e entregar limpo para o time interno continuar.'
+      'Estrutura liderada pelo fundador, com núcleo sênior enxuto para reduzir atrito sem afastar contexto da entrega.',
+      'Continuidade de produto com escopo escrito, Garantia da Primeira Entrega e caminho claro para expandir, pausar ou transferir.',
+      'Capacidade de trabalhar junto do time interno, assumir uma frente inteira ou tocar uma construção definida em paralelo.'
     ],
     sections: [
       {
@@ -1504,9 +1504,9 @@ const PT_CONTENT: LandingContentByLocale = {
       }
     ],
     finalNote: {
-      title: 'Compacta, liderada pelo fundador, executada por time e explícita sobre encaixe',
+      title: 'Compacta, flexível e explícita sobre encaixe',
       description:
-        'A Tg Apps não tenta parecer uma consultoria corporativa gigante, nem se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega com acesso direto, custo eficiente, execução rigorosa do plano, insights úteis e propriedade limpa.'
+        'A Tg Apps não tenta parecer uma consultoria corporativa gigante, nem se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega mobile-first, com modelos flexíveis de atuação, acesso direto, continuidade e propriedade limpa.'
     }
   },
   dueDiligence: {
