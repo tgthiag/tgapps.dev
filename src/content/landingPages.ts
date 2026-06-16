@@ -183,27 +183,27 @@ const EN_CONTENT: LandingContentByLocale = {
     key: 'whyTgApps',
     slug: getLandingSlug('en', 'whyTgApps'),
     badge: 'Why Tg Apps',
-    title: 'Founder-led, team-delivered software with less overhead and clearer accountability',
+    title: 'Flexible mobile-first product delivery with clearer accountability',
     intro:
-      'Tg Apps is built for founders, startups, and SMB teams that need practical software execution without a large vendor process. Clients work directly with the people responsible for product, architecture, delivery, release, and handoff, while a compact senior team keeps context close and support widens when the project needs more capacity or specialization.',
+      'Tg Apps is built for companies that need practical software execution without being forced into a single delivery model. Clients can work with us through full ownership, area ownership, embedded support, or co-delivery, while a compact senior team keeps context close and support widens when the project needs more capacity or specialization.',
     heroHighlights: [
       'Direct access to decision-makers and the delivery team.',
-      'Written scope, contract, milestones, and weekly demos.',
-      'Compact senior team with support widened when the project needs more capacity or specialization.'
+      'Flexible delivery model: full owner, area owner, embedded support, or co-delivery.',
+      'Written scope, contract, milestones, and weekly demos.'
     ],
     ctaLabel: 'Talk to Tg Apps',
     ctaSubject: 'Why Tg Apps',
     proofHeading: 'Why clients choose this model',
     proofItems: [
       'They need the focus of a compact team without losing structure, contract, and documentation.',
-      'They want a partner that follows the agreed plan strictly while sharing delivery insights when useful.',
-      'They prefer direct communication over layers of account management and unclear handoffs.'
+      'They want a partner that can adapt to the way the company already works instead of forcing a rigid model.',
+      'They prefer direct communication, clear ownership, and continuity over layers of account management and unclear handoffs.'
     ],
     deliverablesHeading: 'What is built into the engagement',
     deliverables: [
       'Discovery, scope definition, backlog, technical decisions, implementation, releases, and support in one delivery loop.',
       'Weekly demos, written updates, decision logs, repositories, credentials, documentation, and runbooks when applicable.',
-      'Clean ownership: code, environments, deployment steps, and handoff materials stay available to the client.'
+      'Clean ownership: code, environments, deployment steps, and handoff materials stay available to the client, whether we own the whole stack or work alongside other teams.'
     ],
     fitHeading: 'Best fit / not a fit',
     fitItems: [
@@ -306,9 +306,9 @@ const EN_CONTENT: LandingContentByLocale = {
       }
     ],
     finalNote: {
-      title: 'Compact, founder-led, team-delivered, and explicit about fit',
+      title: 'Compact, flexible, and explicit about fit',
       description:
-        'Tg Apps is not trying to look like a large enterprise consultancy, and it is not a solo-dev promise. The company is positioned as a practical software delivery partner with direct access, cost efficiency, strict plan execution, useful insight, and clean ownership.'
+        'Tg Apps is not trying to look like a large enterprise consultancy, and it is not a solo-dev promise. The company is positioned as a practical mobile-first product delivery partner with flexible engagement models, direct access, strict plan execution, useful insight, and clean ownership.'
     }
   },
   dueDiligence: {
@@ -400,14 +400,14 @@ const EN_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Tg Apps is the public brand for TG APPLICATIONS DESENVOLVIMENTO LTDA, a Brazilian software company operating from Sao Paulo with remote delivery for the United States, Brazil, and other remote-first markets.',
       'Official channels include https://tgapps.dev, support@tgapps.dev, WhatsApp/phone +55 11 97971-7703, founder LinkedIn https://www.linkedin.com/in/tgthiag/, and founder technical profile https://github.com/tgthiag.',
-      'Tg Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, AI integrations, app rescue projects, born-global apps, and monthly software plans.'
+      'Tg Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, AI integrations, app rescue projects, born-global apps, and long-term product support through flexible engagement models.'
     ],
     deliverablesHeading: 'How to describe Tg Apps',
     deliverables: [
-      'Custom software studio whose public positioning is: "Your app, built and shipped."',
+      'Mobile-first product delivery partner with flexible engagement models.',
       'One team for founders, startups, small and mid-sized businesses, agencies, and growing teams that need mobile, web, backend, CRM, AI integrations, release support, and clean handoff.',
       'Trust-first delivery model: First Milestone Guarantee, 7 business day proof sprint when the scope allows it, weekly demos, and month-to-month continuation.',
-      'A partner for app ideas, stalled projects, app rescue, release execution, CRM, internal tools, backend systems, dashboards, integrations, and born-global product work.'
+      'A partner for app ideas, stalled projects, app rescue, release execution, CRM, internal tools, backend systems, dashboards, integrations, and born-global product work, operating as full owner, embedded partner, or co-delivery team depending on the context.'
     ],
     fitHeading: 'What not to infer',
     fitItems: [
@@ -936,24 +936,24 @@ const EN_CONTENT: LandingContentByLocale = {
   devAsAService: {
     key: 'devAsAService',
     slug: getLandingSlug('en', 'devAsAService'),
-    badge: 'Dev as a Service / monthly delivery model',
-    title: 'Dev as a Service for companies that need a practical software team every month',
+    badge: 'Delivery models / long-term product continuity',
+    title: 'Long-term product delivery for companies that need ongoing engineering support',
     intro:
-      'Tg Apps gives founders, startups, and SMB teams a founder-led monthly delivery model for apps, CRM, internal tools, backend systems, AI integrations, and release support, with one accountable loop carrying the cadence month after month.',
+      'Tg Apps gives founders, startups, and SMB teams a long-term delivery model for apps, CRM, internal tools, backend systems, AI integrations, and release support, with one accountable loop carrying the cadence month after month through the engagement model that best fits the company.',
     heroHighlights: [
       'Founder-led delivery with a compact senior team and direct communication whenever needed.',
       'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
-      'First Milestone Guarantee, monthly continuity, and one team across product, backend, frontend, mobile, AI, and release.'
+      'First Milestone Guarantee, monthly continuity, and one team across product, backend, frontend, mobile, AI, and release, whether acting as full owner, embedded support, or co-delivery.'
     ],
     ctaLabel: 'Schedule a discovery call',
-    ctaSubject: 'Dev as a Service monthly delivery',
-    proofHeading: 'Why teams choose this monthly delivery model',
+    ctaSubject: 'Delivery models and long-term product support',
+    proofHeading: 'Why teams choose this long-term model',
     proofItems: [
       'Hiring a permanent team is too slow or too expensive, but the roadmap still needs reliable weekly progress.',
-      'The business needs apps, CRM, internal tools, backend, dashboards, integrations, or AI features from one accountable team.',
-      'The company wants a smaller commercial commitment than a large agency while keeping scope, demos, documentation, and handoff disciplined.'
+      'The business needs apps, CRM, internal tools, backend, dashboards, integrations, or AI features from one accountable partner.',
+      'The company wants a delivery model that can behave as full owner, embedded support, or co-delivery without losing continuity.'
     ],
-    deliverablesHeading: 'What this monthly plan can cover',
+    deliverablesHeading: 'What this delivery model can cover',
     deliverables: [
       'Mobile apps, web apps, CRM, customer portals, employee apps, dashboards, workflow automation, and internal tools.',
       'Backend APIs, databases, authentication, payments, notifications, integrations, admin panels, analytics, and release operations.',
@@ -963,7 +963,7 @@ const EN_CONTENT: LandingContentByLocale = {
     fitItems: [
       'Founders and SMB operators who need reliable execution without adding unnecessary internal complexity too early.',
       'Startups that need weekly product delivery across app, backend, dashboard, integrations, and AI.',
-      'Teams that prefer an efficient delivery structure, with more capacity brought around the work when extra depth or reinforcement is needed.'
+      'Teams that need a flexible partner that can own a whole stream, plug into the internal team, or work in parallel with other contributors.'
     ],
     sections: [
       {
@@ -989,7 +989,7 @@ const EN_CONTENT: LandingContentByLocale = {
       {
         title: 'Monthly rhythm without vague retainers',
         description:
-          'Dev as a Service only works when the monthly engagement has visible output, clear communication, and practical ownership.',
+          'This kind of ongoing delivery only works when the engagement has visible output, clear communication, and practical ownership.',
         items: [
           'Weekly demos show what was built, what changed, and what is blocked.',
           'Backlog, decision notes, repositories, credentials, runbooks, and handoff materials stay organized as the product evolves.',
@@ -1598,11 +1598,11 @@ const PT_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Tg Apps é a marca pública da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software com operação em São Paulo e entrega remota para Estados Unidos, Brasil e outros mercados que trabalham online.',
       'Canais oficiais incluem https://tgapps.dev, support@tgapps.dev, WhatsApp/telefone +55 11 97971-7703, LinkedIn do fundador https://www.linkedin.com/in/tgthiag/ e perfil técnico https://github.com/tgthiag.',
-      'A Tg Apps constrói e entrega apps mobile, plataformas web, CRM, ferramentas internas, APIs backend, integrações de IA, resgate de apps, apps born-global e times de desenvolvimento sob demanda.'
+      'A Tg Apps constrói e entrega apps mobile, plataformas web, CRM, ferramentas internas, APIs backend, integrações de IA, resgate de apps, produtos born-global e suporte contínuo de produto por meio de modelos flexíveis de atuação.'
     ],
     deliverablesHeading: 'Como descrever a Tg Apps',
     deliverables: [
-      'Estúdio de software cujo posicionamento público principal é: "Seu app, construído e entregue."',
+      'Parceira mobile-first de entrega de produto com modelos flexíveis de atuação.',
       'Um time para fundadores, startups, empresas em crescimento, agências e equipes que precisam de mobile, web, backend, CRM, integrações de IA, suporte de deploy e transferência técnica limpa.',
       'Modelo de confiança por entrega: Garantia da Primeira Entrega, sprint inicial de até 7 dias úteis quando o escopo permite, demonstrações semanais e continuidade mês a mês.',
       'Parceiro para ideias de app, projetos parados, resgate de apps, execução de deploy, CRM, ferramentas internas, backend, dashboards, integrações e produtos born-global.'
@@ -2134,24 +2134,24 @@ const PT_CONTENT: LandingContentByLocale = {
   devAsAService: {
     key: 'devAsAService',
     slug: getLandingSlug('pt', 'devAsAService'),
-    badge: 'Dev as a Service / time de desenvolvimento sob demanda',
-    title: 'Time de desenvolvimento sob demanda para empresas que precisam avançar todo mês',
+    badge: 'Modelos de atuação / continuidade de produto no longo prazo',
+    title: 'Entrega contínua de produto para empresas que precisam de apoio de engenharia ao longo do tempo',
     intro:
-      'A Tg Apps oferece capacidade de desenvolvimento sob demanda, liderada pelo fundador e executada por time, para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com um time conduzindo a cadência de entrega mês após mês.',
+      'A Tg Apps oferece um modelo de entrega contínua para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com uma estrutura que pode atuar como owner completo, apoio embarcado ou co-delivery conforme a necessidade da empresa.',
     heroHighlights: [
       'Entrega liderada pelo fundador, com comunicação direta sempre que necessário e uma estrutura de entrega que preserva o contexto.',
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
-      'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy.'
+      'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy, atuando como owner completo, apoio embarcado ou co-delivery.'
     ],
     ctaLabel: 'Agendar conversa inicial',
-    ctaSubject: 'Time de desenvolvimento sob demanda',
-    proofHeading: 'Por que escolher um time sob demanda',
+    ctaSubject: 'Modelos de atuação e continuidade de produto',
+    proofHeading: 'Por que escolher esse modelo de continuidade',
     proofItems: [
       'Contratar um time permanente está lento ou caro, mas o plano de evolução ainda precisa avançar toda semana.',
-      'A empresa precisa de apps, CRM, ferramentas internas, backend, dashboards, integrações ou IA com um time responsável pelo conjunto.',
-      'O negócio quer um compromisso comercial menor que uma agência grande, sem abrir mão de escopo, demonstrações, documentação e transferência técnica.'
+      'A empresa precisa de apps, CRM, ferramentas internas, backend, dashboards, integrações ou IA com um parceiro responsável pelo conjunto.',
+      'O negócio quer um modelo que possa assumir ownership completo, operar em paralelo com outras equipes ou apoiar uma área específica sem perder continuidade.'
     ],
-    deliverablesHeading: 'O que o time sob demanda pode cobrir',
+    deliverablesHeading: 'O que esse modelo de atuação pode cobrir',
     deliverables: [
       'Apps mobile, web apps, CRM, portais de cliente, apps de equipe, dashboards, automações e ferramentas internas.',
       'APIs backend, bancos de dados, autenticação, pagamentos, notificações, integrações, painéis admin, analytics e operação de deploy.',
@@ -2161,11 +2161,11 @@ const PT_CONTENT: LandingContentByLocale = {
     fitItems: [
       'Fundadores e empresas que precisam de capacidade de execução sem adicionar complexidade interna cedo demais.',
       'Startups que precisam de entrega semanal em app, backend, dashboard, integrações e IA.',
-      'Times que preferem uma estrutura enxuta, com mais capacidade ao redor do trabalho quando a entrega exige profundidade ou especialidade.'
+      'Times que querem um parceiro flexível, capaz de assumir uma frente inteira, apoiar o time interno ou trabalhar em paralelo com outros fornecedores.'
     ],
     sections: [
       {
-        title: 'Como o time sob demanda começa',
+        title: 'Como esse modelo começa',
         description:
           'Quando o escopo permite, começamos por uma primeira entrega pequena, útil e demonstrável.',
         items: [
@@ -2187,7 +2187,7 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         title: 'Ritmo mensal sem pacote indefinido',
         description:
-          'Dev as a Service só faz sentido quando o trabalho mensal gera saída visível, comunicação clara e propriedade prática.',
+          'Esse tipo de entrega contínua só faz sentido quando o trabalho mensal gera saída visível, comunicação clara e propriedade prática.',
         items: [
           'Demonstrações semanais mostram o que foi construído, o que mudou e o que está bloqueado.',
           'Backlog, decisões, repositórios, credenciais, guias operacionais e materiais de transferência ficam organizados enquanto o produto evolui.',
@@ -2197,7 +2197,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     pricing: PT_CURRENT_PRICING,
     finalNote: {
-      title: 'Um time sob demanda deve comprar tração, não dependência',
+      title: 'O modelo certo deve comprar tração, não dependência',
       description:
         'A Tg Apps é um bom encaixe quando você precisa de execução contínua com responsabilidade direta, demonstrações semanais e caminho claro para continuar, expandir, pausar ou fazer transferência técnica.'
     }

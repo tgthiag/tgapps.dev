@@ -26,8 +26,8 @@ const cases: CaseItem[] = [
       pt: 'Philadelphia, PA, Estados Unidos'
     },
     description: {
-      en: 'Built the full operational stack: CRM, booking platform, mobile apps, frontend, backend, and databases.',
-      pt: 'Construímos a operação digital completa: CRM, plataforma de agendamento, apps mobile, frontend, backend e bancos de dados.'
+      en: 'Owns the critical delivery stack: CRM, booking platform, frontend, backend, databases, and two mobile apps, while outside contributors handle only occasional minor adjustments.',
+      pt: 'Assume a parte crítica da entrega: CRM, plataforma de agendamento, frontend, backend, bancos de dados e dois apps mobile, enquanto contribuições externas ficam restritas a ajustes pontuais.'
     },
     tags: ['CRM', 'Booking', 'Mobile', 'Backend']
   },
@@ -40,8 +40,8 @@ const cases: CaseItem[] = [
       pt: 'Brasil'
     },
     description: {
-      en: 'Tg Apps provides technology services to IT.up, a company serving large rental corporations in Brazil with TOTVS ERP. More than 6 apps created, deployed, and maintained within a year.',
-      pt: 'A Tg Apps presta serviços de tecnologia para a IT.up, empresa que atende grandes locadoras no Brasil com TOTVS ERP. Mais de 6 apps criados, publicados e mantidos em um ano.'
+      en: 'Tg Apps owns the app area for IT.up while other teams handle other parts of the business stack. More than 6 apps were created, deployed, and maintained within a year.',
+      pt: 'A Tg Apps assume toda a área de apps da IT.up, enquanto outras equipes cuidam de outras partes da operação. Mais de 6 apps foram criados, publicados e mantidos em um ano.'
     },
     tags: ['TOTVS ERP', '6+ Apps', 'Enterprise', 'Maintenance']
   },
@@ -54,8 +54,8 @@ const cases: CaseItem[] = [
       pt: 'Brasil'
     },
     description: {
-      en: 'Inherited a legacy app that previous developers could not finish. Rebuilt, completed, and shipped across Android, iOS, web, and desktop, with a management dashboard and automated ecommerce data pipelines.',
-      pt: 'Assumimos um app legado que outros desenvolvedores não conseguiram concluir. Reconstruímos, finalizamos e publicamos em Android, iOS, web e desktop, com dashboard de gestão e pipelines automatizados conectados ao e-commerce.'
+      en: 'Tg Apps took ownership of the product build and launch, creating, deploying, and putting the business online, with ongoing growth across app, web, and operational flows.',
+      pt: 'A Tg Apps assumiu o desenvolvimento e o lançamento do produto, criando, publicando e colocando a empresa no ar, com crescimento contínuo em app, web e fluxos operacionais.'
     },
     tags: ['App Rescue', 'Android', 'iOS', 'Desktop', 'Ecommerce']
   },
@@ -68,8 +68,8 @@ const cases: CaseItem[] = [
       pt: 'Brasil'
     },
     description: {
-      en: 'Built from idea to production: AI-integrated health document management, Flutter apps on Android, iOS and web, Node backend, and MySQL. A new pet health app is currently in deployment.',
-      pt: 'Construído da ideia à produção: gestão de documentos de saúde com IA, apps Flutter em Android, iOS e web, backend Node e MySQL. Um novo app de saúde pet está em implantação.'
+      en: 'Built from idea to production by Tg Apps, then continued alongside another team after deployment, covering Flutter apps, backend, and health document operations.',
+      pt: 'Construído da ideia à produção pela Tg Apps e depois continuado em conjunto com outra equipe após o deploy, cobrindo apps Flutter, backend e operação de documentos de saúde.'
     },
     tags: ['AI', 'Flutter', 'Health', 'Node', 'MySQL']
   },
@@ -82,8 +82,8 @@ const cases: CaseItem[] = [
       pt: 'Brasil, equipe corporativa'
     },
     description: {
-      en: "Tg Apps provides embedded frontend engineering through Mathex for the Smiles loyalty program, one of Brazil's largest airline rewards platforms, building and maintaining screens with microfrontend architecture inside an enterprise squad.",
-      pt: 'A Tg Apps atua com engenharia frontend embarcada via Mathex no programa de fidelidade Smiles, uma das maiores plataformas de recompensas aéreas do Brasil, construindo e mantendo telas com arquitetura de microfrontends dentro de uma equipe corporativa.'
+      en: "Tg Apps works as an embedded frontend partner through Mathex for the Smiles loyalty program, supporting microfrontend delivery inside an enterprise squad with lower overall ownership than our full-stack engagements.",
+      pt: 'A Tg Apps atua como parceira embarcada de frontend via Mathex no programa de fidelidade Smiles, apoiando a entrega com microfrontends dentro de uma equipe corporativa, com menor ownership global do que nos contratos full-stack.'
     },
     tags: ['Microfrontend', 'Enterprise Squad', 'Airline', 'Loyalty Platform']
   }

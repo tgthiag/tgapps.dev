@@ -176,12 +176,12 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Language'
     },
     hero: {
-      badge: 'Custom software · Dev as a Service',
-      titleLine1: 'Your app, built',
-      titleHighlight: 'and shipped.',
+      badge: 'Mobile-first product delivery · Flexible engagement models',
+      titleLine1: 'Mobile-first product delivery',
+      titleHighlight: 'that fits your team.',
       titleLine2: '',
       subtitle:
-        'Got an idea, a stalled app, or an internal workflow that needs software? Tg Apps builds and ships mobile, web, CRM, backend, and AI with a First Milestone Guarantee, weekly demos, and month-to-month continuity after the first delivery, with no upfront payment to start.',
+        'Tg Apps adapts to the way each company works, taking full ownership when needed, leading a product area, supporting internal developers, or working in parallel with other teams across mobile apps, backend systems, internal tools, integrations, and release operations.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth plan: USD 2,000/mo' },
@@ -192,9 +192,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       secondaryCta: 'See how it works'
     },
     socialProof: {
-      heading: 'Trusted by founders and operators',
+      heading: 'Trusted across different delivery models',
       description:
-        'A few brands and operators we support across custom software delivery, product execution, and ongoing operations.'
+        'Some companies rely on us for full ownership, others for app area ownership, critical delivery support, or embedded engineering inside broader teams.'
     },
     firstMilestone: {
       badge: 'Real first delivery',
@@ -217,21 +217,21 @@ export const translations: Record<Locale, TranslationSchema> = {
       ]
     },
     services: {
-      badge: 'Custom software capabilities',
-      headingLine1: 'What we build',
-      headingHighlight: 'when your product or operation needs to move',
+      badge: 'Flexible delivery models',
+      headingLine1: 'How we work',
+      headingHighlight: 'with your company',
       description:
-        'Use us for a complete build, an app rescue, or a focused product push. Mobile, CRM, backend, AI, integrations, infrastructure, and release support stay connected inside one accountable software team.',
+        'We are not limited to one model. We can build from zero, own a product area, support your internal team, or work in parallel with other teams across mobile, backend, internal tools, integrations, infrastructure, and release support.',
       pillars: [
         'Mobile-first delivery for Android, iOS, Play Store, App Store, private MDM, and phased releases.',
-        'Operational systems built around the way the business actually works, not around generic SaaS limits.',
+        'Flexible ownership: full build, area ownership, embedded support, or co-delivery depending on the structure.',
         'Clear scope, weekly demos, release support, documentation, and handoff when applicable.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
-      gridHeading: 'Use us for the problem you actually have',
+      gridHeading: 'Use the model that fits your reality',
       gridDescription:
-        'Most clients need one of six outcomes: a mobile app, a real internal system, a rescue, a backend, an AI workflow, or a product ready for more than one market.',
+        'Some clients need full ownership. Others need embedded support, co-delivery, or a team that takes responsibility for one critical area without replacing the rest of the structure.',
       processHeading: 'How we collaborate in three tight loops',
       processDescription:
         'Lean structure: align, ship, support. Each loop keeps decision-makers involved without draining their calendar.',
@@ -328,28 +328,28 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Need your app built with clear scope and delivery ownership?',
+        title: 'Need a partner that can adapt to your team and still own delivery?',
         description:
-          'Send us the current app, repo, spreadsheet, process, or product idea. We respond in under one business day with blockers, risks, next steps, or an honest referral.',
-        button: 'Plan the build'
+          'Send us the current product context, team setup, repo, process, or product idea. We respond in under one business day with blockers, risks, next steps, and the delivery model that seems most practical.',
+        button: 'Discuss the delivery model'
       }
     },
     about: {
-      badge: 'Proof and operating model',
-      headingLine1: 'Trusted delivery partner',
-      headingHighlight: 'for founders and operators',
+      badge: 'Proof and operating models',
+      headingLine1: 'One partner,',
+      headingHighlight: 'different ways to deliver',
       description:
-        'We are a bilingual studio in São Paulo working with startups, SMB operators, agencies, and IT leaders who need dependable custom software delivery.',
-      timelineHeading: 'What working with us feels like',
+        'We are a bilingual studio in São Paulo supporting companies through long-term mobile-first product delivery, adapting to the way each team actually works.',
+      timelineHeading: 'How we fit inside real teams',
       paragraphs: [
-        'You always speak with someone able to make decisions. We keep the team compact so context, accountability, and product sense stay intact from kickoff to handoff.',
-        'We adopt your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. Expect direct communication whenever needed, visible progress during the week, and a weekly demo with timing, risks, and budgets.',
-        'Because product, engineering, release, and ops stay together, you do not need extra vendors for monitoring, analytics, or training. When we pause, you keep every repo, design file, and runbook.'
+        'In some companies we build and launch the entire product. In others we own one area, work alongside internal developers, or handle the critical stack while other teams cover adjacent work.',
+        'We adapt to your stack: Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub, or any channel you already use, or bring ours. The delivery model can be more embedded or more independent, but accountability stays clear.',
+        'What stays constant is continuity. Mobile, backend, internal tools, release, and operational context stay connected, even when the way we collaborate changes.'
       ],
-      missionHeading: 'How we protect your roadmap',
+      missionHeading: 'How we protect continuity',
       missionDescription:
         'Signed agreement, D-U-N-S record, and Brazilian LLC paperwork keep finance and legal comfortable while delivery keeps moving.',
-      clientHeading: 'Direct leadership, lean bureaucracy',
+      clientHeading: 'Flexible model, clear accountability',
       clientTypes: [],
       valuesHeading: 'Safeguards baked into every contract',
       values: [
@@ -454,7 +454,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'Tg Apps builds and ships mobile apps, CRM, internal tools, backend, and AI integrations for founders and growing teams. Monthly plans from USD 1,500, First Milestone Guarantee, and month-to-month continuity after the first delivery.',
+        'Tg Apps supports growing teams with mobile-first product delivery across apps, CRM, internal tools, backend, and AI integrations, operating as a full owner, embedded partner, or co-delivery team depending on the work.',
       navigationHeading: 'Sections',
       navigation: [
         { id: 'inicio', label: 'Overview' },
@@ -504,12 +504,12 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Software sob medida · time sob demanda',
-      titleLine1: 'Seu app, construído',
-      titleHighlight: 'e entregue.',
+      badge: 'Entrega mobile-first · modelos flexíveis de atuação',
+      titleLine1: 'Entrega de produto',
+      titleHighlight: 'do jeito que sua empresa precisa.',
       titleLine2: '',
       subtitle:
-        'Tem uma ideia, um app parado ou uma operação que precisa de software? A Tg Apps entrega mobile, web, CRM, backend e IA com Garantia da Primeira Entrega, demonstrações semanais e continuidade mês a mês após a primeira entrega, sem pagamento antecipado para começar.',
+        'A Tg Apps se adapta ao jeito que cada empresa trabalha, assumindo tudo quando faz sentido, liderando uma área específica, apoiando o time interno ou trabalhando em paralelo com outras equipes em apps, backend, ferramentas internas, integrações e release.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth US$ 2.000/mês' },
@@ -520,9 +520,9 @@ export const translations: Record<Locale, TranslationSchema> = {
       secondaryCta: 'Ver como funciona'
     },
     socialProof: {
-      heading: 'Confiança de fundadores e operadores',
+      heading: 'Confiança em modelos diferentes de entrega',
       description:
-        'Algumas marcas e operações que apoiamos em software sob medida, execução de produto e operação contínua.'
+        'Algumas empresas contam com a gente para ownership completo. Outras para uma área crítica, apoio embarcado ou trabalho em paralelo com times maiores.'
     },
     firstMilestone: {
       badge: 'Primeira entrega real',
@@ -545,21 +545,21 @@ export const translations: Record<Locale, TranslationSchema> = {
       ]
     },
       services: {
-      badge: 'Capacidades de software sob medida',
-      headingLine1: 'O que construímos',
-      headingHighlight: 'quando seu produto ou operação precisa andar',
+      badge: 'Modelos flexíveis de entrega',
+      headingLine1: 'Como trabalhamos',
+      headingHighlight: 'com a sua empresa',
       description:
-        'Conte com a Tg Apps para construir do zero, resgatar um app parado ou avançar uma parte específica do produto. Mobile, CRM, backend, IA, integrações, infraestrutura e deploy ficam conectados em um único time responsável.',
+        'A Tg Apps não fica presa a um formato só. Podemos construir do zero, assumir ownership de uma área, apoiar seu time interno ou trabalhar em paralelo com outras equipes em mobile, backend, ferramentas internas, integrações, infraestrutura e release.',
       pillars: [
         'Entrega com prioridade para mobile: Android, iOS, Play Store, App Store, distribuição interna e deploys graduais.',
-        'Sistemas operacionais feitos para o jeito que a empresa realmente trabalha, não para limites de SaaS genérico.',
+        'Ownership flexível: build completo, área específica, apoio embarcado ou co-delivery conforme a estrutura.',
         'Escopo claro, demonstrações semanais, suporte de deploy, documentação e transferência técnica quando aplicável.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
-      gridHeading: 'Use a gente para o problema real',
+      gridHeading: 'Use o modelo que faz sentido para a sua realidade',
       gridDescription:
-        'Normalmente o cliente precisa de um destes seis resultados: app mobile, sistema interno, resgate, backend, fluxo de IA ou produto pronto para mais de um mercado.',
+        'Algumas empresas precisam de ownership completo. Outras precisam de apoio embarcado, co-delivery ou de um time que assuma uma área crítica sem substituir toda a estrutura atual.',
       processHeading: 'Como trabalhamos em três ciclos',
       processDescription:
         'Estrutura enxuta: alinhamento, construção e suporte. Cada ciclo mantém decisores próximos sem roubar agenda.',
@@ -656,28 +656,28 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Precisa construir seu app com escopo claro e responsabilidade de entrega?',
+        title: 'Precisa de um parceiro que se adapte ao seu time sem perder responsabilidade de entrega?',
         description:
-          'Envie o app atual, repositório, processo, planilha ou ideia de produto. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos ou uma indicação honesta.',
-        button: 'Planejar a construção'
+          'Envie o contexto atual do produto, o time, o repositório, o processo ou a ideia. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos e o modelo de atuação mais prático para o caso.',
+        button: 'Discutir o modelo de entrega'
       }
     },
     about: {
-      badge: 'Provas e operação',
-      headingLine1: 'Time confiável',
-      headingHighlight: 'para fundadores e gestores',
+      badge: 'Provas e modelos de atuação',
+      headingLine1: 'Um parceiro,',
+      headingHighlight: 'jeitos diferentes de entregar',
       description:
-        'Somos um estúdio bilíngue em São Paulo, construindo software sob medida, produtos digitais e sistemas operacionais para empresas de diferentes mercados desde 2019.',
-      timelineHeading: 'Como é trabalhar conosco',
+        'Somos um estúdio bilíngue em São Paulo apoiando empresas com entrega mobile-first de longo prazo, adaptada ao jeito que cada time realmente trabalha.',
+      timelineHeading: 'Como nos encaixamos em times reais',
       paragraphs: [
-        'Você fala direto com quem decide. Mantemos o time compacto para preservar contexto, responsabilidade e visão de produto.',
-        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. Mantemos comunicação direta sempre que necessário, progresso visível ao longo da semana e demonstração semanal com riscos e custos.',
-        'Engenharia de deploy e operação ficam no mesmo time, então você não precisa de outros fornecedores para monitoramento, analytics ou treinamento. Ao finalizar, tudo fica com você.'
+        'Em algumas empresas construímos e colocamos tudo no ar. Em outras assumimos uma área, trabalhamos ao lado de devs internos ou tocamos a parte crítica enquanto outras equipes cobrem frentes adjacentes.',
+        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. O formato pode ser mais embarcado ou mais independente, mas a responsabilidade de entrega continua clara.',
+        'O que não muda é a continuidade. Mobile, backend, ferramentas internas, release e contexto operacional ficam conectados mesmo quando o modelo de trabalho muda.'
       ],
-      missionHeading: 'Como protegemos seu plano de evolução',
+      missionHeading: 'Como protegemos a continuidade',
       missionDescription:
         'Contrato assinado, registro D-U-N-S, empresa brasileira regularizada e escopo claro desde o início. Finanças, jurídico e o time de produto ficam tranquilos.',
-      clientHeading: 'Liderança direta e baixa burocracia',
+      clientHeading: 'Modelo flexível, accountability clara',
       clientTypes: [],
       valuesHeading: 'Garantias em todo contrato',
       values: [
@@ -782,7 +782,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A Tg Apps constrói e entrega apps mobile, CRM, ferramentas internas, backend e integrações de IA para fundadores e times em crescimento. Planos mensais a partir de US$ 1.500, Garantia da Primeira Entrega e continuidade mês a mês após a primeira entrega.',
+        'A Tg Apps apoia times em crescimento com entrega mobile-first em apps, CRM, ferramentas internas, backend e integrações de IA, operando como owner completo, parceiro embarcado ou time em co-delivery conforme o contexto.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },

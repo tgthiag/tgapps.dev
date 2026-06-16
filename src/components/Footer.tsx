@@ -60,7 +60,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
       href: localizedLandingHref(landingSlugsByLocale[language].whyTgApps)
     },
     {
-      label: language === 'pt' ? 'Time sob demanda' : 'Dev as a Service',
+      label: language === 'pt' ? 'Modelos de atuação' : 'Delivery models',
       href: localizedLandingHref(landingSlugsByLocale[language].devAsAService)
     },
     {

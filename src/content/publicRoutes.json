@@ -458,28 +458,32 @@
       "page": "landing",
       "landingKey": "devAsAService",
       "localizedPaths": {
-        "en": "/dev-as-a-service",
-        "pt": "/desenvolvimento-de-software-por-assinatura"
+        "en": "/delivery-models",
+        "pt": "/modelos-de-atuacao"
       },
       "aliasesByLocale": {
         "en": [
+          "/dev-as-a-service",
           "/software-development-subscription",
-          "/dev-team-subscription"
+          "/dev-team-subscription",
+          "/how-we-fit-your-team"
         ],
         "pt": [
+          "/desenvolvimento-de-software-por-assinatura",
           "/time-de-desenvolvimento-sob-demanda",
-          "/time-de-desenvolvimento-por-assinatura"
+          "/time-de-desenvolvimento-por-assinatura",
+          "/como-nos-encaixamos-no-seu-time"
         ]
       },
       "seo": {
         "en": {
-          "title": "Dev as a Service | Software Development Subscription | Tg Apps",
-          "description": "Dev as a Service by Tg Apps: an on-demand software team for apps, CRM, internal tools, backend, AI integrations, weekly demos, and a defined first delivery.",
+          "title": "Delivery models | Flexible product delivery | Tg Apps",
+          "description": "See how Tg Apps works as a full owner, area owner, embedded partner, or co-delivery team across mobile apps, backend systems, CRM, internal tools, and release support.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
-          "title": "Time de desenvolvimento sob demanda | Tg Apps",
-          "description": "Time de desenvolvimento sob demanda da Tg Apps para apps, CRM, ferramentas internas, backend, IA, demonstrações semanais e uma primeira entrega definida.",
+          "title": "Modelos de atuação | Entrega flexível de produto | Tg Apps",
+          "description": "Veja como a Tg Apps atua como owner completo, dona de uma área, parceira embarcada ou time em co-delivery em apps, backend, CRM, ferramentas internas e suporte de release.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
