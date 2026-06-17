@@ -1,5 +1,7 @@
 import { ArrowRight, Award, Play, ShieldCheck, Star, Users, Zap } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
+import { landingSlugsByLocale } from '../content/landingPages';
+import { buildLocalizedPath } from '../content/publicRoutes';
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -10,6 +12,7 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
+  const howWeFitHref = buildLocalizedPath(language, landingSlugsByLocale[language].howWeFitYourTeam);
 
   const statsIcons = [Award, Users, ShieldCheck, Zap];
   const stats = statsIcons.map((IconComponent, index) => ({
@@ -71,7 +74,9 @@ const Hero = () => {
             </button>
 
             <button
-              onClick={() => scrollToSection('process')}
+              onClick={() => {
+                window.location.href = howWeFitHref;
+              }}
               className="group bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center space-x-2"
             >
               <Play className="w-5 h-5" />
