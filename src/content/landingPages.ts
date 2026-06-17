@@ -1535,7 +1535,7 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Como nos encaixamos no seu time',
     title: 'Um parceiro de entrega, vários jeitos de entrar na sua operação',
     intro:
-      'A Tg Apps não força um formato único. Podemos assumir ownership completo, tocar uma área crítica, trabalhar ao lado dos seus devs ou operar em co-delivery com outras equipes, mantendo mobile, backend, ferramentas internas, integrações e release andando com continuidade.',
+      'A Tg Apps não empurra um formato único. Podemos assumir a entrega inteira, tocar uma frente crítica, trabalhar ao lado dos seus devs ou dividir a execução com outras equipes, mantendo mobile, backend, ferramentas internas, integrações e release andando com continuidade.',
     heroHighlights: [
       'Já colocamos no ar e mantivemos apps mobile, CRM, ferramentas internas, integrações de backend e releases em modelos de ownership completo, co-delivery e apoio embarcado.',
       'Mantenha um ciclo de entrega responsável mesmo quando outras equipes participam do trabalho.',
@@ -1551,9 +1551,9 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     deliverablesHeading: 'Jeitos de encaixar a Tg Apps no trabalho',
     deliverables: [
-      'Responsabilidade completa, da construção ao lançamento e à continuidade do produto.',
-      'Responsabilidade por uma área, como apps mobile, backend, CRM ou outra frente crítica.',
-      'Apoio integrado ao time existente ou atuação em conjunto com outra equipe externa.'
+      'Assumir a entrega inteira, da construção ao lançamento e à continuidade do produto.',
+      'Assumir uma área específica, como apps mobile, backend, CRM ou outra frente crítica.',
+      'Entrar junto do time existente ou atuar em conjunto com outra equipe externa.'
     ],
     fitHeading: 'Você precisa da Tg Apps quando',
     fitItems: [
@@ -1588,7 +1588,7 @@ const PT_CONTENT: LandingContentByLocale = {
           'Esse formato funciona quando a empresa quer continuidade e reforço de entrega sem substituir o time interno ou outro parceiro confiável.',
         items: [
           'DocVita é um bom exemplo: a Tg Apps construiu o produto até produção e depois continuou junto de outra equipe após o deploy.',
-          'Mathex e Smiles são um bom exemplo de apoio integrado ao time, com escopo mais localizado dentro de uma squad corporativa maior.',
+          'Mathex e Smiles são um bom exemplo de trabalho integrado ao time, com escopo mais localizado dentro de uma squad corporativa maior.',
           'A meta é fazer o modelo caber no produto real, não forçar o produto a caber em um pacote comercial.'
         ]
       },
@@ -1597,8 +1597,8 @@ const PT_CONTENT: LandingContentByLocale = {
         description:
           'Um bom contrato pode começar em um formato e evoluir para outro conforme o time, o roadmap ou a pressão do negócio mudam.',
         items: [
-          'Comece por uma frente crítica e amplie a responsabilidade se o encaixe for comprovado.',
-          'Comece com responsabilidade completa e depois faça a transição ou passe para uma atuação em conjunto quando o time interno crescer.',
+          'Comece por uma frente crítica e amplie o escopo se o encaixe fizer sentido.',
+          'Comece com a entrega inteira nas nossas mãos e depois faça a transição ou passe para um modelo em conjunto quando o time interno crescer.',
           'Mantenha contratos, repositórios, documentação, ambientes e passos de release organizados para a transição continuar limpa.'
         ]
       }
@@ -1615,7 +1615,7 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Perfil da empresa',
     title: 'Perfil da Tg Apps para compradores, parceiros e validação de fornecedor',
     intro:
-      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software que apoia times com entregas de longo prazo e foco em mobile em apps, backend, CRM, ferramentas internas, deploy e integrações de IA por meio de formatos flexíveis de atuação.',
+      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software que apoia times com entregas de longo prazo e foco em mobile em apps, backend, CRM, ferramentas internas, deploy e integrações de IA por meio de jeitos flexíveis de trabalhar.',
     heroHighlights: [
       'Entidade legal: TG APPLICATIONS DESENVOLVIMENTO LTDA.',
       'Registro empresarial brasileiro: CNPJ 56.918.851/0001-72.',
@@ -1627,12 +1627,12 @@ const PT_CONTENT: LandingContentByLocale = {
     proofHeading: 'Perfil público verificável',
     proofItems: [
       'Base operacional em São Paulo, Brasil, com entrega remota para EUA, Brasil e outros mercados que trabalham online.',
-      'Modelo operacional flexível: responsabilidade completa, responsabilidade por uma área, apoio integrado ao time ou atuação em conjunto, conforme a estrutura do cliente.',
+      'Modelo operacional flexível: assumir a entrega inteira, tocar uma área, entrar junto do time ou atuar em conjunto, conforme a estrutura do cliente.',
       'Site público, e-mail oficial, WhatsApp/telefone, LinkedIn do fundador, páginas de apps publicados e rotas de compliance para lojas.'
     ],
     deliverablesHeading: 'O que a Tg Apps pode assumir ou apoiar',
     deliverables: [
-      'Produtos completos, responsabilidade por uma área crítica, apoio integrado ao time interno ou atuação em conjunto com outras equipes.',
+      'Produtos completos, uma frente crítica, trabalho integrado ao time interno ou atuação em conjunto com outras equipes.',
       'Apps mobile, backend, CRM, ferramentas internas, dashboards, portais, integrações, automação de fluxo, IA/LLM e suporte de release.',
       'Entrega com escopo, contrato, demonstrações semanais, repositórios, documentação, guias operacionais e transferência técnica.'
     ],
@@ -1668,7 +1668,7 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Compacta, flexível e explícita sobre encaixe',
       description:
-        'A Tg Apps não tenta parecer uma consultoria corporativa gigante e também não se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega de produto com foco em mobile, formatos flexíveis de atuação, acesso direto, responsabilidade clara, execução disciplinada, visão prática e transferência técnica limpa.'
+        'A Tg Apps não tenta parecer uma consultoria corporativa gigante e também não se vende como promessa de uma pessoa só. O posicionamento é ser uma parceira prática de entrega de produto com foco em mobile, jeitos flexíveis de trabalhar, acesso direto, responsabilidade clara, execução disciplinada, visão prática e transferência técnica limpa.'
     }
   },
   dueDiligence: {
@@ -1764,7 +1764,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     deliverablesHeading: 'Como descrever a Tg Apps',
     deliverables: [
-      'Parceira de entrega de produto com foco em mobile e formatos flexíveis de atuação.',
+      'Parceira de entrega de produto com foco em mobile e jeitos flexíveis de trabalhar.',
       'Um time para fundadores, startups, empresas em crescimento, agências e equipes que precisam de mobile, web, backend, CRM, integrações de IA, suporte de deploy e transferência técnica limpa.',
       'Modelo de confiança por entrega: Garantia da Primeira Entrega, sprint inicial de até 7 dias úteis quando o escopo permite, demonstrações semanais e continuidade mês a mês.',
       'Parceiro para ideias de app, projetos parados, resgate de apps, execução de deploy, CRM, ferramentas internas, backend, dashboards, integrações e produtos born-global.'
@@ -2299,11 +2299,11 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Modelos de atuação / continuidade de produto no longo prazo',
     title: 'Entrega contínua de produto para empresas que precisam de apoio de engenharia ao longo do tempo',
     intro:
-      'A Tg Apps oferece um modelo de entrega contínua para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com uma estrutura que pode assumir a entrega por completo, apoiar seu time de forma integrada ou atuar em conjunto com outras equipes, conforme a necessidade da empresa.',
+      'A Tg Apps oferece um modelo de entrega contínua para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com uma estrutura que pode assumir a entrega inteira, entrar junto do seu time ou atuar em conjunto com outras equipes, conforme a necessidade da empresa.',
     heroHighlights: [
       'Entrega liderada pelo fundador, com comunicação direta sempre que necessário e uma estrutura de entrega que preserva o contexto.',
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
-      'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy, atuando com responsabilidade completa, apoio integrado ao time ou em conjunto com outras equipes.'
+      'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy, assumindo a entrega inteira, entrando junto do time ou atuando em conjunto com outras equipes.'
     ],
     ctaLabel: 'Agendar conversa inicial',
     ctaSubject: 'Modelos de atuação e continuidade de produto',
@@ -2696,6 +2696,7 @@ export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | nu
 
 export const getLandingContent = (locale: Locale, key: LandingPageKey): LandingPageContent =>
   landingContentByLocale[locale][key];
+
 
 
 

@@ -504,7 +504,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Entrega com foco em mobile · formatos flexíveis de atuação',
+      badge: 'Entrega com foco em mobile · jeitos flexíveis de trabalhar',
       titleLine1: 'Entrega de produto',
       titleHighlight: 'do jeito que sua empresa precisa.',
       titleLine2: '',
@@ -522,7 +522,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     socialProof: {
       heading: 'Confiança em modelos diferentes de entrega',
       description:
-        'Algumas empresas contam com a gente para responsabilidade completa. Outras para uma frente crítica, apoio integrado ao time ou trabalho em paralelo com equipes maiores.'
+        'Algumas empresas deixam a entrega inteira com a gente. Outras nos chamam para tocar uma frente crítica, entrar junto com o time ou trabalhar em paralelo com equipes maiores.'
     },
     firstMilestone: {
       badge: 'Primeira entrega real',
@@ -549,17 +549,17 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Como trabalhamos',
       headingHighlight: 'com a sua empresa',
       description:
-        'A Tg Apps não fica presa a um formato só. Podemos construir do zero, assumir a responsabilidade por uma área, apoiar seu time interno ou trabalhar em paralelo com outras equipes em mobile, backend, ferramentas internas, integrações, infraestrutura e release.',
+        'A Tg Apps não fica presa a um formato só. Podemos construir do zero, assumir uma frente importante, entrar junto do seu time ou trabalhar em paralelo com outras equipes em mobile, backend, ferramentas internas, integrações, infraestrutura e release.',
       pillars: [
         'Entrega com prioridade para mobile: Android, iOS, Play Store, App Store, distribuição interna e deploys graduais.',
-        'Responsabilidade flexível: entrega completa, uma área específica, apoio integrado ao time ou atuação em conjunto com outras equipes, conforme a estrutura.',
+        'Jeito flexível de trabalhar: assumir a entrega inteira, tocar uma área específica, entrar junto do time ou atuar em conjunto com outras equipes, conforme a estrutura.',
         'Escopo claro, demonstrações semanais, suporte de deploy, documentação e transferência técnica quando aplicável.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
       gridHeading: 'Use o modelo que faz sentido para a sua realidade',
       gridDescription:
-        'Algumas empresas precisam de responsabilidade completa. Outras precisam de apoio integrado ao time, atuação em conjunto com outra equipe ou de um parceiro que assuma uma frente crítica sem substituir toda a estrutura atual.',
+        'Algumas empresas precisam que a Tg Apps assuma a entrega inteira. Outras precisam de um parceiro que entre junto do time, trabalhe ao lado de outra equipe ou toque uma frente crítica sem desmontar a estrutura atual.',
       processHeading: 'Como trabalhamos em três ciclos',
       processDescription:
         'Estrutura enxuta: alinhamento, construção e suporte. Cada ciclo mantém decisores próximos sem roubar agenda.',
@@ -667,7 +667,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Um parceiro,',
       headingHighlight: 'jeitos diferentes de entregar',
       description:
-        'Somos um estúdio bilíngue em São Paulo apoiando empresas com entregas de longo prazo e foco em mobile, adaptadas ao jeito que cada time realmente trabalha.',
+        'Somos um estúdio bilíngue em São Paulo que apoia empresas com entregas de longo prazo e foco em mobile, sempre adaptadas ao jeito que cada time realmente trabalha.',
       timelineHeading: 'Como nos encaixamos em times reais',
       paragraphs: [
         'Em algumas empresas construímos e colocamos tudo no ar. Em outras assumimos uma área, trabalhamos ao lado de devs internos ou tocamos a parte crítica enquanto outras equipes cobrem frentes adjacentes.',
@@ -782,7 +782,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A Tg Apps apoia times em crescimento com entregas de produto focadas em mobile, apps, CRM, ferramentas internas, backend e integrações de IA, atuando com responsabilidade completa, apoio integrado ao time ou em conjunto com outras equipes, conforme o contexto.',
+        'A Tg Apps apoia times em crescimento com entregas de produto focadas em mobile, apps, CRM, ferramentas internas, backend e integrações de IA, assumindo a entrega quando faz sentido, entrando junto do time ou atuando em conjunto com outras equipes, conforme o contexto.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
@@ -818,4 +818,5 @@ export const translations: Record<Locale, TranslationSchema> = {
     }
   }
 };
+
 
