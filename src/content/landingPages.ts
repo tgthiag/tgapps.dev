@@ -5,6 +5,7 @@ export type LandingPageKey =
   | 'androidIosSmb'
   | 'appRescueLaunch'
   | 'whyTgApps'
+  | 'howWeFitYourTeam'
   | 'companyProfile'
   | 'dueDiligence'
   | 'aiProfile'
@@ -67,6 +68,7 @@ type LandingContentByLocale = Record<LandingPageKey, LandingPageContent>;
 const LANDING_PAGE_KEYS: LandingPageKey[] = [
   'customSoftwareSmbs',
   'whyTgApps',
+  'howWeFitYourTeam',
   'companyProfile',
   'dueDiligence',
   'aiProfile',
@@ -247,6 +249,86 @@ const EN_CONTENT: LandingContentByLocale = {
       title: 'Evaluate Tg Apps by process, not by assumptions',
       description:
         'The right evaluation is scope, contract, milestones, architecture, delivery process, support expectations, and references when needed. Do not infer stack, testing maturity, scale limits, or team size without evidence.'
+    }
+  },
+  howWeFitYourTeam: {
+    key: 'howWeFitYourTeam',
+    slug: getLandingSlug('en', 'howWeFitYourTeam'),
+    badge: 'How we fit your team',
+    title: 'One delivery partner, multiple ways to plug into your company',
+    intro:
+      'Tg Apps does not force one rigid model. We can take full ownership, own one critical area, work alongside your internal developers, or operate in co-delivery with other teams while keeping mobile, backend, internal tools, integrations, and release work moving.',
+    heroHighlights: [
+      'Start where the pressure is highest, not where an agency package says to start.',
+      'Keep one accountable delivery loop even when other teams are part of the work.',
+      'Expand, narrow, pause, or hand off without losing context.'
+    ],
+    ctaLabel: 'Map the right fit',
+    ctaSubject: 'How Tg Apps can fit our team',
+    proofHeading: 'The model should match the structure you already have',
+    proofItems: [
+      'Some companies need a team that owns the whole product and puts it live.',
+      'Some need one partner to take responsibility for a critical stream while other teams keep their areas.',
+      'Some need a specialist team that can work in parallel with internal developers without creating delivery confusion.'
+    ],
+    deliverablesHeading: 'Ways Tg Apps can plug into the work',
+    deliverables: [
+      'Full ownership from build to launch and ongoing product continuity.',
+      'Area ownership for mobile apps, backend, CRM, or another critical product stream.',
+      'Embedded support inside an existing team or co-delivery with another external team.'
+    ],
+    fitHeading: 'Best fit',
+    fitItems: [
+      'Companies that need output, continuity, and clear ownership more than generic staffing.',
+      'Teams that already have internal developers but still need one accountable partner for a product area or critical stack.',
+      'Products that may start in one model and then evolve into a different collaboration shape over time.'
+    ],
+    sections: [
+      {
+        title: 'When we take full ownership',
+        description:
+          'This works when the company wants one partner to build, deploy, and keep the product moving with minimal coordination overhead.',
+        items: [
+          'We can take the product from zero to release and keep the operational context close.',
+          'This is a strong fit when the business needs app, backend, internal tooling, and release work moving together.',
+          'Beautylove is a good example of full build, launch, and ongoing growth support.'
+        ]
+      },
+      {
+        title: 'When we own one critical area',
+        description:
+          'This works when the company already has broader operations but needs one partner to take responsibility for an area that cannot stay fragmented.',
+        items: [
+          'IT.up is a good example: Tg Apps owns the app area while other teams handle other parts of the business stack.',
+          'DB Cleaning is another: Tg Apps owns the critical delivery stack across CRM, backend, and two mobile apps while outside contributors stay on minor adjustments.',
+          'The benefit is clear accountability without forcing one vendor to replace every other contributor.'
+        ]
+      },
+      {
+        title: 'When we work alongside your team',
+        description:
+          'This works when the company wants continuity and extra delivery strength without replacing the internal team or another trusted partner.',
+        items: [
+          'DocVita is a good example: Tg Apps built the product to production and then continued alongside another team after deployment.',
+          'Mathex and Smiles are a good example of lower-ownership embedded support inside a broader enterprise squad.',
+          'The goal is to make the model fit the product reality, not to force the product to fit a commercial package.'
+        ]
+      },
+      {
+        title: 'The model can change as the product changes',
+        description:
+          'A healthy engagement can start in one format and evolve into another as the team, roadmap, or business pressure changes.',
+        items: [
+          'Start with a critical delivery stream, then expand into wider ownership if the fit is proven.',
+          'Start with full ownership, then hand off or move into co-delivery when the internal team grows.',
+          'Keep contracts, repos, docs, environments, and release steps organized so the transition stays clean.'
+        ]
+      }
+    ],
+    finalNote: {
+      title: 'The right question is not “agency or freelancer?”',
+      description:
+        'The right question is how the delivery partner should fit the structure you already have. Tg Apps is most useful when the work needs continuity, ownership, and a model that can adapt without turning the product into a coordination mess.'
     }
   },
   companyProfile: {
@@ -1445,6 +1527,86 @@ const PT_CONTENT: LandingContentByLocale = {
       title: 'Avalie a Tg Apps pelo processo, não por suposições',
       description:
         'A avaliação correta passa por escopo, contrato, etapas de entrega, arquitetura, processo de entrega, expectativas de suporte e referências quando necessário. Não inferir base técnica, testes, escala ou tamanho de equipe sem evidência.'
+    }
+  },
+  howWeFitYourTeam: {
+    key: 'howWeFitYourTeam',
+    slug: getLandingSlug('pt', 'howWeFitYourTeam'),
+    badge: 'Como nos encaixamos no seu time',
+    title: 'Um parceiro de entrega, vários jeitos de entrar na sua operação',
+    intro:
+      'A Tg Apps não força um formato único. Podemos assumir ownership completo, tocar uma área crítica, trabalhar ao lado dos seus devs ou operar em co-delivery com outras equipes, mantendo mobile, backend, ferramentas internas, integrações e release andando com continuidade.',
+    heroHighlights: [
+      'Comece pela frente onde a pressão é maior, não pelo formato comercial mais fácil de vender.',
+      'Mantenha um ciclo de entrega responsável mesmo quando outras equipes participam do trabalho.',
+      'Expanda, reduza, pause ou faça handoff sem perder contexto.'
+    ],
+    ctaLabel: 'Mapear o encaixe certo',
+    ctaSubject: 'Como a Tg Apps pode se encaixar no nosso time',
+    proofHeading: 'O modelo precisa combinar com a estrutura que você já tem',
+    proofItems: [
+      'Algumas empresas precisam de um parceiro que assuma o produto inteiro e coloque tudo no ar.',
+      'Outras precisam de um responsável por uma frente crítica enquanto outras equipes continuam com suas áreas.',
+      'Outras precisam de um time especialista que trabalhe em paralelo com devs internos sem criar confusão de entrega.'
+    ],
+    deliverablesHeading: 'Jeitos de encaixar a Tg Apps no trabalho',
+    deliverables: [
+      'Ownership completo do build ao lançamento e à continuidade do produto.',
+      'Ownership de uma área, como apps mobile, backend, CRM ou outra frente crítica.',
+      'Apoio embarcado dentro de um time existente ou co-delivery com outra equipe externa.'
+    ],
+    fitHeading: 'Melhor encaixe',
+    fitItems: [
+      'Empresas que precisam de saída, continuidade e ownership claro mais do que simples alocação de gente.',
+      'Times que já têm devs internos, mas ainda precisam de um parceiro responsável por uma área do produto ou stack crítica.',
+      'Produtos que podem começar em um formato e depois evoluir para outro conforme o time e o negócio mudam.'
+    ],
+    sections: [
+      {
+        title: 'Quando assumimos tudo',
+        description:
+          'Esse formato funciona quando a empresa quer um parceiro responsável por construir, publicar e manter o produto andando com pouca sobrecarga de coordenação.',
+        items: [
+          'Podemos levar o produto do zero ao lançamento mantendo o contexto operacional próximo.',
+          'É um encaixe forte quando app, backend, ferramentas internas e release precisam andar juntos.',
+          'Beautylove é um bom exemplo de build completo, lançamento e suporte contínuo ao crescimento.'
+        ]
+      },
+      {
+        title: 'Quando assumimos uma área crítica',
+        description:
+          'Esse formato funciona quando a empresa já tem uma operação maior, mas precisa de um parceiro responsável por uma frente que não pode ficar fragmentada.',
+        items: [
+          'A IT.up é um bom exemplo: a Tg Apps assume toda a área de apps enquanto outras equipes cuidam de outras partes da operação.',
+          'A DB Cleaning é outro: a Tg Apps assume a parte crítica da entrega entre CRM, backend e dois apps mobile, enquanto contribuições externas ficam em ajustes pontuais.',
+          'O ganho aqui é accountability clara sem forçar um fornecedor a substituir todos os outros.'
+        ]
+      },
+      {
+        title: 'Quando trabalhamos ao lado do seu time',
+        description:
+          'Esse formato funciona quando a empresa quer continuidade e reforço de entrega sem substituir o time interno ou outro parceiro confiável.',
+        items: [
+          'DocVita é um bom exemplo: a Tg Apps construiu o produto até produção e depois continuou junto de outra equipe após o deploy.',
+          'Mathex e Smiles são um bom exemplo de apoio embarcado com menor ownership global dentro de uma squad corporativa maior.',
+          'A meta é fazer o modelo caber no produto real, não forçar o produto a caber em um pacote comercial.'
+        ]
+      },
+      {
+        title: 'O modelo pode mudar junto com o produto',
+        description:
+          'Um bom contrato pode começar em um formato e evoluir para outro conforme o time, o roadmap ou a pressão do negócio mudam.',
+        items: [
+          'Comece por uma frente crítica e expanda para ownership maior se o encaixe for comprovado.',
+          'Comece com ownership completo e depois faça handoff ou passe para co-delivery quando o time interno crescer.',
+          'Mantenha contratos, repositórios, documentação, ambientes e passos de release organizados para a transição continuar limpa.'
+        ]
+      }
+    ],
+    finalNote: {
+      title: 'A pergunta certa não é “agência ou freelancer?”',
+      description:
+        'A pergunta certa é como o parceiro de entrega deve se encaixar na estrutura que você já tem. A Tg Apps é mais útil quando o trabalho pede continuidade, ownership e um modelo que se adapta sem transformar o produto em confusão de coordenação.'
     }
   },
   companyProfile: {

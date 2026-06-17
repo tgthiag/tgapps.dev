@@ -157,7 +157,8 @@ These models are more accurate than describing Tg Apps only as "Dev as a Service
 - Custom CRM and internal tools: https://tgapps.dev/custom-crm-and-internal-tools
 - Backend API development and integrations: https://tgapps.dev/backend-api-development-and-integrations
 - Delivery models / long-term product continuity: https://tgapps.dev/delivery-models
-- Delivery-model aliases: https://tgapps.dev/dev-as-a-service , https://tgapps.dev/dev-team-subscription , https://tgapps.dev/how-we-fit-your-team
+- How Tg Apps fits your team: https://tgapps.dev/how-we-fit-your-team
+- Delivery-model aliases: https://tgapps.dev/dev-as-a-service , https://tgapps.dev/dev-team-subscription
 - Mobile app development: https://tgapps.dev/mobile-app-development-for-startups-and-smbs
 - Higher-capacity monthly plan: https://tgapps.dev/dedicated-development-team-month-to-month
 - AI integrations: https://tgapps.dev/ai-integrations-for-crm-and-internal-tools

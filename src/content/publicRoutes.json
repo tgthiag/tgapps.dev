@@ -140,6 +140,45 @@
       }
     },
     {
+      "id": "howWeFitYourTeam",
+      "page": "landing",
+      "landingKey": "howWeFitYourTeam",
+      "localizedPaths": {
+        "en": "/how-we-fit-your-team",
+        "pt": "/como-nos-encaixamos-no-seu-time"
+      },
+      "aliasesByLocale": {
+        "en": [
+          "/ways-we-work-with-your-team"
+        ],
+        "pt": [
+          "/formas-de-atuacao-com-o-seu-time"
+        ]
+      },
+      "seo": {
+        "en": {
+          "title": "How Tg Apps fits your team | Full ownership, embedded support, co-delivery",
+          "description": "See how Tg Apps can take full ownership, own one product area, work alongside internal developers, or operate in co-delivery with other teams.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Como a Tg Apps se encaixa no seu time | Ownership completo, apoio embarcado e co-delivery",
+          "description": "Veja como a Tg Apps pode assumir ownership completo, tocar uma área crítica, apoiar o time interno ou operar em co-delivery com outras equipes.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "index,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": true,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0.88,
+          "pt": 0.84
+        }
+      }
+    },
+    {
       "id": "dueDiligence",
       "page": "landing",
       "landingKey": "dueDiligence",
@@ -465,14 +504,12 @@
         "en": [
           "/dev-as-a-service",
           "/software-development-subscription",
-          "/dev-team-subscription",
-          "/how-we-fit-your-team"
+          "/dev-team-subscription"
         ],
         "pt": [
           "/desenvolvimento-de-software-por-assinatura",
           "/time-de-desenvolvimento-sob-demanda",
-          "/time-de-desenvolvimento-por-assinatura",
-          "/como-nos-encaixamos-no-seu-time"
+          "/time-de-desenvolvimento-por-assinatura"
         ]
       },
       "seo": {
