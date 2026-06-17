@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Send, CheckCircle, Clock, MessageSquare } from 'lucide-react';
-import { useTranslations } from '../context/LanguageContext';
+import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { trackLeadContact } from '../utils/analytics';
 
 const Contact = () => {
@@ -15,9 +15,13 @@ const Contact = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { language } = useLanguage();
   const t = useTranslations();
-  const whatsappHref =
-    'https://wa.me/5511979717703?text=Hi%20I%20found%20you%20on%20Google%20and%20would%20like%20to%20build%20a%20project';
+  const whatsappText =
+    language === 'pt'
+      ? 'Olá, encontrei a Tg Apps e gostaria de conversar sobre um projeto.'
+      : 'Hi, I found Tg Apps and would like to talk about a project.';
+  const whatsappHref = `https://wa.me/5511979717703?text=${encodeURIComponent(whatsappText)}`;
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({

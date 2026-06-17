@@ -177,24 +177,24 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     hero: {
       badge: 'Mobile-first product delivery · Flexible engagement models',
-      titleLine1: 'Mobile-first product delivery',
-      titleHighlight: 'that fits your team.',
+      titleLine1: 'Build from zero, rescue what stalled,',
+      titleHighlight: 'or add execution where your team needs it.',
       titleLine2: '',
       subtitle:
-        'Tg Apps adapts to the way each company works, taking full ownership when needed, leading a product area, supporting internal developers, or working in parallel with other teams across mobile apps, backend systems, internal tools, integrations, and release operations.',
+        'Tg Apps helps founders and small startups build apps and backend systems from zero, finish stalled products, or work alongside internal teams through a clear first delivery and predictable month-to-month continuity.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth plan: USD 2,000/mo' },
         { label: 'First Milestone Guarantee' },
         { label: 'No upfront payment to start' }
       ],
-      primaryCta: 'Start your first milestone',
-      secondaryCta: 'See how it works'
+      primaryCta: 'Define my first delivery',
+      secondaryCta: 'See how we fit your team'
     },
     socialProof: {
-      heading: 'Trusted across different delivery models',
+      heading: 'Built for products at different stages',
       description:
-        'Some companies rely on us for full ownership, others for app area ownership, critical delivery support, or embedded engineering inside broader teams.'
+        'Some clients start from zero. Others need a stalled product back on track. Others bring us in to own one critical area or work alongside their internal team. The common thread is accountable delivery.'
     },
     firstMilestone: {
       badge: 'Real first delivery',
@@ -221,7 +221,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'How we work',
       headingHighlight: 'with your company',
       description:
-        'We are not limited to one model. We can build from zero, own a product area, support your internal team, or work in parallel with other teams across mobile, backend, internal tools, integrations, infrastructure, and release support.',
+        'We do not sell one rigid format. Start from the situation that looks most like yours, then use the delivery model and technical fronts that fit the product.',
       pillars: [
         'Mobile-first delivery for Android, iOS, Play Store, App Store, private MDM, and phased releases.',
         'Flexible ownership: full build, area ownership, embedded support, or co-delivery depending on the structure.',
@@ -229,39 +229,39 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       partnershipHeading: '',
       partnershipDescription: '',
-      gridHeading: 'Use the model that fits your reality',
+      gridHeading: 'Start from the situation that looks most like yours',
       gridDescription:
-        'Some clients need full ownership. Others need embedded support, co-delivery, or a team that takes responsibility for one critical area without replacing the rest of the structure.',
-      processHeading: 'How we collaborate in three tight loops',
+        'The same Tg Apps can build from zero, rescue what stalled, or work alongside your team. What changes is the way we enter and what we own first.',
+      processHeading: 'Three common ways clients bring us in',
       processDescription:
-        'Lean structure: align, ship, support. Each loop keeps decision-makers involved without draining their calendar.',
-      processLabel: 'Loop',
+        'Choose the entry point that fits your product stage. We can still expand, narrow, or hand off the scope later.',
+      processLabel: 'Scenario',
       process: [
         {
-          title: 'Scope the first milestone',
-          description: 'Start with one useful deliverable, clear acceptance criteria, and the access needed to build it.',
+          title: 'Build from zero',
+          description: 'For founders and small teams that need an app, backend, dashboard, or internal system built from the ground up.',
           highlights: [
-            'Free 30-45 minute call within one business day.',
-            'Statement of work plus D-U-N-S contract signed digitally.',
-            'First milestone scope, demo criteria, required access, and timeline agreed before kickoff.'
+            'We help define the first practical delivery instead of leaving you with open-ended planning.',
+            'App, backend, stores, deploy, and release flow can be scoped together.',
+            'Best fit when there is product intent, but not a full internal engineering structure yet.'
           ]
         },
         {
-          title: 'Build the proof sprint',
-          description: 'Design, engineering, and release management run together while you see progress early.',
+          title: 'Rescue and evolve',
+          description: 'For teams with a stalled app, unfinished backend, rough prototype, or release flow that needs to become usable again.',
           highlights: [
-            'First milestone usually designed for a 7 business day proof sprint when the scope allows it.',
-            'Blue or green releases, staged rollouts, and monitoring included.',
-            'Work inside your repos or ours with clean documentation.'
+            'We audit what exists, define what is worth fixing, and move toward a usable release path.',
+            'Good fit for products that were started by another developer or changed direction midway.',
+            'The goal is not only to patch, but to get the product moving again.'
           ]
         },
         {
-          title: 'Demo, continue, or hand off',
-          description: 'You judge a working demo, then continue month to month, pause, stop, or hand off the work.',
+          title: 'Work with your team',
+          description: 'For companies that already have developers, an agency, or another vendor, but need stronger delivery in one area or across a critical stream.',
           highlights: [
-            'Runbooks, dashboards, and credentials handed over.',
-            'Bug triage within 24 hours with weekend standby for launches.',
-            'If the agreed scope is not delivered, that step is not invoiced.'
+            'We can take full ownership of one front or work in parallel with the existing team.',
+            'Best fit when the company needs more output, better release rhythm, or stronger technical follow-through.',
+            'Useful for mobile, backend, integrations, and operational tooling.'
           ]
         }
       ],
@@ -328,9 +328,9 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Need a partner that can adapt to your team and still own delivery?',
+        title: 'Need a partner that can build from zero, rescue what stalled, or reinforce your team?',
         description:
-          'Send us the current product context, team setup, repo, process, or product idea. We respond in under one business day with blockers, risks, next steps, and the delivery model that seems most practical.',
+          'Send us the current product context, team setup, repo, process, or product idea. We respond in under one business day with blockers, risks, next steps, and the most practical way to start.',
         button: 'Discuss the delivery model'
       }
     },
@@ -505,24 +505,24 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     hero: {
       badge: 'Entrega com foco em mobile · jeitos flexíveis de trabalhar',
-      titleLine1: 'Entrega de produto',
-      titleHighlight: 'do jeito que sua empresa precisa.',
+      titleLine1: 'Construa do zero, destrave o que travou,',
+      titleHighlight: 'ou coloque mais força onde seu time precisa.',
       titleLine2: '',
       subtitle:
-        'A Tg Apps se adapta ao jeito que cada empresa trabalha, assumindo tudo quando faz sentido, liderando uma área específica, apoiando o time interno ou trabalhando em paralelo com outras equipes em apps, backend, ferramentas internas, integrações e release.',
+        'A Tg Apps ajuda fundadores e startups pequenas a construir apps e backends do zero, concluir produtos travados ou trabalhar junto do time interno com uma primeira entrega clara e continuidade mês a mês.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth US$ 2.000/mês' },
         { label: 'Garantia da Primeira Entrega' },
         { label: 'Sem pagamento antecipado para começar' }
       ],
-      primaryCta: 'Começar pela primeira entrega',
-      secondaryCta: 'Ver como funciona'
+      primaryCta: 'Definir minha primeira entrega',
+      secondaryCta: 'Ver como a Tg Apps entra no time'
     },
     socialProof: {
-      heading: 'Confiança em modelos diferentes de entrega',
+      heading: 'Entrega real em estágios diferentes do produto',
       description:
-        'Algumas empresas deixam a entrega inteira com a gente. Outras nos chamam para tocar uma frente crítica, entrar junto com o time ou trabalhar em paralelo com equipes maiores.'
+        'Alguns clientes começam do zero. Outros precisam concluir o que travou. Outros trazem a Tg Apps para tocar uma frente crítica ou trabalhar junto do time. O ponto em comum é responsabilidade clara de entrega.'
     },
     firstMilestone: {
       badge: 'Primeira entrega real',
@@ -549,7 +549,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Como trabalhamos',
       headingHighlight: 'com a sua empresa',
       description:
-        'A Tg Apps não fica presa a um formato só. Podemos construir do zero, assumir uma frente importante, entrar junto do seu time ou trabalhar em paralelo com outras equipes em mobile, backend, ferramentas internas, integrações, infraestrutura e release.',
+        'A Tg Apps não vende um formato rígido. O melhor ponto de partida depende do estágio do produto, da estrutura atual e do que precisa andar primeiro.',
       pillars: [
         'Entrega com prioridade para mobile: Android, iOS, Play Store, App Store, distribuição interna e deploys graduais.',
         'Jeito flexível de trabalhar: assumir a entrega inteira, tocar uma área específica, entrar junto do time ou atuar em conjunto com outras equipes, conforme a estrutura.',
@@ -557,39 +557,39 @@ export const translations: Record<Locale, TranslationSchema> = {
       ],
       partnershipHeading: '',
       partnershipDescription: '',
-      gridHeading: 'Use o modelo que faz sentido para a sua realidade',
+      gridHeading: 'Comece pela situação que mais parece com a sua',
       gridDescription:
-        'Algumas empresas precisam que a Tg Apps assuma a entrega inteira. Outras precisam de um parceiro que entre junto do time, trabalhe ao lado de outra equipe ou toque uma frente crítica sem desmontar a estrutura atual.',
-      processHeading: 'Como trabalhamos em três ciclos',
+        'A mesma Tg Apps pode construir do zero, destravar o que travou ou entrar junto do time. O que muda é a forma de entrada e o que a gente assume primeiro.',
+      processHeading: 'Três jeitos comuns de a Tg Apps entrar',
       processDescription:
-        'Estrutura enxuta: alinhamento, construção e suporte. Cada ciclo mantém decisores próximos sem roubar agenda.',
-      processLabel: 'Ciclo',
+        'Escolha o ponto de entrada que combina com o estágio do produto. Depois disso, a atuação pode expandir, se ajustar ou ser transferida com clareza.',
+      processLabel: 'Cenário',
       process: [
         {
-          title: 'Escopo da primeira entrega',
-          description: 'Começamos com uma entrega útil, critérios de aceite claros e acessos necessários para construir.',
+          title: 'Construir do zero',
+          description: 'Para fundadores e times pequenos que precisam tirar um app, backend, dashboard ou sistema interno do papel.',
           highlights: [
-            'Conversa gratuita de 30 a 45 minutos em até 1 dia útil.',
-            'Contrato e D-U-N-S assinados digitalmente.',
-            'Escopo, critério da demonstração, acessos e prazo da primeira entrega combinados antes do início do projeto.'
+            'Ajudamos a definir uma primeira entrega prática em vez de deixar tudo em planejamento aberto.',
+            'App, backend, loja, deploy e release podem entrar no mesmo escopo inicial.',
+            'Melhor encaixe quando existe intenção de produto, mas ainda não existe estrutura interna forte.'
           ]
         },
         {
-          title: 'Construção da primeira entrega',
-          description: 'Design, engenharia e deploy caminham juntos enquanto você acompanha o progresso desde cedo.',
+          title: 'Resgatar e evoluir',
+          description: 'Para times com app travado, backend incompleto, protótipo cru ou fluxo de release que precisa voltar a andar.',
           highlights: [
-            'Primeira entrega normalmente desenhada para uma sprint inicial de até 7 dias úteis quando o escopo permite.',
-            'Publicação azul/verde ou gradual com monitoramento incluído.',
-            'Trabalhamos nos seus repositórios ou hospedamos por aqui.'
+            'A gente avalia o que já existe, decide o que vale corrigir e move para um caminho utilizável de entrega.',
+            'Bom encaixe para produtos iniciados por outro dev ou que mudaram de direção no meio.',
+            'A meta não é só corrigir, é voltar a colocar o produto em movimento.'
           ]
         },
         {
-          title: 'Demonstração, continuidade ou transferência',
-          description: 'Você avalia uma demonstração funcional, depois continua mês a mês, coloca em pausa, encerra ou recebe a transferência técnica.',
+          title: 'Entrar junto do time',
+          description: 'Para empresas que já têm devs, agência ou outro fornecedor, mas precisam de mais entrega em uma frente crítica.',
           highlights: [
-            'Guias operacionais, dashboards e credenciais entregues ao seu time.',
-            'Triagem em até 24 horas e plantão de deploys nos fins de semana.',
-            'Se o combinado não for entregue, essa etapa não é cobrada.'
+            'Podemos assumir uma frente inteira ou trabalhar em paralelo com a equipe atual.',
+            'Bom encaixe quando o produto precisa de mais ritmo, mais release ou mais profundidade técnica em uma área.',
+            'Funciona muito bem para mobile, backend, integrações e ferramentas operacionais.'
           ]
         }
       ],
@@ -656,9 +656,9 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       bottomCta: {
-        title: 'Precisa de um parceiro que se adapte ao seu time sem perder responsabilidade de entrega?',
+        title: 'Precisa de um parceiro para construir do zero, destravar o que travou ou reforçar seu time?',
         description:
-          'Envie o contexto atual do produto, o time, o repositório, o processo ou a ideia. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos e o modelo de atuação mais prático para o caso.',
+          'Envie o contexto atual do produto, do time, do repositório, do processo ou da ideia. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos e a forma mais prática de começar.',
         button: 'Falar sobre o encaixe do time'
       }
     },

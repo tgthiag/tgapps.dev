@@ -6,8 +6,8 @@ const SocialProof = () => {
   const t = useTranslations();
   const proofBadges =
     language === 'pt'
-      ? ['D-U-N-S® 651029828', 'Planos de entrada para continuidade', 'Continuidade mês a mês', 'Garantia da Primeira Entrega', 'Sem pagamento antecipado para começar']
-      : ['D-U-N-S® 651029828', 'Entry plans for ongoing delivery', 'Month-to-month continuity', 'First Milestone Guarantee', 'Start without paying upfront'];
+      ? ['D-U-N-S® 651029828', 'Garantia da Primeira Entrega', 'Primeira etapa clara', 'Continuidade mês a mês', 'Sem pagamento antecipado para começar']
+      : ['D-U-N-S® 651029828', 'First Milestone Guarantee', 'Clear first delivery', 'Month-to-month continuity', 'Start without paying upfront'];
 
   return (
     <section className="relative -mt-2 bg-white pb-10">

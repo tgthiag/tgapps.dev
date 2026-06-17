@@ -49,12 +49,12 @@ export const getSeoConfigForRoute = (routePath: string, locale: Locale): SeoConf
   return {
     title:
       locale === 'pt'
-        ? 'Seu App, Construído e Entregue | Tg Apps'
-        : 'Your App, Built and Shipped | Tg Apps',
+        ? 'Construa, publique e mantenha seu produto evoluindo | Tg Apps'
+        : 'Build, launch, and keep your product moving | Tg Apps',
     description:
       locale === 'pt'
-        ? 'Tem uma ideia ou app parado? A Tg Apps entrega mobile, web, CRM, backend e IA com Garantia da Primeira Entrega, demonstrações semanais e continuidade mês a mês, sem pagamento antecipado para começar.'
-        : 'Got an idea or a stalled app? Tg Apps builds and ships mobile, web, CRM, backend, and AI with a First Milestone Guarantee, weekly demos, and month-to-month continuity, so you can start without paying upfront.',
+        ? 'A Tg Apps ajuda fundadores e startups pequenas a construir do zero, destravar produtos travados ou entrar junto do time em apps, backend, CRM, ferramentas internas e suporte de release.'
+        : 'Tg Apps helps founders and small startups build from zero, rescue stalled products, or work alongside internal teams across apps, backend systems, CRM, internal tools, and release support.',
     image: 'https://tgapps.dev/og-home.png',
     robots: 'index,follow',
     localizedRoutePaths: { en: '/', pt: '/' }

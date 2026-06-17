@@ -31,8 +31,11 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
       ? 'Contexto do projeto:%0D%0A- Processo atual:%0D%0A- Sistema ou planilha que usamos hoje:%0D%0A- Prazo:%0D%0A- Time interno:%0D%0A- Integrações desejadas:%0D%0A'
       : 'Project context:%0D%0A- Current process:%0D%0A- System or spreadsheet we use today:%0D%0A- Deadline:%0D%0A- Internal team:%0D%0A- Required integrations:%0D%0A';
   const ctaHref = `mailto:support@tgapps.dev?subject=${encodeURIComponent(content.ctaSubject)}&body=${ctaBody}`;
-  const whatsappHref =
-    'https://wa.me/5511979717703?text=Hi%20I%20found%20you%20on%20Google%20and%20would%20like%20to%20build%20a%20project';
+  const whatsappText =
+    locale === 'pt'
+      ? 'Olá, encontrei a Tg Apps e gostaria de conversar sobre um projeto.'
+      : 'Hi, I found Tg Apps and would like to talk about a project.';
+  const whatsappHref = `https://wa.me/5511979717703?text=${encodeURIComponent(whatsappText)}`;
   const finalCtaTitle = isTrustPage
     ? locale === 'pt'
       ? 'Quer validar a Tg Apps antes de avançar?'
