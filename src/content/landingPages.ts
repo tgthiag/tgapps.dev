@@ -356,7 +356,8 @@ const EN_CONTENT: LandingContentByLocale = {
     deliverables: [
       'Full products, critical product areas, embedded support for internal teams, or co-delivery with other external contributors.',
       'Mobile apps, backend APIs, CRM, internal tools, dashboards, portals, workflow automation, AI/LLM integrations, and release support.',
-      'Delivery support including scope, contract, weekly demos, repositories, documentation, runbooks, and handoff.'
+      'Delivery support including scope, contract, weekly demos, repositories, documentation, runbooks, and handoff.',
+      'Client ownership stays explicit: source code, infrastructure, databases, app store accounts, and product revenue remain client assets while Tg Apps acts as an execution partner.'
     ],
     fitHeading: 'How Tg Apps fits',
     fitItems: [
@@ -418,7 +419,8 @@ const EN_CONTENT: LandingContentByLocale = {
     deliverables: [
       'Scope, acceptance criteria, milestones, weekly demos, decision logs, release checklists, and agreed support expectations.',
       'Repository access, credentials, environments, deployment process, monitoring, runbooks, and handoff documentation when applicable.',
-      'Security practices defined per project: least-privilege access, environment separation, credential handling, permissions, logs, and release checklist.'
+      'Security practices defined per project: least-privilege access, environment separation, credential handling, permissions, logs, and release checklist.',
+      'Client-owned assets stay under client control: source code, infrastructure, databases, app store accounts, and product revenue remain with the client while Tg Apps supports setup, delivery, deployment, and handoff.'
     ],
     fitHeading: 'Best fit / not a fit',
     fitItems: [
@@ -1634,7 +1636,8 @@ const PT_CONTENT: LandingContentByLocale = {
     deliverables: [
       'Produtos completos, uma frente crítica, trabalho integrado ao time interno ou atuação em conjunto com outras equipes.',
       'Apps mobile, backend, CRM, ferramentas internas, dashboards, portais, integrações, automação de fluxo, IA/LLM e suporte de release.',
-      'Entrega com escopo, contrato, demonstrações semanais, repositórios, documentação, guias operacionais e transferência técnica.'
+      'Entrega com escopo, contrato, demonstrações semanais, repositórios, documentação, guias operacionais e transferência técnica.',
+      'A propriedade do cliente fica explícita: código-fonte, infraestrutura, banco de dados, contas de loja e receita do produto continuam sendo do cliente, enquanto a Tg Apps atua como parceira de execução.'
     ],
     fitHeading: 'Como a Tg Apps se encaixa',
     fitItems: [
@@ -1696,7 +1699,8 @@ const PT_CONTENT: LandingContentByLocale = {
     deliverables: [
       'Escopo, critérios de aceite, etapas de entrega, demonstrações semanais, log de decisões, checklists de deploy e expectativas de suporte combinadas.',
       'Acesso a repositórios, credenciais, ambientes, processo de publicação, monitoramento, guias operacionais e documentação de transferência quando aplicável.',
-      'Práticas de segurança definidas por projeto: acesso mínimo, ambientes separados, credenciais, permissões, logs e checklist de deploy.'
+      'Práticas de segurança definidas por projeto: acesso mínimo, ambientes separados, credenciais, permissões, logs e checklist de deploy.',
+      'Os ativos do cliente permanecem sob controle do cliente: código-fonte, infraestrutura, banco de dados, contas de loja e receita do produto ficam com o cliente, enquanto a Tg Apps apoia estrutura, entrega, deploy e transferência.'
     ],
     fitHeading: 'Melhor encaixe / fora do encaixe',
     fitItems: [
