@@ -95,9 +95,9 @@ const getLandingSlug = (locale: Locale, key: LandingPageKey): string => {
 
 const EN_CURRENT_PRICING: LandingPagePricing = {
   label: 'Monthly software plans',
-  title: 'Starter USD 1,500/mo, Growth USD 2,000/mo, Dedicated USD 3,500+/mo',
+  title: 'Starter, Growth, and Dedicated plans for ongoing delivery',
   description:
-    'Choose the plan by operating rhythm, not by a different service list. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, closer coordination, participation in your daily meetings when requested, and urgent priorities at any time within the agreement.',
+    'Choose the plan by operating rhythm, not by a different service list. These plans are designed for founders, startups, SMBs, and operators who want to keep building in parallel without carrying full-time headcount too early. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, closer coordination, participation in your daily meetings when requested, and urgent priorities at any time within the agreement.',
   highlights: [
     'Starter: scheduled deliveries and deploys, plus a biweekly planning meeting.',
     'Growth: smart allocation across mobile, web, backend, CRM, and integrations, with one weekly planning/demo meeting to review progress and set priorities.',
@@ -108,9 +108,9 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
 
 const PT_CURRENT_PRICING: LandingPagePricing = {
   label: 'Planos mensais de software',
-  title: 'Starter US$ 1.500/mês, Growth US$ 2.000/mês, Dedicated US$ 3.500+/mês',
+  title: 'Planos Starter, Growth e Dedicated para continuidade de entrega',
   description:
-    'Escolha o plano pelo ritmo operacional, não por uma lista diferente de serviços. Starter é quinzenal, Growth é o plano principal semanal, e Dedicated adiciona mais disponibilidade, acompanhamento próximo, dailies quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.',
+    'Escolha o plano pelo ritmo operacional, não por uma lista diferente de serviços. Esses planos foram pensados para fundadores, startups, SMBs e operadores que querem continuar construindo em paralelo sem carregar headcount full-time cedo demais. Starter é quinzenal, Growth é o plano principal semanal, e Dedicated adiciona mais disponibilidade, acompanhamento próximo, dailies quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.',
   highlights: [
     'Starter: para entregas e deploys programados, com reunião quinzenal de planejamento.',
     'Growth: alocação inteligente entre mobile, web, backend, CRM e integrações, com uma reunião semanal para revisar progresso e definir prioridades.',
@@ -390,7 +390,7 @@ const EN_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Compact, flexible, and explicit about fit',
       description:
-        'Tg Apps is not trying to look like a large enterprise consultancy, and it is not a solo-dev promise. The company is positioned as a practical mobile-first product delivery partner with flexible engagement models, direct access, strict plan execution, useful insight, and clean ownership.'
+        'Tg Apps is not trying to look like a large enterprise consultancy, and it is not a solo-dev promise. The company is positioned as a practical mobile-first product delivery partner with flexible engagement models, direct access, clear ownership, disciplined execution, useful insight, and clean handoff.'
     }
   },
   dueDiligence: {
@@ -1668,7 +1668,7 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Compacta, flexível e explícita sobre encaixe',
       description:
-        'A Tg Apps não tenta parecer uma consultoria corporativa gigante, nem se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega mobile-first, com modelos flexíveis de atuação, acesso direto, continuidade e propriedade limpa.'
+        'A Tg Apps não tenta parecer uma consultoria corporativa gigante e também não se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega mobile-first, com modelos flexíveis de atuação, acesso direto, ownership claro, execução disciplinada, visão prática e transferência técnica limpa.'
     }
   },
   dueDiligence: {
@@ -2696,3 +2696,7 @@ export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | nu
 
 export const getLandingContent = (locale: Locale, key: LandingPageKey): LandingPageContent =>
   landingContentByLocale[locale][key];
+
+
+
+

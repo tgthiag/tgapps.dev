@@ -18,7 +18,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       price: 'USD 1,500/mo',
       badge: 'Biweekly rhythm',
       audience:
-        'For teams that need a controlled biweekly rhythm, useful delivery, and a lower monthly entry point without limiting the type of software we can work on.',
+        'For founders, operators, and small teams building in parallel who need a controlled biweekly rhythm, useful delivery, and a lower monthly entry point without limiting the type of software we can work on.',
       description:
         'A compact monthly plan for founders and operators who want scheduled deliveries, deploys, and biweekly planning for the next set of tasks.',
       features: [
@@ -68,7 +68,7 @@ const plansByLocale: Record<'en' | 'pt', Plan[]> = {
       price: 'US$ 1.500/mês',
       badge: 'Ritmo quinzenal',
       audience:
-        'Para times que precisam de um ritmo quinzenal controlado, entrega útil e um valor mensal de entrada menor sem limitar o tipo de software que podemos trabalhar.',
+        'Para fundadores, operadores e times pequenos construindo em paralelo que precisam de um ritmo quinzenal controlado, entrega útil e um valor mensal de entrada menor sem limitar o tipo de software que podemos trabalhar.',
       description:
         'Um plano mensal enxuto para fundadores e operadores que querem entregas programadas, deploys e planejamento quinzenal das próximas demandas.',
       features: [
@@ -120,7 +120,7 @@ const copyByLocale = {
     title: 'Software delivery plans',
     highlight: 'with clear scope and a delivery cadence you can rely on',
     subtitle:
-      'Choose the plan that fits the current delivery load, the cadence you need, and the level of continuity the account requires. Every plan starts with the First Milestone Guarantee, lets you start without paying upfront, and then continues month to month with the operating rhythm that fits the work.',
+      'Choose the plan that fits the current delivery load, the cadence you need, and the level of continuity the account requires. These plans are built for founders, startups, SMBs, and operators who need to keep building in parallel without carrying full-time headcount too early. Every plan starts with the First Milestone Guarantee, lets you start without paying upfront, and then continues month to month with the operating rhythm that fits the work.',
     note:
       'Most teams start with Growth. Dedicated is for accounts that truly need higher availability, participation in your daily meetings when requested, urgent priorities at any time within the agreement, and more room for fast decisions. Every plan starts with the First Milestone Guarantee and continues month to month.',
     footer: ''
@@ -237,3 +237,4 @@ const PricingPlans = () => {
 };
 
 export default PricingPlans;
+
