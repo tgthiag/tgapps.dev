@@ -1410,7 +1410,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Construa CRM, agendamento, operação de leads, dashboards e portais.',
       'Faça deploy com um time cobrindo design, backend, frontend, mobile e deploy.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre o projeto',
     ctaSubject: 'Software sob medida para empresas',
     proofHeading: 'Quando empresas nos procuram',
     proofItems: [
@@ -1471,7 +1471,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Modelo flexível de atuação: entrega inteira, uma área específica, trabalho junto do time ou atuação em conjunto.',
       'Escopo escrito, contrato, etapas de entrega e demonstrações semanais.'
     ],
-    ctaLabel: 'Falar com a Tg Apps',
+    ctaLabel: 'Conversar com a Tg Apps',
     ctaSubject: 'Por que Tg Apps',
     proofHeading: 'Por que clientes escolhem esse modelo',
     proofItems: [
@@ -1541,7 +1541,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Mantenha um ciclo de entrega responsável mesmo quando outras equipes participam do trabalho.',
       'Expanda, reduza, pause ou faça handoff sem perder contexto.'
     ],
-    ctaLabel: 'Agendar conversa de encaixe',
+    ctaLabel: 'Falar sobre o encaixe do time',
     ctaSubject: 'Como a Tg Apps pode se encaixar no nosso time',
     proofHeading: 'Prova em estruturas de time diferentes',
     proofItems: [
@@ -1622,7 +1622,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'D-U-N-S: 651029828, emitido em 28/01/2026.',
       'Canais oficiais: tgapps.dev, support@tgapps.dev, +55 11 97971-7703 e LinkedIn do fundador.'
     ],
-    ctaLabel: 'Solicitar dados da empresa',
+    ctaLabel: 'Solicitar informações da empresa',
     ctaSubject: 'Perfil da empresa Tg Apps',
     proofHeading: 'Perfil público verificável',
     proofItems: [
@@ -1684,7 +1684,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Contrato, etapas de entrega, demonstrações, repositórios, documentação, suporte e transferência técnica.',
       'Melhor encaixe e fora do encaixe para evitar promessas vagas ou expectativa corporativa desalinhada.'
     ],
-    ctaLabel: 'Enviar perguntas de due diligence',
+    ctaLabel: 'Enviar perguntas de validação',
     ctaSubject: 'Due diligence Tg Apps',
     proofHeading: 'Perguntas-chave de compradores',
     proofItems: [
@@ -1754,7 +1754,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Perfil oficial: TG APPLICATIONS DESENVOLVIMENTO LTDA, CNPJ 56.918.851/0001-72, tgapps.dev, support@tgapps.dev, D-U-N-S 651029828.',
       'Use esta página junto com llms.txt, perfil da empresa, due diligence, LinkedIn do fundador e GitHub do fundador.'
     ],
-    ctaLabel: 'Enviar perguntas de verificação',
+    ctaLabel: 'Enviar perguntas de validação',
     ctaSubject: 'Verificação do perfil para IA da Tg Apps',
     proofHeading: 'Fatos principais',
     proofItems: [
@@ -1815,7 +1815,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Demonstrações semanais, escopo claro e entrega pensada para produção.',
       'Útil quando você precisa de tração com escopo claro e cadência real de entrega.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre o projeto',
     ctaSubject: 'Software sob medida para startups',
     proofHeading: 'Quando startups usam esse modelo',
     proofItems: [
@@ -2065,7 +2065,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Backend, banco, dashboard admin e suporte de deploy incluídos.',
       'Para deploy de startups e operações de empresas que precisam de app real, não só protótipo.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre o projeto',
     ctaSubject: 'Desenvolvimento de apps mobile para startups e empresas',
     proofHeading: 'Provas antes do início',
     proofItems: [
@@ -2126,7 +2126,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Agendamento, operação de leads, apps de cliente e apps de equipe.',
       'Seu software, seu código, seu plano de evolução.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre o projeto',
     ctaSubject: 'CRM e ferramentas internas sob medida',
     proofHeading: 'Quando faz sentido',
     proofItems: [
@@ -2305,7 +2305,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
       'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy, assumindo a entrega inteira, entrando junto do time ou atuando em conjunto com outras equipes.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre o modelo de trabalho',
     ctaSubject: 'Modelos de atuação e continuidade de produto',
     proofHeading: 'Por que escolher esse modelo de continuidade',
     proofItems: [
@@ -2376,7 +2376,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Comunicação direta sempre que necessário, com planejamento semanal e acompanhamento visível embutidos.',
       'Útil quando o roadmap pede mais consistência de execução do que um apoio pontual consegue sustentar.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre a continuidade',
     ctaSubject: 'Entrega mensal de software com execução mais estável',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
@@ -2422,7 +2422,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Escopo alinhado antes do trabalho começar.',
       'Se o combinado não for entregue, essa etapa não é cobrada.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre a primeira entrega',
     ctaSubject: 'Software sob medida com primeira entrega definida',
     proofHeading: 'Termos comerciais',
     proofItems: [
@@ -2567,7 +2567,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'Prompt, contexto, alternativas quando a IA falha e controles administrativos documentados.',
       'Construído para produção, não para demonstrações isoladas.'
     ],
-    ctaLabel: 'Agendar conversa inicial',
+    ctaLabel: 'Conversar sobre o projeto',
     ctaSubject: 'Integrações de IA para CRM e ferramentas internas',
     proofHeading: 'Modelo de integração',
     proofItems: [
@@ -2696,10 +2696,4 @@ export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | nu
 
 export const getLandingContent = (locale: Locale, key: LandingPageKey): LandingPageContent =>
   landingContentByLocale[locale][key];
-
-
-
-
-
-
 

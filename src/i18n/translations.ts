@@ -659,7 +659,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         title: 'Precisa de um parceiro que se adapte ao seu time sem perder responsabilidade de entrega?',
         description:
           'Envie o contexto atual do produto, o time, o repositório, o processo ou a ideia. Respondemos em até 1 dia útil com bloqueios, riscos, próximos passos e o modelo de atuação mais prático para o caso.',
-        button: 'Discutir o modelo de entrega'
+        button: 'Falar sobre o encaixe do time'
       }
     },
     about: {
@@ -729,13 +729,13 @@ export const translations: Record<Locale, TranslationSchema> = {
         }
       ],
       whatsappCta: {
-        title: 'Prefere WhatsApp?',
-        description: 'Abra uma conversa direta com a Tg Apps e conte o que você quer construir.'
+        title: 'Quer falar por WhatsApp?',
+        description: 'Abra uma conversa direta com a Tg Apps e explique o que você quer construir.'
       },
       formHeading: 'Conte um pouco do projeto',
       formDescription: 'Só pedimos o necessário para responder com plano e datas.',
       callout: {
-        title: 'O que acontece depois',
+        title: 'Próximos passos',
         description: 'Processo leve e sem spam.',
         bullets: [
           'Respondemos em até 1 dia útil com dúvidas pontuais.',
@@ -818,5 +818,4 @@ export const translations: Record<Locale, TranslationSchema> = {
     }
   }
 };
-
 

@@ -35,18 +35,26 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
     'https://wa.me/5511979717703?text=Hi%20I%20found%20you%20on%20Google%20and%20would%20like%20to%20build%20a%20project';
   const finalCtaTitle = isTrustPage
     ? locale === 'pt'
-      ? 'Precisa validar a Tg Apps antes de contratar?'
+      ? 'Quer validar a Tg Apps antes de avançar?'
       : 'Need to validate Tg Apps before hiring?'
-    : locale === 'pt'
-      ? 'Vamos mapear seu sistema?'
-      : 'Ready to map your system?';
+    : isTeamFitPage
+      ? locale === 'pt'
+        ? 'Vamos entender onde a Tg Apps entra?'
+        : 'Ready to map your system?'
+      : locale === 'pt'
+        ? 'Vamos conversar sobre o projeto?'
+        : 'Ready to map your system?';
   const finalCtaDescription = isTrustPage
     ? locale === 'pt'
-      ? 'Envie suas perguntas de due diligence, compras, contrato, suporte ou transferência técnica e respondemos com o contexto correto.'
+      ? 'Envie suas perguntas sobre empresa, contrato, suporte ou transferência técnica e respondemos com o contexto certo.'
       : 'Send your due diligence, procurement, contract, support, or handoff questions and we will reply with the right context.'
-    : locale === 'pt'
-      ? 'Envie o contexto atual e respondemos com uma leitura honesta de escopo, riscos, integrações e próximos passos.'
-      : 'Send the current context and we will reply with an honest read on scope, risks, integrations, and next steps.';
+    : isTeamFitPage
+      ? locale === 'pt'
+        ? 'Compartilhe o contexto do time e da entrega atual. Respondemos com bloqueios, riscos e o formato de trabalho mais prático para o seu caso.'
+        : 'Send the current context and we will reply with an honest read on scope, risks, integrations, and next steps.'
+      : locale === 'pt'
+        ? 'Compartilhe o contexto atual e respondemos com uma leitura honesta de escopo, riscos, integrações e próximos passos.'
+        : 'Send the current context and we will reply with an honest read on scope, risks, integrations, and next steps.';
   const finalCtaProcessNote = isTrustPage
     ? null
     : isTeamFitPage
@@ -58,17 +66,17 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
       : 'During the call, we review your goals, explain how we usually approach similar challenges, outline the recommended technical path, and define a practical first milestone.';
   const heroCtaNote = isTeamFitPage
     ? locale === 'pt'
-      ? 'Mostre onde seu time precisa de apoio de entrega.'
+      ? 'Mostre onde seu time precisa de reforço de entrega.'
       : 'Show us where your team needs delivery support.'
     : locale === 'pt'
       ? 'Resposta em até 1 dia útil.'
       : 'Reply within one business day.';
-  const contactOptionsTitle = locale === 'pt' ? 'Como você prefere falar?' : 'How would you like to talk?';
+  const contactOptionsTitle = locale === 'pt' ? 'Como prefere falar com a Tg Apps?' : 'How would you like to talk?';
   const contactOptionsDescription =
     locale === 'pt'
       ? isTrustPage
-        ? 'Escolha WhatsApp para uma conversa rápida ou e-mail para enviar perguntas de validação.'
-        : 'Escolha WhatsApp para uma conversa rápida ou e-mail para enviar contexto, escopo e integrações.'
+        ? 'Escolha WhatsApp para uma conversa rápida ou e-mail para mandar perguntas de validação.'
+        : 'Escolha WhatsApp para uma conversa rápida ou e-mail para mandar contexto, escopo e integrações.'
       : isTrustPage
         ? 'Choose WhatsApp for a quick conversation or email to send verification questions.'
         : 'Choose WhatsApp for a quick conversation or email to send context, scope, and integrations.';
