@@ -300,7 +300,7 @@ const EN_CONTENT: LandingContentByLocale = {
           'This works when the company already has broader operations but needs one partner to take responsibility for an area that cannot stay fragmented.',
         items: [
           'IT.up is a good example: Tg Apps owns the app area while other teams handle other parts of the business stack.',
-          'DB Cleaning is another: Tg Apps owns the critical delivery stack across CRM, backend, and two mobile apps while outside contributors stay on minor adjustments.',
+          'DB Cleaning is another: Tg Apps leads the critical product delivery stack across CRM, backend, and two mobile apps, with support from other contributors on adjacent tasks.',
           'The benefit is clear accountability without forcing one vendor to replace every other contributor.'
         ]
       },
@@ -1578,7 +1578,7 @@ const PT_CONTENT: LandingContentByLocale = {
           'Esse formato funciona quando a empresa já tem uma operação maior, mas precisa de um parceiro responsável por uma frente que não pode ficar fragmentada.',
         items: [
           'A IT.up é um bom exemplo: a Tg Apps assume toda a área de apps enquanto outras equipes cuidam de outras partes da operação.',
-          'A DB Cleaning é outro: a Tg Apps assume a parte crítica da entrega entre CRM, backend e dois apps mobile, enquanto contribuições externas ficam em ajustes pontuais.',
+          'A DB Cleaning é outro: a Tg Apps lidera a entrega crítica do produto entre CRM, backend e dois apps mobile, com apoio de outros colaboradores em frentes adjacentes.',
           'O ganho aqui é accountability clara sem forçar um fornecedor a substituir todos os outros.'
         ]
       },

@@ -26,8 +26,8 @@ const cases: CaseItem[] = [
       pt: 'Philadelphia, PA, Estados Unidos'
     },
     description: {
-      en: 'Owns the critical delivery stack: CRM, booking platform, frontend, backend, databases, and two mobile apps, while outside contributors handle only occasional minor adjustments.',
-      pt: 'Assume a parte crítica da entrega: CRM, plataforma de agendamento, frontend, backend, bancos de dados e dois apps mobile, enquanto contribuições externas ficam restritas a ajustes pontuais.'
+      en: 'Leads the critical product delivery stack across CRM, booking platform, frontend, backend, databases, and two mobile apps, with support from other contributors on adjacent tasks.',
+      pt: 'Lidera a entrega crítica do produto entre CRM, plataforma de agendamento, frontend, backend, bancos de dados e dois apps mobile, com apoio de outros colaboradores em frentes adjacentes.'
     },
     tags: ['CRM', 'Booking', 'Mobile', 'Backend']
   },
