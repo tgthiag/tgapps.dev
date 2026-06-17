@@ -18,10 +18,15 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
     content.key === 'companyProfile' ||
     content.key === 'dueDiligence' ||
     content.key === 'aiProfile';
+  const isTeamFitPage = content.key === 'howWeFitYourTeam';
   const ctaBody = isTrustPage
     ? locale === 'pt'
       ? 'Perguntas de verificação:%0D%0A- Empresa / compras:%0D%0A- Contrato / NDA:%0D%0A- Escopo ou projeto em avaliação:%0D%0A- Documentos necessários:%0D%0A'
       : 'Verification questions:%0D%0A- Company / procurement:%0D%0A- Contract / NDA:%0D%0A- Project or scope under evaluation:%0D%0A- Required documents:%0D%0A'
+    : isTeamFitPage
+      ? locale === 'pt'
+        ? 'Contexto do time:%0D%0A- Frente de produto que precisa de apoio:%0D%0A- Time interno hoje:%0D%0A- Onde a entrega está travando:%0D%0A- Integrações ou sistemas envolvidos:%0D%0A'
+        : 'Team context:%0D%0A- Product area that needs support:%0D%0A- Current internal team:%0D%0A- Where delivery is getting stuck:%0D%0A- Related systems or integrations:%0D%0A'
     : locale === 'pt'
       ? 'Contexto do projeto:%0D%0A- Processo atual:%0D%0A- Sistema ou planilha que usamos hoje:%0D%0A- Prazo:%0D%0A- Time interno:%0D%0A- Integrações desejadas:%0D%0A'
       : 'Project context:%0D%0A- Current process:%0D%0A- System or spreadsheet we use today:%0D%0A- Deadline:%0D%0A- Internal team:%0D%0A- Required integrations:%0D%0A';
@@ -44,9 +49,20 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
       : 'Send the current context and we will reply with an honest read on scope, risks, integrations, and next steps.';
   const finalCtaProcessNote = isTrustPage
     ? null
+    : isTeamFitPage
+      ? locale === 'pt'
+        ? 'Na conversa, avaliamos onde a Tg Apps deve assumir ownership completo, tocar uma frente crítica ou trabalhar ao lado do seu time sem criar confusão de coordenação.'
+        : 'During the call, we assess whether Tg Apps should take full ownership, own one critical area, or work alongside your team without creating coordination noise.'
     : locale === 'pt'
       ? 'Na conversa, revisamos seus objetivos, explicamos como normalmente abordamos desafios parecidos, desenhamos o caminho técnico recomendado e definimos uma primeira entrega prática.'
       : 'During the call, we review your goals, explain how we usually approach similar challenges, outline the recommended technical path, and define a practical first milestone.';
+  const heroCtaNote = isTeamFitPage
+    ? locale === 'pt'
+      ? 'Mostre onde seu time precisa de apoio de entrega.'
+      : 'Show us where your team needs delivery support.'
+    : locale === 'pt'
+      ? 'Resposta em até 1 dia útil.'
+      : 'Reply within one business day.';
   const contactOptionsTitle = locale === 'pt' ? 'Como você prefere falar?' : 'How would you like to talk?';
   const contactOptionsDescription =
     locale === 'pt'
@@ -117,9 +133,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
                 {content.ctaLabel}
                 <ArrowRight className="h-4 w-4" />
               </button>
-              <span className="text-sm text-white/70">
-                {locale === 'pt' ? 'Resposta em até 1 dia útil.' : 'Reply within one business day.'}
-              </span>
+              <span className="text-sm text-white/70">{heroCtaNote}</span>
             </div>
           </div>
         </section>
