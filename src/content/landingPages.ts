@@ -1465,10 +1465,10 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Por que Tg Apps',
     title: 'Entrega mobile-first flexível com accountability mais clara',
     intro:
-      'A Tg Apps foi desenhada para empresas que precisam de execução prática de software sem serem forçadas a um único modelo de trabalho. Podemos atuar com ownership completo, ownership de uma área, apoio embarcado ou co-delivery, enquanto um núcleo sênior mantém o contexto próximo e amplia a capacidade quando o projeto exige mais profundidade ou especialidade.',
+      'A Tg Apps foi desenhada para empresas que precisam de execução prática de software sem serem empurradas para um único modelo de trabalho. Podemos assumir a entrega inteira, tocar uma área, entrar junto do time ou atuar em conjunto com outra equipe, enquanto um núcleo sênior mantém o contexto por perto e amplia a capacidade quando o projeto exige mais profundidade ou especialidade.',
     heroHighlights: [
       'Acesso direto à liderança de entrega e ao time que executa.',
-      'Modelo flexível de atuação: owner completo, owner de uma área, apoio embarcado ou co-delivery.',
+      'Modelo flexível de atuação: entrega inteira, uma área específica, trabalho junto do time ou atuação em conjunto.',
       'Escopo escrito, contrato, etapas de entrega e demonstrações semanais.'
     ],
     ctaLabel: 'Falar com a Tg Apps',
@@ -1537,7 +1537,7 @@ const PT_CONTENT: LandingContentByLocale = {
     intro:
       'A Tg Apps não empurra um formato único. Podemos assumir a entrega inteira, tocar uma frente crítica, trabalhar ao lado dos seus devs ou dividir a execução com outras equipes, mantendo mobile, backend, ferramentas internas, integrações e release andando com continuidade.',
     heroHighlights: [
-      'Já colocamos no ar e mantivemos apps mobile, CRM, ferramentas internas, integrações de backend e releases em modelos de ownership completo, co-delivery e apoio embarcado.',
+      'Já colocamos no ar e mantivemos apps mobile, CRM, ferramentas internas, integrações de backend e releases em modelos de entrega completa, atuação em conjunto e trabalho integrado ao time.',
       'Mantenha um ciclo de entrega responsável mesmo quando outras equipes participam do trabalho.',
       'Expanda, reduza, pause ou faça handoff sem perder contexto.'
     ],
@@ -1545,8 +1545,8 @@ const PT_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Como a Tg Apps pode se encaixar no nosso time',
     proofHeading: 'Prova em estruturas de time diferentes',
     proofItems: [
-      'Beautylove é exemplo de ownership completo, com build, lançamento e continuidade do produto.',
-      'DocVita é exemplo de build completo primeiro e co-delivery depois do deploy.',
+      'Beautylove é exemplo de entrega completa, com construção, lançamento e continuidade do produto.',
+      'DocVita é exemplo de build completo primeiro e trabalho em conjunto depois do deploy.',
       'DB Cleaning, IT.up, Mathex e Smiles mostram como a Tg Apps pode assumir uma frente crítica ou trabalhar dentro de uma estrutura maior.'
     ],
     deliverablesHeading: 'Jeitos de encaixar a Tg Apps no trabalho',
@@ -2359,7 +2359,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     pricing: PT_CURRENT_PRICING,
     finalNote: {
-      title: 'O modelo certo deve comprar tração, não dependência',
+      title: 'O modelo certo deve gerar tração, não dependência',
       description:
         'A Tg Apps é um bom encaixe quando você precisa de execução contínua com responsabilidade direta, demonstrações semanais e caminho claro para continuar, expandir, pausar ou fazer transferência técnica.'
     }
@@ -2696,6 +2696,7 @@ export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | nu
 
 export const getLandingContent = (locale: Locale, key: LandingPageKey): LandingPageContent =>
   landingContentByLocale[locale][key];
+
 
 
 

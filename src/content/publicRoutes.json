@@ -20,8 +20,8 @@
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
-          "title": "Entrega mobile-first do jeito que sua empresa precisa | Tg Apps",
-          "description": "A Tg Apps atua como owner completo, dona de uma área, parceira embarcada ou time em co-delivery em apps mobile, backend, CRM, ferramentas internas e suporte de release.",
+          "title": "Entrega de produto com foco em mobile do jeito que sua empresa precisa | Tg Apps",
+          "description": "A Tg Apps pode assumir a entrega inteira, tocar uma área crítica, entrar junto do time ou atuar em conjunto com outras equipes em apps mobile, backend, CRM, ferramentas internas e suporte de release.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -162,8 +162,8 @@
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
-          "title": "Como a Tg Apps se encaixa no seu time | Ownership completo, apoio embarcado e co-delivery",
-          "description": "Veja como a Tg Apps pode assumir ownership completo, tocar uma área crítica, apoiar o time interno ou operar em co-delivery com outras equipes.",
+          "title": "Como a Tg Apps se encaixa no seu time | Entrega completa, trabalho junto do time e atuação em conjunto",
+          "description": "Veja como a Tg Apps pode assumir a entrega inteira, tocar uma área crítica, entrar junto do time interno ou atuar em conjunto com outras equipes.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -520,7 +520,7 @@
         },
         "pt": {
           "title": "Modelos de atuação | Entrega flexível de produto | Tg Apps",
-          "description": "Veja como a Tg Apps atua como owner completo, dona de uma área, parceira embarcada ou time em co-delivery em apps, backend, CRM, ferramentas internas e suporte de release.",
+          "description": "Veja como a Tg Apps pode assumir a entrega inteira, tocar uma área, entrar junto do time ou atuar em conjunto em apps, backend, CRM, ferramentas internas e suporte de release.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -758,3 +758,4 @@
     }
   ]
 }
+
