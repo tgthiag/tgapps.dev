@@ -504,7 +504,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Entrega mobile-first · modelos flexíveis de atuação',
+      badge: 'Entrega com foco em mobile · formatos flexíveis de atuação',
       titleLine1: 'Entrega de produto',
       titleHighlight: 'do jeito que sua empresa precisa.',
       titleLine2: '',
@@ -522,7 +522,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     socialProof: {
       heading: 'Confiança em modelos diferentes de entrega',
       description:
-        'Algumas empresas contam com a gente para ownership completo. Outras para uma área crítica, apoio embarcado ou trabalho em paralelo com times maiores.'
+        'Algumas empresas contam com a gente para responsabilidade completa. Outras para uma frente crítica, apoio integrado ao time ou trabalho em paralelo com equipes maiores.'
     },
     firstMilestone: {
       badge: 'Primeira entrega real',
@@ -549,17 +549,17 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Como trabalhamos',
       headingHighlight: 'com a sua empresa',
       description:
-        'A Tg Apps não fica presa a um formato só. Podemos construir do zero, assumir ownership de uma área, apoiar seu time interno ou trabalhar em paralelo com outras equipes em mobile, backend, ferramentas internas, integrações, infraestrutura e release.',
+        'A Tg Apps não fica presa a um formato só. Podemos construir do zero, assumir a responsabilidade por uma área, apoiar seu time interno ou trabalhar em paralelo com outras equipes em mobile, backend, ferramentas internas, integrações, infraestrutura e release.',
       pillars: [
         'Entrega com prioridade para mobile: Android, iOS, Play Store, App Store, distribuição interna e deploys graduais.',
-        'Ownership flexível: build completo, área específica, apoio embarcado ou co-delivery conforme a estrutura.',
+        'Responsabilidade flexível: entrega completa, uma área específica, apoio integrado ao time ou atuação em conjunto com outras equipes, conforme a estrutura.',
         'Escopo claro, demonstrações semanais, suporte de deploy, documentação e transferência técnica quando aplicável.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
       gridHeading: 'Use o modelo que faz sentido para a sua realidade',
       gridDescription:
-        'Algumas empresas precisam de ownership completo. Outras precisam de apoio embarcado, co-delivery ou de um time que assuma uma área crítica sem substituir toda a estrutura atual.',
+        'Algumas empresas precisam de responsabilidade completa. Outras precisam de apoio integrado ao time, atuação em conjunto com outra equipe ou de um parceiro que assuma uma frente crítica sem substituir toda a estrutura atual.',
       processHeading: 'Como trabalhamos em três ciclos',
       processDescription:
         'Estrutura enxuta: alinhamento, construção e suporte. Cada ciclo mantém decisores próximos sem roubar agenda.',
@@ -667,7 +667,7 @@ export const translations: Record<Locale, TranslationSchema> = {
       headingLine1: 'Um parceiro,',
       headingHighlight: 'jeitos diferentes de entregar',
       description:
-        'Somos um estúdio bilíngue em São Paulo apoiando empresas com entrega mobile-first de longo prazo, adaptada ao jeito que cada time realmente trabalha.',
+        'Somos um estúdio bilíngue em São Paulo apoiando empresas com entregas de longo prazo e foco em mobile, adaptadas ao jeito que cada time realmente trabalha.',
       timelineHeading: 'Como nos encaixamos em times reais',
       paragraphs: [
         'Em algumas empresas construímos e colocamos tudo no ar. Em outras assumimos uma área, trabalhamos ao lado de devs internos ou tocamos a parte crítica enquanto outras equipes cobrem frentes adjacentes.',
@@ -782,7 +782,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     },
     footer: {
       description:
-        'A Tg Apps apoia times em crescimento com entrega mobile-first em apps, CRM, ferramentas internas, backend e integrações de IA, operando como owner completo, parceiro embarcado ou time em co-delivery conforme o contexto.',
+        'A Tg Apps apoia times em crescimento com entregas de produto focadas em mobile, apps, CRM, ferramentas internas, backend e integrações de IA, atuando com responsabilidade completa, apoio integrado ao time ou em conjunto com outras equipes, conforme o contexto.',
       navigationHeading: 'Sessões',
       navigation: [
         { id: 'inicio', label: 'Início' },
@@ -818,3 +818,4 @@ export const translations: Record<Locale, TranslationSchema> = {
     }
   }
 };
+

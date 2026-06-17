@@ -51,7 +51,7 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
     ? null
     : isTeamFitPage
       ? locale === 'pt'
-        ? 'Na conversa, avaliamos onde a Tg Apps deve assumir ownership completo, tocar uma frente crítica ou trabalhar ao lado do seu time sem criar confusão de coordenação.'
+        ? 'Na conversa, avaliamos se a Tg Apps deve assumir a entrega por completo, tocar uma frente crítica ou trabalhar ao lado do seu time sem criar ruído de coordenação.'
         : 'During the call, we assess whether Tg Apps should take full ownership, own one critical area, or work alongside your team without creating coordination noise.'
     : locale === 'pt'
       ? 'Na conversa, revisamos seus objetivos, explicamos como normalmente abordamos desafios parecidos, desenhamos o caminho técnico recomendado e definimos uma primeira entrega prática.'
@@ -374,3 +374,4 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
 };
 
 export default KeywordLandingPage;
+

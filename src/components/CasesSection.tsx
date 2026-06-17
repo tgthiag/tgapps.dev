@@ -83,7 +83,7 @@ const cases: CaseItem[] = [
     },
     description: {
       en: "Tg Apps works as an embedded frontend partner through Mathex for the Smiles loyalty program, supporting microfrontend delivery inside an enterprise squad with lower overall ownership than our full-stack engagements.",
-      pt: 'A Tg Apps atua como parceira embarcada de frontend via Mathex no programa de fidelidade Smiles, apoiando a entrega com microfrontends dentro de uma equipe corporativa, com menor ownership global do que nos contratos full-stack.'
+      pt: 'A Tg Apps atua integrada ao time de frontend via Mathex no programa de fidelidade Smiles, apoiando a entrega com microfrontends dentro de uma equipe corporativa, com escopo mais localizado do que nos contratos full-stack.'
     },
     tags: ['Microfrontend', 'Enterprise Squad', 'Airline', 'Loyalty Platform']
   }
@@ -186,3 +186,4 @@ const CasesSection = () => {
 };
 
 export default CasesSection;
+

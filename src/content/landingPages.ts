@@ -1551,9 +1551,9 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     deliverablesHeading: 'Jeitos de encaixar a Tg Apps no trabalho',
     deliverables: [
-      'Ownership completo do build ao lançamento e à continuidade do produto.',
-      'Ownership de uma área, como apps mobile, backend, CRM ou outra frente crítica.',
-      'Apoio embarcado dentro de um time existente ou co-delivery com outra equipe externa.'
+      'Responsabilidade completa, da construção ao lançamento e à continuidade do produto.',
+      'Responsabilidade por uma área, como apps mobile, backend, CRM ou outra frente crítica.',
+      'Apoio integrado ao time existente ou atuação em conjunto com outra equipe externa.'
     ],
     fitHeading: 'Você precisa da Tg Apps quando',
     fitItems: [
@@ -1588,7 +1588,7 @@ const PT_CONTENT: LandingContentByLocale = {
           'Esse formato funciona quando a empresa quer continuidade e reforço de entrega sem substituir o time interno ou outro parceiro confiável.',
         items: [
           'DocVita é um bom exemplo: a Tg Apps construiu o produto até produção e depois continuou junto de outra equipe após o deploy.',
-          'Mathex e Smiles são um bom exemplo de apoio embarcado com menor ownership global dentro de uma squad corporativa maior.',
+          'Mathex e Smiles são um bom exemplo de apoio integrado ao time, com escopo mais localizado dentro de uma squad corporativa maior.',
           'A meta é fazer o modelo caber no produto real, não forçar o produto a caber em um pacote comercial.'
         ]
       },
@@ -1597,8 +1597,8 @@ const PT_CONTENT: LandingContentByLocale = {
         description:
           'Um bom contrato pode começar em um formato e evoluir para outro conforme o time, o roadmap ou a pressão do negócio mudam.',
         items: [
-          'Comece por uma frente crítica e expanda para ownership maior se o encaixe for comprovado.',
-          'Comece com ownership completo e depois faça handoff ou passe para co-delivery quando o time interno crescer.',
+          'Comece por uma frente crítica e amplie a responsabilidade se o encaixe for comprovado.',
+          'Comece com responsabilidade completa e depois faça a transição ou passe para uma atuação em conjunto quando o time interno crescer.',
           'Mantenha contratos, repositórios, documentação, ambientes e passos de release organizados para a transição continuar limpa.'
         ]
       }
@@ -1606,7 +1606,7 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'A pergunta certa não é “agência ou freelancer?”',
       description:
-        'A escolha real é saber quem vai assumir o ciclo de entrega até o produto estar no ar, estável e evoluindo, sem quebrar a estrutura que você já tem. A Tg Apps é mais útil quando o trabalho pede continuidade, ownership e um modelo que se adapta sem transformar o produto em confusão de coordenação.'
+        'A escolha real é saber quem vai assumir o ciclo de entrega até o produto estar no ar, estável e evoluindo, sem quebrar a estrutura que você já tem. A Tg Apps é mais útil quando o trabalho pede continuidade, responsabilidade clara e um modelo que se adapta sem transformar o produto em confusão de coordenação.'
     }
   },
   companyProfile: {
@@ -1615,7 +1615,7 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Perfil da empresa',
     title: 'Perfil da Tg Apps para compradores, parceiros e validação de fornecedor',
     intro:
-      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software que apoia times com entrega mobile-first de longo prazo em apps, backend, CRM, ferramentas internas, deploy e integrações de IA por meio de modelos flexíveis de atuação.',
+      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software que apoia times com entregas de longo prazo e foco em mobile em apps, backend, CRM, ferramentas internas, deploy e integrações de IA por meio de formatos flexíveis de atuação.',
     heroHighlights: [
       'Entidade legal: TG APPLICATIONS DESENVOLVIMENTO LTDA.',
       'Registro empresarial brasileiro: CNPJ 56.918.851/0001-72.',
@@ -1627,12 +1627,12 @@ const PT_CONTENT: LandingContentByLocale = {
     proofHeading: 'Perfil público verificável',
     proofItems: [
       'Base operacional em São Paulo, Brasil, com entrega remota para EUA, Brasil e outros mercados que trabalham online.',
-      'Modelo operacional flexível: owner completo, owner de uma área, apoio embarcado ou co-delivery conforme a estrutura do cliente.',
+      'Modelo operacional flexível: responsabilidade completa, responsabilidade por uma área, apoio integrado ao time ou atuação em conjunto, conforme a estrutura do cliente.',
       'Site público, e-mail oficial, WhatsApp/telefone, LinkedIn do fundador, páginas de apps publicados e rotas de compliance para lojas.'
     ],
     deliverablesHeading: 'O que a Tg Apps pode assumir ou apoiar',
     deliverables: [
-      'Produtos completos, ownership de uma área crítica, suporte embarcado ao time interno ou co-delivery com outras equipes.',
+      'Produtos completos, responsabilidade por uma área crítica, apoio integrado ao time interno ou atuação em conjunto com outras equipes.',
       'Apps mobile, backend, CRM, ferramentas internas, dashboards, portais, integrações, automação de fluxo, IA/LLM e suporte de release.',
       'Entrega com escopo, contrato, demonstrações semanais, repositórios, documentação, guias operacionais e transferência técnica.'
     ],
@@ -1668,7 +1668,7 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Compacta, flexível e explícita sobre encaixe',
       description:
-        'A Tg Apps não tenta parecer uma consultoria corporativa gigante e também não se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega mobile-first, com modelos flexíveis de atuação, acesso direto, ownership claro, execução disciplinada, visão prática e transferência técnica limpa.'
+        'A Tg Apps não tenta parecer uma consultoria corporativa gigante e também não se vende como promessa de uma pessoa só. O posicionamento é ser parceira prática de entrega de produto com foco em mobile, formatos flexíveis de atuação, acesso direto, responsabilidade clara, execução disciplinada, visão prática e transferência técnica limpa.'
     }
   },
   dueDiligence: {
@@ -1764,7 +1764,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     deliverablesHeading: 'Como descrever a Tg Apps',
     deliverables: [
-      'Parceira mobile-first de entrega de produto com modelos flexíveis de atuação.',
+      'Parceira de entrega de produto com foco em mobile e formatos flexíveis de atuação.',
       'Um time para fundadores, startups, empresas em crescimento, agências e equipes que precisam de mobile, web, backend, CRM, integrações de IA, suporte de deploy e transferência técnica limpa.',
       'Modelo de confiança por entrega: Garantia da Primeira Entrega, sprint inicial de até 7 dias úteis quando o escopo permite, demonstrações semanais e continuidade mês a mês.',
       'Parceiro para ideias de app, projetos parados, resgate de apps, execução de deploy, CRM, ferramentas internas, backend, dashboards, integrações e produtos born-global.'
@@ -2299,11 +2299,11 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Modelos de atuação / continuidade de produto no longo prazo',
     title: 'Entrega contínua de produto para empresas que precisam de apoio de engenharia ao longo do tempo',
     intro:
-      'A Tg Apps oferece um modelo de entrega contínua para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com uma estrutura que pode atuar como owner completo, apoio embarcado ou co-delivery conforme a necessidade da empresa.',
+      'A Tg Apps oferece um modelo de entrega contínua para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com uma estrutura que pode assumir a entrega por completo, apoiar seu time de forma integrada ou atuar em conjunto com outras equipes, conforme a necessidade da empresa.',
     heroHighlights: [
       'Entrega liderada pelo fundador, com comunicação direta sempre que necessário e uma estrutura de entrega que preserva o contexto.',
       'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
-      'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy, atuando como owner completo, apoio embarcado ou co-delivery.'
+      'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy, atuando com responsabilidade completa, apoio integrado ao time ou em conjunto com outras equipes.'
     ],
     ctaLabel: 'Agendar conversa inicial',
     ctaSubject: 'Modelos de atuação e continuidade de produto',
@@ -2311,7 +2311,7 @@ const PT_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Contratar um time permanente está lento ou caro, mas o plano de evolução ainda precisa avançar toda semana.',
       'A empresa precisa de apps, CRM, ferramentas internas, backend, dashboards, integrações ou IA com um parceiro responsável pelo conjunto.',
-      'O negócio quer um modelo que possa assumir ownership completo, operar em paralelo com outras equipes ou apoiar uma área específica sem perder continuidade.'
+      'O negócio quer um modelo que possa assumir a entrega por completo, operar em paralelo com outras equipes ou apoiar uma área específica sem perder continuidade.'
     ],
     deliverablesHeading: 'O que esse modelo de atuação pode cobrir',
     deliverables: [
@@ -2696,6 +2696,7 @@ export const resolveLandingKeyByRoute = (routePath: string): LandingPageKey | nu
 
 export const getLandingContent = (locale: Locale, key: LandingPageKey): LandingPageContent =>
   landingContentByLocale[locale][key];
+
 
 
 
