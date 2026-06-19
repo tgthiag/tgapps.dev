@@ -120,9 +120,11 @@ const copyByLocale = {
     title: 'Software delivery plans',
     highlight: 'with clear scope and a delivery cadence you can rely on',
     subtitle:
-      'Choose the plan that fits the current delivery load, the cadence you need, and the level of continuity the account requires. These plans are built for founders, startups, SMBs, and operators who need to keep building in parallel without carrying full-time headcount too early. Every plan starts with the First Milestone Guarantee, lets you start without paying upfront, and then continues month to month with the operating rhythm that fits the work.',
+      'Choose the plan that fits the current delivery load, the cadence you need, and the level of continuity the account requires. These plans are built for founders, startups, SMBs, and operators who need to keep building in parallel without carrying full-time headcount too early. In many US and international markets, this gives you practical product delivery capacity for less than hiring one senior engineer. Every plan starts with the First Milestone Guarantee, lets you start without paying upfront, and then continues month to month with the operating rhythm that fits the work.',
     note:
       'Most teams start with Growth. Dedicated is for accounts that truly need higher availability, participation in your daily meetings when requested, urgent priorities at any time within the agreement, and more room for fast decisions. Every plan starts with the First Milestone Guarantee and continues month to month.',
+    currencyNote:
+      'USD prices are public references. Before kickoff, the monthly amount is fixed in your agreed billing currency, such as USD, BRL, or another mutually accepted currency, and stays fixed while the engagement remains active.',
     footer: ''
   },
   pt: {
@@ -130,9 +132,11 @@ const copyByLocale = {
     title: 'Planos de entrega de software',
     highlight: 'com escopo claro e uma cadência de entrega confiável',
     subtitle:
-      'Escolha o plano que combina com a carga de entrega do momento, a cadência necessária e o nível de continuidade que a conta pede. Todo plano começa com a Garantia da Primeira Entrega, sem pagamento antecipado para começar, e depois segue mês a mês com o ritmo operacional que faz sentido para o trabalho.',
+      'Escolha o plano que combina com a carga de entrega do momento, a cadência necessária e o nível de continuidade que a conta pede. Em muitos mercados, isso coloca uma equipe compacta de entrega de produto por menos do que contratar um desenvolvedor sênior sozinho. Todo plano começa com a Garantia da Primeira Entrega, sem pagamento antecipado para começar, e depois segue mês a mês com o ritmo operacional que faz sentido para o trabalho.',
     note:
       'A maioria dos clientes começa pelo Growth. Dedicated é para contas que realmente precisam de mais disponibilidade, participação em dailies quando solicitada, prioridades urgentes a qualquer hora dentro do acordo e mais espaço para decisões rápidas. Todo plano começa com a Garantia da Primeira Entrega e segue mês a mês.',
+    currencyNote:
+      'Os valores em US$ são referências públicas. Antes do início, o valor mensal é fixado na moeda combinada com o cliente, como USD, BRL ou outra moeda aceita pelas partes, e permanece fixo enquanto o plano estiver ativo.',
     footer: ''
   }
 } as const;
@@ -230,6 +234,9 @@ const PricingPlans = () => {
 
         <p className="mt-8 rounded-2xl border border-white/10 bg-white/[0.06] p-5 text-sm leading-7 text-white/70">
           {copy.note}
+        </p>
+        <p className="mt-4 rounded-2xl border border-blue-300/20 bg-blue-400/[0.08] p-5 text-sm leading-7 text-blue-50/80">
+          {copy.currencyNote}
         </p>
       </div>
     </section>

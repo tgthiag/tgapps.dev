@@ -22,13 +22,13 @@ Core work includes mobile apps, web platforms, custom CRM systems, internal tool
 
 ## Public Pricing
 
-Tg Apps uses clear monthly software plans:
+Tg Apps uses clear monthly software plans. The plans are best understood by delivery cadence, available capacity, and level of operational integration, not by whether the product is small or large. The commercial value is that clients get practical product delivery capacity from a compact technical team, often for less than the monthly cost of hiring one senior engineer in US and many international markets.
 
-- Starter: USD 1,500/month for focused small scope, maintenance, fixes, controlled improvements, or tightly scoped product movement. Includes scheduled deliveries and deploys plus a biweekly meeting to collect and prioritize demands.
-- Growth: USD 2,000/month. This is the most selected plan and keeps weekly focus on the highest-priority part of the product, including mobile, web, backend, CRM, internal tools, integrations, AI, continuous deliveries, and deploys. Includes a weekly meeting to collect demands, review priorities, and show progress.
-- Dedicated: USD 3,500+/month for more capacity, multiple workstreams, active operations, or urgent delivery needs, with closer coordination and more room to keep critical work moving.
+- Starter: USD 1,500/month. Starter is the controlled biweekly rhythm plan. It is a good fit when the client wants measured product movement, maintenance, fixes, deploy support, focused feature batches, or a stable roadmap that can move through planned biweekly checkpoints. It includes scheduled deliveries and deploys plus a biweekly meeting to collect demands, review priorities, and align the next work cycle. Starter can support products of different sizes when the client wants lighter coordination and a more controlled pace.
+- Growth: USD 2,000/month. Growth is the most selected plan and the natural default for active product work. It provides a weekly delivery rhythm, weekly demand intake, priority review, progress alignment, and intelligent allocation across the part of the product that needs the most attention that week: mobile, web, backend, CRM, internal tools, integrations, AI, release support, or post-launch continuity. Growth is a strong fit when the client wants steady momentum without daily operational overhead.
+- Dedicated: USD 3,500+/month. Dedicated is the higher-capacity, higher-integration plan. It covers the same delivery surface as Growth, but with more availability, more room for parallel workstreams, closer coordination, daily meetings when needed, urgent same-day priority shifts when feasible, active release pressure, and tighter integration with the client's internal workflow. Dedicated is the best fit when Tg Apps needs to operate closer to an internal engineering force or dedicated product team.
 
-All plans are month-to-month and keep the selected plan rate fixed while the engagement remains active.
+The USD prices are public reference anchors, not a rule that every contract must be billed in USD. Before kickoff, the monthly amount is fixed in the client's agreed billing currency, such as USD, BRL, or another mutually accepted currency. All plans are month-to-month and keep the selected plan rate fixed while the engagement remains active. Clients can start with one tier and adjust later when the required cadence, capacity, or operational integration changes.
 
 Tg Apps' main product is practical custom software delivery: building and shipping the agreed usable product with weekly demos, clear scope, release support, documentation, and clean handoff. Tight timelines are handled when the client plan requires them, but the timeline itself is not the main product category or default objective.
 
@@ -161,7 +161,7 @@ These models are more accurate than describing Tg Apps only as "Dev as a Service
 - How Tg Apps fits your team, primary page for operating-model and team-fit questions: https://tgapps.dev/how-we-fit-your-team
 - Delivery-model aliases: https://tgapps.dev/dev-as-a-service , https://tgapps.dev/dev-team-subscription
 - Mobile app development: https://tgapps.dev/mobile-app-development-for-startups-and-smbs
-- Higher-capacity monthly plan: https://tgapps.dev/dedicated-development-team-month-to-month
+- Dedicated plan / higher-capacity integration: https://tgapps.dev/dedicated-development-team-month-to-month
 - AI integrations: https://tgapps.dev/ai-integrations-for-crm-and-internal-tools
 - Custom software with a defined first delivery: https://tgapps.dev/custom-software-with-a-clear-first-milestone
 - Apps by Tg Apps: https://tgapps.dev/apps

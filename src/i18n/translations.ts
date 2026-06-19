@@ -184,7 +184,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Tg Apps helps founders and small startups build apps and backend systems from zero, finish stalled products, or work alongside internal teams through a clear first delivery and predictable month-to-month continuity.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
-        { label: 'Growth plan: USD 2,000/mo' },
+        { label: 'Growth reference: USD 2,000/mo' },
         { label: 'First Milestone Guarantee' },
         { label: 'No upfront payment to start' }
       ],
@@ -194,7 +194,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     socialProof: {
       heading: 'Built for products at different stages',
       description:
-        'Some clients start from zero. Others need a stalled product back on track. Others bring us in to own one critical area or work alongside their internal team. The common thread is accountable delivery.'
+        'Some clients start from zero. Others need a stalled product back on track. Others bring us in to own one critical area or work alongside their internal team. The common thread is accountable delivery with a lean model that avoids hiring full-time headcount too early.'
     },
     firstMilestone: {
       badge: 'Real first delivery',
@@ -512,7 +512,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'A Tg Apps ajuda fundadores e startups pequenas a construir apps e backends do zero, concluir produtos travados ou trabalhar junto do time interno com uma primeira entrega clara e continuidade mês a mês.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
-        { label: 'Growth US$ 2.000/mês' },
+        { label: 'Growth referência: US$ 2.000/mês' },
         { label: 'Garantia da Primeira Entrega' },
         { label: 'Sem pagamento antecipado para começar' }
       ],
@@ -522,7 +522,7 @@ export const translations: Record<Locale, TranslationSchema> = {
     socialProof: {
       heading: 'Entrega real em estágios diferentes do produto',
       description:
-        'Alguns clientes começam do zero. Outros precisam concluir o que travou. Outros trazem a Tg Apps para tocar uma frente crítica ou trabalhar junto do time. O ponto em comum é responsabilidade clara de entrega.'
+        'Alguns clientes começam do zero. Outros precisam concluir o que travou. Outros trazem a Tg Apps para tocar uma frente crítica ou trabalhar junto do time. O ponto em comum é responsabilidade clara de entrega, sem contratar uma equipe interna cedo demais.'
     },
     firstMilestone: {
       badge: 'Primeira entrega real',

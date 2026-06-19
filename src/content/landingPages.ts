@@ -97,26 +97,26 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
   label: 'Monthly software plans',
   title: 'Starter, Growth, and Dedicated plans for ongoing delivery',
   description:
-    'Choose the plan by operating rhythm, not by a different service list. These plans are designed for founders, startups, SMBs, and operators who want to keep building in parallel without carrying full-time headcount too early. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, closer coordination, participation in your daily meetings when requested, and urgent priorities at any time within the agreement.',
+    'Choose the plan by operating rhythm, not by a different service list. These plans are designed for founders, startups, SMBs, and operators who want to keep building in parallel without carrying full-time headcount too early. In many US and international markets, the model gives practical product delivery capacity for less than hiring one senior engineer. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, closer coordination, participation in your daily meetings when requested, and urgent priorities at any time within the agreement.',
   highlights: [
     'Starter: scheduled deliveries and deploys, plus a biweekly planning meeting.',
     'Growth: smart allocation across mobile, web, backend, CRM, and integrations, with one weekly planning/demo meeting to review progress and set priorities.',
     'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, participation in your daily meetings when requested, and urgent priority handling at any time within the agreement.'
   ],
-  note: 'Clear first milestone, month-to-month continuation, and a fixed plan rate while the engagement remains active.'
+  note: 'Clear first milestone, month-to-month continuation, and a fixed plan rate while the engagement remains active. USD prices are public references. The actual monthly amount is fixed before kickoff in the billing currency agreed with the client.'
 };
 
 const PT_CURRENT_PRICING: LandingPagePricing = {
   label: 'Planos mensais de software',
   title: 'Planos Starter, Growth e Dedicated para continuidade de entrega',
   description:
-    'Escolha o plano pelo ritmo operacional, não por uma lista diferente de serviços. Esses planos foram pensados para fundadores, startups, SMBs e operadores que querem continuar construindo em paralelo sem carregar headcount full-time cedo demais. Starter é quinzenal, Growth é o plano principal semanal, e Dedicated adiciona mais disponibilidade, acompanhamento próximo, dailies quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.',
+    'Escolha o plano pelo ritmo operacional, não por uma lista diferente de serviços. Esses planos foram pensados para fundadores, startups e operadores que querem continuar construindo em paralelo sem contratar uma equipe interna cedo demais. Em muitos mercados, o modelo entrega uma equipe compacta de produto por menos do que contratar um desenvolvedor sênior sozinho. Starter é quinzenal, Growth é o plano principal semanal, e Dedicated adiciona mais disponibilidade, acompanhamento próximo, dailies quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.',
   highlights: [
     'Starter: para entregas e deploys programados, com reunião quinzenal de planejamento.',
     'Growth: alocação inteligente entre mobile, web, backend, CRM e integrações, com uma reunião semanal para revisar progresso e definir prioridades.',
     'Dedicated: começa em US$ 3.500+/mês para as mesmas capacidades de entrega com maior disponibilidade, participação nas dailies do cliente quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.'
   ],
-  note: 'Primeira entrega clara, continuidade mês a mês e valor fixo enquanto o plano permanecer ativo.'
+  note: 'Primeira entrega clara, continuidade mês a mês e valor fixo enquanto o plano permanecer ativo. Os valores em US$ são referências públicas. O valor mensal real é fixado antes do início na moeda combinada com o cliente.'
 };
 
 const EN_CONTENT: LandingContentByLocale = {
