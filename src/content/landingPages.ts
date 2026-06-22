@@ -101,7 +101,8 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
   highlights: [
     'Starter: scheduled deliveries and deploys, plus a biweekly planning meeting.',
     'Growth: smart allocation across mobile, web, backend, CRM, and integrations, with one weekly planning/demo meeting to review progress and set priorities.',
-    'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, participation in your daily meetings when requested, and urgent priority handling at any time within the agreement.'
+    'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, participation in your daily meetings when requested, and urgent priority handling at any time within the agreement.',
+    'The plans are not fixed hour banks. Before kickoff, we align the first milestone, active workstreams, response rhythm, and what can realistically move inside the selected plan.'
   ],
   note: 'Clear first milestone, month-to-month continuation, and a fixed plan rate while the engagement remains active. USD prices are public references. The actual monthly amount is fixed before kickoff in the billing currency agreed with the client.'
 };
@@ -114,7 +115,8 @@ const PT_CURRENT_PRICING: LandingPagePricing = {
   highlights: [
     'Starter: para entregas e deploys programados, com reunião quinzenal de planejamento.',
     'Growth: alocação inteligente entre mobile, web, backend, CRM e integrações, com uma reunião semanal para revisar progresso e definir prioridades.',
-    'Dedicated: começa em US$ 3.500+/mês para as mesmas capacidades de entrega com maior disponibilidade, participação nas dailies do cliente quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.'
+    'Dedicated: começa em US$ 3.500+/mês para as mesmas capacidades de entrega com maior disponibilidade, participação nas dailies do cliente quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.',
+    'Os planos não são bancos fixos de horas. Antes do início, alinhamos a primeira entrega, as frentes ativas, o ritmo de resposta e o que é realista mover dentro do plano escolhido.'
   ],
   note: 'Primeira entrega clara, continuidade mês a mês e valor fixo enquanto o plano permanecer ativo. Os valores em US$ são referências públicas. O valor mensal real é fixado antes do início na moeda combinada com o cliente.'
 };

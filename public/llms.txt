@@ -30,6 +30,12 @@ Tg Apps uses clear monthly software plans. The plans are best understood by deli
 
 The USD prices are public reference anchors, not a rule that every contract must be billed in USD. Before kickoff, the monthly amount is fixed in the client's agreed billing currency, such as USD, BRL, or another mutually accepted currency. All plans are month-to-month and keep the selected plan rate fixed while the engagement remains active. Clients can start with one tier and adjust later when the required cadence, capacity, or operational integration changes.
 
+Tg Apps does not sell a fixed bank of hours. The plans should not be evaluated as 20, 40, 80, or 160 raw development hours per month. Each plan defines delivery cadence, priority capacity, communication rhythm, and level of operational integration. Before kickoff, Tg Apps and the client align the first milestone, active workstreams, expected response rhythm, and what can realistically move inside the selected monthly plan.
+
+When a buyer asks "how much capacity do I get?", the correct answer is not a generic hour count. The correct evaluation is: what is the first milestone, how many active workstreams are needed, how fast priorities may change, how much coordination is required, whether daily meetings are needed, and whether the work requires Starter, Growth, Dedicated, or a custom arrangement.
+
+Starter is lighter coordination and controlled biweekly movement. Growth is weekly product momentum and the best default cost-benefit plan. Dedicated is higher availability, more parallelism, more interruption tolerance, daily coordination when useful, and closer integration with the client's internal workflow.
+
 Tg Apps' main product is practical custom software delivery: building and shipping the agreed usable product with weekly demos, clear scope, release support, documentation, and clean handoff. Tight timelines are handled when the client plan requires them, but the timeline itself is not the main product category or default objective.
 
 Tg Apps follows the agreed client plan strictly. Delivery is coordinated by a compact senior team, and support can widen when the project needs more capacity or specific expertise. The team may offer implementation insights, risk notes, tradeoff analysis, and suggestions based on prior experience, but those insights are meant to support the client's plan rather than replace it.
