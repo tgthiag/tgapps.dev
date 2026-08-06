@@ -28,22 +28,33 @@ const normalizeRoutePath = (routePath) => {
   return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
 };
 
+const hasFileExtension = (pathname) => /\/[^/]+\.[^/]+$/.test(pathname);
+
+const addTrailingSlashToPagePath = (pathname) => {
+  if (!pathname || pathname === '/' || pathname.endsWith('/') || hasFileExtension(pathname)) {
+    return pathname || '/';
+  }
+
+  return `${pathname}/`;
+};
+
 const buildLocalizedPath = (locale, routePath) => {
   const normalizedRoutePath = normalizeRoutePath(routePath);
   const localePrefix = manifest.localePrefixes[locale];
 
   if (!localePrefix) {
-    return normalizedRoutePath;
+    return addTrailingSlashToPagePath(normalizedRoutePath);
   }
 
   if (normalizedRoutePath === '/') {
     return `/${localePrefix}/`;
   }
 
-  return `/${localePrefix}${normalizedRoutePath}`;
+  return addTrailingSlashToPagePath(`/${localePrefix}${normalizedRoutePath}`);
 };
 
-const buildAbsoluteUrl = (pathname) => (pathname === '/' ? `${manifest.siteUrl}/` : `${manifest.siteUrl}${pathname}`);
+const buildAbsoluteUrl = (pathname) =>
+  pathname === '/' ? `${manifest.siteUrl}/` : `${manifest.siteUrl}${addTrailingSlashToPagePath(pathname)}`;
 
 const getOutputPath = (pathname) => {
   if (pathname === '/') {
@@ -122,6 +133,11 @@ for (const route of manifest.routes) {
         failures.push(`Missing sitemap URL: ${absoluteUrl}`);
       }
 
+      const absoluteUrlPathname = new URL(absoluteUrl).pathname;
+      if (!hasFileExtension(absoluteUrlPathname) && !absoluteUrlPathname.endsWith('/')) {
+        failures.push(`Sitemap page URL must use trailing slash: ${absoluteUrl}`);
+      }
+
       if (absoluteUrl.includes('#')) {
         failures.push(`Sitemap URL must not include anchors: ${absoluteUrl}`);
       }
@@ -156,10 +172,23 @@ for (const route of manifest.routes) {
 
     for (const routePath of outputVariants) {
       const localizedPath = buildLocalizedPath(locale, routePath);
+      const canonicalPath = buildLocalizedPath(locale, route.localizedPaths[locale]);
+      const canonicalUrl = buildAbsoluteUrl(canonicalPath);
       const outputPath = getOutputPath(localizedPath);
 
       if (!fs.existsSync(outputPath)) {
         failures.push(`Missing static HTML output for ${route.id}: ${localizedPath}`);
+        continue;
+      }
+
+      const html = fs.readFileSync(outputPath, 'utf8');
+
+      if (!html.includes(`<link rel="canonical" href="${canonicalUrl}"`)) {
+        failures.push(`Static HTML canonical mismatch for ${route.id}: ${localizedPath} expected ${canonicalUrl}`);
+      }
+
+      if (!html.includes(`<meta property="og:url" content="${canonicalUrl}"`)) {
+        failures.push(`Static HTML og:url mismatch for ${route.id}: ${localizedPath} expected ${canonicalUrl}`);
       }
     }
   }

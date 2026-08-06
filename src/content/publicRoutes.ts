@@ -54,6 +54,16 @@ export const normalizeRoutePath = (routePath: string): string => {
   return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
 };
 
+const hasFileExtension = (pathname: string): boolean => /\/[^/]+\.[^/]+$/.test(pathname);
+
+export const addTrailingSlashToPagePath = (pathname: string): string => {
+  if (!pathname || pathname === '/' || pathname.endsWith('/') || hasFileExtension(pathname)) {
+    return pathname || '/';
+  }
+
+  return `${pathname}/`;
+};
+
 export const splitLocaleAndRoute = (pathname: string): { locale: Locale; routePath: string } => {
   const normalizedPath = normalizeRoutePath(pathname);
   const segments = normalizedPath.split('/').filter(Boolean);
@@ -80,21 +90,21 @@ export const buildLocalizedPath = (locale: Locale, routePath: string): string =>
   const localePrefix = LOCALE_PREFIXES[locale];
 
   if (!localePrefix) {
-    return normalizedRoutePath;
+    return addTrailingSlashToPagePath(normalizedRoutePath);
   }
 
   if (normalizedRoutePath === '/') {
     return `/${localePrefix}/`;
   }
 
-  return `/${localePrefix}${normalizedRoutePath}`;
+  return addTrailingSlashToPagePath(`/${localePrefix}${normalizedRoutePath}`);
 };
 
 export const buildAbsoluteUrl = (path: string): string => {
   if (path === '/') {
     return `${SITE_URL}/`;
   }
-  return `${SITE_URL}${path}`;
+  return `${SITE_URL}${addTrailingSlashToPagePath(path)}`;
 };
 
 export const getPublicRouteById = (routeId: string): PublicRoute | undefined =>

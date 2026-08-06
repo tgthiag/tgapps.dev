@@ -60,19 +60,29 @@ const normalizeRoutePath = (routePath) => {
   return trimmed.startsWith('/') ? trimmed : `/${trimmed}`;
 };
 
+const hasFileExtension = (pathname) => /\/[^/]+\.[^/]+$/.test(pathname);
+
+const addTrailingSlashToPagePath = (pathname) => {
+  if (!pathname || pathname === '/' || pathname.endsWith('/') || hasFileExtension(pathname)) {
+    return pathname || '/';
+  }
+
+  return `${pathname}/`;
+};
+
 const buildLocalizedPath = (locale, routePath) => {
   const normalizedRoutePath = normalizeRoutePath(routePath);
   const localePrefix = localePrefixes[locale];
 
   if (!localePrefix) {
-    return normalizedRoutePath;
+    return addTrailingSlashToPagePath(normalizedRoutePath);
   }
 
   if (normalizedRoutePath === '/') {
     return `/${localePrefix}/`;
   }
 
-  return `/${localePrefix}${normalizedRoutePath}`;
+  return addTrailingSlashToPagePath(`/${localePrefix}${normalizedRoutePath}`);
 };
 
 const buildAbsoluteUrl = (pathname) => {
@@ -80,7 +90,7 @@ const buildAbsoluteUrl = (pathname) => {
     return `${siteUrl}/`;
   }
 
-  return `${siteUrl}${pathname}`;
+  return `${siteUrl}${addTrailingSlashToPagePath(pathname)}`;
 };
 
 const getOutputPath = (pathname) => {
