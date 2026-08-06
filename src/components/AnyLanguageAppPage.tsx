@@ -1,6 +1,7 @@
 import { ArrowUpRight, ChevronLeft, Languages, Mic, PhoneCall, Sparkles } from 'lucide-react';
 import type { Locale } from '../i18n/translations';
 import { anyLanguagePageContent, anyLanguageStoreLinks } from '../content/apps';
+import { trackAppStoreClick, trackCtaClick, trackNavigationClick } from '../utils/analytics';
 
 interface AnyLanguageAppPageProps {
   locale: Locale;
@@ -14,11 +15,19 @@ const AnyLanguageAppPage = ({ locale }: AnyLanguageAppPageProps) => {
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.22),_transparent_18%),linear-gradient(180deg,#081a39_0%,#0a2f6f_40%,#edf5ff_100%)] text-white">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <header className="mb-10 flex flex-wrap items-center justify-between gap-4">
-          <a href={appsHref} className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/10 px-4 py-2 text-sm text-white/90 hover:bg-white/15">
+          <a
+            href={appsHref}
+            onClick={() => trackNavigationClick('anylanguage_header', content.backLabel, appsHref)}
+            className="inline-flex items-center gap-2 rounded-full border border-white/12 bg-white/10 px-4 py-2 text-sm text-white/90 hover:bg-white/15"
+          >
             <ChevronLeft className="h-4 w-4" />
             {content.backLabel}
           </a>
-          <a href={locale === 'pt' ? '/pt-br/' : '/'} className="inline-flex items-center gap-3 text-sm text-white/85 hover:text-white">
+          <a
+            href={locale === 'pt' ? '/pt-br/' : '/'}
+            onClick={() => trackNavigationClick('anylanguage_header', 'Tg Apps', locale === 'pt' ? '/pt-br/' : '/')}
+            className="inline-flex items-center gap-3 text-sm text-white/85 hover:text-white"
+          >
             <img
               src="/logo.png"
               alt="Tg Apps"
@@ -56,6 +65,7 @@ const AnyLanguageAppPage = ({ locale }: AnyLanguageAppPageProps) => {
                 href={anyLanguageStoreLinks.playStore}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackAppStoreClick('anylanguage_hero', 'google_play', anyLanguageStoreLinks.playStore, { language: locale })}
                 className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-transform duration-200 hover:-translate-y-0.5"
               >
                 {content.primaryCta}
@@ -65,6 +75,7 @@ const AnyLanguageAppPage = ({ locale }: AnyLanguageAppPageProps) => {
                 href={anyLanguageStoreLinks.appStore}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackAppStoreClick('anylanguage_hero', 'app_store', anyLanguageStoreLinks.appStore, { language: locale })}
                 className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/15"
               >
                 {content.secondaryCta}
@@ -153,6 +164,10 @@ const AnyLanguageAppPage = ({ locale }: AnyLanguageAppPageProps) => {
           <div className="mt-7">
             <a
               href={locale === 'pt' ? '/pt-br/#contato' : '/#contato'}
+              onClick={() => trackCtaClick('anylanguage_final_cta', 'Tg Apps', {
+                destination: locale === 'pt' ? '/pt-br/#contato' : '/#contato',
+                language: locale
+              })}
               className="inline-flex items-center gap-2 rounded-full bg-white px-6 py-3 text-sm font-semibold text-slate-950 transition-transform duration-200 hover:-translate-y-0.5"
             >
               Tg Apps

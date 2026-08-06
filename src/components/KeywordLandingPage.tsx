@@ -4,7 +4,7 @@ import type { Locale } from '../i18n/translations';
 import type { LandingPageContent } from '../content/landingPages';
 import Header from './Header';
 import Footer from './Footer';
-import { trackLeadContact } from '../utils/analytics';
+import { trackContactOptionsOpen, trackCtaClick, trackLeadContact } from '../utils/analytics';
 
 interface KeywordLandingPageProps {
   locale: Locale;
@@ -83,10 +83,21 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
       : isTrustPage
         ? 'Choose WhatsApp for a quick conversation or email to send verification questions.'
         : 'Choose WhatsApp for a quick conversation or email to send context, scope, and integrations.';
-  const openContactOptions = () => setIsContactOptionsOpen(true);
+  const openContactOptions = (source = 'landing_contact_options') => {
+    trackContactOptionsOpen(source, {
+      is_trust_page: isTrustPage,
+      landing_key: content.key,
+      language: locale
+    });
+    setIsContactOptionsOpen(true);
+  };
   const closeContactOptions = () => setIsContactOptionsOpen(false);
   const trackContactChoice = (method: 'whatsapp' | 'email') => {
-    trackLeadContact(method, `landing_${content.key}`);
+    trackLeadContact(method, `landing_${content.key}`, {
+      is_trust_page: isTrustPage,
+      landing_key: content.key,
+      language: locale
+    });
     closeContactOptions();
   };
   const faqStructuredData = content.faq
@@ -106,7 +117,12 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
 
   return (
     <div className="min-h-screen bg-slate-50 text-slate-950">
-      <Header variant="landing" ctaHref={ctaHref} ctaLabel={content.ctaLabel} onCtaClick={openContactOptions} />
+      <Header
+        variant="landing"
+        ctaHref={ctaHref}
+        ctaLabel={content.ctaLabel}
+        onCtaClick={() => openContactOptions('landing_header_cta')}
+      />
 
       <main>
         <section className="relative min-h-[82vh] overflow-hidden bg-slate-950 pt-28 text-white">
@@ -138,7 +154,14 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
             <div className="mt-8 flex flex-wrap items-center gap-4">
               <button
                 type="button"
-                onClick={openContactOptions}
+                onClick={() => {
+                  trackCtaClick('landing_hero_cta', content.ctaLabel, {
+                    destination: 'contact_options',
+                    landing_key: content.key,
+                    language: locale
+                  });
+                  openContactOptions('landing_hero_cta');
+                }}
                 className="inline-flex items-center gap-2 rounded-full bg-blue-500 px-7 py-3 text-base font-semibold text-white transition-colors hover:bg-blue-400"
               >
                 {content.ctaLabel}
@@ -300,7 +323,14 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
             )}
             <button
               type="button"
-              onClick={openContactOptions}
+              onClick={() => {
+                trackCtaClick('landing_final_cta', content.ctaLabel, {
+                  destination: 'contact_options',
+                  landing_key: content.key,
+                  language: locale
+                });
+                openContactOptions('landing_final_cta');
+              }}
               className="mt-8 inline-flex items-center gap-2 rounded-full bg-white px-7 py-3 text-base font-semibold text-slate-950 transition-colors hover:bg-slate-100"
             >
               {content.ctaLabel}
@@ -379,7 +409,12 @@ const KeywordLandingPage = ({ locale, content }: KeywordLandingPageProps) => {
         />
       )}
 
-      <Footer variant="landing" ctaHref={ctaHref} ctaLabel={content.ctaLabel} onCtaClick={openContactOptions} />
+      <Footer
+        variant="landing"
+        ctaHref={ctaHref}
+        ctaLabel={content.ctaLabel}
+        onCtaClick={() => openContactOptions('landing_footer_cta')}
+      />
     </div>
   );
 };

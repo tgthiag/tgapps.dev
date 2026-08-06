@@ -2,6 +2,7 @@ import { ArrowRight, Award, Play, ShieldCheck, Star, Users, Zap } from 'lucide-r
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
 import { buildLocalizedPath } from '../content/publicRoutes';
+import { trackCtaClick } from '../utils/analytics';
 
 const Hero = () => {
   const { language } = useLanguage();
@@ -66,7 +67,13 @@ const Hero = () => {
 
           <div className="flex flex-col sm:flex-row items-center gap-4">
             <button
-              onClick={() => scrollToSection('contato')}
+              onClick={() => {
+                trackCtaClick('hero_primary', t.hero.primaryCta, {
+                  destination: '#contato',
+                  language
+                });
+                scrollToSection('contato');
+              }}
               className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center space-x-2"
             >
               <span>{t.hero.primaryCta}</span>
@@ -75,6 +82,10 @@ const Hero = () => {
 
             <button
               onClick={() => {
+                trackCtaClick('hero_secondary', t.hero.secondaryCta, {
+                  destination: howWeFitHref,
+                  language
+                });
                 window.location.href = howWeFitHref;
               }}
               className="group bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center space-x-2"

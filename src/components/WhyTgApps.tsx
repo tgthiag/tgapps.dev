@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle, FileCheck, Handshake, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
+import { trackNavigationClick } from '../utils/analytics';
 
 const contentByLocale = {
   en: {
@@ -121,6 +122,7 @@ const WhyTgApps = () => {
             <a
               key={link.hrefKey}
               href={slugs[link.hrefKey]}
+              onClick={() => trackNavigationClick('why_tg_apps_links', link.label, slugs[link.hrefKey])}
               className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-5 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/15"
             >
               {link.label}

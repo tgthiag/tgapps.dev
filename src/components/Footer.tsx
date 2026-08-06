@@ -3,7 +3,7 @@ import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
 import type { LandingPageKey } from '../content/landingPages';
 import { buildLocalizedPath } from '../content/publicRoutes';
-import { trackLeadContact } from '../utils/analytics';
+import { trackCtaClick, trackExternalLinkClick, trackLeadContact, trackNavigationClick } from '../utils/analytics';
 
 interface FooterProps {
   variant?: 'home' | 'landing';
@@ -81,6 +81,14 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
     }
   ];
 
+  const trackFooterCta = () => {
+    trackCtaClick('footer_cta', resolvedCtaLabel, {
+      destination: ctaHref ?? '#contato',
+      language,
+      surface: variant
+    });
+  };
+
   return (
     <footer className="bg-gray-900 text-white">
       {/* Main Footer */}
@@ -103,6 +111,14 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                   href={link.href}
                   target={link.href.startsWith('http') ? '_blank' : undefined}
                   rel={link.href.startsWith('http') ? 'noreferrer' : undefined}
+                  onClick={() => {
+                    if (link.href.startsWith('http')) {
+                      trackExternalLinkClick('footer_trust', link.label, link.href);
+                      return;
+                    }
+
+                    trackNavigationClick('footer_trust', link.label, link.href);
+                  }}
                   className="block text-sm text-gray-400 transition-colors hover:text-white"
                 >
                   {link.label}
@@ -121,13 +137,17 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                     {isLanding ? (
                       <a
                         href={`${homeHref}#${link.id}`}
+                        onClick={() => trackNavigationClick('footer_nav', link.label, `${homeHref}#${link.id}`)}
                         className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <button
-                        onClick={() => scrollToSection(link.id)}
+                        onClick={() => {
+                          trackNavigationClick('footer_nav', link.label, `#${link.id}`);
+                          scrollToSection(link.id);
+                        }}
                         className="text-gray-400 hover:text-white transition-colors cursor-pointer"
                       >
                         {link.label}
@@ -148,6 +168,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                   <li key={service.label}>
                     <a
                       href={service.href}
+                      onClick={() => trackNavigationClick('footer_services', service.label, service.href)}
                       className="text-gray-400 hover:text-white transition-colors"
                     >
                       {service.label}
@@ -167,7 +188,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                   <Mail className="w-5 h-5 text-blue-400 flex-shrink-0" />
                   <a
                     href={`mailto:${contactInfo.emailLabel}`}
-                    onClick={() => trackLeadContact('email', 'footer_email')}
+                    onClick={() => trackLeadContact('email', 'footer_email', { language })}
                     className="text-gray-400 hover:text-white transition-colors"
                   >
                     {contactInfo.emailLabel}
@@ -175,7 +196,11 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-green-400 flex-shrink-0" />
-                  <a href={`tel:${contactInfo.phoneLabel}`} className="text-gray-400 hover:text-white transition-colors">
+                  <a
+                    href={`tel:${contactInfo.phoneLabel}`}
+                    onClick={() => trackLeadContact('phone', 'footer_phone', { language })}
+                    className="text-gray-400 hover:text-white transition-colors"
+                  >
                     {contactInfo.phoneLabel}
                   </a>
                 </div>
@@ -190,7 +215,10 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                 {isLanding && onCtaClick ? (
                   <button
                     type="button"
-                    onClick={onCtaClick}
+                    onClick={() => {
+                      trackFooterCta();
+                      onCtaClick();
+                    }}
                     className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     {resolvedCtaLabel}
@@ -198,13 +226,17 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                 ) : isLanding ? (
                   <a
                     href={ctaHref ?? `${homeHref}#contato`}
+                    onClick={trackFooterCta}
                     className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     {resolvedCtaLabel}
                   </a>
                 ) : (
                   <button
-                    onClick={() => scrollToSection('contato')}
+                    onClick={() => {
+                      trackFooterCta();
+                      scrollToSection('contato');
+                    }}
                     className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
                   >
                     {resolvedCtaLabel}

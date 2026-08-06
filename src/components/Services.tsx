@@ -1,6 +1,7 @@
 import { Smartphone, Cpu, Cable, ArrowRight, Zap, Globe2 } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
+import { trackCtaClick } from '../utils/analytics';
 
 const Services = () => {
   const { language } = useLanguage();
@@ -125,14 +126,29 @@ const Services = () => {
                 </ul>
 
                 {landingHref ? (
-                  <a href={landingHref} className='group/btn inline-flex items-center font-semibold text-blue-600'>
+                  <a
+                    href={landingHref}
+                    onClick={() => trackCtaClick('services_card', service.cta, {
+                      destination: landingHref,
+                      language,
+                      service_title: service.title
+                    })}
+                    className='group/btn inline-flex items-center font-semibold text-blue-600'
+                  >
                     <span>{service.cta}</span>
                     <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1' />
                   </a>
                 ) : (
                   <button
                     type='button'
-                    onClick={() => scrollToSection('contato')}
+                    onClick={() => {
+                      trackCtaClick('services_contact_cta', service.cta, {
+                        destination: '#contato',
+                        language,
+                        service_title: service.title
+                      });
+                      scrollToSection('contato');
+                    }}
                     className='group/btn inline-flex items-center font-semibold text-blue-600'
                   >
                     <span>{service.cta}</span>

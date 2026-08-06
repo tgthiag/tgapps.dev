@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Menu, X, Check } from 'lucide-react';
 import type { Locale } from '../i18n/translations';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
+import { trackCtaClick, trackLanguageSwitch, trackNavigationClick } from '../utils/analytics';
 
 interface HeaderProps {
   variant?: 'home' | 'landing';
@@ -34,12 +35,41 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
     return () => window.removeEventListener('scroll', handleScroll);
   }, [isLanding]);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId: string, source?: string, label?: string) => {
+    if (source && label) {
+      trackNavigationClick(source, label, `#${sectionId}`);
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
       setIsMenuOpen(false);
     }
+  };
+
+  const handleLanguageClick = (nextLanguage: Locale) => {
+    trackLanguageSwitch(language, nextLanguage, `header_${variant}`);
+    setLanguage(nextLanguage);
+  };
+
+  const trackHeaderCta = (source: string) => {
+    trackCtaClick(source, resolvedCtaLabel, {
+      destination: ctaHref ?? `#${t.header.contactId}`,
+      language,
+      surface: variant
+    });
+  };
+
+  const handleHeaderCta = (source: string) => {
+    trackHeaderCta(source);
+
+    if (onCtaClick) {
+      onCtaClick();
+      setIsMenuOpen(false);
+      return;
+    }
+
+    scrollToSection(t.header.contactId);
   };
 
   const languageOptions: { code: Locale; flag: string; label: string }[] = [
@@ -61,7 +91,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
         <button
           key={option.code}
           type="button"
-          onClick={() => setLanguage(option.code)}
+          onClick={() => handleLanguageClick(option.code)}
           className={`relative flex h-8 w-8 items-center justify-center rounded-full text-lg transition-colors ${
             language === option.code
               ? 'bg-white shadow-md'
@@ -108,7 +138,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
               t.header.navItems.map((item) => (
                 <button
                   key={item.id}
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={() => scrollToSection(item.id, 'header_desktop_nav', item.label)}
                   className={`text-sm font-medium transition-colors hover:text-blue-500 ${
                     isSolid ? 'text-gray-700' : 'text-white/90'
                   }`}
@@ -119,6 +149,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
             {!isLanding && (
               <a
                 href={appsHref}
+                onClick={() => trackNavigationClick('header_desktop_nav', 'Apps', appsHref)}
                 className={`text-sm font-medium transition-colors hover:text-blue-500 ${
                   isSolid ? 'text-gray-700' : 'text-white/90'
                 }`}
@@ -127,7 +158,11 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
               </a>
             )}
             {isLanding && (
-              <a href={homeHref} className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-500">
+              <a
+                href={homeHref}
+                onClick={() => trackNavigationClick('header_desktop_nav', language === 'pt' ? 'Site principal' : 'Main site', homeHref)}
+                className="text-sm font-medium text-gray-700 transition-colors hover:text-blue-500"
+              >
                 {language === 'pt' ? 'Site principal' : 'Main site'}
               </a>
             )}
@@ -135,7 +170,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
             {isLanding && onCtaClick ? (
               <button
                 type="button"
-                onClick={onCtaClick}
+                onClick={() => handleHeaderCta('header_desktop_cta')}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 {resolvedCtaLabel}
@@ -143,13 +178,14 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
             ) : isLanding && ctaHref ? (
               <a
                 href={ctaHref}
+                onClick={() => trackHeaderCta('header_desktop_cta')}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 {resolvedCtaLabel}
               </a>
             ) : (
               <button
-                onClick={() => scrollToSection(t.header.contactId)}
+                onClick={() => handleHeaderCta('header_desktop_cta')}
                 className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
               >
                 {resolvedCtaLabel}
@@ -175,6 +211,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
               {isLanding ? (
                 <a
                   href={homeHref}
+                  onClick={() => trackNavigationClick('header_mobile_nav', language === 'pt' ? 'Site principal' : 'Main site', homeHref)}
                   className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
                 >
                   {language === 'pt' ? 'Site principal' : 'Main site'}
@@ -184,7 +221,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
                   {t.header.navItems.map((item) => (
                     <button
                       key={item.id}
-                      onClick={() => scrollToSection(item.id)}
+                      onClick={() => scrollToSection(item.id, 'header_mobile_nav', item.label)}
                       className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
                     >
                       {item.label}
@@ -192,6 +229,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
                   ))}
                   <a
                     href={appsHref}
+                    onClick={() => trackNavigationClick('header_mobile_nav', 'Apps', appsHref)}
                     className="block w-full text-left text-gray-700 font-medium py-2 hover:text-blue-500 transition-colors"
                   >
                     Apps
@@ -203,8 +241,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
                 <button
                   type="button"
                   onClick={() => {
-                    onCtaClick();
-                    setIsMenuOpen(false);
+                    handleHeaderCta('header_mobile_cta');
                   }}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
                 >
@@ -213,13 +250,14 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
               ) : isLanding && ctaHref ? (
                 <a
                   href={ctaHref}
+                  onClick={() => trackHeaderCta('header_mobile_cta')}
                   className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium text-center hover:shadow-lg transition-all duration-300"
                 >
                   {resolvedCtaLabel}
                 </a>
               ) : (
                 <button
-                  onClick={() => scrollToSection(t.header.contactId)}
+                  onClick={() => handleHeaderCta('header_mobile_cta')}
                   className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
                 >
                   {resolvedCtaLabel}

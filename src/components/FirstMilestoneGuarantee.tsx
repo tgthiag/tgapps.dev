@@ -1,6 +1,7 @@
 import { ArrowRight, CheckCircle, Clock3, ShieldCheck } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
+import { trackCtaClick } from '../utils/analytics';
 
 const icons = [ShieldCheck, Clock3, CheckCircle];
 
@@ -26,6 +27,10 @@ const FirstMilestoneGuarantee = () => {
               <p className="mt-3 max-w-2xl text-sm leading-6 text-slate-600">{t.firstMilestone.description}</p>
               <a
                 href={href}
+                onClick={() => trackCtaClick('first_milestone_details', language === 'pt' ? 'Ver detalhes da garantia' : 'See guarantee details', {
+                  destination: href,
+                  language
+                })}
                 className="mt-4 inline-flex items-center gap-2 text-sm font-semibold text-blue-700 transition-colors hover:text-blue-900"
               >
                 <span>{language === 'pt' ? 'Ver detalhes da garantia' : 'See guarantee details'}</span>

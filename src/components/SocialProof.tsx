@@ -1,5 +1,6 @@
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { trustedCompanies } from '../content/trustedCompanies';
+import { trackExternalLinkClick } from '../utils/analytics';
 
 const SocialProof = () => {
   const { language } = useLanguage();
@@ -25,6 +26,7 @@ const SocialProof = () => {
                 href={company.url}
                 target="_blank"
                 rel="noreferrer"
+                onClick={() => trackExternalLinkClick('social_proof_logo', company.name, company.url)}
                 aria-label={company.name}
                 title={company.name}
                 className="flex h-16 items-center justify-center opacity-80 transition duration-200 hover:opacity-100"

@@ -1,5 +1,6 @@
 import { ArrowRight, CheckCircle, Sparkles } from 'lucide-react';
 import { useLanguage } from '../context/LanguageContext';
+import { trackCtaClick, trackPricingPlanClick } from '../utils/analytics';
 
 type Plan = {
   name: string;
@@ -146,7 +147,17 @@ const PricingPlans = () => {
   const copy = copyByLocale[language];
   const plans = plansByLocale[language];
 
-  const scrollToContact = () => {
+  const scrollToContact = (plan: Plan) => {
+    trackPricingPlanClick(plan.name, 'pricing_section', {
+      plan_price: plan.price,
+      language
+    });
+    trackCtaClick('pricing_plan_cta', plan.cta, {
+      destination: '#contato',
+      language,
+      plan_name: plan.name,
+      plan_price: plan.price
+    });
     document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   };
 
@@ -217,7 +228,7 @@ const PricingPlans = () => {
 
                 <button
                   type="button"
-                  onClick={scrollToContact}
+                  onClick={() => scrollToContact(plan)}
                   className={`mt-8 inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-bold transition ${
                     isFeatured
                       ? 'bg-slate-950 text-white hover:bg-slate-800'
