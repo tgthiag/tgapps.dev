@@ -39,5 +39,12 @@ export const trustedCompanies: TrustedCompany[] = [
     siteLabel: 'mathex.com.br',
     url: 'https://mathex.com.br/',
     logoSrc: '/company-logos/mathex.svg'
+  },
+  {
+    name: 'Heal The World Global',
+    siteLabel: 'htwglobal.org/impactivate',
+    url: 'https://www.htwglobal.org/impactivate',
+    logoSrc: '/company-logos/heal-the-world-global.png',
+    logoClassName: 'max-h-11'
   }
 ];

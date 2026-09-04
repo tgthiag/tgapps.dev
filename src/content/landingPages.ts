@@ -95,13 +95,13 @@ const getLandingSlug = (locale: Locale, key: LandingPageKey): string => {
 
 const EN_CURRENT_PRICING: LandingPagePricing = {
   label: 'Monthly software plans',
-  title: 'Starter, Growth, and Dedicated plans for ongoing delivery',
+  title: 'Starter, Growth, and Embedded plans for ongoing delivery',
   description:
-    'Choose the plan by operating rhythm, not by a different service list. These plans are designed for founders, startups, SMBs, and operators who want to keep building in parallel without carrying full-time headcount too early. In many US and international markets, the model gives practical product delivery capacity for less than hiring one senior engineer. Starter is biweekly, Growth is the main weekly plan, and Dedicated adds higher availability, closer coordination, participation in your daily meetings when requested, and urgent priorities at any time within the agreement.',
+    'Choose the plan by delivery cadence, active workstreams, coordination needs, and tolerance for priority changes. Starter is biweekly, Growth is the main weekly plan, and Embedded adds more parallel capacity and closer integration with your team.',
   highlights: [
     'Starter: scheduled deliveries and deploys, plus a biweekly planning meeting.',
     'Growth: smart allocation across mobile, web, backend, CRM, and integrations, with one weekly planning/demo meeting to review progress and set priorities.',
-    'Dedicated: starts at USD 3,500+/mo for the same delivery capabilities with higher availability, participation in your daily meetings when requested, and urgent priority handling at any time within the agreement.',
+    'Embedded: starts at USD 3,500+/mo with more parallel delivery capacity, daily coordination when needed, and same-day reprioritization when feasible.',
     'The plans are not fixed hour banks. Before kickoff, we align the first milestone, active workstreams, response rhythm, and what can realistically move inside the selected plan.'
   ],
   note: 'Clear first milestone, month-to-month continuation, and a fixed plan rate while the engagement remains active. USD prices are public references. The actual monthly amount is fixed before kickoff in the billing currency agreed with the client.'
@@ -109,14 +109,14 @@ const EN_CURRENT_PRICING: LandingPagePricing = {
 
 const PT_CURRENT_PRICING: LandingPagePricing = {
   label: 'Planos mensais de software',
-  title: 'Planos Starter, Growth e Dedicated para continuidade de entrega',
+  title: 'Planos Starter, Growth e Embedded para continuidade de entrega',
   description:
-    'Escolha o plano pelo ritmo operacional, não por uma lista diferente de serviços. Esses planos foram pensados para fundadores, startups e operadores que querem continuar construindo em paralelo sem contratar uma equipe interna cedo demais. Em muitos mercados, o modelo entrega uma equipe compacta de produto por menos do que contratar um desenvolvedor sênior sozinho. Starter é quinzenal, Growth é o plano principal semanal, e Dedicated adiciona mais disponibilidade, acompanhamento próximo, dailies quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.',
+    'Escolha o plano pelo ritmo de entrega, pela quantidade de trabalhos que precisam avançar ao mesmo tempo e pelo nível de integração com a sua equipe. Starter trabalha em ciclos quinzenais, Growth em ciclos semanais e Embedded amplia a atuação em paralelo.',
   highlights: [
-    'Starter: para entregas e deploys programados, com reunião quinzenal de planejamento.',
-    'Growth: alocação inteligente entre mobile, web, backend, CRM e integrações, com uma reunião semanal para revisar progresso e definir prioridades.',
-    'Dedicated: começa em US$ 3.500+/mês para as mesmas capacidades de entrega com maior disponibilidade, participação nas dailies do cliente quando solicitado e prioridades urgentes a qualquer hora dentro do acordo.',
-    'Os planos não são bancos fixos de horas. Antes do início, alinhamos a primeira entrega, as frentes ativas, o ritmo de resposta e o que é realista mover dentro do plano escolhido.'
+    'Starter: entregas e publicações programadas, com planejamento quinzenal.',
+    'Growth: o time atua onde o produto mais precisa avançar, com planejamento e demonstração toda semana.',
+    'Embedded: começa em US$ 3.500+/mês, permite mais trabalhos em paralelo e inclui coordenação diária quando necessária.',
+    'Os planos não são pacotes fixos de horas. Antes do início, combinamos a primeira entrega, os trabalhos em andamento, o tempo de resposta esperado e o que cabe no plano escolhido.'
   ],
   note: 'Primeira entrega clara, continuidade mês a mês e valor fixo enquanto o plano permanecer ativo. Os valores em US$ são referências públicas. O valor mensal real é fixado antes do início na moeda combinada com o cliente.'
 };
@@ -271,7 +271,8 @@ const EN_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Beautylove is a full-ownership example: build, launch, and ongoing product continuity.',
       'DocVita is a full-build-first, co-delivery-later example after deployment.',
-      'DB Cleaning, IT.up, Mathex, and Smiles show how Tg Apps can own one critical area or work inside a broader team structure.'
+      'DB Cleaning, IT.up, Mathex, and Smiles show how Tg Apps can own a full product, lead one critical area, or work inside a broader team structure.',
+      'For Impactivate, Tg Apps leads the technical work and develops the mobile app and backend for Heal The World Global.'
     ],
     deliverablesHeading: 'Ways Tg Apps can plug into the work',
     deliverables: [
@@ -312,6 +313,7 @@ const EN_CONTENT: LandingContentByLocale = {
           'This works when the company wants continuity and extra delivery strength without replacing the internal team or another trusted partner.',
         items: [
           'DocVita is a good example: Tg Apps built the product to production and then continued alongside another team after deployment.',
+          'Impactivate is an active engagement: Tg Apps leads the technical work and develops the mobile app and backend for Heal The World Global.',
           'Mathex and Smiles are a good example of lower-ownership embedded support inside a broader enterprise squad.',
           'The goal is to make the model fit the product reality, not to force the product to fit a commercial package.'
         ]
@@ -1028,7 +1030,7 @@ const EN_CONTENT: LandingContentByLocale = {
       'Tg Apps gives founders, startups, and SMB teams a long-term delivery model for apps, CRM, internal tools, backend systems, AI integrations, and release support, with one accountable loop carrying the cadence month after month through the engagement model that best fits the company.',
     heroHighlights: [
       'Founder-led delivery with a compact senior team and direct communication whenever needed.',
-      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
+      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Embedded starts at USD 3,500+/mo.',
       'First Milestone Guarantee, monthly continuity, and one team across product, backend, frontend, mobile, AI, and release, whether acting as full owner, embedded support, or co-delivery.'
     ],
     ctaLabel: 'Schedule a discovery call',
@@ -1106,7 +1108,7 @@ const EN_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Monthly software delivery with steadier execution',
     proofHeading: 'How this model works',
     proofItems: [
-      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Dedicated starts at USD 3,500+/mo.',
+      'Starter starts at USD 1,500/mo, Growth is USD 2,000/mo, and Embedded starts at USD 3,500+/mo.',
       'Cancel any month with no penalties or hidden transition fees.',
       'Monthly billing, visible scope, and runbooks plus handoff docs delivered continuously.'
     ],
@@ -1241,7 +1243,7 @@ const EN_CONTENT: LandingContentByLocale = {
         description:
           'A successful first milestone becomes the basis for a normal monthly engagement.',
         items: [
-          'Continue with Starter, Growth, Dedicated, or a custom monthly plan.',
+          'Continue with Starter, Growth, Embedded, or a custom monthly plan.',
           'Keep weekly demos, decision notes, release support, and documentation as the work continues.',
           'Pause, stop, or hand off according to the agreement when the engagement no longer makes sense.'
         ]
@@ -1467,7 +1469,7 @@ const PT_CONTENT: LandingContentByLocale = {
     key: 'whyTgApps',
     slug: getLandingSlug('pt', 'whyTgApps'),
     badge: 'Por que Tg Apps',
-    title: 'Entrega mobile-first flexível com accountability mais clara',
+    title: 'Entrega flexível de produto com responsabilidade clara',
     intro:
       'A Tg Apps foi desenhada para empresas que precisam de execução prática de software sem serem empurradas para um único modelo de trabalho. Podemos assumir a entrega inteira, tocar uma área, entrar junto do time ou atuar em conjunto com outra equipe, enquanto um núcleo sênior mantém o contexto por perto e amplia a capacidade quando o projeto exige mais profundidade ou especialidade.',
     heroHighlights: [
@@ -1481,13 +1483,13 @@ const PT_CONTENT: LandingContentByLocale = {
     proofItems: [
       'Precisam do foco de um time compacto sem abrir mão de estrutura, contrato e documentação.',
       'Querem um parceiro que se adapte ao jeito que a empresa já trabalha, em vez de impor um modelo rígido.',
-      'Preferem comunicação direta, ownership claro e continuidade em vez de camadas de atendimento e transferências pouco claras.'
+      'Preferem comunicação direta, responsabilidade clara e continuidade em vez de camadas de atendimento e transferências confusas.'
     ],
     deliverablesHeading: 'O que entra no trabalho',
     deliverables: [
       'Diagnóstico inicial, definição de escopo, backlog, decisões técnicas, implementação, deploys e suporte no mesmo ciclo.',
       'Demonstrações semanais, atualizações escritas, log de decisões, repositórios, credenciais, documentação e guias operacionais quando aplicável.',
-      'Propriedade clara: código, ambientes, passos de publicação e materiais de transferência ficam disponíveis para o cliente, seja com ownership completo ou trabalho em paralelo com outras equipes.'
+      'Propriedade clara: código, ambientes, passos de publicação e materiais de transferência ficam disponíveis para o cliente, tanto na entrega completa quanto no trabalho em paralelo com outras equipes.'
     ],
     fitHeading: 'Melhor encaixe / fora do encaixe',
     fitItems: [
@@ -1497,13 +1499,13 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     sections: [
       {
-        title: 'Pequeno por design não significa imaturo',
+        title: 'Estrutura compacta, processo completo',
         description:
           'O modelo compacto e liderado pelo fundador é uma escolha de entrega: menos burocracia, comunicação direta, menor custo estrutural e mais contexto de produto, sem significar execução solo.',
         items: [
           'Clientes falam direto com a liderança responsável por produto, arquitetura e execução.',
           'O escopo é dividido em etapas para trabalhos maiores avançarem sem virar promessa vaga.',
-          'Quando o projeto precisa de mais vazão ou conhecimento específico, o suporte se amplia em torno de um escopo claro, não como gente entrando sem direção.'
+          'Quando o projeto precisa de mais capacidade ou conhecimento específico, ampliamos o time em torno de um escopo claro, sem adicionar pessoas sem direção.'
         ]
       },
       {
@@ -1530,28 +1532,29 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Avalie a Tg Apps pelo processo, não por suposições',
       description:
-        'A avaliação correta passa por escopo, contrato, etapas de entrega, arquitetura, processo de entrega, expectativas de suporte e referências quando necessário. Não inferir base técnica, testes, escala ou tamanho de equipe sem evidência.'
+        'Valide a Tg Apps pelo escopo, contrato, etapas de entrega, arquitetura, processo, suporte e referências disponíveis para o seu projeto.'
     }
   },
   howWeFitYourTeam: {
     key: 'howWeFitYourTeam',
     slug: getLandingSlug('pt', 'howWeFitYourTeam'),
     badge: 'Como nos encaixamos no seu time',
-    title: 'Um parceiro de entrega, vários jeitos de entrar na sua operação',
+    title: 'Um parceiro de entrega, diferentes formas de trabalhar com a sua equipe',
     intro:
-      'A Tg Apps não empurra um formato único. Podemos assumir a entrega inteira, tocar uma frente crítica, trabalhar ao lado dos seus devs ou dividir a execução com outras equipes, mantendo mobile, backend, ferramentas internas, integrações e release andando com continuidade.',
+      'A Tg Apps não impõe um formato único. Podemos assumir a entrega inteira, cuidar de uma área crítica, trabalhar ao lado dos seus desenvolvedores ou dividir a execução com outras equipes, mantendo aplicativo, backend, ferramentas internas, integrações e publicações em movimento.',
     heroHighlights: [
       'Já colocamos no ar e mantivemos apps mobile, CRM, ferramentas internas, integrações de backend e releases em modelos de entrega completa, atuação em conjunto e trabalho integrado ao time.',
       'Mantenha um ciclo de entrega responsável mesmo quando outras equipes participam do trabalho.',
-      'Expanda, reduza, pause ou faça handoff sem perder contexto.'
+      'Amplie, reduza, pause ou transfira o trabalho sem perder contexto.'
     ],
     ctaLabel: 'Falar sobre o encaixe do time',
     ctaSubject: 'Como a Tg Apps pode se encaixar no nosso time',
     proofHeading: 'Prova em estruturas de time diferentes',
     proofItems: [
       'Beautylove é exemplo de entrega completa, com construção, lançamento e continuidade do produto.',
-      'DocVita é exemplo de build completo primeiro e trabalho em conjunto depois do deploy.',
-      'DB Cleaning, IT.up, Mathex e Smiles mostram como a Tg Apps pode assumir uma frente crítica ou trabalhar dentro de uma estrutura maior.'
+      'DocVita é exemplo de construção completa no início e trabalho em conjunto depois da publicação.',
+      'DB Cleaning, IT.up, Mathex e Smiles mostram como a Tg Apps pode assumir um produto completo, liderar uma área crítica ou trabalhar dentro de uma estrutura maior.',
+      'No Impactivate, a Tg Apps lidera o trabalho técnico e desenvolve o aplicativo e o backend para a Heal The World Global.'
     ],
     deliverablesHeading: 'Jeitos de encaixar a Tg Apps no trabalho',
     deliverables: [
@@ -1572,8 +1575,8 @@ const PT_CONTENT: LandingContentByLocale = {
           'Esse formato funciona quando a empresa quer um parceiro responsável por construir, publicar e manter o produto andando com pouca sobrecarga de coordenação.',
         items: [
           'Podemos levar o produto do zero ao lançamento mantendo o contexto operacional próximo.',
-          'É um encaixe forte quando app, backend, ferramentas internas e release precisam andar juntos.',
-          'Beautylove é um bom exemplo de build completo, lançamento e suporte contínuo ao crescimento.'
+          'É um bom encaixe quando aplicativo, backend, ferramentas internas e publicação precisam andar juntos.',
+          'Beautylove é um bom exemplo de construção completa, lançamento e suporte contínuo ao crescimento.'
         ]
       },
       {
@@ -1583,7 +1586,7 @@ const PT_CONTENT: LandingContentByLocale = {
         items: [
           'A IT.up é um bom exemplo: a Tg Apps assume toda a área de apps enquanto outras equipes cuidam de outras partes da operação.',
           'A DB Cleaning é outro: a Tg Apps lidera a entrega crítica do produto entre CRM, backend e dois apps mobile, com apoio de outros colaboradores em frentes adjacentes.',
-          'O ganho aqui é accountability clara sem forçar um fornecedor a substituir todos os outros.'
+          'O ganho aqui é ter responsabilidade clara sem obrigar um fornecedor a substituir todos os outros.'
         ]
       },
       {
@@ -1591,8 +1594,9 @@ const PT_CONTENT: LandingContentByLocale = {
         description:
           'Esse formato funciona quando a empresa quer continuidade e reforço de entrega sem substituir o time interno ou outro parceiro confiável.',
         items: [
-          'DocVita é um bom exemplo: a Tg Apps construiu o produto até produção e depois continuou junto de outra equipe após o deploy.',
-          'Mathex e Smiles são um bom exemplo de trabalho integrado ao time, com escopo mais localizado dentro de uma squad corporativa maior.',
+          'DocVita é um bom exemplo: a Tg Apps construiu o produto até produção e depois continuou junto de outra equipe após a publicação.',
+          'Impactivate é um trabalho em andamento: a Tg Apps lidera o trabalho técnico e desenvolve o aplicativo e o backend para a Heal The World Global.',
+          'Mathex e Smiles são um bom exemplo de trabalho integrado, com escopo específico dentro de uma equipe corporativa maior.',
           'A meta é fazer o modelo caber no produto real, não forçar o produto a caber em um pacote comercial.'
         ]
       },
@@ -1603,7 +1607,7 @@ const PT_CONTENT: LandingContentByLocale = {
         items: [
           'Comece por uma frente crítica e amplie o escopo se o encaixe fizer sentido.',
           'Comece com a entrega inteira nas nossas mãos e depois faça a transição ou passe para um modelo em conjunto quando o time interno crescer.',
-          'Mantenha contratos, repositórios, documentação, ambientes e passos de release organizados para a transição continuar limpa.'
+          'Mantenha contratos, repositórios, documentação, ambientes e passos de publicação organizados para que a transição seja tranquila.'
         ]
       }
     ],
@@ -1619,7 +1623,7 @@ const PT_CONTENT: LandingContentByLocale = {
     badge: 'Perfil da empresa',
     title: 'Perfil da Tg Apps para compradores, parceiros e validação de fornecedor',
     intro:
-      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira de software que apoia times com entregas de longo prazo e foco em mobile em apps, backend, CRM, ferramentas internas, deploy e integrações de IA por meio de jeitos flexíveis de trabalhar.',
+      'A Tg Apps opera por meio da TG APPLICATIONS DESENVOLVIMENTO LTDA, empresa brasileira que entrega aplicativos, backend, CRM, ferramentas internas, publicações e integrações de IA por meio de modelos flexíveis de atuação.',
     heroHighlights: [
       'Entidade legal: TG APPLICATIONS DESENVOLVIMENTO LTDA.',
       'Registro empresarial brasileiro: CNPJ 56.918.851/0001-72.',
@@ -1673,7 +1677,7 @@ const PT_CONTENT: LandingContentByLocale = {
     finalNote: {
       title: 'Compacta, flexível e explícita sobre encaixe',
       description:
-        'A Tg Apps não tenta parecer uma consultoria corporativa gigante e também não se vende como promessa de uma pessoa só. O posicionamento é ser uma parceira prática de entrega de produto com foco em mobile, jeitos flexíveis de trabalhar, acesso direto, responsabilidade clara, execução disciplinada, visão prática e transferência técnica limpa.'
+        'A Tg Apps não tenta parecer uma consultoria corporativa gigante e também não se vende como promessa de uma pessoa só. O posicionamento é ser uma parceira prática de entrega de produto, com prioridade para mobile, modelos flexíveis de atuação, acesso direto, responsabilidade clara, execução disciplinada e transferência técnica organizada.'
     }
   },
   dueDiligence: {
@@ -1770,7 +1774,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ],
     deliverablesHeading: 'Como descrever a Tg Apps',
     deliverables: [
-      'Parceira de entrega de produto com foco em mobile e jeitos flexíveis de trabalhar.',
+      'Parceira de entrega de produto com prioridade para mobile e modelos flexíveis de atuação.',
       'Um time para fundadores, startups, empresas em crescimento, agências e equipes que precisam de mobile, web, backend, CRM, integrações de IA, suporte de deploy e transferência técnica limpa.',
       'Modelo de confiança por entrega: Garantia da Primeira Entrega, sprint inicial de até 7 dias úteis quando o escopo permite, demonstrações semanais e continuidade mês a mês.',
       'Parceiro para ideias de app, projetos parados, resgate de apps, execução de deploy, CRM, ferramentas internas, backend, dashboards, integrações e produtos born-global.'
@@ -1956,7 +1960,7 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         title: 'O que precisamos do cliente',
         description:
-          'Resgate de app anda mais rápido quando acesso, propriedade e regras de decisão estão claros antes do primeiro marco técnico.',
+          'O resgate do aplicativo anda mais rápido quando acessos, propriedade e regras de decisão estão claros antes da primeira entrega técnica.',
         items: [
           'Acesso ao repositório, contas de lojas, credenciais de backend, arquivos de ambiente, domínio e hospedagem quando o escopo exigir.',
           'Um responsável pelo produto para decidir o que precisa sair agora, o que pode esperar e o que deve sair da primeira versão.',
@@ -1978,7 +1982,7 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         question: 'Vocês corrigem Flutter, React Native, Android nativo ou iOS nativo?',
         answer:
-          'Podemos avaliar Flutter, React Native, Android, iOS, web e backend. O plano certo depende do estado atual, integrações necessárias, exigências das lojas e primeiro marco.'
+          'Podemos avaliar Flutter, React Native, Android, iOS, web e backend. O plano certo depende do estado atual, das integrações necessárias, das exigências das lojas e da primeira entrega.'
       },
       {
         question: 'Vocês publicam um app que outro dev começou?',
@@ -1988,7 +1992,7 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         question: 'Quanto tempo leva um resgate de app?',
         answer:
-          'O primeiro marco útil é escopado separadamente. Alguns apps precisam primeiro de correção de build ou checklist de loja, enquanto outros exigem backend, dependências ou estabilização de fluxo.'
+          'A primeira entrega útil é definida separadamente. Alguns aplicativos precisam primeiro de uma correção de build ou do checklist da loja, enquanto outros exigem backend, dependências ou estabilização de fluxo.'
       }
     ],
     pricing: PT_CURRENT_PRICING,
@@ -2200,7 +2204,7 @@ const PT_CONTENT: LandingContentByLocale = {
         items: [
           'Use SaaS quando seu processo é padrão e customização não mudaria o resultado do negócio.',
           'Construa sob medida quando agenda, histórico, operação, cobrança, compliance, portais ou fluxo de campo precisam de um sistema conectado.',
-          'Comece por uma ferramenta interna focada quando a visão completa do CRM ainda é ampla demais para o primeiro marco.'
+          'Comece por uma ferramenta interna específica quando a visão completa do CRM ainda é ampla demais para a primeira entrega.'
         ]
       }
     ],
@@ -2213,7 +2217,7 @@ const PT_CONTENT: LandingContentByLocale = {
       {
         question: 'Dá para começar com uma ferramenta interna pequena?',
         answer:
-          'Sim. O melhor primeiro marco costuma ser um fluxo focado, como entrada de leads, agendamento, dashboard, histórico de cliente ou processo administrativo da equipe.'
+          'Sim. A melhor primeira entrega costuma ser um fluxo específico, como entrada de leads, agendamento, dashboard, histórico de cliente ou processo administrativo da equipe.'
       },
       {
         question: 'Pode integrar com ferramentas que já usamos?',
@@ -2308,7 +2312,7 @@ const PT_CONTENT: LandingContentByLocale = {
       'A Tg Apps oferece um modelo de entrega contínua para apps, CRM, ferramentas internas, backend, integrações de IA e suporte de deploy, com uma estrutura que pode assumir a entrega inteira, entrar junto do seu time ou atuar em conjunto com outras equipes, conforme a necessidade da empresa.',
     heroHighlights: [
       'Entrega liderada pelo fundador, com comunicação direta sempre que necessário e uma estrutura de entrega que preserva o contexto.',
-      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
+      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Embedded começa em US$ 3.500+/mês.',
       'Cadência de entrega compatível com o plano e um time para produto, backend, frontend, mobile, IA e deploy, assumindo a entrega inteira, entrando junto do time ou atuando em conjunto com outras equipes.'
     ],
     ctaLabel: 'Conversar sobre o modelo de trabalho',
@@ -2386,7 +2390,7 @@ const PT_CONTENT: LandingContentByLocale = {
     ctaSubject: 'Entrega mensal de software com execução mais estável',
     proofHeading: 'Como esse modelo funciona',
     proofItems: [
-      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Dedicated começa em US$ 3.500+/mês.',
+      'Starter começa em US$ 1.500/mês, Growth custa US$ 2.000/mês e Embedded começa em US$ 3.500+/mês.',
       'Cancelamento em qualquer mês sem multa ou taxa surpresa.',
       'Cobrança mensal, escopo visível e guias operacionais com transferência técnica entregues continuamente.'
     ],
@@ -2521,7 +2525,7 @@ const PT_CONTENT: LandingContentByLocale = {
         description:
           'Uma primeira entrega bem-sucedida vira a base para continuar mês a mês.',
         items: [
-          'Continuar com Starter, Growth, Dedicated ou um plano mensal sob medida.',
+          'Continuar com Starter, Growth, Embedded ou um plano mensal sob medida.',
           'Manter demonstrações semanais, notas de decisão, suporte de deploy e documentação enquanto o trabalho avança.',
           'Pausar, encerrar ou fazer transferência técnica conforme o contrato quando a continuidade não fizer mais sentido.'
         ]

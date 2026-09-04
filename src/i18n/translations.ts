@@ -124,6 +124,7 @@ export interface TranslationSchema {
       emailPlaceholder: string;
       phoneLabel: string;
       phonePlaceholder: string;
+      whatsappOptInLabel: string;
       serviceLabel: string;
       servicePlaceholder: string;
       guaranteeLabel: string;
@@ -134,6 +135,8 @@ export interface TranslationSchema {
       messagePlaceholder: string;
       submit: string;
       submitting: string;
+      submitError: string;
+      fallbackEmail: string;
       policy: string;
     };
     services: string[];
@@ -176,20 +179,20 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Language'
     },
     hero: {
-      badge: 'Mobile-first product delivery · Flexible engagement models',
+      badge: 'Mobile-first product delivery partner · Flexible engagement models',
       titleLine1: 'Build from zero, rescue what stalled,',
       titleHighlight: 'or add execution where your team needs it.',
       titleLine2: '',
       subtitle:
-        'Tg Apps helps founders and small startups build apps and backend systems from zero, finish stalled products, or work alongside internal teams through a clear first delivery and predictable month-to-month continuity.',
+        'Tg Apps is a mobile-first product delivery partner for teams that need to build, rescue, or evolve apps, web platforms, backend systems, CRM, and internal tools.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
         { label: 'Growth reference: USD 2,000/mo' },
         { label: 'First Milestone Guarantee' },
         { label: 'No upfront payment to start' }
       ],
-      primaryCta: 'Define my first delivery',
-      secondaryCta: 'See how we fit your team'
+      primaryCta: 'Request a first milestone review',
+      secondaryCta: 'See client work'
     },
     socialProof: {
       heading: 'Built for products at different stages',
@@ -425,6 +428,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         emailPlaceholder: 'you@company.com',
         phoneLabel: 'Phone or WhatsApp',
         phonePlaceholder: '+1 (555) 000-0000',
+        whatsappOptInLabel: 'You may reply to this request through WhatsApp at the number provided.',
         serviceLabel: 'What do you need help with?',
         servicePlaceholder: 'Select an option',
         guaranteeLabel: 'How would you like to start?',
@@ -434,7 +438,9 @@ export const translations: Record<Locale, TranslationSchema> = {
         messageLabel: 'Notes',
         messagePlaceholder: 'Tell us about platforms, deadlines, or blockers.',
         submit: 'Start the conversation',
-        submitting: 'Opening email...',
+        submitting: 'Sending securely...',
+        submitError: 'We could not send the form right now. Your details were not marked as received.',
+        fallbackEmail: 'Open the request in your email app',
         policy: 'We only use these details to contact you about this request.'
       },
       services: [
@@ -495,7 +501,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         { id: 'inicio', label: 'Início' },
         { id: 'what-you-get', label: 'Serviços' },
         { id: 'process', label: 'Processo' },
-        { id: 'cases', label: 'Provas' },
+        { id: 'cases', label: 'Trabalhos' },
         { id: 'plans', label: 'Planos' },
         { id: 'contato', label: 'Contato' }
       ],
@@ -504,20 +510,20 @@ export const translations: Record<Locale, TranslationSchema> = {
       languageLabel: 'Idioma'
     },
     hero: {
-      badge: 'Entrega com foco em mobile · jeitos flexíveis de trabalhar',
+      badge: 'Entrega de produtos digitais com prioridade para mobile',
       titleLine1: 'Construa do zero, destrave o que travou,',
       titleHighlight: 'ou coloque mais força onde seu time precisa.',
       titleLine2: '',
       subtitle:
-        'A Tg Apps ajuda fundadores e startups pequenas a construir apps e backends do zero, concluir produtos travados ou trabalhar junto do time interno com uma primeira entrega clara e continuidade mês a mês.',
+        'A Tg Apps trabalha como parceira de entrega para equipes que precisam construir, resgatar ou evoluir aplicativos, plataformas web, backends, CRM e sistemas internos.',
       stats: [
         { label: 'D-U-N-S® 651029828' },
-        { label: 'Growth referência: US$ 2.000/mês' },
+        { label: 'Plano Growth: US$ 2.000/mês' },
         { label: 'Garantia da Primeira Entrega' },
         { label: 'Sem pagamento antecipado para começar' }
       ],
-      primaryCta: 'Definir minha primeira entrega',
-      secondaryCta: 'Ver como a Tg Apps entra no time'
+      primaryCta: 'Planejar a primeira entrega',
+      secondaryCta: 'Ver trabalhos com clientes'
     },
     socialProof: {
       heading: 'Entrega real em estágios diferentes do produto',
@@ -545,15 +551,15 @@ export const translations: Record<Locale, TranslationSchema> = {
       ]
     },
       services: {
-      badge: 'Modelos flexíveis de entrega',
+      badge: 'Modelos flexíveis de atuação',
       headingLine1: 'Como trabalhamos',
       headingHighlight: 'com a sua empresa',
       description:
         'A Tg Apps não vende um formato rígido. O melhor ponto de partida depende do estágio do produto, da estrutura atual e do que precisa andar primeiro.',
       pillars: [
         'Entrega com prioridade para mobile: Android, iOS, Play Store, App Store, distribuição interna e deploys graduais.',
-        'Jeito flexível de trabalhar: assumir a entrega inteira, tocar uma área específica, entrar junto do time ou atuar em conjunto com outras equipes, conforme a estrutura.',
-        'Escopo claro, demonstrações semanais, suporte de deploy, documentação e transferência técnica quando aplicável.'
+        'Atuação flexível: podemos assumir a entrega inteira, cuidar de uma área específica, reforçar o time ou trabalhar em conjunto com outras equipes.',
+        'Escopo claro, demonstrações semanais, suporte à publicação, documentação e transferência técnica quando aplicável.'
       ],
       partnershipHeading: '',
       partnershipDescription: '',
@@ -570,15 +576,15 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'Para fundadores e times pequenos que precisam tirar um app, backend, dashboard ou sistema interno do papel.',
           highlights: [
             'Ajudamos a definir uma primeira entrega prática em vez de deixar tudo em planejamento aberto.',
-            'App, backend, loja, deploy e release podem entrar no mesmo escopo inicial.',
+            'Aplicativo, backend e publicação nas lojas podem fazer parte da mesma entrega inicial.',
             'Melhor encaixe quando existe intenção de produto, mas ainda não existe estrutura interna forte.'
           ]
         },
         {
           title: 'Resgatar e evoluir',
-          description: 'Para times com app travado, backend incompleto, protótipo cru ou fluxo de release que precisa voltar a andar.',
+          description: 'Para times com aplicativo travado, backend incompleto, protótipo inicial ou processo de publicação que precisa voltar a andar.',
           highlights: [
-            'A gente avalia o que já existe, decide o que vale corrigir e move para um caminho utilizável de entrega.',
+            'Avaliamos o que já existe, decidimos o que vale corrigir e organizamos um caminho viável até a próxima entrega.',
             'Bom encaixe para produtos iniciados por outro dev ou que mudaram de direção no meio.',
             'A meta não é só corrigir, é voltar a colocar o produto em movimento.'
           ]
@@ -588,7 +594,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'Para empresas que já têm devs, agência ou outro fornecedor, mas precisam de mais entrega em uma frente crítica.',
           highlights: [
             'Podemos assumir uma frente inteira ou trabalhar em paralelo com a equipe atual.',
-            'Bom encaixe quando o produto precisa de mais ritmo, mais release ou mais profundidade técnica em uma área.',
+            'Bom encaixe quando o produto precisa avançar mais rápido, publicar com mais frequência ou ganhar profundidade técnica em uma área.',
             'Funciona muito bem para mobile, backend, integrações e ferramentas operacionais.'
           ]
         }
@@ -600,7 +606,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           description:
             'Apps nativos feitos para usuários reais e lojas reais.',
           features: [
-            'Play Store, App Store, distribuicao interna, deploy gradual e suporte de release ficam com a gente.'
+            'Play Store, App Store, distribuição interna, publicação gradual e suporte após o lançamento ficam com a gente.'
           ],
           cta: 'Planejar meu app'
         },
@@ -608,9 +614,9 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'CRM, dashboards e ferramentas internas',
           subtitle: 'Agendamento, operação de leads e portais',
           description:
-            'Troque planilhas por CRM, dashboards, automacoes e sistemas administrativos.',
+            'Troque planilhas por CRM, dashboards, automações e sistemas administrativos.',
           features: [
-            'Construidos em torno do jeito que sua operacao realmente funciona.'
+            'Construídos em torno do jeito que sua operação realmente funciona.'
           ],
           cta: 'Planejar meu sistema'
         },
@@ -618,7 +624,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           title: 'Resgate de app e execução de deploy',
           subtitle: 'Auditar, corrigir, publicar e iterar',
           description:
-            'Apps inacabados, bases travadas ou builds antigas viram produtos utilizaveis com caminho claro de release.',
+            'Aplicativos inacabados, bases travadas ou versões antigas viram produtos utilizáveis com um caminho claro até a publicação.',
           features: [
             'A gente audita, corrige, reconstrói e publica.'
           ],
@@ -630,7 +636,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           description:
             'REST ou GraphQL, Supabase, Firebase, MySQL ou Postgres.',
           features: [
-            'Infraestrutura AWS, runbooks e checklist de release para seu time assumir a stack depois.'
+            'Infraestrutura AWS, guias operacionais e checklist de publicação para seu time assumir o sistema depois.'
           ],
           cta: 'Escopar integração'
         },
@@ -640,7 +646,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           description:
             'Fluxos de LLM conectados ao seu CRM, busca ou base de conhecimento.',
           features: [
-            'Guardrails, saidas estruturadas e documentacao separando modelo de regra de negocio.'
+            'Controles, saídas estruturadas e documentação separando o modelo das regras de negócio.'
           ],
           cta: 'Adicionar IA ao produto'
         },
@@ -650,7 +656,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           description:
             'Apps feitos para mais de um mercado desde o primeiro dia.',
           features: [
-            'Traducao contextual, UX sensivel ao idioma e preparo de loja para iteracao global.'
+            'Tradução contextual, experiência adaptada ao idioma e preparo das lojas para evolução em vários mercados.'
           ],
           cta: 'Planejar app global'
         }
@@ -671,13 +677,13 @@ export const translations: Record<Locale, TranslationSchema> = {
       timelineHeading: 'Como nos encaixamos em times reais',
       paragraphs: [
         'Em algumas empresas construímos e colocamos tudo no ar. Em outras assumimos uma área, trabalhamos ao lado de devs internos ou tocamos a parte crítica enquanto outras equipes cobrem frentes adjacentes.',
-        'Entramos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. O formato pode ser mais embarcado ou mais independente, mas a responsabilidade de entrega continua clara.',
-        'O que não muda é a continuidade. Mobile, backend, ferramentas internas, release e contexto operacional ficam conectados mesmo quando o modelo de trabalho muda.'
+        'Trabalhamos nas ferramentas que você já usa (Teams, Jira, Linear, Notion, ClickUp, Trello, GitHub etc.) ou oferecemos as nossas. Podemos atuar mais perto da equipe ou com mais autonomia, sempre com responsabilidade clara pela entrega.',
+        'O que não muda é a continuidade. Aplicativo, backend, ferramentas internas, publicação e contexto operacional permanecem conectados mesmo quando o modelo de trabalho muda.'
       ],
       missionHeading: 'Como protegemos a continuidade',
       missionDescription:
         'Contrato assinado, registro D-U-N-S, empresa brasileira regularizada e escopo claro desde o início. Finanças, jurídico e o time de produto ficam tranquilos.',
-      clientHeading: 'Modelo flexível, accountability clara',
+      clientHeading: 'Modelo flexível, responsabilidade clara',
       clientTypes: [],
       valuesHeading: 'Garantias em todo contrato',
       values: [
@@ -686,7 +692,7 @@ export const translations: Record<Locale, TranslationSchema> = {
           description: 'Validado pela Dun and Bradstreet em 28/01/2026. Útil para marketplaces e cadastros de fornecedores.'
         },
         {
-          title: 'Assinado antes do kickoff',
+          title: 'Assinado antes do início',
           description: 'Assinamos NDA e escopo de trabalho digitalmente antes do início do projeto, com a cobrança alinhada ao caminho de entrega combinado.'
         },
         {
@@ -753,6 +759,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         emailPlaceholder: 'você@empresa.com',
         phoneLabel: 'Telefone ou WhatsApp',
         phonePlaceholder: '+55 (11) 99999-0000',
+        whatsappOptInLabel: 'Você autoriza o retorno desta solicitação pelo WhatsApp informado.',
         serviceLabel: 'Do que você precisa?',
         servicePlaceholder: 'Selecione uma opção',
         guaranteeLabel: 'Como você gostaria de começar?',
@@ -762,7 +769,9 @@ export const translations: Record<Locale, TranslationSchema> = {
         messageLabel: 'Notas',
         messagePlaceholder: 'Compartilhe prazos, lojas ou dores atuais.',
         submit: 'Iniciar conversa',
-        submitting: 'Abrindo e-mail...',
+        submitting: 'Enviando com segurança...',
+        submitError: 'Não foi possível enviar o formulário agora. Seus dados não foram marcados como recebidos.',
+        fallbackEmail: 'Abrir a solicitação no seu aplicativo de e-mail',
         policy: 'Usaremos essas informações apenas para retornar seu contato.'
       },
       services: [
@@ -788,20 +797,20 @@ export const translations: Record<Locale, TranslationSchema> = {
         { id: 'inicio', label: 'Início' },
         { id: 'what-you-get', label: 'Serviços' },
         { id: 'process', label: 'Processo' },
-        { id: 'cases', label: 'Provas' },
+        { id: 'cases', label: 'Trabalhos' },
         { id: 'plans', label: 'Planos' },
         { id: 'contato', label: 'Contato' }
       ],
       servicesHeading: 'Pedidos frequentes',
       services: [
-        'Resgate de app e deploy',
+        'Resgate e publicação de aplicativos',
         'Apps born global',
         'CRM e ferramentas internas',
         'Sistemas de negócio e dashboards',
         'Apps Android e iOS',
         'Backend, APIs e integrações',
         'Integrações LLM',
-        'Cobertura de deploys'
+        'Suporte a publicações'
       ],
       contactHeading: 'Contato',
       contact: {

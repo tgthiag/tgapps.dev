@@ -16,12 +16,12 @@
       "seo": {
         "en": {
           "title": "Build, launch, and keep your product moving | Tg Apps",
-          "description": "Tg Apps helps founders and small startups build from zero, rescue stalled products, or work alongside internal teams across apps, backend systems, CRM, internal tools, and release support.",
+          "description": "Tg Apps is a mobile-first product delivery partner for founders and growing teams that need to build, rescue, or evolve apps, web platforms, backend systems, CRM, internal tools, and release operations.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
         "pt": {
           "title": "Construa, publique e mantenha seu produto evoluindo | Tg Apps",
-          "description": "A Tg Apps ajuda fundadores e startups pequenas a construir do zero, destravar produtos travados ou entrar junto do time em apps, backend, CRM, ferramentas internas e suporte de release.",
+          "description": "A Tg Apps é uma parceira mobile-first de entrega de produto para fundadores e empresas que precisam construir, resgatar ou evoluir apps, plataformas web, backends, CRM, sistemas internos e operações de release.",
           "ogImage": "https://tgapps.dev/og-home.png"
         }
       },
@@ -553,7 +553,7 @@
       },
       "seo": {
         "en": {
-          "title": "Dedicated Software Delivery with Month-to-Month Control | Tg Apps",
+          "title": "Embedded Software Delivery with Month-to-Month Control | Tg Apps",
           "description": "Use Tg Apps for closer software delivery coordination across internal tools, apps, backend, integrations, and release support with monthly billing and no lock-in.",
           "ogImage": "https://tgapps.dev/og-home.png"
         },
@@ -692,6 +692,192 @@
         "priorities": {
           "en": 0.88,
           "pt": 0.84
+        }
+      }
+    },
+    {
+      "id": "adsAppRescue",
+      "page": "campaignLanding",
+      "campaignLandingKey": "adsAppRescue",
+      "localizedPaths": {
+        "en": "/ads/app-rescue",
+        "pt": "/anuncios/resgate-de-app"
+      },
+      "seo": {
+        "en": {
+          "title": "Finish and Launch Your Unfinished App | Tg Apps",
+          "description": "App rescue landing page for founders with unfinished apps, broken builds, backend blockers, store release issues, or stalled codebases.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Finalize e publique seu app inacabado | Tg Apps",
+          "description": "Página de campanha para fundadores com apps inacabados, builds quebrados, backend travado, bloqueios de loja ou código parado.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "noindex,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": false,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0,
+          "pt": 0
+        }
+      }
+    },
+    {
+      "id": "adsCustomCrm",
+      "page": "campaignLanding",
+      "campaignLandingKey": "adsCustomCrm",
+      "localizedPaths": {
+        "en": "/ads/custom-crm",
+        "pt": "/anuncios/crm-sob-medida"
+      },
+      "seo": {
+        "en": {
+          "title": "Custom CRM and Internal Tools for Spreadsheet Chaos | Tg Apps",
+          "description": "Custom CRM and internal tools landing page for teams replacing spreadsheets, WhatsApp operations, manual workflows, and disconnected tools.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "CRM sob medida para substituir planilhas | Tg Apps",
+          "description": "Página de campanha para empresas que precisam trocar planilhas, WhatsApp, fluxos manuais e ferramentas desconectadas por CRM e sistemas internos.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "noindex,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": false,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0,
+          "pt": 0
+        }
+      }
+    },
+    {
+      "id": "adsMobileApps",
+      "page": "campaignLanding",
+      "campaignLandingKey": "adsMobileApps",
+      "localizedPaths": {
+        "en": "/ads/mobile-app-development",
+        "pt": "/anuncios/desenvolvimento-de-apps-mobile"
+      },
+      "seo": {
+        "en": {
+          "title": "Mobile App Development with Backend and Store Release | Tg Apps",
+          "description": "Mobile app landing page for Android, iOS, Flutter, backend, dashboards, App Store, Play Store, release support, and maintenance.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Desenvolvimento de apps mobile com backend e publicação | Tg Apps",
+          "description": "Página de campanha para Android, iOS, Flutter, backend, dashboards, App Store, Play Store, suporte de release e manutenção.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "noindex,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": false,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0,
+          "pt": 0
+        }
+      }
+    },
+    {
+      "id": "adsAiIntegrations",
+      "page": "campaignLanding",
+      "campaignLandingKey": "adsAiIntegrations",
+      "localizedPaths": {
+        "en": "/ads/ai-integrations",
+        "pt": "/anuncios/integracoes-de-ia"
+      },
+      "seo": {
+        "en": {
+          "title": "AI Integrations for CRM and Internal Workflows | Tg Apps",
+          "description": "AI integration landing page for CRM summaries, extraction, classification, document search, assistants, automation, and human-review workflows.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Integrações de IA para CRM e fluxos internos | Tg Apps",
+          "description": "Página de campanha para resumos de CRM, extração, classificação, busca em documentos, assistentes, automação e revisão humana.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "noindex,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": false,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0,
+          "pt": 0
+        }
+      }
+    },
+    {
+      "id": "adsStartupSoftware",
+      "page": "campaignLanding",
+      "campaignLandingKey": "adsStartupSoftware",
+      "localizedPaths": {
+        "en": "/ads/startup-software",
+        "pt": "/anuncios/software-para-startups"
+      },
+      "seo": {
+        "en": {
+          "title": "Startup Software Delivery with a Clear First Milestone | Tg Apps",
+          "description": "Startup software landing page for MVPs, existing products, backend, mobile apps, dashboards, integrations, release support, and first milestone delivery.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Software para startups com primeira entrega clara | Tg Apps",
+          "description": "Página de campanha para MVPs, produtos existentes, backend, apps mobile, dashboards, integrações, release e primeira entrega.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "noindex,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": false,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0,
+          "pt": 0
+        }
+      }
+    },
+    {
+      "id": "adsOperationalSoftware",
+      "page": "campaignLanding",
+      "campaignLandingKey": "adsOperationalSoftware",
+      "localizedPaths": {
+        "en": "/ads/operational-software",
+        "pt": "/anuncios/software-operacional"
+      },
+      "seo": {
+        "en": {
+          "title": "Operational Software for Growing Companies | Tg Apps",
+          "description": "Operational software landing page for CRM, dashboards, internal systems, automation, portals, mobile workflows, backend APIs, and integrations.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        },
+        "pt": {
+          "title": "Software operacional para empresas em crescimento | Tg Apps",
+          "description": "Página de campanha para CRM, dashboards, sistemas internos, automação, portais, fluxos mobile, APIs e integrações.",
+          "ogImage": "https://tgapps.dev/og-home.png"
+        }
+      },
+      "robots": "noindex,follow",
+      "staticHtml": true,
+      "sitemap": {
+        "include": false,
+        "changefreq": "monthly",
+        "priorities": {
+          "en": 0,
+          "pt": 0
         }
       }
     },

@@ -1,4 +1,4 @@
-import { Smartphone, Cpu, Cable, ArrowRight, Zap, Globe2 } from 'lucide-react';
+import { ArrowRight, CheckCircle, Rocket, Workflow, Wrench } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
 import { landingSlugsByLocale } from '../content/landingPages';
 import { trackCtaClick } from '../utils/analytics';
@@ -6,7 +6,11 @@ import { trackCtaClick } from '../utils/analytics';
 const Services = () => {
   const { language } = useLanguage();
   const t = useTranslations();
-  const serviceLandingHrefs: (string | undefined)[] = [
+  const isPt = language === 'pt';
+  const scenarios = (t.services.process ?? []).slice(0, 3);
+  const services = t.services.items ?? [];
+  const scenarioIcons = [Rocket, Wrench, Workflow];
+  const serviceHrefs = [
     landingSlugsByLocale[language].androidIosSmb,
     landingSlugsByLocale[language].customCrmInternalTools,
     landingSlugsByLocale[language].appRescueLaunch,
@@ -14,150 +18,124 @@ const Services = () => {
     landingSlugsByLocale[language].llmRagIntegrations,
     landingSlugsByLocale[language].bornGlobalApps
   ];
-  const iconPalette = [Smartphone, Cpu, Zap, Cable, Cable, Globe2];
-  const colorPalette = [
-    { bg: 'bg-blue-50', icon: 'text-blue-700' },
-    { bg: 'bg-purple-50', icon: 'text-purple-700' },
-    { bg: 'bg-amber-50', icon: 'text-amber-700' },
-    { bg: 'bg-emerald-50', icon: 'text-emerald-700' },
-    { bg: 'bg-cyan-50', icon: 'text-cyan-700' },
-    { bg: 'bg-rose-50', icon: 'text-rose-700' }
-  ];
 
-  const serviceCards = (t.services.items ?? []).map((item, index) => ({
-    ...item,
-    IconComponent: iconPalette[index % iconPalette.length],
-    ...colorPalette[index % colorPalette.length]
-  }));
-  const scenarioCards = t.services.process ?? [];
-
-  const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+  const scrollToContact = () => {
+    trackCtaClick('delivery_model_cta', isPt ? 'Solicitar análise' : 'Request a review', {
+      destination: '#contato',
+      language
+    });
+    document.getElementById('contato')?.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <section id='what-you-get' className='bg-white py-20 scroll-mt-24'>
-      <div className='mx-auto max-w-6xl px-4 sm:px-6 lg:px-8'>
-        <div className='mb-12 max-w-3xl'>
-          <div className='mb-4 inline-flex items-center space-x-2 rounded-full bg-blue-100 px-4 py-2 text-sm font-semibold text-blue-700'>
-            <Zap className='h-4 w-4' />
-            <span>{t.services.badge}</span>
+    <section id="what-you-get" className="scroll-mt-24 bg-white py-20 sm:py-24">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr] lg:items-end">
+          <div>
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-blue-700">{t.services.badge}</p>
+            <h2 className="mt-4 text-4xl font-bold leading-tight text-slate-950 sm:text-5xl">
+              {isPt ? 'Comece pelo resultado que precisa avançar.' : 'Start with the outcome that needs to move.'}
+            </h2>
           </div>
-          <h2 className='mb-5 text-4xl font-bold leading-tight text-gray-900 sm:text-5xl'>
-            {t.services.headingLine1}
-            <span className='block bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text pb-2 text-transparent'>
-              {t.services.headingHighlight}
-            </span>
-          </h2>
-          <p className='text-lg leading-relaxed text-gray-600'>{t.services.description}</p>
+          <p className="max-w-2xl text-base leading-8 text-slate-600 lg:justify-self-end">
+            {isPt
+              ? 'A mesma Tg Apps pode construir do zero, recuperar um produto travado ou assumir uma frente junto ao seu time. O que muda é o ponto de entrada e a responsabilidade inicial.'
+              : 'The same Tg Apps team can build from zero, rescue a stalled product, or own one critical area alongside your team. The entry point and initial responsibility are what change.'}
+          </p>
         </div>
 
-        {scenarioCards.length > 0 && (
-          <div className='mb-14 rounded-[2rem] border border-slate-200 bg-slate-50/70 p-6 sm:p-8'>
-            <div className='max-w-3xl'>
-              {t.services.gridHeading && <h3 className='text-2xl font-bold text-slate-950 sm:text-3xl'>{t.services.gridHeading}</h3>}
-              {t.services.gridDescription && (
-                <p className='mt-3 text-base leading-relaxed text-slate-600'>{t.services.gridDescription}</p>
-              )}
-            </div>
-
-            <div className='mt-8 grid grid-cols-1 gap-5 lg:grid-cols-3'>
-              {scenarioCards.map((scenario, index) => (
-                <article
-                  key={scenario.title + '-' + index}
-                  className='rounded-2xl border border-slate-200 bg-white p-6 shadow-sm'
-                >
-                  <div className='mb-4 inline-flex rounded-full bg-slate-100 px-3 py-1 text-xs font-semibold uppercase tracking-[0.16em] text-slate-600'>
-                    {t.services.processLabel} {index + 1}
-                  </div>
-                  <h4 className='text-xl font-bold text-slate-950'>{scenario.title}</h4>
-                  <p className='mt-3 text-sm leading-7 text-slate-600'>{scenario.description}</p>
-                  <ul className='mt-5 space-y-2 text-sm leading-6 text-slate-700'>
-                    {scenario.highlights.map((highlight) => (
-                      <li key={highlight} className='flex items-start gap-2'>
-                        <span className='mt-2 h-1.5 w-1.5 rounded-full bg-slate-400'></span>
-                        <span>{highlight}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </article>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <div className='grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3'>
-          {serviceCards.map((service, index) => {
-            const IconComponent = service.IconComponent;
-            const badgeClasses = 'mb-5 flex h-12 w-12 items-center justify-center rounded-2xl ' + service.bg;
-            const iconClasses = 'h-6 w-6 ' + service.icon;
-            const landingHref = serviceLandingHrefs[index];
-
+        <div className="mt-12 grid gap-px overflow-hidden border border-slate-200 bg-slate-200 lg:grid-cols-3">
+          {scenarios.map((scenario, index) => {
+            const Icon = scenarioIcons[index];
             return (
-              <div
-                key={service.title + '-' + index}
-                className='group rounded-2xl border border-gray-100 bg-white p-6 shadow-md transition-all duration-300 hover:-translate-y-1 hover:shadow-xl'
-              >
-                <div className={badgeClasses}>
-                  <IconComponent className={iconClasses} />
+              <article key={scenario.title} className="bg-slate-50 p-7 sm:p-8">
+                <div className="flex h-11 w-11 items-center justify-center rounded-full bg-slate-950 text-white">
+                  <Icon className="h-5 w-5" />
                 </div>
-
-                <div className='mb-4 space-y-1'>
-                  {service.subtitle && (
-                    <p className='text-xs font-semibold uppercase tracking-wide text-slate-500'>{service.subtitle}</p>
-                  )}
-                  <h3 className='text-xl font-bold text-gray-900 transition-colors group-hover:text-blue-600'>
-                    {service.title}
-                  </h3>
-                </div>
-
-                <p className='mb-5 line-clamp-3 text-sm leading-relaxed text-gray-600'>{service.description}</p>
-
-                <ul className='mb-6 space-y-2 text-sm text-gray-700'>
-                  {service.features?.slice(0, 1).map((feature, featureIndex) => (
-                    <li key={feature + '-' + featureIndex} className='flex items-start gap-2'>
-                      <span className='mt-1 h-1.5 w-1.5 rounded-full bg-slate-400'></span>
-                      <span>{feature}</span>
+                <p className="mt-8 text-[0.65rem] font-bold uppercase tracking-[0.18em] text-blue-700">
+                  {t.services.processLabel} {index + 1}
+                </p>
+                <h3 className="mt-2 text-2xl font-bold text-slate-950">{scenario.title}</h3>
+                <p className="mt-4 text-sm leading-7 text-slate-600">{scenario.description}</p>
+                <ul className="mt-6 space-y-3 text-sm text-slate-700">
+                  {scenario.highlights.map((highlight) => (
+                    <li key={highlight} className="flex items-start gap-2">
+                      <CheckCircle className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600" />
+                      <span>{highlight}</span>
                     </li>
                   ))}
                 </ul>
-
-                {landingHref ? (
-                  <a
-                    href={landingHref}
-                    onClick={() => trackCtaClick('services_card', service.cta, {
-                      destination: landingHref,
-                      language,
-                      service_title: service.title
-                    })}
-                    className='group/btn inline-flex items-center font-semibold text-blue-600'
-                  >
-                    <span>{service.cta}</span>
-                    <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1' />
-                  </a>
-                ) : (
-                  <button
-                    type='button'
-                    onClick={() => {
-                      trackCtaClick('services_contact_cta', service.cta, {
-                        destination: '#contato',
-                        language,
-                        service_title: service.title
-                      });
-                      scrollToSection('contato');
-                    }}
-                    className='group/btn inline-flex items-center font-semibold text-blue-600'
-                  >
-                    <span>{service.cta}</span>
-                    <ArrowRight className='ml-2 h-4 w-4 transition-transform group-hover/btn:translate-x-1' />
-                  </button>
-                )}
-              </div>
+              </article>
             );
           })}
+        </div>
+
+        <div id="process" className="scroll-mt-24 mt-16 overflow-hidden bg-slate-950 text-white lg:grid lg:grid-cols-[0.9fr_1.1fr]">
+          <div className="p-8 sm:p-10 lg:p-12">
+            <p className="text-xs font-semibold uppercase tracking-[0.2em] text-cyan-300">
+              {isPt ? 'Como a parceria funciona' : 'How the partnership works'}
+            </p>
+            <h3 className="mt-4 text-3xl font-bold leading-tight sm:text-4xl">
+              {isPt ? 'Você define as prioridades. Nós assumimos a entrega.' : 'You set the priorities. We own the delivery.'}
+            </h3>
+            <p className="mt-5 text-base leading-8 text-white/70">
+              {isPt
+                ? 'A Tg Apps organiza execução técnica, colaboradores, qualidade, deploys e handoff. Você acompanha por planejamento compartilhado, comunicação direta e demos funcionais.'
+                : 'Tg Apps coordinates technical execution, collaborators, quality, releases, and handoff. You follow progress through shared planning, direct communication, and working demos.'}
+            </p>
+            <button
+              type="button"
+              onClick={scrollToContact}
+              className="mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-6 py-3 text-sm font-bold text-white transition hover:bg-blue-400"
+            >
+              {isPt ? 'Solicitar análise da primeira entrega' : 'Request a first milestone review'}
+              <ArrowRight className="h-4 w-4" />
+            </button>
+          </div>
+          <div className="grid gap-px bg-white/10 sm:grid-cols-2">
+            {[
+              isPt ? ['Ownership completo', 'Assumimos produto, arquitetura, execução e release.'] : ['Full ownership', 'We own product delivery, architecture, execution, and release.'],
+              isPt ? ['Ownership de uma área', 'Entramos em mobile, backend, CRM ou outra frente crítica.'] : ['Product-area ownership', 'We own mobile, backend, CRM, or another critical product area.'],
+              isPt ? ['Apoio embarcado', 'Trabalhamos dentro do ritmo e das ferramentas da sua equipe.'] : ['Embedded support', 'We work inside your team rhythm and existing tools.'],
+              isPt ? ['Co-delivery', 'Dividimos responsabilidades com seu time ou outros parceiros.'] : ['Co-delivery', 'We split clear responsibilities with your team or other partners.']
+            ].map(([title, description]) => (
+              <div key={title} className="bg-white/[0.06] p-7 sm:p-8">
+                <h4 className="font-bold text-white">{title}</h4>
+                <p className="mt-3 text-sm leading-7 text-white/62">{description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-14 border-t border-slate-200 pt-9">
+          <div className="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-slate-500">
+                {isPt ? 'Capacidades técnicas' : 'Technical capabilities'}
+              </p>
+              <h3 className="mt-2 text-2xl font-bold text-slate-950">
+                {isPt ? 'Uma equipe, diferentes frentes de produto.' : 'One team, multiple product fronts.'}
+              </h3>
+            </div>
+            <p className="max-w-lg text-sm leading-7 text-slate-600">
+              {isPt
+                ? 'Cada página detalha entregáveis, melhor encaixe e exemplos para uma necessidade específica.'
+                : 'Each page details deliverables, best fit, and examples for a specific need.'}
+            </p>
+          </div>
+          <div className="mt-7 grid gap-x-8 border-y border-slate-200 sm:grid-cols-2 lg:grid-cols-3">
+            {services.map((service, index) => (
+              <a
+                key={service.title}
+                href={serviceHrefs[index]}
+                onClick={() => trackCtaClick('capability_link', service.title, { destination: serviceHrefs[index], language })}
+                className="group flex items-center justify-between gap-4 border-b border-slate-200 py-5 text-sm font-semibold text-slate-800 transition hover:text-blue-700"
+              >
+                <span>{service.title}</span>
+                <ArrowRight className="h-4 w-4 flex-shrink-0 transition group-hover:translate-x-1" />
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>

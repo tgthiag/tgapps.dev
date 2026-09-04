@@ -1,7 +1,7 @@
 import type { Locale } from '../i18n/translations';
 import rawManifest from './publicRoutes.json';
 
-export type PublicRoutePage = 'home' | 'landing' | 'appsDirectory' | 'appDetail';
+export type PublicRoutePage = 'home' | 'landing' | 'campaignLanding' | 'appsDirectory' | 'appDetail';
 
 interface PublicRouteSeo {
   title: string;
@@ -19,6 +19,7 @@ export interface PublicRoute {
   id: string;
   page: PublicRoutePage;
   landingKey?: string;
+  campaignLandingKey?: string;
   appKey?: string;
   localizedPaths: Record<Locale, string>;
   aliasesByLocale?: Partial<Record<Locale, string[]>>;

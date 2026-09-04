@@ -1,12 +1,10 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
-import SocialProof from './components/SocialProof';
 import CasesSection from './components/CasesSection';
-import WhyTgApps from './components/WhyTgApps';
 import PricingPlans from './components/PricingPlans';
 import FirstMilestoneGuarantee from './components/FirstMilestoneGuarantee';
 import MyBusinessIdeaPrivacyPage from './components/MyBusinessIdeaPrivacyPage';
@@ -18,7 +16,10 @@ import { useLanguage } from './context/LanguageContext';
 import { applyRouteSeo } from './seo/routeSeo';
 import { getLandingContent } from './content/landingPages';
 import type { LandingPageKey } from './content/landingPages';
+import type { CampaignLandingPageKey } from './content/campaignLandingPages';
 import { resolvePublicRoute, splitLocaleAndRoute } from './content/publicRoutes';
+
+const CampaignLandingPage = lazy(() => import('./components/CampaignLandingPage'));
 
 function App() {
   const { language } = useLanguage();
@@ -59,6 +60,16 @@ function App() {
       />
     );
   }
+  if (publicRoute?.page === 'campaignLanding' && publicRoute.campaignLandingKey) {
+    return (
+      <Suspense fallback={null}>
+        <CampaignLandingPage
+          locale={language}
+          contentKey={publicRoute.campaignLandingKey as CampaignLandingPageKey}
+        />
+      </Suspense>
+    );
+  }
   if (publicRoute?.page === 'appsDirectory') {
     return <AppsDirectoryPage locale={language} />;
   }
@@ -70,12 +81,10 @@ function App() {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <SocialProof />
-      <FirstMilestoneGuarantee />
       <CasesSection />
-      <WhyTgApps />
       <Services />
       <PricingPlans />
+      <FirstMilestoneGuarantee />
       <Contact />
       <Footer />
     </div>

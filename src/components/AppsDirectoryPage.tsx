@@ -15,13 +15,15 @@ const AppsDirectoryPage = ({ locale }: AppsDirectoryPageProps) => {
     <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.22),_transparent_28%),linear-gradient(180deg,#06142e_0%,#0d2d6b_45%,#edf4ff_100%)] text-white">
       <div className="mx-auto max-w-6xl px-4 py-10 sm:px-6 lg:px-8">
         <header className="mb-10 flex flex-wrap items-center justify-between gap-4">
-          <a href={homeHref} className="inline-flex items-center gap-3 text-sm text-white/85 hover:text-white">
+          <a href={homeHref} className="inline-flex items-center text-sm text-white/85 hover:text-white" aria-label="Tg Apps home">
             <img
-              src="/logo.png"
+              src="/logo-wordmark-640.png"
               alt="Tg Apps"
-              className="h-10 w-10 rounded-xl bg-black/35 p-1 shadow-lg shadow-blue-500/20"
+              width={320}
+              height={111}
+              decoding="async"
+              className="h-10 w-auto object-contain brightness-125 drop-shadow-[0_0_12px_rgba(59,130,246,0.45)]"
             />
-            <span>Tg Apps</span>
           </a>
           <a
             href={homeHref}

@@ -1,7 +1,5 @@
-import { ArrowRight, Award, Play, ShieldCheck, Star, Users, Zap } from 'lucide-react';
+import { ArrowRight, Check, Play, Star } from 'lucide-react';
 import { useLanguage, useTranslations } from '../context/LanguageContext';
-import { landingSlugsByLocale } from '../content/landingPages';
-import { buildLocalizedPath } from '../content/publicRoutes';
 import { trackCtaClick } from '../utils/analytics';
 
 const Hero = () => {
@@ -13,13 +11,7 @@ const Hero = () => {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
-  const howWeFitHref = buildLocalizedPath(language, landingSlugsByLocale[language].howWeFitYourTeam);
-
-  const statsIcons = [Award, Users, ShieldCheck, Zap];
-  const stats = statsIcons.map((IconComponent, index) => ({
-    IconComponent,
-    label: t.hero.stats[index]?.label ?? ''
-  })).filter((stat) => stat.label);
+  const proofPoints = t.hero.stats.map((stat) => stat.label).filter(Boolean);
   const heroCard =
     language === 'pt'
       ? {
@@ -41,9 +33,9 @@ const Hero = () => {
           </div>
 
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-            <span className="block">{t.hero.titleLine1}</span>
+            <span className="block">{t.hero.titleLine1}{' '}</span>
             {t.hero.titleHighlight && (
-              <span className="block bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+              <span className="block bg-gradient-to-r from-sky-300 via-cyan-300 to-blue-400 bg-clip-text text-transparent">
                 {t.hero.titleHighlight}
               </span>
             )}
@@ -52,15 +44,11 @@ const Hero = () => {
 
           <p className="text-lg sm:text-xl text-white/80 mb-8 leading-relaxed">{t.hero.subtitle}</p>
 
-          <div className="mb-10 grid gap-3 sm:grid-cols-2">
-            {stats.map(({ IconComponent, label }, index) => (
-              <div key={label} className="flex items-center gap-2 rounded-2xl border border-white/10 bg-white/10 px-4 py-3 text-white/90">
-                <IconComponent
-                  className={`w-5 h-5 ${
-                    index === 0 ? 'text-blue-400' : index === 1 ? 'text-purple-400' : 'text-pink-400'
-                  }`}
-                />
-                <span className="font-semibold text-sm">{label}</span>
+          <div className="mb-10 flex flex-wrap gap-x-5 gap-y-3 border-y border-white/10 py-4">
+            {proofPoints.map((label) => (
+              <div key={label} className="flex items-center gap-2 text-sm font-medium text-white/80">
+                <Check className="h-4 w-4 text-cyan-300" />
+                <span>{label}</span>
               </div>
             ))}
           </div>
@@ -74,7 +62,7 @@ const Hero = () => {
                 });
                 scrollToSection('contato');
               }}
-              className="group bg-gradient-to-r from-blue-500 to-purple-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 flex items-center space-x-2"
+              className="group flex items-center space-x-2 rounded-full bg-blue-500 px-6 py-4 text-base font-semibold text-white shadow-[0_18px_45px_rgba(37,99,235,0.35)] transition-all duration-300 hover:scale-105 hover:bg-blue-400"
             >
               <span>{t.hero.primaryCta}</span>
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
@@ -83,12 +71,12 @@ const Hero = () => {
             <button
               onClick={() => {
                 trackCtaClick('hero_secondary', t.hero.secondaryCta, {
-                  destination: howWeFitHref,
+                  destination: '#cases',
                   language
                 });
-                window.location.href = howWeFitHref;
+                scrollToSection('cases');
               }}
-              className="group bg-white/10 text-white px-8 py-4 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 border border-white/20 flex items-center space-x-2"
+              className="group flex items-center space-x-2 rounded-full border border-white/20 bg-white/10 px-6 py-4 text-base font-semibold text-white transition-all duration-300 hover:bg-white/20"
             >
               <Play className="w-5 h-5" />
               <span>{t.hero.secondaryCta}</span>
@@ -99,8 +87,13 @@ const Hero = () => {
         <div className="relative">
           <div className="rounded-3xl overflow-hidden shadow-2xl border border-white/10">
             <img
-              src="https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=1200"
-              alt="Tg Apps team collaborating"
+              src="/hero-product-delivery-1200.webp"
+              srcSet="/hero-product-delivery-768.webp 768w, /hero-product-delivery-1200.webp 1200w"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+              alt="Tg Apps product delivery dashboard with mobile app and workflow automation"
+              width={1200}
+              height={800}
+              decoding="async"
               className="w-full h-full object-cover"
             />
           </div>

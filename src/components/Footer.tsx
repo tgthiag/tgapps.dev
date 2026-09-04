@@ -36,6 +36,8 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
   const contactInfo = t.footer.contact;
   const copyright = t.footer.bottom.copyright.replace('{year}', currentYear.toString());
   const resolvedCtaLabel = ctaLabel ?? t.footer.cta;
+  const footerCtaClass =
+    'inline-block bg-blue-600 text-white px-6 py-3 rounded-lg font-semibold shadow-[0_16px_35px_rgba(37,99,235,0.22)] transition-all duration-300 hover:scale-105 hover:bg-blue-500';
   const localizedLandingHref = (landingPath: string) => buildLocalizedPath(language, landingPath);
   const serviceLinkKeys: LandingPageKey[] = [
     'appRescueLaunch',
@@ -96,9 +98,16 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <a href={homeHref} className="flex items-center space-x-3 mb-6">
-              <img src="/logo.png" alt="Tg Apps" className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1" />
-              <span className="text-xl font-bold">Tg Apps</span>
+            <a href={homeHref} className="mb-6 flex items-center" aria-label="Tg Apps home">
+              <img
+                src="/logo-wordmark-640.png"
+                alt="Tg Apps"
+                width={320}
+                height={111}
+                loading="lazy"
+                decoding="async"
+                className="h-11 w-auto object-contain brightness-125 drop-shadow-[0_0_12px_rgba(59,130,246,0.35)]"
+              />
             </a>
             <p className="text-gray-400 mb-6 leading-relaxed">{t.footer.description}</p>
             <div className="space-y-2">
@@ -219,7 +228,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                       trackFooterCta();
                       onCtaClick();
                     }}
-                    className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className={footerCtaClass}
                   >
                     {resolvedCtaLabel}
                   </button>
@@ -227,7 +236,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                   <a
                     href={ctaHref ?? `${homeHref}#contato`}
                     onClick={trackFooterCta}
-                    className="inline-block bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className={footerCtaClass}
                   >
                     {resolvedCtaLabel}
                   </a>
@@ -237,7 +246,7 @@ const Footer = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: FooterProps
                       trackFooterCta();
                       scrollToSection('contato');
                     }}
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-6 py-3 rounded-lg font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                    className={footerCtaClass}
                   >
                     {resolvedCtaLabel}
                   </button>

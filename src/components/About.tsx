@@ -62,6 +62,10 @@ const About = () => {
               <img
                 src='https://images.pexels.com/photos/3861972/pexels-photo-3861972.jpeg?auto=compress&cs=tinysrgb&w=1200'
                 alt='Tg Apps team preparing a delivery roadmap'
+                width={1200}
+                height={800}
+                loading='lazy'
+                decoding='async'
                 className='w-full h-[420px] object-cover'
               />
               <div className='absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent'></div>

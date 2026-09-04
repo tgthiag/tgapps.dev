@@ -5,7 +5,7 @@ declare global {
   }
 }
 
-type LeadContactMethod = 'whatsapp' | 'email' | 'contact_form_email' | 'phone';
+type LeadContactMethod = 'whatsapp' | 'email' | 'contact_form_email' | 'contact_form_crm' | 'phone';
 
 type AnalyticsParamValue = string | number | boolean | null | undefined;
 type AnalyticsEventParams = Record<string, AnalyticsParamValue>;
@@ -14,6 +14,7 @@ const leadClickEventByMethod: Record<LeadContactMethod, string> = {
   whatsapp: 'lead_whatsapp_click',
   email: 'lead_email_click',
   contact_form_email: 'contact_form_submit',
+  contact_form_crm: 'contact_form_submit',
   phone: 'lead_phone_click'
 };
 

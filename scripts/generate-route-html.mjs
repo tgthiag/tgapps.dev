@@ -7,8 +7,8 @@ const root = process.cwd();
 const distDir = path.join(root, 'dist');
 const indexPath = path.join(distDir, 'index.html');
 const manifestPath = path.join(root, 'src', 'content', 'publicRoutes.json');
-const landingContentEntryPath = path.join(root, 'src', 'content', 'landingPages.ts');
-const landingContentBundlePath = path.join(distDir, '.landing-content.generated.mjs');
+const staticSeoDataEntryPath = path.join(root, 'src', 'content', 'staticSeoData.ts');
+const staticSeoDataBundlePath = path.join(distDir, '.static-seo-data.generated.mjs');
 
 if (!fs.existsSync(indexPath)) {
   throw new Error(`dist/index.html not found at ${indexPath}`);
@@ -27,24 +27,25 @@ const baseHtml = fs.readFileSync(indexPath, 'utf8');
 const buildDate = new Date().toISOString().slice(0, 10);
 const locales = ['en', 'pt'];
 
-const loadLandingContentModule = async () => {
+const loadStaticSeoDataModule = async () => {
   await esbuildBuild({
-    entryPoints: [landingContentEntryPath],
+    entryPoints: [staticSeoDataEntryPath],
     bundle: true,
     platform: 'node',
     format: 'esm',
-    outfile: landingContentBundlePath,
+    outfile: staticSeoDataBundlePath,
     logLevel: 'silent'
   });
 
   try {
-    return await import(`${pathToFileURL(landingContentBundlePath).href}?v=${Date.now()}`);
+    return await import(`${pathToFileURL(staticSeoDataBundlePath).href}?v=${Date.now()}`);
   } finally {
-    fs.rmSync(landingContentBundlePath, { force: true });
+    fs.rmSync(staticSeoDataBundlePath, { force: true });
   }
 };
 
-const { getLandingContent } = await loadLandingContentModule();
+const { getLandingContent, getCampaignLandingContent, plansByLocale, pricingCopyByLocale, trustedCompanies, translations } =
+  await loadStaticSeoDataModule();
 
 const normalizeRoutePath = (routePath) => {
   if (!routePath || routePath === '/') {
@@ -123,6 +124,20 @@ const serviceRouteIds = [
   'customSoftwareStartups',
   'clearFirstMilestone'
 ];
+
+const serviceSchemaRouteIds = new Set([
+  'customSoftwareSmbs',
+  'customSoftwareStartups',
+  'androidIosSmb',
+  'appRescueLaunch',
+  'bornGlobalApps',
+  'customCrmInternalTools',
+  'backendApiIntegrations',
+  'devAsAService',
+  'monthlyPod',
+  'llmRagIntegrations',
+  'howWeFitYourTeam'
+]);
 
 const trustRouteIds = [
   'whyTgApps',
@@ -239,6 +254,207 @@ const renderLandingFinalNote = (finalNote) => {
         </section>`;
 };
 
+const renderLinkItems = (links) => {
+  if (!links?.length) {
+    return '';
+  }
+
+  return `<ul>
+          ${links
+            .map((link) => `<li><a href="${escapeHtml(link.href)}">${escapeHtml(link.label)}</a></li>`)
+            .join('\n          ')}
+        </ul>`;
+};
+
+const renderHomeHighlights = (items) => {
+  if (!items?.length) {
+    return '';
+  }
+
+  return `<div>
+          ${items.map((item) => `<p>${escapeHtml(item.label ?? item)}</p>`).join('\n          ')}
+        </div>`;
+};
+
+const renderHomeCardSection = (heading, items, getTitle, getDescription) => {
+  if (!heading || !items?.length) {
+    return '';
+  }
+
+  return `<section>
+          <h2>${escapeHtml(heading)}</h2>
+          ${items
+            .map(
+              (item) => `<article>
+            <h3>${escapeHtml(getTitle(item))}</h3>
+            <p>${escapeHtml(getDescription(item))}</p>
+          </article>`
+            )
+            .join('\n          ')}
+        </section>`;
+};
+
+const renderHomeScenarioCards = (t) => {
+  const scenarios = t.services.process ?? [];
+
+  if (!scenarios.length) {
+    return '';
+  }
+
+  return `<section>
+          <h2>${escapeHtml(t.services.gridHeading || t.services.processHeading)}</h2>
+          ${t.services.gridDescription ? `<p>${escapeHtml(t.services.gridDescription)}</p>` : ''}
+          ${scenarios
+            .map(
+              (scenario, index) => `<article>
+            <p>${escapeHtml(t.services.processLabel)} ${index + 1}</p>
+            <h3>${escapeHtml(scenario.title)}</h3>
+            <p>${escapeHtml(scenario.description)}</p>
+            ${renderList(scenario.highlights)}
+          </article>`
+            )
+            .join('\n          ')}
+        </section>`;
+};
+
+const renderHomeServiceCards = (t, locale) => {
+  const services = t.services.items ?? [];
+
+  if (!services.length) {
+    return '';
+  }
+
+  return `<section>
+          <h2>${escapeHtml(t.services.processHeading || t.services.headingLine1)}</h2>
+          <p>${escapeHtml(t.services.processDescription || t.services.description)}</p>
+          ${renderList(t.services.pillars)}
+          <h3>${locale === 'pt' ? 'Capacidades técnicas' : 'Technical capabilities'}</h3>
+          ${renderList(services.map((service) => `${service.title}: ${service.description}`))}
+        </section>`;
+};
+
+const renderHomePricing = (locale) => {
+  const pricingCopy = pricingCopyByLocale[locale];
+  const plans = plansByLocale[locale] ?? [];
+
+  if (!pricingCopy || !plans.length) {
+    return '';
+  }
+
+  return `<section>
+          <p>${escapeHtml(pricingCopy.eyebrow)}</p>
+          <h2>${escapeHtml(pricingCopy.title)} ${escapeHtml(pricingCopy.highlight)}</h2>
+          <p>${escapeHtml(pricingCopy.subtitle)}</p>
+          ${plans
+            .map(
+              (plan) => `<article>
+            <h3>${escapeHtml(plan.name)}: ${escapeHtml(plan.price)}</h3>
+            ${plan.badge ? `<p>${escapeHtml(plan.badge)}</p>` : ''}
+            <p>${escapeHtml(plan.audience)}</p>
+            <p>${escapeHtml(plan.description)}</p>
+            ${renderList(plan.features)}
+          </article>`
+            )
+            .join('\n          ')}
+          <p>${escapeHtml(pricingCopy.note)}</p>
+          <p>${escapeHtml(pricingCopy.currencyNote)}</p>
+        </section>`;
+};
+
+const renderHomeContact = (t, locale) => {
+  const contactHref = locale === 'pt' ? '/pt-br/#contato' : '/#contato';
+
+  return `<section>
+          <p>${escapeHtml(t.contact.badge)}</p>
+          <h2>${escapeHtml(t.contact.headingLine1)} ${escapeHtml(t.contact.headingHighlight)}</h2>
+          <p>${escapeHtml(t.contact.description)}</p>
+          <h3>${escapeHtml(t.contact.infoHeading)}</h3>
+          ${renderList(t.contact.info.map((item) => `${item.title}: ${item.value}. ${item.description}`))}
+          <h3>${escapeHtml(t.contact.callout.title)}</h3>
+          <p>${escapeHtml(t.contact.callout.description)}</p>
+          ${renderList(t.contact.callout.bullets)}
+          <p><a href="${contactHref}">${escapeHtml(t.header.contactCta)}</a></p>
+        </section>`;
+};
+
+const buildHomeStaticSeoFallback = (route, locale) => {
+  const t = translations[locale];
+  const localeSeo = route.seo[locale];
+  const serviceLinks = buildLinkList(serviceRouteIds, locale);
+  const trustLinks = buildLinkList(trustRouteIds, locale);
+  const contactHref = locale === 'pt' ? '/pt-br/#contato' : '/#contato';
+  const homeHref = locale === 'pt' ? '/pt-br/' : '/';
+  const homeLabel = locale === 'pt' ? 'Página inicial' : 'Home';
+  const serviceHeading = locale === 'pt' ? 'Páginas de serviços' : 'Service pages';
+  const trustHeading = locale === 'pt' ? 'Confiança e validação' : 'Trust and validation';
+  const selectedWorkHeading = locale === 'pt' ? 'Trabalhos selecionados' : 'Selected work';
+  const selectedWorkIntro =
+    locale === 'pt'
+      ? 'Relações de produto em setores diferentes, com entregas de CRM, aplicativos, backend, integrações, operações internas e suporte à publicação.'
+      : 'Product relationships across different industries, with delivery across CRM, apps, backend, integrations, internal operations, and release support.';
+  const proofBadges =
+    locale === 'pt'
+      ? [
+          'D-U-N-S® 651029828',
+          'Garantia da Primeira Entrega',
+          'Primeira etapa clara',
+          'Continuidade mês a mês',
+          'Sem pagamento antecipado para começar'
+        ]
+      : [
+          'D-U-N-S® 651029828',
+          'First Milestone Guarantee',
+          'Clear first delivery',
+          'Month-to-month continuity',
+          'Start without paying upfront'
+        ];
+  const h1 = [t.hero.titleLine1, t.hero.titleHighlight, t.hero.titleLine2].filter(Boolean).join(' ');
+  const trustedCompanyItems = trustedCompanies.map((company) => `${company.name}: ${company.siteLabel}`);
+
+  return `<!-- static-seo-fallback:start -->
+      <main class="static-seo-fallback" style="font-family:Arial,sans-serif;max-width:1120px;margin:0 auto;padding:48px 24px;line-height:1.58;color:#0f172a;background:#ffffff">
+        <article>
+          <header>
+            <a href="${homeHref}">${homeLabel}</a>
+            <p>${escapeHtml(t.hero.badge)}</p>
+            <h1>${escapeHtml(h1 || stripBrandFromTitle(localeSeo.title))}</h1>
+            <p>${escapeHtml(t.hero.subtitle)}</p>
+            ${renderHomeHighlights(t.hero.stats)}
+            <p><a href="${contactHref}">${escapeHtml(t.hero.primaryCta)}</a></p>
+          </header>
+          <section>
+            <h2>${escapeHtml(selectedWorkHeading)}</h2>
+            <p>${escapeHtml(selectedWorkIntro)}</p>
+            ${renderList(trustedCompanyItems)}
+          </section>
+          ${renderHomeScenarioCards(t)}
+          ${renderHomeServiceCards(t, locale)}
+          ${renderHomePricing(locale)}
+          ${renderHomeCardSection(
+            t.firstMilestone.heading,
+            t.firstMilestone.cards,
+            (item) => item.title,
+            (item) => item.description
+          )}
+          ${renderList(proofBadges)}
+          ${renderHomeContact(t, locale)}
+        </article>
+        <nav aria-label="${serviceHeading}">
+          <h2>${serviceHeading}</h2>
+          <ul>
+            ${serviceLinks}
+          </ul>
+        </nav>
+        <nav aria-label="${trustHeading}">
+          <h2>${trustHeading}</h2>
+          <ul>
+            ${trustLinks}
+          </ul>
+        </nav>
+      </main>
+    <!-- static-seo-fallback:end -->`;
+};
+
 const buildLandingStaticSeoFallback = (route, locale) => {
   const content = getLandingContent(locale, route.landingKey);
   const serviceLinks = buildLinkList(serviceRouteIds, locale);
@@ -281,6 +497,41 @@ const buildLandingStaticSeoFallback = (route, locale) => {
             ${trustLinks}
           </ul>
         </nav>
+      </main>
+    <!-- static-seo-fallback:end -->`;
+};
+
+const buildCampaignStaticSeoFallback = (route, locale) => {
+  const content = getCampaignLandingContent(locale, route.campaignLandingKey);
+  const homeHref = locale === 'pt' ? '/pt-br/' : '/';
+  const homeLabel = locale === 'pt' ? 'Página inicial' : 'Home';
+  const responseNote = locale === 'pt' ? 'Resposta em até 1 dia útil.' : 'Reply within one business day.';
+  const ctaHref = `mailto:support@tgapps.dev?subject=${encodeURIComponent(content.ctaSubject)}`;
+
+  return `<!-- static-seo-fallback:start -->
+      <main class="static-seo-fallback" style="font-family:Arial,sans-serif;max-width:1120px;margin:0 auto;padding:48px 24px;line-height:1.58;color:#0f172a;background:#ffffff">
+        <article>
+          <header>
+            <a href="${homeHref}">${homeLabel}</a>
+            <p>${escapeHtml(content.badge)}</p>
+            <h1>${escapeHtml(content.title)}</h1>
+            <p>${escapeHtml(content.intro)}</p>
+            <p><a href="${escapeHtml(ctaHref)}">${escapeHtml(content.ctaLabel)}</a> ${escapeHtml(responseNote)}</p>
+          </header>
+          ${renderLandingSection(content.painHeading, content.painItems)}
+          ${renderLandingSection(content.offerHeading, content.offerItems)}
+          <section>
+            <h2>${escapeHtml(content.proofHeading)}</h2>
+            <p>${escapeHtml(content.proofDescription)}</p>
+            ${renderList(content.proofItems)}
+          </section>
+          ${renderLandingSection(content.processHeading, content.processItems)}
+          ${renderLandingSection(content.notFitHeading, content.notFitItems)}
+          <section>
+            <h2>${escapeHtml(content.relatedHeading)}</h2>
+            ${renderLinkItems(content.relatedLinks)}
+          </section>
+        </article>
       </main>
     <!-- static-seo-fallback:end -->`;
 };
@@ -328,8 +579,16 @@ const buildGenericStaticSeoFallback = (route, locale) => {
 };
 
 const buildStaticSeoFallback = (route, locale) => {
+  if (route.page === 'home') {
+    return buildHomeStaticSeoFallback(route, locale);
+  }
+
   if (route.page === 'landing' && route.landingKey) {
     return buildLandingStaticSeoFallback(route, locale);
+  }
+
+  if (route.page === 'campaignLanding' && route.campaignLandingKey) {
+    return buildCampaignStaticSeoFallback(route, locale);
   }
 
   return buildGenericStaticSeoFallback(route, locale);
@@ -337,8 +596,12 @@ const buildStaticSeoFallback = (route, locale) => {
 
 const injectStaticSeoFallback = (html, route, locale) => {
   const fallback = buildStaticSeoFallback(route, locale);
+  const shouldRenderInsideRoot =
+    route.page === 'home' ||
+    (route.page === 'landing' && route.landingKey) ||
+    (route.page === 'campaignLanding' && route.campaignLandingKey);
   const replacement =
-    route.page === 'landing' && route.landingKey
+    shouldRenderInsideRoot
       ? `<div id="root">\n    ${fallback}\n    </div>`
       : `<div id="root"></div>\n    <noscript>\n    ${fallback}\n    </noscript>`;
   const pattern =
@@ -411,7 +674,7 @@ const buildRouteStructuredData = (route, locale) => {
 
   const content = route.page === 'landing' && route.landingKey ? getLandingContent(locale, route.landingKey) : null;
 
-  if (content && route.page === 'landing') {
+  if (content && route.page === 'landing' && serviceSchemaRouteIds.has(route.id)) {
     graph.push({
       '@type': 'Service',
       '@id': `${canonicalUrl}#service`,

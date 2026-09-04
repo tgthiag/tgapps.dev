@@ -36,6 +36,7 @@ const SocialProof = () => {
                   alt={`${company.name} logo`}
                   className={`w-full object-contain ${company.logoClassName ?? 'max-h-12'}`}
                   loading="lazy"
+                  decoding="async"
                 />
               </a>
             ))}

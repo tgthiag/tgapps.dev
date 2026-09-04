@@ -2,12 +2,62 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/png" href="/logo.png" />
+    <link rel="icon" type="image/png" href="/logo-192.png" />
+    <link rel="preconnect" href="https://images.pexels.com" crossorigin />
+    <link rel="dns-prefetch" href="//images.pexels.com" />
+    <link rel="preconnect" href="https://www.googletagmanager.com" />
     <link rel="alternate" type="text/html" href="https://tgapps.dev/ai-profile" title="Tg Apps AI profile" />
     <link rel="alternate" type="text/plain" href="https://tgapps.dev/llms.txt" title="Tg Apps LLM text profile" />
     <meta name="ai-profile" content="https://tgapps.dev/ai-profile" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="msvalidate.01" content="016DA6AD80E7295BE131B66A9A6112AF" />
+    <script>
+      document.documentElement.classList.add('has-js');
+      window.setTimeout(function () {
+        document.documentElement.classList.add('app-load-timeout');
+      }, 4500);
+    </script>
+    <style>
+      html.has-js:not(.app-mounted):not(.app-load-timeout) body {
+        background: #020617;
+      }
+
+      html.has-js:not(.app-mounted):not(.app-load-timeout) body::before {
+        background:
+          radial-gradient(circle at 20% 20%, rgba(14, 165, 233, 0.24), transparent 34%),
+          radial-gradient(circle at 80% 70%, rgba(37, 99, 235, 0.22), transparent 36%),
+          #020617;
+        content: '';
+        inset: 0;
+        position: fixed;
+        z-index: 2147483646;
+      }
+
+      html.has-js:not(.app-mounted):not(.app-load-timeout) body::after {
+        animation: tgappsBootPulse 1.4s ease-in-out infinite;
+        color: rgba(255, 255, 255, 0.86);
+        content: 'Loading Tg Apps';
+        font: 600 14px/1.4 system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        left: 50%;
+        letter-spacing: 0.18em;
+        padding-top: 56px;
+        position: fixed;
+        text-transform: uppercase;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        z-index: 2147483647;
+      }
+
+      @keyframes tgappsBootPulse {
+        0%, 100% {
+          opacity: 0.55;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+    </style>
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-WJN9X352MS"></script>
     <script>
@@ -60,7 +110,7 @@
         "legalName": "TG APPLICATIONS DESENVOLVIMENTO LTDA",
         "taxID": "BR CNPJ 56.918.851/0001-72",
         "url": "https://tgapps.dev",
-        "logo": "https://tgapps.dev/logo.png",
+        "logo": "https://tgapps.dev/logo-192.png",
         "email": "support@tgapps.dev",
         "telephone": "+55 11 97971-7703",
         "contactPoint": {
@@ -82,7 +132,7 @@
           "longitude": -46.7190
         },
         "areaServed": ["United States","Canada","Brazil"],
-        "description": "Tg Apps builds and ships mobile apps, web platforms, CRM systems, internal tools, backend APIs, and AI integrations for founders and growing teams. Plans start at USD 1,500/month, Growth is USD 2,000/month, and Dedicated starts at USD 3,500+/month with no upfront payment, weekly demos, First Milestone Guarantee, and clean handoff.",
+        "description": "Tg Apps is a mobile-first product delivery partner for founders and growing teams. We build, rescue, and evolve mobile apps, web platforms, CRM systems, internal tools, backend APIs, and AI integrations through clear milestones, direct communication, and clean handoff.",
         "priceRange": "USD 1,500 - USD 3,500+/month",
         "serviceType": [
           "Custom software development",
@@ -93,8 +143,9 @@
           "Backend API development",
           "API integrations",
           "Mobile app development",
-          "Dev as a Service",
-          "Software development subscription",
+          "Flexible product delivery models",
+          "Embedded engineering support",
+          "Co-delivery",
           "Workflow automation",
           "AI integrations"
         ],
@@ -138,8 +189,8 @@
               "@type": "Offer",
               "itemOffered": {
                 "@type": "Service",
-                "name": "Dev as a Service",
-                "description": "Software development subscription for apps, CRM, internal tools, backend systems, AI integrations, weekly demos, release support, and handoff."
+                "name": "Flexible product delivery models",
+                "description": "Full product ownership, product-area ownership, embedded support, or co-delivery for apps, CRM, internal tools, backend systems, AI integrations, release support, and handoff."
               }
             },
             {

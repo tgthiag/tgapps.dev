@@ -21,6 +21,12 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
   const isLanding = variant === 'landing';
   const isSolid = isLanding || isScrolled;
   const resolvedCtaLabel = ctaLabel ?? t.header.contactCta;
+  const headerCtaClass =
+    'bg-blue-600 text-white px-6 py-2 rounded-full text-sm font-semibold shadow-[0_12px_30px_rgba(37,99,235,0.28)] transition-all duration-300 hover:scale-105 hover:bg-blue-500';
+  const mobileHeaderCtaClass =
+    'w-full bg-blue-600 text-white px-6 py-3 rounded-full font-semibold shadow-[0_12px_30px_rgba(37,99,235,0.24)] transition-all duration-300 hover:bg-blue-500';
+  const mobileHeaderLinkCtaClass =
+    'block w-full bg-blue-600 text-white px-6 py-3 rounded-full font-semibold text-center shadow-[0_12px_30px_rgba(37,99,235,0.24)] transition-all duration-300 hover:bg-blue-500';
 
   useEffect(() => {
     if (isLanding) {
@@ -119,17 +125,17 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <a href={homeHref} className="flex items-center space-x-3">
+          <a href={homeHref} className="flex items-center" aria-label="Tg Apps home">
             <img
-              src="/logo.png"
-              alt="Tg Apps logo"
-              className="h-11 w-11 rounded-xl object-contain shadow-lg shadow-blue-500/30 bg-black/40 p-1"
+              src="/logo-wordmark-640.png"
+              alt="Tg Apps"
+              width={320}
+              height={111}
+              decoding="async"
+              className={`h-10 w-auto object-contain transition ${
+                isSolid ? '' : 'brightness-125 drop-shadow-[0_0_12px_rgba(59,130,246,0.45)]'
+              }`}
             />
-            <span className={`text-xl font-bold transition-colors ${
-              isSolid ? 'text-gray-900' : 'text-white'
-            }`}>
-              Tg Apps
-            </span>
           </a>
 
           {/* Desktop Navigation */}
@@ -171,7 +177,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
               <button
                 type="button"
                 onClick={() => handleHeaderCta('header_desktop_cta')}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className={headerCtaClass}
               >
                 {resolvedCtaLabel}
               </button>
@@ -179,14 +185,14 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
               <a
                 href={ctaHref}
                 onClick={() => trackHeaderCta('header_desktop_cta')}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className={headerCtaClass}
               >
                 {resolvedCtaLabel}
               </a>
             ) : (
               <button
                 onClick={() => handleHeaderCta('header_desktop_cta')}
-                className="bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-2 rounded-full text-sm font-medium hover:shadow-lg transition-all duration-300 hover:scale-105"
+                className={headerCtaClass}
               >
                 {resolvedCtaLabel}
               </button>
@@ -243,7 +249,7 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
                   onClick={() => {
                     handleHeaderCta('header_mobile_cta');
                   }}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
+                  className={mobileHeaderCtaClass}
                 >
                   {resolvedCtaLabel}
                 </button>
@@ -251,14 +257,14 @@ const Header = ({ variant = 'home', ctaHref, ctaLabel, onCtaClick }: HeaderProps
                 <a
                   href={ctaHref}
                   onClick={() => trackHeaderCta('header_mobile_cta')}
-                  className="block w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium text-center hover:shadow-lg transition-all duration-300"
+                  className={mobileHeaderLinkCtaClass}
                 >
                   {resolvedCtaLabel}
                 </a>
               ) : (
                 <button
                   onClick={() => handleHeaderCta('header_mobile_cta')}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white px-6 py-3 rounded-full font-medium hover:shadow-lg transition-all duration-300"
+                  className={mobileHeaderCtaClass}
                 >
                   {resolvedCtaLabel}
                 </button>
