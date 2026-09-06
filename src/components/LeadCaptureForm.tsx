@@ -25,6 +25,7 @@ const serviceCodes = [
   'product_discovery'
 ];
 const guaranteeCodes = ['first_milestone_guarantee', 'monthly_plan', 'not_sure'];
+const planCodes = ['starter', 'growth', 'embedded', 'custom'];
 const leadVisitorStorageKey = 'tgapps.lead.visitor_id';
 
 const newBrowserIdentifier = () => {
@@ -63,6 +64,7 @@ const LeadCaptureForm = ({
     email: '',
     phone: '',
     service: serviceCode,
+    selectedPlan: '',
     guaranteePreference: '',
     firstMilestone: '',
     message: '',
@@ -71,6 +73,7 @@ const LeadCaptureForm = ({
   const [hasStarted, setHasStarted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [portalEmailSent, setPortalEmailSent] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [fallbackMailto, setFallbackMailto] = useState('');
   const [contactReference, setContactReference] = useState('');
@@ -105,6 +108,7 @@ const LeadCaptureForm = ({
       `Email: ${formData.email}`,
       `Phone / WhatsApp: ${formData.phone || 'Not provided'}`,
       `Service: ${serviceLabel || selectedService}`,
+      `Plan that drew attention: ${formData.selectedPlan || 'Not specified'}`,
       `Starting preference: ${formData.guaranteePreference || 'Not specified'}`,
       `First milestone: ${formData.firstMilestone || 'Not specified'}`,
       '',
@@ -146,12 +150,7 @@ const LeadCaptureForm = ({
       });
       const payload = await response.json().catch(() => ({}));
       if (!response.ok || payload.accepted !== true) {
-        const apiMessage = typeof payload.error === 'string'
-          ? payload.error
-          : typeof payload.error?.message === 'string'
-            ? payload.error.message
-            : '';
-        throw new Error(apiMessage || t.contact.form.submitError);
+        throw new Error(t.contact.form.submitError);
       }
 
       trackLeadContact('contact_form_crm', source, {
@@ -159,9 +158,11 @@ const LeadCaptureForm = ({
         has_first_milestone: Boolean(formData.firstMilestone),
         has_phone: Boolean(formData.phone),
         language: locale,
+        selected_plan: formData.selectedPlan || 'not_specified',
         selected_service: selectedService,
         whatsapp_opt_in: formData.whatsappOptIn
       });
+      setPortalEmailSent(payload.portal_access?.email_sent === true);
       setIsSubmitted(true);
     } catch (error) {
       setSubmitError(error instanceof Error ? error.message : t.contact.form.submitError);
@@ -181,6 +182,7 @@ const LeadCaptureForm = ({
     ? `Olá, encontrei a Tg Apps e gostaria de conversar sobre ${serviceLabel || 'um projeto'}.`
     : `Hi, I found Tg Apps and would like to talk about ${serviceLabel || 'a project'}.`;
   const whatsappHref = `https://wa.me/5511979717703?text=${encodeURIComponent(whatsappText)}`;
+  const customPlanSelected = formData.selectedPlan === 'custom';
   const fieldClass = 'w-full rounded-lg border border-slate-300 bg-white px-4 py-3 text-slate-950 transition focus:border-transparent focus:ring-2 focus:ring-blue-500';
   const labelClass = 'mb-2 block text-sm font-medium text-slate-700';
 
@@ -192,6 +194,17 @@ const LeadCaptureForm = ({
         </div>
         <h3 className="text-xl font-bold text-slate-950">{t.contact.successTitle}</h3>
         <p className="mt-2 text-slate-600">{t.contact.successMessage}</p>
+        {portalEmailSent && (
+          <div className="mx-auto mt-6 max-w-2xl rounded-lg border border-blue-200 bg-blue-50 px-5 py-4 text-left text-sm text-slate-700">
+            <div className="flex items-start gap-3">
+              <Mail className="mt-0.5 h-5 w-5 shrink-0 text-blue-700" />
+              <div>
+                <p>{t.contact.portalSuccessMessage}</p>
+                <p className="mt-3 text-xs text-slate-500">{t.contact.portalSpamHint}</p>
+              </div>
+            </div>
+          </div>
+        )}
       </div>
     );
   }
@@ -212,18 +225,18 @@ const LeadCaptureForm = ({
       <div className="grid gap-5 md:grid-cols-2">
         <div>
           <label htmlFor={`${idPrefix}-name`} className={labelClass}>{t.contact.form.nameLabel}</label>
-          <input id={`${idPrefix}-name`} name="name" required value={formData.name} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.namePlaceholder} />
+          <input id={`${idPrefix}-name`} name="name" required maxLength={160} value={formData.name} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.namePlaceholder} />
         </div>
         <div>
           <label htmlFor={`${idPrefix}-email`} className={labelClass}>{t.contact.form.emailLabel}</label>
-          <input id={`${idPrefix}-email`} name="email" type="email" required value={formData.email} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.emailPlaceholder} />
+          <input id={`${idPrefix}-email`} name="email" type="email" required maxLength={254} value={formData.email} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.emailPlaceholder} />
         </div>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         <div>
           <label htmlFor={`${idPrefix}-phone`} className={labelClass}>{t.contact.form.phoneLabel}</label>
-          <input id={`${idPrefix}-phone`} name="phone" type="tel" value={formData.phone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.phonePlaceholder} />
+          <input id={`${idPrefix}-phone`} name="phone" type="tel" maxLength={64} value={formData.phone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.phonePlaceholder} />
           <label className="mt-3 flex items-start gap-2 text-xs text-slate-600">
             <input type="checkbox" name="whatsappOptIn" checked={formData.whatsappOptIn} disabled={!formData.phone} onChange={handleChange} className="mt-0.5 h-4 w-4 rounded border-slate-300 text-emerald-600 disabled:opacity-40" />
             <span>{t.contact.form.whatsappOptInLabel}</span>
@@ -240,13 +253,20 @@ const LeadCaptureForm = ({
         ) : (
           <div>
             <label htmlFor={`${idPrefix}-milestone`} className={labelClass}>{t.contact.form.firstMilestoneLabel}</label>
-            <input id={`${idPrefix}-milestone`} name="firstMilestone" value={formData.firstMilestone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.firstMilestonePlaceholder} />
+            <input id={`${idPrefix}-milestone`} name="firstMilestone" maxLength={255} value={formData.firstMilestone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.firstMilestonePlaceholder} />
           </div>
         )}
       </div>
 
-      {showStartFields && (
-        <div className="grid gap-5 md:grid-cols-2">
+      <div className={`grid gap-5 ${showStartFields ? 'md:grid-cols-3' : ''}`}>
+        <div>
+          <label htmlFor={`${idPrefix}-plan`} className={labelClass}>{t.contact.form.planLabel}</label>
+          <select id={`${idPrefix}-plan`} name="selectedPlan" value={formData.selectedPlan} onChange={handleChange} className={fieldClass}>
+            <option value="">{t.contact.form.planPlaceholder}</option>
+            {t.contact.planOptions.map((option, index) => <option key={planCodes[index]} value={planCodes[index]}>{option}</option>)}
+          </select>
+        </div>
+        {showStartFields && (
           <div>
             <label htmlFor={`${idPrefix}-start`} className={labelClass}>{t.contact.form.guaranteeLabel}</label>
             <select id={`${idPrefix}-start`} name="guaranteePreference" value={formData.guaranteePreference} onChange={handleChange} className={fieldClass}>
@@ -254,16 +274,31 @@ const LeadCaptureForm = ({
               {t.contact.guaranteeOptions.map((option, index) => <option key={guaranteeCodes[index]} value={guaranteeCodes[index]}>{option}</option>)}
             </select>
           </div>
+        )}
+        {showStartFields && showServiceField && (
           <div>
             <label htmlFor={`${idPrefix}-milestone`} className={labelClass}>{t.contact.form.firstMilestoneLabel}</label>
-            <input id={`${idPrefix}-milestone`} name="firstMilestone" value={formData.firstMilestone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.firstMilestonePlaceholder} />
+            <input id={`${idPrefix}-milestone`} name="firstMilestone" maxLength={255} value={formData.firstMilestone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.firstMilestonePlaceholder} />
           </div>
-        </div>
-      )}
+        )}
+      </div>
 
       <div>
-        <label htmlFor={`${idPrefix}-message`} className={labelClass}>{t.contact.form.messageLabel}</label>
-        <textarea id={`${idPrefix}-message`} name="message" required rows={compact ? 4 : 5} value={formData.message} onChange={handleChange} className={`${fieldClass} resize-none`} placeholder={t.contact.form.messagePlaceholder} />
+        <label htmlFor={`${idPrefix}-message`} className={labelClass}>
+          {customPlanSelected ? t.contact.form.customPlanMessageLabel : t.contact.form.messageOptionalLabel}
+          {customPlanSelected && <span aria-hidden="true"> *</span>}
+        </label>
+        <textarea
+          id={`${idPrefix}-message`}
+          name="message"
+          required={customPlanSelected}
+          maxLength={5000}
+          rows={compact ? 4 : 5}
+          value={formData.message}
+          onChange={handleChange}
+          className={`${fieldClass} resize-none`}
+          placeholder={customPlanSelected ? t.contact.form.customPlanMessagePlaceholder : t.contact.form.messagePlaceholder}
+        />
       </div>
 
       <button type="submit" disabled={isSubmitting} className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-600 px-8 py-4 font-semibold text-white shadow-[0_16px_35px_rgba(37,99,235,0.22)] transition hover:bg-blue-500 disabled:cursor-not-allowed disabled:opacity-50">

@@ -60,7 +60,7 @@ The React single-page app renders these sections in order (see `src/App.tsx`):
 | Capabilities | `Services.tsx` | Service hierarchy for product builds, critical product areas, rescue work, mobile, backend, CRM, internal tools, integrations, and AI applied to real products. |
 | Pricing | `PricingPlans.tsx` | Three-plan pricing ladder: Starter, Growth, Embedded. Growth is highlighted as most selected with intelligent allocation. |
 | First Milestone Guarantee | `FirstMilestoneGuarantee.tsx` | Scoped first-delivery promise with acceptance criteria, dependencies, working demo, and conditional no-invoice protection. |
-| Contact | `Contact.tsx` | Direct contact info, WhatsApp CTA, next-step callout, and form that opens a mailto draft. Do not repeat long why-us blocks or pricing banners here. |
+| Contact | `Contact.tsx` | Direct contact info, WhatsApp CTA, next-step callout, and form connected to the CRM lead intake, with mailto only as an error fallback. Do not repeat long why-us blocks or pricing banners here. |
 | Footer | `Footer.tsx` | Recap of services, navigation, contact info, CTA button, legal links. |
 
 Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `plans`, `contato`) for smooth scroll and SEO anchors.
@@ -102,7 +102,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - **Contact**
   - Info entries: Email `support@tgapps.dev`, WhatsApp/Phone `+55 11 97971‑7703`, location “São Paulo, Brazil · US overlap ET/CT”.
   - Form callout: Outline response timeframe (≤1 business day), 30-45 min call, send SOW/checklist.
-  - Form fields: Full name, Work email, Phone/WhatsApp, Service dropdown, Notes. Submit button composes email to contact address.
+  - Form fields: Full name, Work email, Phone/WhatsApp, Service dropdown, plan interest, and Notes. The plan prompt asks which plan caught the visitor's attention; Notes are optional except for Custom plan, when they are required. Submit sends to the stable same-origin `/api/contact-lead` route; mailto is only the failure fallback.
 
 - **Footer**
   - Description: reiterate founder-led Brazilian studio for US SMBs, zero upfront, weekly releases.
@@ -174,7 +174,7 @@ Each section is hooked to IDs (`inicio`, `what-you-get`, `process`, `cases`, `pl
 - Public case descriptions must preserve technical boundaries. Multiple repositories, applications, backend services, or operational systems must not be described as one product unless that architecture is verified. Commercial ownership does not imply one codebase or one deployable system.
 - Impactivate is active work for Heal The World Global. Tg Apps leads technical delivery and develops the mobile application and backend services. Public copy should state that directly, without calling them one product or unnecessarily emphasizing that they are separate. Do not claim completion or launch until verified.
 - Contact has been simplified: no repeated why-us block and no repeated pricing banner inside the contact section.
-- Contact includes fields for First Milestone Guarantee preference and a useful first milestone. These fields should remain optional and should be included in the generated email body.
+- Contact includes fields for First Milestone Guarantee preference, a useful first milestone, and plan interest. These fields should remain optional and should be included in the generated email body; selecting Custom plan makes Notes required.
 - Footer visible trust links may include: Why Tg Apps, How we fit your team, Delivery models, Company profile, Due diligence, and Founder LinkedIn.
 - Privacy and account-deletion routes are compliance-critical and must not be renamed or removed:
   - `/my_business_idea_privacy`

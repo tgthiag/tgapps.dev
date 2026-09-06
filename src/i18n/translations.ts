@@ -117,6 +117,8 @@ export interface TranslationSchema {
     };
     successTitle: string;
     successMessage: string;
+    portalSuccessMessage: string;
+    portalSpamHint: string;
     form: {
       nameLabel: string;
       namePlaceholder: string;
@@ -127,12 +129,17 @@ export interface TranslationSchema {
       whatsappOptInLabel: string;
       serviceLabel: string;
       servicePlaceholder: string;
+      planLabel: string;
+      planPlaceholder: string;
       guaranteeLabel: string;
       guaranteePlaceholder: string;
       firstMilestoneLabel: string;
       firstMilestonePlaceholder: string;
       messageLabel: string;
+      messageOptionalLabel: string;
+      customPlanMessageLabel: string;
       messagePlaceholder: string;
+      customPlanMessagePlaceholder: string;
       submit: string;
       submitting: string;
       submitError: string;
@@ -140,6 +147,7 @@ export interface TranslationSchema {
       policy: string;
     };
     services: string[];
+    planOptions: string[];
     guaranteeOptions: string[];
   };
   footer: {
@@ -420,7 +428,9 @@ export const translations: Record<Locale, TranslationSchema> = {
         ]
       },
       successTitle: 'Thanks for reaching out!',
-      successMessage: 'We just received your note and will reply shortly.',
+      successMessage: 'Our team has received your information and will reply within one business day.',
+      portalSuccessMessage: 'Within a few minutes, you will receive a secure link at the email address provided to access our Client Portal. There, you can see what working with Tg Apps is like and, as the partnership moves forward, follow documents, daily activities, projects, requests, and deliveries with transparency.',
+      portalSpamHint: 'If you cannot find the message, check your spam and promotions folders as well.',
       form: {
         nameLabel: 'Full name',
         namePlaceholder: 'Your name',
@@ -431,12 +441,17 @@ export const translations: Record<Locale, TranslationSchema> = {
         whatsappOptInLabel: 'You may reply to this request through WhatsApp at the number provided.',
         serviceLabel: 'What do you need help with?',
         servicePlaceholder: 'Select an option',
+        planLabel: 'Which plan caught your attention?',
+        planPlaceholder: 'Select a plan (optional)',
         guaranteeLabel: 'How would you like to start?',
         guaranteePlaceholder: 'Select a starting point',
         firstMilestoneLabel: 'Useful first milestone',
         firstMilestonePlaceholder: 'Example: login flow, release blocker, dashboard screen, API endpoint, app store build, or rescue milestone.',
         messageLabel: 'Notes',
+        messageOptionalLabel: 'Notes (optional)',
+        customPlanMessageLabel: 'Tell us what you need from a custom plan',
         messagePlaceholder: 'Tell us about platforms, deadlines, or blockers.',
+        customPlanMessagePlaceholder: 'Describe the delivery cadence, capacity, workstreams, or operating model you need.',
         submit: 'Start the conversation',
         submitting: 'Sending securely...',
         submitError: 'We could not send the form right now. Your details were not marked as received.',
@@ -452,6 +467,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'Born-global app',
         'Product discovery'
       ],
+      planOptions: ['Starter', 'Growth', 'Embedded', 'Custom plan'],
       guaranteeOptions: [
         'I want to start with a First Milestone Guarantee',
         'I want to discuss the full monthly plan',
@@ -750,8 +766,10 @@ export const translations: Record<Locale, TranslationSchema> = {
           'Enviamos contrato, checklist e data de início.'
         ]
       },
-      successTitle: 'Recebemos sua mensagem!',
-      successMessage: 'Já estamos lendo os detalhes e retornaremos em breve.',
+      successTitle: 'Recebemos sua solicitação!',
+      successMessage: 'Nossa equipe já recebeu as informações e retornará em até 1 dia útil.',
+      portalSuccessMessage: 'Em alguns minutos, você receberá no e-mail informado um link seguro para acessar o nosso Portal do Cliente. Lá, poderá ter uma ideia de como é contar com a Tg Apps e, conforme a parceria avançar, acompanhar documentos, atividades diárias, projetos, solicitações e entregas com transparência.',
+      portalSpamHint: 'Se não encontrar a mensagem, verifique também as caixas de spam e promoções.',
       form: {
         nameLabel: 'Nome completo',
         namePlaceholder: 'Seu nome',
@@ -762,12 +780,17 @@ export const translations: Record<Locale, TranslationSchema> = {
         whatsappOptInLabel: 'Você autoriza o retorno desta solicitação pelo WhatsApp informado.',
         serviceLabel: 'Do que você precisa?',
         servicePlaceholder: 'Selecione uma opção',
+        planLabel: 'Qual plano mais chamou sua atenção?',
+        planPlaceholder: 'Selecione um plano (opcional)',
         guaranteeLabel: 'Como você gostaria de começar?',
         guaranteePlaceholder: 'Selecione um ponto de partida',
         firstMilestoneLabel: 'Primeira entrega útil',
         firstMilestonePlaceholder: 'Exemplo: fluxo de login, bloqueio de deploy, tela de painel, endpoint de API, versão para loja de aplicativos ou etapa de resgate.',
         messageLabel: 'Notas',
+        messageOptionalLabel: 'Mensagem (opcional)',
+        customPlanMessageLabel: 'Conte o que você precisa no plano personalizado',
         messagePlaceholder: 'Compartilhe prazos, lojas ou dores atuais.',
+        customPlanMessagePlaceholder: 'Descreva o ritmo de entrega, a capacidade, as frentes de trabalho ou o modelo de atuação que você precisa.',
         submit: 'Iniciar conversa',
         submitting: 'Enviando com segurança...',
         submitError: 'Não foi possível enviar o formulário agora. Seus dados não foram marcados como recebidos.',
@@ -783,6 +806,7 @@ export const translations: Record<Locale, TranslationSchema> = {
         'App born global',
         'Descoberta de produto'
       ],
+      planOptions: ['Starter', 'Growth', 'Embedded', 'Plano personalizado'],
       guaranteeOptions: [
         'Quero começar com a Garantia da Primeira Entrega',
         'Quero discutir o plano mensal completo',
