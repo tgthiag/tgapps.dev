@@ -43,3 +43,16 @@ O campo adicional revela que um novo convite foi entregue para aquela
 submissao. Por isso, ele nao deve incluir IDs, existencia previa, etapa comercial
 ou detalhes de erro. Rate limit, origem permitida, honeypot e monitoramento do CRM
 continuam obrigatorios.
+# Ajuste de formulario e convite - 2026-09-06
+
+Nome e email sao obrigatorios. Os demais campos sao opcionais; Custom exige
+mensagem. O telefone usa o componente React intl-tel-input com busca por pais,
+padrao US em EN e BR em PT, e envia E.164 e countryCode. Detalhes adicionais
+ficam recolhidos; firstMilestone aparece apenas para first_milestone_guarantee.
+Trocar essa escolha limpa o campo. A confirmacao aparece em popup com overlay,
+foco e Escape; texto de acesso ao portal depende de portal_access.email_sent.
+
+O backend provisiona a conta Firebase antes de enviar o link web. A resposta
+email_sent=true confirma aceite do envio pelo provedor, nao entrega na caixa
+postal. A nova submissao por email existente atualiza o lead sem reenviar.
+Teste real em 2026-09-06 confirmou o envio e o valor USD 2000 para Growth.

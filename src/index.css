@@ -2,6 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
+.iti { width: 100%; --iti-border-color: #cbd5e1; }
+.iti__dropdown-content { max-width: min(360px, calc(100vw - 32px)); }
+
 @media print {
   @page {
     size: A4 landscape;

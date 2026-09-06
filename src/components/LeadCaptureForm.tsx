@@ -1,4 +1,7 @@
-import { useState, type ChangeEvent, type FormEvent } from 'react';
+import { useEffect, useRef, useState, type ChangeEvent, type FormEvent } from 'react';
+import IntlTelInput, { type IntlTelInputRef } from '@intl-tel-input/react';
+import { pt } from 'intl-tel-input/locale';
+import 'intl-tel-input/styles';
 import { CheckCircle, Clock, Mail, MessageCircle, Send } from 'lucide-react';
 import { useTranslations } from '../context/LanguageContext';
 import type { Locale } from '../i18n/translations';
@@ -77,6 +80,29 @@ const LeadCaptureForm = ({
   const [submitError, setSubmitError] = useState('');
   const [fallbackMailto, setFallbackMailto] = useState('');
   const [contactReference, setContactReference] = useState('');
+  const phoneRef = useRef<IntlTelInputRef>(null);
+  const [phoneValid, setPhoneValid] = useState(false);
+  const [countryCode, setCountryCode] = useState(locale === 'pt' ? 'BR' : 'US');
+  const optionalLabel = locale === 'pt' ? ' (opcional)' : ' (optional)';
+  const closeButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (!isSubmitted) return;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    closeButton.current?.focus();
+    const handleKey = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') setIsSubmitted(false);
+      if (event.key === 'Tab') { event.preventDefault(); closeButton.current?.focus(); }
+    };
+    document.addEventListener('keydown', handleKey);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', handleKey);
+      if (previousFocus?.isConnected) previousFocus.focus();
+      else document.getElementById(`${idPrefix}-name`)?.focus();
+    };
+  }, [isSubmitted, idPrefix]);
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     if (!hasStarted) {
@@ -92,11 +118,21 @@ const LeadCaptureForm = ({
     const value = event.target instanceof HTMLInputElement && event.target.type === 'checkbox'
       ? event.target.checked
       : event.target.value;
-    setFormData((current) => ({ ...current, [event.target.name]: value }));
+    setFormData((current) => ({
+      ...current, [event.target.name]: value,
+      ...(event.target.name === 'guaranteePreference' && value !== 'first_milestone_guarantee'
+        ? { firstMilestone: '' } : {})
+    }));
   };
 
   const handleSubmit = async (event: FormEvent) => {
     event.preventDefault();
+    const phoneInput = phoneRef.current?.getInput();
+    if (phoneInput?.value.trim() && !phoneValid) {
+      phoneInput.setCustomValidity(locale === 'pt' ? 'Confira o telefone e o codigo de pais.' : 'Check the phone number and country code.');
+      phoneInput.reportValidity();
+      return;
+    }
     setIsSubmitting(true);
     setSubmitError('');
     setFallbackMailto('');
@@ -133,6 +169,7 @@ const LeadCaptureForm = ({
         },
         body: JSON.stringify({
           ...formData,
+          countryCode: formData.phone ? countryCode : undefined,
           visitorId: getLeadVisitorId(),
           contactReference,
           service: selectedService,
@@ -188,14 +225,15 @@ const LeadCaptureForm = ({
 
   if (isSubmitted) {
     return (
-      <div className="py-10 text-center" role="status">
+      <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/55 p-4">
+      <div className="max-h-[calc(100dvh-2rem)] w-full max-w-lg overflow-y-auto rounded-lg bg-white p-6 text-center shadow-xl sm:p-8" role="dialog" aria-modal="true" aria-labelledby={`${idPrefix}-success-title`}>
         <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
           <CheckCircle className="h-8 w-8 text-emerald-600" />
         </div>
-        <h3 className="text-xl font-bold text-slate-950">{t.contact.successTitle}</h3>
+        <h3 id={`${idPrefix}-success-title`} className="text-xl font-bold text-slate-950">{t.contact.successTitle}</h3>
         <p className="mt-2 text-slate-600">{t.contact.successMessage}</p>
         {portalEmailSent && (
-          <div className="mx-auto mt-6 max-w-2xl rounded-lg border border-blue-200 bg-blue-50 px-5 py-4 text-left text-sm text-slate-700">
+          <div className="mt-6 border-t border-slate-200 pt-5 text-left text-sm text-slate-700">
             <div className="flex items-start gap-3">
               <Mail className="mt-0.5 h-5 w-5 shrink-0 text-blue-700" />
               <div>
@@ -205,6 +243,8 @@ const LeadCaptureForm = ({
             </div>
           </div>
         )}
+        <button ref={closeButton} type="button" onClick={() => setIsSubmitted(false)} className="mt-6 rounded-lg bg-blue-600 px-6 py-3 font-semibold text-white focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">{locale === 'pt' ? 'Fechar' : 'Close'}</button>
+      </div>
       </div>
     );
   }
@@ -235,51 +275,64 @@ const LeadCaptureForm = ({
 
       <div className="grid gap-5 md:grid-cols-2">
         <div>
-          <label htmlFor={`${idPrefix}-phone`} className={labelClass}>{t.contact.form.phoneLabel}</label>
-          <input id={`${idPrefix}-phone`} name="phone" type="tel" maxLength={64} value={formData.phone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.phonePlaceholder} />
-          <label className="mt-3 flex items-start gap-2 text-xs text-slate-600">
+          <label htmlFor={`${idPrefix}-phone`} className={labelClass}>{t.contact.form.phoneLabel}{optionalLabel}</label>
+          <IntlTelInput
+            key={locale}
+            ref={phoneRef}
+            initialCountry={locale === 'pt' ? 'br' : 'us'}
+            countrySearch
+            separateDialCode
+            allowedNumberTypes={null}
+            countryNameLocale={locale === 'pt' ? 'pt-BR' : 'en'}
+            uiTranslations={locale === 'pt' ? pt : undefined}
+            loadUtils={() => import('intl-tel-input/utils')}
+            onChangeValidity={setPhoneValid}
+            onChangeCountry={(country) => setCountryCode(country.toUpperCase())}
+            onChangeNumber={(phone) => {
+              phoneRef.current?.getInput()?.setCustomValidity('');
+              setFormData((current) => ({ ...current, phone, whatsappOptIn: phone ? current.whatsappOptIn : false }));
+            }}
+            inputProps={{ id: `${idPrefix}-phone`, name: 'phone', autoComplete: 'tel', className: fieldClass, defaultValue: formData.phone }}
+          />
+          {formData.phone && <label className="mt-3 flex items-start gap-2 text-xs text-slate-600">
             <input type="checkbox" name="whatsappOptIn" checked={formData.whatsappOptIn} disabled={!formData.phone} onChange={handleChange} className="mt-0.5 h-4 w-4 rounded border-slate-300 text-emerald-600 disabled:opacity-40" />
             <span>{t.contact.form.whatsappOptInLabel}</span>
-          </label>
+          </label>}
         </div>
         {showServiceField ? (
           <div>
-            <label htmlFor={`${idPrefix}-service`} className={labelClass}>{t.contact.form.serviceLabel}</label>
-            <select id={`${idPrefix}-service`} name="service" required value={formData.service} onChange={handleChange} className={fieldClass}>
+            <label htmlFor={`${idPrefix}-service`} className={labelClass}>{t.contact.form.serviceLabel}{optionalLabel}</label>
+            <select id={`${idPrefix}-service`} name="service" value={formData.service} onChange={handleChange} className={fieldClass}>
               <option value="">{t.contact.form.servicePlaceholder}</option>
               {t.contact.services.map((service, index) => <option key={serviceCodes[index]} value={serviceCodes[index]}>{service}</option>)}
             </select>
           </div>
-        ) : (
-          <div>
-            <label htmlFor={`${idPrefix}-milestone`} className={labelClass}>{t.contact.form.firstMilestoneLabel}</label>
-            <input id={`${idPrefix}-milestone`} name="firstMilestone" maxLength={255} value={formData.firstMilestone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.firstMilestonePlaceholder} />
-          </div>
-        )}
+        ) : null}
       </div>
 
-      <div className={`grid gap-5 ${showStartFields ? 'md:grid-cols-3' : ''}`}>
+      <div className="grid gap-5">
         <div>
-          <label htmlFor={`${idPrefix}-plan`} className={labelClass}>{t.contact.form.planLabel}</label>
+          <label htmlFor={`${idPrefix}-plan`} className={labelClass}>{t.contact.form.planLabel}{optionalLabel}</label>
           <select id={`${idPrefix}-plan`} name="selectedPlan" value={formData.selectedPlan} onChange={handleChange} className={fieldClass}>
             <option value="">{t.contact.form.planPlaceholder}</option>
             {t.contact.planOptions.map((option, index) => <option key={planCodes[index]} value={planCodes[index]}>{option}</option>)}
           </select>
         </div>
         {showStartFields && (
-          <div>
-            <label htmlFor={`${idPrefix}-start`} className={labelClass}>{t.contact.form.guaranteeLabel}</label>
+          <details className="space-y-4">
+            <summary className="cursor-pointer text-sm text-slate-600">{locale === 'pt' ? 'Mais detalhes (opcional)' : 'More details (optional)'}</summary>
+            <label htmlFor={`${idPrefix}-start`} className={labelClass}>{t.contact.form.guaranteeLabel}{optionalLabel}</label>
             <select id={`${idPrefix}-start`} name="guaranteePreference" value={formData.guaranteePreference} onChange={handleChange} className={fieldClass}>
               <option value="">{t.contact.form.guaranteePlaceholder}</option>
               {t.contact.guaranteeOptions.map((option, index) => <option key={guaranteeCodes[index]} value={guaranteeCodes[index]}>{option}</option>)}
             </select>
+        {formData.guaranteePreference === 'first_milestone_guarantee' && (
+          <div>
+            <label htmlFor={`${idPrefix}-milestone`} className={labelClass}>{t.contact.form.firstMilestoneLabel}{optionalLabel}</label>
+            <textarea id={`${idPrefix}-milestone`} name="firstMilestone" rows={2} maxLength={255} value={formData.firstMilestone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.firstMilestonePlaceholder} />
           </div>
         )}
-        {showStartFields && showServiceField && (
-          <div>
-            <label htmlFor={`${idPrefix}-milestone`} className={labelClass}>{t.contact.form.firstMilestoneLabel}</label>
-            <input id={`${idPrefix}-milestone`} name="firstMilestone" maxLength={255} value={formData.firstMilestone} onChange={handleChange} className={fieldClass} placeholder={t.contact.form.firstMilestonePlaceholder} />
-          </div>
+          </details>
         )}
       </div>
 
