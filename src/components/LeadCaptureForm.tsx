@@ -25,6 +25,26 @@ const serviceCodes = [
   'product_discovery'
 ];
 const guaranteeCodes = ['first_milestone_guarantee', 'monthly_plan', 'not_sure'];
+const leadVisitorStorageKey = 'tgapps.lead.visitor_id';
+
+const newBrowserIdentifier = () => {
+  if (typeof crypto !== 'undefined' && typeof crypto.randomUUID === 'function') {
+    return crypto.randomUUID();
+  }
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 18)}`;
+};
+
+const getLeadVisitorId = () => {
+  const generated = newBrowserIdentifier();
+  try {
+    const stored = window.localStorage.getItem(leadVisitorStorageKey)?.trim();
+    if (stored && stored.length <= 64) return stored;
+    window.localStorage.setItem(leadVisitorStorageKey, generated);
+  } catch {
+    // Privacy settings may disable storage. Email matching remains available.
+  }
+  return generated;
+};
 
 const LeadCaptureForm = ({
   locale,
@@ -53,6 +73,7 @@ const LeadCaptureForm = ({
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [submitError, setSubmitError] = useState('');
   const [fallbackMailto, setFallbackMailto] = useState('');
+  const [contactReference, setContactReference] = useState('');
 
   const handleChange = (event: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     if (!hasStarted) {
@@ -99,11 +120,17 @@ const LeadCaptureForm = ({
         )
       );
       const utm = Object.fromEntries(Object.entries(attribution).filter(([key]) => key.startsWith('utm_')));
+      const submissionId = newBrowserIdentifier();
       const response = await fetch('/api/contact-lead', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Idempotency-Key': `tgapps:${submissionId}`
+        },
         body: JSON.stringify({
           ...formData,
+          visitorId: getLeadVisitorId(),
+          contactReference,
           service: selectedService,
           serviceLabel: serviceLabel || undefined,
           sourcePage: window.location.pathname,
@@ -171,6 +198,17 @@ const LeadCaptureForm = ({
 
   return (
     <form onSubmit={handleSubmit} className={compact ? 'space-y-5' : 'space-y-6'}>
+      <div className="absolute left-[-10000px] top-auto h-px w-px overflow-hidden" aria-hidden="true">
+        <label htmlFor={`${idPrefix}-contact-reference`}>Contact reference</label>
+        <input
+          id={`${idPrefix}-contact-reference`}
+          name="contactReference"
+          tabIndex={-1}
+          autoComplete="off"
+          value={contactReference}
+          onChange={(event) => setContactReference(event.target.value)}
+        />
+      </div>
       <div className="grid gap-5 md:grid-cols-2">
         <div>
           <label htmlFor={`${idPrefix}-name`} className={labelClass}>{t.contact.form.nameLabel}</label>

@@ -5,7 +5,7 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
   const env = loadEnv(mode, process.cwd(), '');
   const crmTarget = env.CRM_SITE_LEAD_TARGET || 'http://127.0.0.1:3002';
-  const intakeKey = env.CRM_SITE_LEAD_INTAKE_KEY || 'dev-site-lead-key';
+  const integrationId = env.CRM_SITE_LEAD_INTEGRATION_ID || '{integration_id}';
 
   return {
     plugins: [react()],
@@ -17,10 +17,7 @@ export default defineConfig(({ mode }) => {
         '/api/contact-lead': {
           target: crmTarget,
           changeOrigin: true,
-          headers: {
-            'x-site-intake-key': intakeKey
-          },
-          rewrite: () => '/api/public/site-leads'
+          rewrite: () => `/api/public/v1/lead-intakes/${integrationId}/leads`
         }
       }
     }
